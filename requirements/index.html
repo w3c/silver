@@ -1,0 +1,375 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 20.7.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- PERMALINKS --- */
+
+.permalink {
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+  font-size: 10pt;
+  font-style: normal;
+  vertical-align: middle;
+  margin-left: 4px;
+  float: right;
+}
+
+.permalink a, .permalink a:link, .permalink a:visited, .permalink a:hover, .permalink a:focus, .permalink a:active {
+  background:transparent !important;
+  text-decoration:none;
+  font-weight: bold;
+  color:#666 !important;
+}
+
+.permalink abbr {
+  border:0;
+}
+</style>
+		<title>Requirements for Silver</title>
+		
+		
+		
+	<style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd > p:first-child {
+  margin-top: 0;
+}
+
+.section dd > p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary > ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details > * {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: .3em;
+  background-color: white;
+  padding-bottom: .5em;
+}
+
+details.respec-tests-details[open] > summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details > ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details > li {
+  padding-left: 1em;
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/silver-requirements/"><script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "specStatus": "ED",
+  "noRecTrack": true,
+  "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+  "shortName": "silver-requirements",
+  "copyrightStart": "2018",
+  "license": "document",
+  "edDraftURI": "https://w3c.github.io/silver/requirements/",
+  "editors": [
+    {
+      "name": "Jeanne Spellman",
+      "mailto": "jspellman@spellmanconsulting.com",
+      "company": "The Paciello Group, LLC",
+      "companyURI": "https://www.paciellogroup.com/",
+      "w3cid": 42417
+    },
+    {
+      "name": "Shawn Lauriat",
+      "mailto": "lauriat@google.com",
+      "company": "Google, Inc.",
+      "companyURI": "https://www.google.com/",
+      "w3cid": 90646
+    },
+    {
+      "name": "Michael Cooper",
+      "mailto": "cooper@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org/",
+      "w3cid": 34017
+    }
+  ],
+  "wg": "Web Content Accessibility Guidelines Working Group",
+  "wgURI": "https://www.w3.org/WAI/GL/",
+  "wgPublicList": "public-silver",
+  "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/35422/status",
+  "maxTocLevel": 4,
+  "publishISODate": "2018-04-10T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 10 April 2018"
+}</script><meta name="description" content="Requirements for Silver"></head>
+	<body class="h-entry"><div class="head">
+  <a href="https://www.w3.org/" class="logo">
+      <img alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48">
+  </a>
+  <h1 id="title" class="title p-name">Requirements for Silver</h1>
+  
+  <h2 id="w3c-editor-s-draft-10-april-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-04-10">10 April 2018</time></h2>
+  <dl>
+    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/silver/requirements/">https://w3c.github.io/silver/requirements/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/silver-requirements/">https://www.w3.org/TR/silver-requirements/</a></dd>
+    <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/requirements/">https://w3c.github.io/silver/requirements/</a></dd>
+    
+    
+    
+    
+    
+    
+    <dt>Editors:</dt>
+    <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (The Paciello Group, LLC)</dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (Google, Inc.)</dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd>
+    
+    
+    
+  </dl>
+  
+  
+  
+  <p class="copyright">
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
+        2018
+        
+        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
+        (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+        <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>).
+        
+        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+        rules apply.
+      </p>
+  <hr title="Separator for header">
+</div>
+		<section id="abstract" class="introductory"><h2 id="abstract-0">Abstract</h2>
+			<p>Requirements for Silver</p>
+		</section>
+		<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document</h2><p>
+        <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
+      </p><p>
+          This document was published by the <a href="https://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as an Editor's Draft.
+          
+          
+            Comments regarding this document are welcome. Please send them to
+            <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
+            (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
+            <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
+          
+          
+          
+          
+        </p><p>
+            Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+            Membership. This is a draft document and may be updated, replaced or obsoleted by other
+            documents at any time. It is inappropriate to cite this document as other than work in
+            progress.
+          </p><p>
+          
+            This document was produced by
+            a group
+            operating under the
+            <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          
+          
+          
+              <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/35422/status">public list of any patent
+              disclosures</a>
+            made in connection with the deliverables of
+            the group; that page also includes
+            instructions for disclosing a patent. An individual who has actual knowledge of a patent
+            which the individual believes contains
+            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential
+            Claim(s)</a> must disclose the information in accordance with
+            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section
+            6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          
+          
+        </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#use-cases" class="tocxref"><span class="secno">2. </span>Use Cases</a></li><li class="tocline"><a href="#structure-requirements" class="tocxref"><span class="secno">3. </span>Structure Requirements</a></li><li class="tocline"><a href="#content-requirements" class="tocxref"><span class="secno">4. </span>Content Requirements</a></li><li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#substantive-changes-since-the-last-public-working-draft" class="tocxref"><span class="secno">A.1 </span>Substantive changes since the <span class="formerLink">last public working draft</span></a></li><li class="tocline"><a href="#other-substantive-changes-since-the-first-public-working-draft" class="tocxref"><span class="secno">A.2 </span>Other substantive changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">B. </span>Acknowledgements</a><ol class="toc"><li class="tocline"><a href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document" class="tocxref"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document" class="tocxref"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document" class="tocxref"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li></ol></li></ol></nav>
+		<section id="introduction">
+			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<span class="permalink"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction"><span>§</span></a></span></h2>
+		</section>
+		<section id="use-cases">
+			<!--OddPage--><h2 id="x2-use-cases"><span class="secno">2. </span>Use Cases<span class="permalink"><a href="#use-cases" aria-label="Permalink for 2. Use Cases" title="Permalink for 2. Use Cases"><span>§</span></a></span></h2>
+		</section>
+		<section id="structure-requirements">
+			<!--OddPage--><h2 id="x3-structure-requirements"><span class="secno">3. </span>Structure Requirements<span class="permalink"><a href="#structure-requirements" aria-label="Permalink for 3. Structure Requirements" title="Permalink for 3. Structure Requirements"><span>§</span></a></span></h2>
+		</section>
+		<section id="content-requirements">
+			<!--OddPage--><h2 id="x4-content-requirements"><span class="secno">4. </span>Content Requirements<span class="permalink"><a href="#content-requirements" aria-label="Permalink for 4. Content Requirements" title="Permalink for 4. Content Requirements"><span>§</span></a></span></h2>
+		</section>
+		<section class="appendix" id="changelog">
+			<!--OddPage--><h2 id="a-change-log"><span class="secno">A. </span>Change Log<span class="permalink"><a href="#changelog" aria-label="Permalink for A. Change Log" title="Permalink for A. Change Log"><span>§</span></a></span></h2>
+			<section id="substantive-changes-since-the-last-public-working-draft">
+				<h3 id="a-1-substantive-changes-since-the-last-public-working-draft"><span class="secno">A.1 </span>Substantive changes since the <a href="@@">last public working draft</a><span class="permalink"><a href="#substantive-changes-since-the-last-public-working-draft" aria-label="Permalink for A.1 Substantive changes since the last public working draft" title="Permalink for A.1 Substantive changes since the last public working draft"><span>§</span></a></span></h3>
+				<ul>
+					<!-- EdNote: After each WD publish, move contents of this list into the next one below. -->
+				</ul>
+			</section>
+			<section id="other-substantive-changes-since-the-first-public-working-draft">
+				<h3 id="a-2-other-substantive-changes-since-the-first-public-working-draft"><span class="secno">A.2 </span>Other substantive changes since the <a href="@@">First Public Working Draft</a><span class="permalink"><a href="#other-substantive-changes-since-the-first-public-working-draft" aria-label="Permalink for A.2 Other substantive changes since the First Public Working Draft" title="Permalink for A.2 Other substantive changes since the First Public Working Draft"><span>§</span></a></span></h3>
+				<ul>
+					<!-- EdNote: After each WD publish, move previous list into this one. -->
+				</ul>
+			</section>
+		</section>
+		<!--<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'></div>-->
+		<section class="appendix" id="acknowledgements">
+			<!--OddPage--><h2 id="b-acknowledgements"><span class="secno">B. </span>Acknowledgements<span class="permalink"><a href="#acknowledgements" aria-label="Permalink for B. Acknowledgements" title="Permalink for B. Acknowledgements"><span>§</span></a></span></h2>
+			<section id="participants-in-the-silver-task-force-active-in-the-development-of-this-document">
+				<h3 id="b-1-participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document<span class="permalink"><a href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document" aria-label="Permalink for B.1 Participants in the Silver Task Force Active in the Development of This Document" title="Permalink for B.1 Participants in the Silver Task Force Active in the Development of This Document"><span>§</span></a></span></h3>
+			</section>
+			<section id="participants-in-the-silver-community-group-active-in-the-development-of-this-document">
+				<h3 id="b-2-participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document<span class="permalink"><a href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document" aria-label="Permalink for B.2 Participants in the Silver Community Group Active in the Development of This Document" title="Permalink for B.2 Participants in the Silver Community Group Active in the Development of This Document"><span>§</span></a></span></h3>
+			</section>
+			<section id="participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document">
+				<h3 id="b-3-participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document<span class="permalink"><a href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document" aria-label="Permalink for B.3 Participants in the Accessibility Guidelines Working Group Active in the Development of This Document" title="Permalink for B.3 Participants in the Accessibility Guidelines Working Group Active in the Development of This Document"><span>§</span></a></span></h3>
+			</section>
+		</section>
+	
+
+<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
