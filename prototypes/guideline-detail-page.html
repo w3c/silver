@@ -15,14 +15,15 @@
       <main id="main-content">
         <article class="guideline">
           <header aria-labelledby="title-a">
-            <div class="tags">Tags: <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">tag 3</a></div>
+            <div class="guideline__tags">Tags: <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">tag 3</a></div>
+            <div class="guideline__date">Date Added: May 15, 2018</div>
             <h1 id="titla-a">Guideline Title</h1>
             <p>description of the guideline</p>
             <p>How does the user interact with this guideline?</p>
           </header>
           <section aria-lablledby="title-a">
-            <h2 id="title-a">Best Practices</h2>
-            <p>This section would include descriptions of best practices, including code samples and examples from the design-pattern library.</p>
+            <h2 id="title-a">Best Practices and Techniques</h2>
+            <p>This section would include descriptions of best practices and techniques, including code samples and examples from the design-pattern library.</p>
           </section>
           <section>
             <h2>Conformance</h2>
@@ -35,6 +36,13 @@
               <li>Remove “accessibility supported” as an author responsibility and provide guidance to authoring tools, browsers and assistive technology developers of the expected behaviors of their products.</li>
               <li>Develop a more flexible method of claiming conformance that is better suited to accommodate dynamic or more regularly updated content.</li>
             </ul>
+          </section>
+          <section>
+            <h2>Assistive Technology</h2>
+            <p>Here, we could provide information to help the engineering community understand which assistive technology support the code they are writing. WCAG 2.0 planned a database of support for features across AT and languages, but it never was done.  Resources needed to create and maintain a database were too daunting. </p>
+            <p>This will also help assistive technology developers understand what is needed to support Silver.  The example of PC Talk screen reader in Japan does not support ARIA (and only recently got support for headings) because the PCTalk developers don’t speak English and the spec is very difficult to translate. Create test files for AT developers to use. Test results can be public.  There was discussion whether AT providers can be held responsible for their support of Silver. </p>
+            <p>Additionally, this will help the browser developers understand what is needed to support people with disabilities who do not use assistive technology.</p>
+            <p>And finally, we can determine when an assistive technology provides real accessibility support.  For example, screen magnification does not provide support for reading, but is held out as accessibility support.</p>
           </section>
           <aside>
             <section>
