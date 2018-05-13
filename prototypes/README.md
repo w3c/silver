@@ -1,6 +1,6 @@
 # Silver Community Group Prototype Read Me
 
-##Instructions for Prototypes
+## Instructions for Prototypes
 
 Thank you for helping us with developing or refining prototypes for Silver, the successor to WCAG.
 
@@ -12,6 +12,10 @@ Thank you for helping us with developing or refining prototypes for Silver, the 
 
 *  CSS class names should follow [smacss best practices](https://smacss.com/).
 
+## To Do List
+
 *  Moving forward, I recommend that we select a prototyping framework - such as Pattern Lab or Foundation - based on whichever CMS platform we are using.
 
 *  I also suggest that we build a living style guide to document our work and to help faciliate collaboration. 
+
+*  Let's establish a agile testing methodology for the prototypes. This could include a combination of automated, manual, and user testing.
