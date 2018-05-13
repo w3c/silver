@@ -1,6 +1,6 @@
 # Silver Community Group Prototype Read Me
 
-##What problems are we trying to solve in the prototypes for Silver?
+## What problems are we trying to solve in the prototypes for Silver?
 
 Let's document the high level problems here to make sure they stay at the top of our minds.
 
