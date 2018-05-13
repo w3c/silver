@@ -10,6 +10,8 @@ Thank you for helping us with developing or refining prototypes for Silver, the 
 
 *  If this is a new prototype, create a new branch with the name of: prototype-[short-name-of prototype] 
 
-*  
+*  CSS class names should follow [smacss best practices](https://smacss.com/).
 
-This list needs a lot more development, but it's a rough start.
+*  Moving forward, I recommend that we select a prototyping framework - such as Pattern Lab or Foundation - based on whichever CMS platform we are using.
+
+*  I also suggest that we build a living style guide to document our work and to help faciliate collaboration. 
