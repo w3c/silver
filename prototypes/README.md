@@ -4,13 +4,9 @@
 
 Let's document the high level problems here to make sure they stay at the top of our minds.
 
-*  From the [Silver Design Sprint Report](https://www.w3.org/community/silver/draft-final-report-of-silver/)
+*  Develop a framework to write success criteria that provides a consistent structure and helps people provide sufficient data and information.
 
-**  Develop a framework to write success criteria that provides a consistent structure and helps people provide sufficient data and information.
-
-**  Develop a framework to write success criteria that provides a consistent structure and helps people provide sufficient data and information.
-
-**  Create entry points by organizational role (e.g developer, designer, procurement, AT developer, etc)  to provide a quick way to filter the Silver guidance to essential information for that role, with links to additional information. [Roles for Silver](https://drive.google.com/file/d/1Opd5uA0wn9ACOc9nrmCq4Vrv3x-WCtrp/view) prototype was based on the [Stakeholder Job Stories](https://www.w3.org/community/silver/stakeholder-job-stories/).
+*  Create entry points by organizational role (e.g developer, designer, procurement, AT developer, etc)  to provide a quick way to filter the Silver guidance to essential information for that role, with links to additional information. [Roles for Silver](https://drive.google.com/file/d/1Opd5uA0wn9ACOc9nrmCq4Vrv3x-WCtrp/view) prototype was based on the [Stakeholder Job Stories](https://www.w3.org/community/silver/stakeholder-job-stories/).
 
 ## Instructions for Contributing to Prototypes
 
@@ -19,6 +15,8 @@ Thank you for helping us with developing or refining prototypes for Silver, the 
 *  Please review the [Suggestions from the Design Sprint](https://www.w3.org/community/silver/2018/04/23/suggestions-of-silver-design-sprint/) for an overall idea of the directions Silver is planning to take.
 
 *  Review the [Design Sprint Report](https://www.w3.org/community/silver/draft-final-report-of-silver/) for more detail on what was discussed at the Design Sprint and for more ideas.
+
+*  Review [Preliminary ideas for Silver front end](https://docs.google.com/document/d/12_R5Q_DiAZfkzSRQ6suwGavXwuehbX1MLl5DV3jSO9k/edit) to understand where we are in the process as of May 2018.
 
 *  If this is a new prototype, create a new branch with the name of: prototype-[short-name-of prototype] 
 
@@ -30,4 +28,4 @@ Thank you for helping us with developing or refining prototypes for Silver, the 
 
 *  I also suggest that we build a living style guide to document our work and to help faciliate collaboration. 
 
-*  Let's establish an agile testing methodology for the prototypes. This could include a combination of automated, manual, and user testing.
+*  Let's establish an agile testing methodology for the prototypes. This could include a combination of automated, manual, and user testing to address issues such as accessibility, usability, and cross-browser compatibility.
