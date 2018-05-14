@@ -1,0 +1,18 @@
+a.element-focusable:link,
+a.element-focusable:visited {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip: rect(1px 1px 1px 1px); /*IE6 and IE7 use the wrong syntax.*/
+}
+
+a.element-focusable:active,
+a.element-focusable:focus {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
