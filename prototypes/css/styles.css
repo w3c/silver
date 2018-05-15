@@ -16,3 +16,35 @@ a.element-focusable:focus {
   width: auto;
   overflow: auto;
 }
+
+.site-wrapper {
+  width: 100%;
+  min-width: 260px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.grid-container {
+  margin: 0 1.5em;
+}
+
+@media only screen and (min-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em;
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+.guideline__header {
+  grid-column: 1 / span 3;
+}
+
+.guideline__body {
+  grid-column: 1 / span 3;
+}
+
+.guideline__rail {
+  grid-column: 4 / span 1;
+}

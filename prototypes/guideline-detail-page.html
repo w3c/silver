@@ -8,57 +8,59 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="site-wrapper">
       <a class="element-focusable" href="#main-content">Skip to Main Content</a>
       <!-- site header goes here -->
 
       <main id="main-content">
-        <article class="guideline">
-          <header aria-labelledby="title-a">
+        <article class="guideline grid-container">
+          <header class="guideline__header">
             <div class="guideline__tags">Tags: <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">tag 3</a></div>
             <div class="guideline__date">Date Added: May 15, 2018</div>
-            <h1 id="titla-a">Guideline Title</h1>
+            <h1>Guideline Title</h1>
             <p>description of the guideline</p>
             <p>How does the user interact with this guideline?</p>
           </header>
-          <section aria-lablledby="title-a">
-            <h2 id="title-a">Best Practices and Techniques</h2>
-            <p>This section would include descriptions of best practices and techniques, including code samples and examples from the design-pattern library.</p>
-          </section>
-          <section>
-            <h2>Conformance</h2>
-            <p>Conformance information goes here. For reference, these are our goals for conformance:</p>
-            <ul>
-              <li>Design a conformance structure and style guides that shift emphasis from “testability” to “measureability” so that guidance can be included that is not conducive to a pass/fail test.  Pass/ fail tests can be included, but they are not the only way to measure conformance.</li>
-              <li>Develop scorecard or rubric measures for testing task accomplishment, instead of technical page conformance.</li>
-              <li>Develop a point and ranking system that will allow more nuanced measurement of the content or product: e.g. a bronze, silver, gold, platinum rating where the bronze rating represents the minimal conformance (roughly equivalent to meeting WCAG 2 AA), and increasing ranks include inclusive design principles, task-based assessment, and usability testing.</li>
-              <li>Include a definition and concept for “substantially meets” so people are not excessively penalized for bugs that may not have a large impact on the experience of people with disabilities.</li>
-              <li>Remove “accessibility supported” as an author responsibility and provide guidance to authoring tools, browsers and assistive technology developers of the expected behaviors of their products.</li>
-              <li>Develop a more flexible method of claiming conformance that is better suited to accommodate dynamic or more regularly updated content.</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Assistive Technology</h2>
-            <p>Here, we could provide information to help the engineering community understand which assistive technology support the code they are writing. WCAG 2.0 planned a database of support for features across AT and languages, but it never was done.  Resources needed to create and maintain a database were too daunting. </p>
-            <p>This will also help assistive technology developers understand what is needed to support Silver.  The example of PC Talk screen reader in Japan does not support ARIA (and only recently got support for headings) because the PCTalk developers don’t speak English and the spec is very difficult to translate. Create test files for AT developers to use. Test results can be public.  There was discussion whether AT providers can be held responsible for their support of Silver. </p>
-            <p>Additionally, this will help the browser developers understand what is needed to support people with disabilities who do not use assistive technology.</p>
-            <p>And finally, we can determine when an assistive technology provides real accessibility support.  For example, screen magnification does not provide support for reading, but is held out as accessibility support.</p>
-          </section>
-          <section>
-            <h2>Changelog</h2>
-            <ul>
-              <li>
-                June 5, 2018: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </li>
-              <li>
-                May 21, 2018: Proin in dui eu nisi iaculis rhoncus. Proin purus dui, finibus vitae quam et, ornare pellentesque felis. Nulla lobortis mauris at lacus lobortis laoreet. Donec consectetur est nunc, eu convallis mi laoreet at. 
-              </li>
-               <li>
-                March 17, 2018: Donec vel luctus arcu. Donec imperdiet, risus vitae feugiat consectetur, leo lacus semper magna, ut iaculis augue augue sit amet risus. Nulla facilisi.
-              </li>
-            </ul>
-          </section>
-          <aside>
+          <div class="guideline__body">
+            <section>
+              <h2>Best Practices and Techniques</h2>
+              <p>This section would include descriptions of best practices and techniques, including code samples and examples from the design-pattern library.</p>
+            </section>
+            <section>
+              <h2>Conformance</h2>
+              <p>Conformance information goes here. For reference, these are our goals for conformance:</p>
+              <ul>
+                <li>Design a conformance structure and style guides that shift emphasis from “testability” to “measureability” so that guidance can be included that is not conducive to a pass/fail test.  Pass/ fail tests can be included, but they are not the only way to measure conformance.</li>
+                <li>Develop scorecard or rubric measures for testing task accomplishment, instead of technical page conformance.</li>
+                <li>Develop a point and ranking system that will allow more nuanced measurement of the content or product: e.g. a bronze, silver, gold, platinum rating where the bronze rating represents the minimal conformance (roughly equivalent to meeting WCAG 2 AA), and increasing ranks include inclusive design principles, task-based assessment, and usability testing.</li>
+                <li>Include a definition and concept for “substantially meets” so people are not excessively penalized for bugs that may not have a large impact on the experience of people with disabilities.</li>
+                <li>Remove “accessibility supported” as an author responsibility and provide guidance to authoring tools, browsers and assistive technology developers of the expected behaviors of their products.</li>
+                <li>Develop a more flexible method of claiming conformance that is better suited to accommodate dynamic or more regularly updated content.</li>
+              </ul>
+            </section>
+            <section>
+              <h2>Assistive Technology</h2>
+              <p>Here, we could provide information to help the engineering community understand which assistive technology support the code they are writing. WCAG 2.0 planned a database of support for features across AT and languages, but it never was done.  Resources needed to create and maintain a database were too daunting. </p>
+              <p>This will also help assistive technology developers understand what is needed to support Silver.  The example of PC Talk screen reader in Japan does not support ARIA (and only recently got support for headings) because the PCTalk developers don’t speak English and the spec is very difficult to translate. Create test files for AT developers to use. Test results can be public.  There was discussion whether AT providers can be held responsible for their support of Silver. </p>
+              <p>Additionally, this will help the browser developers understand what is needed to support people with disabilities who do not use assistive technology.</p>
+              <p>And finally, we can determine when an assistive technology provides real accessibility support.  For example, screen magnification does not provide support for reading, but is held out as accessibility support.</p>
+            </section>
+            <section>
+              <h2>Changelog</h2>
+              <ul>
+                <li>
+                  June 5, 2018: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  May 21, 2018: Proin in dui eu nisi iaculis rhoncus. Proin purus dui, finibus vitae quam et, ornare pellentesque felis. Nulla lobortis mauris at lacus lobortis laoreet. Donec consectetur est nunc, eu convallis mi laoreet at. 
+                </li>
+                 <li>
+                  March 17, 2018: Donec vel luctus arcu. Donec imperdiet, risus vitae feugiat consectetur, leo lacus semper magna, ut iaculis augue augue sit amet risus. Nulla facilisi.
+                </li>
+              </ul>
+            </section>
+          </div>
+          <aside class="guideline__rail">
             <section>
               <h2>Relevant Personas</h2>
               <p>Here, we can link to relevant personas to help users understand the individuals impacted by this guideline.</p>
