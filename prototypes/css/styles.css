@@ -164,6 +164,12 @@ li {
   margin: 0 0 1em 0;
 }
 
+.guideline__date {
+  color: #077682;
+  font-weight: 700;
+  margin-right: .25em;
+}
+
 /*links that are visible in focus/active state */
 
 a.element-focusable:link,
