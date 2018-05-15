@@ -1,3 +1,64 @@
+/*font families*/
+
+/*These are google fonts, but let's avoid using google script to load them, since that will cause the site to be blocked in China.
+*/
+
+@font-face {
+  font-family: Noto Sans;
+  src: url(../fonts/NotoSans-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Noto Sans Italic;
+  src: url(../fonts/NotoSans-Italic.ttf);
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Noto Sans Bold;
+  src: url(../fonts/NotoSans-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Noto Sans Bold Italic;
+  src: url(../fonts/NotoSans-Bold.ttf);
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Noto Serif;
+  src: url(../fonts/NotoSerif-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Noto Serif Italic;
+  src: url(../fonts/NotoSerif-Italic.ttf);
+  font-style: italic
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Noto Serif Bold;
+  src: url(../fonts/NotoSerif-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Noto Serif Bold Italic;
+  src: url(../fonts/NotoSerif-Bold.ttf);
+  font-style: italic;
+  font-weight: 700;
+}
+
 /*global site styles*/
 
 html,
@@ -9,6 +70,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: Noto Sans, Trebuchet MS, Helvetica Neue, Arial, sans-serif;
 }
 
 .site-header {
@@ -37,6 +99,55 @@ body {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+
+/*text styles*/
+/*These are largely borrowed from the new WAI website*/
+
+h1 {
+  font-family: Noto Serif, serif;
+  font-weight: 400;
+  font-size: 2.2em;
+  color: #077682;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: Noto Serif, serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #005a6a;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: Noto Sans Bold, sans-serif;
+  font-size: 1.125em;
+  color: #00424b;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+p {
+  margin: 1em 0;
+  line-height: 1.5em;
+  font-size: 1em;
+  color: #1d1d1d;
+}
+
+a:link {
+  color: #3c3c70;
+  text-decoration: underline;
+}
+
+a:visited{
+  color: #606;
+}
+
+a:hover,
+a:active {
+  background-color: #c1dde0;
+  color: #00424b;
 }
 
 /*links that are visible in focus/active state */
