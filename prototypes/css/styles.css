@@ -1,5 +1,16 @@
 /*global site styles*/
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .site-header {
   width: 100%;
   height: 150px;
@@ -13,13 +24,19 @@
 
 .site-wrapper {
   width: 100%;
-  min-width: 260px;
-  max-width: 1600px;
-  margin: 0 auto;
+  padding-bottom: 5em;
+  flex: 1 0 auto;
 }
 
-body {
-  margin: 0;
+.site-footer {
+  width: 100%;
+  height: 200px;
+  background-color: #e1e1e1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 /*links that are visible in focus/active state */
@@ -46,7 +63,10 @@ a.element-focusable:focus {
 /*page layout*/
 
 .grid-container {
-  margin: 0 1.5em;
+  min-width: 260px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1.5em;
 }
 
 @media only screen and (min-width: 600px) {
