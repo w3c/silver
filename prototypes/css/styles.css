@@ -73,6 +73,10 @@ body {
   font-family: Noto Sans, Trebuchet MS, Helvetica Neue, Arial, sans-serif;
 }
 
+section {
+  margin: 3em 0;
+}
+
 .site-header {
   width: 100%;
   height: 150px;
@@ -148,6 +152,16 @@ a:hover,
 a:active {
   background-color: #c1dde0;
   color: #00424b;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 0 0 1.5em;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 1em 0;
 }
 
 /*links that are visible in focus/active state */
