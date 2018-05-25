@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+    <title>Silver Conformance Prototype</title>
+    <script 
+     src='https://www.w3.org/Tools/respec/respec-w3c-common' 
+     class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+        specStatus: "ED",
+        editors: [{
+          name: "Jeanne Spellman",
+          name: "Shawn Lauriat",
+        }],
+        github: "http://github.com/w3c/some-spec",
+        shortName: "Silver_Conformance"
+      };
+    </script>
+</head>
+<body>
+    <section id='abstract'>
+      <p>
+        A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018.  This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported. 
+      </p>
+  </section>
+  <section id='sotd'>  
+    <p>This editors' draft was published by the <a href="http://www.w3.org/community/silver/">Silver Community Group</a>. It is not a W3C Standard nor is it on the W3C Standards Track. Please note that under the <a href="http://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a> there is a limited opt-out and other conditions apply. Learn more about <a href="http://www.w3.org/community/">W3C Community and Business Groups</a>.</p>
+    </p>
+    </section>
+<section id='intro'> 
+ <h2>Introduction</h2>
+ <p>The research done in 2017-2018 by the Silver Task Force, the Silver Community Group, and the research partners was used to identify the key problem statements in the area of conformance.  See the <a href="https://docs.google.com/presentation/d/1POs7orJ4ALB0bq5_vyo4v8RxDcr-5ctwD1noVgpXuJc/edit#slide=id.gc6f73a04f_0_0">Silver Research Summary slides</a> for more detailed information.  
+ 
+ The Problem Statements related to conformance are summarized below. See the Silver Problem Statements wiki page for the complete problem statements.  
+ <h3 id='conformance_problem_statements'>Problem Statements related to Conformance</h3>
+ <ul>
+   <li>
+     <p><strong>Constraints on What is Strictly Testable</strong>. The requirement for strict testability for WCAG success criteria presents a structural barrier to including the needs of people with disabilities whose needs are not strictly testable. Guidance that WCAG working group members would like to include cannot be included. The needs of people with disabilities – especially intellectual and cognitive disabilities – are not being met. </p>
+   </li>
+   <li>
+     <p><strong>Human Testable</strong>. Success criteria are measured by different standards and by people who often make subjective observations. Because there&rsquo;s so much room for human error, an individual may believe they&rsquo;ve met a specific conformance model when, in reality, that&rsquo;s not the case. The ultimate impact is on an end user with a disability who cannot complete a given task, because the success criteria wasn&rsquo;t properly identified, tested and understood. </p>
+   </li>
+   <li>
+     <p><strong>Accessibility Supported</strong>. Difficulty understanding what qualifies as a content technology or an assistive technology; difficulty quantifying assistive technologies or features of user agents; claiming conformance with inadequate assistive technology; and difficulty claiming conformance. </p>
+   </li>
+   <li>
+     <p><strong>Evolving Technology</strong>. Consider a more general approach that is not explicit and is flexible to the differences in technologies as they evolve. </p>
+   </li>
+ </ul>
+ <h3 id="conformance_design_sprint">Suggestions from the Silver Design Sprint</h3>
+ <p>The Silver Design Sprint was a two-day face-to-face meeting of 30 experts in various areas of accessibility, including:</p>
+ <ul>
+   <li>Accessibility influencers</li>
+   <li>Information architects</li>
+   <li>UX professionals</li>
+   <li>Developers (e.g., Web content, Document, Authoring tool, User Agent, Assistive Technology)</li>
+   <li>Legal specialists</li>
+   <li>Policy specialists</li>
+   <li>W3C Process experts</li>
+ </ul>
+ <p>The <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Report of the Silver Design Sprint</a> contains suggestions from the groups that address the Problem Statements. The suggestions related to conformance can be summarized as: </p>
+ <ol start="6">
+   <li>Design a conformance structure and style guides that shift emphasis   from &ldquo;testability&rdquo; to &ldquo;measureability&rdquo; so that guidance can be included   that is not conducive to a pass/fail test.  Pass/ fail tests can be   included, but they are not the only way to measure conformance.</li>
+   <li>Develop scorecard or rubric measures for testing task accomplishment, instead of technical page conformance.</li>
+   <li>Develop a point and ranking system that will allow more nuanced   measurement of the content or product: e.g. a bronze, silver, gold,   platinum rating where the bronze rating represents the minimal   conformance (roughly equivalent to meeting WCAG 2 AA), and increasing   ranks include inclusive design principles, task-based assessment, and   usability testing.</li>
+   <li>Include a definition and concept for &ldquo;substantially meets&rdquo; so people   are not excessively penalized for bugs that may not have a large impact   on the experience of people with disabilities.</li>
+   <li>Remove &ldquo;accessibility supported&rdquo; as an author responsibility and   provide guidance to authoring tools, browsers and assistive technology   developers of the expected behaviors of their products.</li>
+   <li>Develop a more flexible method of claiming conformance that is   better suited to accommodate dynamic or more regularly updated content.</li>
+  </ol>
+ <p>Conformance relates to the ways of measuring whether or not accessibility guidance has been implemented correctly. For the purposes of this prototype, the conformance suggestions are grouped into three areas. </p>
+ <ul>
+   <li>Measuring the <strong>overall conformance</strong> of a site, application, or other product that may evolve.</li>
+   <li>Measuring  <strong>individual guidance</strong> (the equivalent of a WCAG 2 success criterion). </li>
+   <li>Providing guidance for<strong> accesssibility supported</strong>, the way that accessibility features are implemented by assistive technology, user agents (browsers, media players, native apps), and authoring tools</li>
+ </ul>
+<h2>Overall Conformance</h2>
+<p>While Overall Conformance was not directly addressed as part of the Silver Design Sprint, a number of suggestions related to overall conformance were discussed. A key suggestion originated from Eve ??, a lawyer formerly a part of the Office of Civil Rights. She suggested that Silver members study the <a href="https://new.usgbc.org/cert-guide">LEED Certification for green buildings</a> for inspiration for a more flexible method to measure overall Silver Conformance. The LEED program uses a point system, that can varies by the type of building (Homes, Commercial, Neighborhoods, etc) and within each type, assigns a level: bronze, silver, gold, platinum. Advantages of this system include: </p>
+<ul>
+  <li>Greater flexibilty to customize conformance to meet evolving needs</li>
+  <li>Clear communication to the public of the level. (WCAG level A sounds good to people who are not familiar with WCAG, while Bronze level clearly implies that they can do better). </li>
+  <li>Point system allows <strong>...??? </strong></li>
+  <li>Allows creating incentives for desireable behavior that goes beyond individual pass/fail tests, such as usability testing and user testing with people with disabilities. </li>
+</ul>
+<p>A one-day face-to-face prototyping meeting was held as part of AccessU in May of 2018 to get input from attendees and experts in accessibility on the Overall Conformance. 3 Silver members attended all day and 15 AccessU attendees gave input at various times into the session. See the <a href="https://docs.google.com/document/d/1LM3kejNPnNUWEbM7Sak5seV1DPpVaKsZEpYH_5DNzqg/edit#heading=h.cilkdkr91o0">Notes of the AccessU prototyping session</a> for more detailed information. </p>
+<h3>Bronze Level</h3>
+<p>Any site, application or product that currently meets WCAG AA would be grandfathered in at Bronze level. Most accessibility testing that can be performed with automated tests would probably fall under bronze level. Existing pass/fail tests associated with WCAG 2.0 success criteria would apply to points under Bronze level. </p>
+<h3>Silver Level</h3>
+<p>Silver level sites, apps, or products would meet the requirements of Bronze level plus additional points. It was suggested that the Silver level include the new guidance that would be included to address the needs of people with cognitive disabilities, low vision, and other disabilities that are not easily meaured with a pass fail test. </p>
+<h3>Gold Level</h3>
+<p><em>This section needs more work</em>. The suggestions were that sites, apps, or products that met Gold Level would meet Silver Level plus they would demonstrate more advanced accessibility measurements such as user testing with people with disabilitiles. </p>
+<h3>Platinum Level</h3>
+<p><em>This section needs more work</em>. This is an optional level that would demonstrate a more extra-ordinary approach to accessibiltiy. If it is included, it could be used for organizations that have made a maturity-model commitment to accessibility in the organization that would ensure long-term accessibility for their site, application or product. </p>
+<h3>Point System (needs a better name)</h3>
+<p><em>The details of the point system still need considerable work and development</em>. The general idea is that different point systems could be set up to address specific types of sites, applications, or products. For example, a social media site that is updates thousands of times per second has different conformance needs than a small mostly static website. A site that is oriented for children might have different needs than a e-commerce site. Having different point systems give the flexibility to address those needs.</p>
+<h3>Concerns to be Solved</h3>
+<ul>
+  <li>WCAG for young children? Are the needs different? More research input is needed in this important area. </li>
+  <li>How to insure that people don't take the points that are easy to accomplish and use them to score high enough to achieve a level without making the overall site, app, or product accessible. One suggestions is to set up sub categories where people have to score enough in that category. Anyother suggestions was to start with a high score and subtract points to determine the final score, for example, you get 330 points out of a possible 450 points.</li>
+  <li>Certification system. Many people were interested and had ideas about certification. While W3C does not have the resources to certify individual sites, it possibly could be interested in certifying companies, who would then be authorized to certify sites. This goes beyond the scope that we are currently addressing, and should be discussed with W3C management. </li>
+</ul>
+<h2>Individual Guidance Measurement</h2>
+ <p>WCAG 2.0 and 2.1 use success criteria as the basis for determining conformance. That choice of structure has been very successful for 10 years and has resulted in WCAG 2.0 being accepted as a basis of accessibility regulation around the world. The unintended consequence of that decision became apparent during the development of WCAG 2.1. Task Forces who had worked for years identifying user needs and proposing success criteria found that their user needs could not be tested with a pass fail test, and therefore could not be included in WCAG 2.1. These proposals for success criteria were postponed to be addresssed in Silver. </p>
+ <p>One subgroup of the Silver Design Sprint, Table 5, chose to focus on more flexible measurement of individual guidance. <em>This information needs to be summarized and developed for this prototype. </em>The <a href="https://drive.google.com/open?id=1XDOmjQkMRqQ0XKiKYA-mDAuA40oHtaXNl1H0NXLcV80">Overview of Table 5</a> provides a summary of their work and links to the photos of their prototypes. </p>
+ <p>A suggestion from the Silver Design Sprint which was also discussed at AccessU was the concept of &quot;<strong>substantially meets</strong>&quot;. This would allow an organization to claim conformance to individual guidance where they have clearly put effort into meeting, but not fail because of a small number of bugs. For example, an e-commerce site with alternative text on thousands of product images would not fail because of one or two products where there was no alternative text. This needs thought to unintended consequences and organizations &quot;gaming&quot; the system to claim conformance without providing accessibility. Many people representing their companies accessibility departments were very interested in including this concept. </p>
+ <h2>Accessibility Supported </h2>
+ <p>Accessibility Supported is a poorly understood part of WCAG 2 conformance. Although there are many interpretations of tthe meaning of Accessibility Supported, for this purpose, we are taking the meaning that Accessiiblity Supported requires the author who wishes to claim conformance to WCAG to demonstrate that their site, app, or product meets the success criteria for the assistive technology and user agent in the language of the user. When the assistive technology or user agent fails to provide the necessary feature in the language of the user, then the author is required to make up that lack to claim conformance. While this was a good idea, in practice, the unintended result was a proliferation of javascript code to solve accessibility supported problems that in many cases reduced usability for people with disabilities. </p>
+ <p>One subgroup of the Silver Design Sprint, Table 2, chose to focus on accessibility supported. <em>This information needs to be summarized and developed for this prototype. </em>The <a href="https://drive.google.com/open?id=1TG1VsXu_oBPuDK08rcbTFhP25CT_oAsywtWPLkyjZGw">Overview of Table 2</a> provides a summary of their work and links to the photos of their prototypes. </p>
+ <p>One suggestion from AccessU prototyping meeting was that the W3C webplatform.org tests be augmented with accessibility tests to measure the implementation of the accessibility support features of the major browsers. </p>
+</section>  
+    
+
+</body>
+</html>
