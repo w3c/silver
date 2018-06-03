@@ -1,97 +1,397 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta http-equiv="content-type" content="text/html; charset=utf-8">
- <title>DRAFT requirements for "Silver" Accessibility Guidelines</title>
-</head>
-<body>
- <h1>DRAFT Requirements for "Silver" Accessibility Guidelines</h1>
- <p>This is a development of an <a href="https://docs.google.com/document/d/15F4KuNXYK5q2rOgb4ktHiJQMQpAEL9EetARpMU3vD_A/edit#">initial
-draft on google docs</a>. This is work in progress, and comments are
-welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=[Comment%20Silver%20Requirements]">email</a>. This version includes comments received by 29 May 2018 and discussion from the Silver Task Force and Commuity Group as of 29 May 2018. See the changelog for specific changes. </p>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 20.7.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- PERMALINKS --- */
 
- <h2>Introduction</h2>
- <p>People with disabilities can face problems using online content and
-applications. Disabilities can be permanent, temporary, or situational. Most of the requirements in Silver prioritize the needs of permanent disabilities, but the requirements can also apply to temporary or situational disabilities. </p>
- <p>We need guidelines to:</p>
- <ul>
-<li> identify these barriers encountered by people with disabilities.</li>
-<li>explain how to solve the problems they pose.</li>
+.permalink {
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+  font-size: 10pt;
+  font-style: normal;
+  vertical-align: middle;
+  margin-left: 4px;
+  float: right;
+}
+
+.permalink a, .permalink a:link, .permalink a:visited, .permalink a:hover, .permalink a:focus, .permalink a:active {
+  background:transparent !important;
+  text-decoration:none;
+  font-weight: bold;
+  color:#666 !important;
+}
+
+.permalink abbr {
+  border:0;
+}
+</style>
+		<title>Requirements for Silver</title>
+		
+		
+		
+	<style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd > p:first-child {
+  margin-top: 0;
+}
+
+.section dd > p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary > ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details > * {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: .3em;
+  background-color: white;
+  padding-bottom: .5em;
+}
+
+details.respec-tests-details[open] > summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details > ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details > li {
+  padding-left: 1em;
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/silver-requirements/"><script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "specStatus": "CG-DRAFT",
+  "noRecTrack": true,
+  "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+  "shortName": "silver-requirements",
+  "copyrightStart": "2018",
+  "license": "document",
+  "edDraftURI": "https://w3c.github.io/silver/requirements/",
+  "editors": [
+    {
+      "name": "Jeanne Spellman",
+      "mailto": "jspellman@spellmanconsulting.com",
+      "company": "The Paciello Group, LLC",
+      "companyURI": "https://www.paciellogroup.com/",
+      "w3cid": 42417
+    },
+    {
+      "name": "Shawn Lauriat",
+      "mailto": "lauriat@google.com",
+      "company": "Google, Inc.",
+      "companyURI": "https://www.google.com/",
+      "w3cid": 90646
+    },
+    {
+      "name": "Michael Cooper",
+      "mailto": "cooper@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org/",
+      "w3cid": 34017
+    }
+  ],
+  "wg": "Silver Community Group and Silver Task Force of Accessibility Guidelines Working Group",
+  "wgURI": "https://www.w3.org/community/silver/",
+  "wgPublicList": "public-silver",
+  "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/35422/status",
+  "maxTocLevel": 4,
+  "publishISODate": "2018-04-10T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 31 May 2018"
+}</script><meta name="description" content="Requirements for Silver"></head>
+	<body class="h-entry"><div class="head">
+  <a href="https://www.w3.org/" class="logo">
+      <img alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48">
+  </a>
+  <h1 id="title" class="title p-name">Requirements for Silver</h1>
+  
+  <h2 id="w3c-editor-s-draft-10-april-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-05-31">31 May 2018</time></h2>
+  <dl>
+    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/silver/requirements/">https://w3c.github.io/silver/requirements/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/silver-requirements/">https://www.w3.org/TR/silver-requirements/</a></dd>
+    <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/requirements/">https://w3c.github.io/silver/requirements/</a></dd>
+    
+    
+    
+    
+    
+    
+    <dt>Editors:</dt>
+    <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (The Paciello Group, LLC)</dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (Google, Inc.)</dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd>
+    
+    
+    
+  </dl>
+  
+  
+  
+  <p class="copyright">
+        <p>Copyright © 2018) the Contributors to the Silver Requirements, published by the  <a href="http://www.w3.org/community/silver/">Silver</a> under the <a href="http://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable <a href="http://www.w3.org/community/about/agreements/cla-deed/">summary</a> is available.
+</p>
+  <hr title="Separator for header">
+</div>
+		<section id="abstract" class="introductory"><h2 id="abstract-0">Abstract</h2>
+			<p>Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to do incubate the needs, requirements, and structure for the new accessibility guidance. The group initially planned research to study the needs, developed problem statements, received input from industry leaders for directions to procede, and have drafted these high-level requirements for the next phase of the project, prototyping and public input. </p>
+		</section>
+	<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document
+        </h2>
+<p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
+    </p>
+<p>Requirements for Silver are a work in progress, and comments are  welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=[Comment%20Silver%20Requirements]">email</a>.   This version of the Requirements is the first of 3 planned stages of the Silver Requirements. This initional, high-level version forms the basis of the prototyping work which is scheduled for 2nd and 3rd quarter of 2018. The Requirements will be updated in more detail after the public feedback of the prototyping process. This version includes comments received by 29 May 2018 and discussion   from the Silver Task Force and Commuity Group as of 29 May 2018. See the <a href="#changelog">changelog</a> for specific changes. </p>
+      <p>This report was published by the <a href="http://www.w3.org/community/silver/">Silver Community Group</a>. It is not a W3C Standard nor is it on the W3C Standards Track. Please note that under the <a href="http://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a> there is a limited opt-out and other conditions apply. Learn more about <a href="http://www.w3.org/community/">W3C Community and Business Groups</a>.</p></p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#use-cases" class="tocxref"><span class="secno">2. </span>Problem Statements Around Current Guidelines</a></li><li class="tocline"><a href="#structure-requirements" class="tocxref"><span class="secno">3. </span>Design Principles</a></li><li class="tocline"><a href="#content-requirements" class="tocxref"><span class="secno">4. </span>Requirements</a></li><li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#substantive-changes-since-the-last-public-working-draft" class="tocxref"><span class="secno">A.1 </span>Substantive changes since the <span class="formerLink">last public working draft</span></a></li><li class="tocline"><a href="#other-substantive-changes-since-the-first-public-working-draft" class="tocxref"><span class="secno">A.2 </span>Other substantive changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">B. </span>Acknowledgements</a><ol class="toc"><li class="tocline"><a href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document" class="tocxref"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document" class="tocxref"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document" class="tocxref"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li></ol></li></ol></nav>
+	<section id="introduction">
+			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<span class="permalink"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction"><span>§</span></a></span></h2>
+      <p>People with disabilities can face problems using online content and applications. Disabilities can be permanent, temporary, or situational. Most of the requirements in Silver prioritize the needs of people with permanent disabilities, but the requirements can also apply to temporary or situational disabilities. </p>
+      <p>We need guidelines to:        </p>
+      <ul>
+        <li>identify these barriers encountered by people with disabilities.          </li>
+        <li>explain how to solve the problems they pose. </li>
+      </ul>
+    </section>
+		<section id="use-cases">
+			<!--OddPage-->
+			<h2 id="x2-use-cases"><span class="secno">2. </span>Problem Statements Around Current Guidelines<span class="permalink"><a href="#use-cases" aria-label="Permalink for 2. Use Cases" title="Permalink for 2. Use Cases"><span>§</span></a></span></h2>
+<p>The Problem Statements describe areas that came up in research for Silver in 2017-2018 that we need to focus on and address in the new guidelines, to provide some background for how we developed these requirements. </p>
+<h3>Usability Problems</h3>
+<ul>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read">Too Difficult to Read</a></li>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Difficult_to_get_started">Difficult to get started</a></li>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Ambiguity_in_interpreting_the_success_criteria">Ambiguity in interpreting the success       criteria</a></li>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Persuading_Others">Persuading Others</a></li>
 </ul>
- <h2>Background: Problem Statements Around Current Guidelines</h2>
- <p>The <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements">Problem
-   Statements</a> describe areas that came up in research for Silver in
-   2017-2018 that we need to focus on and address in the new guidelines, to
-   provide some background for how we developed these requirements.</p>
- <h3>Usability Problems</h3>
- <ul>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read" >Too Difficult to Read</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Difficult_to_get_started">Difficult to get started</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Ambiguity_in_interpreting_the_success_criteria"
-
->Ambiguity in interpreting the success
-     criteria</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Persuading_Others">Persuading Others</a></li>
- </ul>
- <h3>Conformance Model</h3>
- <ul>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Constraints_on_What_is_Strictly_Testable">Constraints on What is Strictly Testable</a> </li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Human_Testable">Human Testable</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Accessibility_Supported">Accessibility Supported</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Evolving_Technology">Evolving Technology</a></li>
- </ul>
+<h3>Conformance Model</h3>
+<ul>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Constraints_on_What_is_Strictly_Testable">Constraints on What is Strictly Testable</a></li>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Human_Testable">Human Testable</a></li>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Accessibility_Supported">Accessibility Supported</a></li>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Evolving_Technology">Evolving Technology</a></li>
+</ul>
 <h3>Maintenance</h3>
- <ul>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Flexibility">Flexibility</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Scaling">Scaling</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Governance">Governance</a></li>
- </ul>
-<h2>Design Principles</h2>
- <p>Accessibility guidelines should:</p>
- <ol>
-<li> Support the needs of the widest possible range of people with disabilities.</li>
-<li>Support measuring changes in the level of conformance.</li>
-<li> Be flexible enough to support the needs of people with disabilities
-using emerging technologies. </li>
-<li> Be usable and accessible.</li>
-<li>Be written in plain language, as easy as possible to understand.</li>
- </ol>
- <p>The development process for the guidelines should</p>
- <ol>
-<li> include people with disabilities,</li>
-<li>have global participation and feedback. </li>
-<li> Be about and for people – technology is important but secondary. </li>
-<li> Strive to be data informed and evidence based. </li>
-<li> Include the principles and intent of previous guidelines</li>
- </ol>
- <h2>Requirements</h2>
- <p>Previous W3C Accessibility Guidelines described how to make web
-pages accessible to people with disabilities. Those guidelines provided a flexible framework that has kept the guidelines relevant for as many as 10 years, but changing technology and needs of people with disabilities has shown areas where they could be improved. The requirements are drawn from the research performed by Silver to improve the guidelines, and the suggestions from the Silver Design Sprint. These requirements are high level, and will be expanded and refined as Silver members move through the prototyping process. </p>
- <p>These requirements will be refined in Q3 of 2018 at the end of the prototyping process and in 2019 after public input from the First Public Working Draft. </p>
- <ol>
-<li> Provide more information than a simple pass/fail statement. For
-example, it may describe "minimal" and "better" methods of conforming to
-a requirement. </li>
-<li> Create a structure for guidelines that can better meet the needs of
-people with disabilities in unanticipated technologies and interactions. The structure is flexible and forgiving of unanticipated needs. </li>
-<li> Make the guidelines available in different accessible and usable
-ways. </li>
- </ol>
-<h2>Changelog</h2>
- <p>Other changes of 30 May 2018:</p>
- <ul>
-   <li>Add short sentences on the timeline for updating the Requirements document based on meeting of Cooper, Lauriat and Spellman of 23 March 2018. </li>
- </ul>
-<p>From the Silver meeting of 29 May 2018:</p>
- <ul>
-   <li>Reorder the sections so that the background is first, folowed by Design Principles, then Requirements</li>
-   <li>Clarify the broader definition of "disabilities" based on input from public comments and group discussion. The definition sentence in the Introduction paragraph is a proposal for group discussion. </li>
+<ul>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Flexibility">Flexibility</a></li>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Scaling">Scaling</a></li>
+  <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Governance">Governance</a></li>
 </ul>
-<p>From the Silver meeting of 25 May 2018: </p>
- <ul>
-   <li>Insert missing word "people" from Design Principle #1    
-   <li>Change &quot;future&quot; to &quot;unanticipated&quot; in Requirements #2 and add subsequent sentence. 
- <li>Change the Requirements Intro paragraph to remove the specific sentence on conformance and pass/fail tests and give greater context on the source of the Requirements. </ul>
-</body>
-</html>
+		</section>
+		<section id="structure-requirements">
+			<!--OddPage-->
+			<h2 id="x3-structure-requirements"><span class="secno">3. </span>Design Principles<span class="permalink"><a href="#structure-requirements" aria-label="Permalink for 3. Structure Requirements" title="Permalink for 3. Structure Requirements"><span>§</span></a></span></h2>
+<p>Accessibility guidelines should:</p>
+<ol>
+  <li> Support the needs of the widest possible range of people with disabilities.</li>
+  <li>Support measuring changes in the level of conformance.</li>
+  <li> Be flexible enough to support the needs of people with disabilities  using emerging technologies. </li>
+  <li> Be usable and accessible.</li>
+  <li>Be written in plain language, as easy as possible to understand.</li>
+</ol>
+<p>The development process for the guidelines should</p>
+<ol start="6">
+  <li> include people with disabilities,</li>
+  <li>have global participation and feedback. </li>
+  <li> Be about and for people – technology is important but secondary. </li>
+  <li> Strive to be data informed and evidence based. </li>
+  <li> Include the principles and intent of previous guidelines</li>
+</ol>
+<p> </p>
 
+		</section>
+		<section id="content-requirements">
+			<!--OddPage--><h2 id="x4-content-requirements"><span class="secno">4. </span> Requirements<span class="permalink"><a href="#content-requirements" aria-label="Permalink for 4. Content Requirements" title="Permalink for 4. Content Requirements"><span>§</span></a></span></h2>
+<p>Previous W3C Accessibility Guidelines described how to make web  pages accessible to people with disabilities. Those guidelines provided a   flexible framework that has kept the guidelines relevant for as many as   10 years, but changing technology and needs of people with disabilities   has shown areas where they could be improved. The requirements are   drawn from the research performed by Silver to improve the guidelines,   and the suggestions from the Silver Design Sprint. These requirements   are high level, and will be expanded and refined as Silver members move   through the prototyping process. </p>
+<p>These requirements will be refined in Q3 of 2018 at the end of the   prototyping process and in 2019 after public input from the First Public   Working Draft. </p>
+<ol>
+  <li> Provide more information than a simple pass/fail statement. For  example, it may describe "minimal" and "better" methods of conforming to  a requirement. </li>
+  <li> Create a structure for guidelines that can better meet the needs of  people with disabilities in unanticipated technologies and interactions.   The structure is flexible and forgiving of unanticipated needs. </li>
+  <li> Make the guidelines available in different accessible and usable  ways. </li>
+</ol>
+<p> </p>
+		</section>
+		<section class="appendix" id="changelog">
+		  <!--OddPage--><h2 id="a-change-log"><span class="secno">A. </span>Change Log<span class="permalink"><a href="#changelog" aria-label="Permalink for A. Change Log" title="Permalink for A. Change Log"><span>§</span></a></span></h2>
+			<section id="substantive-changes-since-the-last-public-working-draft">
+				<h3 id="a-1-substantive-changes-since-the-last-public-working-draft"><span class="secno">A.1 </span>Substantive changes since the <a href="@@">last public working draft</a><span class="permalink"><a href="#substantive-changes-since-the-last-public-working-draft" aria-label="Permalink for A.1 Substantive changes since the last public working draft" title="Permalink for A.1 Substantive changes since the last public working draft"><span>§</span></a></span></h3>
+				<ul>
+					<!-- EdNote: After each WD publish, move contents of this list into the next one below. -->
+				</ul>
+			</section>
+			<section id="other-substantive-changes-since-the-first-public-working-draft">
+				<h3 id="a-2-other-substantive-changes-since-the-first-public-working-draft"><span class="secno">A.2 </span>Other substantive changes since the <a href="@@">First Public Working Draft</a><span class="permalink"><a href="#other-substantive-changes-since-the-first-public-working-draft" aria-label="Permalink for A.2 Other substantive changes since the First Public Working Draft" title="Permalink for A.2 Other substantive changes since the First Public Working Draft"><span>§</span></a></span></h3>
+				<ul>
+					<!-- EdNote: After each WD publish, move previous list into this one. -->
+				</ul>
+			</section>
+<section id="changes-before-the-first-public-working-draft">
+<h3 id="a-3-changes-before-the-first-public-working-draft"><span class="secno">A.3 </span>Changes Prior to First Public Working Draft<span class="permalink"><a href="#changes-before-the-first-public-working-draft" aria-label="Permalink for A.3 Changes Prior to the First Public Working Draft" title="Permalink for A.3 Changes Prior to the First Public Working Draft"><span>§</span></a></span></h3>
+<ul>
+  <li>Add short sentences on the timeline for updating the Requirements   document based on meeting of Cooper, Lauriat and Spellman of 23 March   2018. 
+
+      <li>Reorder the sections so that the background is first, folowed by Design Principles, then Requirements</li>
+      <li>Clarify the broader definition of "disabilities" based on input   from public comments and group discussion. The definition sentence in   the Introduction paragraph is a proposal for group discussion. 
+
+          <li>Insert missing word "people" from Design Principle #1 </li>
+          <li>Change "future" to "unanticipated" in Requirements #2 and add subsequent sentence. </li>
+          <li>Change the Requirements Intro paragraph to remove the specific   sentence on conformance and pass/fail tests and give greater context on   the source of the Requirements. </li>
+</ul>
+</section>
+        
+		</section>
+		<!--<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'></div>-->
+	  <section class="appendix" id="acknowledgements">
+			<!--OddPage--><h2 id="b-acknowledgements"><span class="secno">B. </span>Acknowledgements<span class="permalink"><a href="#acknowledgements" aria-label="Permalink for B. Acknowledgements" title="Permalink for B. Acknowledgements"><span>§</span></a></span></h2>
+			<section id="participants-in-the-silver-task-force-active-in-the-development-of-this-document">
+				<h3 id="b-1-participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document<span class="permalink"><a href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document" aria-label="Permalink for B.1 Participants in the Silver Task Force Active in the Development of This Document" title="Permalink for B.1 Participants in the Silver Task Force Active in the Development of This Document"><span>§</span></a></span></h3>
+			</section>
+			<section id="participants-in-the-silver-community-group-active-in-the-development-of-this-document">
+				<h3 id="b-2-participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document<span class="permalink"><a href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document" aria-label="Permalink for B.2 Participants in the Silver Community Group Active in the Development of This Document" title="Permalink for B.2 Participants in the Silver Community Group Active in the Development of This Document"><span>§</span></a></span></h3>
+			</section>
+			<section id="participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document">
+				<h3 id="b-3-participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document<span class="permalink"><a href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document" aria-label="Permalink for B.3 Participants in the Accessibility Guidelines Working Group Active in the Development of This Document" title="Permalink for B.3 Participants in the Accessibility Guidelines Working Group Active in the Development of This Document"><span>§</span></a></span></h3>
+			</section>
+		</section>
+	
+
+<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
