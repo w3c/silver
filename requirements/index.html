@@ -1,97 +1,213 @@
+<!--?xml version='1.0' encoding='UTF-8'?-->
 <!DOCTYPE html>
-<html lang="en">
-<head>
- <meta http-equiv="content-type" content="text/html; charset=utf-8">
- <title>DRAFT requirements for "Silver" Accessibility Guidelines</title>
-</head>
-<body>
- <h1>DRAFT Requirements for "Silver" Accessibility Guidelines</h1>
- <p>This is a development of an <a href="https://docs.google.com/document/d/15F4KuNXYK5q2rOgb4ktHiJQMQpAEL9EetARpMU3vD_A/edit#">initial
-draft on google docs</a>. This is work in progress, and comments are
-welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=[Comment%20Silver%20Requirements]">email</a>. This version includes comments received by 29 May 2018 and discussion from the Silver Task Force and Commuity Group as of 29 May 2018. See the changelog for specific changes. </p>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+	<head>
+		<title>Requirements for Silver</title>
+		<meta charset="UTF-8" />
+		<script src="respec-config.js" class="remove"></script>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+        <script class='remove'>
+      var respecConfig = {
+        specStatus: "CG-DRAFT",
+        "editors": [
+    {
+      "name": "Jeanne Spellman",
+      "mailto": "jspellman@spellmanconsulting.com",
+      "company": "The Paciello Group, LLC",
+      "companyURI": "https://www.paciellogroup.com/",
+      "w3cid": 42417
+    },
+    {
+      "name": "Shawn Lauriat",
+      "mailto": "lauriat@google.com",
+      "company": "Google, Inc.",
+      "companyURI": "https://www.google.com/",
+      "w3cid": 90646
+    },
+    {
+      "name": "Michael Cooper",
+      "mailto": "cooper@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org/",
+      "w3cid": 34017
+    }
+  ],
+        "wgURI": "https://www.w3.org/community/silver/",
+  		"wgPublicList": "public-silver",
+  		"github": "http://github.com/w3c/silver/requirements",
+  		"copyrightStart": "2018",
+        "shortName": "silver-requirements"
+      };
+    </script>
+	</head>
+	<body>
+		<section id="abstract">
+			<p>Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to do incubate the needs, requirements, and structure for the new accessibility guidance. The group  planned research to study the needs, developed problem statements, received input from industry leaders for directions to procede, and have drafted these high-level requirements for the next phase of the project, the prototyping and public input. </p>
+		</section>
+		<section id="sotd"> </section>
+		<section>
+			<h2 id="intro">Introduction</h2>
+            <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or situational   limitations. </p>
+            <p>We need guidelines to: </p>
+            <ul>
+              <li>identify these barriers encountered by people with disabilities. </li>
+              <li>explain how to solve the problems they pose. </li>
+            </ul>
+		</section>
 
- <h2>Introduction</h2>
- <p>People with disabilities can face problems using online content and
-applications. Disabilities can be permanent, temporary, or situational. Most of the requirements in Silver prioritize the needs of permanent disabilities, but the requirements can also apply to temporary or situational disabilities. </p>
- <p>We need guidelines to:</p>
- <ul>
-<li> identify these barriers encountered by people with disabilities.</li>
-<li>explain how to solve the problems they pose.</li>
+		<section>
+		  <h2 id="problem_statements">Problem Statements</h2>
+          <p>Web Content Accessibility Guidelines (WCAG) 2.0 were designed to be   technology neutral, and have stayed relevant for over 10 years.  During   the year of Silver research, a recurring theme was the popularity and quality of the   guidance in WCAG 2.0. Most of the problem areas identified in the research were   improvements in the structure and presentation of WCAG 2.0 for usability, to support more disability needs, and to improve maintence. Research also included the Authoring Tool Accessibility Guidelines (ATAG) 2.0 and User Agent Accessibility Guidelines (UAAG) 2.0. </p>
+          <p>The   Problem Statements describe areas identified during the Silver research in   2017-2018 that  need to be addressed in the new guidelines. Each name links to the full text of the problem statement in the Silver wiki. </p>
+          <h3>Usability Problems</h3>
+          <ul>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read">Too Difficult to Read</a></li>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Difficult_to_get_started">Difficult to get started</a></li>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Ambiguity_in_interpreting_the_success_criteria">Ambiguity in interpreting the success       criteria</a></li>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Persuading_Others">Persuading Others</a></li>
+          </ul>
+          <h3>Conformance Model</h3>
+          <ul>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Constraints_on_What_is_Strictly_Testable">Constraints on What is Strictly Testable</a></li>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Human_Testable">Human Testable</a></li>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Accessibility_Supported">Accessibility Supported</a></li>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Evolving_Technology">Evolving Technology</a></li>
+          </ul>
+          <h3>Maintenance</h3>
+          <ul>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Flexibility">Flexibility</a></li>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Scaling">Scaling</a></li>
+            <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Governance">Governance</a>		</li>
+          </ul>
+		</section>
+		<section>
+		  <h2 id="design_principles">Design Principles</h2>
+          <p>Accessibility guidelines should:</p>
+          <ol>
+            <li> Support the needs of the widest possible range of people with disabilities.</li>
+            <li>Support measuring changes in the level of conformance.</li>
+            <li> Be flexible enough to support the needs of people with disabilities  using emerging technologies. </li>
+            <li> Be usable and accessible.</li>
+            <li>Be written in plain language, as easy as possible to understand.</li>
+          </ol>
+          <p>The development process for the guidelines should</p>
+          <ol start="6">
+            <li> include people with disabilities,</li>
+            <li>have global participation and feedback. </li>
+            <li> Be about and for people – technology is important but secondary. </li>
+            <li> Strive to be data informed and evidence based. </li>
+            <li> Include the principles and intent of previous guidelines</li>
+          </ol>
+		</section>
+		<section>
+		  <h2 id="requirements">Requirements</h2>
+          <p>Previous W3C Accessibility Guidelines described how to make web    pages accessible to people with disabilities. Those guidelines provided a     flexible framework that has kept the guidelines relevant for as many   as   10 years, but changing technology and needs of people with   disabilities   has shown areas where they could be improved. The   requirements are   drawn from the research performed by Silver to   improve the guidelines,   and the suggestions from the Silver Design   Sprint. These requirements   are high level, and will be expanded and   refined as Silver members move   through the prototyping process. </p>
+          <p>These requirements will be refined in Q3 of 2018 at the end of the     prototyping process and in 2019 after public input from the First Public     Working Draft. </p>
+          <ol>
+            <li> Provide more information than a simple pass/fail statement. For    example, it may describe "minimal" and "better" methods of conforming to    a requirement. </li>
+            <li> Create a structure for guidelines that can better meet the needs   of  people with disabilities in unanticipated technologies and   interactions.   The structure is flexible and forgiving of unanticipated   needs. </li>
+            <li> Make the guidelines available in different accessible and usable  ways. </li>
+          </ol>
+		</section>
+		<section class="appendix" id="changelog">
+	    <h2>Change Log</h2>
+			<section>
+<!--				<h3 id="changes-since-last-public-working-draft">Substantive changes since the <a href="@@">last public working draft</a></h3>
+				<ul>
+					<!-- EdNote: After each WD publish, move contents of this list into the next one below. -->
+<!--				</ul>  -->
+			</section>
+			<section>
+<!--				<h3 id="other-substantive-changes">Other substantive changes since the <a href="@@">First Public Working Draft</a></h3>
+				<ul>
+					<!-- EdNote: After each WD publish, move previous list into this one. -->
+<!--				</ul> -->
+			</section>
+          <section>
+            <h3 id="changes-before-the-first-public-working-draft">Changes Prior to First Public Working Draft</h3>
+            <ul>
+           	    <li>Added statement to Problem Statements about ATAG &amp; UAAG research. Minor grammar fixes. </li>
+           	    <li>Add explanatory sentence to Problem Statement intro paragraph   about positive feedback on WCAG guidance and emphasis on structural and   presentation improvements.</li>
+                    <li>Fix typo, change "situational disabilities" to "situational limitations"</li>
+                    <li>Add short sentences on the timeline for updating the Requirements     document based on meeting of Cooper, Lauriat and Spellman of 23 March     2018. </li>
+                    <li>Reorder the sections so that the background is first, folowed by Design Principles, then Requirements</li>
+                    <li>Clarify the broader definition of "disabilities" based on input     from public comments and group discussion. The definition sentence in     the Introduction paragraph is a proposal for group discussion. </li>
+                    <li>Insert missing word "people" from Design Principle #1 </li>
+                    <li>Change "future" to "unanticipated" in Requirements #2 and add subsequent sentence. </li>
+                    <li>Change the Requirements Intro paragraph to remove the specific     sentence on conformance and pass/fail tests and give greater context on     the source of the Requirements.        </li>
+            </ul>
+            </section>
+		</section>
+		<!--<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'></div>-->
+	  <section class="appendix">
+			<h2>Acknowledgements</h2>
+			<section>
+				<h3>Participants in the Silver Task Force Active in the Development of This Document</h3>
+<ul>
+<li> Butler, Shari
+    (Pearson plc)</li>
+<li> Campbell, Alastair
+    (Nomensa)</li>
+<li> Cooper, Michael
+    (W3C Staff)</li>
+<li>Horton, Sarah (The Paciello Group, LLC)</li>
+<li> Ku, JaEun
+    (University of Illinois at Urbana-Champaign)</li>
+<li> Lauriat, Shawn
+    (Google, Inc.)</li>
+<li> McSorley, Jan
+    (Pearson plc)</li>
+<li> Ran, Ruoxi
+    (W3C Staff)</li>
+<li> Sloan, David
+    (The Paciello Group, LLC)</li>
+<li> Spellman, Jeanne 
+	(The Paciello Group, LLC)</li>
 </ul>
- <h2>Background: Problem Statements Around Current Guidelines</h2>
- <p>The <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements">Problem
-   Statements</a> describe areas that came up in research for Silver in
-   2017-2018 that we need to focus on and address in the new guidelines, to
-   provide some background for how we developed these requirements.</p>
- <h3>Usability Problems</h3>
- <ul>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read" >Too Difficult to Read</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Difficult_to_get_started">Difficult to get started</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Ambiguity_in_interpreting_the_success_criteria"
+			</section>
+		<section>
+		  <h3>Participants in the Silver Community Group Active in the Development of This Document</h3>
+<ul>
 
->Ambiguity in interpreting the success
-     criteria</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Persuading_Others">Persuading Others</a></li>
- </ul>
- <h3>Conformance Model</h3>
- <ul>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Constraints_on_What_is_Strictly_Testable">Constraints on What is Strictly Testable</a> </li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Human_Testable">Human Testable</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Accessibility_Supported">Accessibility Supported</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Evolving_Technology">Evolving Technology</a></li>
- </ul>
-<h3>Maintenance</h3>
- <ul>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Flexibility">Flexibility</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Scaling">Scaling</a></li>
-   <li> <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Governance">Governance</a></li>
- </ul>
-<h2>Design Principles</h2>
- <p>Accessibility guidelines should:</p>
- <ol>
-<li> Support the needs of the widest possible range of people with disabilities.</li>
-<li>Support measuring changes in the level of conformance.</li>
-<li> Be flexible enough to support the needs of people with disabilities
-using emerging technologies. </li>
-<li> Be usable and accessible.</li>
-<li>Be written in plain language, as easy as possible to understand.</li>
- </ol>
- <p>The development process for the guidelines should</p>
- <ol>
-<li> include people with disabilities,</li>
-<li>have global participation and feedback. </li>
-<li> Be about and for people – technology is important but secondary. </li>
-<li> Strive to be data informed and evidence based. </li>
-<li> Include the principles and intent of previous guidelines</li>
- </ol>
- <h2>Requirements</h2>
- <p>Previous W3C Accessibility Guidelines described how to make web
-pages accessible to people with disabilities. Those guidelines provided a flexible framework that has kept the guidelines relevant for as many as 10 years, but changing technology and needs of people with disabilities has shown areas where they could be improved. The requirements are drawn from the research performed by Silver to improve the guidelines, and the suggestions from the Silver Design Sprint. These requirements are high level, and will be expanded and refined as Silver members move through the prototyping process. </p>
- <p>These requirements will be refined in Q3 of 2018 at the end of the prototyping process and in 2019 after public input from the First Public Working Draft. </p>
- <ol>
-<li> Provide more information than a simple pass/fail statement. For
-example, it may describe "minimal" and "better" methods of conforming to
-a requirement. </li>
-<li> Create a structure for guidelines that can better meet the needs of
-people with disabilities in unanticipated technologies and interactions. The structure is flexible and forgiving of unanticipated needs. </li>
-<li> Make the guidelines available in different accessible and usable
-ways. </li>
- </ol>
-<h2>Changelog</h2>
- <p>Other changes of 30 May 2018:</p>
- <ul>
-   <li>Add short sentences on the timeline for updating the Requirements document based on meeting of Cooper, Lauriat and Spellman of 23 March 2018. </li>
- </ul>
-<p>From the Silver meeting of 29 May 2018:</p>
- <ul>
-   <li>Reorder the sections so that the background is first, folowed by Design Principles, then Requirements</li>
-   <li>Clarify the broader definition of "disabilities" based on input from public comments and group discussion. The definition sentence in the Introduction paragraph is a proposal for group discussion. </li>
+<li>Alice Boxhall, Google, Inc.
+<li>Angela Hooker, Microsoft Corp.
+<li>Charles Hall, MRM // McCANN
+<li>Charles McCathie Nevile
+<li>Eleanor Loiacono, Worcester Polytechnic Institute
+<li>Imelda Llanos
+<li>Jake Abma, ING Groep N.V.
+<li>Jennifer Chadwick, Siteimprove
+<li>Jennison Asuncion, LinkedIn
+<li>Jill Power, EBSCO Publishing
+<li>John Kirkwood, CityMouse, inc
+<li>John McNabb, Canadian Imperial Bank of Commerce
+<li>John Rochford, University of Massachusetts Medical Center
+<li>Katharina Herzog
+<li>Kelsey Collister
+<li>Luis Garcia, eBay
+<li>Lyn Muldrow, LinkedIn
+<li>Léonie Watson, The Paciello Group, LLC
+<li>Mark Tanner
+<li>Matthew King, Facebook
+<li>Michael Crabb, The University of Dundee
+<li>Michellanne Li, Palantir.net
+<li>Peter McNally, User Experience Center, Bentley University
+<li>Ruth Spina, North East ISD
+<li>Ryan Hemphill
+<li>Sarah Pulis, Intopia
+<li>Scott Hollier
+<li>sweta wakodkar, Prakat Solutions Pvt Ltd
+<li>Takayuki Watanabe, Tokyo Woman's Christian University
+<li>Thomas Logan, Equal Entry
+<li>Thomas Westin, Stockholm University
+<li>Victoria Clark, JP Morgan Chase
+<li>Wendy Chisholm, Microsoft Corp.
 </ul>
-<p>From the Silver meeting of 25 May 2018: </p>
- <ul>
-   <li>Insert missing word "people" from Design Principle #1    
-   <li>Change &quot;future&quot; to &quot;unanticipated&quot; in Requirements #2 and add subsequent sentence. 
- <li>Change the Requirements Intro paragraph to remove the specific sentence on conformance and pass/fail tests and give greater context on the source of the Requirements. </ul>
-</body>
+
+		  </section>
+			<section>
+				<h3>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</h3>
+			</section>
+		</section>
+	</body>
 </html>
-
