@@ -1,0 +1,4 @@
+
+Here are the logos for Silver use: 
+  Silver logo designed by Glenda (Goodwitch) Simms
+  W3C Community Group report logo
