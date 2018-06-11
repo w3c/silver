@@ -9,8 +9,9 @@ You are welcome to contribute to ideas and comments to the work. See the instruc
 
 This list is updated sporadicly and could be behind. Use the Code tab in Github to explore the /prototypes/ folder.
 
-Prototype Title | Developed By | Information Based On | Status
---- | --- | ---
+
+Prototype Title | Developed Vy | Notes | Status
+------------ | ------------- | -----
 [ConformancePrototype](/ConformancePrototype) | @jspellman |  Developed from Silver Design Sprint, Silver member input, and AccessU meeting public input |  In Progress
 
 ## Instructions for Prototypes
