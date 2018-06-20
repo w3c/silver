@@ -38,3 +38,40 @@ h2, h3{
   border-style: solid;
   border-width: 1px;
 }
+
+header{
+  padding-bottom: 10px;
+}
+
+/* BREADCRUMBS */
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+    margin-top: 2px
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+h2.breadcrumb {
+  display: inline;
+  font-size: 14px;
+  margin-bottom: 0px;
+  padding-left: 4px;
+}
