@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
+
+body{
+  background-color: #dddddd;
+}
+
+.container{
+  width: 800px;
+  margin: auto;
+  background-color: #F5F5F5;
+  padding: 20px;
+}
+
+.logo{
+  width: 100px;
+}
+
+.logo-silver{
+  float: right;
+}
+
+h1, h2, h3, p, li{
+  color: #101010;
+  font-family: Arial, Helvetica, san-serif;
+}
+
+h2, h3{
+  margin-bottom: 0;
+}
+.silver{
+  color: #eeeeee;
+  background: #808080;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  display: inline-block;
+  padding: 5px 15px;
+  border-color: #A9A9A9;
+  border-style: solid;
+  border-width: 1px;
+}
+
+header{
+  padding-bottom: 10px;
+}
+
+/* BREADCRUMBS */
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+    margin-top: 2px
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+h2.breadcrumb {
+  display: inline;
+  font-size: 14px;
+  margin-bottom: 0px;
+  padding-left: 4px;
+}
