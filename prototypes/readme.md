@@ -12,6 +12,7 @@ This list is updated sporadicly and could be behind. Use the Code tab in Github 
 Prototype Title | Developed By | Notes | Status
 ------------ | ------------- | ----- | ------
 [ConformancePrototype](/prototypes/ConformancePrototype) | @jspellman |  Developed from Silver Design Sprint, Silver member input, and AccessU meeting public input |  In Progress
+[Flavor Prototype](/prototypes/FlavorPrototype) | @mikecrabb |  Used to show possibility of different technology flavors of Silver |  In Progress
 
 ## Instructions for Prototypes
 Thank you for helping us with developing or refining prototypes for Silver, the successor to WCAG. Before creating any prototypes for Silver:
