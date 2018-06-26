@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/master.css">
+  <title></title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-light alert-header">
+            <p>
+              <a href="staticWeb.html" class="flavor-title flavor-staticweb">Static Web</a>
+              <span class="flavor-title">Dynamic Web</span>
+              <span class="flavor-title">Home Automation</span>
+              <span class="flavor-title">Mobile Dev</span>
+              <a href="aria.html" class="flavor-title flavor-aria">ARIA</a>
+              <span class="flavor-title">User Testing</span>
+              <span class="flavor-title">Flash</span>
+              <a href="silverlight.html" class="flavor-title flavor-silverlight">Silverlight</a>
+              <a href="pdf.HTML" class="flavor-title flavor-pdf">PDF</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="flavor-area flavor-core">
+            <h2 class="flavor-title flavor-core">W3 Accessibility Guidelines <span class="flavor">Core</span></h2>
+
+            <h3>Non-text Content</h3>
+            <p> All non-text content that is presented to the user has a text alternative that serves the equivalent purpose</p>
+
+            <p class="intent">The intent of this Success Criterion is to make information conveyed by non-text content accessible through the use of a text alternative. Text alternatives are a primary way for making information accessible because they can be rendered through
+              any sensory modality (for example, visual, auditory or tactile) to match the needs of the user.</p>
+
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="flavor-area flavor-aria">
+            <h2 class="flavor-title flavor-aria">W3 Accessibility Guidelines <span class="flavor">ARIA</h2>
+            <p>The purpose of this technique is to provide a label for objects that can be read by assistive technology. The aria-label attribute provides the text label for an object, such as a button. When a screen reader encounters the object, the aria-label text is read so that the user will know what it is.</p>
+            <p>Authors should be aware that aria-label may be disregarded by assistive technologies in situations where aria-labelledby is used for the same object. For more information on the naming hierarchy please consult the ARIA specification and the accessible name and description calculation in the HTML to Platform Accessibility APIs Implementation Guide. Authors should be aware that use of aria-label will override any native naming such as alt on images or label associated with a form field using the for attribute.</p>
+
+            <h5>Example</h3>
+<p>The following example shows how aria-label could be used to distinguish two navigation landmarks in a HTML4 and XHTML 1.0 document, where there are more than two of the same type of landmark on the same page, and there is no existing text on the page that can be referenced as the label.</p>
+<div class="codeContainer">
+  <code><pre>&lt;div role="navigation" aria-label="Primary"&gt;
+&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt; &lt;/div&gt;
+&lt;div role="navigation" aria-label="Secondary"&gt;
+&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;</pre></code>
+</div>
+
+   </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+</body>
+
+</html>
