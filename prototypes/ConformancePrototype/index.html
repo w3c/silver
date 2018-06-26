@@ -1,0 +1,564 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 21.3.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+div.issue-title, div.note-title , div.ednote-title, div.warning-title {
+    padding-right:  1em;
+    min-width: 7.5em;
+    color: #b9ab2d;
+}
+div.issue-title { color: #e05252; }
+div.note-title, div.ednote-title { color: #2b2; }
+div.warning-title { color: #f22; }
+div.issue-title span, div.note-title span, div.ednote-title span, div.warning-title span {
+    text-transform: uppercase;
+}
+div.note, div.issue, div.ednote, div.warning {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
+.issue, .note, .ednote, .warning {
+    padding: .5em;
+    border-left-width: .5em;
+    border-left-style: solid;
+}
+div.issue, div.note , div.ednote,  div.warning {
+    padding: 1em 1.2em 0.5em;
+    margin: 1em 0;
+    position: relative;
+    clear: both;
+}
+span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+
+.issue {
+    border-color: #e05252;
+    background: #fbe9e9;
+}
+.note, .ednote {
+    border-color: #52e052;
+    background: #e9fbe9;
+}
+
+.warning {
+    border-color: #f11;
+    border-width: .2em;
+    border-style: solid;
+    background: #fbe9e9;
+}
+
+.warning-title:before{
+    content: "⚠"; /*U+26A0 WARNING SIGN*/
+    font-size: 3em;
+    float: left;
+    height: 100%;
+    padding-right: .3em;
+    vertical-align: top;
+    margin-top: -0.5em;
+}
+
+li.task-list-item {
+    list-style: none;
+}
+
+input.task-list-item-checkbox {
+    margin: 0 0.35em 0.25em -1.6em;
+    vertical-align: middle;
+}
+
+.issue a.respec-gh-label {
+  padding: 5px;
+  margin: 0 2px 0 2px;
+  font-size: 10px;
+  text-transform: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  position: relative;
+  bottom: 2px;
+}
+
+.issue a.respec-label-dark {
+  color: #fff;
+  background-color: #000;
+}
+
+.issue a.respec-label-light {
+  color: #000;
+  background-color: #fff;
+}
+</style>
+		<title>Silver Conformance Prototype</title>
+		
+		
+		
+	<style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd > p:first-child {
+  margin-top: 0;
+}
+
+.section dd > p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary > ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details > * {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: .3em;
+  background-color: white;
+  padding-bottom: .5em;
+}
+
+details.respec-tests-details[open] > summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details > ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details > li {
+  padding-left: 1em;
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"><link rel="canonical" href="https://www.w3.org/TR/silver/"><script id="initialUserConfig" type="application/json">{
+  "specStatus": "CG-DRAFT",
+  "wg": "Silver Task Force and Community Group",
+  "editors": [
+    {
+      "name": "Jeanne Spellman",
+      "mailto": "jspellman@spellmanconsulting.com",
+      "company": "The Paciello Group, LLC",
+      "companyURI": "https://www.paciellogroup.com/",
+      "w3cid": 42417
+    },
+    {
+      "name": "Shawn Lauriat",
+      "mailto": "lauriat@google.com",
+      "company": "Google, Inc.",
+      "companyURI": "https://www.google.com/",
+      "w3cid": 90646
+    }
+  ],
+  "wgURI": "https://www.w3.org/community/silver/",
+  "github": "https://github.com/w3c/silver/prototypes/ConformancePrototype.html",
+  "copyrightStart": "2018",
+  "publishDate": "2018-06-26",
+  "publishISODate": "2018-06-26T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 26 June 2018"
+}</script><meta name="description" content="A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018. This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported."></head>
+<body class="h-entry toc-inline"><div class="head">
+  <a href="https://www.w3.org/" class="logo">
+      <img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C">
+  </a>
+  <h1 class="title p-name" id="title">Silver Conformance Prototype</h1>
+  
+  <h2 id="draft-community-group-report-26-june-2018">Draft Community Group Report <time class="dt-published" datetime="2018-06-26">26 June 2018</time></h2>
+  <dl>
+    
+    
+    <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/">https://w3c.github.io/silver/</a></dd>
+    
+    
+    
+    
+    
+    <dt>Editors:</dt>
+    <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (The Paciello Group, LLC)</dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (Google, Inc.)</dd>
+    
+    
+    <dt>Participate:</dt><dd>
+      <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html">GitHub w3c/silver</a>
+    </dd><dd>
+      <a href="https://github.com/w3c/silver/prototypes/issues/">File a bug</a>
+    </dd><dd>
+      <a href="https://github.com/w3c/silver/prototypes/commits/gh-pages">Commit history</a>
+    </dd><dd>
+      <a href="https://github.com/w3c/silver/prototypes/pulls/">Pull requests</a>
+    </dd>
+  </dl>
+  
+  <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
+    2018
+    the Contributors to the Silver Conformance Prototype Specification, published by the
+    <a href="https://www.w3.org/community/silver/">Silver Task Force and Community Group</a> under the
+    <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>.
+      A human-readable <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a> is available.
+    
+  </p>
+  <hr title="Separator for header">
+</div>
+<section id="abstract" class="introductory"><h2 id="abstract-0">Abstract</h2>
+	<p>A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018. This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported. </p>
+</section>
+<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document</h2><p>
+  This specification was published by the <a href="https://www.w3.org/community/silver/">Silver Task Force and Community Group</a>.
+  It is not a W3C Standard nor is it on the W3C Standards Track.
+  
+    Please note that under the
+    <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>
+    there is a limited opt-out and other conditions apply.
+  
+  Learn more about
+  <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
+</p><p>Silver Conformance Prototype is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20Conformance%20Prototype]">email</a>. </p><p>This is the first draft of the prototype. It is a combination of suggestions from the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Silver Design Sprint final report</a>, public input from the Silver meeting at AccessU, and discussion in the Silver meetings. See the <a href="#changelog">changelog</a> for specific changes. </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#background" class="tocxref"><span class="secno">1. </span>Background</a><ol class="toc"><li class="tocline"><a href="#conformance_problem_statements" class="tocxref"><span class="secno">1.1 </span>Problem Statements related to Conformance</a></li><li class="tocline"><a href="#conformance_design_sprint" class="tocxref"><span class="secno">1.2 </span>Suggestions from the Silver Design Sprint</a></li></ol></li><li class="tocline"><a href="#what-is-conformance" class="tocxref"><span class="secno">2. </span>What is Conformance?</a></li><li class="tocline"><a href="#overall-conformance" class="tocxref"><span class="secno">3. </span>Overall Conformance</a></li><li class="tocline"><a href="#individual-guidance-measurement" class="tocxref"><span class="secno">4. </span>Individual Guidance Measurement</a></li><li class="tocline"><a href="#accessibility-supported" class="tocxref"><span class="secno">5. </span>Accessibility Supported </a></li><li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#changes-before-the-first-public-working-draft" class="tocxref"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">B. </span>Acknowledgements</a><ol class="toc"><li class="tocline"><a href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document" class="tocxref"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document" class="tocxref"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a href="#participants-in-the-silver-design-sprint" class="tocxref"><span class="secno">B.3 </span>Participants in the Silver Design Sprint</a></li><li class="tocline"><a href="#contributions-to-the-silver-design-sprint" class="tocxref"><span class="secno">B.4 </span>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a href="#research-partners" class="tocxref"><span class="secno">B.5 </span>Research Partners</a></li></ol></li></ol></nav>
+	<section id="background">
+ <!--OddPage--><h2 id="x1-background"><span class="secno">1. </span>Background</h2>
+ <p>The research done in 2017-2018 by the Silver Task Force, the Silver Community Group, and the <a href="#research-partners">research partners</a> was used to identify the key problem statements in the area of conformance.  See the <a href="https://docs.google.com/presentation/d/1POs7orJ4ALB0bq5_vyo4v8RxDcr-5ctwD1noVgpXuJc/edit#slide=id.gc6f73a04f_0_0">Silver Research Summary slides</a> for more detailed information.  </p>
+
+<p> The Problem Statements related to conformance are summarized below. See the Silver Problem Statements wiki page for the complete problem statements. </p>
+
+ <section id="conformance_problem_statements">
+ <h3 id="x1-1-problem-statements-related-to-conformance"><span class="secno">1.1 </span>Problem Statements related to Conformance</h3>
+ <ul>
+   <li>
+     <p><strong>Constraints on What is Strictly Testable</strong>. The requirement for strict testability for WCAG success criteria presents a structural barrier to including the needs of people with disabilities whose needs are not strictly testable. Guidance that WCAG working group members would like to include cannot be included. The needs of people with disabilities – especially intellectual and cognitive disabilities – are not being met. </p>
+   </li>
+   <li>
+     <p><strong>Human Testable</strong>. Success criteria are measured by different standards and by people who often make subjective observations. Because there’s so much room for human error, an individual may believe they’ve met a specific conformance model when, in reality, that’s not the case. The ultimate impact is on an end user with a disability who cannot complete a given task, because the success criteria wasn’t properly identified, tested and understood. </p>
+   </li>
+   <li>
+     <p><strong>Accessibility Supported</strong>. This is poorly understood, even by experts. Users experience difficulty understanding what qualifies as a content technology or an assistive technology; difficulty quantifying assistive technologies or features of user agents; claiming conformance with inadequate assistive technology; and difficulty claiming conformance. </p>
+   </li>
+   <li>
+     <p><strong>Evolving Technology</strong>. Consider a more general approach that is not explicit and is flexible to the differences in technologies as they evolve. </p>
+   </li>
+ </ul>
+ </section>
+ <section id="conformance_design_sprint">
+ <h3 id="x1-2-suggestions-from-the-silver-design-sprint"><span class="secno">1.2 </span>Suggestions from the Silver Design Sprint</h3>
+ <p>The Silver Design Sprint was a two-day face-to-face meeting of 30 experts in various areas of accessibility, including:</p>
+ <ul>
+   <li>Accessibility influencers</li>
+   <li>Information architects</li>
+   <li>UX professionals</li>
+   <li>Developers (e.g., Web content, Document, Authoring tool, User Agent, Assistive Technology)</li>
+   <li>Legal specialists</li>
+   <li>Policy specialists</li>
+   <li>W3C Process experts</li>
+ </ul>
+ <p>The <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Report of the Silver Design Sprint</a> contains suggestions from the groups that address the Problem Statements. The suggestions related to conformance can be summarized as: </p>
+ <ol start="6">
+   <li>Design a&nbsp;conformance structure and style guides that shift emphasis   from “testability” to “measureability” so that guidance can be included   that is not conducive to a pass/fail test. &nbsp;Pass/ fail tests can be   included, but they are not the only way to measure conformance.</li>
+   <li>Develop scorecard or rubric measures for testing task accomplishment, instead of technical page conformance.</li>
+   <li>Develop a point and ranking system that will allow more nuanced   measurement of the content or product: e.g. a bronze, silver, gold,   platinum rating where the bronze rating represents the minimal   conformance (roughly equivalent to meeting WCAG 2 AA), and increasing   ranks include inclusive design principles, task-based assessment, and   usability testing.</li>
+   <li>Include a definition and concept for “substantially meets” so people   are not excessively penalized for bugs that may not have a large impact   on the experience of people with disabilities.</li>
+   <li>Remove “accessibility supported” as an author responsibility and   provide guidance to authoring tools, browsers and assistive technology   developers of the expected behaviors of their products.</li>
+   <li>Develop a more flexible method of claiming conformance that is   better suited to accommodate dynamic or more regularly updated content.</li>
+  </ol>
+  </section>
+</section>
+
+<section id="what-is-conformance">
+  <!--OddPage--><h2 id="x2-what-is-conformance"><span class="secno">2. </span>What is Conformance?</h2>
+ <p>Conformance relates to the ways of measuring whether or not accessibility guidance has been implemented correctly. For the purposes of this prototype, the conformance suggestions are grouped into three areas. </p>
+ <ul>
+   <li>Measuring the <strong>overall conformance</strong> of a site, application, or other product that may evolve.</li>
+   <li>Measuring  <strong>individual guidance</strong> (the equivalent of a WCAG 2 success criterion). </li>
+   <li>Providing guidance for<strong> accesssibility supported</strong>, the way that accessibility features are implemented by assistive technology, user agents (browsers, media players, native apps), and authoring tools</li>
+ </ul>
+</section>
+
+<section id="overall-conformance">
+<!--OddPage--><h2 id="x3-overall-conformance"><span class="secno">3. </span>Overall Conformance</h2>
+<p>While Overall Conformance was not directly addressed as part of the Silver Design Sprint, a number of suggestions related to overall conformance were discussed. A key suggestion originated from Eve ??, a lawyer formerly a part of the Office of Civil Rights. She suggested that Silver members study the <a href="https://new.usgbc.org/cert-guide">LEED Certification for green buildings</a> for inspiration for a more flexible method to measure overall Silver Conformance. The LEED program uses a point system, that can varies by the type of building (Homes, Commercial, Neighborhoods, etc) and within each type, assigns a level: bronze, silver, gold, platinum. Advantages of this system include: </p>
+<ul>
+  <li>Greater flexibilty to customize conformance to meet evolving needs</li>
+  <li>Clear communication to the public of the level. (WCAG level A sounds good to people who are not familiar with WCAG, while Bronze level clearly implies that they can do better). </li>
+  <li>Point system allows prioritization of guidance without assigning the guidance to a level. This gives flexibility to have different priorities for different types of sites, apps, or products. </li>
+  <li>Allows creating incentives for desireable behavior that goes beyond individual pass/fail tests, such as usability testing and user testing with people with disabilities. </li>
+</ul>
+<p>A one-day face-to-face prototyping meeting was held as part of AccessU in May of 2018 to get input from attendees and experts in accessibility on the Overall Conformance. 3 Silver members attended all day and 15 AccessU attendees gave input at various times into the session. See the <a href="https://docs.google.com/document/d/1LM3kejNPnNUWEbM7Sak5seV1DPpVaKsZEpYH_5DNzqg/edit#heading=h.cilkdkr91o0">Notes of the AccessU prototyping session</a> for more detailed information. </p>
+<h2 id="bronze-level">Bronze Level</h2>
+<p>Any site, application or product that currently meets WCAG AA would be grandfathered in at Bronze level. Most accessibility testing that can be performed with automated tests would probably fall under bronze level. Existing pass/fail tests associated with WCAG 2.0 success criteria would apply to points under Bronze level. </p>
+<h2 id="silver-level">Silver Level</h2>
+<p>Silver level sites, apps, or products would meet the requirements of Bronze level plus additional points. It was suggested that the Silver level include the new guidance that would be included to address the needs of people with cognitive disabilities, low vision, and other disabilities that are not easily meaured with a pass fail test. </p>
+<h3 id="gold-level">Gold Level</h3>
+<p><div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><em class="">This section needs more work</em></div>. The suggestions were that sites, apps, or products that met Gold Level would meet Silver Level plus they would demonstrate more advanced accessibility measurements such as user testing with people with disabilitiles. </p>
+<h3 id="platinum-level">Platinum Level</h3>
+<p><div class="ednote" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span></div><em class="">This section needs more work</em></div>. This is an optional level that would demonstrate a organization commitment  to accessibiltiy. If it is included, it could be used for organizations that have made a maturity-model commitment to accessibility in the organization that would ensure long-term accessibility for their site, application or product. </p>
+<h3 id="point-system-needs-a-better-name">Point System (needs a better name)</h3>
+<p><div class="ednote" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="3"><span>Editor's note</span></div><em class="">The details of the point system still need considerable work and development</em></div>. The general idea is that different point systems could be set up to address specific types of sites, applications, or products. For example, a social media site that is updates thousands of times per second has different conformance needs than a small mostly static website. A site that is oriented for children might have different needs than a e-commerce site. Having different point systems give the flexibility to address those needs.</p>
+<h3 id="concerns-to-be-solved">Concerns to be Solved</h3>
+<ul>
+  <li>WCAG for young children? Are the needs different? More research input is needed in this important area. </li>
+  <li>How to insure that people don't take the points that are easy to accomplish and use them to score high enough to achieve a level without making the overall site, app, or product accessible. One suggestions is to set up sub categories where people have to score enough in that category. Anyother suggestions was to start with a high score and subtract points to determine the final score, for example, you get 330 points out of a possible 450 points.</li>
+  <li>Certification system. Many people were interested and had ideas about certification. While W3C does not have the resources to certify individual sites, it possibly could be interested in certifying companies, who would then be authorized to certify sites. This goes beyond the scope that we are currently addressing, and should be discussed with W3C management. </li>
+</ul>
+</section>
+
+<section id="individual-guidance-measurement">
+<!--OddPage--><h2 id="x4-individual-guidance-measurement"><span class="secno">4. </span>Individual Guidance Measurement</h2>
+ <p>WCAG 2.0 and 2.1 use success criteria as the basis for determining conformance. That choice of structure has been very successful for 10 years and has resulted in WCAG 2.0 being accepted as a basis of accessibility regulation around the world. The unintended consequence of that decision became apparent during the development of WCAG 2.1. Task Forces who had worked for years identifying user needs and proposing success criteria found that their user needs could not be tested with a pass fail test, and therefore could not be included in WCAG 2.1. These proposals for success criteria were postponed to be addresssed in Silver. </p>
+ <p>One subgroup of the Silver Design Sprint, Table 5, chose to focus on more flexible measurement of individual guidance. <div class="ednote" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="3"><span>Editor's note</span></div><em class="">This information needs to be summarized and developed for this prototype. </em></div>The <a href="https://drive.google.com/open?id=1XDOmjQkMRqQ0XKiKYA-mDAuA40oHtaXNl1H0NXLcV80">Overview of Table 5</a> provides a summary of their work and links to the photos of their prototypes. </p>
+ <p>A suggestion from the Silver Design Sprint which was also discussed at AccessU was the concept of "<strong>substantially meets</strong>". This would allow an organization to claim conformance to individual guidance where they have clearly put effort into meeting, but not fail because of a small number of bugs. For example, an e-commerce site with alternative text on thousands of product images would not fail because of one or two products where there was no alternative text. This needs thought to unintended consequences and organizations "gaming" the system to claim conformance without providing accessibility. Many people representing their companies accessibility departments were very interested in including this concept. </p>
+</section>
+
+<section id="accessibility-supported">
+ <!--OddPage--><h2 id="x5-accessibility-supported"><span class="secno">5. </span>Accessibility Supported </h2>
+ <p>Accessibility Supported is a poorly understood part of WCAG 2 conformance. Although there are many interpretations of tthe meaning of Accessibility Supported, for this purpose, we are taking the meaning that Accessiiblity Supported requires the author who wishes to claim conformance to WCAG to demonstrate that their site, app, or product meets the success criteria for the assistive technology and user agent in the language of the user. When the assistive technology or user agent fails to provide the necessary feature in the language of the user, then the author is required to make up that lack to claim conformance. While this was a good idea, in practice, the unintended result was a proliferation of javascript code to solve accessibility supported problems that in many cases reduced usability for people with disabilities. </p>
+ <p>One subgroup of the Silver Design Sprint, Table 2, chose to focus on accessibility supported. <em>This information needs to be summarized and developed for this prototype. </em>The <a href="https://drive.google.com/open?id=1TG1VsXu_oBPuDK08rcbTFhP25CT_oAsywtWPLkyjZGw">Overview of Table 2</a> provides a summary of their work and links to the photos of their prototypes. </p>
+ <p>One suggestion from AccessU prototyping meeting was that the W3C webplatform.org tests be augmented with accessibility tests to measure the implementation of the accessibility support features of the major browsers. </p>
+</section>
+
+<section class="appendix" id="changelog">
+			<!--OddPage--><h2 id="a-change-log"><span class="secno">A. </span>Change Log</h2>
+<section>
+            <h3 id="changes-before-the-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</h3>
+            <ul>
+           	    <li>
+              </li>
+            </ul>
+          </section>
+	</section>
+		<!--<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'></div>-->
+		<section class="appendix" id="acknowledgements">
+			<!--OddPage--><h2 id="b-acknowledgements"><span class="secno">B. </span>Acknowledgements</h2>
+			<section id="participants-in-the-silver-task-force-active-in-the-development-of-this-document">
+				<h3 id="b-1-participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</h3>
+                <ul>
+<li> Butler, Shari
+    (Pearson plc)</li>
+<li> Campbell, Alastair
+    (Nomensa)</li>
+<li> Cooper, Michael
+    (W3C Staff)</li>
+<li>Horton, Sarah (The Paciello Group, LLC)</li>
+<li> Ku, JaEun
+    (University of Illinois at Urbana-Champaign)</li>
+<li> Lauriat, Shawn
+    (Google, Inc.)</li>
+<li> McSorley, Jan
+    (Pearson plc)</li>
+<li> Ran, Ruoxi
+    (W3C Staff)</li>
+<li> Sloan, David
+    (The Paciello Group, LLC)</li>
+<li> Spellman, Jeanne
+	(The Paciello Group, LLC)</li>
+</ul>
+			</section>
+			<section id="participants-in-the-silver-community-group-active-in-the-development-of-this-document">
+				<h3 id="b-2-participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</h3>
+                <ul>
+
+<li>Alice Boxhall, Google, Inc.
+</li><li>Angela Hooker, Microsoft Corp.
+</li><li>Charles Hall, MRM // McCANN
+</li><li>Charles McCathie Nevile
+</li><li>Imelda Llanos
+</li><li>Jake Abma, ING Groep N.V.
+</li><li>Jennison Asuncion, LinkedIn
+</li><li>John Kirkwood, CityMouse, inc
+</li><li>John McNabb, Canadian Imperial Bank of Commerce
+</li><li>John Rochford, University of Massachusetts Medical Center
+</li><li>Kelsey Collister
+</li><li>Luis Garcia, eBay
+</li><li>Léonie Watson, The Paciello Group, LLC
+</li><li>Mark Tanner
+</li><li>Michael Crabb, The University of Dundee
+</li><li>Michellanne Li, Palantir.net
+
+</li><li>sweta wakodkar, Prakat Solutions Pvt Ltd.
+</li></ul>
+	    </section>
+            <section id="participants-in-the-silver-design-sprint">
+            <h3 id="b-3-participants-in-the-silver-design-sprint"><span class="secno">B.3 </span>Participants in the Silver Design Sprint</h3>
+            <p>The following people participated in the Design Sprint of 2018 held   in San Diego, California prior to the CSUN AT 2018 conference.  We thank   them for the generous gift of time that they donated to the Silver   project. </p>
+            <ul>
+              <li> Camron Shimy, Google, (Sprint Facilitator)</li>
+              <li> Alice Boxhall, Google </li>
+              <li> Shari Butler, Pearson</li>
+              <li> Wendy Chisholm, Microsoft</li>
+              <li> Michael Cooper, W3C</li>
+              <li> Wayne Dick, Knowbility</li>
+              <li> Rob Dodson, Google</li>
+              <li> Lainey Feingold, Law Office of Lainey Feingold</li>
+              <li> Lucy Greco, University of California Berkley</li>
+              <li> Charles Hall, MRM/McCann</li>
+              <li> Shilpi Kapoor, BarrierBreak</li>
+              <li> George Kerscher, DAISY Consortium, Benetech</li>
+              <li> Sharon Krevor-Weisbaum, Brown, Goldstein &amp; Levy, LLP</li>
+              <li> Matt King, Facebook</li>
+              <li> John Kirkwood, CityMouse, Inc</li>
+              <li> JaEun Jemma Ku, University of Illinois Urbana-Champaign</li>
+              <li> Shawn Lauriat, Google</li>
+              <li> Chaals McCathy-Neville, Yandex</li>
+              <li> Jan McSorley, Pearson</li>
+              <li> Whitney Quesenbery, Center for Civic Design</li>
+              <li> Melanie Richards, Microsoft</li>
+              <li> John Rochford, University of Massachusetts Medical School</li>
+              <li> Jeanne Spellman, The Paciello Group (TPG)</li>
+              <li> Adam Spencer, Accessibil-IT</li>
+              <li> Makoto Ueki, Infoaxia, Inc.</li>
+              <li> Leonie Watson, The Paciello Group (TPG)</li>
+            </ul>
+
+	    </section>
+            <section id="contributions-to-the-silver-design-sprint">
+        <h3 id="b-4-contributions-to-the-silver-design-sprint"><span class="secno">B.4 </span>Contributions to the Silver Design Sprint</h3>
+        <ul>
+          <li>San Diego State University Interwork Institue and Center for Distance Learning donated the space and AV for the Design Sprint.</li>
+          <li>University of Illinois Urbana-Champaign Libraries donated the lunch and breaks</li>
+          <li>Google donated the supplies and coffee</li>
+        </ul>
+		</section>
+<section id="research-partners">
+		<h3 id="b-5-research-partners"><span class="secno">B.5 </span>Research Partners</h3>
+        <p>These researchers selected a Silver research question, did the research, and graciously allowed us to use the results.</p>
+        <ul>
+          <li>David Sloan and Sarah Horton, The Paciello Group, “WCAG Success Criteria Usability Study”</li>
+          <li>Scott Hollier et al, Curtin University, “Internet of Things (IoT) Education: Implications for Students with Disabilities”</li>
+          <li>Peter McNally, Bentley University, “WCAG Use by UX Professionals”</li>
+          <li>Professor Mike Crabb, student papers of Silver research topics</li>
+          <li>Eleanor Loiacono, Worcester Polytechnic Institute “Web Accessibility   Perceptions” (Student project from Worcester Polytechnic Institute)</li>
+        </ul>
+        </section>
+
+</section>
+
+
+<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>

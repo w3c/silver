@@ -1,30 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<title> Silver Community Group Prototype Read Me</title>
+  <title>Accessibility Guidelines "Silver"</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
 </head>
+
 <body>
-<h1> Silver Community Group Prototypes</h1>
-  <p>The Silver Task Force and Silver Community Group are soliciting and building prototypes of the future Silver design and structure.  
-    You are welcome to contribute to ideas and comments to the work. See the instructions below to submit a prototype.  </p>
-  <h2>List of Prototypes to date</h2>
-    <p>This list is updated sporadicly and could be behind. Use the Code tab in Github to explore the /prototypes/ folder. </p>
-  <ul>
-    <li><a href="ConformancePrototype.html">Conformance Prototype 1</a> which has been developed from Silver Design Sprint, Silver member input,
-      and AccessU meeting public input.</li>
-  </ul>
-<h2>Instructions for Prototypes</h2>
-<p>Thank you for helping us with developing or refining prototypes for Silver, the successor to WCAG. </p>
-<ol>
-<li>Please review the <a href="https://www.w3.org/community/silver/2018/04/23/suggestions-of-silver-design-sprint/">Suggestions from the Design Sprint</a> for an overall idea of the directions Silver is planning to take. </li>
-<li>Review the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Design Sprint Report</a> for more detail on what was discussed at the Design Sprint and for more ideas. </li>
-<li>Create a new branch with the name of: <br />prototype-[short-name-of prototype]-[your initials] </li>
-<li>Write up your ideas using the short-name as the file name. If it is more than one file, consider creating a folder with the same name as your prototype short-name. Use index.html as the file name of the main document if you are using a folder. </li>
-<li>Edit this file (prototypes/index.html) to add a link to your prototype to the list. 
-<li>Submit a pull request.  
-<li>This list needs a lot more development, but it's a rough start. </li>
+  <div class="container">
 
-</ol>
 
+    <header>
+      <a href="https://www.w3.org/community/silver/" class="logo">
+      				<img class="logo logo-comgroup" alt="W3C Silver Community Group" src="../assets/logos/W3C-CG-logo.png"></a>
+      <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page" class="logo">
+				<img class="logo logo-silver" alt="Silver Task Force" src="../assets/logos/ag.png"></a>
+
+      <h1><span class='silver'>Silver</span> Prototypes</h1>
+
+      <nav aria-label="Breadcrumbs">
+        <h2 class="breadcrumb">You are here:</h2>
+        <ul class="breadcrumb">
+          <li><a href="../index.html">Home</a></li>
+          <li>Prototypes</li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <p>The Silver Task Force and Silver Community Group are soliciting and building prototypes of the future Silver design and structure. You are welcome to contribute to ideas and comments to the work. See the instructions below to submit a prototype.</p>
+
+    <h2 class='silver'>List of Prototypes To Date</h2>
+
+    <ul>
+      <li><a href="ConformancePrototype/index.html">ConformancePrototype</a> - @jspellman</li>
+    </ul>
+
+    <h2 class='silver'>Information on Contributing Prototypes</h2>
+    <p>Thank you for helping us with developing or refining prototypes for Silver, the successor to WCAG. Before creating any prototypes for Silver:</p>
+    <ul>
+      <li>Please review the <a href="https://www.w3.org/community/silver/2018/04/23/suggestions-of-silver-design-sprint/"> Suggestions from the Design Sprint</a> for an overall idea of the directions Silver is planning to take.</li>
+      <li>Review the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Design Sprint Report</a></li>
+    </ul>
+    <p>If this is a new prototype, create a new branch with the name of: <code>prototype-[short-name-of prototype]</code>. Each prototype should:</p>
+    <ul>
+      <li>Be contained in its own folder present in the main <strong>protoypes</strong> folder</li>
+      <li>Be accessed initially through an <strong>index.html</strong> page</li>
+      <li>Have an accompanying <strong>readme.md</strong> file containing any relevant information (please use the template provided)</li>
+    </ul>
+  </div>
 </body>
+
 </html>
