@@ -1,0 +1,19 @@
+---
+layout: successCriteria
+title: "Non-Text Content - ARIA"
+successCriteria: "1-1-1"
+successCriteriaTitle: "Non-Visual Text"
+technology: "ARIA"
+---
+
+<p>The purpose of this technique is to provide a label for objects that can be read by assistive technology. The aria-label attribute provides the text label for an object, such as a button. When a screen reader encounters the object, the aria-label text is read so that the user will know what it is.</p>
+<p>Authors should be aware that aria-label may be disregarded by assistive technologies in situations where aria-labelledby is used for the same object. For more information on the naming hierarchy please consult the ARIA specification and the accessible name and description calculation in the HTML to Platform Accessibility APIs Implementation Guide. Authors should be aware that use of aria-label will override any native naming such as alt on images or label associated with a form field using the for attribute.</p>
+
+<h5>Example</h3>
+<p>The following example shows how aria-label could be used to distinguish two navigation landmarks in a HTML4 and XHTML 1.0 document, where there are more than two of the same type of landmark on the same page, and there is no existing text on the page that can be referenced as the label.</p>
+<div class="codeContainer">
+<code><pre>&lt;div role="navigation" aria-label="Primary"&gt;
+&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt; &lt;/div&gt;
+&lt;div role="navigation" aria-label="Secondary"&gt;
+&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;</pre></code>
+</div>

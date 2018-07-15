@@ -1,0 +1,27 @@
+---
+layout: successCriteria
+title: "Keyboard (Understanding) - Silverlight"
+successCriteria: "2-1-2"
+successCriteriaTitle: "Keyboard (Understanding)"
+technology: "Silverlight"
+---
+
+<p>The objective of this technique is to handle key events in a Silverlight application and enable application-specific keyboard functionality in a Silverlight application. The keyboard functionality might relate to a particular element of the Silverlight application user interface, or might be a handler for global key events within the application, such as an application-wide access key.</p>
+
+<p>In Silverlight, application authors handle user input by attaching event handlers for input events. The input events are implemented on a class that is a base element in the Silverlight class hierarchy, such that all Silverlight UI elements can be the source of an input event if the user interacts with them. Typically, the event handler names are specified in XAML, although it is also possible to wire events in code. The implementation of the handlers for the Silverlight managed code programming model is always done in C# or Visual Basic code.</p>
+
+<h3>Built-in keyboard equivalence for core Silverlight controls</h3>
+<p>This example pertains to cases where the control that handles key events is focusable (through the tab sequence, etc.) and where an existing Silverlight control behavior provides the keyboard equivalence In this example, a Silverlight UI includes a Button element. For sighted users, or users that generally use the mouse to interact with UI, a typical way to interact with the button is to position the mouse pointer over the element, and click the left mouse button. However, the Button also supports a built-in key handling behavior, whereby either the SPACE or ENTER keys are treated as an equivalent action to clicking the button with a mouse. The requirement for this interaction is that the Button must have keyboard focus at the point in time that SPACE or ENTER are pressed. The Button might gain focus because the user pressed the TAB key to move through the tab sequence, or some equivalent action enabled by assistive technology. In terms of the programming experience, the Silverlight application author does not have to separately handle KeyDown for this case. Within the Button control built-in code, the special case of SPACE or ENTER keys pressed while a Button has focus invokes the button’s Click event. Then the Silverlight application author can simply handle Click without differentiating whether the input action was a mouse click or a keyboard equivalent. The following is the entire XAML UI.</p>
+
+<div class="codeContainer"><pre><code>&lt;UserControl x:Class="BuiltInKeyEquivalence.MainPage"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+&gt;
+   &lt;Grid x:Name="LayoutRoot" Background="White" Loaded="LayoutRoot_Loaded"&gt;
+       &lt;Button Name="button1"
+   AutomationProperties.Name="Equivalence test"
+   Height="20" Width="150"
+   Click="button1_Click"&gt;Click me, or press SPACE!&lt;/Button&gt;
+   &lt;/Grid&gt;
+&lt;/UserControl&gt;
+</code></pre></div>
