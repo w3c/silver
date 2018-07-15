@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/././assets/css/master.css">
+  <title></title>
+</head>
+
+<body>
+  <header>
+</nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="title bg-dark">
+            <h1 class="text-light title">{{page.title}}</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="Breadcrumbs">
+            <ul class="breadcrumb">
+              <li><a href="../home.html">Home</a></li>
+              <li>{{page.successCriteriaTitle}}</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="flavor-menu">
+              <ul>
+                <li class="flavorWrapper">Project Initiation
+                <ul>
+                  <!-- General Information -->
+                  {% for instance in site.pages %}
+                    {% if instance.path contains page.successCriteria and instance.technology=="General" %}
+                      {% assign corelabel = true %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if {{corelabel}} %}
+                    <li class="flavor-link"><a href="./" class="flavor-title flavor-core">General Information</a></li>
+                  {% else %}
+                    <li class="flavor-link"><span class="flavor-title">General Information</span></li>
+                  {% endif %}
+                </ul></li>
+
+                <li class="flavorWrapper">Planning
+                <ul>
+                  <li class="flavor-link"><span class="flavor-title">Item A</span></li>
+                  <li class="flavor-link"><span class="flavor-title">Item B</span></li>
+                </ul></li>
+
+                <li class="flavorWrapper">Design
+                  <ul>
+                    <li class="flavor-link"><span class="flavor-title">User Testing</span></li>
+                  </ul></li>
+
+                <li class="flavorWrapper">Development
+                  <ul>
+                    <!-- Static Web -->
+                    {% for instance in site.pages %}
+                      {% if instance.path contains page.successCriteria and instance.technology=="Static-Web" %}
+                        {% assign staticweblabel = true %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if {{staticweblabel}} %}
+                      <li class="flavor-link"><a href="staticweb.html" class="flavor-title flavor-static-web">Static Web</a></li>
+                    {% else %}
+                      <li class="flavor-link"><span class="flavor-title">Static Web</span></li>
+                    {% endif %}
+
+                    <!-- Dynamic Web -->
+                    {% for instance in site.pages %}
+                      {% if instance.path contains page.successCriteria and instance.technology=="Dynamic Web" %}
+                        {% assign dynamicweblabel = true %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if {{dynamicweblabel}} %}
+                      <li class="flavor-link"><a href="dynamicweb.html" class="flavor-title flavor-dynamicweb">Dynamic Web</a></li>
+                    {% else %}
+                      <li class="flavor-link"><span class="flavor-title">Dynamic Web</span></li>
+                    {% endif %}
+
+                    <!-- Home Automation -->
+                    {% for instance in site.pages %}
+                      {% if instance.path contains page.successCriteria and instance.technology=="Home Automation" %}
+                        {% assign homeautomationlabel = true %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if {{homeautomationlabel}} %}
+                      <li class="flavor-link"><a href="homeautomation.html" class="flavor-title flavor-homeautomation">Home Automation</a></li>
+                    {% else %}
+                      <li class="flavor-link"><span class="flavor-title">Home Automation</span></li>
+                    {% endif %}
+
+                    <!-- Mobile Dev -->
+                    {% for instance in site.pages %}
+                      {% if instance.path contains page.successCriteria and instance.technology=="Mobile Dev" %}
+                        {% assign mobiledevlabel = true %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if {{mobiledevlabel}} %}
+                      <li class="flavor-link"><a href="mobiledev.html" class="flavor-title flavor-mobiledev">Mobile Dev</a></li>
+                    {% else %}
+                      <li class="flavor-link"><span class="flavor-title">Mobile Dev</span></li>
+                    {% endif %}
+
+                    <!-- ARIA -->
+                    {% for instance in site.pages %}
+                      {% if instance.path contains page.successCriteria and instance.technology=="ARIA" %}
+                        {% assign arialabel = true %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if {{arialabel}} %}
+                      <li class="flavor-link"><a href="aria.html" class="flavor-title flavor-aria">ARIA</a></li>
+                    {% else %}
+                      <li class="flavor-link"><span class="flavor-title">ARIA</span></li>
+                    {% endif %}
+
+                    <!-- Flash -->
+                    {% for instance in site.pages %}
+                      {% if instance.path contains page.successCriteria and instance.technology=="Flash" %}
+                        {% assign flashlabel = true %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if {{flashlabel}} %}
+                      <li class="flavor-link"><a href="flash.html" class="flavor-title flavor-flash">Flash</a></li>
+                    {% else %}
+                      <li class="flavor-link"><span class="flavor-title">Flash</span></li>
+                    {% endif %}
+
+                    <!-- Silverlight -->
+                    {% for instance in site.pages %}
+                      {% if instance.path contains page.successCriteria and instance.technology=="Silverlight" %}
+                        {% assign silverlightlabel = true %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if {{silverlightlabel}} %}
+                      <li class="flavor-link"><a href="silverlight.html" class="flavor-title flavor-silverlight">Silverlight</a></li>
+                    {% else %}
+                      <li class="flavor-link"><span class="flavor-title">Silverlight</span></li>
+                    {% endif %}
+
+                    <!-- PDF -->
+                    {% for instance in site.pages %}
+                      {% if instance.path contains page.successCriteria and instance.technology=="PDF" %}
+                        {% assign pdflabel = true %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if {{pdflabel}} %}
+                      <li class="flavor-link"><a href="pdf.html" class="flavor-title flavor-pdf">PDF</a></li>
+                    {% else %}
+                      <li class="flavor-link"><span class="flavor-title">PDF</span></li>
+                    {% endif %}
+
+                  </ul></li>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

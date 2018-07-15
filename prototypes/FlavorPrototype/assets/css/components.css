@@ -24,6 +24,14 @@
 
 }
 
+.flavor-link{
+  display: inline-block;
+}
+
+.flavor-link .flavor-title{
+  font-size: 0.9em
+}
+
 .flavor-title .flavor{
   text-transform: uppercase;
   font-weight: 100;
@@ -69,4 +77,74 @@ code{
 
 a:hover{
   color: white;
+}
+
+.flavorWrapper{
+  background-color: #eeeeee;
+  display: inline-block;
+  padding: 4px;
+  margin: 0 2px;
+}
+
+ul{
+  padding: 0px;
+}
+
+.flavor-menu{
+  padding: 15px 10px 5px 10px;
+  margin: 0 0 10px 0;
+  background-color: #eeeeee;
+  width: 100%
+}
+
+/* BREADCRUMBS */
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+h2.breadcrumb {
+  display: inline;
+  font-size: 14px;
+  margin-bottom: 0px;
+  padding-left: 4px;
+}
+nav.breadcrumb{
+  padding: 0;
+  margin: 0;
+
+}
+.title h1{
+  padding: 20px 0 15px 10px;
+}
+
+h1.title{
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
+
+.guidelineLink:hover{
+  color: #000000;
 }

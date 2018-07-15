@@ -1,0 +1,29 @@
+---
+layout: successCriteria
+title: "Non-Text Content - Silverlight"
+successCriteria: "1-1-1"
+successCriteriaTitle: "Non-Visual Text"
+technology: "Silverlight"
+---
+
+<p>The objective of this technique is to wrap the Silverlight Image class inside a UI container class that is focusable. If the image is focusable, users who use the TAB sequence to navigate content while the assistive technology is active, and/or assistive
+  technologies that construct navigation structures that are based on the TAB sequence, can both detect the image in navigation. The assistive technology can then associate alternative text for that image within the navigation structure, and report the
+  information to the user.</p>
+<p>Many existing assistive technologies do not construct initial navigation views that are derived from UI Automation information if it is coming from a non-focusable element in a Silverlight user interface. This is particularly true if the assistive technology
+  is in a navigation mode that is specifically intended to help users enter information into a form or similar interactive interface element; an example of this situation is the Forms Mode of the JAWS screen reader.</p>
+
+<h5>Example</h3>
+<p>Now that the image is wrapped by a focusable control, you can instantiate an instance of the wrapper UI inside a Silverlight layout container, specify AutomationProperties.Name at the level of the wrapper control’s tag, and have that text serve as the alternative text for the referenced source image file.</p>
+<div class="codeContainer">
+  <code>
+    <pre>&lt;StackPanel
+   xmlns:local="clr-namespace:ImageEquivalent;assembly=FocusableImage"
+   &gt;
+   &lt;local:FocusableImage
+     Height="300" Width="400
+     AutomationProperties.Name="Diagram of secret lair"
+     Source="/diagram_lair.png" /&gt;
+   &lt;/StackPanel&gt;
+ </pre>
+</code>
+</div>
