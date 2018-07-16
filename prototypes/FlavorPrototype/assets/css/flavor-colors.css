@@ -15,33 +15,33 @@
 }
 
 /* STATIC WEB */
-.flavor-static-web{
+.flavor-staticweb{
   background-color: #941100;
   color: #ffffff;
 }
 
-.flavor-static-web.flavor{
+.flavor-staticweb.flavor{
   background-color: #ffffff;
   color: #941100;
 }
 
-.flavor-area.flavor-static-web{
+.flavor-area.flavor-staticweb{
   background-color: #F6E5E2;
   color: black;
 }
 
 /* DYNAMIC Web */
-.flavor-dynamic-web{
+.flavor-dynamicweb{
   background-color: #945200;
   color: #ffffff;
 }
 
-.flavor-dynamic-web .flavor{
+.flavor-dynamicweb .flavor{
   background-color: #ffffff;
   color: #945200;
 }
 
-.flavor-area.flavor-dynamic-web{
+.flavor-area.flavor-dynamicweb{
   background-color: #F5EDDC;
   color: black;
 }
