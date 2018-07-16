@@ -15,7 +15,7 @@ order: 1
 
           {% for instance in site.pages %}
             {% if instance.layout=="guideline"%}
-              <p><a class="guidelineLink" href="/{{instance.successCriteria}}">Guideline {{instance.successCriteria}}: {{instance.successCriteriaTitle}}</a> - {{instance.description}}</p>
+              <p><a class="guidelineLink" href="{{instance.successCriteria}}/">Guideline {{instance.successCriteria}}: {{instance.successCriteriaTitle}}</a> - {{instance.description}}</p>
             {% endif %}
           {% endfor %}
 
