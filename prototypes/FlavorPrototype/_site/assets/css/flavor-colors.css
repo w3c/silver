@@ -1,0 +1,206 @@
+/* CORE */
+.flavor-core{
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.flavor-core .flavor{
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.flavor-area.flavor-core{
+  background-color: #eeeeee;
+  color: black;
+}
+
+/* STATIC WEB */
+.flavor-static-web{
+  background-color: #941100;
+  color: #ffffff;
+}
+
+.flavor-static-web.flavor{
+  background-color: #ffffff;
+  color: #941100;
+}
+
+.flavor-area.flavor-static-web{
+  background-color: #F6E5E2;
+  color: black;
+}
+
+/* DYNAMIC Web */
+.flavor-dynamic-web{
+  background-color: #945200;
+  color: #ffffff;
+}
+
+.flavor-dynamic-web .flavor{
+  background-color: #ffffff;
+  color: #945200;
+}
+
+.flavor-area.flavor-dynamic-web{
+  background-color: #F5EDDC;
+  color: black;
+}
+
+/* HOME AUTOMATION */
+.flavor-homeautomation{
+  background-color: #929000;
+  color: #ffffff;
+}
+
+.flavor-homeautomation .flavor{
+  background-color: #ffffff;
+  color: #929000;
+}
+
+.flavor-area.flavor-homeautomation{
+  background-color: #FFFEE5;
+  color: black;
+}
+
+/* MOBILE DEV */
+.flavor-mobiledev{
+  background-color: #4F8F00;
+  color: #ffffff;
+}
+
+.flavor-mobiledev .flavor{
+  background-color: #ffffff;
+  color: #4F8F00;
+}
+
+.flavor-area.flavor-mobiledev{
+  background-color: #F4FBE2;
+  color: black;
+}
+
+/* ARIA */
+.flavor-aria{
+  background-color: #008F00;
+  color: #ffffff;
+}
+
+.flavor-aria .flavor{
+  background-color: #ffffff;
+  color: #008F00;
+}
+.flavor-area.flavor-aria{
+  background-color: #E0EEDD;
+  color: black;
+}
+
+/* USER TESTING */
+.flavor-usertesting{
+  background-color: #009051;
+  color: #ffffff;
+}
+
+.flavor-usertesting .flavor{
+  background-color: #ffffff;
+  color: #009051;
+}
+
+.flavor-area.flavor-usertesting{
+  background-color: #E3FCF5;
+  color: black;
+}
+
+/* FLASH */
+.flavor-flash{
+  background-color: #009193;
+  color: #ffffff;
+}
+
+.flavor-flash .flavor{
+  background-color: #ffffff;
+  color: #009193;
+}
+
+.flavor-area.flavor-flash{
+  background-color: #E6FFFF;
+  color: black;
+}
+
+/* SILVERLIGHT */
+.flavor-silverlight{
+  background-color: #005493;
+  color: #ffffff;
+}
+
+.flavor-sliverlight .flavor{
+  background-color: #ffffff;
+  color: #005493;
+}
+
+.flavor-area.flavor-silverlight{
+  background-color: #E6F7FF;
+  color: black;
+}
+
+/* PDF */
+.flavor-pdf{
+  background-color: #011993;
+  color: #ffffff;
+}
+
+.flavor-pdf .flavor{
+  background-color: #ffffff;
+  color: #011993;
+}
+
+.flavor-area.flavor-pdf{
+  background-color: #E6E7FF;
+  color: black;
+}
+
+/* TEMP2 */
+.flavor-temp2{
+  background-color: #531B93;
+  color: #ffffff;
+}
+
+.flavor-temp2 .flavor{
+  background-color: #ffffff;
+  color: #531B93;
+}
+
+.flavor-area.flavor-temp2{
+  background-color: #F7E5FF;
+  color: black;
+}
+
+/* TEMP3 */
+.flavor-temp3{
+  background-color: #942193;
+  color: #ffffff;
+}
+
+.flavor-temp3 .flavor{
+  background-color: #ffffff;
+  color: #942193;
+}
+
+.flavor-area.flavor-temp3{
+  background-color: #FFE5FF;
+  color: black;
+}
+
+/* TEMP4 */
+.flavor-temp4{
+  background-color: #941751;
+  color: #ffffff;
+}
+
+.flavor-temp4 .flavor{
+  background-color: #ffffff;
+  color: #941751;
+}
+
+.flavor-area.flavor-temp4{
+  background-color: #FFE5F7;
+  color: black;
+}
