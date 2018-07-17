@@ -2,54 +2,70 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <title>Accessibility Guidelines "Silver"</title>
-  <link rel="stylesheet" href="../assets/css/main.css">
+	<title>Accessibility Guidelines "Silver"</title>
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
-  <div class="container">
+	<header>
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<a href="https://www.w3.org/community/silver/" class="logo">
+									<img class="logo logo-comgroup" alt="W3C Silver Community Group" src="../assets/logos/W3C-CG-logo.png"></a>
+					<a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page" class="logo">
+						<img class="logo logo-silver" alt="Silver Task Force" src="../assets/logos/ag.png"></a>
+					<h1><span class='silver'>Silver</span> Accessibility Guidelines</h1>
+
+					<nav aria-label="Breadcrumbs">
+						<h2 class="breadcrumb-title">You are here:</h2>
+						<ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item active">Prototypes</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
 
 
-    <header>
-      <a href="https://www.w3.org/community/silver/" class="logo">
-      				<img class="logo logo-comgroup" alt="W3C Silver Community Group" src="../assets/logos/W3C-CG-logo.png"></a>
-      <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page" class="logo">
-				<img class="logo logo-silver" alt="Silver Task Force" src="../assets/logos/ag.png"></a>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col">
 
-      <h1><span class='silver'>Silver</span> Prototypes</h1>
+          <p>The Silver Task Force and Silver Community Group are soliciting and building prototypes of the future Silver design and structure. You are welcome to contribute to ideas and comments to the work. See the instructions below to submit a prototype.</p>
 
-      <nav aria-label="Breadcrumbs">
-        <h2 class="breadcrumb">You are here:</h2>
-        <ul class="breadcrumb">
-          <li><a href="../index.html">Home</a></li>
-          <li>Prototypes</li>
-        </ul>
-      </nav>
+          <h2 class='silver'>List of Prototypes To Date</h2>
 
-    </header>
+          <ul>
+            <li><a href="ConformancePrototype/index.html">ConformancePrototype</a> - @jspellman</li>
+            <li><a href="FlavorPrototype/_site/index.html">FlavorPrototype</a> - @mikecrabb</li>
+          </ul>
 
-    <p>The Silver Task Force and Silver Community Group are soliciting and building prototypes of the future Silver design and structure. You are welcome to contribute to ideas and comments to the work. See the instructions below to submit a prototype.</p>
+          <h2 class='silver'>Information on Contributing Prototypes</h2>
+          <p>Thank you for helping us with developing or refining prototypes for Silver, the successor to WCAG. Before creating any prototypes for Silver:</p>
+          <ul>
+            <li>Please review the <a href="https://www.w3.org/community/silver/2018/04/23/suggestions-of-silver-design-sprint/"> Suggestions from the Design Sprint</a> for an overall idea of the directions Silver is planning to take.</li>
+            <li>Review the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Design Sprint Report</a></li>
+          </ul>
+          <p>If this is a new prototype, create a new branch with the name of: <code>prototype-[short-name-of prototype]</code>. Each prototype should:</p>
+          <ul>
+            <li>Be contained in its own folder present in the main <strong>protoypes</strong> folder</li>
+            <li>Be accessed initially through an <strong>index.html</strong> page</li>
+            <li>Have an accompanying <strong>readme.md</strong> file containing any relevant information (please use the template provided)</li>
+          </ul>
 
-    <h2 class='silver'>List of Prototypes To Date</h2>
+				</div>
 
-    <ul>
-      <li><a href="ConformancePrototype/index.html">ConformancePrototype</a> - @jspellman</li>
-      <li><a href="FlavorPrototype/index.html">FlavorPrototype</a> - @mikecrabb</li>
-    </ul>
+			</div>
 
-    <h2 class='silver'>Information on Contributing Prototypes</h2>
-    <p>Thank you for helping us with developing or refining prototypes for Silver, the successor to WCAG. Before creating any prototypes for Silver:</p>
-    <ul>
-      <li>Please review the <a href="https://www.w3.org/community/silver/2018/04/23/suggestions-of-silver-design-sprint/"> Suggestions from the Design Sprint</a> for an overall idea of the directions Silver is planning to take.</li>
-      <li>Review the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Design Sprint Report</a></li>
-    </ul>
-    <p>If this is a new prototype, create a new branch with the name of: <code>prototype-[short-name-of prototype]</code>. Each prototype should:</p>
-    <ul>
-      <li>Be contained in its own folder present in the main <strong>protoypes</strong> folder</li>
-      <li>Be accessed initially through an <strong>index.html</strong> page</li>
-      <li>Have an accompanying <strong>readme.md</strong> file containing any relevant information (please use the template provided)</li>
-    </ul>
-  </div>
+		</div>
+	</main>
+
 </body>
 
 </html>
