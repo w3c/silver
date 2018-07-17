@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/css/master.css">
+  <title></title>
+</head>
+
+<body>
+  <header>
+</nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="title bg-dark">
+            <h1 class="text-light title">Non-Text Content - Silverlight</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="Breadcrumbs">
+            <ul class="breadcrumb">
+              <li><a href="../home.html">Home</a></li>
+              <li><a href="./">Non-Visual Text</a></li>
+              <li>Silverlight</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="flavor-menu">
+              <ul>
+                <li class="flavorWrapper">Project Initiation
+                <ul>
+                  <!-- General Information -->
+                  
+                  
+                    <li class="flavor-link"><a href="./" class="flavor-title flavor-core">General Information</a></li>
+                  
+                </ul></li>
+
+                <li class="flavorWrapper">Planning
+                <ul>
+                  <li class="flavor-link"><span class="flavor-title">Item A</span></li>
+                  <li class="flavor-link"><span class="flavor-title">Item B</span></li>
+                </ul></li>
+
+                <li class="flavorWrapper">Design
+                  <ul>
+                    <li class="flavor-link"><span class="flavor-title">User Testing</span></li>
+                  </ul></li>
+
+                <li class="flavorWrapper">Development
+                  <ul>
+                    <!-- Static Web -->
+                    
+                    
+                      <li class="flavor-link"><a href="staticweb.html" class="flavor-title flavor-static-web">Static Web</a></li>
+                    
+
+                    <!-- Dynamic Web -->
+                    
+                    
+                      <li class="flavor-link"><span class="flavor-title">Dynamic Web</span></li>
+                    
+
+                    <!-- Home Automation -->
+                    
+                    
+                      <li class="flavor-link"><span class="flavor-title">Home Automation</span></li>
+                    
+
+                    <!-- Mobile Dev -->
+                    
+                    
+                      <li class="flavor-link"><span class="flavor-title">Mobile Dev</span></li>
+                    
+
+                    <!-- ARIA -->
+                    
+                    
+                      <li class="flavor-link"><a href="aria.html" class="flavor-title flavor-aria">ARIA</a></li>
+                    
+
+                    <!-- Flash -->
+                    
+                    
+                      <li class="flavor-link"><span class="flavor-title">Flash</span></li>
+                    
+
+                    <!-- Silverlight -->
+                    
+                    
+                      <li class="flavor-link"><a href="silverlight.html" class="flavor-title flavor-silverlight">Silverlight</a></li>
+                    
+
+                    <!-- PDF -->
+                    
+                    
+                      <li class="flavor-link"><a href="pdf.html" class="flavor-title flavor-pdf">PDF</a></li>
+                    
+
+                  </ul></li>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="flavor-area flavor-core">
+            <h2 class="flavor-title flavor-core">W3 Accessibility Guidelines <span class="flavor">Core</span></h2>
+
+            <h3>Non-Visual Text</h3>
+
+            
+              
+            
+              
+            
+              
+                <p>All non-text content that is presented to the user has a text alternative that serves the equivalent purpose</p>
+                <p class="intent">The intent of this Success Criterion is to make information conveyed by non-text content accessible through the use of a text alternative. Text alternatives are a primary way for making information accessible because they can be rendered through any sensory modality (for example, visual, auditory or tactile) to match the needs of the user.</p>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="flavor-area flavor-silverlight">
+            <h2 class="flavor-title flavor-silverlight">W3 Accessibility Guidelines <span class="flavor">Silverlight</h2>
+
+
+		<p>The objective of this technique is to wrap the Silverlight Image class inside a UI container class that is focusable. If the image is focusable, users who use the TAB sequence to navigate content while the assistive technology is active, and/or assistive
+  technologies that construct navigation structures that are based on the TAB sequence, can both detect the image in navigation. The assistive technology can then associate alternative text for that image within the navigation structure, and report the
+  information to the user.</p>
+<p>Many existing assistive technologies do not construct initial navigation views that are derived from UI Automation information if it is coming from a non-focusable element in a Silverlight user interface. This is particularly true if the assistive technology
+  is in a navigation mode that is specifically intended to help users enter information into a form or similar interactive interface element; an example of this situation is the Forms Mode of the JAWS screen reader.</p>
+
+<h5>Example</h3>
+<p>Now that the image is wrapped by a focusable control, you can instantiate an instance of the wrapper UI inside a Silverlight layout container, specify AutomationProperties.Name at the level of the wrapper control’s tag, and have that text serve as the alternative text for the referenced source image file.</p>
+<div class="codeContainer">
+  <code>
+    <pre>&lt;StackPanel
+   xmlns:local="clr-namespace:ImageEquivalent;assembly=FocusableImage"
+   &gt;
+   &lt;local:FocusableImage
+     Height="300" Width="400
+     AutomationProperties.Name="Diagram of secret lair"
+     Source="/diagram_lair.png" /&gt;
+   &lt;/StackPanel&gt;
+ </pre>
+</code>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
