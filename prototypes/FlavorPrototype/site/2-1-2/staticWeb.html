@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-12">
           <div class="title bg-dark">
-            <h1 class="text-light title">Audio-only and Video-only Time Based Media - Static Web</h1>
+            <h1 class="text-light title">Keyboard (Understanding) - Static Web</h1>
           </div>
         </div>
       </div>
@@ -25,8 +25,8 @@
           <nav aria-label="Breadcrumbs">
             <ul class="breadcrumb">
               <li><a href="../home.html">Home</a></li>
-              <li><a href="./">Audio-only and Video-only Time Based Media</a></li>
-              <li>PDF</li>
+              <li><a href="./">Keyboard (Understanding)</a></li>
+              <li>Static-Web</li>
             </ul>
           </nav>
         </div>
@@ -121,7 +121,7 @@
           <div class="flavor-area flavor-core">
             <h2 class="flavor-title flavor-core">W3 Accessibility Guidelines <span class="flavor">Core</span></h2>
 
-            <h3>Audio-only and Video-only Time Based Media</h3>
+            <h3>Keyboard (Understanding)</h3>
 
             
               
@@ -154,23 +154,119 @@
           </div>
         </div>
         <div class="col-8">
-          <div class="flavor-area flavor-pdf">
-            <h2 class="flavor-title flavor-pdf">W3 Accessibility Guidelines <span class="flavor">PDF</h2>
+          <div class="flavor-area flavor-static-web">
+            <h2 class="flavor-title flavor-static-web">W3 Accessibility Guidelines <span class="flavor">Static-Web</h2>
 
 
-		<p>The intent of this technique is to ensure that users can navigate through content in a logical order that is consistent with the meaning of the content. Correct tab and reading order is typically accomplished using a tool for authoring PDF.</p>
+		<p>The objective of this technique is to use standard HTML form controls and link elements to provide keyboard operation and assistive technology interoperability of interactive user interface elements.</p>
 
-<p>For sighted users, the logical order of PDF content is also the visual order on the screen. For keyboard and assistive technology users, the tab order through content, including interactive elements (form fields and links), determines the order in which these users can navigate the content. The tab order must reflect the logical order of the document.</p>
+<p>User agents provide the keyboard operation of HTML form controls and links. In addition, the user agent maps the form controls and links to an accessibility API. Assistive technologies use the accessibility API to extract appropriate accessibility information,
+  such as role, name, state, and value, and present them to users. The role is provided by the HTML element, and the name is provided by the text associated with that element. Elements for which values and states are appropriate also expose the values
+  and states via multiple mechanisms.</p>
 
-<p>Logical structure is created when a document is saved as tagged PDF. The reading order of a PDF document is determined primarily by the tag order of document elements, including interactive elements, but the order of content within individual tags is determined by the PDF document’s content tree structure.</p>
+<p>In some cases, the text is already associated with the control through a required attribute. For example, submit buttons use the button element text or image 'alt' attribute as the name. In the case of form controls, label elements or 'title' attributes
+  are used. The following table describes how the role, name, value, and state are determined for HTML links and form controls.</p>
 
-<h3>Creating a 2-column document using Microsoft Word 2007</h3>
+<table border="1" cellpadding="5" summary="Table describing how the role, name, value and state are determined for HTML links and form controls.">
+  <thead>
+    <tr>
+      <th>HTML element </th>
+      <th>Role</th>
+      <th>Name </th>
+      <th>Value </th>
+      <th>State </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;a&gt; </td>
+      <td> link </td>
+      <td> 'title' attribute, text within &lt;a&gt; element or 'alt' attribute if image link. Concatenated if both text and image 'alt' attribute are provided </td>
+      <td> 'href' attribute </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;button&gt; </td>
+      <td> push button </td>
+      <td> text inside &lt;button&gt; element or 'title' attribute </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;fieldset&gt; </td>
+      <td> grouping </td>
+      <td>text inside &lt;legend&gt; element within fieldset element</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;input type = "button", "submit", or "reset"&gt; </td>
+      <td> push button </td>
+      <td> 'value' attribute </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;input type = "image"&gt; </td>
+      <td> push button </td>
+      <td> 'alt' attribute or 'title' attribute </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;input type = "text"&gt; </td>
+      <td> editable text </td>
+      <td>&lt;label&gt; element associated with it or 'title' attribute </td>
+      <td> 'value' attribute </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;input type = "password"&gt; </td>
+      <td> editable text </td>
+      <td>&lt;label&gt; element associated with it or 'title' attribute </td>
+      <td>value is purposefully hidden</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;input type="file"&gt; </td>
+      <td> editable text </td>
+      <td>&lt;label&gt; element associated with it or 'title' attribute </td>
+      <td>'value' attribute</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;input type="checkbox"&gt; </td>
+      <td> checkbox </td>
+      <td>&lt;label&gt; element associated with it or 'title' attribute </td>
+      <td></td>
+      <td> 'checked' attribute
+      </td>
+    </tr>
+    <tr>
+      <td>&lt;input type="radio"&gt; </td>
+      <td> radio button </td>
+      <td>&lt;label&gt; element associated with it or 'title' attribute </td>
+      <td></td>
+      <td> 'checked' attribute
 
-<p>This example is shown with Microsoft Word. There are other software tools that perform similar functions. See the list of other software tools in PDF Authoring Tools that Provide Accessibility Support.</p>
-
-<p>Multi-column documents created using Word's Page Layout > Columns... tool typically are in the correct reading order when converted to tagged PDF. The image below shows Word's Columns tool.</p>
-
-<img class="w-100" src="https://www.w3.org/WAI/WCAG20/Techniques/working-examples/PDF3/word-col-tool.jpg" alt="">
+      </td>
+    </tr>
+    <tr>
+      <td>&lt;select&gt; </td>
+      <td> list box </td>
+      <td>&lt;label&gt; element associated with it or 'title' attribute </td>
+      <td>&lt;option&gt; element with 'selected' attribute set to "selected" </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;textarea&gt; </td>
+      <td> editable text </td>
+      <td>&lt;label&gt; element associated with it or 'title' attribute </td>
+      <td> text within &lt;textarea&gt; element </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 
 </div>

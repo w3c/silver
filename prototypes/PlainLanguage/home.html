@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Home"
+fulltitle: "Silver Flavor Example Home"
+order: 1
+---
+
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="flavor-area flavor-core">
+          <h3>Silver Guidelines</h3>
+          <p>This prototype system is used as part of the work on Plain Language.</p>
+          <p>Below is a list of guidelines that have been added to this prototype system:</p>
+
+          {% for instance in site.pages %}
+            {% if instance.layout=="guideline"%}
+              <p><a class="guidelineLink" href="{{instance.successCriteria}}/index.html">Guideline {{instance.successCriteria}}: {{instance.successCriteriaTitle}}</a></p>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>

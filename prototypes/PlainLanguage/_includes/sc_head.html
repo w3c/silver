@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/css/master.css">
+  <title></title>
+</head>
+
+<body>
+  <header>
+</nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="title bg-dark">
+            <h1 class="text-light title">{{page.title}}</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="Breadcrumbs">
+            <ul class="breadcrumb">
+              <li><a href="../home.html">Home</a></li>
+              <li><a href="./">{{page.successCriteriaTitle}}</a></li>
+              <li>{{page.technology}}</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="flavor-menu">
+              <ul>
+                <li class="flavorWrapper">Success Criteria Type
+                <ul>
+                  <!-- Original -->
+                  {% for instance in site.pages %}
+                    {% if instance.path contains page.successCriteria and instance.technology=="General" %}
+                      {% assign corelabel = true %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if {{corelabel}} %}
+                    <li class="flavor-link"><a href="./" class="flavor-title flavor-core">Original</a></li>
+                  {% else %}
+                    <li class="flavor-link"><span class="flavor-title">Original</span></li>
+                  {% endif %}
+
+                  <!-- Alternative 1 -->
+                  {% for instance in site.pages %}
+                    {% if instance.path contains page.successCriteria and instance.technology=="alt1" %}
+                      {% assign alt1label = true %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if {{alt1label}} %}
+                    <li class="flavor-link"><a href="alt1.html" class="flavor-title flavor-alt1">Alternative 1</a></li>
+                  {% else %}
+                    <li class="flavor-link"><span class="flavor-title">Alternative 1</span></li>
+                  {% endif %}
+
+                  <!-- Alternative 2 -->
+                  {% for instance in site.pages %}
+                    {% if instance.path contains page.successCriteria and instance.technology=="alt2" %}
+                      {% assign alt2label = true %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if {{alt2label}} %}
+                    <li class="flavor-link"><a href="alt2.html" class="flavor-title flavor-alt2">Alternative 2</a></li>
+                  {% else %}
+                    <li class="flavor-link"><span class="flavor-title">Alternative 2</span></li>
+                  {% endif %}
+
+                  <!-- Alternative 3 -->
+                  {% for instance in site.pages %}
+                    {% if instance.path contains page.successCriteria and instance.technology=="alt3" %}
+                      {% assign alt3label = true %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if {{alt3label}} %}
+                    <li class="flavor-link"><a href="alt3.html" class="flavor-title flavor-alt3">Alternative 3</a></li>
+                  {% else %}
+                    <li class="flavor-link"><span class="flavor-title">Alternative 3</span></li>
+                  {% endif %}
+
+                  <!-- Alternative 4 -->
+                  {% for instance in site.pages %}
+                    {% if instance.path contains page.successCriteria and instance.technology=="alt4" %}
+                      {% assign alt4label = true %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if {{alt4label}} %}
+                    <li class="flavor-link"><a href="alt4.html" class="flavor-title flavor-alt4">Alternative 4</a></li>
+                  {% else %}
+                    <li class="flavor-link"><span class="flavor-title">Alternative 4</span></li>
+                  {% endif %}
+
+                  <!-- Alternative 5 -->
+                  {% for instance in site.pages %}
+                    {% if instance.path contains page.successCriteria and instance.technology=="alt5" %}
+                      {% assign alt5label = true %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if {{alt5label}} %}
+                    <li class="flavor-link"><a href="alt5.html" class="flavor-title flavor-alt5">Alternative 5</a></li>
+                  {% else %}
+                    <li class="flavor-link"><span class="flavor-title">Alternative 5</span></li>
+                  {% endif %}
+
+                  <!-- Alternative 6 -->
+                  {% for instance in site.pages %}
+                    {% if instance.path contains page.successCriteria and instance.technology=="alt6" %}
+                      {% assign alt6label = true %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if {{alt6label}} %}
+                    <li class="flavor-link"><a href="alt6.html" class="flavor-title flavor-alt6">Alternative 6</a></li>
+                  {% else %}
+                    <li class="flavor-link"><span class="flavor-title">Alternative 6</span></li>
+                  {% endif %}
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="flavor-area flavor-core">
+            <h2 class="flavor-title flavor-core">W3 Accessibility Guidelines <span class="flavor">Original</span></h2>
+
+            <h3>{{page.successCriteriaTitle}}</h3>
+
+            {% for instance in site.pages %}
+              {% if instance.path contains page.successCriteria and instance.technology=="General" %}
+                <p>{{instance.description}}</p>
+                <p class="intent">{{instance.intent}}</p>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="flavor-area flavor-{{page.technology | downcase}}">
+            <h2 class="flavor-title flavor-{{page.technology | downcase}}">W3 Accessibility Guidelines <span class="flavor">{{page.technology}}</h2>
