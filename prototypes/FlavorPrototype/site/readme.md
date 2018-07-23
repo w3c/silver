@@ -7,7 +7,6 @@ The purpose of this prototype is to show how it would be possible to include a v
 ## Development Notes
 - Jekyll was used for development but doesn't play nice when it is started within a subdirectory.
  - Links to this prototype should be routed through the **_site** folder which is normally included in the gitignore.
-  - Jekyll normally hides **_site** folders so rename this to **site** before committing.
  - When developing, do not edit items in the site folder, edit main items and then create the site using **jekyll serve**
 
 
