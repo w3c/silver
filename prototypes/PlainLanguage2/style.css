@@ -75,3 +75,16 @@ body {
   }
 
 }
+
+/** Content styles **/
+.guidanceBox {
+  border: 2px solid;
+  background: #fbecee;
+  position: relative;
+  top: 2px;
+  padding: 1.5rem;
+}
+
+.noBullet {
+  list-style-type: none;
+}
