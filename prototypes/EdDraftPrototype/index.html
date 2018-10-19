@@ -8,7 +8,7 @@
 <script class='remove' src='https://www.w3.org/Tools/respec/respec-w3c-common'>
 </script>
 <script class='remove'>
-var respecConfig = { specStatus: "CG-DRAFT", wg: "Silver Community Group", wgURI: "https://www.w3.org/community/silver/",editors: [{ name: "Jeanne Spellman", company: "The Paciello Group", companyURL: "http://paciellogroup.com", }, {name: "Shawn Lauriat", company: "Google", companyURL: "http://google.com", }], github: "https://github.com/w3c/silver/prototypes/EdDraftPrototype", shortName: "silver" }; 
+var respecConfig = { specStatus: "CG-DRAFT", edDraftURI: "https://w3c.github.io/silver/prototypes/EdDraftPrototype/", wg: "Silver Community Group", wgURI: "https://www.w3.org/community/silver/",editors: [{ name: "Jeanne Spellman", company: "The Paciello Group", companyURL: "http://paciellogroup.com", }, {name: "Shawn Lauriat", company: "Google", companyURL: "http://google.com", }], github: "https://github.com/w3c/silver/prototypes/EdDraftPrototype", shortName: "silver", tocIntroductory: true, }; 
 </script>
 </head>
 
@@ -35,14 +35,14 @@ var respecConfig = { specStatus: "CG-DRAFT", wg: "Silver Community Group", wgURI
 
 </section>
 
-<section id="intro">
+<section class="introductory">
 <h2>Introduction to the Silver Accessibility Guidelines</h2>
 <p>This has not been written yet. </p>
-	<section>
+	<section class="introductory">
 	<h3>How Silver is Organized</h3>
 	<p>This has not been written yet. </p>
 	</section>
-    <section>
+    <section class="introductory">
 	<h3>How WCAG content has moved to Silver</h3>
 	<p>Explanation - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     In summary:
@@ -62,57 +62,65 @@ var respecConfig = { specStatus: "CG-DRAFT", wg: "Silver Community Group", wgURI
 <h2>Guidelines</h2>
 	<section>
     <h3>Guideline Title (unique)</h3>
-    <p>Short description of the guideline<br>
-      + (accordion or link to separate document)
-      Long description of the guideline (tabbed interface with informative information)    </p>
-    	<h4>Methods</h4>
+    <p>Short description of the guideline - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    <p> + (accordion or link to separate document)</p>
+    <p>Long description of the guideline (tabbed interface with informative information)    </p>
+    	<section class='notoc'>
+        <h4>Methods</h4>
     	<p>Because the TR document interface is flat document, the Methods will be extracted from the Long Description and listed below</p>
     	<ul>
    	  		<li>Method 1</li>
         	<li>Method 2</li>
         	<li>Method 3</li>
     	</ul>
+        </section>
 	</section>
     <section>
     <h3>Another Guideline Title</h3>
     <p>Short description of the guideline<br>
       + (accordion or link to separate document)
       Long description of the guideline (tabbed interface with informative information)    </p>
-    	<h4>Methods</h4>
+    	<section class='notoc'>
+        <h4>Methods</h4>
     	<ul>
    	  		<li>Method 1</li>
         	<li>Method 2</li>
     	</ul>
+        </section>
 	</section>
     <section>
     <h3>Third Guideline Title</h3>
     <p>Short description of the guideline<br>
       + (accordion or link to separate document)
       Long description of the guideline (tabbed interface with informative information)    </p>
-    	<h4>Methods</h4>
+    	<section class='notoc'>
+        <h4>Methods</h4>
     	<ul>
    	  		<li>Method 1</li>
         	<li>Method 2</li>
         	<li>Method 3</li>
     	</ul>
+        </section>
 	</section>
     <section>
     <h3>Section Headings</h3>
     <p>Use headings and sub-headings for your text.<br>
     	<a href="https://w3c.github.io/silver/prototypes/PlainLanguage2/SectionHeading.html">Section Headings (Plain Language prototype)</a>
     </p>
-    	<h4>Methods</h4>
+    	<section class='notoc'>
+        <h4>Methods</h4>
 			<ul class="noBullet">
         		<li><strong>General:</strong> <a href="https://www.w3.org/TR/WCAG20-TECHS/G141.html">Organizing a page using headings</a> (WCAG 2.1 Technique G141)</li>
         		<li><strong>HTML:</strong> <a href="https://www.w3.org/TR/WCAG20-TECHS/H69.html">Providing heading elements at the beginning of each section of content</a> (WCAG 2.1 Technique H69) </li>
 				<li><strong>Usability:</strong> Evaluating the usability of headings (new)</li> 
     		</ul>
+        </section>
 	</section>
 </section>
 <section>
-<h2>Conformance</h2>
-<p >Editor's Note: Background: A key suggestion originated from a lawyer formerly a part of the US Office of Civil Rights. She suggested that Silver members study the <a href="https://new.usgbc.org/cert-guide">LEED Certification for green buildings</a> for inspiration for a more flexible method to measure overall Silver Conformance. The LEED program uses a point system, that can varies by the type of building (Homes, Commercial, Neighborhoods, etc) and within each type, assigns a level: bronze, silver, gold, platinum. Advantages of this system include: </p>
-<ul>
+<h2 id="conform">Conformance</h2>
+<p class="ednote">Editor's Note: Background: A key suggestion originated from a lawyer formerly a part of the US Office of Civil Rights. She suggested that Silver members study the <a href="https://new.usgbc.org/cert-guide">LEED Certification for green buildings</a> for inspiration for a more flexible method to measure overall Silver Conformance. The LEED program uses a point system, that can varies by the type of building (Homes, Commercial, Neighborhoods, etc) and within each type, assigns a level: bronze, silver, gold, platinum. Advantages of this system include: </p>
+<ul class="ednote">
   <li>Greater flexibilty to customize conformance to meet evolving needs</li>
   <li>Clear communication to the public of the level. (WCAG level A sounds good to people who are not familiar with WCAG, while Bronze level clearly implies that they can do better). </li>
   <li>Point system allows prioritization of guidance without assigning the guidance to a level. This gives flexibility to have different priorities for different types of sites, apps, or products. </li>
@@ -148,11 +156,11 @@ var respecConfig = { specStatus: "CG-DRAFT", wg: "Silver Community Group", wgURI
 	</section>
     <section  class='notoc' >
 <h3>Gold Level</h3>
-<p><em class="ednote">This section needs more work</em>. The suggestions were that sites, apps, or products that met Gold Level would meet Silver Level plus they would demonstrate more advanced accessibility measurements such as user testing with people with disabilitiles. </p>
+<p><em class="ednote">This section needs more work.</em> The suggestions were that sites, apps, or products that met Gold Level would meet Silver Level plus they would demonstrate more advanced accessibility measurements such as user testing with people with disabilitiles. </p>
 	</section>
     <section  class='notoc' >
 <h3>Platinum Level</h3>
-<p><em class="ednote">This section needs more work</em>. This is an optional level that would demonstrate a organization commitment  to accessibiltiy. If it is included, it could be used for organizations that have made a maturity-model commitment to accessibility in the organization that would ensure long-term accessibility for their site, application or product. </p>
+<p><em class="ednote">This section needs more work.</em> This is an optional level that would demonstrate a organization commitment  to accessibiltiy. If it is included, it could be used for organizations that have made a maturity-model commitment to accessibility in the organization that would ensure long-term accessibility for their site, application or product. </p>
 	</section>
     </section>
     <section>
@@ -162,7 +170,8 @@ var respecConfig = { specStatus: "CG-DRAFT", wg: "Silver Community Group", wgURI
     <section>
 <h3>Concerns to be Solved</h3>
 <ul>
-  <li>How to insure that people don't take the points that are easy to accomplish and use them to score high enough to achieve a level without making the overall site, app, or product accessible. One suggestions is to set up sub categories where people have to score enough in that category. Another suggestion was to start with a high score and subtract points to determine the final score, for example, you get 330 points out of a possible 450 points.</li>
+  <li>The relationship between informative (easily updated and non-binding)  and normative (stable and required) text.  
+  <li>How to insure that people don't take the points that are easy to accomplish and use them to score high enough to achieve a level without making the overall site, app, or product accessible. One suggestion is to set up sub categories where people have to score enough in that category. Another suggestion was to start with a high score and subtract points to determine the final score, for example, you get 330 points out of a possible 450 points.</li>
   <li>Certification system. Many people were interested and had ideas about certification. While W3C does not have the resources to certify individual sites, it possibly could be interested in certifying companies, who would then be authorized to certify sites. This goes beyond the scope that we are currently addressing, and should be discussed with W3C management. </li>
   <li>How to handle the differences between WCAG 2.0 and WCAG 2.1 for grandfathering sites with existing WCAG conformance.</li>
     <li>WCAG for young children? Are their needs different? More research input is needed in this area. </li>
