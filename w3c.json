@@ -1,4 +1,6 @@
  {
     "group":      ["97795"]
-,   "contacts":   ["michael-n-cooper"]
+,   "contacts":   ["michael-n-cooper"],
+    "policy": "restricted",
+    "repo-type": "cg-report"
 }
