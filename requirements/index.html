@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.2.5"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.3.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -28,10 +28,6 @@ div.issue, div.note , div.ednote,  div.warning {
 }
 span.warning { padding: .1em .5em .15em; }
 
-.issue {
-    border-color: #e05252;
-    background: #fbe9e9;
-}
 .issue.closed span.issue-number {
     text-decoration: line-through;
 }
@@ -360,9 +356,9 @@ h6>a.self-link::before {
   "github": "https://github.com/w3c/silver/requirements",
   "copyrightStart": "2018",
   "shortName": "silver-requirements",
-  "publishDate": "2019-02-05",
-  "publishISODate": "2019-02-05T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 05 February 2019"
+  "publishDate": "2019-02-08",
+  "publishISODate": "2019-02-08T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 08 February 2019"
 }</script><meta name="description" content="The Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to  incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has:"></head>
 	<body class="h-entry toc-inline"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -370,7 +366,7 @@ h6>a.self-link::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-02-05">05 February 2019</time>
+        <time class="dt-published" datetime="2019-02-08">08 February 2019</time>
       </h2>
       <dl>
         
@@ -410,9 +406,9 @@ h6>a.self-link::before {
         the Contributors to the Requirements for Silver Specification, published by the
         <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
         <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
-                <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
-                is available.
-              
+              <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+              is available.
+            
       </p>
       <hr title="Separator for header">
     </div>
@@ -430,21 +426,21 @@ h6>a.self-link::before {
       <a href="https://www.w3.org/community/silver/">Silver Community Group</a>. It is not a W3C Standard nor is it
       on the W3C Standards Track.
       
-              Please note that under the
-              <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>
-              there is a limited opt-out and other conditions apply.
-            
+            Please note that under the
+            <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>
+            there is a limited opt-out and other conditions apply.
+          
       Learn more about
       <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
     </p>
 			<p>The Requirements for Silver is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20Requirements%20for%20Silver">email</a>. </p>
 		<p>
-              If you wish to make comments regarding this document, please send
-              them to
-              <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
-              (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
-              <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
-            </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><span class="secno">1.1 </span>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#opportunities-for-silver"><span class="secno">1.2 </span>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><span class="secno">1.2.1 </span>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><span class="secno">1.2.2 </span>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><span class="secno">1.2.3 </span>Maintenance</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles"><span class="secno">2. </span>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements-0"><span class="secno">3. </span>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><span class="secno">3.1 </span>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-structure"><span class="secno">3.2 </span>Flexible structure</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><span class="secno">3.3 </span>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><span class="secno">3.4 </span>Technology Neutral</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">B. </span>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><span class="secno">B.4 </span>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><span class="secno">B.5 </span>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><span class="secno">B.6 </span>Research Partners</a></li></ol></li></ol></nav>
+            If you wish to make comments regarding this document, please send
+            them to
+            <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
+            (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
+            <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
+          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><span class="secno">1.1 </span>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#opportunities-for-silver"><span class="secno">1.2 </span>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><span class="secno">1.2.1 </span>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><span class="secno">1.2.2 </span>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><span class="secno">1.2.3 </span>Maintenance</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles"><span class="secno">2. </span>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements-0"><span class="secno">3. </span>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><span class="secno">3.1 </span>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-structure"><span class="secno">3.2 </span>Flexible structure</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><span class="secno">3.3 </span>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><span class="secno">3.4 </span>Technology Neutral</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">B. </span>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><span class="secno">B.4 </span>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><span class="secno">B.5 </span>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><span class="secno">B.6 </span>Research Partners</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<!--OddPage--><h2 id="intro"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
             <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or situational   limitations. </p>
@@ -509,16 +505,15 @@ h6>a.self-link::before {
             <li><strong>Measurable Guidance</strong>: Certain accessibility guidance is quite clear and measurable. Others, far less so. There are needs of people with disabilities, especially cognitive and low vision disabilities that are not well served by guidance that can only be measured by pass/fail statement. Multiple means of measurement, in addition to pass/fail statements, allow inclusion of more accessibility guidance.</li>
             <li><strong>Task-Based Assessment</strong>: Moving away from strictly web pages and web sites as a collection of web pages, Silver could set the scope of conformance as a comprehensive set of tasks as defined by the author of the site or application. A properly marked up button doesn't help anything if the user can’t complete the task at hand. Task-based assessment allows flexibility for conformance of complex applications that are not conducive to component/tag assessment or full-page assessment.</li>
             <li><strong>Accessibility Supported</strong>: As the technologies evolve, the interoperability of content, user agents, and assistive technology will continue to blur. Interoperability may be   affected by any number of factors outside of the control of the author   and publisher of digital content. Silver can include advice to user agents and assistive technology developers. Authors are not responsible for interoperability problems beyond a reasonable effort.</li>
-            <li><strong>Flexibility</strong>: As the web continues  to diversify, a conformance structure is needed that can be customized for different  uses and technologies. &nbsp;A static website  for a pizza shop has different accessibility conformance needs than a social media  site being updated thousands of times per second. </li>
           </ul>
           </section>
           <section id="oppotunities_maintenance">
           <h4 id="x1-2-3-maintenance"><span class="secno">1.2.3 </span>Maintenance<a class="self-link" aria-label="§" href="#oppotunities_maintenance"></a></h4>
           <ul>
-            <li> <strong>Flexibility</strong>: A flexible structure enables greater scaling of new and expiry   of outdated guidelines. A flexible process enables   guidelines to keep pace with technology. Flexible participation – particularly of people with disabilities – empowers a community   and enables more inclusive insights. </li>
-            <li> <strong>Scaling</strong>: Silver can consider multiple referring contexts, multiple use cases, and iteration   and addendums over time when designing a system and taxonomy that is as   future friendly as it is user-centric. </li>
-            <li> <strong>Governance</strong>: Accessibility guidance and all supporting documentation should be as forward   looking and future friendly as possible – anticipating common scenarios   like new technology. If possible, they should also consider the   introduction of new modalities like surface reaction and ultrahaptics. Utilize tools that allow interested parties to predict when issues important to them are being discussed. Maintain a backlog that reflects issues along with their   status. </li>
-            <li><strong>Evolving Technology</strong>: As content technology evolves, it must be   re-evaluated against assistive technology for compatibility. Likewise,   as assistive technology evolves or emerges, it must be evaluated against   the backward compatibility of various content technology. Silver needs a flexible design that will allow for updates as new technologies emerge, assistive technologies improve, and changing technologies produce new barriers for people with disabilities. </li>
+            <li> <strong>Flexibility</strong>: A flexible structure enables greater scaling of new methods to meet guidelines. It also allows for the expiration of outdated methods to meet guidelines. A flexible process of updating methods enables the overall guidance to keep pace with technology. Flexible participation – particularly of people with disabilities – empowers a community and enables more inclusive insights.</li>
+            <li> <strong>Scaling</strong>: We intend Silver to apply to multiple contexts and multiple use cases. Silver intends to be iterative, future-friendly, and user-centric. </li>
+            <li><strong>Evolving Technology</strong>: Silver needs a flexible design that can be updated as new technologies emerge, assistive technologies improve, and changing technologies produce new barriers for people with disabilities. Accessibility guidance and all supporting documentation should anticipate common scenarios like new technology and the introduction of new modalities like surface reaction and ultrahaptics. As content technology evolves, it must be re-evaluated against assistive technology for compatibility. Likewise, as assistive technology evolves or emerges, it must be evaluated against the backward compatibility of various content technology.</li>
+            <li> <strong>Governance</strong>: Utilize tools that allow interested parties to predict when issues important to them are being discussed. Maintain a backlog that reflects issues along with their   status. </li>
           </ul>
         </section>
 	</section>
