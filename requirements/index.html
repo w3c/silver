@@ -1,85 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.3.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-div.issue-title, div.note-title , div.ednote-title, div.warning-title {
-    padding-right:  1em;
-    min-width: 7.5em;
-    color: #b9ab2d;
-}
-div.issue-title { color: #e05252; }
-div.note-title, div.ednote-title { color: #2b2; }
-div.warning-title { color: #f22; }
-div.issue-title span, div.note-title span, div.ednote-title span, div.warning-title span {
-    text-transform: uppercase;
-}
-div.note, div.issue, div.ednote, div.warning {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-.warning > p:first-child { margin-top: 0 }
-.warning {
-    padding: .5em;
-    border-left-width: .5em;
-    border-left-style: solid;
-}
-div.issue, div.note , div.ednote,  div.warning {
-    padding: 1em 1.2em 0.5em;
-    margin: 1em 0;
-    position: relative;
-    clear: both;
-}
-span.warning { padding: .1em .5em .15em; }
-
-.issue.closed span.issue-number {
-    text-decoration: line-through;
-}
-
-.warning {
-    border-color: #f11;
-    border-width: .2em;
-    border-style: solid;
-    background: #fbe9e9;
-}
-
-.warning-title:before{
-    content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 3em;
-    float: left;
-    height: 100%;
-    padding-right: .3em;
-    vertical-align: top;
-    margin-top: -0.5em;
-}
-
-li.task-list-item {
-    list-style: none;
-}
-
-input.task-list-item-checkbox {
-    margin: 0 0.35em 0.25em -1.6em;
-    vertical-align: middle;
-}
-
-.issue a.respec-gh-label {
-  padding: 5px;
-  margin: 0 2px 0 2px;
-  font-size: 10px;
-  text-transform: none;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  position: relative;
-  bottom: 2px;
-}
-
-.issue a.respec-label-dark {
-  color: #fff;
-  background-color: #000;
-}
-
-.issue a.respec-label-light {
-  color: #000;
-  background-color: #fff;
-}
-</style>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.3.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Requirements for Silver</title>
 		
 		
@@ -356,9 +275,9 @@ h6>a.self-link::before {
   "github": "https://github.com/w3c/silver/requirements",
   "copyrightStart": "2018",
   "shortName": "silver-requirements",
-  "publishDate": "2019-02-12",
-  "publishISODate": "2019-02-12T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 12 February 2019"
+  "publishDate": "2019-02-15",
+  "publishISODate": "2019-02-15T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 15 February 2019"
 }</script><meta name="description" content="The Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to  incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has:"></head>
 	<body class="h-entry toc-inline"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -366,7 +285,7 @@ h6>a.self-link::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-02-12">12 February 2019</time>
+        <time class="dt-published" datetime="2019-02-15">15 February 2019</time>
       </h2>
       <dl>
         
@@ -440,7 +359,7 @@ h6>a.self-link::before {
             <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
             (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
             <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
-          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><span class="secno">1.1 </span>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#opportunities-for-silver"><span class="secno">1.2 </span>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><span class="secno">1.2.1 </span>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><span class="secno">1.2.2 </span>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><span class="secno">1.2.3 </span>Maintenance</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles"><span class="secno">2. </span>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements-0"><span class="secno">3. </span>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><span class="secno">3.1 </span>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-structure"><span class="secno">3.2 </span>Flexible structure</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><span class="secno">3.3 </span>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><span class="secno">3.4 </span>Technology Neutral</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">B. </span>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><span class="secno">B.4 </span>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><span class="secno">B.5 </span>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><span class="secno">B.6 </span>Research Partners</a></li></ol></li></ol></nav>
+          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><span class="secno">1.1 </span>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#opportunities-for-silver"><span class="secno">1.2 </span>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><span class="secno">1.2.1 </span>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><span class="secno">1.2.2 </span>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><span class="secno">1.2.3 </span>Maintenance</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles"><span class="secno">2. </span>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements-0"><span class="secno">3. </span>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><span class="secno">3.1 </span>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-structure"><span class="secno">3.2 </span>Flexible structure</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><span class="secno">3.3 </span>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><span class="secno">3.4 </span>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability-usability"><span class="secno">3.5 </span>Readability/Usability</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">B. </span>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><span class="secno">B.4 </span>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><span class="secno">B.5 </span>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><span class="secno">B.6 </span>Research Partners</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<!--OddPage--><h2 id="intro"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
             <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or situational   limitations. </p>
@@ -555,8 +474,11 @@ h6>a.self-link::before {
           </section>
           <section id="technology-neutral">
             <h3 id="x3-4-technology-neutral"><span class="secno">3.4 </span>Technology Neutral<a class="self-link" aria-label="§" href="#technology-neutral"></a></h3>
-            <div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">Technology neutral is a requirement of WCAG 2.0 and it has enabled 2.0 to stay relevant as technology has changed. The Silver research indicates that it has also introduced challenges to users understanding, applying, and evaluating the guidance partially because it forces a level of abstraction that can be confusing to users. Silver is pursuing other solutions at this time and will relook at this requirement in a future version of this document. </p></div>
-	    <div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="4"><span>Editor's note</span></div><p class="">It is likely that a layer of guidance will be written to be technology neutral, with additional guidance that is technology-specific. The guidelines may include criteria that cannot be met using some technologies. See the <a href="https://w3c.github.io/silver/prototypes/FlavorPrototype/site/1-1-1/aria.html">Flavors of Silver prototype</a> for one idea of how it could work.  </p></div>
+	    <p>Guidelines must be worded so they can apply to multiple technologies. The technical detail is easily available, but isn't required to understand the guideline. Technology neutral wording give the ability to apply guidelines to current and emerging technology, even if the technical advice doesn't exist yet.</p>
+	 </section>
+          <section id="readability-usability">
+            <h3 id="x3-5-readability-usability"><span class="secno">3.5 </span>Readability/Usability<a class="self-link" aria-label="§" href="#readability-usability"></a></h3>
+	    <p>The guidelines should be understandable by non-technical audience. All text and presentation should be usable and understandable through the use of simple language.</p>
 	 </section>
 		</section>
 		<section class="appendix" id="changelog">
