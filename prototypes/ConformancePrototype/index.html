@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.7.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.8.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -71,6 +71,19 @@ input.task-list-item-checkbox {
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
 
+@keyframes pop {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.25, 1.25);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 /* Override code highlighter background */
 .hljs {
   background: transparent !important;
@@ -107,8 +120,29 @@ a.bibref {
   text-decoration: none;
 }
 
+.respec-offending-element:target {
+  animation: pop 0.25s ease-in-out 0s 1;
+}
+
+.respec-offending-element {
+  display: inline-block;
+  position: relative;
+  /* Red squiggly line */
+  background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
+    bottom repeat-x;
+}
+@supports (text-decoration-style: wavy) {
+  .respec-offending-element {
+    background: none;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+  }
+}
+
 #references :target {
   background: #eaf3ff;
+  animation: pop 0.4s ease-in-out 0s 1;
 }
 
 cite .bibref {
@@ -177,11 +211,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd>p:first-child {
+.section dd > p:first-child {
   margin-top: 0;
 }
 
-.section dd>p:last-child {
+.section dd > p:last-child {
   margin-bottom: 0;
 }
 
@@ -194,7 +228,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary>ul,
+#issue-summary > ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -210,7 +244,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details>* {
+details.respec-tests-details > * {
   padding-right: 2em;
 }
 
@@ -223,19 +257,19 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open]>summary {
+details.respec-tests-details[open] > summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details>ul {
+details.respec-tests-details > ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details>li {
+details.respec-tests-details > li {
   padding-left: 1em;
 }
 
@@ -257,30 +291,30 @@ aside.example .marker > a.self-link {
   color: inherit;
 }
 
-h2>a.self-link,
-h3>a.self-link,
-h4>a.self-link,
-h5>a.self-link,
-h6>a.self-link {
+h2 > a.self-link,
+h3 > a.self-link,
+h4 > a.self-link,
+h5 > a.self-link,
+h6 > a.self-link {
   border: none;
   color: inherit;
   font-size: 83%;
   height: 2em;
   left: -1.6em;
-  opacity: .5;
+  opacity: 0.5;
   position: absolute;
   text-align: center;
   text-decoration: none;
   top: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   width: 2em;
 }
 
-h2>a.self-link::before,
-h3>a.self-link::before,
-h4>a.self-link::before,
-h5>a.self-link::before,
-h6>a.self-link::before {
+h2 > a.self-link::before,
+h3 > a.self-link::before,
+h4 > a.self-link::before,
+h5 > a.self-link::before,
+h6 > a.self-link::before {
   content: "§";
   display: block;
 }
@@ -291,11 +325,11 @@ h6>a.self-link::before {
   }
 
   /* Don't position self-link in headings off-screen */
-  h2>a.self-link,
-  h3>a.self-link,
-  h4>a.self-link,
-  h5>a.self-link,
-  h6>a.self-link {
+  h2 > a.self-link,
+  h3 > a.self-link,
+  h4 > a.self-link,
+  h5 > a.self-link,
+  h6 > a.self-link {
     left: auto;
     top: auto;
   }
@@ -330,17 +364,17 @@ h6>a.self-link::before {
   "wgURI": "https://www.w3.org/community/silver/",
   "github": "https://github.com/w3c/silver/prototypes/ConformancePrototype.html",
   "copyrightStart": "2018",
-  "publishDate": "2019-03-29",
-  "publishISODate": "2019-03-29T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 29 March 2019"
+  "publishDate": "2019-04-02",
+  "publishISODate": "2019-04-02T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 02 April 2019"
 }</script><meta name="description" content="A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018. This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 <body class="h-entry informative toc-inline"><div class="head">
-      <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
+      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
       <h1 class="title p-name" id="title">Silver Conformance Prototype</h1>
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-03-29">29 March 2019</time>
+        <time class="dt-published" datetime="2019-04-02">02 April 2019</time>
       </h2>
       <dl>
         
