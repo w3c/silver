@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.8.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.10.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -124,6 +124,11 @@ a.bibref {
   animation: pop 0.25s ease-in-out 0s 1;
 }
 
+/* TODO: Remove once https://github.com/w3c/tr-design/pull/176 is merged. */
+.respec-offending-element a[href] {
+  margin: 0;
+}
+
 .respec-offending-element {
   display: inline-block;
   position: relative;
@@ -155,6 +160,15 @@ code {
 
 th code {
   color: inherit;
+}
+
+a[href].orcid {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a[href].orcid > svg {
+    margin-bottom: -2px;
 }
 
 /* --- TOC --- */
@@ -364,9 +378,9 @@ h6 > a.self-link::before {
   "wgURI": "https://www.w3.org/community/silver/",
   "github": "https://github.com/w3c/silver/prototypes/ConformancePrototype.html",
   "copyrightStart": "2018",
-  "publishDate": "2019-04-02",
-  "publishISODate": "2019-04-02T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 02 April 2019"
+  "publishDate": "2019-04-05",
+  "publishISODate": "2019-04-05T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 05 April 2019"
 }</script><meta name="description" content="A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018. This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 <body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -374,7 +388,7 @@ h6 > a.self-link::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-04-02">02 April 2019</time>
+        <time class="dt-published" datetime="2019-04-05">05 April 2019</time>
       </h2>
       <dl>
         
