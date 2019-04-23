@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.10.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.19.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -357,15 +357,59 @@ h6 > a.self-link::before {
 }
 </style>
         
-	<link rel="canonical" href="https://www.w3.org/TR/silver-requirements/"><script id="initialUserConfig" type="application/json">{
+	<link rel="canonical" href="https://www.w3.org/TR/silver-requirements/"><style>var {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+var[data-type]::before,
+var[data-type]::after {
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+/* the triangle or arrow or caret or whatever */
+var[data-type]::before {
+  content: "";
+  transform: translateX(-50%);
+  border-width: 4px 6px 0 6px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #000;
+}
+
+/* actual text */
+var[data-type]::after {
+  content: attr(data-type);
+  transform: translateX(-50%) translateY(-100%);
+  background: #000;
+  text-align: center;
+  /* additional styling */
+  font-family: "Dank Mono", "Fira Code", monospace;
+  font-style: normal;
+  padding: 6px;
+  border-radius: 3px;
+  color: #daca88;
+}
+
+var[data-type]:hover::after,
+var[data-type]:hover::before {
+  opacity: 1;
+}
+</style><script id="initialUserConfig" type="application/json">{
   "specStatus": "CG-DRAFT",
   "wg": "Silver Community Group",
   "editors": [
     {
       "name": "Jeanne Spellman",
       "mailto": "jspellman@spellmanconsulting.com",
-      "company": "The Paciello Group, LLC",
-      "companyURI": "https://www.paciellogroup.com/",
+      "company": "Tetralogical",
+      "companyURI": "https://tetralogical.com/",
       "w3cid": 42417
     },
     {
@@ -388,9 +432,9 @@ h6 > a.self-link::before {
   "github": "https://github.com/w3c/silver/tree/master/requirements",
   "copyrightStart": "2018",
   "shortName": "silver-requirements",
-  "publishDate": "2019-04-09",
-  "publishISODate": "2019-04-09T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 09 April 2019"
+  "publishDate": "2019-04-23",
+  "publishISODate": "2019-04-23T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 23 April 2019"
 }</script><meta name="description" content="The Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to  incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has:"><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -398,7 +442,7 @@ h6 > a.self-link::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-04-09">09 April 2019</time>
+        <time class="dt-published" datetime="2019-04-23">23 April 2019</time>
       </h2>
       <dl>
         
@@ -411,7 +455,7 @@ h6 > a.self-link::before {
         
         <dt>Editors:</dt>
         <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a>
-            (The Paciello Group, LLC)
+            (Tetralogical)
           </dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a>
             (Google, Inc.)
           </dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
@@ -476,7 +520,7 @@ h6 > a.self-link::before {
           </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><span class="secno">1.1 </span>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#opportunities-for-silver"><span class="secno">1.2 </span>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><span class="secno">1.2.1 </span>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><span class="secno">1.2.2 </span>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><span class="secno">1.2.3 </span>Maintenance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><span class="secno">1.3 </span>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles"><span class="secno">2. </span>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements-0"><span class="secno">3. </span>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><span class="secno">3.1 </span>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><span class="secno">3.2 </span>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><span class="secno">3.3 </span>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><span class="secno">3.4 </span>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability-usability"><span class="secno">3.5 </span>Readability/Usability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><span class="secno">3.6 </span>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><span class="secno">3.7 </span>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope"><span class="secno">3.8 </span>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><span class="secno">B.4 </span>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><span class="secno">B.5 </span>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><span class="secno">B.6 </span>Research Partners</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<!--OddPage--><h2 id="intro"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
-            <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or situational   limitations. </p>
+            <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or recurring limitations. </p>
             <p>We need guidelines to: </p>
             <ul>
               <li>identify these barriers encountered by people with disabilities. </li>
@@ -566,18 +610,19 @@ h6 > a.self-link::before {
           <p>Accessibility guidelines should:</p>
           <ol>
             <li>Support the needs of a wide range of people with disabilities and recognize that people have individual and multiple needs.</li>
-            <li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility.</li>
+            <li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.</li>
             <li>Be flexible enough to support the needs of people with disabilities and keep up with emerging technologies. The information structure allows guidance to be added or removed.</li>
-            <li>Be accessible and conform to the Guidelines.<span class="note">Note: This design principle will move to the Requirements section once the Conformance section is completed and we determine a specific measurement of compliance..</span></li>
-            <li>Be written in plain language, as easy as possible to understand. <span class="note"> We need a definition of plain language that includes the easy of translation. Ideally, it will be a broadly accepted definition internationally. </span></li>
+            <li>Be accessible and conform to the Guidelines. <span class="note">Note: This design principle will move to the Requirements section once the Conformance section is completed and we determine a specific measurement of compliance. </span></li>
+            <li>Be written in plain language, as easy as possible to understand. <span class="note"> We need a definition of plain language that includes the ease of translation. Ideally, it will be a broadly accepted definition internationally. </span></li>
+			<li>Improve the ability to support automated testing where appropriate and provide a procedure for repeatable tests when manual testing is appropriate.</li>
           </ol>
           <p>The creation process for the guidelines should:</p>
-          <ol start="6">
-            <li>Actively recruit a diverse range of people with disabilities to recognize the importance of their contributions to accessibility standards and solutions. Review and monitor whether people are included. Continually evaluate inclusive features of available tooling and procedures. </li>
+          <ol start="7">
+            <li>Actively recruit a diverse range of people with disabilities in recognition of the importance of their contributions to accessibility standards and solutions. Review and monitor whether people are included. Continually evaluate inclusive features of available tooling and procedures. </li>
             <li>Facilitate global participation and feedback.</li>
             <li>Be data-informed and evidence-based, recognizing that research may be limited or have small sample sizes. Research results for large groups of people with disabilities should not override the needs of smaller groups. When in doubt, see Design Principle 1. The intent is to make informed decisions wherever possible. For example, new Methods submitted by the public could require user research test results.  </li>
-			<li><span class="note">[new]</span> Be written so the Guideline content is used in adaptable and customizable ways. For example, Silver content is available to be extracted by users to adapt to their needs. </li>
-			<li><span class="note">[new]</span>Improve the ability to support automated testing where appropriate and provide a procedure for repeatable tests when manual testing is appropriate.</li>
+			<li>Be written so the Guideline content is usable in adaptable and customizable ways. For example, Silver content is available to be extracted by users to adapt to their needs. </li>
+			
           </ol>
 </section>
 		<section id="requirements-0">
@@ -586,7 +631,7 @@ h6 > a.self-link::before {
           <p>The Silver Requirements are high level and will be expanded and refined as Silver members move through the prototyping process.</p>
           <section id="multiple-ways-to-measure">
           <h3 id="x3-1-multiple-ways-to-measure"><span class="secno">3.1 </span>Multiple ways to measure<a class="self-link" aria-label="§" href="#multiple-ways-to-measure"></a></h3>
-          <p>All Silver guidance has tests or procedures so that the results can be verified. In addition to the current true/false success criteria, other ways of measuring (for example, rubrics, sliding scale, task-completion, user research with people with disabilities, and more) are available where appropriate so that more needs of people with disabilities can be included. </p>
+          <p>All Silver guidance has tests or procedures so that the results can be verified. In addition to the current true/false success criteria, other ways of measuring (for example, rubrics, sliding scale, task-completion, user research with people with disabilities, and more) can be used where appropriate so that more needs of people with disabilities can be included. </p>
           </section>
           <section id="flexible-maintenance-and-extensibility">
           <h3 id="x3-2-flexible-maintenance-and-extensibility"><span class="secno">3.2 </span>Flexible maintenance and extensibility<a class="self-link" aria-label="§" href="#flexible-maintenance-and-extensibility"></a></h3>
