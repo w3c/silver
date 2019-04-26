@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.19.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.21.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -432,9 +432,9 @@ var[data-type]:hover::before {
   "github": "https://github.com/w3c/silver/tree/master/requirements",
   "copyrightStart": "2018",
   "shortName": "silver-requirements",
-  "publishDate": "2019-04-23",
-  "publishISODate": "2019-04-23T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 23 April 2019"
+  "publishDate": "2019-04-26",
+  "publishISODate": "2019-04-26T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 26 April 2019"
 }</script><meta name="description" content="The Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to  incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has:"><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -442,7 +442,7 @@ var[data-type]:hover::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-04-23">23 April 2019</time>
+        <time class="dt-published" datetime="2019-04-26">26 April 2019</time>
       </h2>
       <dl>
         
@@ -517,7 +517,7 @@ var[data-type]:hover::before {
             <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
             (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
             <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
-          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><span class="secno">1.1 </span>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#opportunities-for-silver"><span class="secno">1.2 </span>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><span class="secno">1.2.1 </span>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><span class="secno">1.2.2 </span>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><span class="secno">1.2.3 </span>Maintenance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><span class="secno">1.3 </span>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles"><span class="secno">2. </span>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements-0"><span class="secno">3. </span>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><span class="secno">3.1 </span>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><span class="secno">3.2 </span>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><span class="secno">3.3 </span>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><span class="secno">3.4 </span>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability-usability"><span class="secno">3.5 </span>Readability/Usability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><span class="secno">3.6 </span>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><span class="secno">3.7 </span>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope"><span class="secno">3.8 </span>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><span class="secno">B.4 </span>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><span class="secno">B.5 </span>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><span class="secno">B.6 </span>Research Partners</a></li></ol></li></ol></nav>
+          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><span class="secno">1.1 </span>Scope</a></li><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><span class="secno">1.2 </span>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#opportunities-for-silver"><span class="secno">1.3 </span>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><span class="secno">1.3.1 </span>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><span class="secno">1.3.2 </span>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><span class="secno">1.3.3 </span>Maintenance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><span class="secno">1.4 </span>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles"><span class="secno">2. </span>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements-0"><span class="secno">3. </span>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><span class="secno">3.1 </span>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><span class="secno">3.2 </span>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><span class="secno">3.3 </span>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><span class="secno">3.4 </span>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability-usability"><span class="secno">3.5 </span>Readability/Usability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><span class="secno">3.6 </span>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><span class="secno">3.7 </span>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope-0"><span class="secno">3.8 </span>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><span class="secno">B.1 </span>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><span class="secno">B.2 </span>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><span class="secno">B.3 </span>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><span class="secno">B.4 </span>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><span class="secno">B.5 </span>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><span class="secno">B.6 </span>Research Partners</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<!--OddPage--><h2 id="intro"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
             <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or recurring limitations. </p>
@@ -529,9 +529,29 @@ var[data-type]:hover::before {
             <p>The research done in 2017-2018 by the Silver Task Force, the Silver Community Group, and the <a href="https://rawgit.com/w3c/silver/master/prototypes/ConformancePrototype/index.html#research-partners">research partners</a> was used to identify the key problem statements related to the current accessibility guidelines (WCAG 2.x, ATAG 2.0 and UAAG 2.0).  See the <a href="https://docs.google.com/presentation/d/1POs7orJ4ALB0bq5_vyo4v8RxDcr-5ctwD1noVgpXuJc/edit#slide=id.gc6f73a04f_0_0">Silver Research Summary slides</a> for more detailed information. These problem statements were used to identify the opportunities for Silver to address that will improve accessibility guidance.          </p>
           <p>The Web Content Accessibility Guidelines (WCAG) 2.0 were designed to be   technology neutral, and has stayed relevant for over 10 years. The Authoring Tool Accessibility Guidelines (ATAG) 2.0 has  been  implemented  in the open source authoring tool communities (chiefly Wordpress and Drupal) with little known uptake in commercial authoring tools. UAAG 2.0 offers useful guidance to user agent developers and has been implemented on an individual success criterion basis. There is no known user agent that has implemented all of UAAG 2.0. </p>
             <p>During   the year of Silver research, a recurring theme was the popularity and quality of the   guidance in WCAG 2.0. Most of the opportunities identified in the research were   improvements in the structure and presentation accessibility guidance to improve usability, to support more disability needs, and to improve maintenance. </p>
-
+	
+	<section id="scope">
+		<h3 id="x1-1-scope"><span class="secno">1.1 </span>Scope<a class="self-link" aria-label="§" href="#scope"></a></h3>
+		<p>Silver will have a broader scope than WCAG 2.0 and 2.1.  The Web Content Accessibility Guidelines (WCAG) are scoped to Web and to Content.  Silver is being deliberately designed to be able to include: 
+		</p>
+		<ul>
+			<li><strong>Disability Needs</strong>: An improved measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.</li>
+			<li><strong>Emerging Technologies</strong>: Flexibility to include emerging technologies, such as Virtual Reality (VR) and Voice Assistants</li>
+			<li><strong>Support for the Technologies that Impact Accessibility</strong>: Advice for all levels of the accessibility technology stack who wish to support the Silver core Guidelines including:
+				<ul>
+					<li><strong>authoring tools</strong>, such as content management systems
+					</li><li><strong>user agents</strong>, such as browsers, media players
+					</li><li><strong>software and web applications</strong>, including mobile apps
+					</li><li><strong>assistive technologies</strong>, such as screen readers, screen magnifiers, and assistants for memory, organizational, or simplification
+					</li><li><strong>operating systems</strong> and other platforms who may want advice for features to better support people with disabilities  
+				</li></ul>
+			</li>
+		</ul>
+		<p>The current project design does not intend to write separate specifications or normative requirements for the technology stack.  The goal is to provide information that technology venders can choose to use to improve the accessibility of their products.  
+		</p>
+	</section>
 	<section id="comparison-to-wcag-2-x-requirements">
-      <h3 id="x1-1-comparison-to-wcag-2-x-requirements"><span class="secno">1.1 </span>Comparison to WCAG 2.x Requirements<a class="self-link" aria-label="§" href="#comparison-to-wcag-2-x-requirements"></a></h3>
+      <h3 id="x1-2-comparison-to-wcag-2-x-requirements"><span class="secno">1.2 </span>Comparison to WCAG 2.x Requirements<a class="self-link" aria-label="§" href="#comparison-to-wcag-2-x-requirements"></a></h3>
  <p>Silver builds on the<a href="https://www.w3.org/TR/wcag2-req/"> WCAG 2.0 Requirements of 2006</a>.
       The WCAG 2.0 requirements are:
  </p><ol>
@@ -561,10 +581,10 @@ var[data-type]:hover::before {
  </ol>
     </section>
 	<section id="opportunities-for-silver">
-		  <h3 id="problem_statements"><span class="secno">1.2 </span>Opportunities for Silver          <a class="self-link" aria-label="§" href="#opportunities-for-silver"></a></h3>
+		  <h3 id="problem_statements"><span class="secno">1.3 </span>Opportunities for Silver          <a class="self-link" aria-label="§" href="#opportunities-for-silver"></a></h3>
 		  <p>The   <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read">Problem Statements</a> describe areas identified during the Silver research in   2017-2018 that  can be addressed in the new guidelines. Each problem statement also has an opportunity section that is the basis for the Silver Requirements. </p>
           <section id="oppotunities_usability">
-          <h4 id="x1-2-1-usability"><span class="secno">1.2.1 </span>Usability<a class="self-link" aria-label="§" href="#oppotunities_usability"></a></h4>
+          <h4 id="x1-3-1-usability"><span class="secno">1.3.1 </span>Usability<a class="self-link" aria-label="§" href="#oppotunities_usability"></a></h4>
           <ul>
             <li><strong>Readable</strong>: When guidelines are easier to read and understand, users – especially   people in the development cycle who are less technical – are more likely   to implement accessibility. When all audiences are considered in the   language and terminology used in the guidelines, the likelihood   increases that they will:
               <ul>
@@ -580,7 +600,7 @@ var[data-type]:hover::before {
           </ul>
           </section>
           <section id="oppotunities_conformance">
-          <h4 id="x1-2-2-conformance-model"><span class="secno">1.2.2 </span>Conformance Model<a class="self-link" aria-label="§" href="#oppotunities_conformance"></a></h4>
+          <h4 id="x1-3-2-conformance-model"><span class="secno">1.3.2 </span>Conformance Model<a class="self-link" aria-label="§" href="#oppotunities_conformance"></a></h4>
 					<p>There are several areas for exploration in how conformance can work. These opportunities may or may not be incorporated. Then need to work together, and that interplay will be governed by the design principles</p>
           <ul>
             <li><strong>Measurable Guidance</strong>: Certain accessibility guidance is quite clear and measurable. Others, far less so. There are needs of people with disabilities, especially cognitive and low vision disabilities that are not well served by guidance that can only be measured by pass/fail statement. Multiple means of measurement, in addition to pass/fail statements, allow inclusion of more accessibility guidance.</li>
@@ -589,7 +609,7 @@ var[data-type]:hover::before {
           </ul>
           </section>
           <section id="oppotunities_maintenance">
-          <h4 id="x1-2-3-maintenance"><span class="secno">1.2.3 </span>Maintenance<a class="self-link" aria-label="§" href="#oppotunities_maintenance"></a></h4>
+          <h4 id="x1-3-3-maintenance"><span class="secno">1.3.3 </span>Maintenance<a class="self-link" aria-label="§" href="#oppotunities_maintenance"></a></h4>
           <ul>
             <li> <strong>Flexibility</strong>: A flexible structure enables greater scaling of new methods to meet guidelines. It also allows for the expiration of outdated methods to meet guidelines. A flexible process of updating methods enables the overall guidance to keep pace with technology. Flexible participation – particularly of people with disabilities – empowers a community and enables more inclusive insights.</li>
             <li> <strong>Scaling</strong>: We intend Silver to apply to multiple contexts and multiple use cases. Silver intends to be iterative, future-friendly, and user-centric. </li>
@@ -599,7 +619,7 @@ var[data-type]:hover::before {
         </section>
 	</section>
 	<section id="design-principles-and-requirements">
-		<h3 id="x1-3-design-principles-and-requirements"><span class="secno">1.3 </span>Design Principles and Requirements<a class="self-link" aria-label="§" href="#design-principles-and-requirements"></a></h3>
+		<h3 id="x1-4-design-principles-and-requirements"><span class="secno">1.4 </span>Design Principles and Requirements<a class="self-link" aria-label="§" href="#design-principles-and-requirements"></a></h3>
 		<p>This document has two sections: a Design Principles section and a Requirements section. Requirements need to be measured or clearly demonstrated. They are used at the W3C phase of Candidate Recommendation, where the Candidate Recommendation Transition Request reports that the requirements were met.  Design Principles are important statements that are less measurable, but are used to guide, shape and steer decision-making during the development process of Silver.  Both are essential in guiding the development of the Silver project.  
 		</p>
 	</section>
@@ -661,8 +681,8 @@ var[data-type]:hover::before {
             <h3 id="x3-7-motivation"><span class="secno">3.7 </span>Motivation<a class="self-link" aria-label="§" href="#motivation"></a></h3>
 	    <p>The Guidelines motivate organizations to go beyond minimal accessibility requirements by providing a scoring system that rewards organizations which demonstrate a greater effort to improve accessibility.</p>
 	 </section>
-          <section id="scope">
-            <h3 id="x3-8-scope"><span class="secno">3.8 </span>Scope<a class="self-link" aria-label="§" href="#scope"></a></h3>
+          <section id="scope-0">
+            <h3 id="x3-8-scope"><span class="secno">3.8 </span>Scope<a class="self-link" aria-label="§" href="#scope-0"></a></h3>
 	    <p>The guidelines provide guidance for people and organizations that produce digital assets and technology of varying size and complexity. Our intent is to provide guidance for a diverse group of stakeholders including content creators, browsers, authoring tools, assistive technologies, and more.</p>
 	 </section>
 		</section>
