@@ -432,9 +432,9 @@ var[data-type]:hover::before {
   "github": "https://github.com/w3c/silver/tree/master/requirements",
   "copyrightStart": "2018",
   "shortName": "silver-requirements",
-  "publishDate": "2019-04-26",
-  "publishISODate": "2019-04-26T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 26 April 2019"
+  "publishDate": "2019-04-30",
+  "publishISODate": "2019-04-30T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 30 April 2019"
 }</script><meta name="description" content="The Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to  incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has:"><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -442,7 +442,7 @@ var[data-type]:hover::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-04-26">26 April 2019</time>
+        <time class="dt-published" datetime="2019-04-30">30 April 2019</time>
       </h2>
       <dl>
         
@@ -532,22 +532,23 @@ var[data-type]:hover::before {
 	
 	<section id="scope">
 		<h3 id="x1-1-scope"><span class="secno">1.1 </span>Scope<a class="self-link" aria-label="§" href="#scope"></a></h3>
-		<p>Silver will have a broader scope than WCAG 2.0 and 2.1.  The Web Content Accessibility Guidelines (WCAG) are scoped to Web and to Content.  Silver is being deliberately designed to be able to include: 
+		<p>Silver will have a broader scope than WCAG 2.0 and 2.1.  The Web Content Accessibility Guidelines (WCAG) are scoped to Web and to Content.  Silver is being designed to be able to include: 
 		</p>
 		<ul>
 			<li><strong>Disability Needs</strong>: An improved measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.</li>
-			<li><strong>Emerging Technologies</strong>: Flexibility to include emerging technologies, such as Virtual Reality (VR) and Voice Assistants</li>
+			<li><strong>Emerging Technologies</strong>: Flexibility to include emerging technologies, such as augmented/virtual reality(AR/VR/XR) and voice assistants</li>
 			<li><strong>Support for the Technologies that Impact Accessibility</strong>: Advice for all levels of the accessibility technology stack who wish to support the Silver core Guidelines including:
 				<ul>
+					<li><strong>digital content</strong>, including guidance currently addressed by WCAG 2.x</li>
 					<li><strong>authoring tools</strong>, such as content management systems
-					</li><li><strong>user agents</strong>, such as browsers, media players
+					</li><li><strong>user agents</strong>, such as browsers and media players
+					</li><li><strong>assistive technologies</strong>, such as screen readers, screen magnifiers, and assistants for memory, organization, or simplification
 					</li><li><strong>software and web applications</strong>, including mobile apps
-					</li><li><strong>assistive technologies</strong>, such as screen readers, screen magnifiers, and assistants for memory, organizational, or simplification
 					</li><li><strong>operating systems</strong> and other platforms who may want advice for features to better support people with disabilities  
 				</li></ul>
 			</li>
 		</ul>
-		<p>The current project design does not intend to write separate specifications or normative requirements for the technology stack.  The goal is to provide information that technology venders can choose to use to improve the accessibility of their products.  
+		<p>The current project design does not intend to write separate specifications or normative requirements for the technology stack beyond digital content.  The goal is to provide information that technology venders can choose to use to improve the accessibility of their products to support the guidelines.  
 		</p>
 	</section>
 	<section id="comparison-to-wcag-2-x-requirements">
@@ -640,7 +641,8 @@ var[data-type]:hover::before {
           <ol start="7">
             <li>Actively recruit a diverse range of people with disabilities in recognition of the importance of their contributions to accessibility standards and solutions. Review and monitor whether people are included. Continually evaluate inclusive features of available tooling and procedures. </li>
             <li>Facilitate global participation and feedback.</li>
-            <li>Be data-informed and evidence-based, recognizing that research may be limited or have small sample sizes. Research results for large groups of people with disabilities should not override the needs of smaller groups. When in doubt, see Design Principle 1. The intent is to make informed decisions wherever possible. For example, new Methods submitted by the public could require user research test results.  </li>
+            <li>Be data-informed and evidence-based where possible. We recognize that research and evidence are influenced by the number of people with a particular disability, by the size of the body of research, and the difficulty in capturing data regarding some disabilities. The intent is to make informed decisions wherever possible to ensure that needs of all people with disabilities will be prioritized equally. In situations where there is no evidence or research, valid data-gathering methods can be used to obtain information from advocacy groups, people with lived experience, and other subject matter experts. <span class="note">There are proposals pending to add a sentence to address the quality of the research and inclusion of outliers, to be addressed on 3 May 2019. </span> 
+  </li>
 			<li>Be written so the Guideline content is usable in adaptable and customizable ways. For example, Silver content is available to be extracted by users to adapt to their needs. </li>
 			
           </ol>
@@ -663,7 +665,7 @@ var[data-type]:hover::before {
           </section>
           <section id="technology-neutral">
             <h3 id="x3-4-technology-neutral"><span class="secno">3.4 </span>Technology Neutral<a class="self-link" aria-label="§" href="#technology-neutral"></a></h3>
-	    <p>Core guidelines are user-centric.  Methods are technology-centric. The core guidelines are worded to apply across varied technologies and avoid being technology-specific. The intent of technology-neutral wording is to provide the opportunity to apply the core guidelines to current and emerging technology, even if the technical advice doesn't yet exist. Technical details are discoverable in the Methods but are not required to understand guidelines.</p>
+	    <p>Guidance should be expressed in generic terms so that they may apply to more than one platform or technology. The intent of technology-neutral wording is to provide the opportunity to apply the core guidelines to current and emerging technology, even if specific technical advice doesn't yet exist.</p>
 	 </section>
           <section id="readability-usability">
             <h3 id="x3-5-readability-usability"><span class="secno">3.5 </span>Readability/Usability<a class="self-link" aria-label="§" href="#readability-usability"></a></h3>
@@ -691,7 +693,7 @@ var[data-type]:hover::before {
           <section id="changes-prior-to-first-public-working-draft">
             <h3 id="changes-before-the-first-public-working-draft"><span class="secno">A.1 </span>Changes Prior to First Public Working Draft<a class="self-link" aria-label="§" href="#changes-prior-to-first-public-working-draft"></a></h3>
             <ul>
-       	        <li>Moved the Opportunity for Evolving Technologies to Maintenance; added new opportunity       for Flexibility in the Conformance section; and  minor grammar corrections. (9 July 2018) </li>
+			  <li>Moved the Opportunity for Evolving Technologies to Maintenance; added new opportunity       for Flexibility in the Conformance section; and  minor grammar corrections. (9 July 2018) </li>
               <li>Added headings to individual requirements (25 June 2018)</li>
               <li>Added section on Comparison to WCAG 2.x (25 June 2018)</li>
               <li>Changed Problem Statements to Opportunities based on AGWG feedback and group discussion (25 June 2018)</li>
@@ -704,14 +706,16 @@ var[data-type]:hover::before {
               <li>Add short sentences on the time line for updating the Requirements     document based on meeting of Cooper, Lauriat and Spellman of 23 March     2018. </li>
               <li>Reorder the sections so that the background is first, followed by Design Principles, then Requirements</li>
               <li>Clarify the broader definition of "disabilities" based on input     from public comments and group discussion. The definition sentence in     the Introduction paragraph is a proposal for group discussion. </li>
-              <li>Insert missing word "people" from Design Principle #1 </li>
               <li>Change "future" to "unanticipated" in Requirements #2 and add subsequent sentence. </li>
               <li>Change the Requirements Intro paragraph to remove the specific     sentence on conformance and pass/fail tests and give greater context on     the source of the Requirements.        </li>
             </ul>
 			<h3 id="changes-before-the-second-requirements-draft">Changes Prior to Second Version of Requirements<a class="self-link" aria-label="§" href="#changes-prior-to-first-public-working-draft"></a></h3>
 			<ul>
-			<li>New requirements for Readability, Regulatory Environment, Motivation, and Scope.  </li>
-			<li>Wording changes suggested by AGWG at F2F at CSUN. Too many to record. Use a diff generator.  </li>
+			<li>New requirements for Readability, Regulatory Environment, Motivation, and Scope .  </li>
+			<li>Added Scope section to the Introduction (26 April 2019)</li>
+			  <li>Added paragraph explaining the differences between Design Principles and Requirements as a result of requests from the AGWG face-to-face meeting of 11 &amp; 12 March 2019. 
+			  </li><li>Added new Design Principles and Requirements and changed wording of existing Design Principles and Requirements based on feedback from AGWG in Q1 &amp; Q2 2019 </li>
+			
 			</ul>
             </section>
 		</section>
