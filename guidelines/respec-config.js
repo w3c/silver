@@ -14,12 +14,12 @@ var respecConfig = {
 	diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "silver-requirements",
+	shortName: "silver",
 	
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
-	copyrightStart: "2018",
+	copyrightStart: "2019",
 	license: "document",
 	
 	// if there a publicly available Editors Draft, this is the link
