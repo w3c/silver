@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.23.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.33.4"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -124,24 +124,18 @@ a.bibref {
   animation: pop 0.25s ease-in-out 0s 1;
 }
 
-/* TODO: Remove once https://github.com/w3c/tr-design/pull/176 is merged. */
-.respec-offending-element a[href] {
-  margin: 0;
+.respec-offending-element,
+a[href].respec-offending-element {
+  text-decoration: red wavy underline;
 }
-
-.respec-offending-element {
-  display: inline-block;
-  position: relative;
-  /* Red squiggly line */
-  background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-    bottom repeat-x;
-}
-@supports (text-decoration-style: wavy) {
+@supports not (text-decoration: red wavy underline) {
+  .respec-offending-element:not(pre) {
+    display: inline-block;
+  }
   .respec-offending-element {
-    background: none;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: red;
+    /* Red squiggly line */
+    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
+      bottom repeat-x;
   }
 }
 
@@ -203,6 +197,12 @@ table.simple {
 
 .simple th {
   background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th a {
   color: #fff;
   padding: 3px 5px;
   text-align: left;
@@ -356,7 +356,7 @@ h6 > a.self-link::before {
 }
 </style>
 		
-	<link rel="canonical" href="https://www.w3.org/TR/silver/"><style>var {
+	<style>var {
   position: relative;
   cursor: pointer;
 }
@@ -423,9 +423,9 @@ var[data-type]:hover::before {
   "wgURI": "https://www.w3.org/community/silver/",
   "github": "https://github.com/w3c/silver/prototypes/ConformancePrototype.html",
   "copyrightStart": "2018",
-  "publishDate": "2019-06-11",
-  "publishISODate": "2019-06-11T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 11 June 2019"
+  "publishDate": "2019-10-08",
+  "publishISODate": "2019-10-08T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 08 October 2019"
 }</script><meta name="description" content="A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018. This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 <body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -433,7 +433,7 @@ var[data-type]:hover::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-06-11">11 June 2019</time>
+        <time class="dt-published" datetime="2019-10-08">08 October 2019</time>
       </h2>
       <dl>
         
