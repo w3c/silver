@@ -22,6 +22,7 @@ script:
   - cd silver
   - cp -r ../../w3c/silver/index.html ../../w3c/silver/assets ../../w3c/silver/prototypes ../../w3c/silver/requirements .
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/silver/master/guidelines/index.html -o guidelines/index.html -f --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/silver/master/guidelines/explainer.html -o guidelines/explainer.html -f --retry 3
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/silver/master/requirements/index.html -o requirements/index.html -f --retry 3
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/silver/master/prototypes/ConformancePrototype/index.html -o prototypes/ConformancePrototype/index.html -f --retry 3
 
