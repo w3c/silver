@@ -1,0 +1,600 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.33.5"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Explainer for "Silver" Accessibility Guidelines</title>
+    <style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+@keyframes pop {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.25, 1.25);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+.respec-offending-element:target {
+  animation: pop 0.25s ease-in-out 0s 1;
+}
+
+.respec-offending-element,
+a[href].respec-offending-element {
+  text-decoration: red wavy underline;
+}
+@supports not (text-decoration: red wavy underline) {
+  .respec-offending-element:not(pre) {
+    display: inline-block;
+  }
+  .respec-offending-element {
+    /* Red squiggly line */
+    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
+      bottom repeat-x;
+  }
+}
+
+#references :target {
+  background: #eaf3ff;
+  animation: pop 0.4s ease-in-out 0s 1;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+a[href].orcid {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a[href].orcid > svg {
+    margin-bottom: -2px;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th a {
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd > p:first-child {
+  margin-top: 0;
+}
+
+.section dd > p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary > ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details > * {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: 0.3em;
+  background-color: white;
+  padding-bottom: 0.5em;
+}
+
+details.respec-tests-details[open] > summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details > ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details > li {
+  padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2 > a.self-link,
+h3 > a.self-link,
+h4 > a.self-link,
+h5 > a.self-link,
+h6 > a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: 0.5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity 0.2s;
+  width: 2em;
+}
+
+h2 > a.self-link::before,
+h3 > a.self-link::before,
+h4 > a.self-link::before,
+h5 > a.self-link::before,
+h6 > a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2 > a.self-link,
+  h3 > a.self-link,
+  h4 > a.self-link,
+  h5 > a.self-link,
+  h6 > a.self-link {
+    left: auto;
+    top: auto;
+  }
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style>
+    
+  <style>var {
+  position: relative;
+  cursor: pointer;
+}
+
+var[data-type]::before,
+var[data-type]::after {
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+/* the triangle or arrow or caret or whatever */
+var[data-type]::before {
+  content: "";
+  transform: translateX(-50%);
+  border-width: 4px 6px 0 6px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #000;
+}
+
+/* actual text */
+var[data-type]::after {
+  content: attr(data-type);
+  transform: translateX(-50%) translateY(-100%);
+  background: #000;
+  text-align: center;
+  /* additional styling */
+  font-family: "Dank Mono", "Fira Code", monospace;
+  font-style: normal;
+  padding: 6px;
+  border-radius: 3px;
+  color: #daca88;
+  text-indent: 0;
+  font-weight: normal;
+}
+
+var[data-type]:hover::after,
+var[data-type]:hover::before {
+  opacity: 1;
+}
+</style><script id="initialUserConfig" type="application/json">{
+  "specStatus": "CG-DRAFT",
+  "wg": "Silver Community Group",
+  "editors": [
+    {
+      "name": "Jeanne Spellman",
+      "mailto": "jspellman@spellmanconsulting.com",
+      "company": "Tetralogical",
+      "companyURI": "https://tetralogical.com/",
+      "w3cid": 42417
+    },
+    {
+      "name": "Shawn Lauriat",
+      "mailto": "lauriat@google.com",
+      "company": "Google, Inc.",
+      "companyURI": "https://www.google.com/",
+      "w3cid": 90646
+    },
+    {
+      "name": "Michael Cooper",
+      "mailto": "cooper@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org/",
+      "w3cid": 34017
+    }
+  ],
+  "wgURI": "https://www.w3.org/community/silver/",
+  "wgPublicList": "public-silver",
+  "github": "https://github.com/w3c/silver/",
+  "copyrightStart": "2019",
+  "shortName": "silver",
+  "edDraftURI": "https://w3c.github.io/silver/guidelines/",
+  "publishDate": "2019-10-09",
+  "publishISODate": "2019-10-09T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 09 October 2019"
+}</script><meta name="description" content="This Explainer accompanies the drafts of the &quot;Silver&quot; Accessbility Guidelines.  &quot;Silver&quot; is a project name, as the guideline does not have a formal name as yet. The Explainer has background information that could be helpful to people who want to understand the project and the decisions leading up to this draft."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
+  <body class="h-entry informative toc-inline"><div class="head">
+      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
+      <h1 class="title p-name" id="title">Explainer for "Silver" Accessibility Guidelines</h1>
+      
+      <h2>
+        Draft Community Group Report
+        <time class="dt-published" datetime="2019-10-09">09 October 2019</time>
+      </h2>
+      <dl>
+        
+        
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/guidelines/">https://w3c.github.io/silver/guidelines/</a></dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a>
+            (Tetralogical)
+          </dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a>
+            (Google, Inc.)
+          </dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
+            (W3C)
+          </dd>
+        
+        
+        <dt>Participate:</dt><dd>
+      <a href="https://github.com/w3c/silver/">GitHub w3c/silver</a>
+    </dd><dd>
+      <a href="https://github.com/w3c/silver/issues/">File a bug</a>
+    </dd><dd>
+      <a href="https://github.com/w3c/silver/commits/gh-pages">Commit history</a>
+    </dd><dd>
+      <a href="https://github.com/w3c/silver/pulls/">Pull requests</a>
+    </dd>
+      </dl>
+      
+      <p class="copyright">
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+        ©
+        2019
+        
+        the Contributors to the Explainer for "Silver" Accessibility Guidelines Specification, published by the
+        <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
+        <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
+              <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+              is available.
+            
+      </p>
+      <hr title="Separator for header">
+    </div>
+    <section id="abstract" class="introductory"><h2>Abstract</h2>
+      <p>
+        This Explainer accompanies the drafts of the "Silver" Accessbility Guidelines.  "Silver" is a project name, as the guideline does not have a formal name as yet. The Explainer has background information that could be helpful to people who want to understand the project and the decisions leading up to this draft.  
+      </p>
+	  <p>
+    </p></section>
+    <section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
+      This specification was published by the
+      <a href="https://www.w3.org/community/silver/">Silver Community Group</a>. It is not a W3C Standard nor is it
+      on the W3C Standards Track.
+      
+            Please note that under the
+            <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>
+            there is a limited opt-out and other conditions apply.
+          
+      Learn more about
+      <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
+    </p>
+      <p>
+        This is a first draft of the Explainer.  It is not normative and is not expected to become a W3C Recommendation.  It provides background on the Silver Accessbility Guidelines project. 
+      </p>
+    <p>
+            If you wish to make comments regarding this document, please send
+            them to
+            <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
+            (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
+            <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
+          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#research"><bdi class="secno">2. </bdi>Research and Input from Industry Leaders </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problemStatements"><bdi class="secno">2.1 </bdi>Problem Statements</a></li><li class="tocline"><a class="tocxref" href="#DesignSprint"><bdi class="secno">2.2 </bdi>Silver Design Sprint Suggestions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#DSusability"><bdi class="secno">2.2.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#DSconformance"><bdi class="secno">2.2.2 </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#DSmaintenance"><bdi class="secno">2.2.3 </bdi>Maintenance</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3. </bdi>Goals</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inclusionGoals"><bdi class="secno">3.1 </bdi>Goals for Inclusion</a></li><li class="tocline"><a class="tocxref" href="#ContentGoals"><bdi class="secno">3.2 </bdi>Goals for Content</a></li><li class="tocline"><a class="tocxref" href="#ConformanceGoals"><bdi class="secno">3.3 </bdi>Goals for Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nonGoals"><bdi class="secno">4. </bdi>Non-Goals or Out-of-Scope</a></li></ol></nav>
+    <section id="intro">
+      <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2>
+      <p>Silver Accessibility Guidelines does not yet have an official name. It is intended to be the next major version that will replace the Web Content Accessibility Guidelines (WCAG). One of the goals of the Silver Accessibility Guidelines is that it will be written using plain language as much as possible so that people who are not technical can still understand it, and so Silver can be more easily translated into other languages. When it is finished, Silver Accessibility Guidelines will have many ways for making the web and other digital content (like video or mobile apps) more accessible to people with disabilities. 
+	  </p>
+	  <p>
+	  The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to produce the needs, requirements, and structure for the new accessibility guidance. To date, the group has: 
+	  </p><ol>
+	  <li>Researched accessibility guidance needs
+	  </li><li>Developed problem statements and opportunities to improve accessibility guidance
+	  </li><li>Received input from industry leaders for directions to proceed
+	  </li><li>Drafted requirements for the project (they will be reviewed after public feedback from the First Public Working Draft)
+	  </li><li>Created and tested prototypes for aspects of the project
+	  </li><li>Created a First Public Working Draft
+	  </li></ol>
+    </section>
+	<section id="research">
+	<h2 id="x2-research-and-input-from-industry-leaders"><bdi class="secno">2. </bdi>Research and Input from Industry Leaders <a class="self-link" aria-label="§" href="#research"></a></h2>
+	  <p>The Silver Community Group partnered with academic and corporate researchers to address a list of specific questions related to improving accessibility standards.  Details of the research questions, projects, and the results are on the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive">Silver Research Archive wiki page</a>.  
+	  </p>
+	  <section id="problemStatements">
+		<h3 id="x2-1-problem-statements"><bdi class="secno">2.1 </bdi>Problem Statements<a class="self-link" aria-label="§" href="#problemStatements"></a></h3>	
+	  <p>
+	  The Silver Research themes were organized into Problem Statements in three areas: Usability, Conformance, and Maintenance. 
+	  </p>
+	  <p>(quoted from <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements">Silver Research Problem Statements</a>)</p>
+	  <p><strong>People generally liked the advice of WCAG</strong>, but commented about the content:</p>
+	  <ul>
+	  <li><strong>Usability</strong>
+	  <ul>
+		<li>Too difficult to read and translate.
+		</li><li>Difficult to get started for beginners.
+		</li><li>Ambiguity in interpreting the success criteria. Different accessibility experts will interpret the guidelines differently.
+		</li><li>Persuading others to follow WCAG is difficult mostly because of the perception that Accessibility is something added at the end of the development process and is costly.</li>
+	  </ul>
+	  </li>
+	  <li><strong>Conformance Model</strong>
+		<ul>
+		<li>Constraints in the Conformance to “What is Strictly Testable” provides an obstacle to including guidance that meets the needs of people with disabilities, but is not conducive to a pass/fail test.
+		</li><li>Human Testable (related to Ambiguity) also relates to differences in knowledge and priorities of different testers achieve different results.
+		</li><li>Accessibility Supported is a conformance requirement of WCAG 2 that is poorly understood and incompletely implemented
+		</li><li>Evolving Technology of the rapidly changing web must be evaluated constantly against the capabilities of assistive technology, and evolving assistive technology must be evaluated against the backward compatibility of existing web sites.</li>
+		</ul>
+	  </li>
+	  <li><strong>Maintenance</strong>
+	  <ul>
+		<li>Flexibility to provide more easily discovered, more helpful information that can be updated as technology advances.
+		</li><li>Scaling the accessibility guidance so it can be updated to include new and changing technology
+		</li><li>Governance of the accessibility standards has not kept pace with changing processes of standard development.</li>
+		</ul>
+	  </li>
+	  </ul>
+	  <p>
+	  </p></section>
+	  <section id="DesignSprint">
+	  <h3 id="x2-2-silver-design-sprint-suggestions"><bdi class="secno">2.2 </bdi>Silver Design Sprint Suggestions<a class="self-link" aria-label="§" href="#DesignSprint"></a></h3>
+	  <p>The Problem Statements were presented to 27 industry leaders representing different stakeholder groups, including: </p>
+	  <ul>
+		<li>Accessibility influencers
+		</li><li>Information architects
+		</li><li>UX professionals
+		</li><li>Developers (for example: Web Content, Document, Authoring Tool, User Agent, Assistive Technology)
+		</li><li>Legal specialists
+		</li><li>Policy specialists
+		</li><li>W3C Process experts
+	  </li></ul>
+	  <p>These industry leaders held a two-day, guided design sprint to recommend solutions which are summarized in the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Design Sprint Report Suggestions section</a>. </p>
+	  <section id="DSusability">
+	  <h4 id="x2-2-1-usability"><bdi class="secno">2.2.1 </bdi>Usability<a class="self-link" aria-label="§" href="#DSusability"></a></h4>
+	  <ol>
+		<li>Take existing WCAG 2.1 guidance and rewrite it in plain language, using editors with simple language or plain language experience.  The existing success criteria may need to be updated, but most of WCAG 2.1 guidance is still valid.  It needs more clarity, ease of reading, and ease of translation.
+		</li><li>Organize the data in small snippets that can be coded and categorized so they can be assembled dynamically to meet the needs of the person looking for information.
+		</li><li>Create a comprehensive view for W3C Technical Report purposes, and for those who need to view the total document.
+		</li><li>Create a solution that addresses the needs of people to find information by role, problem, by disability, and by platform.  How can people discover what they need to know?
+		</li><li>Design a homepage that is oriented toward helping beginners and is separate from the W3C Technical Report.  Include shortcuts for expert users who know what they want (for example, a code sample for an accessible tab panel)
+	  </li></ol>
+	  </section>
+	  <section id="DSconformance">
+		<h4 id="x2-2-2-conformance"><bdi class="secno">2.2.2 </bdi>Conformance<a class="self-link" aria-label="§" href="#DSconformance"></a></h4>
+		<ol start="6">
+		<li>Design a conformance structure and style guides that shift emphasis from “testability” to “measureability” so that guidance can be included that is not conducive to a true/false test.  True/false tests can be included, but they are not the only way to measure conformance.
+		</li><li>Develop scorecard or rubric measures for testing task accomplishment, instead of technical page conformance.
+		</li><li>Develop a point and ranking system that will allow more nuanced measurement of the content or product: for example: bronze, silver, gold, and platinum ratings where the bronze rating represents the minimal conformance (roughly equivalent to meeting WCAG 2.1 AA), and increasing ranks include inclusive design principles, task-based assessment, and usability testing.
+		</li><li>Include a definition and concept for “substantially meets” so people are not excessively penalized for bugs that may not have a large impact on the experience of people with disabilities.
+		</li><li>Remove “accessibility supported” as an author responsibility and provide guidance to authoring tools, browsers, and assistive technology developers of the expected behaviors of their products.
+		</li><li>Develop a more flexible method of claiming conformance that is better suited to accommodate dynamic or more regularly updated content.
+		</li></ol>
+	  </section>
+	  <section id="DSmaintenance">
+		<h4 id="x2-2-3-maintenance"><bdi class="secno">2.2.3 </bdi>Maintenance<a class="self-link" aria-label="§" href="#DSmaintenance"></a></h4>
+		<ol start="12">
+		<li>Develop a core of rarely-changing requirements (normative) with modules of platform oriented advice, examples, tests, and support materials that can be updated as technology changes.
+		</li><li>Develop a method for accessibility experts to contribute new content, such as design patterns, codes and tests, where the experts vote material up and down without waiting for working group approval.
+		</li><li>Change the working group process to include Community Group participation.
+		</li><li>Improve access to specification development tools (for example, Github) so that people with disabilities can participate more easily in spec development, whether through new or modified tooling. There are existing efforts that can be incorporated and improved on.
+		</li><li>Develop specification content a small amount of guidance at a time, and fully develop the content before including it in the spec.  Keep a public schedule when issues will be worked on, so the public can contribute in a timely manner.
+		</li><li>Keep a changelog of all changes to the spec so reviewers can easily find the changes.
+		</li></ol>
+	  </section>
+	  </section>
+	</section>
+	<section id="goals">
+	<h2 id="x3-goals"><bdi class="secno">3. </bdi>Goals<a class="self-link" aria-label="§" href="#goals"></a></h2>
+		<section id="inclusionGoals">
+		<h3 id="x3-1-goals-for-inclusion"><bdi class="secno">3.1 </bdi>Goals for Inclusion<a class="self-link" aria-label="§" href="#inclusionGoals"></a></h3>
+		<p>These goals come from the <a href="https://w3c.github.io/silver/requirements/index.html#design-principles">Silver Requirements Design Principles</a>. The creation process for the guidelines should:</p>
+		<ul>
+			<li>Actively recruit a diverse range of people with disabilities in recognition of the importance of their contributions to accessibility standards and solutions. Review and monitor whether people are included. Continually evaluate inclusive features of available tooling and procedures.
+			</li><li>Facilitate global participation and feedback.
+		</li></ul>
+		</section>
+		<section id="ContentGoals">
+		<h3 id="x3-2-goals-for-content"><bdi class="secno">3.2 </bdi>Goals for Content<a class="self-link" aria-label="§" href="#ContentGoals"></a></h3>
+		<ul>
+			<li>Support the needs of a wide range of people with disabilities and recognize that people have individual and multiple needs.
+			</li><li>Be flexible enough to support the needs of people with disabilities and keep up with emerging technologies. The information structure allows guidance to be added or removed.
+			</li><li>Be written in plain language, as easy as possible to understand. We need a definition of plain language that includes the ease of translation. Ideally, it will be a broadly accepted definition internationally.
+			</li><li>Improve the ability to support automated testing where appropriate and provide a procedure for repeatable tests when manual testing is appropriate.
+			</li><li>Be data-informed and evidence-based where possible. We recognize that research and evidence are influenced by the number of people with a particular disability, by the size of the body of research, and by the difficulty in capturing data regarding some disabilities or combination of disabilities. The intent is to make informed decisions wherever possible to ensure that the needs of all people with disabilities are prioritized, including needs that differ from the majority. In situations where there is no evidence or research, valid data-gathering methods should be used to obtain and evaluate information from advocacy groups, people with lived experience and other subject matter experts.
+			</li><li>Be written so the Guideline content is usable in adaptable and customizable ways. For example, Silver content is available to be extracted by users to adapt to their needs.
+		</li></ul>
+		</section>
+		<section id="ConformanceGoals">
+		<h3 id="x3-3-goals-for-conformance"><bdi class="secno">3.3 </bdi>Goals for Conformance<a class="self-link" aria-label="§" href="#ConformanceGoals"></a></h3>
+		<ul>
+			<li>Make conformance better aligned with the experience of people with disabilities, keeping in mind that people with different disabilities have different experiences.
+			</li><li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.
+			</li><li>Be inclusive of more organizations needs
+			</li><li>Be user oriented instead of page oriented. What is the person trying to do?
+			</li><li>Wherever possible, preserve the organization’s investment in training, tooling and knowledge.
+		</li></ul>
+	</section>
+	</section>
+	<section id="nonGoals">
+	<h2 id="x4-non-goals-or-out-of-scope"><bdi class="secno">4. </bdi>Non-Goals or Out-of-Scope<a class="self-link" aria-label="§" href="#nonGoals"></a></h2>
+	<ul>
+	<li>Non-web emerging technologies (this may change as the charter is clarified)
+	</li><li>Normative requirements for platforms, operating systems, software in the web technology stack (etc.) 
+		<ul>
+			<li>We want to point to external accessibility guidance by the vendor
+			</li><li>We want to document the needs of people with disabilities where vendor accessibility guidance is lacking
+		</li></ul>
+	</li>
+	</ul>
+	</section>
+  
+<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
