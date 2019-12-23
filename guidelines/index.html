@@ -43,9 +43,9 @@
 	</head>
 	<body>
 		<section id="abstract">
-			<p class="ednote"><strong>Link to <a href="">The easier-to-use version of Silver (not yet working)</a>.</strong>  W3C requires a strictly formatted documents for its purposes. It is more difficult to use, and lacks many features, including search.  This document is intended for people writing standards. We recommend the usable version for most people. </p>  
+			<p class="ednote"><strong>Link to <a href="">The easier-to-use version of Silver (not yet working)</a>.</strong>  W3C requires strictly formatted documents for its purposes. Many people who are new to accessibility find that format is more difficult to use and that it lacks features like filtering and search.  This document is intended for people writing standards. We recommend the usable version for most people. [This paragraph will be added when we develop that version.] </p>  
 			
-			<p>This is an early Editor's Draft for the Silver Accessibility Guidelines project, published by the Silver Community Group.  The content is <em>only as an example of the structure</em> and <em>is NOT content that is approved by the Community Group.</em></p>
+			<p>This is an Editor's Draft for the Silver Accessibility Guidelines project, published by the Silver Community Group.  The content is <em>only as an example of the structure</em> and <em>is NOT content that is approved by the Accessibility Guidelines Working Group (AGWG).</em></p>
     </section>
 		<section id="sotd">
 			<p>The Silver Editor's Draft is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20EdDraft%20for%20Silver">email</a>. </p>
@@ -148,6 +148,43 @@ Use common and clear words. Use lists of common words whenever possible.  Remove
 	</li>
 </ul>
 </section>
+<section>
+<h3>Scope of conformance claim</h3>
+Conformance is determined by site or project, not by individual page.  The individual organization determines the scope of the claim. Large organizations will probably have more narrow scopes than the entire site or product that they will want to claim (e.g. a newspaper might have a different claim for the crosswords section than for the news articles).
+</section>
+<section>
+<h3>Points & Levels</h3>
+<p>
+Tests are worth points. To conform you have to have a minimum number of points in categories of functional user needs from Mandate 376 + other stuff, vestibular, cognitive stuff.
+</p>
+<p>
+Each method awards points.
+All points count towards an overall total, and the minimum for each category must be met.
+</p>
+<p>
+The overall points total contribute to the level of conformance achieved. 
+Bronze is the lowest level of conformance, Silver is the middle level of conformance, and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance.
+</p>
+<p>
+Note: We have chosen these level names since they have international understandability and translatability.
+</p>
+</section>
+<section>
+<h3>Sampling</h3>
+<p>
+Representative sampling is a way to test large properties without having to test every screen. There are a number of approaches to sampling (several laid out in <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a>. We studied several and picked the sampling techniques we agreed were most appropriate. The purpose of conformance sampling is to answer whether people building the product, app, site, or digital property do the accessibility work that matters? Are people with disabilities able to use the product, app, or site?
+</p>
+<p>
+There are two basic approaches - to evaluate components (which include templates) for accessibility or to evaluate workflows for accessibility. A combination of both approaches is most effective.  The more a site is generated from a set of components, the more you want to get those components accessible.  
+</p>
+<ul>
+<li>Essential functions vary by industry -- gaming will be different than e-commerce. 
+<li>The organization (company, non-profit) defines the workflows and components, then prioritizes the primary workflows and components  to test. See WCAG-EM Steps 2 and 3 to help determine what workflows and components are representative samples.  
+<li>The ability to get to the workflow, (like login) also must be accessible. 
+<li>There are going to be technical violations of success criteria that don’t impact accessibility (for example, missing alt text that are explained in the text or the same HTML id attribute that aren’t ever referenced) that shouldn’t negatively impact the score. <span class="ednote">NOTE: There will be further development and amplification of what shouldn’t negatively impact the score. </span>  
+<li>People still need to have access to material that still isn’t in the primary flow. Accessibility can be tested even if it doesn’t have a flow.  <span class="ednote">NOTE: There needs to be a way that important sections, like navigation and footer, don’t get overlooked because they aren’t part of the flow.  </span>
+</ul>
+</section>
 <!-- 
 <section>
 <h3>Scoring</h3>
@@ -206,10 +243,7 @@ The existing WCAG 2.1 Non-Interference Success Criteria:
 </ul> 
 </section> 
 -->
-<section>
-<h3>Scope of conformance claim</h3>
-Conformance is determined by site or project, not by individual page.  The individual organization determines the scope of the claim. Large organizations will probably have more narrow scopes than the entire site or product that they will want to claim (e.g. a newspaper might have a different claim for the crosswords section than for the news articles).
-</section>
+
 		
 		</section>
 		<!--<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'></div>-->
