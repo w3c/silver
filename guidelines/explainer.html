@@ -1,4 +1,70 @@
-<!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.34.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.38.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* dfn popup panel that list all local references to a dfn */
+dfn {
+  cursor: pointer;
+}
+
+.dfn-panel {
+  position: absolute;
+  left: var(--left); /* set via JS */
+  top: var(--top); /* set via JS */
+  z-index: 35;
+  height: auto;
+  width: max-content;
+  max-width: 300px;
+  max-height: 500px;
+  overflow: auto;
+  padding: 0.5em 0.75em;
+  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
+  background: #dddddd;
+  color: black;
+  border: outset 0.2em;
+}
+
+.dfn-panel * {
+  margin: 0;
+}
+
+.dfn-panel > b {
+  display: block;
+}
+
+.dfn-panel ul a[href] {
+  color: black;
+}
+
+.dfn-panel a:not(:hover) {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.dfn-panel a[href]:hover {
+  border-bottom-width: 1px;
+}
+
+.dfn-panel > b + b {
+  margin-top: 0.25em;
+}
+
+.dfn-panel ul {
+  padding: 0;
+}
+
+.dfn-panel li {
+  list-style: inside;
+}
+
+.dfn-panel.docked {
+  display: inline-block;
+  position: fixed;
+  left: 0.5em;
+  top: unset;
+  bottom: 2em;
+  margin: 0 auto;
+  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
+  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
+  max-height: 30vh;
+}
+</style>
     
     <title>Explainer for "Silver" Accessibility Guidelines</title>
     <style id="respec-mainstyle">/*****************************************************************
@@ -291,7 +357,7 @@ h6 > a.self-link::before {
 }
 </style>
     
-  <style>var {
+  <meta name="description" content="This Explainer accompanies the drafts of the &quot;Silver&quot; Accessbility Guidelines.  &quot;Silver&quot; is a project name, as the guideline does not have a formal name as yet. The Explainer has background information that could be helpful to people who want to understand the project and the decisions leading up to this draft."><style>var {
   position: relative;
   cursor: pointer;
 }
@@ -368,23 +434,22 @@ var[data-type]:hover::before {
   "copyrightStart": "2019",
   "shortName": "silver",
   "edDraftURI": "https://w3c.github.io/silver/guidelines/",
-  "publishDate": "2019-11-15",
-  "publishISODate": "2019-11-15T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 15 November 2019"
-}</script><meta name="description" content="This Explainer accompanies the drafts of the &quot;Silver&quot; Accessbility Guidelines.  &quot;Silver&quot; is a project name, as the guideline does not have a formal name as yet. The Explainer has background information that could be helpful to people who want to understand the project and the decisions leading up to this draft."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
+  "publishDate": "2019-12-23",
+  "publishISODate": "2019-12-23T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 23 December 2019"
+}</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
   <body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
       <h1 class="title p-name" id="title">Explainer for "Silver" Accessibility Guidelines</h1>
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-11-15">15 November 2019</time>
+        <time class="dt-published" datetime="2019-12-23">23 December 2019</time>
       </h2>
       <dl>
         
         
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/guidelines/">https://w3c.github.io/silver/guidelines/</a></dd>
-        
         
         
         
@@ -582,6 +647,9 @@ var[data-type]:hover::before {
 			</li><li>Be user oriented instead of page oriented. What is the person trying to do?
 			</li><li>Wherever possible, preserve the organization’s investment in training, tooling and knowledge.
 			</li><li>Develop a more flexible conformance model that addresses the challenges in applying the 2.x conformance model to large, complex, or dynamic websites and web applications
+			</li><li>Remove “accessibility supported” as an author responsibility and provide guidance to authoring tools, browsers and assistive technology developers of the expected behaviors of their products.
+			</li><li>Improve tests so that repeated tests get more consistent results.
+			</li><li>Increase potential for automation of tests
 		</li></ul>
 	</section>
 	</section>
