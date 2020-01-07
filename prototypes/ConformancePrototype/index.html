@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.38.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.0.4"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -132,10 +132,8 @@ dfn {
 		<title>Silver Conformance Prototype</title>
 		
 		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec 3 CSS
- * Robin Berjon - http://berjon.com/
+ * ReSpec specific CSS
  *****************************************************************/
-
 @keyframes pop {
   0% {
     transform: scale(1, 1);
@@ -488,9 +486,9 @@ var[data-type]:hover::before {
   "wgURI": "https://www.w3.org/community/silver/",
   "github": "https://github.com/w3c/silver/prototypes/ConformancePrototype.html",
   "copyrightStart": "2018",
-  "publishDate": "2019-12-23",
-  "publishISODate": "2019-12-23T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 23 December 2019"
+  "publishDate": "2020-01-07",
+  "publishISODate": "2020-01-07T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 07 January 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 <body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -498,7 +496,7 @@ var[data-type]:hover::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-12-23">23 December 2019</time>
+        <time class="dt-published" datetime="2020-01-07">07 January 2020</time>
       </h2>
       <dl>
         
@@ -528,17 +526,18 @@ var[data-type]:hover::before {
       </dl>
       
       <p class="copyright">
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-        ©
-        2018-2019
-        
-        the Contributors to the Silver Conformance Prototype Specification, published by the
-        <a href="https://www.w3.org/community/silver/">Silver Task Force and Community Group</a> under the
-        <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
-              <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
-              is available.
-            
-      </p>
+              <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+              ©
+              2018-2020
+              
+              the Contributors to the Silver Conformance Prototype Specification, published by
+              the
+              <a href="https://www.w3.org/community/silver/">Silver Task Force and Community Group</a> under the
+              <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
+                    <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+                    is available.
+                  
+            </p>
       <hr title="Separator for header">
     </div>
 <section id="abstract" class="introductory"><h2>Abstract</h2>
@@ -559,7 +558,7 @@ var[data-type]:hover::before {
     </p>
       <p>Silver Conformance Prototype is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20Conformance%20Prototype]">email</a>. </p>
       <p>This is the first draft of the prototype. It is a combination of suggestions from the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Silver Design Sprint final report</a>, public input from the Silver meeting at AccessU, and discussion in the Silver meetings. See the <a href="#changelog">changelog</a> for specific changes. </p>
-    </section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#background"><bdi class="secno">1. </bdi>Background</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#conformance_problem_statements"><bdi class="secno">1.1 </bdi>Problem Statements related to Conformance</a></li><li class="tocline"><a class="tocxref" href="#conformance_design_sprint"><bdi class="secno">1.2 </bdi>Suggestions from the Silver Design Sprint</a></li></ol></li><li class="tocline"><a class="tocxref" href="#what-is-conformance"><bdi class="secno">2. </bdi>What is Conformance?</a></li><li class="tocline"><a class="tocxref" href="#overall-conformance"><bdi class="secno">3. </bdi>Overall Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#adapting-the-leeds-model-to-silver"><bdi class="secno">3.1 </bdi>Adapting the LEEDS model to Silver</a></li><li class="tocline"><a class="tocxref" href="#levels"><bdi class="secno">3.2 </bdi>Levels</a></li><li class="tocline"><a class="tocxref" href="#point-system-needs-a-better-name"><bdi class="secno">3.3 </bdi>Point System (needs a better name)</a></li><li class="tocline"><a class="tocxref" href="#concerns-to-be-solved"><bdi class="secno">3.4 </bdi>Concerns to be Solved</a></li></ol></li><li class="tocline"><a class="tocxref" href="#individual-guidance-measurement"><bdi class="secno">4. </bdi>Individual Guidance Measurement</a></li><li class="tocline"><a class="tocxref" href="#accessibility-supported"><bdi class="secno">5. </bdi>Accessibility Supported </a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">B.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">B.3 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">B.4 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">B.5 </bdi>Research Partners</a></li></ol></li></ol></nav>
+    </section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#background"><bdi class="secno">1. </bdi>Background</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#conformance_problem_statements"><bdi class="secno">1.1 </bdi>Problem Statements related to Conformance</a></li><li class="tocline"><a class="tocxref" href="#conformance_design_sprint"><bdi class="secno">1.2 </bdi>Suggestions from the Silver Design Sprint</a></li></ol></li><li class="tocline"><a class="tocxref" href="#what-is-conformance"><bdi class="secno">2. </bdi>What is Conformance?</a></li><li class="tocline"><a class="tocxref" href="#overall-conformance"><bdi class="secno">3. </bdi>Overall Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#adapting-the-leeds-model-to-silver"><bdi class="secno">3.1 </bdi>Adapting the LEEDS model to Silver</a></li><li class="tocline"><a class="tocxref" href="#levels"><bdi class="secno">3.2 </bdi>Levels</a></li><li class="tocline"><a class="tocxref" href="#point-system-needs-a-better-name"><bdi class="secno">3.3 </bdi>Point System (needs a better name)</a></li><li class="tocline"><a class="tocxref" href="#concerns-to-be-solved"><bdi class="secno">3.4 </bdi>Concerns to be Solved</a></li></ol></li><li class="tocline"><a class="tocxref" href="#individual-guidance-measurement"><bdi class="secno">4. </bdi>Individual Guidance Measurement</a></li><li class="tocline"><a class="tocxref" href="#accessibility-supported"><bdi class="secno">5. </bdi>Accessibility Supported </a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">B.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">B.3 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">B.4 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">B.5 </bdi>Research Partners</a></li></ol></li></ol></nav>
 	<section id="background">
  <h2 id="x1-background"><bdi class="secno">1. </bdi>Background<a class="self-link" aria-label="§" href="#background"></a></h2>
  <p>The research done in 2017-2018 by the Silver Task Force, the Silver Community Group, and the <a href="#research-partners">research partners</a> was used to identify the key problem statements in the area of conformance.  See the <a href="https://docs.google.com/presentation/d/1POs7orJ4ALB0bq5_vyo4v8RxDcr-5ctwD1noVgpXuJc/edit#slide=id.gc6f73a04f_0_0">Silver Research Summary slides</a> for more detailed information.  </p>
@@ -697,7 +696,7 @@ var[data-type]:hover::before {
 <section class="appendix" id="changelog">
 			<h2 id="a-change-log"><bdi class="secno">A. </bdi>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h2>
 <section id="changes-prior-to-first-public-working-draft">
-            <h3 id="changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft<a class="self-link" aria-label="§" href="#changes-prior-to-first-public-working-draft"></a></h3>
+            <h3 id="changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft<a class="self-link" aria-label="§" href="#changes-before-the-first-public-working-draft"></a></h3>
             <ul>
            	    <li>
               </li>

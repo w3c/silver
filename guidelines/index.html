@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.38.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.0.4"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -133,10 +133,8 @@ dfn {
 		
 		
 		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec 3 CSS
- * Robin Berjon - http://berjon.com/
+ * ReSpec specific CSS
  *****************************************************************/
-
 @keyframes pop {
   0% {
     transform: scale(1, 1);
@@ -499,17 +497,17 @@ var[data-type]:hover::before {
   "copyrightStart": "2019",
   "shortName": "silver",
   "edDraftURI": "https://w3c.github.io/silver/guidelines/",
-  "publishDate": "2019-12-23",
-  "publishISODate": "2019-12-23T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 23 December 2019"
+  "publishDate": "2020-01-07",
+  "publishISODate": "2020-01-07T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 07 January 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
-	<body class="h-entry informative toc-inline"><div class="head">
+	<body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
       <h1 class="title p-name" id="title">Editors' Draft Accessibility Guidelines (Silver)</h1>
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-12-23">23 December 2019</time>
+        <time class="dt-published" datetime="2020-01-07">07 January 2020</time>
       </h2>
       <dl>
         
@@ -541,17 +539,18 @@ var[data-type]:hover::before {
       </dl>
       
       <p class="copyright">
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-        ©
-        2019
-        
-        the Contributors to the Editors' Draft Accessibility Guidelines (Silver) Specification, published by the
-        <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
-        <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
-              <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
-              is available.
-            
-      </p>
+              <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+              ©
+              2019-2020
+              
+              the Contributors to the Editors' Draft Accessibility Guidelines (Silver) Specification, published by
+              the
+              <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
+              <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
+                    <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+                    is available.
+                  
+            </p>
       <hr title="Separator for header">
     </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
@@ -578,9 +577,9 @@ var[data-type]:hover::before {
             <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
             (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
             <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
-          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#guidelines"><bdi class="secno">2. </bdi>Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#section-headings"><bdi class="secno">2.1 </bdi> Section Headings </a></li><li class="tocline"><a class="tocxref" href="#clear-words"><bdi class="secno">2.2 </bdi>Clear Words: </a></li></ol></li><li class="tocline"><a class="tocxref" href="#scoring-conformance"><bdi class="secno">3. </bdi>Scoring &amp; Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3.1 </bdi>Goals</a></li><li class="tocline"><a class="tocxref" href="#how-conformance-fits-into-the-information-architecture"><bdi class="secno">3.2 </bdi>How Conformance fits into the Information Architecture</a></li><li class="tocline"><a class="tocxref" href="#scope-of-conformance-claim"><bdi class="secno">3.3 </bdi>Scope of conformance claim</a></li><li class="tocline"><a class="tocxref" href="#points-levels"><bdi class="secno">3.4 </bdi>Points &amp; Levels</a></li><li class="tocline"><a class="tocxref" href="#sampling"><bdi class="secno">3.5 </bdi>Sampling</a></li><li class="tocline"><a class="tocxref" href="#accessibility-supported"><bdi class="secno">3.6 </bdi>Accessibility Supported</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">A.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">A.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><bdi class="secno">A.3 </bdi>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">A.4 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">A.5 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">A.6 </bdi>Research Partners</a></li></ol></li></ol></nav>
+          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#guidelines"><bdi class="secno">2. </bdi>Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#section-headings"><bdi class="secno">2.1 </bdi> Section Headings </a></li><li class="tocline"><a class="tocxref" href="#clear-words"><bdi class="secno">2.2 </bdi>Clear Words: </a></li></ol></li><li class="tocline"><a class="tocxref" href="#scoring-conformance"><bdi class="secno">3. </bdi>Scoring &amp; Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3.1 </bdi>Goals</a></li><li class="tocline"><a class="tocxref" href="#how-conformance-fits-into-the-information-architecture"><bdi class="secno">3.2 </bdi>How Conformance fits into the Information Architecture</a></li><li class="tocline"><a class="tocxref" href="#scope-of-conformance-claim"><bdi class="secno">3.3 </bdi>Scope of conformance claim</a></li><li class="tocline"><a class="tocxref" href="#points-levels"><bdi class="secno">3.4 </bdi>Points &amp; Levels</a></li><li class="tocline"><a class="tocxref" href="#sampling"><bdi class="secno">3.5 </bdi>Sampling</a></li><li class="tocline"><a class="tocxref" href="#accessibility-supported"><bdi class="secno">3.6 </bdi>Accessibility Supported</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">A.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">A.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><bdi class="secno">A.3 </bdi>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">A.4 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">A.5 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">A.6 </bdi>Research Partners</a></li></ol></li></ol></nav>
 		<section id="introduction">
-			<h2 id="intro"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
+			<h2 id="intro"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2>
             <p>People with disabilities can face problems using online content and applications. Disabilities can be permanent, temporary, or recurring limitations</p>
             <p>We need guidelines to: </p>
             <ul>
@@ -617,6 +616,15 @@ Use common and clear words. Use lists of common words whenever possible.  Remove
 		<h2 id="x3-scoring-conformance"><bdi class="secno">3. </bdi>Scoring &amp; Conformance<a class="self-link" aria-label="§" href="#scoring-conformance"></a></h2>
 <div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span></div><p class="">This section is under development. Comments are welcome. </p></div>
 <p>Conformance is a complex topic with many parts that work together.  Scoring is more easily understood.  Scoring is "how well did I do?" These Guidelines use a more flexible structure that recognizes organizations for doing more to make their products accessible to people with disabilities.  </p>
+<p>
+We are attempting to better support common practice by providing mechanisms that better match the way the conformance claims are generally used on entire websites.  We have several suggestions of how a company or organization can meaningfully claim conformance to an entire site, especially a large site. </p>
+<ul>
+<li>We want to have the conformance better reflect the experience of people with disabilities using the site or product that we are measuring.  It allows an organization to say that "we may not be 100% conformant, but our site or product is very usable by people with disabilities" and they can express that in a meaningful way. 
+</li><li>We want to ensure that conformance doesn't dis-proportionally favor one disability over another. 
+</li><li>Many sites will have workflows that are less critical than other portions of the site, and that should be determined by the site owner. 
+</li></ul>
+
+
 
 
 <section id="goals">
@@ -684,18 +692,15 @@ Conformance is determined by site or project, not by individual page.  The indiv
 <section id="points-levels">
 <h3 id="x3-4-points-levels"><bdi class="secno">3.4 </bdi>Points &amp; Levels<a class="self-link" aria-label="§" href="#points-levels"></a></h3>
 <p>
-Tests are worth points. To conform you have to have a minimum number of points in categories of functional user needs from Mandate 376 + other stuff, vestibular, cognitive stuff.
-</p>
-<p>
 Each method awards points.
-All points count towards an overall total, and the minimum for each category must be met.
+All points count towards an overall total, and the minimum for each category must be met. The categories are based on the Mandate 376 Functional User Needs, but will need some additional categories such as needs of people with vestibular disorders and more granular breakdown of cognitive disability categories.  
 </p>
 <p>
 The overall points total contribute to the level of conformance achieved. 
 Bronze is the lowest level of conformance, Silver is the middle level of conformance, and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance.
 </p>
 <p>
-Note: We have chosen these level names since they have international understandability and translatability.
+Note: We have chosen these level names since they have international understanding and are easily translated.
 </p>
 </section>
 <section id="sampling">
@@ -710,7 +715,7 @@ There are two basic approaches - to evaluate components (which include templates
 <li>Essential functions vary by industry -- gaming will be different than e-commerce. 
 </li><li>The organization (company, non-profit) defines the workflows and components, then prioritizes the primary workflows and components  to test. See WCAG-EM Steps 2 and 3 to help determine what workflows and components are representative samples.  
 </li><li>The ability to get to the workflow, (like login) also must be accessible. 
-</li><li>There are going to be technical violations of success criteria that don’t impact accessibility (for example, missing alt text that are explained in the text or the same HTML id attribute that aren’t ever referenced) that shouldn’t negatively impact the score. <span class="note">NOTE: There will be further development and amplification of what shouldn’t negatively impact the score. </span>  
+</li><li>There are going to be technical violations of success criteria that don’t impact accessibility (for example, missing alt text that are explained in the text or the same HTML id attribute that aren’t ever referenced) that shouldn’t negatively impact the score. <span class="note">NOTE: There will be further development and amplification of what shouldn’t negatively impact the score. The concept of pass or fail should no longer be binary, but accounts for a concept of sufficient</span>  
 </li><li>People still need to have access to material that still isn’t in the primary flow. Accessibility can be tested even if it doesn’t have a flow.  <span class="note">NOTE: There needs to be a way that important sections, like navigation and footer, don’t get overlooked because they aren’t part of the flow.  </span>
 </li></ul>
 </section>

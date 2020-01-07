@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.38.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.0.4"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -133,10 +133,8 @@ dfn {
 		
 		
 		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec 3 CSS
- * Robin Berjon - http://berjon.com/
+ * ReSpec specific CSS
  *****************************************************************/
-
 @keyframes pop {
   0% {
     transform: scale(1, 1);
@@ -498,9 +496,9 @@ var[data-type]:hover::before {
   "github": "https://github.com/w3c/silver/tree/master/requirements",
   "copyrightStart": "2018",
   "shortName": "silver-requirements",
-  "publishDate": "2019-12-23",
-  "publishISODate": "2019-12-23T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 23 December 2019"
+  "publishDate": "2020-01-07",
+  "publishISODate": "2020-01-07T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 07 January 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
@@ -508,7 +506,7 @@ var[data-type]:hover::before {
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-12-23">23 December 2019</time>
+        <time class="dt-published" datetime="2020-01-07">07 January 2020</time>
       </h2>
       <dl>
         
@@ -540,17 +538,18 @@ var[data-type]:hover::before {
       </dl>
       
       <p class="copyright">
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-        ©
-        2018-2019
-        
-        the Contributors to the Requirements for Silver Specification, published by the
-        <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
-        <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
-              <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
-              is available.
-            
-      </p>
+              <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+              ©
+              2018-2020
+              
+              the Contributors to the Requirements for Silver Specification, published by
+              the
+              <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
+              <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
+                    <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+                    is available.
+                  
+            </p>
       <hr title="Separator for header">
     </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
@@ -582,9 +581,9 @@ var[data-type]:hover::before {
             <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
             (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
             <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
-          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.1 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><bdi class="secno">1.2 </bdi>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#opportunities-for-silver"><bdi class="secno">1.3 </bdi>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><bdi class="secno">1.3.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><bdi class="secno">1.3.2 </bdi>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><bdi class="secno">1.3.3 </bdi>Maintenance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><bdi class="secno">1.4 </bdi>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles"><bdi class="secno">2. </bdi>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements-0"><bdi class="secno">3. </bdi>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><bdi class="secno">3.1 </bdi>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><bdi class="secno">3.2 </bdi>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><bdi class="secno">3.3 </bdi>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><bdi class="secno">3.4 </bdi>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability-usability"><bdi class="secno">3.5 </bdi>Readability/Usability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><bdi class="secno">3.6 </bdi>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">3.7 </bdi>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope-0"><bdi class="secno">3.8 </bdi>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-prior-to-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">B.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><bdi class="secno">B.3 </bdi>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">B.4 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">B.5 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">B.6 </bdi>Research Partners</a></li></ol></li></ol></nav>
+          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.1 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><bdi class="secno">1.2 </bdi>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#problem_statements"><bdi class="secno">1.3 </bdi>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><bdi class="secno">1.3.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><bdi class="secno">1.3.2 </bdi>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><bdi class="secno">1.3.3 </bdi>Maintenance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><bdi class="secno">1.4 </bdi>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design_principles"><bdi class="secno">2. </bdi>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">3. </bdi>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><bdi class="secno">3.1 </bdi>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><bdi class="secno">3.2 </bdi>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><bdi class="secno">3.3 </bdi>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><bdi class="secno">3.4 </bdi>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability-usability"><bdi class="secno">3.5 </bdi>Readability/Usability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><bdi class="secno">3.6 </bdi>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">3.7 </bdi>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope-0"><bdi class="secno">3.8 </bdi>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">B.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><bdi class="secno">B.3 </bdi>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">B.4 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">B.5 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">B.6 </bdi>Research Partners</a></li></ol></li></ol></nav>
 		<section id="introduction">
-			<h2 id="intro"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
+			<h2 id="intro"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2>
             <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or recurring limitations. </p>
             <p>We need guidelines to: </p>
             <ul>
@@ -647,7 +646,7 @@ var[data-type]:hover::before {
  </ol>
     </section>
 	<section id="opportunities-for-silver">
-		  <h3 id="problem_statements"><bdi class="secno">1.3 </bdi>Opportunities for Silver          <a class="self-link" aria-label="§" href="#opportunities-for-silver"></a></h3>
+		  <h3 id="problem_statements"><bdi class="secno">1.3 </bdi>Opportunities for Silver          <a class="self-link" aria-label="§" href="#problem_statements"></a></h3>
 		  <p>The   <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read">Problem Statements</a> describe areas identified during the Silver research in   2017-2018 that  can be addressed in the new guidelines. Each problem statement also has an opportunity section that is the basis for the Silver Requirements. </p>
           <section id="oppotunities_usability">
           <h4 id="x1-3-1-usability"><bdi class="secno">1.3.1 </bdi>Usability<a class="self-link" aria-label="§" href="#oppotunities_usability"></a></h4>
@@ -691,7 +690,7 @@ var[data-type]:hover::before {
 	</section>
   </section>
 		<section id="design-principles">
-		  <h2 id="design_principles"><bdi class="secno">2. </bdi>Design Principles<a class="self-link" aria-label="§" href="#design-principles"></a></h2>
+		  <h2 id="design_principles"><bdi class="secno">2. </bdi>Design Principles<a class="self-link" aria-label="§" href="#design_principles"></a></h2>
           <p>The Silver Design Principles are based on the requirements of WCAG 2.0 and build on those requirements to meet needs identified in the Silver research. </p>
           <p>Accessibility guidelines should:</p>
           <ol>
@@ -712,7 +711,7 @@ var[data-type]:hover::before {
           </ol>
 </section>
 		<section id="requirements-0">
-		  <h2 id="requirements"><bdi class="secno">3. </bdi>Requirements<a class="self-link" aria-label="§" href="#requirements-0"></a></h2>
+		  <h2 id="requirements"><bdi class="secno">3. </bdi>Requirements<a class="self-link" aria-label="§" href="#requirements"></a></h2>
           <p>Previous W3C Accessibility Guidelines described how to make web    pages accessible to people with disabilities. These guidelines provided a     flexible framework that has kept the guidelines relevant for   10 years. Changing technology and changing needs of people with   disabilities   has shown areas where they could be improved. The   requirements are   drawn from the research performed by Silver to   improve the guidelines,   and the suggestions from the Silver Design  Sprint. </p>
           <p>The Silver Requirements are high level and will be expanded and refined as Silver members move through the prototyping process.</p>
           <section id="multiple-ways-to-measure">
@@ -755,7 +754,7 @@ var[data-type]:hover::before {
 		<section class="appendix" id="changelog">
 	    <h2 id="a-change-log"><bdi class="secno">A. </bdi>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h2>
           <section id="changes-prior-to-first-public-working-draft">
-            <h3 id="changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft<a class="self-link" aria-label="§" href="#changes-prior-to-first-public-working-draft"></a></h3>
+            <h3 id="changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft<a class="self-link" aria-label="§" href="#changes-before-the-first-public-working-draft"></a></h3>
             <ul>
 			  <li>Moved the Opportunity for Evolving Technologies to Maintenance; added new opportunity       for Flexibility in the Conformance section; and  minor grammar corrections. (9 July 2018) </li>
               <li>Added headings to individual requirements (25 June 2018)</li>
@@ -773,7 +772,7 @@ var[data-type]:hover::before {
               <li>Change "future" to "unanticipated" in Requirements #2 and add subsequent sentence. </li>
               <li>Change the Requirements Intro paragraph to remove the specific     sentence on conformance and pass/fail tests and give greater context on     the source of the Requirements.        </li>
             </ul>
-			<h3 id="changes-before-the-second-requirements-draft">Changes Prior to Second Version of Requirements<a class="self-link" aria-label="§" href="#changes-prior-to-first-public-working-draft"></a></h3>
+			<h3 id="changes-before-the-second-requirements-draft">Changes Prior to Second Version of Requirements<a class="self-link" aria-label="§" href="#changes-before-the-second-requirements-draft"></a></h3>
 			<ul>
 			<li>New requirements for Readability, Regulatory Environment, Motivation, and Scope.  </li>
 			  <li>Added paragraph explaining the differences between Design Principles and Requirements as a result of requests from the AGWG face-to-face meeting of 11 &amp; 12 March 2019. </li>
