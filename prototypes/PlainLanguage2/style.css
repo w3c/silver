@@ -88,3 +88,29 @@ body {
 .noBullet {
   list-style-type: none;
 }
+
+/** Editor's Notes **/
+/** Non-normative Note ********************************************************/
+
+	.note {
+		border-color: #52E052;
+		background: #E9FBE9;
+		overflow: auto;
+	}
+
+	.note::before, .note > .marker,
+	details.note > summary::before,
+	details.note > summary > .marker {
+		text-transform: uppercase;
+		display: block;
+		color: hsl(120, 70%, 30%);
+	}
+	/* Add .note::before { content: "Note "; } for autogen label,
+	   or use class="marker" to mark up the label in source. */
+
+	details.note > summary {
+		color: hsl(120, 70%, 30%);
+	}
+	details.note[open] > summary {
+		border-bottom: 1px silver solid;
+	}
