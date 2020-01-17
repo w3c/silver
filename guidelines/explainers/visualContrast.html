@@ -39,49 +39,61 @@ You should totally buy his book on Inclusive Components.
 <section id="section1">
 <h2>Get Started</h2>
 <div class="guidanceBox">
-<h3>Visual Contrast</h3>
-	<p>Short description of guidance</p>
+<h3>Visual Contrast of Text</h3>
+	<p>Provide sufficient contrast between foreground text and its background.</p>
 </div>
 <h3>Summary (What, where, when)</h3>
-<p>Sighted users need sufficient contrast between foreground and background to perceive content.
+<p>Sighted users need good contrast between foreground and background to read easily.  Users with low vision need strong contrast between foreground and background to perceive content.
 </p>
 <h3>Why</h3>
-<p>Many users need a high enough level of visual contrast to distinguish elements from each other and foreground from background.  For those who find it difficult to perceive smaller text, increasing contrast level may help (example, make the lightest of two colors lighter to increase contrast, or make the font bolder).  Color use can help communication, but only when it aligns with the purpose of the content.  Too much contrast may be distracting or overwhelming.</p>
+<p>Many users need a high enough level of visual contrast to distinguish elements from each other and foreground from background. For those who find it difficult to perceive smaller text, increasing contrast level may help (example, make the lightest of two colors lighter to increase contrast, or make the font bolder). 
+Color use can help communication, but only when it aligns with the purpose of the content. Too many colors can cause confusion.  Some users find too much contrast may be distracting or overwhelming.  This guidance focuses on the needs of users with low vision.
+</p>
 
 <h3>Who it helps</h3>
 <ul>
 <li>People with color blindness need luminance contrast to perceive text and graphic elements.
 <li>People with lower vision (contrast sensitivity and visual acuity), including seniors, may need higher color contrast to make smaller text more visible. 
-<li>People with some cognitive, language and learning disabilities may benefit especially from use of colour contrast that serves the purpose of the content….
-<li>People with migraines may need… <span class="note">Additional research needed here.</span>
+<li>People with some cognitive, language and learning disabilities may benefit especially from use of colour contrast that serves the purpose of the content. 
 </ul>
 <h3>How</h3>
-<p>Authors need to balance font size, font stroke width, background color, font color, and nearby colors to achieve good visual contrast.  Authors can use tools to evaluate elements and adjust the attribute and color of those elements to achieve a presentation which meets the guidance.
+<p>Authors need to balance font size, font stroke width, background color, font color, and nearby colors to achieve good visual contrast. Authors can use tools to evaluate elements and adjust the attribute and color of those elements to achieve a presentation which meets these requirements.
 </p>
-<p class="note">Original (plain language interpretation attempted above): The solution to this problem of a complex relationship between interrelated elements of visual readability is to include an algorithm which allows authors to feed in preferred settings and calculate the generally optimal contrast needed, as well as the range of contrast which will be needed for different technologies and individual users.  Authors can then adjust the other elements in order to reduce contrast.  Such an algorithm should also warn authors when the contrast setting is likely to be too high.
+<p>
+The solution to this challenge of a complex relationship between interrelated elements of visual readability is to use an algorithm (Somers Advanced Perceptual Contrast, SAPC) which allows authors to  input preferred settings and calculate the minimal contrast needed.  See “Test and Audit” tab for SAPC.
 </p>
+<ul>
+<li>No Tiny Text.  Text and Images of Text never use a font size below 12px.
+<li>Minimum Characteristics for Body Text:  Where text and images of text are used for any string of words that present as a paragraph, one of the following is true:
+<ul>
+<li>A sans-serif font face is specified with a font size of at least 16px; or
+<li>A serif font face is specified with a font size of at least 18px.
+</ul></li>
+<li>Minimum Contrast for Smaller Text:  Text and images of text with a font size between 12px and 15px have an SAPC of at least 100%.
+<li>Minimum Contrast for Normal Text:  Text and images of text with a font size between 16px and 20px have an SAPC of at least 80%.
+<li>Minimum Contrast for Large Text:  Text and images of text with a font size of between 24px and 48px have an SAPC of at least 60%.
+<li>Minimum Contrast for Larger Text:  Text and images of text with a font size of 60px or larger have an SAPC of at least 40%.
+<li>Maximum Contrast for Larger Text.  Text and Images of Text that use a font size of 48px or larger have an SAPC of 120% or lower.
+</ul>
+
 <h3>Exceptions</h3>
 <p class="note">
-<a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum">WCAG 2.1 Understanding</a> lists the following exceptions.  Are there changes needed? 
-</p>
-<dl>
-<dt>Large Text</dt>
-<dd>Large-scale text and images of large-scale text have a contrast ratio of at least 3:1; <span class="note">Update or remove?</span></dd>
-<dt>Incidental</dt>
-<dd>Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.</dd>
-<dt>Logotypes</dt>
-<dd>Text that is part of a logo or brand name has no contrast requirement.</dd>
-</dl>
+<ol>
+<li>User Control.  There is no visual contrast requirement for text where the content does not specify font characteristics.  In this situation, the text content is presumed to inherits its characteristics from platform settings and that end-users have control over those platform settings.
+<li>Bolder Text:  Where content specifies a bold font weight (i.e., equivalent to CSS value of 700 or above) the allowable SAPC is reduced 20% (e.g., an 18px bold font must have an SAPC of at least 60%).
+<li>Larger Text:  Where the size of text and images of text is between those specified in the values above, an interpolated SAPC may be used (e.g., a 22px font has an SAPC of at least 70%).
+<li>Incidental Text:  Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no SAPC contrast requirement. 
+<li class="noBullet">An example of the exception for Incidental Text is a photograph of street scene where some shop windows have lettering on them.  If they are not important to the purpose of the photograph, the lettering on the shop windows does not have a font size or contrast requirement.
+</ol>
 <h3>Examples</h3>
 <p class="note"> To Be Written </p>
 </section>
 
 <section id="section2">
-<h2>Planning</h2>
+<h2>Plan</h2>
 <div class="guidanceBox">
-<h3>Title</h3>
-	<p>Short description of guidance</p>
-	<p>See <a href="#section1">Get Started</a> for basic information.</p>
+<h3>Visual Contrast of Text</h3>
+	<p>Provide sufficient contrast between foreground text and its background.</p>
 </div>
 <h3>Planning Responsibilities</h3>
 	<ol>
@@ -104,9 +116,8 @@ You should totally buy his book on Inclusive Components.
 <section id="section3">
 <h2>Design</h2>
 <div class="guidanceBox">
-<h3>Title</h3>
-	<p>Short description of guidance</p>
-	<p>See <a href="#section1">Get Started</a> for basic information.</p>
+<h3>Visual Contrast of Text</h3>
+	<p>Provide sufficient contrast between foreground text and its background.</p>
 </div>
 	<ol>
 		<li>You must ensure that...</li>
@@ -128,9 +139,8 @@ You should totally buy his book on Inclusive Components.
 <section id="section4">
 <h2>Write</h2>
 <div class="guidanceBox">
-<h3>Title</h3>
-	<p>Short description of guidance</p>
-	<p>See <a href="#section1">Get Started</a> for basic information.</p>
+<h3>Visual Contrast of Text</h3>
+	<p>Provide sufficient contrast between foreground text and its background.</p>
 </div>
 <h3>Editorial Responsibilities</h3>
 	<ol>
@@ -155,9 +165,8 @@ You should totally buy his book on Inclusive Components.
 <section id="section5">
 <h2>Develop</h2>
 <div class="guidanceBox">
-<h3>Title</h3>
-	<p>Short description of guidance</p>
-	<p>See <a href="#section1">Get Started</a> for basic information.</p>
+<h3>Visual Contrast of Text</h3>
+	<p>Provide sufficient contrast between foreground text and its background.</p>
 </div>
 <h3>Technical Responsibilities</h3>
 	<ol>
@@ -182,9 +191,8 @@ You should totally buy his book on Inclusive Components.
 <section id="section6">
 <h2>Test & Audit</h2>
 <div class="guidanceBox">
-<h3>Title</h3>
-	<p>Short description of guidance</p>
-	<p>See <a href="#section1">Get Started</a> for basic information.</p>
+<h3>Visual Contrast of Text</h3>
+	<p>Provide sufficient contrast between foreground text and its background.</p>
 </div>
 <h3>Testing Responsibilities</h3>
 	<ol>
