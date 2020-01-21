@@ -89,6 +89,12 @@ body {
   list-style-type: none;
 }
 
+.breadcrumb {
+  font-size: 80%;
+  margin-bottom: 1.25rem;
+}
+
+
 /** Editor's Notes **/
 /** Non-normative Note ********************************************************/
 
@@ -114,6 +120,8 @@ body {
 	details.note[open] > summary {
 		border-bottom: 1px silver solid;
 	}
+	
+
 /** Table **/
 
 	.TFtable{
@@ -135,5 +143,4 @@ body {
 	.TFtable tr:nth-child(even){
 		background: #dae5f4;
 	}
-
 
