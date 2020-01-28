@@ -194,12 +194,21 @@ Conformance is determined by site or project, not by individual page.  The indiv
 <section>
 <h3>Points & Levels</h3>
 <p>
-Each method awards points.
+Each guideline awards points.
 All points count towards an overall total, and the minimum for each category must be met. The categories are based on the Mandate 376 Functional User Needs, but will need some additional categories such as needs of people with vestibular disorders and more granular breakdown of cognitive disability categories.  
 </p>
-<p>
-The overall points total contribute to the level of conformance achieved. 
-Bronze is the lowest level of conformance, Silver is the middle level of conformance, and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance.
+<ul>
+<li>This is an additive scoring system. It increases the score for accessibility achievement instead of penalizing for fails.  
+<li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points 0%. You cannot have a score higher than 1 or lower than 0.  Note that this is a change from scoring by Method to scoring by Guideline overall.  Multiple methods for one guideline don’t gain more points. (This had been a flaw that was bothering me that could allow the system to be gamed by using multiple methods. ) 
+<li>A minimum percentage must be achieved in each disability category, based on the modified Mandate 376 Functional User Needs. The modifications include disabilities that are not included in Mandate 376 like Vestibular Disorders and breaks down the cognitive disability into groups of cognitive disabilities with common needs. Note: Exactly what that minimum percentage is needs to be established by further research. It can be plugged in later. We want the majority of sites that meet WCAG AA today to pass this minimum in Silver.  (W3C Authentication spec uses this normalization.)
+<li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
+<li>For automated tests, the total instances of the condition are divided by the total passes for that condition.  That gives a percentage response.  
+<li>For advanced Silver tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. (We need examples of other tests.) 
+<li>Once the minimum level is achieved in each category, all of the guidelines that are met to whatever percentage they are met increase the score.  
+<li>The total score is divided by the number of guidelines that apply to give a final percentage.  (If a guideline isn’t used, then you don’t divide by that one).
+</ul>
+<p>The overall points total contribute to the level of conformance achieved. 
+Bronze is the lowest level of conformance, Silver is the middle level of conformance, and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance. <span class="ednote">We will need more research to determine where the breakpoints will be.</span>  
 </p>
 <p>
 Note: We have chosen these level names since they have international understanding and are easily translated.
@@ -208,13 +217,51 @@ Note: We have chosen these level names since they have international understandi
 <section>
 <h3>Sampling</h3>
 <p>
-Sampling helps answer whether people building the product, app, site, or digital property have done the accessibility work that makes the product more accessible to people with disabilities. Representative sampling is a way to test large properties without having to test every screen. There are a number of approaches to sampling (several laid out in <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a>. 
+Sampling helps answer whether people building the product, app, site, or digital property have done the accessibility work that makes the product more accessible to people with disabilities. Representative sampling is a way to test large properties without having to test every screen. Representative sampling is common in accessibility testing, partcularly for manual testing.  Sampling is optional. Anyone who wants to test all their pages or screens can do so. 
+</p>
+<p>There are a number of approaches to sampling (several laid out in <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a>. The more a site is generated from a set of components, the more you want to get those components accessible.  
 </p>
 <p>
-There are two basic approaches - to evaluate components (which include templates) for accessibility or to evaluate workflows for accessibility. A combination of both approaches is most effective.  The more a site is generated from a set of components, the more you want to get those components accessible.  
+There are two basic approaches - to evaluate components (which include templates) for accessibility or to evaluate workflows for accessibility. A combination of both approaches is most effective.  
 </p>
+<h4>Different size breakpoints for sampling</h4>
 <ul>
-<li>Essential functions vary by industry -- gaming will be different than e-commerce. 
+<li>Sites under 10 pages or products under 10 screens need to test every page or screen
+<li>Sites from 11 - 100 pages or products with 11 - 100 screens (including counting the different dynamic states)  
+	<ul>
+	<li>All pages need to be tested with available automated tests. <span class="ednote">(We need to find a way of saying “use a good test tool”). </span>
+	<li>10% of the pages need in-depth testing including manual testing.
+		<ul>
+		<li>These should be representative samples of the pages. See WCAG-EM Parts 2-3 for guidance in selecting a representative sample.  
+		<li>Common elements such as headers, footers and navigation must also have manual testing.  
+		</ul></li>
+	<li>There may be some guidelines, like clear language, that need a higher percentage of sample pages for testing. We are waiting for research results. 
+	</ul></li>
+<li>Sites or products from 100 - 1000 pages or screens may
+	<ul>
+	<li>Automated test of all pages or screens
+	<li>In-depth test of 10% of the pages or screens up to 40 samples, 40% of the samples tested are selected and 60% are randomly selected.  See WCAG-EM Parts 2-3 for guidance in selecting a representative sample and random selections. 
+	<li>Pick out primary workflows plus high traffic pages and make sure that the workflows are accessible. 
+	</ul></li>
+<li>Sites or products over 1000 pages or screens 
+	<ul>
+	<li>Run automated tests on discrete sub-sections on a rotating basis.  
+	<li>Pick out primary workflows plus high traffic pages and make sure that the workflows are accessible.  
+	<li>Test representative material, test common elements (like header, footer, login, or navigation), test any unique elements, test common templates with representative data.  
+	</ul></li>
+<li>Sites or products over 1000 pages or screens 
+	<ul>
+	<li>Run automated tests on discrete sub-sections on a rotating basis.  
+	<li>Pick out primary workflows plus high traffic pages and make sure that the workflows are accessible.  
+	<li>Test representative material, test common elements (like header, footer, login, or navigation), test any unique elements, test common templates with representative data. 
+	<li>Organizations doing continuous development could test conformance by components or task flows. 
+	<li class="nobullet"><span class="ednote">Note: What about very complex dynamic apps that may be simpler to test?</span>    
+	</ul></li>
+</ul>
+
+<h4>Notes from discussion</h4>
+<ul>
+<li>Essential functions vary by industry -- gaming will be different than e-commerce. We can't say what has to be tested, the organization needs to determine what is essential. 
 <li>The organization (company, non-profit) defines the workflows and components, then prioritizes the primary workflows and components  to test. See WCAG-EM Steps 2 and 3 to help determine what workflows and components are representative samples.  
 <li>The ability to get to the workflow, (like login) also must be accessible. 
 <li>There are going to be technical violations of success criteria that don’t impact accessibility (for example, missing alt text that are explained in the text or the same HTML id attribute that aren’t ever referenced) that shouldn’t negatively impact the score. <span class="ednote">NOTE: There will be further development and amplification of what shouldn’t negatively impact the score. The concept of pass or fail should no longer be binary, but accounts for a concept of sufficient</span>  
