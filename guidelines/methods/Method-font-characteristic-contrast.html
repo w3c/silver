@@ -13,7 +13,7 @@ You should totally buy his book on Inclusive Components.
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<p class="breadcrumb"><a href="/guidelines/index.html">Silver</a> > <a href="/explainers/VisualContrast.html">Visual Contrast</a> > Select font characteristics and background colors to provide enough contrast </p>
+<p class="breadcrumb"><a href="../../guidelines/index.html">Silver</a> > <a href="../explainers/VisualContrast.html">Visual Contrast</a> > Select font characteristics and background colors to provide enough contrast </p>
     <div class="tabbed">
       <ul>
         <li>
@@ -134,7 +134,7 @@ You should totally buy his book on Inclusive Components.
 </div>
 <h3>Procedure</h3>
 <ol>
-<li>Using source code inspection or an “eye dropper” type tool, obtain representaive sRGB values for the the forground text and the background color. Steps #2 and steps #3 can be calculated using an automated tool. Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/SAPC/">SAPC Visual Contrast Demo</a>
+<li>Using source code inspection or an “eye dropper” type tool, obtain representaive sRGB values for the the forground text and the background color. Steps #2 and steps #3 can be calculated using an automated tool. Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/APCA/">Advanced Perceptual Contrast Algorithm (APCA) Visual Contrast Demo</a>
 <li>Calculate the relative lumance of the text (Rt) and background (Rb).
 <li>Calculate the relative contrast of Rt and background Rb.
 <li>Compare this calculated value against lookup table "Accessible Contrast by Font Size and Weight".
@@ -145,8 +145,8 @@ You should totally buy his book on Inclusive Components.
 Directions:  
 <ul>
 <li>Cross index nominal font size (in CSS px) to CSS weight.  
-<li>SAPC value must meet or exceed the value listed.  
-<li>If the SAPC value is negative, use the positive value. For example, if the SAPC value is -58, use 58.  
+<li>APCA value must meet or exceed the value listed.  
+<li>If the APCA value is negative, use the positive value. For example, if the APCA value is -58, use 58.  
 <li>An “x” indicates that a larger font size (or heavier font weight) must be used.
 <li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
 <li>Serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier).
