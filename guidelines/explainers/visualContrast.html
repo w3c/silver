@@ -60,7 +60,7 @@ Color use can help communication, but only when it aligns with the purpose of th
 <p>Authors need to balance font size, font stroke width, background color, font color, and nearby colors to achieve good visual contrast. Authors can use tools to evaluate elements and adjust the attribute and color of those elements to achieve a presentation which meets these requirements.
 </p>
 <p>
-The solution to this challenge of a complex relationship between interrelated elements of visual readability is to use an algorithm (Somers Advanced Perceptual Contrast, SAPC) which allows authors to  input preferred settings and calculate the minimal contrast needed.  See “Test and Audit” tab for SAPC.
+The solution to this challenge of a complex relationship between interrelated elements of visual readability is to use an algorithm (Advanced Perceptual Contrast Algorithm, APCA) which allows authors to  input preferred settings and calculate the minimal contrast needed.  See “Test and Audit” tab for APCA.
 </p>
 <ul>
 <li>No Tiny Text.  Text and Images of Text never use a font size below 12px.
@@ -69,20 +69,20 @@ The solution to this challenge of a complex relationship between interrelated el
 <li>A sans-serif font face is specified with a font size of at least 16px; or
 <li>A serif font face is specified with a font size of at least 18px.
 </ul></li>
-<li>Minimum Contrast for Smaller Text:  Text and images of text with a font size between 12px and 15px have an SAPC of at least 100%.
-<li>Minimum Contrast for Normal Text:  Text and images of text with a font size between 16px and 20px have an SAPC of at least 80%.
-<li>Minimum Contrast for Large Text:  Text and images of text with a font size of between 24px and 48px have an SAPC of at least 60%.
-<li>Minimum Contrast for Larger Text:  Text and images of text with a font size of 60px or larger have an SAPC of at least 40%.
-<li>Maximum Contrast for Larger Text.  Text and Images of Text that use a font size of 48px or larger have an SAPC of 120% or lower.
+<li>Minimum Contrast for Smaller Text:  Text and images of text with a font size between 12px and 15px have an APCA of at least 100%.
+<li>Minimum Contrast for Normal Text:  Text and images of text with a font size between 16px and 20px have an APCA of at least 80%.
+<li>Minimum Contrast for Large Text:  Text and images of text with a font size of between 24px and 48px have an APCA of at least 60%.
+<li>Minimum Contrast for Larger Text:  Text and images of text with a font size of 60px or larger have an APCA of at least 40%.
+<li>Maximum Contrast for Larger Text.  Text and Images of Text that use a font size of 48px or larger have an APCA of 120% or lower.
 </ul>
 
 <h3>Exceptions</h3>
 <p class="note">
 <ol>
 <li>User Control.  There is no visual contrast requirement for text where the content does not specify font characteristics.  In this situation, the text content is presumed to inherits its characteristics from platform settings and that end-users have control over those platform settings.
-<li>Bolder Text:  Where content specifies a bold font weight (i.e., equivalent to CSS value of 700 or above) the allowable SAPC is reduced 20% (e.g., an 18px bold font must have an SAPC of at least 60%).
-<li>Larger Text:  Where the size of text and images of text is between those specified in the values above, an interpolated SAPC may be used (e.g., a 22px font has an SAPC of at least 70%).
-<li>Incidental Text:  Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no SAPC contrast requirement. 
+<li>Bolder Text:  Where content specifies a bold font weight (i.e., equivalent to CSS value of 700 or above) the allowable APCA is reduced 20% (e.g., an 18px bold font must have an APCA of at least 60%).
+<li>Larger Text:  Where the size of text and images of text is between those specified in the values above, an interpolated APCA may be used (e.g., a 22px font has an APCA of at least 70%).
+<li>Incidental Text:  Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no APCA contrast requirement. 
 <li class="noBullet">An example of the exception for Incidental Text is a photograph of street scene where some shop windows have lettering on them.  If they are not important to the purpose of the photograph, the lettering on the shop windows does not have a font size or contrast requirement.
 </ol>
 <h3>Examples</h3>
