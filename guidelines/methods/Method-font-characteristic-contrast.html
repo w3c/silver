@@ -9,7 +9,7 @@ You should totally buy his book on Inclusive Components.
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Select font characteristics and background colors to provide enough contrast </title>
+    <title>Select font characteristics and colors for both the background and the text to provide enough contrast for readability</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -39,7 +39,7 @@ You should totally buy his book on Inclusive Components.
 <section id="section1">
 <h2>Basics</h2>
 <div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
+<h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability</h3>
 	<p>Use tools to evaluate font size, font stroke width, background color, font color, and nearby colors and adjust the attribute and color of those elements to achieve good visual contrast. </p>
 </div>
 <h3>Status</h3>
@@ -121,7 +121,7 @@ You should totally buy his book on Inclusive Components.
 <section id="section3">
 <h2>Code Samples</h2>
 <div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
+<h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability</h3>
 </div>
 <p>TBD
 </p>
@@ -130,27 +130,28 @@ You should totally buy his book on Inclusive Components.
 <section id="section4">
 <h2>Tests</h2>
 <div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
+<h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability</h3>
 </div>
 <h3>Procedure</h3>
 <ol>
-<li>Using source code inspection or an “eye dropper” type tool, obtain representaive sRGB values for the the forground text and the background color. Steps #2 and steps #3 can be calculated using an automated tool. Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/SPCA/">Advanced Perceptual Contrast Algorithm (APCA) Visual Contrast Demo</a>
-<li>Calculate the relative lumance of the text (Rt) and background (Rb).
-<li>Calculate the relative contrast of Rt and background Rb.
-<li>Compare this calculated value against lookup table "Accessible Contrast by Font Size and Weight".
-<li>Check that the relative contrast ratio meets or excedes the required value.
+<li>Using source code inspection of the text and background elements, obtain representaive sRGB values for the forground text (Vtxt) and the background color (Vbg). If an “eye dropper” type tool is used it must report the true CSS value of the color, not the displayed value.  Steps #2 and #3 refer to an automated contrast prediction tool. Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/SAPC/">sRGB Advanced Perceptual Contrast (SAPC) Visual Contrast Demo</a>
+<li>Enter the background Vbg and text Vtxt CSS color values in the background and text input fields of the contrast tool. Important: do not swap the backgrond or text colors in the tool.
+<li>Calculate the predicted contrast percentage of Vtxt to background Vbg.
+<li>Compare this calculated value against the lookup table "Accessible Contrast by Font Size and Weight".
+<li>Check that the absolute value of the predicted contrast percentage meets or exceeds the required value for the font weight and size.
 </ol>
 <h3>Accessible Contrast by Font Size and Weight</h3>
 <p>Lookup Table by Font Size (left-most column) and Weight (top-most row).
 Directions:  
 <ul>
 <li>Cross index nominal font size (in CSS px) to CSS weight.  
-<li>APCA value must meet or exceed the value listed.  
-<li>If the APCA value is negative, use the positive value. For example, if the APCA value is -58, use 58.  
+<li>SAPC value must meet or exceed the value listed.  
+<li>For light text on a dark background the SAPC tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the SAPC value is -58, use 58.  
 <li>An “x” indicates that a larger font size (or heavier font weight) must be used.
-<li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
-<li>Serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier).
-<li>Thin decorative fonts should use values for two rows above the nominal font size.  
+<li>Values shown are for standard sans-serif fonts with an x-height no less than 50% of the font-size such as Helvetica, Arial, or Verdana.
+<li>Serif fonts should use values for the next higher weight (next column to the right) (e.g., Times, Georgia, Cambria, Courier).
+<li>Decorative and unusual fonts should be avoided for readable content such as body text. 
+<li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica to determine the appropriate contrast percentage. 
 </ul>
 </p>
 <table class="TFtable">
