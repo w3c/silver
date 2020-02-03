@@ -9,11 +9,11 @@ You should totally buy his book on Inclusive Components.
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Select font characteristics and colors for both the background and the text to provide enough contrast for readability</title>
+    <title>Select font characteristics and colors to provide enough contrast</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<p class="breadcrumb"><a href="../../guidelines/index.html">Silver</a> > <a href="../explainers/VisualContrast.html">Visual Contrast</a> > Select font characteristics and background colors to provide enough contrast </p>
+<p class="breadcrumb"><a href="../../guidelines/index.html">Silver</a> > <a href="../explainers/VisualContrast.html">Visual Contrast</a> > Select font characteristics and colors to provide enough contrast </p>
     <div class="tabbed">
       <ul>
         <li>
@@ -56,7 +56,7 @@ You should totally buy his book on Inclusive Components.
 <li>Any web technology where text and background color are specified separately and browsers can control default colors. 
 </ul>
 <h3>How It Solves User Need</h3>
-<p>TBD
+<p>All users need adaquate luminance difference between background and text colors in order to perceive and read the text easily.
 </p>
 <h3>Related Guidelines</h3>
 <ul>
@@ -69,9 +69,8 @@ You should totally buy his book on Inclusive Components.
 <div class="guidanceBox">
 <h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability </h3>
 </div>
-<p>This needs work, but this info needs to go somewhere appropriate.  
-</p>
-<h2 id="glossary">Glossary</h2>
+	
+<h2 id="understanding">Understanding Contrast Perception</h2>
 <dl id="dfn-relative-luminance">
   <dt>Relative Luminance (Y)</dt>
   <dd>
@@ -127,6 +126,7 @@ You should totally buy his book on Inclusive Components.
 </p>
 </section>
 
+	    
 <section id="section4">
 <h2>Tests</h2>
 <div class="guidanceBox">
@@ -147,11 +147,11 @@ Directions:
 <li>Cross index nominal font size (in CSS px) to CSS weight.  
 <li>SAPC value must meet or exceed the value listed.  
 <li>For light text on a dark background the SAPC tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the SAPC value is -58, use 58.  
-<li>An “x” indicates that a larger font size (or heavier font weight) must be used.
+<li>A dot “•” indicates that a larger font size (or heavier font weight) must be used.
 <li>Values shown are for standard sans-serif fonts with an x-height no less than 50% of the font-size such as Helvetica, Arial, or Verdana.
 <li>Serif fonts should use values for the next higher weight (next column to the right) (e.g., Times, Georgia, Cambria, Courier).
-<li>Decorative and unusual fonts should be avoided for readable content such as body text. 
-<li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica to determine the appropriate contrast percentage. 
+<li>Decorative and unusual fonts should be avoided for readable content in columns of body text. These fonts may be used for headers or other stand alone items, provided they are clearly legible.
+<li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica, choosing a sie and weight of Helvetica that most closesly matches the appearance to determine the appropriate contrast percentage. 
 </ul>
 </p>
 <table class="TFtable">
@@ -159,37 +159,37 @@ Directions:
 <th>Font</br />Size</th><th>100</th><th>200</th><th>300</th><th>Normal</br />(400)</th><th>500</th><th>600</th><th>Bold</br />(700)</th><th>800</th><th>900</th>
 </tr>
 <tr>
-<td>12</td><td>x</td><td>x</td><td>x</td><td>100</td><td>90</td><td>85</td><td>80</td><td>75</td><td>70</td>
+<td>12</td><td>•</td><td>•</td><td>•</td><td>100</td><td>90</td><td>85</td><td>80</td><td>75</td><td>70</td>
 </tr>
 <tr>
-<td>14</td><td>x</td><td>x</td><td>x</td><td>90</td><td>85</td><td>80</td><td>75</td><td>70</td><td>65</td>
+<td>14</td><td>•</td><td>•</td><td>•</td><td>90</td><td>85</td><td>80</td><td>75</td><td>70</td><td>65</td>
 </tr>
 <tr>
-<td>16</td><td>x</td><td>x</td><td>x</td><td>85</td><td>80</td><td>75</td><td>70</td><td>65</td><td>60</td>
+<td>16</td><td>•</td><td>•</td><td>•</td><td>85</td><td>80</td><td>75</td><td>70</td><td>65</td><td>60</td>
 </tr>
 <tr>
-<td>18</td><td>x</td><td>x</td><td>100</td><td>80</td><td>75</td><td>70</td><td>65</td><td>60</td><td>58</td>
+<td>18</td><td>•</td><td>•</td><td>100</td><td>80</td><td>75</td><td>70</td><td>65</td><td>60</td><td>58</td>
 </tr>
 <tr>
-<td>20</td><td>x</td><td>x</td><td>90</td><td>77</td><td>70</td><td>65</td><td>60</td><td>58</td><td>57</td>
+<td>20</td><td>•</td><td>•</td><td>90</td><td>77</td><td>70</td><td>65</td><td>60</td><td>58</td><td>57</td>
 </tr>
 <tr>
-<td>24</td><td>x</td><td>100</td><td>80</td><td>73</td><td>67</td><td>60</td><td>58</td><td>57</td><td>56</td>
+<td>24</td><td>•</td><td>100</td><td>80</td><td>73</td><td>67</td><td>60</td><td>58</td><td>57</td><td>56</td>
 </tr>
 <tr>
 <td>26</td><td>x</td><td>97</td><td>75</td><td>70</td><td>63</td><td>58</td><td>55</td><td>58</td><td>55</td>
 </tr>
 <tr>
-<td>28</td><td>x</td><td>93</td><td>70</td><td>67</td><td>60</td><td>56</td><td>54</td><td>56</td><td>52</td>
+<td>28</td><td>•</td><td>93</td><td>70</td><td>67</td><td>60</td><td>56</td><td>54</td><td>56</td><td>52</td>
 </tr>
 <tr>
-<td>30</td><td>x</td><td>90</td><td>65</td><td>63</td><td>57</td><td>54</td><td>53</td><td>52</td><td>51</td>
+<td>30</td><td>•</td><td>90</td><td>65</td><td>63</td><td>57</td><td>54</td><td>53</td><td>52</td><td>51</td>
 </tr>
 <tr>
-<td>32</td><td>x</td><td>87</td><td>60</td><td>60</td><td>55</td><td>52</td><td>50</td><td>49</td><td>48</td>
+<td>32</td><td>•</td><td>87</td><td>60</td><td>60</td><td>55</td><td>52</td><td>50</td><td>49</td><td>48</td>
 </tr>
 <tr>
-<td>34</td><td>x</td><td>83</td><td>59</td><td>57</td><td>53</td><td>50</td><td>49</td><td>48</td><td>46</td>
+<td>34</td><td>•</td><td>83</td><td>59</td><td>57</td><td>53</td><td>50</td><td>49</td><td>48</td><td>46</td>
 </tr>
 <tr>
 <td>36</td><td>100</td><td>80</td><td>58</td><td>53</td><td>50</td><td>48</td><td>47</td><td>46</td><td>44</td>
@@ -217,8 +217,56 @@ Directions:
 <section id="section5">
 <h2>Resources</h2>
 <div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
+<h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability </h3>
+
+<h2 id="glossary">Glossary</h2>
+<p><strong>Brightness</strong> is a perceptual attribute, it does not have a direct measure.</p>
+<p><strong>Perceived lightness</strong> is measured by some vision models such as CIELAB, here L* (Lstar) is a measure of <em>perceptual lightness</em>, and is non-linear to approximate the human vision non-linear response curve.</p>
+<p><strong>Luminance</strong> is a linear measure of light, spectrally weighted for normal vision but not adjusted for non-linear perception of lightness.</p>
+<p><strong>Luma</strong> (<em>Y´</em> prime) is a gamma encoded, weighted signal used in some video encodings. It is not to be confused with linear luminance.</p>
+<p><strong>Gamma</strong> or transfer curve (TRC) is a curve that is often similar to the perceptual curve, and is commonly applied to image data for storage or broadcast to reduce perceived noise and/or improve data utilization (and related reasons). </p>
+
+
+	
+	
+<h2 id="math">SAPC Math</h2>
+	
+<div>SAPC is the sRGB Advanced Perceptual Contrast prediction algorithym. The math assumes the use of the web standard sRGB colorspace.
+	
+  <p>For the sRGB colorspace, the relative luminance (<var>Y</var>) of a color is defined as <var>Y</var> = 0.2126 * <strong>R</strong> + 0.7156 * <strong>G</strong> + 0.0722 * <strong>B</strong> where <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are defined as:</p>
+  <ul>
+    <li><strong>R</strong> = RsRGB ^ 2.218</li>
+    <li><strong>G</strong> = GsRGB ^ 2.218</li>
+    <li><strong>B</strong> = BsRGB ^ 2.218</li>
+  </ul>
+  <p>and RsRGB, GsRGB, and BsRGB are defined as:</p>
+  <ul>
+    <li>RsRGB = R8bit/255</li>
+    <li>GsRGB = G8bit/255</li>
+    <li>BsRGB = B8bit/255</li>
+  </ul>
+  <p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
 </div>
+<dl id="dfn-relative-contrast">
+  <dt>relative contrast</dt>
+  <dd>
+    <p>The perceived relative visual contrast (<var>P</var>) between a foreground color and  a background color expressed as a percentange is definded as:</p>
+    <ul>
+      <li>if <strong>Lf</strong> &lt; <strong>Lb</strong> then <var>P</var> = (<strong> Lf</strong> ^ 0.40 &minus; <strong>Lb</strong> ^ 0.44 ) * 161.8</li>
+      <li> else <var>P</var> = ( <strong>Lb</strong> ^ 0.44 &minus; <strong>Lf</strong> ^ 0.40 ) * 161.8 </li>
+    </ul>
+    <p> where </p>
+    <ul>
+      <li><strong>Lf</strong> is the <a href="#dfn-relative-luminance">relative luminance</a> of the foreground color, and</li>
+      <li><strong>Lb</strong> is the <a href="#dfn-relative-luminance">relative luminance</a> of the background color.</li>
+    </ul>
+  </dd>
+</dl>
+<div><span>Note:</span>
+  <p>Relative contrast ranges from 0 to ???? and 25% is the point of invisibility (<em>i.e.</em>, no perceptable contrast) for many people.</p>
+  <p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+</div>
+	
 <dl>
 <dt>TBD</dt>
 <dd></dd>
@@ -228,10 +276,10 @@ Directions:
 <section id="section6">
 <h2>Changelog</h2>
 <div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
+<h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability</h3>
 </div>
 <ul>
-<li>New Method 20 January 2020
+<li>New Method 03 February 2020
 </ul>
 </section>
 
