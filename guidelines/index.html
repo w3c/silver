@@ -75,22 +75,22 @@
 		
 <section>
 		<h2>Guidelines</h2>
-		<p>Guidelines are requirements that need to be met.  They are <em>normative</em>, which means they are required.  The Methods listed in the Explanation show the ways that the requirement can be met. The Methods for each guideline are more flexible. They are <em>informative</em>, which means they are not requirements, they are explanations, techniques, and tests that an author can use to meet the requirement. <p>
-		<p>WCAG 2.x has normative success criteria as a requirement.  The Silver research showed that the structure of normative success criteria was difficult to understand and implement.  Silver attempts to solve that problem by having Guidelines in plain language that are normative requirements and apply broadly across platforms.  The specific tests to evaluate the Guidelines in informative Methods.  This solution is intended to provide greater flexibility to include the needs of people with disabilities that could not be included in the strict WCAG 2.x structure. </p>
-		<p class="ednote">These are <em> early drafts</em> of guidelines. They are used to illustrate what Silver could look like and to test the process of writing content.  These guideline drafts should not be considered as final content of Silver. They are there to show how the structure would work.  As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. Guidelines will be identified by unique name. Translations should have an appropriate unique name.  </p>  
-		<p>The guidelines below were selected to illustrate specific aspects of the Silver structure.  </p>
-		<ul>
-		<li>Alternative Text is a migration from WCAG 2.1 to Silver with minimal updates. 
+		<p>Guidelines are requirements that need to be met.  They are <em>normative</em>, which means they are required.  The Methods (listed in the Explanation section for each Guideline) show the ways that the requirement can be met. The Methods for each guideline are more flexible. They are <em>informative</em>, which means they are not requirements, they are techniques, explanations, and tests that an author can use to meet the required guideline. <p>
+		<p>WCAG 2.x has normative success criteria as requirements.  The Silver research showed that the structure of normative success criteria was difficult to understand and made it difficult to include needs of people with disabilities that were not conducive to a binary true/false success criterion.  Silver attempts to solve that problem by having Guidelines in plain language that are normative requirements and apply broadly across platforms.  The specific tests to evaluate the Guidelines are in informative Methods.  This solution is intended to provide greater flexibility to include the needs of people with disabilities that could not be included in the strict WCAG 2.x structure. </p>
+		<div class="ednote">
+		<p>These are <em> early drafts</em> of guidelines. They are used to illustrate what Silver could look like and to test the process of writing content.  These guideline drafts should not be considered as final content of Silver. They are there to show how the structure would work.  As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. Guidelines will be identified by unique name. Translations should have an appropriate unique name.  </p>  
+		<p>As more content is developed, this section will be a list of normative guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to Silver, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit
+		">WCAG to Silver Outline Map</a>.  <p>
+		</div>
 		
-		</li>
-		<li>Clear Language is a new guideline proposed by the Cognitive Accessibility Task Force (COGA), and includes research, documents and comments from COGA.  It showcases a new rubric test that could not be included in WCAG. 
-		<li>Section Headings is the first guideline that Silver worked on as part of the prototyping process.  It does not represent the latest in Silver development and will be updated in a future Working Draft.  
-		</ul>
 <section>
 <h3> Headings </h3>
 <p>Use headings and sub-headings for your text. Headings — including titles and subtitles — organize words and images on a web page.
 </p> 
 <p><a href="explainers/SectionHeading.html">Explanation of  Headings</a></p>
+<div class="ednote">
+<p>Headings is the first guideline that Silver worked on as part of the prototyping process.  It migrated WCAG 2.4.10 Section Headings. </p>
+</p>
 </section>
 <section>
 <h3>Clear Language: </h3>
@@ -98,7 +98,10 @@
 	<p>Use clear language that readers easily understand.</p> 
 </p>
 <p><a href="explainers/ClearWords.html">Explanation of Clear Language</a></p>
-<p class="ednote">How well are we supporting the differences in disabilities (such as aphasia, dyslexia, and more)?
+<div class="ednote">
+<p>Clear Language is a new guideline proposed by the Cognitive Accessibility Task Force (COGA), and includes research, documents and comments from COGA.  It showcases a rubric-type test that could not be included in WCAG. </p>
+<p>How well are we supporting the differences in disabilities (such as aphasia, dyslexia, and more)?</p>
+</div>
 </section>
 <section>
 <h3>Visual Contrast</h3>
@@ -109,8 +112,9 @@
 <p>Visual Contrast is a migration from WCAG 2.1 with significant updates: </p>
 		<ul>
 		<li>New calculations of contrast based on more modern research on color perception.
-		<li>Merging the AA and AAA levels into one guideline. 
-		<li>New tests
+		<li>Merging the 1.4.3 AA and 1.4.6 AAA levels into one guideline. 
+		<li>New test of text contrast.
+		<li>At this time, it only includes textual visual contrast. 
 		</ul>
 <p>We propose changing the name of “Color Contrast” to “Visual Contrast” as a signal of a paradigm change from one about color to one about “perception of light intensity”. The reason for this change is that the understanding of contrast has matured and the available research and body of knowledge has made breakthroughs in advancing the understanding of “visual contrast”.
 </p>
@@ -176,7 +180,7 @@ This model is more responsive to user needs and allows designers more choice in 
 	</li>
 <li><strong>Guidelines</strong> are general information and intent written in plain language</li>
 <li><strong>Methods</strong> are specific examples, instructions, and tests with more technical information</li>
-<li>We are adding a <strong>tagging engine</strong> to make it easier for people to find information.</li>
+<li>We will add a <strong>tagging engine</strong> to make it easier for people to find information by tags.</li>
 <li>We want organizations to be able to extract the guideline data to use for their own purposes.</li>
 <li>Guidelines will include: 
 	<ul>
@@ -213,7 +217,7 @@ All points count towards an overall total, and the minimum for each category mus
 </p>
 <ul>
 <li>This is an additive scoring system. It increases the score for accessibility achievement instead of penalizing for fails.  
-<li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points 0%. You cannot have a score higher than 1 or lower than 0.  Note that this is a change from scoring by Method to scoring by Guideline overall.  Multiple methods for one guideline don’t gain more points. (This had been a flaw that was bothering me that could allow the system to be gamed by using multiple methods. ) 
+<li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points 0%. You cannot have a score higher than 1 or lower than 0.  Note that this is a change from scoring by Method to scoring by Guideline overall.  Multiple methods for one guideline don’t gain more points. 
 <li>A minimum percentage must be achieved in each disability category, based on the modified Mandate 376 Functional User Needs. The modifications include disabilities that are not included in Mandate 376 like Vestibular Disorders and breaks down the cognitive disability into groups of cognitive disabilities with common needs. Note: Exactly what that minimum percentage is needs to be established by further research. It can be plugged in later. We want the majority of sites that meet WCAG AA today to pass this minimum in Silver.  (W3C Authentication spec uses this normalization.)
 <li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
 <li>For automated tests, the total instances of the condition are divided by the total passes for that condition.  That gives a percentage response.  
