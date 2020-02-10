@@ -131,19 +131,22 @@ This model is more responsive to user needs and allows designers more choice in 
 <section>
 		<h2>Scoring & Conformance</h2>
 <p class="ednote">This section is under development. Comments are welcome. </p>
-<p>When the Silver Task Force did research with stakeholders of WCAG 2.0, they found that generally, people like the guidance of WCAG, but wanted changes to the structure.  The major issues that are addressed are: </p>
+<p>When the Silver Task Force did research with stakeholders of WCAG 2.0, they found that generally, people like the guidance of WCAG, but wanted changes to the structure.  The major issues that are addressed in Silver are: </p>
 <ul>
-<li>Changing the "all or nothing" approach of WCAG success criteria conformance to a percentage based scoring system.
-<li>Formalizing a representative sampling approach to conformance to address the needs of large, complex, or dynamic sites, apps, projects, or products.  
-<li>Allowing the organization (this includes company, business, non-profit, government) to prioritize what it important for their product for accessibility assessment.  
-</ul>
-<p>Conformance is a complex topic with many parts that work together.  Scoring is more easily understood.  Scoring is "how well did I do?" We are attempting to better support common practice by providing mechanisms that better match the way the conformance claims are generally used on entire websites.  We have several suggestions of how a company or organization can meaningfully claim conformance to an entire site, especially a large site. </p>
-<ul>
-<li>We want to have the conformance better reflect the experience of people with disabilities using the site or product that we are measuring.  It allows an organization to say that "we may not be 100% conformant, but our site or product is very usable by people with disabilities" and they can express that in a meaningful way. 
+<li>Have the conformance better reflect the experience of people with disabilities using the site or product.  It allows an organization to say that "we may not be 100% conformant, but our site or product is very usable by people with disabilities" and they can express that in a meaningful way. By changing the "all or nothing" approach of WCAG success criteria conformance to a percentage based scoring system there is a more nuanced representation of conformance.
+<li>Formalizing a representative sampling approach to conformance to address the needs of large, complex, or dynamic sites, apps, projects, or products that cannot test every page as required by WCAG 2.x Conformance. We reference large sections of WCAG-EM to define the representative sampling approach.  
+<li>Allowing the organization (this includes company, business, non-profit, government) to prioritize what it important for their product for accessibility assessment so that the organization would not fail for bugs that did not have a negative impact on the accessibility of their site or product to users with disabilities.  Many sites will have workflows that are less critical than other portions of the site, and that should be determined by the site owner. 
 <li>We want to ensure that conformance doesn't dis-proportionally favor one disability over another. 
-<li>Many sites will have workflows that are less critical than other portions of the site, and that should be determined by the site owner. 
 </ul>
-
+<p>Scoring & Conformance is broken into sub-sections: <p>
+<ul>
+<li>Goals
+<li>How Conformance fits into the Information Architecture
+<li>Scope of conformance claim
+<li>Points & Levels
+<i>Sampling
+<li>Accessibility Supported
+</ul>
 
 
 
@@ -218,7 +221,7 @@ All points count towards an overall total, and the minimum for each category mus
 <ul>
 <li>This is an additive scoring system. It increases the score for accessibility achievement instead of penalizing for fails.  
 <li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points 0%. You cannot have a score higher than 1 or lower than 0.  Note that this is a change from scoring by Method to scoring by Guideline overall.  Multiple methods for one guideline don’t gain more points. 
-<li>A minimum percentage must be achieved in each disability category, based on the modified Mandate 376 Functional User Needs. The modifications include disabilities that are not included in Mandate 376 like Vestibular Disorders and breaks down the cognitive disability into groups of cognitive disabilities with common needs. Note: Exactly what that minimum percentage is needs to be established by further research. It can be plugged in later. We want the majority of sites that meet WCAG AA today to pass this minimum in Silver.  (W3C Authentication spec uses this normalization.)
+<li>A minimum percentage must be achieved in each disability category, based on the modified <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301 549 Functional Performance Statements</a>. The modifications include disabilities that are not included in EN301 549 like Vestibular Disorders and breaks down the cognitive disability into groups of cognitive disabilities with common needs.  <span class="ednote">Note: Exactly what that minimum percentage is needs to be established by further research to determine the minimum level for each functional performance statement after writing more content and testing it against websites with claiming WCAG 2.x conformance. It can be plugged in later. The goal would be that the majority of sites that meet WCAG AA today to pass this minimum in Silver. </span>
 <li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
 <li>For automated tests, the total instances of the condition are divided by the total passes for that condition.  That gives a percentage response.  
 <li>For advanced Silver tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. (We need examples of other tests.) 
@@ -367,6 +370,7 @@ The existing WCAG 2.1 Non-Interference Success Criteria:
 <li>Fazio, David </li>
 <li>Fischer, Detlev</li>
 <li>Foliot, John (Deque)</li>
+<li>Hall, Charles</li>
 <li>Horton, Sarah (The Paciello Group, LLC)</li>
 <li>Korn, Peter (Amazon)
 <li> Ku, JaEun (University of Illinois at Urbana-Champaign)</li>
@@ -392,7 +396,7 @@ The existing WCAG 2.1 Non-Interference Success Criteria:
 
 <li>Alice Boxhall, Google, Inc.
 <li>Angela Hooker, Microsoft Corp.
-<li>Charles Hall, MRM // McCANN
+<li>Charles Hall, MRM//McCann
 <li>Charles McCathie Nevile
 <li>Cybele Sack
 <li>Eleanor Loiacono, Worcester Polytechnic Institute
