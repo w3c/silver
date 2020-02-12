@@ -89,6 +89,13 @@ body {
   list-style-type: none;
 }
 
+.rightAlign {
+  position: relative;
+  bottom: 2px;
+  padding: 1.5rem;	
+  float: right;
+}
+
 /** Editor's Notes **/
 /** Non-normative Note ********************************************************/
 
