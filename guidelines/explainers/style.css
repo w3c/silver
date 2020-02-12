@@ -92,7 +92,7 @@ body {
 .rightAlign {
   position: relative;
   bottom: 2px;
-  padding: 1.5rem;	
+  padding:.5rem;	
   float: right;
 }
 
