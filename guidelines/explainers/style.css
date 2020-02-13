@@ -82,7 +82,14 @@ body {
   background: #fbecee;
   position: relative;
   top: 2px;
-  padding: 1.5rem;
+  padding: .75rem;
+}
+.informBox {
+  border: 2px solid;
+  background: #B8E5D0;
+  position: relative;
+  top: 2px;
+  padding: 0.25rem;
 }
 
 .noBullet {
