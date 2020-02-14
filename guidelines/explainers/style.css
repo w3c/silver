@@ -128,3 +128,25 @@ body {
 	details.note[open] > summary {
 		border-bottom: 1px silver solid;
 	}
+	
+/** Table **/
+
+	.OEtable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.OEtable td{ 
+		padding:7px; border:#4e95f4 1px solid; vertical-align:top;
+	}
+	/* provide some minimal visual accomodation for IE8 and below */
+	.OEtable tr{
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the ODD background rows  */
+	.OEtable tr:nth-child(odd){ 
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the EVEN background rows  */
+	.OEtabletable tr:nth-child(even){
+		background: #dae5f4;
+	}
