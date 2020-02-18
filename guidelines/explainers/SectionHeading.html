@@ -13,7 +13,14 @@ You should totally buy his book on Inclusive Components.
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
+<div class="guidanceBox">
+	<p class="rightAlign">This guideline section is required (normative).</p>
+<h1 style="clear: right">Headings How-To Guidance</h1>
+<p>Use headings and sub-headings for your text (formerly WCAG 2.4.10)</p>
+</div>
+<div class="informBox"
+<p>The following tabbed sections contain helpful information, but are not required (informative).</p>
+</div>
     <div class="tabbed">
       <ul>
         <li>
@@ -29,19 +36,18 @@ You should totally buy his book on Inclusive Components.
            <a href="#section4">Develop</a>
         </li>
         <li>
-          <a href="#section5">Test and Audit</a>
+          <a href="#section5">Evaluate</a>
+       </li>
+	   <li>
+          <a href="#section7">Methods</a>
        </li>
       </ul>
 
 <section id="section1">
 <h2>Get Started</h2>
-<div class="guidanceBox">
-<h3>Headings</h3>
-	<p>Use headings and sub-headings for your text (formerly WCAG 2.4.10)</p>
-</div>
 <h3>Summary</h3>
-	<p>Section headings &mdash; including titles and subtitles &mdash; organize words and images on a web page. <p>
-	<p>Types of content that may use a heading:</p>
+	<p>Headings &mdash; including titles and subtitles &mdash; organize words and images on a web page. <p>
+	<p>Types of content that may use a heading (Content may be presented individually or in a connected group):</p>
 	<ul>
 		<li>Documents
 		<li>Web pages
@@ -101,16 +107,10 @@ You should totally buy his book on Inclusive Components.
 
  <section id="section2">
 <h2>Plan</h2>
-
-<div class="guidanceBox">
-<h3>Headings</h3>
-	<p>Use headings and sub-headings for your text. </p>
-</div>
-
 <h3>Planning Responsibilities:</h3>
 	<ul>
-		<li>You must ensure that people can quickly find information within your product's text. </li>
-		<li>Headings must make it easier for people to find information. Too many headings or disorganized headings make it more difficult. Review headings in your usability testing. </li>
+		<li>Ensure that people can quickly find information within your product's text. </li>
+		<li>Headings make it easier for people to find information. Too many headings or disorganized headings make it more difficult. Review headings in your usability testing. </li>
 		<li>If your organization wants to qualify for a certain conformance level of Silver, then see the Methods section. </li>
 	</ul>
 <h3>Tips for Collaboration</h3>
@@ -124,71 +124,44 @@ You should totally buy his book on Inclusive Components.
 <h3>Planning for Each Stage:</h3>
         <p><strong>How to get started early:</strong> Early project meetings need to discuss accessibility and the importance of improving the usability of the site for people with disabilities. Writing, designing, and coding well organized text content will help all users. </p>
         <p><strong>How to remediate: </strong> The most common problem with headings is visually styled headings that are not semantic, so assistive technology (like screen readers) cannot tell that the text is a heading.  The developers need to research the appropriate semantic code.  In HTML, that would be an h1, h2, h3 tag.  For other technologies, see the Method for that technology. </p>
-<h3>Methods</h3>
-	<ul class="noBullet">
-        <li><strong>General:</strong> <a href="https://www.w3.org/TR/WCAG20-TECHS/G141.html">Organizing a page using headings</a> (WCAG 2.1 Technique G141)</li>
-        <li><strong>HTML:</strong> <a href="https://www.w3.org/TR/WCAG20-TECHS/H69.html">Providing heading elements at the beginning of each section of content</a> (WCAG 2.1 Technique H69) </li>
-		<li><strong>Usability:</strong> Evaluating the usability of headings</li> 
-	</ul>
 </section>
 
 <section id="section3">
 <h2>Design</h2>
-<div class="guidanceBox">
-<h3>Headings</h3>
-	<p>Use headings and sub-headings for your text. </p>
-</div>
 <h3>Design Responsibilities</h3>
 	<ol>
-		<li>You must ensure that the text of your product is structurally organized.  The visual styling must also be semantic, that is, the code must communicate the level of the headings to non-visual users. </li>
-		<li>This must ... </li>
+		<li>Ensure that the text of your product is structurally organized. </li> 
+		<li>The visual styling of the different heading levels also helps to organize the content. </li>
+		<li>Visual styling needs to be coded semantically, that is, the code communicates the level of the headings to non-visual users. This is more of a developer responsibility, but it can be a common issue if the design team "owns" the CSS, which could force a developer to use a non-semantic code element to get the appearance the designer wants.</li>
 	</ol>
 <h3>HOW - Guide:</h3>
         <p>Link to Style Guide(s)</p>
         <p><a href="https://www.w3.org/WAI/perspective-videos/layout/">Video: Clear Layout and Design</a> from Web Accessibility Initiative's Perspectives Video Series </p>
 <h3>Designer Tips:</h3>
-<h3>User Testing & Meaningful Involvement:</h3>
-<h3>Methods</h3>
 <p>TBD</p>
-	<ul class="noBullet">
-        <li><strong>Usability:</strong> Evaluating the usability of headings</li>
-        <li>Method 2...</li>
-        <li>Method 3...</li>
+<h3>User Testing & Meaningful Involvement:</h3>
+<p>TBD</p>
 	</ul>
 </section>
 
 <section id="section4">
 <h2>Develop</h2>
-<div class="guidanceBox">
-<h3>Section Headings</h3>
-	<p>Use headings and sub-headings for your text. </p>
-</div>
 <h3>Technical Responsibilities</h3>
 	<ol>
-		<li>You must ensure that the section headings are coded semantically &mdash; not just visual styling, so that assistive technology can correctly interpret them. </li>
-		<li>You must ensure that the headings are organized in a logical outline.  </li> 
-		<li>This must allow users to quickly find what they are looking for. </li>
+		<li>Ensure that the section headings are coded semantically &mdash; not just visual styling, so that assistive technology can correctly interpret them. </li>
+		<li>Ensure that the headings are organized in a logical outline.  </li> 
+		<li>Enable users to quickly find what they are looking for. </li>
 	</ol>
-<h3>Methods</h3>
-	<ul class="noBullet">
-        <li><strong>General:</strong> <a href="https://www.w3.org/TR/WCAG20-TECHS/G141.html">Organizing a page using headings</a> (WCAG 2.1 Technique G141)</li>
-        <li><strong>HTML:</strong> <a href="https://www.w3.org/TR/WCAG20-TECHS/H69.html">Providing heading elements at the beginning of each section of content</a> (WCAG 2.1 Technique H69) </li>
-	</ul>
 <h3>Examples and Tutorials</h3>
 	<p><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">Tutorial: Headings</a> from Web Accessibility Tutorials from the Web Accessibility Initiative</p>
 </section>
 
 <section id="section5">
 <h2>Test & Audit</h2>
-<div class="guidanceBox">
-<h3>Headings</h3>
-	<p>Use headings and sub-headings for your text. </p>
-	<p>See <a href="#section1">Get Started</a> for basic information.</p>
-</div>	
 <h3>Testing Responsibilities</h3>
 	<ol>
-		<li>You must ensure that headings exist and are logical</li>
-		<li>This must structure the content so users know what to expect in each section. </li>
+		<li>Ensure that headings exist and are logical</li>
+		<li>Structure the content so users know what to expect in each section. </li>
 	</ol>
 <h3>Auto-Testing Tips:</h3>
 	<p>TBD</p>
@@ -196,11 +169,14 @@ You should totally buy his book on Inclusive Components.
 	<p>TBD</p>
 <h3>Testing with Users:</h3>
 	<p>TBD - different from user reeearch or testing, this is tips for QA testing by PwD. </p>
-<h3>Methods for Evaluating and Scoring:</h3>
+	</ul>
+</section>
+<section id="section7">
+<h2>Methods</h2>
 	<ul class="noBullet">
         <li><strong>General:</strong> <a href="https://www.w3.org/TR/WCAG20-TECHS/G141.html">Organizing a page using headings</a> (WCAG 2.1 Technique G141)</li>
         <li><strong>HTML:</strong> <a href="https://www.w3.org/TR/WCAG20-TECHS/H69.html">Providing heading elements at the beginning of each section of content</a> (WCAG 2.1 Technique H69) </li>
-		<li><strong>Usability:</strong> Evaluating the usability of headings</li> 
+		<li><strong>Usability:</strong> Evaluating the usability of headings (TBD)</li> 
 	</ul>
 </section>
 </div>
