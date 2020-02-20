@@ -267,21 +267,22 @@ Directions:
 	<h2>Basic SAPC Math Method Step by Step</h2>	
 
 	
-  <p>In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying the exponent. <em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em>  <br>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+  <p>In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying the exponent. </p>
 	  	
 
-    <p><strong>R<sub>linbg</sub></strong> = (sR<sub>bg</sub>/255.0) ^ 2.218<br>
-    <strong>G<sub>linbg</sub></strong> = (sG<sub>bg</sub>/255.0) ^ 2.218<br>
-    <strong>B<sub>linbg</sub></strong> = (sB<sub>bg</sub>/255.0) ^ 2.218</p>
-    <p><strong>R<sub>lintxt</sub></strong> = (sR<sub>txt</sub>/255.0) ^ 2.218<br>
-    <strong>G<sub>lintxt</sub></strong> = (sG<sub>txt</sub>/255.0) ^ 2.218<br>
-    <strong>B<sub>lintxt</sub></strong> = (sB<sub>txt</sub>/255.0) ^ 2.218</p>	  
+    <pre>	<strong>R<sub>linbg</sub></strong> = (sR<sub>bg</sub>/255.0) ^ 2.218<br>
+	<strong>G<sub>linbg</sub></strong> = (sG<sub>bg</sub>/255.0) ^ 2.218<br>
+	<strong>B<sub>linbg</sub></strong> = (sB<sub>bg</sub>/255.0) ^ 2.218</pre>
+    <pre>	<strong>R<sub>lintxt</sub></strong> = (sR<sub>txt</sub>/255.0) ^ 2.218
+	<strong>G<sub>lintxt</sub></strong> = (sG<sub>txt</sub>/255.0) ^ 2.218
+	<strong>B<sub>lintxt</sub></strong> = (sB<sub>txt</sub>/255.0) ^ 2.218</pre>	  
  		
 	  
 <p>Then find the relative luminance (<var>Y</var>) of each color by applying the coefficients and summing.</p>
 			
-<p><strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub><br> 
-<strong>Y<sub>txt</sub></strong> = 0.2126 * R<sub>lintxt</sub> + 0.7156 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub> </p>
+<pre>
+	<strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub>
+	<strong>Y<sub>txt</sub></strong> = 0.2126 * R<sub>lintxt</sub> + 0.7156 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub> </pre>
 			
 </div>
 <dl id="dfn-relative-contrast">
@@ -290,13 +291,24 @@ Directions:
     <p>The Predicted Visual Contrast (<var>C</var>) between a foreground color and a background color expressed as a percentange is defined as:</p>
 	 
 <pre>
+//Define Constants for Basic Version:
+
+normBGExp = 0.38;	// Constants for Power Curve Exponents.
+normTXTExp = 0.43;	// One pair for normal text, and one for REVERSE
+revBGExp = 0.5;		// FUTURE: These will eventually be dynamic
+revTXTExp = 0.43;	// as a function of light adaptation and context
+
+blkThrs = 0.02;		// Level that triggers the soft black clamp
+blkClmp = 1.75;		// Exponent for the soft black clamp curve
+
+
 if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
 	Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + abs(Ytxt - blkThrs) ^ blkClmp;
-	SAPC = ( Y<sub>bg</sub> ^ normBGExp - Ytxt ^ normTXTExp ) * scaleBoW;
+	SAPC = ( Y<sub>bg</sub> ^ normBGExp - Ytxt ^ normTXTExp ) * 161.8;
 	return (SAPC < 15 ) ? "0%" : str(SAPC) + "%";
 } else {
 	Y<sub>bg</sub>g = (Y<sub>bg</sub> > blkThrs) ? Y<sub>bg</sub> : Y<sub>bg</sub> + abs(Y<sub>bg</sub> - blkThrs) ^ blkClmp;
-	SAPC = ( Ybg ** revBGExp - Ytxt ** revTXTExp ) * scaleWoB;
+	SAPC = ( Y<sub>bg</sub> ^ revBGExp - Ytxt ^ revTXTExp ) * 161.8;
 	return (SAPC > -15 ) ? "0%" : str(SAPC) + "%";
 }  
     </pre>
@@ -304,8 +316,8 @@ if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
   </dd>
 </dl>
 <div><span>Note:</span>
-  <p>Relative contrast ranges from 0 to ???? and 25% is the point of invisibility (<em>i.e.</em>, no perceptable contrast) for many people.</p>
-  <p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+  <p>Predicted contrast less than 15% is clamped to zero to simplyfy the math. </p>
+  <p><em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em>  <br>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
 </div>
 	
 <dl>
