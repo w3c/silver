@@ -91,7 +91,7 @@ You should totally buy his book on Inclusive Components.
 		<li>The hue or color difference between the background and text, not including the lightness difference	mentioned above
 	  </ul>
 	<p>All of these interdependant factors affect the perception of contrast and readability. As we are concerned with readability on computer screens, we can made some assumptions about a range of brightness, and a typical viewing environment. This provides a baseline standard for all users for best readability of content, or a minimum level of legibility for non-content. Then, we can set how different impairments require different adjustments or user customization to accomodate the neads of each individual user.</p>
-	  <p>For instance, a user with poor "acuity", that is, poor sharpness where they cannot focus on small text, will need to be able to zoom the text larger. A user with poor contrast sensitivity may have good sharpness, but unable to perceive colors that are too similar in lightness. Yet another user with a glare problem may need lower contrast, and/or a reduction in blue, to reduce glare or halos interfereing with readability.
+	  <p>For instance, a user with poor "acuity", that is, poor sharpness where they cannot focus on small text, will need to be able to zoom the text larger. A user with poor contrast sensitivity may have good sharpness, but unable to perceive colors that are too similar in lightness. Yet another user with a glare problem may need lower contrast, and/or a reduction in blue, to reduce glare or halos interfereing with readability. Those with a color vision problem (sometimes called 'color blind') may have difficulty detecting contrast or light for certain colors, such as deep red.
 
 	    
 	    </p>
@@ -136,6 +136,7 @@ You should totally buy his book on Inclusive Components.
 <div class="guidanceBox">
 <h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability</h3>
 </div>
+	<h2>Pseudocode</h2>		
 <p>TBD
 </p>
 </section>
@@ -246,34 +247,71 @@ Directions:
 <h2 id="math">SAPC Math</h2>
 	
 <div>SAPC is the sRGB Advanced Perceptual Contrast prediction algorithm. The math assumes the use of the web standard sRGB colorspace.
+
+	<p>The simplified steps are:</p>
+	<ul>
+		<li>Convert the sRGB background and text colors to luminance Ybg and Ytxt
+			<ul>
+				<li>Convert from 8 bit integer to decimal 0.0-1.0
+				<li>Linearize (remove gamma)
+				<li>Apply sRGB coefficients and sum to Y<br>
+					<img src="images/sRGBcoefficients.png">
+					
+			
+		<li>Determine which is brighter for contrast polarity
+		<li>Apply pre-process modules (clamp, <em>FUTURE: color, spatial, adaptation</em>)
+		<li>Apply power curve exponents for perceptual lightness
+		<li>Find difference and scale to output percentage	
+	</ul>
 	
-  <p>For the sRGB colorspace, the relative luminance (<var>Y</var>) of a color is defined as <var>Y</var> = 0.2126 * <strong>R</strong> + 0.7156 * <strong>G</strong> + 0.0722 * <strong>B</strong> where <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are defined as:</p>
-  <ul>
-    <li><strong>R</strong> = RsRGB ^ 2.218</li>
-    <li><strong>G</strong> = GsRGB ^ 2.218</li>
-    <li><strong>B</strong> = BsRGB ^ 2.218</li>
+	<h2>Basic SAPC Math Method Step by Step</h2>	
+
+	
+  <p>In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0</p>
+	  
+<ul>
+    <li>dR<sub>bg</sub> = sR<sub>bg</sub>/255.0</li>
+    <li>dG<sub>bg</sub> = sG<sub>bg</sub>/255.0</li>
+    <li>dB<sub>bg</sub> = sB<sub>bg</sub>/255.0</li>
+    <li>dR<sub>txt</sub> = sR<sub>txt</sub>/255.0</li>
+    <li>dG<sub>txt</sub> = sG<sub>txt</sub>/255.0</li>
+    <li>dB<sub>txt</sub> = sB<sub>txt</sub>/255.0</li>		
   </ul>
-  <p>and RsRGB, GsRGB, and BsRGB are defined as:</p>
+			
+<p>Convert the gamma encoded RGB channels to linear values. <em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em>   The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+			
   <ul>
-    <li>RsRGB = R8bit/255</li>
-    <li>GsRGB = G8bit/255</li>
-    <li>BsRGB = B8bit/255</li>
-  </ul>
-  <p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+    <li><strong>R<sub>linbg</sub></strong> = dR<sub>bg</sub> ^ 2.218</li>
+    <li><strong>G<sub>linbg</sub></strong> = dG<sub>bg</sub> ^ 2.218</li>
+    <li><strong>B<sub>linbg</sub></strong> = dB<sub>bg</sub> ^ 2.218</li>
+    <li><strong>R<sub>lintxt</sub></strong> = dR<sub>txt</sub> ^ 2.218</li>
+    <li><strong>G<sub>lintxt</sub></strong> = dG<sub>txt</sub> ^ 2.218</li>
+    <li><strong>B<sub>lintxt</sub></strong> = dB<sub>txt</sub> ^ 2.218</li>	  
+  </ul>			
+	  
+<p>Then find the relative luminance (<var>Y</var>) of each color by applying the coefficients and summing.</p>
+			
+<strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub> 
+<strong>Y<sub>txt</sub></strong> = 0.2126 * R<sub>lintxt</sub> + 0.7156 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub> 
+			
 </div>
 <dl id="dfn-relative-contrast">
-  <dt>relative contrast</dt>
+  <dt>Predicted Contrast</dt>
   <dd>
-    <p>The perceived relative visual contrast (<var>P</var>) between a foreground color and  a background color expressed as a percentange is definded as:</p>
-    <ul>
-      <li>if <strong>Lf</strong> &lt; <strong>Lb</strong> then <var>P</var> = (<strong> Lf</strong> ^ 0.40 &minus; <strong>Lb</strong> ^ 0.44 ) * 161.8</li>
-      <li> else <var>P</var> = ( <strong>Lb</strong> ^ 0.44 &minus; <strong>Lf</strong> ^ 0.40 ) * 161.8 </li>
-    </ul>
-    <p> where </p>
-    <ul>
-      <li><strong>Lf</strong> is the <a href="#dfn-relative-luminance">relative luminance</a> of the foreground color, and</li>
-      <li><strong>Lb</strong> is the <a href="#dfn-relative-luminance">relative luminance</a> of the background color.</li>
-    </ul>
+    <p>The Predicted Visual Contrast (<var>C</var>) between a foreground color and a background color expressed as a percentange is defined as:</p>
+	  
+    <pre>
+      if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
+		  	Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + abs(Ytxt - blkThrs) ^ blkClmp;
+			SAPC = ( Y<sub>bg</sub> ^ normBGExp - Ytxt ^ normTXTExp ) * scaleBoW;
+			return (SAPC < 15 ) ? "0%" : str(SAPC) + "%";
+		} else {
+			Y<sub>bg</sub>g = (Y<sub>bg</sub> > blkThrs) ? Y<sub>bg</sub> : Y<sub>bg</sub> + abs(Y<sub>bg</sub> - blkThrs) ^ blkClmp;
+			SAPC = ( Ybg ** revBGExp - Ytxt ** revTXTExp ) * scaleWoB;
+			return (SAPC > -15 ) ? "0%" : str(SAPC) + "%";
+		}  
+    </pre>
+
   </dd>
 </dl>
 <div><span>Note:</span>
@@ -287,37 +325,31 @@ Directions:
 </dl>
 <hr>	
 <h2 id="glossary">Glossary</h2>
-	
 <ul>
-<li>Light — visible light is energy in a narrow range of frequencies or wavelengths that can be detected or sensed by “photo sensitive cells” in the back of the eye. 
-<li>Color — color is not real, but a perception or interpretation by visual processing in the brain (in the brain’s visual cortex) of stimulus from photosensitive cells in the eye. 
-<ul><li>Hue — refers to a particular color sensation, i.e. red, green, yellow, blue, etc. Hue does not exist in reality, it is solely the perception of the visual system responding to light of different frequencies.
-<li>Saturation — the color intensity or purity, reduced by:
-<ul><li>tint (add white), 
-<li>shade (add black), 
-<li>tone (add grey)), 
+<li><stong>Light — </stong>visible light is energy in a narrow range of frequencies or wavelengths that can be detected or sensed by “photo sensitive cells” in the back of the eye. 
+<li><stong>Color — </stong>color is not real, but a perception or interpretation by visual processing in the brain (in the brain’s visual cortex) of stimulus from photosensitive cells in the eye. 
+<ul><li><stong>Hue — </stong>refers to a particular color sensation, i.e. red, green, yellow, blue, etc. Hue does not exist in reality, it is solely the perception of the visual system responding to light of different frequencies.
+<li><stong>Saturation — </stong>the color intensity or purity, reduced by:
+<ul><li><stong>tint</stong> (add white), 
+<li><stong>shade</stong> (add black), 
+<li><stong>tone</stong> (add grey)), 
 </ul></ul>
-<li>Brightness — a relative perception, see also perceptual lightness.
-<li>Luminance — a physical measure of visible light intensity. Luminance is mathematically linear as light is in the real world.
-<li>Lightness — the perception of physical light intensity. Perceptual lightness is mathematically nonlinear in regards to light in the real world, however, some perceptual models attempt to provide a mathematically linear version of perception which then presents light as non-linear.
-<li>Contrast — is a perception of the difference between two objects/elements. There are many forms of contrast, and the different types of contrast interact with and are affected by each other as well as being affected by other aspects of vision.
-<ul><li>Lightness contrast: the difference in lightness and darkness between two items. This is a particularly important form of contrast for information such as text.
-<li>Spatial contrast, in other words contrasts of size. Size contrasts directly affect the perception of lightness contrasts.
-<li>Hue contrast: the perception of different light frequencies. Hue contrasts are three times weaker than lightness contrasts, and some people have problems perceiving some hues, so hue should never be a primary design contrast.
-<li>Positional contrasts: the distance and/or orientation between objects is important in object recognition and identification.
-<li>Temporal contrasts: contrasts of time, speed, and change. 
-</ul><li>Visual Acuity — acuity refers to the ability of the eye’s optics to focus light onto the photoreceptors on the back of the eye.
+<li><stong>Brightness — </stong>a relative perception, see also perceptual lightness.
+<li><stong>Luminance (Y or L) — </stong>a physical measure of visible light intensity. Luminance is mathematically linear as light is in the real world.
+<li><stong>Perceived Lightness (L*) — </stong>the perception of physical light intensity. Perceptual lightness is mathematically nonlinear in regards to light in the real world, however, some perceptual models attempt to provide a mathematically linear version of perception which then presents light as non-linear. The symbol L* refers to CIE L*a*b*, and should not be confused with luminance L.
+<li><strong>Luma (<em>Y´</em> prime) — </strong> is a gamma encoded, weighted signal used in some video encodings. It is not to be confused with linear luminance.
+<li><strong>Gamma — </strong> or transfer curve (TRC) is a curve that is commonly applied to image data for storage or broadcast to reduce perceived noise and improve data utilization.
+<li><stong>Contrast — </stong>is a perception of the difference between two objects/elements. There are many forms of contrast, and the different types of contrast interact with and are affected by each other as well as being affected by other aspects of vision.
+<ul><li><stong>Lightness contrast:</stong> the difference in lightness and darkness between two items. This is a particularly important form of contrast for information such as text.
+<li><stong>Spatial contrast:</stong> in other words contrasts of size. Size contrasts directly affect the perception of lightness contrasts.
+<li><stong>Hue contrast: the perception of different light frequencies. Hue contrasts are three times weaker than lightness contrasts, and some people have problems perceiving some hues, so hue should never be a primary design contrast.
+<li><stong>Positional contrasts:</stong> the distance and/or orientation between objects is important in object recognition and identification.
+<li><stong>Temporal contrasts:</stong> contrasts of time, speed, and change. 
+</ul><li><stong>Visual Acuity — </stong>acuity refers to the ability of the eye’s optics to focus light onto the photoreceptors on the back of the eye.
 <ul><li>Poor acuity is usually understood as blurry vision or an inability to focus.
-</ul><li>Spatial Frequency — in a practical sense, this refers to the weight of a font, or the stroke width. A thinner font or narrower stroke width is a higher spatial frequency than a bolder or thicker stroke. Higher spatial frequencies require more luminance contrast to be visible than lower frequencies, such as a very bold large headline.
+</ul><li><stong>Spatial Frequency — </stong>in a practical sense, this refers to the weight of a font, or the stroke width. A thinner font or narrower stroke width is a higher spatial frequency than a bolder or thicker stroke. Higher spatial frequencies require more luminance contrast to be visible than lower frequencies, such as a very bold large headline.
 </ul>
 	
-<p><strong>Brightness</strong> is a perceptual attribute, it does not have a direct measure.</p>
-<p><strong>Luminance</strong> Y is a linear measure of light, spectrally weighted for normal vision but not adjusted for non-linear perception of lightness.</p>
-<p><strong>Perceived Lightness</strong> L* (Lstar) is a measure of how humans perceive lightness, and is non-linear relative to luminance to approximate the human vision non-linear response curve.</p>	
-<p><strong>Luma</strong> (<em>Y´</em> prime) is a gamma encoded, weighted signal used in some video encodings. It is not to be confused with linear luminance.</p>
-<p><strong>Gamma</strong> or transfer curve (TRC) is a curve that is commonly applied to image data for storage or broadcast to reduce perceived noise and improve data utilization. </p>
-
-
 		
 </section>
 
