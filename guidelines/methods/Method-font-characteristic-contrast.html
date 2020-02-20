@@ -236,13 +236,13 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 }
 
 //////////////////////////////////////////////////////////////
-///// END OF SAPC BLOCK 			//////////////////////////
+///// END OF SAPC BLOCK             //////////////////////////
 //////////////////////////////////////////////////////////////
 
 
 
 //////////////////////////////////////////////////////////////
-///// sRGB INPUT FORM BLOCK 		//////////////////////////
+///// sRGB INPUT FORM BLOCK         //////////////////////////
 //////////////////////////////////////////////////////////////
 
 
@@ -522,13 +522,13 @@ function RGBColor(color_string) {
 }
 
 //////////////////////////////////////////////////////////////
-///// END sRGB INPUT FORM BLOCK 		//////////////////////
+///// END sRGB INPUT FORM BLOCK 	//////////////////////
 //////////////////////////////////////////////////////////////
 
 <h3>HTML and Page Level Scripts</h3>
 
 
-<script>
+&lt;script&gt;
 		function getBGColor(s) {
 			var BGcolor = new RGBColor(s);
 			if (BGcolor.ok) {
@@ -586,9 +586,9 @@ function RGBColor(color_string) {
 			}
 		}
 		
-	</script>
-</head>
-<body onLoad="document.getElementById('inputBG').focus(); document.getElementById('inputText').focus(); document.getElementById('inputBG').focus(); testContrast(); ">
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onLoad="document.getElementById('inputBG').focus(); document.getElementById('inputText').focus(); document.getElementById('inputBG').focus(); testContrast(); "&gt;
 
 	<div id="demoArea"> 
 	
@@ -655,16 +655,16 @@ This project is part of the <a href="https://www.myndex.com/WEB/Perception">Mynd
 <br><br>
     <span onclick="testContrast()" style="cursor: pointer; text-decoration: underline">Manual Refresh</span>
 
-<script>
+&lt;script&gt;
 	function testContrast() {
 		var BG = new RGBColor(document.getElementById('inputBG').value);
 		var txt = new RGBColor(document.getElementById('inputText').value);
 		
 		document.getElementById('contrastResult').innerHTML =  SAPCbasic(BG.Rlin(),BG.Glin(),BG.Blin(),txt.Rlin(),txt.Glin(),txt.Blin());
 	}
-</script>		
-</body>
-</html>
+&lt;/script&gt;		
+&lt;/body&gt;
+&lt;/html&gt;
 
 </code>
 </pre>
