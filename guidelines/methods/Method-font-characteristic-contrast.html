@@ -150,13 +150,14 @@ You should totally buy his book on Inclusive Components.
 	
 <h3>Procedure</h3>
 <ol>
-<li>Using source code inspection of the text and background elements, obtain representaive sRGB values for the forground text (Vtxt) and the background color (Vbg). 
+<li>Using source code inspection of the text and background elements, obtain representaive sRGB values for the forground text (sRGBtxt) and the background color (sRGBbg). 
 	<ul>
 	<li>If an “eye dropper” type tool is used it must report the true CSS value of the color, not the displayed value. 
 	<li>Steps #2 and #3 refer to an automated contrast prediction tool. 
 	<li>Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/SAPC/">sRGB Advanced Perceptual Contrast (SAPC) Visual Contrast Demo</a>
-<li>Enter the background Vbg and text Vtxt CSS color values in the background and text input fields of the contrast tool. <b>Important: do not swap the background or text colors in the too.</b>
-<li>Calculate the predicted contrast percentage of Vtxt to background Vbg.
+	</ul>		
+<li>Enter the background sRGBbg and text sRGBtxt CSS color values in the background and text input fields of the contrast tool. <b>Important: do not swap the background or text colors in the tool entry fields.</b>
+<li>Calculate the predicted contrast percentage of sRGBtxt to background sRGBbg.
 <li>Compare this calculated value against the lookup table "Accessible Contrast by Font Size and Weight".
 <li>Check that the absolute value of the predicted contrast percentage meets or exceeds the required value for the font weight and size.
 </ol>
@@ -316,10 +317,11 @@ if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
 
   </dd>
 </dl>
-<div><span>Notes:</span>
+<div><span><em>Notes:</em></span><smaller>
   <p>Predicted contrast less than 15% is clamped to zero to simplyfy the math. </p>
   <p><em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em> 
-<br>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+</p><p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+</smaller>	
 </div>
 	
 <dl>
@@ -346,7 +348,7 @@ if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
 <li><strong>Contrast — </strong>is a perception of the difference between two objects/elements. There are many forms of contrast, and the different types of contrast interact with and are affected by each other as well as being affected by other aspects of vision.
 <ul><li><strong>Lightness contrast:</strong> the difference in lightness and darkness between two items. This is a particularly important form of contrast for information such as text.
 <li><strong>Spatial contrast:</strong> in other words contrasts of size. Size contrasts directly affect the perception of lightness contrasts.
-<li><strong>Hue contrast: the perception of different light frequencies. Hue contrasts are three times weaker than lightness contrasts, and some people have problems perceiving some hues, so hue should never be a primary design contrast.
+<li><strong>Hue contrast:</strong> the perception of different light frequencies. Hue contrasts are three times weaker than lightness contrasts, and some people have problems perceiving some hues, so hue should never be a primary design contrast.
 <li><strong>Positional contrasts:</strong> the distance and/or orientation between objects is important in object recognition and identification.
 <li><strong>Temporal contrasts:</strong> contrasts of time, speed, and change. 
 </ul><li><strong>Visual Acuity — </strong>acuity refers to the ability of the eye’s optics to focus light onto the photoreceptors on the back of the eye.
