@@ -95,26 +95,37 @@ You should totally buy his book on Inclusive Components.
 
 	    
 	    </p>
-	    <p>It's useful to point out that the term “Visual Contrast” can also be used to describe the differences of other visual perceptions: Contrast of size difference, contrast of position, contrast of speed or motion, etc. but these are not covered in this guidline at this time.</p>
+
   </dd>
 </dl>
 <div>
   
 </div>
 <dl id="">
-  <dt>relative contrast</dt>
+  <dt>Predicted Contrast</dt>
   <dd>
     
   </dd>
 </dl>
 <div><span></span>
-  <p>Relative contrast ranges from 0 to 150% and 25% is the point of invisibility (<em>i.e.</em>, no perceptable contrast) for many people with contrast related impairments.</p>
-  <p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+  <p>Predicted contrast is reported as a percentage using the methods in this guideline, based on the CSS color values in sRGB colorspace, and with device default antialiasing**. The TESTS section has a lookup table, but as a general guide:</p>
+	  
+	  <ul>
+	<li>25% is the point of invisibility (<em>i.e.</em>, no perceptable contrast) for many people with contrast related impairments. Designers should assume that contrsts lower than this may be invisible to some users.
+	<li>60% for Large, Bold Headlines where the major stroke width is at least 8px (6pt), or Non-text elements that are at least a solid 8x8px square such as buttons.
+	<li>60% For Bold Text no less than 16px (12pt) or non-text elements no less than 3px in the thinnest dimension.
+	<li>80% Normal Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 2px.
+	<li>100% 300 Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 1px.
+	</ul>	
+		
+		
+  <p>Note: **These values require that "Webkit-Font-Smoothing" be at the device or user agent default, such that <em>added</em> antialiasing is not enabled.</p>
 </div>
 <h3>Related Methods</h3>
 <p><a href="Method-visual-contrast-default.html">Use default fonts and colors.</a>
 </p>
-
+<h3>Alternate Meanings</h3>
+	<p>It's useful to point out that the term “Visual Contrast” can also be used to describe the differences of other visual perceptions: Contrast of size difference, contrast of position, contrast of speed or motion, etc. but these are not covered in this guideline at this time.</p>
 </section>
 
 	    
