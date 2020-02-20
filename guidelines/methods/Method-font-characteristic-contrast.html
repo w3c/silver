@@ -251,13 +251,13 @@ Directions:
 	<p>The simplified steps are:</p>
 	<ul>
 		<li>Convert the sRGB background and text colors to luminance Ybg and Ytxt
-			<ul>
-				<li>Convert from 8 bit integer to decimal 0.0-1.0
-				<li>Linearize (remove gamma)
-				<li>Apply sRGB coefficients and sum to Y<br>
-					<img src="images/sRGBcoefficients.png">
+		<ul>
+			<li>Convert from 8 bit integer to decimal 0.0-1.0
+			<li>Linearize (remove gamma)
+			<li>Apply sRGB coefficients and sum to Y<br>
+			<img src="images/sRGBcoefficients.png">
 					
-			 </ul>	
+		</ul>	
 		<li>Determine which is brighter for contrast polarity
 		<li>Apply pre-process modules (clamp, <em>FUTURE: color, spatial, adaptation</em>)
 		<li>Apply power curve exponents for perceptual lightness
@@ -267,21 +267,21 @@ Directions:
 	<h2>Basic SAPC Math Method Step by Step</h2>	
 
 	
-  <p>In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0, then linearize the gamma encoded RGB channels. <em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em>  <br>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+  <p>In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying the exponent. <em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em>  <br>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
 	  	
 
-    <p><strong>R<sub>linbg</sub></strong> = (sR<sub>bg</sub>/255.0) ^ 2.218
-    <strong>G<sub>linbg</sub></strong> = (sG<sub>bg</sub>/255.0) ^ 2.218
+    <p><strong>R<sub>linbg</sub></strong> = (sR<sub>bg</sub>/255.0) ^ 2.218<br>
+    <strong>G<sub>linbg</sub></strong> = (sG<sub>bg</sub>/255.0) ^ 2.218<br>
     <strong>B<sub>linbg</sub></strong> = (sB<sub>bg</sub>/255.0) ^ 2.218</p>
-    <p><strong>R<sub>lintxt</sub></strong> = (sR<sub>txt</sub>/255.0) ^ 2.218
-    <strong>G<sub>lintxt</sub></strong> = (sG<sub>txt</sub>/255.0) ^ 2.218
+    <p><strong>R<sub>lintxt</sub></strong> = (sR<sub>txt</sub>/255.0) ^ 2.218<br>
+    <strong>G<sub>lintxt</sub></strong> = (sG<sub>txt</sub>/255.0) ^ 2.218<br>
     <strong>B<sub>lintxt</sub></strong> = (sB<sub>txt</sub>/255.0) ^ 2.218</p>	  
  		
 	  
 <p>Then find the relative luminance (<var>Y</var>) of each color by applying the coefficients and summing.</p>
 			
-<strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub><br> 
-<strong>Y<sub>txt</sub></strong> = 0.2126 * R<sub>lintxt</sub> + 0.7156 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub> 
+<p><strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub><br> 
+<strong>Y<sub>txt</sub></strong> = 0.2126 * R<sub>lintxt</sub> + 0.7156 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub> </p>
 			
 </div>
 <dl id="dfn-relative-contrast">
