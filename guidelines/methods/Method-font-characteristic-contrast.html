@@ -102,16 +102,16 @@ You should totally buy his book on Inclusive Components.
   
 </div>
 <dl id="">
-  <dt>Predicted Contrast</dt>
+  <h3>Predicted Contrast</h3>
   <dd>
     
   </dd>
 </dl>
 <div><span></span>
-  <p>Predicted contrast is reported as a percentage using the methods in this guideline, based on the CSS color values in sRGB colorspace, and with device default antialiasing**. The TESTS section has a lookup table, but as a general guide:</p>
+  <p>Predicted contrast is reported as a percentage using the methods in this guideline, based on the CSS color values in sRGB colorspace, and with device default antialiasing**. The TESTS section has a lookup table for specific font and contrast combinations, but as a general guide:</p>
 	  
 	  <ul>
-	<li>25% is the point of invisibility (<em>i.e.</em>, no perceptable contrast) for many people with contrast related impairments. Designers should assume that contrsts lower than this may be invisible to some users.
+	<li>25% is the point of invisibility (<em>i.e., no perceptable contrast</em>) for many people with contrast related impairments. Designers should assume that contrsts lower than this may be invisible to some users.
 	<li>60% for Large, Bold Headlines where the major stroke width is at least 8px (6pt), or Non-text elements that are at least a solid 8x8px square such as buttons.
 	<li>60% For Bold Text no less than 16px (12pt) or non-text elements no less than 3px in the thinnest dimension.
 	<li>80% Normal Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 2px.
@@ -149,13 +149,20 @@ You should totally buy his book on Inclusive Components.
 	
 <h3>Procedure</h3>
 <ol>
-<li>Using source code inspection of the text and background elements, obtain representaive sRGB values for the forground text (Vtxt) and the background color (Vbg). If an “eye dropper” type tool is used it must report the true CSS value of the color, not the displayed value.  Steps #2 and #3 refer to an automated contrast prediction tool. Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/SAPC/">sRGB Advanced Perceptual Contrast (SAPC) Visual Contrast Demo</a>
-<li>Enter the background Vbg and text Vtxt CSS color values in the background and text input fields of the contrast tool. Important: do not swap the backgrond or text colors in the tool.
+<li>Using source code inspection of the text and background elements, obtain representaive sRGB values for the forground text (Vtxt) and the background color (Vbg). 
+	<ul>
+	<li>If an “eye dropper” type tool is used it must report the true CSS value of the color, not the displayed value. 
+	<li>Steps #2 and #3 refer to an automated contrast prediction tool. 
+	<li>Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/SAPC/">sRGB Advanced Perceptual Contrast (SAPC) Visual Contrast Demo</a>
+<li>Enter the background Vbg and text Vtxt CSS color values in the background and text input fields of the contrast tool. <b>Important: do not swap the background or text colors in the too.</b>
 <li>Calculate the predicted contrast percentage of Vtxt to background Vbg.
 <li>Compare this calculated value against the lookup table "Accessible Contrast by Font Size and Weight".
 <li>Check that the absolute value of the predicted contrast percentage meets or exceeds the required value for the font weight and size.
 </ol>
+	
 <h3>Accessible Contrast by Font Size and Weight</h3>
+	
+	
 <p>Lookup Table by Font Size (left-most column) and Weight (top-most row).
 Directions:  
 <ul>
@@ -207,19 +214,19 @@ Directions:
 <td>34</td><td>•</td><td>83</td><td>59</td><td>57</td><td>53</td><td>50</td><td>49</td><td>48</td><td>46</td>
 </tr>
 <tr>
-<td>36</td><td>100</td><td>80</td><td>58</td><td>53</td><td>50</td><td>48</td><td>47</td><td>46</td><td>44</td>
+<td>36</td><td>120</td><td>80</td><td>58</td><td>53</td><td>50</td><td>48</td><td>47</td><td>46</td><td>44</td>
 </tr>
 <tr>
-<td>40</td><td>85</td><td>75</td><td>56</td><td>50</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td>
+<td>40</td><td>110</td><td>75</td><td>56</td><td>50</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td>
 </tr>
 <tr>
-<td>48</td><td>80</td><td>70</td><td>54</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td>
+<td>48</td><td>100</td><td>70</td><td>54</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td>
 </tr>
 <tr>
-<td>56</td><td>75</td><td>65</td><td>52</td><td>43</td><td>43</td><td>42</td><td>42</td><td>41</td><td>41</td>
+<td>56</td><td>90</td><td>65</td><td>52</td><td>43</td><td>43</td><td>42</td><td>42</td><td>41</td><td>41</td>
 </tr>
 <tr>
-<td>64</td><td>70</td><td>60</td><td>50</td><td>40</td><td>40</td><td>40</td><td>40</td><td>40</td><td>40</td>
+<td>64</td><td>80</td><td>60</td><td>50</td><td>40</td><td>40</td><td>40</td><td>40</td><td>40</td><td>40</td>
 </tr>
 </table>
 <h3>Expected Results</h3>
@@ -234,19 +241,11 @@ Directions:
 <div class="guidanceBox">
 <h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability </h3>
 </div>
-<h2 id="glossary">Glossary</h2>
-<p><strong>Brightness</strong> is a perceptual attribute, it does not have a direct measure.</p>
-<p><strong>Luminance</strong> Y is a linear measure of light, spectrally weighted for normal vision but not adjusted for non-linear perception of lightness.</p>
-<p><strong>Perceived Lightness</strong> L* (Lstar) is a measure of how humans perceive lightness, and is non-linear relative to luminance to approximate the human vision non-linear response curve.</p>	
-<p><strong>Luma</strong> (<em>Y´</em> prime) is a gamma encoded, weighted signal used in some video encodings. It is not to be confused with linear luminance.</p>
-<p><strong>Gamma</strong> or transfer curve (TRC) is a curve that is commonly applied to image data for storage or broadcast to reduce perceived noise and improve data utilization. </p>
 
-
-<hr>	
 	
 <h2 id="math">SAPC Math</h2>
 	
-<div>SAPC is the sRGB Advanced Perceptual Contrast prediction algorithym. The math assumes the use of the web standard sRGB colorspace.
+<div>SAPC is the sRGB Advanced Perceptual Contrast prediction algorithm. The math assumes the use of the web standard sRGB colorspace.
 	
   <p>For the sRGB colorspace, the relative luminance (<var>Y</var>) of a color is defined as <var>Y</var> = 0.2126 * <strong>R</strong> + 0.7156 * <strong>G</strong> + 0.0722 * <strong>B</strong> where <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are defined as:</p>
   <ul>
@@ -286,6 +285,40 @@ Directions:
 <dt>TBD</dt>
 <dd></dd>
 </dl>
+<hr>	
+<h2 id="glossary">Glossary</h2>
+	
+<ul>
+<li>Light — visible light is energy in a narrow range of frequencies or wavelengths that can be detected or sensed by “photo sensitive cells” in the back of the eye. 
+<li>Color — color is not real, but a perception or interpretation by visual processing in the brain (in the brain’s visual cortex) of stimulus from photosensitive cells in the eye. 
+<ul><li>Hue — refers to a particular color sensation, i.e. red, green, yellow, blue, etc. Hue does not exist in reality, it is solely the perception of the visual system responding to light of different frequencies.
+<li>Saturation — the color intensity or purity, reduced by:
+<ul><li>tint (add white), 
+<li>shade (add black), 
+<li>tone (add grey)), 
+</ul></ul>
+<li>Brightness — a relative perception, see also perceptual lightness.
+<li>Luminance — a physical measure of visible light intensity. Luminance is mathematically linear as light is in the real world.
+<li>Lightness — the perception of physical light intensity. Perceptual lightness is mathematically nonlinear in regards to light in the real world, however, some perceptual models attempt to provide a mathematically linear version of perception which then presents light as non-linear.
+<li>Contrast — is a perception of the difference between two objects/elements. There are many forms of contrast, and the different types of contrast interact with and are affected by each other as well as being affected by other aspects of vision.
+<ul><li>Lightness contrast: the difference in lightness and darkness between two items. This is a particularly important form of contrast for information such as text.
+<li>Spatial contrast, in other words contrasts of size. Size contrasts directly affect the perception of lightness contrasts.
+<li>Hue contrast: the perception of different light frequencies. Hue contrasts are three times weaker than lightness contrasts, and some people have problems perceiving some hues, so hue should never be a primary design contrast.
+<li>Positional contrasts: the distance and/or orientation between objects is important in object recognition and identification.
+<li>Temporal contrasts: contrasts of time, speed, and change. 
+</ul><li>Visual Acuity — acuity refers to the ability of the eye’s optics to focus light onto the photoreceptors on the back of the eye.
+<ul><li>Poor acuity is usually understood as blurry vision or an inability to focus.
+</ul><li>Spatial Frequency — in a practical sense, this refers to the weight of a font, or the stroke width. A thinner font or narrower stroke width is a higher spatial frequency than a bolder or thicker stroke. Higher spatial frequencies require more luminance contrast to be visible than lower frequencies, such as a very bold large headline.
+</ul>
+	
+<p><strong>Brightness</strong> is a perceptual attribute, it does not have a direct measure.</p>
+<p><strong>Luminance</strong> Y is a linear measure of light, spectrally weighted for normal vision but not adjusted for non-linear perception of lightness.</p>
+<p><strong>Perceived Lightness</strong> L* (Lstar) is a measure of how humans perceive lightness, and is non-linear relative to luminance to approximate the human vision non-linear response curve.</p>	
+<p><strong>Luma</strong> (<em>Y´</em> prime) is a gamma encoded, weighted signal used in some video encodings. It is not to be confused with linear luminance.</p>
+<p><strong>Gamma</strong> or transfer curve (TRC) is a curve that is commonly applied to image data for storage or broadcast to reduce perceived noise and improve data utilization. </p>
+
+
+		
 </section>
 
 <section id="section6">
