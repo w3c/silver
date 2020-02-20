@@ -65,51 +65,50 @@ You should totally buy his book on Inclusive Components.
 </ul>
 </section>
 
+	    
+	    
 <section id="section2">
 <h2>Detailed Description</h2>
 <div class="guidanceBox">
 <h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability </h3>
 </div>
+
+	
 	
 <h2 id="understanding">Understanding Contrast Perception</h2>
-<dl id="dfn-relative-luminance">
+<dl id="">
   <dt></dt>
   <dd>
-    <p></p>
+    <p>As used on this page, Visual Contrast means the perceived difference between two colors displayed on a computer monitor, such as the color of the text against the color of the background. Our perception of contrast is a function of the Human Visual System (HVS) which includes the eye, optic nerve, and several areas of the brain that are either dedicated to processing vision, or that share vision processing with other senses such as hearing.</p>
+	<p>The eye consists of an optical portion including a lens, and a light sensitive portion known as the retina. Muscles in the eye adjust the shape of the lens to adjust the focus of incoming light, so that an image of the world around us is focused onto the retina. Light sensitive cells on the retina then convert light into electrical impulses that are sent to the brain's vision processing center, called the visual cortex.</p>
+	<p>Our perception of contrast and ultimately the readability of text is affected by many interdependant factors, including:
+	<ul>
+		<li>The user's personal vision quality in terms of sharpness, glare, and contrast capability		
+		<li>Font weight or stroke width, and font size
+		<li>The lightness or darkness difference between the background and the text
+		<li>The overall lightness or darkness of the screen and the light in the room as this affect the eye's light or dark adaptation to the environment
+		<li>The padding and spacing around the text which affects the eye's local adaptation to the text area	
+		<li>The hue or color difference between the background and text, not including the lightness difference	mentioned above
+	  </ul>
+	<p>All of these interdependant factors affect the perception of contrast and readability. As we are concerned with readability on computer screens, we can made some assumptions about a range of brightness, and a typical viewing environment. This provides a baseline standard for all users for best readability of content, or a minimum level of legibility for non-content. Then, we can set how different impairments require different adjustments or user customization to accomodate the neads of each individual user.</p>
+	  <p>For instance, a user with poor "acuity", that is, poor sharpness where they cannot focus on small text, will need to be able to zoom the text larger. A user with poor contrast sensitivity may have good sharpness, but unable to perceive colors that are too similar in lightness. Yet another user with a glare problem may need lower contrast, and/or a reduction in blue, to reduce glare or halos interfereing with readability.
+
+	    
+	    </p>
+	    <p>It's useful to point out that the term “Visual Contrast” can also be used to describe the differences of other visual perceptions: Contrast of size difference, contrast of position, contrast of speed or motion, etc. but these are not covered in this guidline at this time.</p>
   </dd>
 </dl>
-<div>Note:
-  <p>For the sRGB colorspace, the relative luminance (<var>Y</var>) of a color is defined as <var>Y</var> = 0.2126 * <strong>R</strong> + 0.7156 * <strong>G</strong> + 0.0722 * <strong>B</strong> where <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are defined as:</p>
-  <ul>
-    <li><strong>R</strong> = RsRGB ^ 2.218</li>
-    <li><strong>G</strong> = GsRGB ^ 2.218</li>
-    <li><strong>B</strong> = BsRGB ^ 2.218</li>
-  </ul>
-  <p>and RsRGB, GsRGB, and BsRGB are defined as:</p>
-  <ul>
-    <li>RsRGB = R8bit/255</li>
-    <li>GsRGB = G8bit/255</li>
-    <li>BsRGB = B8bit/255</li>
-  </ul>
-  <p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+<div>
+  
 </div>
-<dl id="dfn-relative-contrast">
+<dl id="">
   <dt>relative contrast</dt>
   <dd>
-    <p>The perceived relative visual contrast (<var>P</var>) between a foreground color and  a background color expressed as a percentange is definded as:</p>
-    <ul>
-      <li>if <strong>Lf</strong> &lt; <strong>Lb</strong> then <var>P</var> = (<strong> Lf</strong> ^ 0.40 &minus; <strong>Lb</strong> ^ 0.44 ) * 161.8</li>
-      <li> else <var>P</var> = ( <strong>Lb</strong> ^ 0.44 &minus; <strong>Lf</strong> ^ 0.40 ) * 161.8 </li>
-    </ul>
-    <p> where </p>
-    <ul>
-      <li><strong>Lf</strong> is the <a href="#dfn-relative-luminance">relative luminance</a> of the foreground color, and</li>
-      <li><strong>Lb</strong> is the <a href="#dfn-relative-luminance">relative luminance</a> of the background color.</li>
-    </ul>
+    
   </dd>
 </dl>
-<div><span>Note:</span>
-  <p>Relative contrast ranges from 0 to ???? and 25% is the point of invisibility (<em>i.e.</em>, no perceptable contrast) for many people.</p>
+<div><span></span>
+  <p>Relative contrast ranges from 0 to 150% and 25% is the point of invisibility (<em>i.e.</em>, no perceptable contrast) for many people with contrast related impairments.</p>
   <p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
 </div>
 <h3>Related Methods</h3>
@@ -118,6 +117,9 @@ You should totally buy his book on Inclusive Components.
 
 </section>
 
+	    
+	    
+	    
 <section id="section3">
 <h2>Code Samples</h2>
 <div class="guidanceBox">
@@ -133,6 +135,7 @@ You should totally buy his book on Inclusive Components.
 <div class="guidanceBox">
 <h3>Select font characteristics and colors for both the background and the text to provide enough contrast for readability</h3>
 </div>
+	
 <h3>Procedure</h3>
 <ol>
 <li>Using source code inspection of the text and background elements, obtain representaive sRGB values for the forground text (Vtxt) and the background color (Vbg). If an “eye dropper” type tool is used it must report the true CSS value of the color, not the displayed value.  Steps #2 and #3 refer to an automated contrast prediction tool. Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/SAPC/">sRGB Advanced Perceptual Contrast (SAPC) Visual Contrast Demo</a>
