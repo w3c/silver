@@ -257,7 +257,7 @@ Directions:
 				<li>Apply sRGB coefficients and sum to Y<br>
 					<img src="images/sRGBcoefficients.png">
 					
-			
+			 </ul>	
 		<li>Determine which is brighter for contrast polarity
 		<li>Apply pre-process modules (clamp, <em>FUTURE: color, spatial, adaptation</em>)
 		<li>Apply power curve exponents for perceptual lightness
@@ -267,49 +267,38 @@ Directions:
 	<h2>Basic SAPC Math Method Step by Step</h2>	
 
 	
-  <p>In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0</p>
-	  
-<ul>
-    <li>dR<sub>bg</sub> = sR<sub>bg</sub>/255.0</li>
-    <li>dG<sub>bg</sub> = sG<sub>bg</sub>/255.0</li>
-    <li>dB<sub>bg</sub> = sB<sub>bg</sub>/255.0</li>
-    <li>dR<sub>txt</sub> = sR<sub>txt</sub>/255.0</li>
-    <li>dG<sub>txt</sub> = sG<sub>txt</sub>/255.0</li>
-    <li>dB<sub>txt</sub> = sB<sub>txt</sub>/255.0</li>		
-  </ul>
-			
-<p>Convert the gamma encoded RGB channels to linear values. <em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em>   The &ldquo;^&rdquo; character is the exponentiation operator.</p>
-			
-  <ul>
-    <li><strong>R<sub>linbg</sub></strong> = dR<sub>bg</sub> ^ 2.218</li>
-    <li><strong>G<sub>linbg</sub></strong> = dG<sub>bg</sub> ^ 2.218</li>
-    <li><strong>B<sub>linbg</sub></strong> = dB<sub>bg</sub> ^ 2.218</li>
-    <li><strong>R<sub>lintxt</sub></strong> = dR<sub>txt</sub> ^ 2.218</li>
-    <li><strong>G<sub>lintxt</sub></strong> = dG<sub>txt</sub> ^ 2.218</li>
-    <li><strong>B<sub>lintxt</sub></strong> = dB<sub>txt</sub> ^ 2.218</li>	  
-  </ul>			
+  <p>In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0, then linearize the gamma encoded RGB channels. <em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em>  <br>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
+	  	
+
+    <p><strong>R<sub>linbg</sub></strong> = (sR<sub>bg</sub>/255.0) ^ 2.218
+    <strong>G<sub>linbg</sub></strong> = (sG<sub>bg</sub>/255.0) ^ 2.218
+    <strong>B<sub>linbg</sub></strong> = (sB<sub>bg</sub>/255.0) ^ 2.218</p>
+    <p><strong>R<sub>lintxt</sub></strong> = (sR<sub>txt</sub>/255.0) ^ 2.218
+    <strong>G<sub>lintxt</sub></strong> = (sG<sub>txt</sub>/255.0) ^ 2.218
+    <strong>B<sub>lintxt</sub></strong> = (sB<sub>txt</sub>/255.0) ^ 2.218</p>	  
+ 		
 	  
 <p>Then find the relative luminance (<var>Y</var>) of each color by applying the coefficients and summing.</p>
 			
-<strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub> 
+<strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub><br> 
 <strong>Y<sub>txt</sub></strong> = 0.2126 * R<sub>lintxt</sub> + 0.7156 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub> 
 			
 </div>
 <dl id="dfn-relative-contrast">
-  <dt>Predicted Contrast</dt>
+  <h3>Predicted Contrast</h3>
   <dd>
     <p>The Predicted Visual Contrast (<var>C</var>) between a foreground color and a background color expressed as a percentange is defined as:</p>
-	  
-    <pre>
-      if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
-		  	Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + abs(Ytxt - blkThrs) ^ blkClmp;
-			SAPC = ( Y<sub>bg</sub> ^ normBGExp - Ytxt ^ normTXTExp ) * scaleBoW;
-			return (SAPC < 15 ) ? "0%" : str(SAPC) + "%";
-		} else {
-			Y<sub>bg</sub>g = (Y<sub>bg</sub> > blkThrs) ? Y<sub>bg</sub> : Y<sub>bg</sub> + abs(Y<sub>bg</sub> - blkThrs) ^ blkClmp;
-			SAPC = ( Ybg ** revBGExp - Ytxt ** revTXTExp ) * scaleWoB;
-			return (SAPC > -15 ) ? "0%" : str(SAPC) + "%";
-		}  
+	 
+<pre>
+if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
+	Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + abs(Ytxt - blkThrs) ^ blkClmp;
+	SAPC = ( Y<sub>bg</sub> ^ normBGExp - Ytxt ^ normTXTExp ) * scaleBoW;
+	return (SAPC < 15 ) ? "0%" : str(SAPC) + "%";
+} else {
+	Y<sub>bg</sub>g = (Y<sub>bg</sub> > blkThrs) ? Y<sub>bg</sub> : Y<sub>bg</sub> + abs(Y<sub>bg</sub> - blkThrs) ^ blkClmp;
+	SAPC = ( Ybg ** revBGExp - Ytxt ** revTXTExp ) * scaleWoB;
+	return (SAPC > -15 ) ? "0%" : str(SAPC) + "%";
+}  
     </pre>
 
   </dd>
