@@ -144,7 +144,7 @@ You should totally buy his book on Inclusive Components.
 /////	SAPC tool version 0.97 by Andrew Somers
 /////	https://www.myndex.com/WEB/Perception
 /////	Color value input parsing based substantially on rgbcolor.js by
-/////	Stoyan Stefanov <sstoo@gmail.com>
+/////	Stoyan Stefanov &lt;sstoo@gmail.com&gt;
 /////	His site: http://www.phpied.com/rgb-color-parser-in-javascript/
 /////	MIT license
 ////////////////////////////////////////////////////////////////////////////////
@@ -209,20 +209,20 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 	// Note that reverse (white text on black) intentionally
 	// returns a negative number
 
-	if ( Ybg > Ytxt ) {	///// For normal polarity, black text on white
+	if ( Ybg &gt; Ytxt ) {	///// For normal polarity, black text on white
 
 			// soft clamp darkest color if near black.
-		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + Math.abs(Ytxt - blkThrs) ** blkClmp;
+		Ytxt = (Ytxt &gt; blkThrs) ? Ytxt : Ytxt + Math.abs(Ytxt - blkThrs) ** blkClmp;
 		SAPC = ( Ybg ** normBGExp - Ytxt ** normTXTExp ) * scaleBoW;
 		
-		return (SAPC < 15 ) ? "0%" : SAPC.toPrecision(3) + "%";
+		return (SAPC &lt; 15 ) ? "0%" : SAPC.toPrecision(3) + "%";
 		
 	} else {			///// For reverse polarity, white text on black
 
-		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + Math.abs(Ybg - blkThrs) ** blkClmp;
+		Ybg = (Ybg &gt; blkThrs) ? Ybg : Ybg + Math.abs(Ybg - blkThrs) ** blkClmp;
 		SAPC = ( Ybg ** revBGExp - Ytxt ** revTXTExp ) * scaleWoB;
 
-		return (SAPC > -15 ) ? "0%" : SAPC.toPrecision(3) + "%";
+		return (SAPC &gt; -15 ) ? "0%" : SAPC.toPrecision(3) + "%";
 	}
 
 	// If SAPC's more than 15%, return that value, otherwise clamp to zero
@@ -455,7 +455,7 @@ function RGBColor(color_string) {
 
 
 	// search through the definitions to find a match
-	for (var i = 0; i < color_defs.length; i++) {
+	for (var i = 0; i &lt; color_defs.length; i++) {
 		var re = color_defs[i].re;
 		var processor = color_defs[i].process;
 		var bits = re.exec(color_string);
@@ -470,9 +470,9 @@ function RGBColor(color_string) {
 
 
 	// validate & cleanup values
-	this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
-	this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
-	this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
+	this.r = (this.r &lt; 0 || isNaN(this.r)) ? 0 : ((this.r &gt; 255) ? 255 : this.r);
+	this.g = (this.g &lt; 0 || isNaN(this.g)) ? 0 : ((this.g &gt; 255) ? 255 : this.g);
+	this.b = (this.b &lt; 0 || isNaN(this.b)) ? 0 : ((this.b &gt; 255) ? 255 : this.b);
 
 
 
@@ -525,8 +525,20 @@ function RGBColor(color_string) {
 ///// END sRGB INPUT FORM BLOCK 	//////////////////////
 //////////////////////////////////////////////////////////////
 
-<h3>HTML and Page Level Scripts</h3>
+</code></pre>
+	
+	<h3>HTML and Page Level Scripts</h3>
 
+<pre><code>
+
+&lt;?xml version="1.1" encoding="utf-8"?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+&lt;title&gt;SAPC Contrast Demo&lt;/title&gt;
+
+&lt;script src="SAPCsRGB.js"&gt;
+// Place the above blocks in file SAPCsRGB.js
+&lt;/script&gt;
 
 &lt;script&gt;
 		function getBGColor(s) {
@@ -541,15 +553,15 @@ function RGBColor(color_string) {
 					= 'rgb(' + BGcolor.r + ', ' + BGcolor.g + ', ' + BGcolor.b + ')';
 					
 				document.getElementById('BGresult-text').innerHTML =
-					'<code><b>HEX:</b> ' + BGcolor.toHex()
-					  + ' <b>sRGB:</b> ' + BGcolor.toRGB()
-					  + '<br><b>Decimal:</b> rgb( ' + BGcolor.toDec()[0].toPrecision(2)
+					'&lt;code&gt;&lt;b&gt;HEX:&lt;/b&gt; ' + BGcolor.toHex()
+					  + ' &lt;b&gt;sRGB:&lt;/b&gt; ' + BGcolor.toRGB()
+					  + '&lt;br&gt;&lt;b&gt;Decimal:&lt;/b&gt; rgb( ' + BGcolor.toDec()[0].toPrecision(2)
 					  + ', ' + BGcolor.toDec()[1].toPrecision(2)
 					  + ', ' + BGcolor.toDec()[2].toPrecision(2)
-					  + ' )<br><b>Lin:</b> R ' + BGcolor.Rlin().toPrecision(3)
+					  + ' )&lt;br&gt;&lt;b&gt;Lin:&lt;/b&gt; R ' + BGcolor.Rlin().toPrecision(3)
 					  + '&nbsp; G ' + BGcolor.Glin().toPrecision(3)
 					  + '&nbsp; B ' + BGcolor.Blin().toPrecision(3)
-					  + '<br><b>Luminance:</b> Y ' + BGcolor.toY().toPrecision(3) + '</code>'
+					  + '&lt;br&gt;&lt;b&gt;Luminance:&lt;/b&gt; Y ' + BGcolor.toY().toPrecision(3) + '&lt;/code&gt;'
 					  ;
 			} else {
 				document.getElementById('BGresult-text').innerHTML = 'Invalid Color';
@@ -570,15 +582,15 @@ function RGBColor(color_string) {
 					= 'rgb(' + textColor.r + ', ' + textColor.g + ', ' + textColor.b + ')';	
 					
 				document.getElementById('textResult-text').innerHTML =
-					'<code><b>HEX:</b> ' + textColor.toHex()
-					  + ' <b>sRGB:</b> ' + textColor.toRGB()
-					  + '<br><b>Decimal:</b> rgb( ' + textColor.toDec()[0].toPrecision(2)
+					'&lt;code&gt;&lt;b&gt;HEX:&lt;/b&gt; ' + textColor.toHex()
+					  + ' &lt;b&gt;sRGB:&lt;/b&gt; ' + textColor.toRGB()
+					  + '&lt;br&gt;&lt;b&gt;Decimal:&lt;/b&gt; rgb( ' + textColor.toDec()[0].toPrecision(2)
 					  + ', ' + textColor.toDec()[1].toPrecision(2)
 					  + ', ' + textColor.toDec()[2].toPrecision(2)
-					  + ' )<br><b>Lin:</b> R ' + textColor.Rlin().toPrecision(3)
+					  + ' )&lt;br&gt;&lt;b&gt;Lin:&lt;/b&gt; R ' + textColor.Rlin().toPrecision(3)
 					  + '&nbsp; G ' + textColor.Glin().toPrecision(3)
 					  + '&nbsp; B ' + textColor.Blin().toPrecision(3)
-					  + '<br><b>Luminance:</b> Y ' + textColor.toY().toPrecision(3) + '</code>'
+					  + '&lt;br&gt;&lt;b&gt;Luminance:&lt;/b&gt; Y ' + textColor.toY().toPrecision(3) + '&lt;/code&gt;'
 					  ;
 			} else {
 				document.getElementById('textResult-text').innerHTML = 'Invalid Color';
@@ -590,70 +602,70 @@ function RGBColor(color_string) {
 &lt;/head&gt;
 &lt;body onLoad="document.getElementById('inputBG').focus(); document.getElementById('inputText').focus(); document.getElementById('inputBG').focus(); testContrast(); "&gt;
 
-	<div id="demoArea"> 
+	&lt;div id="demoArea"&gt; 
 	
-		<div id="contrast">        
-			<div id="contrastLabel">SAPC Contrast</div>
-			<div id="contrastResult">NaN</div>
-        </div>
+		&lt;div id="contrast"&gt;        
+			&lt;div id="contrastLabel"&gt;SAPC Contrast&lt;/div&gt;
+			&lt;div id="contrastResult"&gt;NaN&lt;/div&gt;
+        &lt;/div&gt;
        
-        <h1 style="text-align: left; ">SAPC Visual Contrast Demo</h1>
+        &lt;h1 style="text-align: left; "&gt;SAPC Visual Contrast Demo&lt;/h1&gt;
 
-        <div class="">
+        &lt;div class=""&gt;
 			This is the Basic SAPC contrast method using JavaScript. 
-			<br>Just type in color values as #hex, rgb(), or HTML name 
-			<br>then navigate away from the input field by either
-			<br>pressing TAB or clicking elsewhere on the page.
-        </div>
-    </div>           
+			&lt;br&gt;Just type in color values as #hex, rgb(), or HTML name 
+			&lt;br&gt;then navigate away from the input field by either
+			&lt;br&gt;pressing TAB or clicking elsewhere on the page.
+        &lt;/div&gt;
+    &lt;/div&gt;           
 
 
-	<div id="inputArea">        
-		<div style="position: relative; float: left;">
-			<h3>ENTER BACKGROUND COLOR
-			</h3>
-			<form id="colorForm" name="colorForm" onsubmit="getBGColor(this.elements[0].value); getTextColor(this.elements[1].value); return false;">
-				<div class="input">
-					<input
+	&lt;div id="inputArea"&gt;        
+		&lt;div style="position: relative; float: left;"&gt;
+			&lt;h3&gt;ENTER BACKGROUND COLOR
+			&lt;/h3&gt;
+			&lt;form id="colorForm" name="colorForm" onsubmit="getBGColor(this.elements[0].value); getTextColor(this.elements[1].value); return false;"&gt;
+				&lt;div class="input"&gt;
+					&lt;input
 						id="inputBG"
 						type="text"
 						value="#BA9"
-						onblur="getBGColor(this.value); testContrast();">
-				</div>
+						onblur="getBGColor(this.value); testContrast();"&gt;
+				&lt;/div&gt;
 		
-			<div id="BGresult-wrap"><div id="BGresult"></div></div>
-			<div class="codeBlock" id="BGresult-text"></div>
-	   </div>
+			&lt;div id="BGresult-wrap"&gt;&lt;div id="BGresult"&gt;&lt;/div&gt;&lt;/div&gt;
+			&lt;div class="codeBlock" id="BGresult-text"&gt;&lt;/div&gt;
+	   &lt;/div&gt;
 	
         
-		<div style="position: relative; float: right;">
-			<h3>ENTER TEXT COLOR
-			</h3>
-				<div class="input">
-					<input
+		&lt;div style="position: relative; float: right;"&gt;
+			&lt;h3&gt;ENTER TEXT COLOR
+			&lt;/h3&gt;
+				&lt;div class="input"&gt;
+					&lt;input
 						id="inputText"
 						type="text"
 						value="#319"
-						onblur="getTextColor(this.value); testContrast();">
-				</div>
-			</form>
-			<div id="textResult-wrap"><div id="textResult"></div></div>
-			<code id="textResult-text"></code>
+						onblur="getTextColor(this.value); testContrast();"&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+			&lt;div id="textResult-wrap"&gt;&lt;div id="textResult"&gt;&lt;/div&gt;&lt;/div&gt;
+			&lt;code id="textResult-text"&gt;&lt;/code&gt;
 	
-		</div>
-	</div>
+		&lt;/div&gt;
+	&lt;/div&gt;
 
-<div style="font-size: 12px;">The page and code is Copyright © 2020 by Andrew Somers.
-<br>Licensed to the W3.org per their cooperative agreement. 
-<br>Otherwise under the MIT license. 
-<br>Repository: <a href="https://github.com/Myndex/SAPC/tree/master/JS">https://github.com/Myndex/SAPC/tree/master/JS</a>
-<br>Color value input parsing based substantially on rgbcolor.js by
-<br>Stoyan Stefanov <sstoo@gmail.com> used per MIT license.
-<br>
-This project is part of the <a href="https://www.myndex.com/WEB/Perception">Myndex Web Perception Experiment.
-</a>
-<br><br>
-    <span onclick="testContrast()" style="cursor: pointer; text-decoration: underline">Manual Refresh</span>
+&lt;div style="font-size: 12px;"&gt;The page and code is Copyright © 2020 by Andrew Somers.
+&lt;br&gt;Licensed to the W3.org per their cooperative agreement. 
+&lt;br&gt;Otherwise under the MIT license. 
+&lt;br&gt;Repository: &lt;a href="https://github.com/Myndex/SAPC/tree/master/JS"&gt;https://github.com/Myndex/SAPC/tree/master/JS&lt;/a&gt;
+&lt;br&gt;Color value input parsing based substantially on rgbcolor.js by
+&lt;br&gt;Stoyan Stefanov &lt;sstoo@gmail.com&gt; used per MIT license.
+&lt;br&gt;
+This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&gt;Myndex Web Perception Experiment.
+&lt;/a&gt;
+&lt;br&gt;&lt;br&gt;
+    &lt;span onclick="testContrast()" style="cursor: pointer; text-decoration: underline"&gt;Manual Refresh&lt;/span&gt;
 
 &lt;script&gt;
 	function testContrast() {
