@@ -14,6 +14,13 @@ You should totally buy his book on Inclusive Components.
   </head>
   <body>
 <p class="breadcrumb"><a href="../../guidelines/index.html">Silver</a> > <a href="../explainers/VisualContrast.html">Visual Contrast</a> > Select font characteristics and background colors to provide enough contrast </p>
+<div class="guidanceBox">
+	<h1>Select font characteristics and background colors to provide enough contrast </h1>
+		<p>Use tools to evaluate font size, font stroke width, background color, font color, and nearby colors and adjust the attribute and color of those elements to achieve good visual contrast. </p>
+</div>
+<div class="informBox"
+<p>This method contains helpful information, but is not required (informative).</p>
+</div>
     <div class="tabbed">
       <ul>
         <li>
@@ -38,10 +45,6 @@ You should totally buy his book on Inclusive Components.
 
 <section id="section1">
 <h2>Basics</h2>
-<div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
-	<p>Use tools to evaluate font size, font stroke width, background color, font color, and nearby colors and adjust the attribute and color of those elements to achieve good visual contrast. </p>
-</div>
 <h3>Status</h3>
 <ul>
 <li>Last Updated: 20 January 2020
@@ -66,9 +69,6 @@ You should totally buy his book on Inclusive Components.
 
 <section id="section2">
 <h2>Detailed Description</h2>
-<div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
-</div>
 <p>This needs work, but this info needs to go somewhere appropriate.  
 </p>
 <h2 id="glossary">Glossary</h2>
@@ -120,25 +120,19 @@ You should totally buy his book on Inclusive Components.
 
 <section id="section3">
 <h2>Code Samples</h2>
-<div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
-</div>
 <p>TBD
 </p>
 </section>
 
 <section id="section4">
 <h2>Tests</h2>
-<div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
-</div>
 <h3>Procedure</h3>
 <ol>
-<li>Using source code inspection or an “eye dropper” type tool, obtain representaive sRGB values for the the forground text and the background color. Steps #2 and steps #3 can be calculated using an automated tool. Note: Since this is a new formula, we have provided a link to a tool for users to comment on this new algorithm.  <a href="https://www.myndex.com/SAPC/">Advanced Perceptual Contrast Algorithm (APCA) Visual Contrast Demo</a>
-<li>Calculate the relative lumance of the text (Rt) and background (Rb).
-<li>Calculate the relative contrast of Rt and background Rb.
+<li>Using source code inspection or an “eye dropper” type tool, obtain representaive sRGB values for the the forground text and the background color.  
+<li>Using an automated tool like <a href="https://www.myndex.com/SAPC/">Advanced Perceptual Contrast Algorithm (APCA) Visual Contrast Demo</a> to calculate the relative contrast between foreground text and background color.
 <li>Compare this calculated value against lookup table "Accessible Contrast by Font Size and Weight".
-<li>Check that the relative contrast ratio meets or excedes the required value.
+<li>Check that the relative contrast ratio meets or exceeds the required value.
+
 </ol>
 <h3>Accessible Contrast by Font Size and Weight</h3>
 <p>Lookup Table by Font Size (left-most column) and Weight (top-most row).
@@ -147,10 +141,7 @@ Directions:
 <li>Cross index nominal font size (in CSS px) to CSS weight.  
 <li>APCA value must meet or exceed the value listed.  
 <li>If the APCA value is negative, use the positive value. For example, if the APCA value is -58, use 58.  
-<li>An “x” indicates that a larger font size (or heavier font weight) must be used.
-<li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
-<li>Serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier).
-<li>Thin decorative fonts should use values for two rows above the nominal font size.  
+<li>An “x” indicates that a larger font size (or heavier font weight) must be used. 
 </ul>
 </p>
 <table class="TFtable">
@@ -170,16 +161,16 @@ Directions:
 <td>18</td><td>x</td><td>x</td><td>100</td><td>80</td><td>75</td><td>70</td><td>65</td><td>60</td><td>58</td>
 </tr>
 <tr>
-<td>20</td><td>x</td><td>x</td><td>90</td><td>77</td><td>70</td><td>65</td><td>60</td><td>58</td><td>57</td>
+<td>20</td><td>x</td><td>x</td><td>90</td><td>77</td><td>70</td><td>65</td><td>63</td><td>58</td><td>57</td>
 </tr>
 <tr>
 <td>24</td><td>x</td><td>100</td><td>80</td><td>73</td><td>67</td><td>60</td><td>58</td><td>57</td><td>56</td>
 </tr>
 <tr>
-<td>26</td><td>x</td><td>97</td><td>75</td><td>70</td><td>63</td><td>58</td><td>55</td><td>58</td><td>55</td>
+<td>26</td><td>x</td><td>97</td><td>75</td><td>70</td><td>63</td><td>58</td><td>57</td><td>56</td><td>54</td>
 </tr>
 <tr>
-<td>28</td><td>x</td><td>93</td><td>70</td><td>67</td><td>60</td><td>56</td><td>54</td><td>56</td><td>52</td>
+<td>28</td><td>x</td><td>93</td><td>70</td><td>67</td><td>60</td><td>56</td><td>54</td><td>53</td><td>52</td>
 </tr>
 <tr>
 <td>30</td><td>x</td><td>90</td><td>65</td><td>63</td><td>57</td><td>54</td><td>53</td><td>52</td><td>51</td>
@@ -206,6 +197,11 @@ Directions:
 <td>64</td><td>70</td><td>60</td><td>50</td><td>40</td><td>40</td><td>40</td><td>40</td><td>40</td><td>40</td>
 </tr>
 </table>
+<ul>
+<li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
+<li>Serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier).
+<li>Thin decorative fonts should use values for two rows above the nominal font size.
+</ul>
 <h3>Expected Results</h3>
 <ul>
     <li>#5 is true.
@@ -215,9 +211,6 @@ Directions:
 
 <section id="section5">
 <h2>Resources</h2>
-<div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
-</div>
 <dl>
 <dt>TBD</dt>
 <dd></dd>
@@ -226,9 +219,6 @@ Directions:
 
 <section id="section6">
 <h2>Changelog</h2>
-<div class="guidanceBox">
-<h3>Select font characteristics and background colors to provide enough contrast </h3>
-</div>
 <ul>
 <li>New Method 20 January 2020
 </ul>

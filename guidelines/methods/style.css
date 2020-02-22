@@ -1,3 +1,5 @@
+/*                                            */
+/* --------------- Styles Methods ------------*/
 body {
   max-width: 50rem;
   padding: 0 1rem;
@@ -79,12 +81,18 @@ body {
 /** Content styles **/
 .guidanceBox {
   border: 2px solid;
-  background: #fbecee;
+  background: #B8E5D0;
   position: relative;
   top: 2px;
-  padding: 1.5rem;
+  padding: .75rem;
 }
-
+.informBox {
+  border: 2px solid;
+  background: #B8E5D0;
+  position: relative;
+  top: 2px;
+  padding: 0.25rem;
+}
 .noBullet {
   list-style-type: none;
 }

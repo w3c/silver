@@ -1,3 +1,6 @@
+/*                                           */
+/* --------------- Styles How-to ------------*/
+
 body {
   max-width: 50rem;
   padding: 0 1rem;
@@ -82,11 +85,25 @@ body {
   background: #fbecee;
   position: relative;
   top: 2px;
-  padding: 1.5rem;
+  padding: .75rem;
+}
+.informBox {
+  border: 2px solid;
+  background: #B8E5D0;
+  position: relative;
+  top: 2px;
+  padding: 0.25rem;
 }
 
 .noBullet {
   list-style-type: none;
+}
+
+.rightAlign {
+  position: relative;
+  bottom: 2px;
+  padding:.5rem;	
+  float: right;
 }
 
 /** Editor's Notes **/
@@ -113,4 +130,26 @@ body {
 	}
 	details.note[open] > summary {
 		border-bottom: 1px silver solid;
+	}
+	
+/** Table **/
+
+	.OEtable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.OEtable td{ 
+		padding:7px; border:#4e95f4 1px solid; vertical-align:top;
+	}
+	/* provide some minimal visual accomodation for IE8 and below */
+	.OEtable tr{
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the ODD background rows  */
+	.OEtable tr:nth-child(odd){ 
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the EVEN background rows  */
+	.OEtabletable tr:nth-child(even){
+		background: #dae5f4;
 	}
