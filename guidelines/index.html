@@ -157,23 +157,23 @@ This model is more responsive to user needs and allows designers more choice in 
 </section>
 </section>
 <section>
-		<h2>Scoring & Conformance</h2>
+		<h2>Scoring and Conformance</h2>
 <p class="ednote">This section is under development. Comments are welcome. </p>
 <h3>Introduction</h3>
 <p>A conformance claim or following the recommended scoring below is optional. </p>
-<p>When the Silver Task Force did research with stakeholders of WCAG 2.0, they found that generally, people like the guidance of WCAG, but wanted changes to the structure including the conformance.  The major issues that are addressed in Silver conformance are: </p>
+<p>When the Silver Task Force researched WCAG 2.0, they found that, generally, people like WCAG guidance but wanted changes to the structure, including the conformance. The major issues that Silver conformance addresses are: </p>
 <ul>
-<li>Have the conformance better reflect the experience of people with disabilities using the site or product.  It allows an organization to say that "we may not be 100% conformant, but our site or product is very usable by people with disabilities" and they can express that in a meaningful way. By changing the "all or nothing" approach of WCAG success criteria conformance to a percentage based scoring system there is a more nuanced representation of conformance.
-<li>Formalize a representative sampling approach to conformance to address the needs of large, complex, or dynamic sites, apps, projects, or products that cannot test every page as required by WCAG 2.x Conformance. We reference specific sections of WCAG-EM to define the representative sampling approach.  
-<li>Allow the organization (this includes company, business, non-profit, government) to prioritize what it important for their product for accessibility assessment so that the organization would not fail for bugs that did not have a negative impact on the accessibility of their site or product to users with disabilities.  Many sites will have workflows that are less critical than other portions of the site, and that should be determined by the site owner. 
-<li>Ensure that conformance doesn't dis-proportionally favor one disability over another. 
+<li>Make the site or product's conformance better reflect the needs and experiences of people with disabilities. Change from the "all-or-nothing-to-pass" method of WCAG conformance to scores based on percentage, so organizations can show their degree of conformance. This allows an organization to say: "Our product or site may not be 100% conformant, but it's usable by people with disabilities."
+<li>Use a "representative sampling" conformance method to address the needs of large, complex, or dynamic sites, apps, projects, or products. In these cases, organizations can't test every page as WCAG 2.x Conformance requires. We refer to specific sections of WCAG-EM to define the representative sampling approach.  
+<li>Allow organizations to decide the important parts of their products or sites to assess for accessibility. Some sites may have workflows that are less critical than other portions of their product, site, or app. Thus, it wouldn't fail accessibility tests if it has bugs that don't impact its accessibility or its users with disabilities.
+<li>Ensure that conformance doesn't favor any disability over another. 
 </ul>
-<p>Scoring & Conformance is divided into the following sections: <p>
+<p>Scoring and Conformance is divided into the following sections: <p>
 <ul>
 <li>Goals
 <li>How Conformance fits into the Information Architecture
 <li>Scope of conformance claim
-<li>Points & Levels
+<li>Points and Levels
 <li>Sampling
 <li>Accessibility Supported
 </ul>
@@ -184,37 +184,31 @@ This model is more responsive to user needs and allows designers more choice in 
 <h3>Goals</h3>
 <p class="ednote">The goals are based on the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive" target=blank>Silver research</a>, the results from the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/" target=blank>Silver Design Sprint</a>, and input from the Silver Community Group and Task Force.</p>
 <ul>
-			<li>Make conformance better aligned with the experience of people with disabilities, keeping in mind that people with different disabilities have different experiences.
-			<li>Don't elevate the needs of one disability over another disability. 
-			<li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs may not fit the true/false statement success criteria of WCAG 2.x.
-			<li>Be inclusive of more organizations needs
-			<li>Be user oriented instead of page oriented. What is the person trying to do?
-			<li>Wherever possible, preserve the organization’s investment in training, tooling and knowledge.
-			<li>Support the ability for organizations to define the a logical subset of a site for conformance.</li>
-			<li>Develop a more flexible conformance model that addresses the challenges in applying the 2.x conformance model to large, complex, or dynamic websites and web applications
+			<li>Better align conformance with the experiences of people with disabilities, and keep in mind that people with different disabilities have different experiences.
+			<li>Treat the needs of all disabilities equitably. 
+			<li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes more attention to the needs of low vision and cognitive accessibility, whose needs may not fit the true/false statement success criteria of WCAG 2.x. 
+			<li>Consider the needs of more organizations
+			<li>Be user-oriented instead of page-oriented. Think about what is the person trying to do.
+			<li>Wherever possible, preserve the organization’s investment in training, tooling, and knowledge. 
+			<li>Support the ability for organizations to choose parts of their site or product for conformance (a logical subset of a site or product).</li>
+			<li>Create a more flexible conformance model that addresses the challenges in applying the 2.x conformance model to large, complex, or dynamic websites and web applications.
 				<ul>
-				<li>Help organizations prioritize things that have a greater impact on improving the experience of people with disability. </li>
+				<li>Help organizations prioritize things that have a greater impact on improving the experience of people with disability.  </li>
 				<li>Develop a more flexible method of measuring conformance that is better suited to accommodate dynamic or more regularly updated content.</li>
 				</ul>
-			<li>Remove “accessibility supported” as an author responsibility and provide guidance to authoring tools, browsers and assistive technology developers of the expected behaviors of their products.
+			<li>Remove “accessibility supported” as an author responsibility, and help developers of authoring tools, browsers, and assistive technologies learn the behaviors that users expect of their products. 
 			<li>Improve tests so that repeated tests get more consistent results.
-			<li>Increase potential for automation of tests.
+			<li>Increase the ability to create more automated tests.
 		</ul>
 </section>
 <section>
-<h3>How Conformance fits into the Information Architecture</h3>
+<h3>How Conformance Fits into the Information Architecture</h3>
 <p><strong>We aren’t losing content, we are restructuring</strong></p>
 <ul>
-<li>Flattening the overall structure of WCAG 2.x
-	<ul>
-		<li>From: Principle, Guidelines, Success Criteria and Techniques</li>
-		<li>To: Guidelines and Methods</li>
-	</ul>
-	</li>
-<li><strong>Guidelines</strong> are general information and intent written in plain language</li>
-<li><strong>Methods</strong> are specific examples, instructions, and tests with more technical information</li>
+<li><strong>Guidelines</strong> are general information and intent written in plain language. </li>
+<li><strong>Methods</strong> are specific examples, instructions, and tests with more technical information.</li>
 <li>We will add a <strong>tagging engine</strong> to make it easier for people to find information by tags.</li>
-<li>We want organizations to be able to extract the guideline data to use for their own purposes.</li>
+<li>We want organizations to be able to use an API to copy the guideline data to use for their own purposes.</li>
 <li>Guidelines will include: 
 	<ul>
 		<li>updated WCAG 2.1 guidance (technology-specific success criteria will become Methods)
@@ -224,9 +218,9 @@ This model is more responsive to user needs and allows designers more choice in 
 	</li>
 <li>Methods are associated with Guidelines.  In general, Methods are technology specific.  
 	<ul>
-		<li>Methods include tests for the Method.</li>
+		<li>Methods include tests for each Method.</li>
 		<li>Each Guideline will have multiple Methods with existing WCAG Technique guidance or new Methods written for Silver. 
-		<li>Methods can include tests for determining the percentage points to apply to the conformance score. See the <a href="#points-levels">Points & Levels</a> section following for details. </li>
+		<li>Methods can include tests for determining the percentage points to apply to the conformance score. See the <a href="#points-levels">Points and Levels</a> section following for details. </li>
 		<li>Methods can provide guidance for: 
 		<ul>
 			<li>User agents
@@ -240,50 +234,51 @@ This model is more responsive to user needs and allows designers more choice in 
 </ul>
 </section>
 <section>
-<h3>Scope of conformance claim</h3>
-<p>As technology advances, the WCAG 2.x scope of an individual page becomes more limiting and a flexible approach is needed. Needs vary by factors that include but are not limited to: size; complexity; dynamic content; statefulness; frequency of publishing; third-party integrations; custom and scoped web components; critical user flows; etc.
+<h3>Scope of Conformance Claim</h3>
+<p>As technology advances, the WCAG 2.x scope of an individual page becomes more limiting and a flexible way is needed. Needs vary by factors that include but are not limited to: size; complexity; dynamic content; statefulness; frequency of publishing; third-party integrations; custom and scoped web components; critical user flows; etc.
 </p>
 <p>
-The organization (author) should consider its own factors and determine the scope of what they are claiming. This allows the scope of the claim to be narrower than the entire site or product. Examples: a newspaper might have a different claim for the crosswords section than for the news articles; or an app may have a different scope than the main website. 
+The organization (author) should consider its own factors and determine the scope of what they are claiming. This allows the scope of the claim to be narrower than the entire site or product. Examples: a newspaper might have a different claim for the crosswords section than for the news section; or an app may have a different scope than the main website. 
 </p>
 <p>
-An organization cannot claim conformance for broader scope than they have identified and tested, unless they have followed the rules for representative sampling in the Sampling section.
+An organization can't claim conformance for broader scope than they have identified and tested, unless they have followed the rules for representative sampling in the Sampling section. 
  </p>
 </section>
 <section>
-<h3>Points & Levels</h3>
-<p>Each guideline awards a percentage of a point. A perfect accessibility score would be 100%, and a complete failure is 0%. All points count towards an overall total. A minimum for each disability category must be met. The categories are based on the <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301 549 Functional Performance Statements</a>, but will need some additional categories such as needs of people with vestibular disorders and a more granular breakdown of cognitive disability categories.  
+<h3>Points and Levels</h3>
+<p>Each guideline awards a percentage of a point. A perfect accessibility score would be 100%, and a complete failure is 0%. All points count towards an overall total. The site or product tested must meet a minimum score for each disability category. The categories are based on the <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301 549 Functional Performance Statements</a>, but will need more categories such as needs of people with vestibular disorders and a detailed breakdown of cognitive disability categories.  
 </p>
 <ul>
-<li>This is an additive scoring system. It increases the score for accessibility achievement instead of penalizing for fails.  
-<li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points 0%. You cannot have a score higher than 1 or lower than 0.  Note that this is a change from scoring by Method to scoring by Guideline overall.  Multiple methods for one guideline don’t gain more points. 
-<li>A minimum percentage must be achieved in each disability category, based on the modified <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301 549 Functional Performance Statements</a>. The modifications include disabilities that are not included in EN301 549 like Vestibular Disorders and breaks down the cognitive disability into groups of cognitive disabilities with common needs.  <span class="ednote">Note: Exactly what that minimum percentage is needs to be established by further research to determine the minimum level for each functional performance statement after writing more content and testing it against websites with claiming WCAG 2.x conformance. It can be plugged in later. The goal would be that the majority of sites that meet WCAG AA today to pass this minimum in Silver. </span>
-<li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
-<li>For automated tests, the total passes for that condition are divided by the total instances of the condition.  That gives a percentage response.  
-<li>For advanced Silver tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. (We need examples of other tests.) 
+<li>This is an additive scoring system. It increases the score for meeting each accessibility guideline instead of penalizing for fails.  
+<li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points (0%). Each guideline cannot have a score higher than 1 or lower than 0. Multiple methods for one guideline don’t gain more points. 
+<li>The scope tested must score a minimum percentage in each disability category, based on the modified EN301 549 Functional Performance Statements. <span class="ednote">Note: We'll continue to research the minimum percentage for each functional performance statement, after writing more content and testing it against websites that claim WCAG 2.x conformance. This will allow most sites that meet WCAG 2.x AA today to pass this minimum in Silver. </span>
 <li>Once the minimum level is achieved in each category, all of the guidelines that are met to whatever percentage they are met increase the score.  
-<li>The total score is averaged by the number of guidelines that apply to give a final percentage.  Typically, if a guideline isn’t used (or is not applicable), then you don’t divide by that one. For example, if a site has no video or audio, the captioning guideline is not applicable. Some guidelines, like Flashing Content, may need a way to include their score, since there should be credit given for not having flashing content.  
-<li>If you are using sampling (see the following section), then the score is by the pages or screens tested.  
+<li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
+<li>Different guidelines will evaluate the site or product by different measures.  Some will apply to the entire site or product, others may apply by the page or screen. Many will apply to the number of instances of the element.  
+<li>How the percentage is calculated will change by the guideline.  For  example, if a guideline score is calculated by instances of an element (like total number of images), then the total passes for that condition are divided by the total instances of the condition.  That gives a percentage response.  
+<li>For advanced Silver tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. <span class="ednote">(We need examples of other tests.)</span> 
+<li>The total score is averaged by the number of guidelines that apply to give a final percentage.  Typically, if a guideline isn’t used (or isn't applicable), then you don’t divide by that one. For example, if a site has no video or audio, the captioning guideline isn't applicable. <span class="ednote">Some guidelines, like Flashing Content, will need a way to include their score, since there should be credit given for not having flashing content. </span> 
+<li>If the tester uses sampling (see the following section), then the score is set by the pages or screens tested.  
 </ul>
 <p>The overall points total contribute to the level of conformance achieved. 
-Bronze is the lowest level of conformance, Silver is the middle level of conformance, and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance. <span class="ednote">We will need more research to determine where the break points will be.</span>  
+Bronze is the lowest level of conformance; Silver is the middle level of conformance; and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance. <span class="ednote">We'll need more research to determine where the break points will be.</span>  
 </p>
 <p>
-Note: We have chosen these level names since they have international understanding and are easily translated.
+Note: We've chosen these level names since they’re understood internationally  and are easily translated.
 </p>
 </section>
 <section>
 <h3>Sampling</h3>
 <p>
-Sampling helps give confidence whether people building the product, app, site, or digital property have done the accessibility work that makes the product more accessible to people with disabilities. Sampling gives an indication of where you are in accessibility, but it doesn't guarentee that you have found every problem.  It is particularly effective when a product or site is built with accessible components. The more a site is generated from a set of components, the more you want to get those components accessible.  </p>
+Sampling helps give confidence whether people building the product, app, site, or digital property have done the accessibility work that makes the product more accessible to people with disabilities. Sampling gives an indication of where you are in accessibility, but it doesn't guarantee that the tester finds every problem.  It's particularly effective when a product or site is built with accessible components. The more a site is created from a set of components, the more you want to get those components accessible.  </p>
 <p>
 Representative sampling is a way to assess large properties without having to test every screen. Representative sampling is common in accessibility testing, partcularly for manual testing.  Sampling is optional. Anyone who wants to test all their pages or screens can do so. 
 </p>
-<p>There are a number of approaches to sampling. <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a> is web-oriented, but the principles can be applied more broadly. 
+<p>There are many approaches to sampling. <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a> is web-oriented, but the principles can be applied more broadly. 
 </p>
 
-<h4>Highlights from WCAG-EM selecting representative samples</h4>
-<p>All of <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a> has helpful information.  See the following sections on choosing a representative sample for more detail. They will need minor modifications to make them more broadly applicable than Web Pages.   
+<h4>Highlights from WCAG-EM on Selecting Representative Samples</h4>
+<p><a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a> has helpful information.  See the following sections on choosing a representative sample. They will need minor modifications to make them more broadly applicable than web pages.   
 <ul class="nobullet">
 <li><a href="https://www.w3.org/TR/WCAG-EM/#step2">Step 2: Explore the Target Website</a>
 	<ul class="nobullet">
@@ -311,42 +306,36 @@ Representative sampling is a way to assess large properties without having to te
 	</ul>
 </ul>
 
-<h4>Different sample size requirements for different sized products</h4>
+<h4>Different Sample Size Requirements for Different Sized Products</h4>
 <ul>
 <li>Sites under 10 pages or products under 10 screens need to test every page or screen
 <li>Sites from 11 - 100 pages or products with 11 - 100 screens (including counting the different dynamic states)  
 	<ul>
-	<li>All pages need to be tested with available automated tests. <span class="ednote">(We need to find a way of saying “use a good test tool”). </span>
-	<li>At least 10 pages or screens need in-depth testing including manual testing.
+	<li>Test all pages automated tool(s). <span class="ednote">(We need to find a way of saying "use a good test tool", perhaps "Use a trusted, reputable tool."). </span>
+	<li>Review at least 10 pages or screens with in-depth manual testing.
 		<ul>
 		<li>These should be representative samples of the pages. See WCAG-EM Parts 2-3 for guidance in selecting a representative sample.  
 		<li>Common elements such as headers, footers and navigation must also have manual testing.  
 		</ul></li>
 	<li>There may be some guidelines, like clear language, that need a higher percentage of sample pages for testing. We are waiting for research results. 
 	</ul></li>
-<li>Sites or products from 100 - 1000 pages or screens may
+<li>Sites or products from 100 - 1000 pages or screens
 	<ul>
-	<li>Automated test of all pages or screens
-	<li>In-depth test of 10% of the pages or screens up to 40 samples, 40% of the samples tested are selected and 60% are randomly selected.  See WCAG-EM Parts 2-3 for guidance in selecting a representative sample and random selections. 
+	<li>Test all pages or screens with and automated tool. 
+	<li>Test 10% of the pages or screens (up to 40 samples) with in-depth, manual methods. See WCAG-EM Parts 2-3 for guidance in selecting a representative sample and random selections. 
 	<li>Pick out primary workflows plus high traffic pages and make sure that the workflows are accessible. 
 	</ul></li>
 <li>Sites or products over 1000 pages or screens 
 	<ul>
-	<li>Run automated tests on discrete sub-sections on a rotating basis.  
+	<li>Run automated tests on different sub-sections on a rotating basis.  
 	<li>Pick out primary workflows plus high traffic pages and make sure that the workflows are accessible.  
-	<li>Test representative material, test common elements (like header, footer, login, or navigation), test any unique elements, test common templates with representative data.  
-	</ul></li>
-<li>Sites or products over 1000 pages or screens 
-	<ul>
-	<li>Run automated tests on discrete sub-sections on a rotating basis.  
-	<li>Pick out primary workflows plus high traffic pages and make sure that the workflows are accessible.  
-	<li>Test representative material, test common elements (like header, footer, login, or navigation), test any unique elements, test common templates with representative data. 
-	<li>Organizations doing continuous development could test conformance by components or task flows. 
+	<li>Test representative material, common elements (like header, footer, log-in, or navigation), unique elements, and common templates with representative data.   
+	<li>Organizations doing continuous development could test conformance by components or workflows. 
 	<li class="nobullet"><span class="ednote">Note: Should we also have different requirements for different levels of complex or dynamic products?</span>    
 	</ul></li>
 </ul>
-
-<h4>Notes from discussion</h4>
+<div class="ednote">
+<p>Notes from discussion<p>
 <ul>
 <li>Essential functions vary by industry -- gaming will be different than e-commerce. We can't say what has to be tested, the organization needs to determine what is essential. 
 <li>The organization (company, non-profit) defines the workflows and components, then prioritizes the primary workflows and components  to test. See WCAG-EM Steps 2 and 3 to help determine what workflows and components are representative samples.  
@@ -354,17 +343,16 @@ Representative sampling is a way to assess large properties without having to te
 <li>There are going to be technical violations of success criteria that don’t impact accessibility (for example, missing alt text that are explained in the text or the same HTML id attribute that aren’t ever referenced) that shouldn’t negatively impact the score. <span class="ednote">NOTE: There will be further development and amplification of what shouldn’t negatively impact the score. The concept of pass or fail should no longer be binary, but accounts for a concept of sufficient</span>  
 <li>People still need to have access to material that still isn’t in the primary flow. Accessibility can be tested even if it doesn’t have a flow.  <span class="ednote">NOTE: There needs to be a way that important sections, like navigation and footer, don’t get overlooked because they aren’t part of the flow.  </span>
 </ul>
+</div>
 </section>
 
 <section>
 <h3>Accessibility Supported</h3>
 <ul>
-<li>
-Authors are not responsible for bugs or lack of support for WCAG techniques in browsers or assistive technology.  While this may not seem supportive, in the long run it will improve overall experience for people with disabilities by standardizing their experience and encouraging user agents and assistive technologies to conform to standards. This advice will be non-normative suggestions.  <span class="ednote"> Needs more work in phrasing. </span>
-</li>
 <li>Authors are responsible for testing that what they authored actually works for their users.</li>
+<li>Authors are not responsible for bugs or lack of support for WCAG techniques in browsers or assistive technology.  (We encourage authors to file bugs with the makers of user agents and assistive technologies, to fix bugs that testers believe are related to the user agent or assistive technology.)</li>
 <li>
-Browsers, user agents, and assistive technology receive non-normative guidance how their product could help authors meet Silver. 
+Browsers, user agents, and assistive technologies receive non-normative guidance on how their product could help authors meet Silver. 
 </li>
 </ul>
 </section> 
