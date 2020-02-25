@@ -106,14 +106,14 @@ You should totally buy his book on Inclusive Components.
 	  
 	  <ul>
 	<li>25% is the point of invisibility (<em>i.e., no perceptable contrast</em>) for many people with contrast related impairments. Designers should assume that contrsts lower than this may be invisible to some users.
-	<li>60% for Large, Bold Headlines where the major stroke width is at least 8px (6pt), or Non-text elements that are at least a solid 8x8px square such as buttons.
+	<li>40% for Large, Bold Headlines where the major stroke width is at least 8px (6pt), or Non-text elements that are at least a solid 8x8px square such as buttons.
 	<li>60% For Bold Text no less than 16px (12pt) or non-text elements no less than 3px in the thinnest dimension.
 	<li>80% Normal Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 2px.
 	<li>100% 300 Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 1px.
 	</ul>	
 		
 		
-  <p>Note: **These values require that "Webkit-Font-Smoothing" be at the device or user agent default, such that <em>added</em> antialiasing is not enabled.</p>
+  <p>Note: **These values require that antialiasing be at the device or user agent default, such that <em>added</em> antialiasing such as "Webkit-Font-Smoothing: Antialias;"  is not enabled.</p>
 </div>
 <h3>Related Methods</h3>
 <p><a href="Method-visual-contrast-default.html">Use default fonts and colors.</a>
@@ -129,7 +129,7 @@ You should totally buy his book on Inclusive Components.
 <h2>Code Samples</h2>
 
 <h3>Example Code for a Test Tool</h3>		
-<pre><code>
+<pre><code style="overflow: scroll;">
 ////////////////////////////////////////////////////////////////////////////////
 /////	Functions to parse color values and determine SAPC contrast
 /////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
@@ -521,7 +521,7 @@ function RGBColor(color_string) {
 	
 	<h3>HTML and Page Level Scripts</h3>
 
-<pre><code>
+<pre><code style="overflow: scroll;">
 
 &lt;?xml version="1.1" encoding="utf-8"?&gt;
 &lt;!DOCTYPE html&gt;
@@ -679,7 +679,7 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <h2>Tests</h2>
 <h3>Procedure</h3>
 <ol>
-<li>Using source code inspection or an “eye dropper” type tool, obtain representative sRGB values for the the foreground text and the background color.  
+<li>Using source code inspection or an “eye dropper” type tool, obtain representative sRGB values for the foreground text and the background color.  
 	<ul style="font-size: smaller">
 	<li>If an “eye dropper” type tool is used it must report values relative to the sRGB colorspace.
 	<li>The eye dropper sample should be a pixel in the middle of a major stroke of the font at the smallest size to be tested, with the content size set to default with no user scaling.
