@@ -698,27 +698,27 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <li>Check that the absolute value of the predicted contrast percentage meets or exceeds the required value for the font weight and size.
 </ol>
 <h3>Accessible Contrast by Font Size and Weight</h3>
-<p>Lookup Table by Font Size (left-most column) and Weight (top-most row).
+<p>Contrast Percentage Lookup Table by Font Size and Weight.
 Directions:  
 <ul>
 <li>Cross index nominal font size (in CSS px) to CSS weight.  
 <li>APCA value must meet or exceed the value listed. 
 <li>For light text on a dark background the APCA tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58, use 58. 	
-<li>An “x” indicates that a larger font size (or heavier font weight) must be used. 
+<li>A <span class="do-not">&osol;</span> indicates that a larger font size (or heavier font weight) must be used. 
 </ul>
 </p>
 <style>
 	td, th { text-align: center; }
-	th {background-color: #DEF;}
-	th.fsize {background-color: #ABE;}
-	td.do-not {font-size: 1.6em; font-weight: bold; color: #B00;}
+	th {background-color: #9AC;}
+	th.fsize {background-color: #BCE;}
+	td.do-not {font-size: 1.4em; font-weight: bold; color: #B00;}
 	</style>	
 <table class="TFtable">
 <tr>
 <th class="fsize" >Font</th><th colspan="9" style="">Font Weight</th>
 </tr>
 <tr>
-<th class="fsize">Size</th><th>100</th><th>200</th><th>300</th><th>400</br /><span style="font-size: smaller;">(Normal)</span></th><th>500</th><th>600</th>700</br /><span style="font-size: smaller;">(Bold)</span></th><th>800</th><th>900</th>
+<th class="fsize">Size</th><th>100</th><th>200</th><th>300</th><th>400</br /><span style="font-size: smaller;">(Normal)</span></th><th>500</th><th>600</th><th>700</br /><span style="font-size: smaller;">(Bold)</span></th><th>800</th><th>900</th>
 </tr>
 <tr>
 <td>12px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td>100%</td><td>94%</td><td>87%</td><td>80%</td><td>80%</td><td>80%</td>
