@@ -698,21 +698,21 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <li>Check that the absolute value of the predicted contrast percentage meets or exceeds the required value for the font weight and size.
 </ol>
 <h3>Accessible Contrast by Font Size and Weight</h3>
-<p>Contrast Percentage Lookup Table by Font Size and Weight.
-Directions:  
+<p>Directions:  
 <ul>
 <li>Cross index nominal font size (in CSS px) to CSS weight.  
-<li>APCA value must meet or exceed the value listed. 
-<li>For light text on a dark background the APCA tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58, use 58. 	
+<li>APCA Contrast Percentage must meet or exceed the value listed. 
+<li>For light text on a dark background the APCA tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58%, use 58%. 	
 <li>A <span class="do-not">&osol;</span> indicates that a larger font size (or heavier font weight) must be used. 
 </ul>
 </p>
-<style>
+	<style>
 	td, th { text-align: center; }
-	th {background-color: #9AC;}
-	th.fsize {background-color: #BCE;}
-	td.do-not {font-size: 1.4em; font-weight: bold; color: #B00;}
+	th {background-color: #ABE;}
+	th.fsize {background-color: #BCF;}
+	td.do-not, .do-not {font-size: 1.4em; font-weight: bold; color: #B00;}
 	</style>	
+	
 <table class="TFtable">
 <tr>
 <th class="fsize" >Font</th><th colspan="9" style="">Font Weight</th>
@@ -907,14 +907,21 @@ if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
 </ul><li><strong>Spatial Frequency — </strong>in a practical sense, this refers to the weight of a font, or the stroke width. A thinner font or narrower stroke width is a higher spatial frequency than a bolder or thicker stroke. Higher spatial frequencies require more luminance contrast to be visible than lower frequencies, such as a very bold large headline.
 </ul>
 
+<hr>	
+<h2 id="bibliography">Bibliography and References</h2>
+
+<ul>	
+<li><strong>TBD</strong>
+</ul>
 </section>
 
 <section id="section6">
 <h2>Changelog</h2>
 <ul>
 <li>20 January 2020 New Method 
-<li>24 February 2020 First Working Draft Updates (corrected math, moved math and gloassary to Resources tab, added description, added clarification to Tests tab.
-</ul>
+<li>24 February 2020 First Working Draft Updates (corrected math, moved math and gloassary to Resources tab, added description, added clarification to Tests tab). (AMS)
+<li>25 February 2020 Addl. First Working Draft Updates (updated lookup table, minor spelling errors, added paragraph in Description, fixed formatting for code samples). (AMS)
+	</ul>
 </section>
 
 
