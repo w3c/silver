@@ -171,103 +171,28 @@ This model is more responsive to user needs and allows designers more choice in 
 </ul>
 <p>Scoring and Conformance is divided into the following sections: <p>
 <ul>
-<li>Goals
-<li>How Conformance fits into the Information Architecture
 <li>Scope of conformance claim
-<li>Points and Levels
 <li>Sampling
+<li>Points and Levels
 <li>Accessibility Supported
 </ul>
+<p class="ednote">The sections on <a href="explainer.html#ConformanceGoals">Goals</a> and <a href="explainer.html#how-conformance-fits-into-the-information-architecture">How Conformance Fits in the Information Architecture</a> have moved to the <a href="explainer.html">Explainer</a> document. </p>
 
-
-
-<section>
-<h3>Goals</h3>
-<p class="ednote">The goals are based on the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive" target=blank>Silver research</a>, the results from the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/" target=blank>Silver Design Sprint</a>, and input from the Silver Community Group and Task Force.</p>
-<ul>
-			<li>Better align conformance with the experiences of people with disabilities, and keep in mind that people with different disabilities have different experiences.
-			<li>Treat the needs of all disabilities equitably. 
-			<li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes more attention to the needs of low vision and cognitive accessibility, whose needs may not fit the true/false statement success criteria of WCAG 2.x. 
-			<li>Consider the needs of more organizations
-			<li>Be user-oriented instead of page-oriented. Think about what is the person trying to do.
-			<li>Wherever possible, preserve the organization’s investment in training, tooling, and knowledge. 
-			<li>Support the ability for organizations to choose parts of their site or product for conformance (a logical subset of a site or product).</li>
-			<li>Create a more flexible conformance model that addresses the challenges in applying the 2.x conformance model to large, complex, or dynamic websites and web applications.
-				<ul>
-				<li>Help organizations prioritize things that have a greater impact on improving the experience of people with disability.  </li>
-				<li>Develop a more flexible method of measuring conformance that is better suited to accommodate dynamic or more regularly updated content.</li>
-				</ul>
-			<li>Remove “accessibility supported” as an author responsibility, and help developers of authoring tools, browsers, and assistive technologies learn the behaviors that users expect of their products. 
-			<li>Improve tests so that repeated tests get more consistent results.
-			<li>Increase the ability to create more automated tests.
-		</ul>
-</section>
-<section>
-<h3>How Conformance Fits into the Information Architecture</h3>
-<p><strong>We aren’t losing content, we are restructuring</strong></p>
-<ul>
-<li><strong>Guidelines</strong> are general information and intent written in plain language. </li>
-<li><strong>Methods</strong> are specific examples, instructions, and tests with more technical information.</li>
-<li>We will add a <strong>tagging engine</strong> to make it easier for people to find information by tags.</li>
-<li>We want organizations to be able to use an API to copy the guideline data to use for their own purposes.</li>
-<li>Guidelines will include: 
-	<ul>
-		<li>updated WCAG 2.1 guidance (technology-specific success criteria will become Methods)
-		<li>new guidance written for Silver
-		<li>new guidance for task completion testing 
-	</ul>
-	</li>
-<li>Methods are associated with Guidelines.  In general, Methods are technology specific.  
-	<ul>
-		<li>Methods include tests for each Method.</li>
-		<li>Each Guideline will have multiple Methods with existing WCAG Technique guidance or new Methods written for Silver. 
-		<li>Methods can include tests for determining the percentage points to apply to the conformance score. See the <a href="#points-and-levels">Points and Levels</a> section following for details. </li>
-		<li>Methods can provide guidance for: 
-		<ul>
-			<li>User agents
-			<li>Authoring tools
-			<li>Assistive technology
-			<li>Emerging technologies
-		</ul>
-		</li>
-	</ul>
-	</li>
-</ul>
-</section>
 <section>
 <h3>Scope of Conformance Claim</h3>
 <p>As technology advances, the WCAG 2.x scope of an individual page becomes more limiting and a flexible way is needed. Needs vary by factors that include but are not limited to: size; complexity; dynamic content; statefulness; frequency of publishing; third-party integrations; custom and scoped web components; critical user flows; etc.
 </p>
+<p>Organizations who want to make an conformance claim can select a logical sub-section of the site, application, or product.  The scope has to be a logical sub-section (as is commonly done today) of the material.  It cannot be used to make a claim outside the scope. </p>
 <p>
-The organization (author) should consider its own factors and determine the scope of what they are claiming. This allows the scope of the claim to be narrower than the entire site or product. Examples: a newspaper might have a different claim for the crosswords section than for the news section; or an app may have a different scope than the main website. 
+The organization (author) should consider its own factors and determine the scope of what they are claiming. This allows the scope of the claim to be narrower than the entire site or product. Examples: a newspaper might have a different claim for the crosswords section than for the news section; or an app may have a different scope than the main website. Note that scope does not need to be expressed as a URL.  Complex single page apps or mobile apps are examples of products that could declare a scope that could not be expressed as a URL.  
 </p>
+
+
 <p>
 An organization can't claim conformance for broader scope than they have identified and tested, unless they have followed the rules for representative sampling in the Sampling section. 
  </p>
 </section>
-<section>
-<h3>Points and Levels</h3>
-<p>Each guideline awards a percentage of a point. A perfect accessibility score would be 100%, and a complete failure is 0%. All points count towards an overall total. The site or product tested must meet a minimum score for each disability category. The categories are based on the <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301 549 Functional Performance Statements</a>, but will need more categories such as needs of people with vestibular disorders and a detailed breakdown of cognitive disability categories.  
-</p>
-<ul>
-<li>This is an additive scoring system. It increases the score for meeting each accessibility guideline instead of penalizing for fails.  
-<li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points (0%). Each guideline cannot have a score higher than 1 or lower than 0. Multiple methods for one guideline don’t gain more points. 
-<li>The scope tested must score a minimum percentage in each disability category, based on the modified EN301 549 Functional Performance Statements. <span class="ednote">Note: We'll continue to research the minimum percentage for each functional performance statement, after writing more content and testing it against websites that claim WCAG 2.x conformance. This will allow most sites that meet WCAG 2.x AA today to pass this minimum in Silver. </span>
-<li>Once the minimum level is achieved in each category, all of the guidelines that are met to whatever percentage they are met increase the score.  
-<li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
-<li>Different guidelines will evaluate the site or product by different measures.  Some will apply to the entire site or product, others may apply by the page or screen. Many will apply to the number of instances of the element.  
-<li>How the percentage is calculated will change by the guideline.  For  example, if a guideline score is calculated by instances of an element (like total number of images), then the total passes for that condition are divided by the total instances of the condition.  That gives a percentage response.  
-<li>For advanced Silver tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. <span class="ednote">(We need examples of other tests.)</span> 
-<li>The total score is averaged by the number of guidelines that apply to give a final percentage.  Typically, if a guideline isn’t used (or isn't applicable), then you don’t divide by that one. For example, if a site has no video or audio, the captioning guideline isn't applicable. <span class="ednote">Some guidelines, like Flashing Content, will need a way to include their score, since there should be credit given for not having flashing content. </span> 
-<li>If the tester uses sampling (see the following section), then the score is set by the pages or screens tested.  
-</ul>
-<p>The overall points total contribute to the level of conformance achieved. 
-Bronze is the lowest level of conformance; Silver is the middle level of conformance; and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance. <span class="ednote">We'll need more research to determine where the break points will be.</span>  
-</p>
-<p>
-Note: We've chosen these level names since they’re understood internationally  and are easily translated.
-</p>
-</section>
+
 <section>
 <h3>Sampling</h3>
 <p>
@@ -335,16 +260,30 @@ Representative sampling is a way to assess large properties without having to te
 	<li class="nobullet"><span class="ednote">Note: Should we also have different requirements for different levels of complex or dynamic products?</span>    
 	</ul></li>
 </ul>
-<div class="ednote">
-<p>Notes from discussion<p>
-<ul>
-<li>Essential functions vary by industry -- gaming will be different than e-commerce. We can't say what has to be tested, the organization needs to determine what is essential. 
-<li>The organization (company, non-profit) defines the workflows and components, then prioritizes the primary workflows and components  to test. See WCAG-EM Steps 2 and 3 to help determine what workflows and components are representative samples.  
-<li>The ability to get to the workflow, (like login) also must be accessible. 
-<li>There are going to be technical violations of success criteria that don’t impact accessibility (for example, missing alt text that are explained in the text or the same HTML id attribute that aren’t ever referenced) that shouldn’t negatively impact the score. <span class="ednote">NOTE: There will be further development and amplification of what shouldn’t negatively impact the score. The concept of pass or fail should no longer be binary, but accounts for a concept of sufficient</span>  
-<li>People still need to have access to material that still isn’t in the primary flow. Accessibility can be tested even if it doesn’t have a flow.  <span class="ednote">NOTE: There needs to be a way that important sections, like navigation and footer, don’t get overlooked because they aren’t part of the flow.  </span>
+
+</section>
+
+<section>
+<h3>Points and Levels</h3>
+<p>Each guideline awards a percentage of a point. A perfect accessibility score would be 100%, and a complete failure is 0%. All points count towards an overall total. The site or product tested must meet a minimum score for each disability category. The categories are based on the <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301 549 Functional Performance Statements</a>, but will need more categories such as needs of people with vestibular disorders and a detailed breakdown of cognitive disability categories.  
+</p>
+<ul> 
+<li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points (0%). Each guideline cannot have a score higher than 1 or lower than 0. Multiple methods for one guideline don’t gain more points. 
+<li>The scope tested must score a minimum percentage in each disability category, based on the modified EN301 549 Functional Performance Statements. <span class="ednote">Note: We'll continue to research the minimum percentage for each functional performance statement, after writing more content and testing it against websites that claim WCAG 2.x conformance. This will allow most sites that meet WCAG 2.x AA today to pass this minimum in Silver. </span>
+<li>Once the minimum level is achieved in each category, all of the guidelines that are met to whatever percentage they are met increase the score.  
+<li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
+<li>Different guidelines will evaluate the site or product by different measures.  Some will apply to the entire site or product, others may apply by the page or screen. Many will apply to the number of instances of the element.  
+<li>How the percentage is calculated will change by the guideline.  For  example, if a guideline score is calculated by instances of an element (like total number of images), then the total passes for that condition are divided by the total instances of the condition.  That gives a percentage response.  
+<li>For advanced Silver tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. <span class="ednote">(We need examples of other tests.)</span> 
+<li>The total score is averaged by the number of guidelines that apply to give a final percentage.  Typically, if a guideline isn’t used (or isn't applicable), then you don’t divide by that one. For example, if a site has no video or audio, the captioning guideline isn't applicable. <span class="ednote">Some guidelines, like Flashing Content, will need a way to include their score, since there should be credit given for not having flashing content. </span> 
+<li>If the tester uses sampling (see the following section), then the score is set by the pages or screens tested.  
 </ul>
-</div>
+<p>The overall points total contribute to the level of conformance achieved. 
+Bronze is the lowest level of conformance; Silver is the middle level of conformance; and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance. <span class="ednote">We'll need more research to determine where the break points will be.</span>  
+</p>
+<p>
+Note: We've chosen these level names since they’re understood internationally  and are easily translated.
+</p>
 </section>
 
 <section>
