@@ -157,6 +157,8 @@ This model is more responsive to user needs and allows designers more choice in 
 
 </section>
 </section>
+
+
 <section>
 		<h2>Scoring and Conformance</h2>
 <p class="ednote">This section is under development. Comments are welcome. </p>
@@ -165,8 +167,13 @@ This model is more responsive to user needs and allows designers more choice in 
 <p>When the Silver Task Force researched WCAG 2.0, they found that, generally, people like WCAG guidance but wanted changes to the structure, including the conformance. The major issues that Silver conformance addresses are: </p>
 <ul>
 <li>Make the site or product's conformance better reflect the needs and experiences of people with disabilities. Change from the "all-or-nothing-to-pass" method of WCAG conformance to scores based on percentage, so organizations can show their degree of conformance. This allows an organization to say: "Our product or site may not be 100% conformant, but it's usable by people with disabilities."
+<li>Change the conformance definition from an emphasis of "one page, a series of pages, or multiple related Web pages" <span class="ednote">[Challenges] [WCAG 2.1]</span> to a broader orientation that: 
+<ul>
+<li>is more inclusive of digital technologies beyond web pages
+<li>allows organizations to claim entire sites, products, or sub-sections of a site or product. 
+</ul>
 <li>Use a "representative sampling" conformance method to address the needs of large, complex, or dynamic sites, apps, projects, or products. In these cases, organizations can't test every page as WCAG 2.x Conformance requires. We refer to specific sections of WCAG-EM to define the representative sampling approach.  
-<li>Allow organizations to decide the important parts of their products or sites to assess for accessibility. Some sites may have workflows that are less critical than other portions of their product, site, or app. Thus, it wouldn't fail accessibility tests if it has bugs that don't impact its accessibility or its users with disabilities.
+<li>Allow organizations to decide the important parts of their products or sites to assess for accessibility. Some sites may have workflows that are less critical than other portions of their product, site, or app. Thus, it wouldn't fail accessibility tests if it has bugs that don't impact its accessibility or its users with disabilities. 
 <li>Ensure that conformance doesn't favor any disability over another. 
 </ul>
 <p>Scoring and Conformance is divided into the following sections: <p>
@@ -178,19 +185,16 @@ This model is more responsive to user needs and allows designers more choice in 
 </ul>
 <p class="ednote">The sections on <a href="explainer.html#ConformanceGoals">Goals</a> and <a href="explainer.html#how-conformance-fits-into-the-information-architecture">How Conformance Fits in the Information Architecture</a> have moved to the <a href="explainer.html">Explainer</a> document. </p>
 
+
 <section>
 <h3>Scope of Conformance Claim</h3>
 <p>As technology advances, the WCAG 2.x scope of an individual page becomes more limiting and a flexible way is needed. Needs vary by factors that include but are not limited to: size; complexity; dynamic content; statefulness; frequency of publishing; third-party integrations; custom and scoped web components; critical user flows; etc.
 </p>
-<p>Organizations who want to make an conformance claim can select a logical sub-section of the site, application, or product.  The scope has to be a logical sub-section (as is commonly done today) of the material.  It cannot be used to make a claim outside the scope. </p>
+<p>An organization or author who want to make an conformance claim can select a logical sub-section of the site, application, or product.  It cannot be used to make a claim outside the scope. This is common practice today, but has never been a formal part of WCAG 2.x Conformance. </p>
 <p>
-The organization (author) should consider its own factors and determine the scope of what they are claiming. This allows the scope of the claim to be narrower than the entire site or product. Examples: a newspaper might have a different claim for the crosswords section than for the news section; or an app may have a different scope than the main website. Note that scope does not need to be expressed as a URL.  Complex single page apps or mobile apps are examples of products that could declare a scope that could not be expressed as a URL.  
+The organization (or author) should consider its own factors and determine the scope of what they are claiming. This allows the scope of the claim to be narrower than the entire site or product. Examples: a newspaper might have a different claim for the crosswords section than for the news section; or an app may have a different scope than the main website. Note that scope does not need to be expressed as a URL.  Complex single page apps or mobile apps are examples of products that could declare a scope that could not be expressed as a URL.  
 </p>
 
-
-<p>
-An organization can't claim conformance for broader scope than they have identified and tested, unless they have followed the rules for representative sampling in the Sampling section. 
- </p>
 </section>
 
 <section>
@@ -198,7 +202,7 @@ An organization can't claim conformance for broader scope than they have identif
 <p>
 Sampling helps give confidence whether people building the product, app, site, or digital property have done the accessibility work that makes the product more accessible to people with disabilities. Sampling gives an indication of where you are in accessibility, but it doesn't guarantee that the tester finds every problem.  It's particularly effective when a product or site is built with accessible components. The more a site is created from a set of components, the more you want to get those components accessible.  </p>
 <p>
-Representative sampling is a way to assess large properties without having to test every screen. Representative sampling is common in accessibility testing, partcularly for manual testing.  Sampling is optional. Anyone who wants to test all their pages or screens can do so. 
+Representative sampling is a way to assess large properties without having to test every screen. Representative sampling is common in accessibility testing, particularly for manual testing.  Sampling is optional. Anyone who wants to test all their pages or screens can do so. 
 </p>
 <p>There are many approaches to sampling. <cite><a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a></cite> [<cite><a href="#wcag-em">WCAG-EM</a></cite>] is web-oriented, but the principles can be applied more broadly. 
 </p>
