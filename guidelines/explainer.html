@@ -1,4 +1,58 @@
-<!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.3.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* dfn popup panel that list all local references to a dfn */
+<!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.4.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+.issue-label {
+    text-transform: initial;
+}
+
+.warning > p:first-child { margin-top: 0 }
+.warning {
+    padding: .5em;
+    border-left-width: .5em;
+    border-left-style: solid;
+}
+span.warning { padding: .1em .5em .15em; }
+
+.issue.closed span.issue-number {
+    text-decoration: line-through;
+}
+
+.warning {
+    border-color: #f11;
+    border-width: .2em;
+    border-style: solid;
+    background: #fbe9e9;
+}
+
+.warning-title:before{
+    content: "⚠"; /*U+26A0 WARNING SIGN*/
+    font-size: 1.3em;
+    float: left;
+    padding-right: .3em;
+    margin-top: -0.3em;
+}
+
+li.task-list-item {
+    list-style: none;
+}
+
+input.task-list-item-checkbox {
+    margin: 0 0.35em 0.25em -1.6em;
+    vertical-align: middle;
+}
+
+.issue a.respec-gh-label {
+  padding: 5px;
+  margin: 0 2px 0 2px;
+  font-size: 10px;
+  text-transform: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  position: relative;
+  bottom: 2px;
+  border: none;
+  display: inline-block;
+}
+</style><style>/* dfn popup panel that list all local references to a dfn */
 dfn {
   cursor: pointer;
 }
@@ -148,7 +202,7 @@ cite .bibref {
 }
 
 code {
-  color: #c83500;
+  color: #c63501;
 }
 
 th code {
@@ -432,16 +486,16 @@ var[data-type]:hover::before {
   "copyrightStart": "2019",
   "shortName": "silver",
   "edDraftURI": "https://w3c.github.io/silver/guidelines/",
-  "publishDate": "2020-03-05",
-  "publishISODate": "2020-03-05T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 05 March 2020"
+  "publishDate": "2020-03-10",
+  "publishISODate": "2020-03-10T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 10 March 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
   <body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Explainer for "Silver" Accessibility Guidelines</h1>
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2020-03-05">05 March 2020</time>
+        <time class="dt-published" datetime="2020-03-10">10 March 2020</time>
       </h2>
       <dl>
         
@@ -514,7 +568,7 @@ var[data-type]:hover::before {
             <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
             (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
             <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
-          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#research"><bdi class="secno">2. </bdi>Research and Input from Industry Leaders </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problemStatements"><bdi class="secno">2.1 </bdi>Problem Statements</a></li><li class="tocline"><a class="tocxref" href="#DesignSprint"><bdi class="secno">2.2 </bdi>Silver Design Sprint Suggestions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#DSusability"><bdi class="secno">2.2.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#DSconformance"><bdi class="secno">2.2.2 </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#DSmaintenance"><bdi class="secno">2.2.3 </bdi>Maintenance</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3. </bdi>Goals</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inclusionGoals"><bdi class="secno">3.1 </bdi>Goals for Inclusion</a></li><li class="tocline"><a class="tocxref" href="#ContentGoals"><bdi class="secno">3.2 </bdi>Goals for Content</a></li><li class="tocline"><a class="tocxref" href="#ConformanceGoals"><bdi class="secno">3.3 </bdi>Goals for Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nonGoals"><bdi class="secno">4. </bdi>Non-Goals or Out-of-Scope</a></li></ol></nav>
+          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#research"><bdi class="secno">2. </bdi>Research and Input from Industry Leaders </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problemStatements"><bdi class="secno">2.1 </bdi>Problem Statements</a></li><li class="tocline"><a class="tocxref" href="#DesignSprint"><bdi class="secno">2.2 </bdi>Silver Design Sprint Suggestions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#DSusability"><bdi class="secno">2.2.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#DSconformance"><bdi class="secno">2.2.2 </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#DSmaintenance"><bdi class="secno">2.2.3 </bdi>Maintenance</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3. </bdi>Goals</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inclusionGoals"><bdi class="secno">3.1 </bdi>Goals for Inclusion</a></li><li class="tocline"><a class="tocxref" href="#ContentGoals"><bdi class="secno">3.2 </bdi>Goals for Content</a></li><li class="tocline"><a class="tocxref" href="#ConformanceGoals"><bdi class="secno">3.3 </bdi>Goals for Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nonGoals"><bdi class="secno">4. </bdi>Non-Goals or Out-of-Scope</a></li><li class="tocline"><a class="tocxref" href="#explanation-behind-decisions"><bdi class="secno">5. </bdi>Explanation Behind Decisions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#how-conformance-fits-into-the-information-architecture"><bdi class="secno">5.1 </bdi>How Conformance Fits into the Information Architecture</a></li><li class="tocline"><a class="tocxref" href="#selecting-a-representative-sample"><bdi class="secno">5.2 </bdi>Selecting a Representative Sample</a></li></ol></li></ol></nav>
     <section id="intro">
       <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2>
       <p>Silver Accessibility Guidelines does not yet have an official name. It is intended to be the next major version that will replace the Web Content Accessibility Guidelines (WCAG). One of the goals of the Silver Accessibility Guidelines is that it will be written using plain language as much as possible so that people who are not technical can still understand it, and so Silver can be more easily translated into other languages. When it is finished, Silver Accessibility Guidelines will have many ways for making the web and other digital content (like video or mobile apps) more accessible to people with disabilities. 
@@ -638,16 +692,23 @@ var[data-type]:hover::before {
 		</section>
 		<section id="ConformanceGoals">
 		<h3 id="x3-3-goals-for-conformance"><bdi class="secno">3.3 </bdi>Goals for Conformance<a class="self-link" aria-label="§" href="#ConformanceGoals"></a></h3>
-		<ul>
-			<li>Make conformance better aligned with the experience of people with disabilities, keeping in mind that people with different disabilities have different experiences.
-			</li><li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.
-			</li><li>Be inclusive of more organizations needs
-			</li><li>Be user oriented instead of page oriented. What is the person trying to do?
-			</li><li>Wherever possible, preserve the organization’s investment in training, tooling and knowledge.
-			</li><li>Develop a more flexible conformance model that addresses the challenges in applying the 2.x conformance model to large, complex, or dynamic websites and web applications
-			</li><li>Remove “accessibility supported” as an author responsibility and provide guidance to authoring tools, browsers and assistive technology developers of the expected behaviors of their products.
+<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">The goals are based on the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive" target="blank">Silver research</a>, the results from the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/" target="blank">Silver Design Sprint</a>, and input from the Silver Community Group and Task Force.</p></div>
+<ul>
+			<li>Better align conformance with the experiences of people with disabilities, and keep in mind that people with different disabilities have different experiences.
+			</li><li>Treat the needs of all disabilities equitably. 
+			</li><li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes more attention to the needs of low vision and cognitive accessibility, whose needs may not fit the true/false statement success criteria of WCAG 2.x. 
+			</li><li>Consider the needs of more organizations
+			</li><li>Be user-oriented instead of page-oriented. Think about what is the person trying to do.
+			</li><li>Wherever possible, preserve the organization’s investment in training, tooling, and knowledge. 
+			</li><li>Support the ability for organizations to choose parts of their site or product for conformance (a logical subset of a site or product).</li>
+			<li>Create a more flexible conformance model that addresses the challenges in applying the 2.x conformance model to large, complex, or dynamic websites and web applications.
+				<ul>
+				<li>Help organizations prioritize things that have a greater impact on improving the experience of people with disability.  </li>
+				<li>Develop a more flexible method of measuring conformance that is better suited to accommodate dynamic or more regularly updated content.</li>
+				</ul>
+			</li><li>Remove “accessibility supported” as an author responsibility, and help developers of authoring tools, browsers, and assistive technologies learn the behaviors that users expect of their products. 
 			</li><li>Improve tests so that repeated tests get more consistent results.
-			</li><li>Increase potential for automation of tests
+			</li><li>Increase the ability to create more automated tests.
 		</li></ul>
 	</section>
 	</section>
@@ -663,6 +724,51 @@ var[data-type]:hover::before {
 	</li>
 	</ul>
 	</section>
-	
+<section id="explanation-behind-decisions">
+<h2 id="x5-explanation-behind-decisions"><bdi class="secno">5. </bdi>Explanation Behind Decisions<a class="self-link" aria-label="§" href="#explanation-behind-decisions"></a></h2>
+<p>The following sections describe the decision process behind some of the more difficult or controversial topics.  </p>
+<section id="how-conformance-fits-into-the-information-architecture">
+<h3 id="x5-1-how-conformance-fits-into-the-information-architecture"><bdi class="secno">5.1 </bdi>How Conformance Fits into the Information Architecture<a class="self-link" aria-label="§" href="#how-conformance-fits-into-the-information-architecture"></a></h3>
+<p><strong>We aren’t losing content, we are restructuring</strong></p>
+<ul>
+<li><strong>Guidelines</strong> are general information and intent written in plain language. </li>
+<li><strong>Methods</strong> are specific examples, instructions, and tests with more technical information.</li>
+<li>We will add a <strong>tagging engine</strong> to make it easier for people to find information by tags.</li>
+<li>We want organizations to be able to use an API to copy the guideline data to use for their own purposes.</li>
+<li>Guidelines will include: 
+	<ul>
+		<li>updated WCAG 2.1 guidance (technology-specific success criteria will become Methods)
+		</li><li>new guidance written for Silver
+		</li><li>new guidance for task completion testing 
+	</li></ul>
+	</li>
+<li>Methods are associated with Guidelines.  In general, Methods are technology specific.  
+	<ul>
+		<li>Methods include tests for each Method.</li>
+		<li>Each Guideline will have multiple Methods with existing WCAG Technique guidance or new Methods written for Silver. 
+		</li><li>Methods can include tests for determining the percentage points to apply to the conformance score. See the <a href="#points-and-levels" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">Points and Levels</a> section following for details. </li>
+		<li>Methods can provide guidance for: 
+		<ul>
+			<li>User agents
+			</li><li>Authoring tools
+			</li><li>Assistive technology
+			</li><li>Emerging technologies
+		</li></ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</section>
+<section id="selecting-a-representative-sample">
+<h3 id="x5-2-selecting-a-representative-sample"><bdi class="secno">5.2 </bdi>Selecting a Representative Sample<a class="self-link" aria-label="§" href="#selecting-a-representative-sample"></a></h3>
+<ul>
+<li>Essential functions vary by industry -- gaming will be different than e-commerce. We can't say what has to be tested, the organization needs to determine what is essential. 
+</li><li>The organization (or author) defines the workflows and components, then prioritizes the primary workflows and components  to test. See WCAG-EM Steps 2 and 3 to help determine what workflows and components are representative samples.  
+</li><li>The ability to get to the workflow, (like login) also must be accessible. 
+</li><li>There are going to be technical violations of success criteria that don’t impact accessibility (for example, missing alt text that are explained in the text or the same HTML id attribute that aren’t ever referenced) that shouldn’t negatively impact the score. <span class="note">NOTE: There will be further development and amplification of what shouldn’t negatively impact the score. The concept of pass or fail should no longer be binary, but accounts for a concept of sufficient</span>  
+</li><li>People still need to have access to material that still isn’t in the primary flow. Accessibility can be tested even if it doesn’t have a flow.  <span class="note">NOTE: There needs to be a way that important sections, like navigation and footer, don’t get overlooked because they aren’t part of the flow.  </span>
+</li></ul>
+</section>
+</section>	
   
 <p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
