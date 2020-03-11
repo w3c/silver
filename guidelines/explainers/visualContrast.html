@@ -1,0 +1,180 @@
+<!--
+Code for the tabbed interface for this W3C Silver Prototype was lovingly ripped from https://inclusive-components.design/tabbed-interfaces/ with the example code taken from https://codepen.io/heydon/pen/veeaEa .
+
+All credit for this goes to Heydon Pickering https://twitter.com/heydonworks.
+You should totally buy his book on Inclusive Components.
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Visual Contrast of Text</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+<div class="guidanceBox">
+	<p class="rightAlign">This guideline section is required (normative).</p>
+<h1 style="clear: right">Visual Contrast of Text How-To Guidance</h1>
+<p>Provide sufficient contrast between foreground text and its background.</p>
+</div>
+<div class="informBox"
+<p>The following tabbed sections contain helpful information, but are not required (informative).</p>
+</div>
+    <div class="tabbed">
+      <ul>
+        <li>
+          <a href="#section1">Get Started</a>
+        </li>
+        <li>
+          <a href="#section2">Plan</a>
+        </li>
+        <li>
+           <a href="#section3">Design</a>
+        </li>
+		 <li>
+           <a href="#section4">Write</a>
+        </li>
+         <li>
+           <a href="#section5">Develop</a>
+        </li>
+        <li>
+          <a href="#section6">Evaluate</a>
+       </li>
+	   <li>
+          <a href="#section7">Methods</a>
+       </li>
+      </ul>
+
+<section id="section1">
+<h2>Get Started</h2>
+<h3>Summary</h3>
+<p>Sighted users need good contrast between foreground and background to read easily.  Users with low vision need strong contrast between foreground and background to perceive content.
+</p>
+<h3>Why</h3>
+<p>Many users need a high enough level of visual contrast to distinguish elements from each other and foreground from background. For those who find it difficult to perceive smaller text, increasing contrast level may help (example, make the lightest of two colors lighter to increase contrast, or make the font bolder). 
+Color use can help communication, but only when it aligns with the purpose of the content. Too many colors can cause confusion.  Some users find too much contrast may be distracting or overwhelming.  This guidance focuses on the needs of users with low vision.
+</p>
+
+<h3>Who it helps</h3>
+<ul>
+<li>People with color blindness need luminance contrast to perceive text and graphic elements.
+<li>People with lower vision (contrast sensitivity and visual acuity), including seniors, may need higher color contrast to make smaller text more visible. 
+<li>People with some cognitive, language and learning disabilities may benefit especially from use of colour contrast that serves the purpose of the content. 
+</ul>
+<h3>How</h3>
+<p>Authors need to balance font size, font stroke width, background color, font color, and nearby colors to achieve good visual contrast. Authors can use tools to evaluate elements and adjust the attribute and color of those elements to achieve a presentation which meets these requirements.
+</p>
+<p>
+The solution to this challenge of a complex relationship between interrelated elements of visual readability is to use an algorithm (Advanced Perceptual Contrast Algorithm, APCA) which allows authors to  input preferred settings and calculate the minimal contrast needed.  See <a href="#section6">Evaluate</a> tab for APCA.
+</p>
+<ul>
+<li>No Tiny Text.  Text and Images of Text never use a font size below 12px.
+<li>Minimum Characteristics for Body Text:  Where text and images of text are used for any string of words that present as a paragraph, one of the following is true:
+<ul>
+<li>A sans-serif font face is specified with a font size of at least 16px; or
+<li>A serif font face is specified with a font size of at least 18px.
+</ul></li>
+<li>Minimum Contrast for Smaller Text:  Text and images of text with a font size between 12px and 15px have an APCA of at least 100%.
+<li>Minimum Contrast for Normal Text:  Text and images of text with a font size between 16px and 20px have an APCA of at least 80%.
+<li>Minimum Contrast for Large Text:  Text and images of text with a font size of between 24px and 48px have an APCA of at least 60%.
+<li>Minimum Contrast for Larger Text:  Text and images of text with a font size of 60px or larger have an APCA of at least 40%.
+<li>Maximum Contrast for Larger Text.  Text and Images of Text that use a font size of 48px or larger have an APCA of 120% or lower.
+</ul>
+
+<h3>Exceptions</h3>
+<p class="note">
+<ol>
+<li>User Control.  There is no visual contrast requirement for text where the content does not specify font characteristics.  In this situation, the text content is presumed to inherits its characteristics from platform settings and that end-users have control over those platform settings.
+<li>Bolder Text:  Where content specifies a bold font weight (i.e., equivalent to CSS value of 700 or above) the allowable APCA is reduced 20% (e.g., an 18px bold font needs an APCA of at least 60%).
+<li>Larger Text:  Where the size of text and images of text is between those specified in the values above, an interpolated APCA may be used (e.g., a 22px font has an APCA of at least 70%).
+<li>Incidental Text:  Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no APCA contrast requirement. 
+
+</ol>
+<h3>Examples</h3>
+<p>An example of the exception for Incidental Text is a photograph of street scene where some shop windows have lettering on them.  If they are not important to the purpose of the photograph, the lettering on the shop windows does not have a font size or contrast requirement.</p>
+</section>
+
+<section id="section2">
+<h2>Plan</h2>
+<h3>Planning Responsibilities</h3>
+	<ol>
+		<li>Ensure that...</li>
+	</ol>
+<h3>Tips for Collaboration</h3>
+        <p>Where communication is important with designers, developers, testers</p>
+<h3>Planning for Each Stage:</h3>
+        <p>How to get started early</p>
+        <p>How to remediate</p>
+</section>
+
+<section id="section3">
+<h2>Design</h2>
+	<ol>
+		<li>Ensure that...</li>
+	</ol>
+<h3>HOW - Guide:</h3>
+    <p>Link to Style Guide(s)</p>
+    <p>Links to Video (Embedded or Links)</p>
+<h3>Designer Tips:</h3>
+<h3>User Testing & Meaningful Involvement:</h3>
+</section>
+
+<section id="section4">
+<h2>Write</h2>
+<h3>Editorial Responsibilities</h3>
+	<ol>
+	<li>none
+	</ol>
+
+<h3>Examples & Demo:</h3>
+	<p>Video (Embedded or Links)</p>
+<h3>Editorial Tips:</h3>
+	<ul>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+
+<section id="section5">
+<h2>Develop</h2>
+<h3>Technical Responsibilities</h3>
+	<ol>
+		<li>Ensure that...</li>
+	</ol>
+
+<h3>Examples & Demo:</h3>
+	<p>Video (Embedded or Links)</p>
+<h3>Technical Tips:</h3>
+	<ul>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+
+<section id="section6">
+<h2>Evaluate</h2>
+<h3>Testing Responsibilities</h3>
+	<ol>
+		<li>Ensure that...</li>
+	</ol>
+<h3>Auto-Testing Tips:</h3>
+	<p>Includes links to 3rd party/crowd-sourced tips?</p>
+<h3>Manual Testing Tips:</h3>
+	<p>Includes links to 3rd party/crowd-sourced tips?</p>
+<h3>Testing with Users:</h3>
+	<p>Is this duplication of User Testing in Designer tab or different?</p>
+
+</section>
+<section id="section7">
+<h2>Methods</h2>
+	<ul class="noBullet">
+        <li><a href="../methods/Method-font-characteristic-contrast.html">Select font characteristics and background colors to provide enough contrast</a></li>
+        <li><a href="../methods/Method-visual-contrast-default.html">Use default fonts and colors</a></li>
+	</ul>
+</section>
+</div>
+
+  </body>
+  <script type="text/javascript" src="magicsauce.js"></script>
+</html>

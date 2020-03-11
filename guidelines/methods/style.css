@@ -1,0 +1,154 @@
+/*                                            */
+/* --------------- Styles Methods ------------*/
+body {
+  max-width: 50rem;
+  padding: 0 1rem;
+  font-size: 125%;
+  line-height: 1.2;
+  margin: 1.5rem auto;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  color: inherit;
+  margin: 0;
+}
+
+[role="tablist"] {
+  padding: 0;
+}
+
+[role="tablist"] li, [role="tablist"] a {
+  display: inline-block;
+}
+
+[role="tablist"] a {
+  text-decoration: none;
+  padding: 0.5rem 1em;
+}
+
+[role="tablist"] [aria-selected] {
+  border: 2px solid;
+  background: #fff;
+  border-bottom: 0;
+  position: relative;
+  top: 2px;
+}
+
+[role="tabpanel"] {
+  border: 2px solid;
+  padding: 1.5rem;
+}
+
+[role="tabpanel"] * + * {
+  margin-top: 0.75rem;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 4px lightBlue;
+}
+
+@media (max-width: 550px) {
+
+  [role="tablist"] li, [role="tablist"] a {
+    display: block;
+    position: static;
+  }
+
+  [role="tablist"] a {
+    border: 2px solid #222 !important;
+  }
+
+  [role="tablist"] li + li a {
+    border-top: 0 !important;
+  }
+
+  [role="tablist"] [aria-selected] {
+    position: static;
+  }
+
+  [role="tablist"] [aria-selected]::after {
+    content: '\0020⬅';
+  }
+
+  [role="tabpanel"] {
+    border-top: 0;
+  }
+
+}
+
+/** Content styles **/
+.guidanceBox {
+  border: 2px solid;
+  background: #B8E5D0;
+  position: relative;
+  top: 2px;
+  padding: .75rem;
+}
+.informBox {
+  border: 2px solid;
+  background: #B8E5D0;
+  position: relative;
+  top: 2px;
+  padding: 0.25rem;
+}
+.noBullet {
+  list-style-type: none;
+}
+
+.breadcrumb {
+  font-size: 80%;
+  margin-bottom: 1.25rem;
+}
+
+
+/** Editor's Notes **/
+/** Non-normative Note ********************************************************/
+
+	.note {
+		border-color: #52E052;
+		background: #E9FBE9;
+		overflow: auto;
+	}
+
+	.note::before, .note > .marker,
+	details.note > summary::before,
+	details.note > summary > .marker {
+		text-transform: uppercase;
+		display: block;
+		color: hsl(120, 70%, 30%);
+	}
+	/* Add .note::before { content: "Note "; } for autogen label,
+	   or use class="marker" to mark up the label in source. */
+
+	details.note > summary {
+		color: hsl(120, 70%, 30%);
+	}
+	details.note[open] > summary {
+		border-bottom: 1px silver solid;
+	}
+	
+
+/** Table **/
+
+	.TFtable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.TFtable td{ 
+		padding:7px; border:#4e95f4 1px solid; vertical-align:top;
+	}
+	/* provide some minimal visual accomodation for IE8 and below */
+	.TFtable tr{
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the ODD background rows  */
+	.TFtable tr:nth-child(odd){ 
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the EVEN background rows  */
+	.TFtable tr:nth-child(even){
+		background: #dae5f4;
+	}
+
