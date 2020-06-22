@@ -1,461 +1,10 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.4.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-.issue-label {
-    text-transform: initial;
-}
-
-.warning > p:first-child { margin-top: 0 }
-.warning {
-    padding: .5em;
-    border-left-width: .5em;
-    border-left-style: solid;
-}
-span.warning { padding: .1em .5em .15em; }
-
-.issue.closed span.issue-number {
-    text-decoration: line-through;
-}
-
-.warning {
-    border-color: #f11;
-    border-width: .2em;
-    border-style: solid;
-    background: #fbe9e9;
-}
-
-.warning-title:before{
-    content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 1.3em;
-    float: left;
-    padding-right: .3em;
-    margin-top: -0.3em;
-}
-
-li.task-list-item {
-    list-style: none;
-}
-
-input.task-list-item-checkbox {
-    margin: 0 0.35em 0.25em -1.6em;
-    vertical-align: middle;
-}
-
-.issue a.respec-gh-label {
-  padding: 5px;
-  margin: 0 2px 0 2px;
-  font-size: 10px;
-  text-transform: none;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  position: relative;
-  bottom: 2px;
-  border: none;
-  display: inline-block;
-}
-</style><style>/* dfn popup panel that list all local references to a dfn */
-dfn {
-  cursor: pointer;
-}
-
-.dfn-panel {
-  position: absolute;
-  left: var(--left); /* set via JS */
-  top: var(--top); /* set via JS */
-  z-index: 35;
-  height: auto;
-  width: max-content;
-  max-width: 300px;
-  max-height: 500px;
-  overflow: auto;
-  padding: 0.5em 0.75em;
-  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-  background: #dddddd;
-  color: black;
-  border: outset 0.2em;
-}
-
-.dfn-panel * {
-  margin: 0;
-}
-
-.dfn-panel > b {
-  display: block;
-}
-
-.dfn-panel ul a[href] {
-  color: black;
-}
-
-.dfn-panel a:not(:hover) {
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-.dfn-panel a[href]:hover {
-  border-bottom-width: 1px;
-}
-
-.dfn-panel > b + b {
-  margin-top: 0.25em;
-}
-
-.dfn-panel ul {
-  padding: 0;
-}
-
-.dfn-panel li {
-  list-style: inside;
-}
-
-.dfn-panel.docked {
-  display: inline-block;
-  position: fixed;
-  left: 0.5em;
-  top: unset;
-  bottom: 2em;
-  margin: 0 auto;
-  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
-  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
-  max-height: 30vh;
-}
-</style>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
 		<title>Requirements for Silver</title>
 		
 		
-		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec specific CSS
- *****************************************************************/
-@keyframes pop {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.25, 1.25);
-    opacity: 0.75;
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-/* Override code highlighter background */
-.hljs {
-  background: transparent !important;
-}
-
-/* --- INLINES --- */
-h1 abbr,
-h2 abbr,
-h3 abbr,
-h4 abbr,
-h5 abbr,
-h6 abbr,
-a abbr {
-  border: none;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-a.internalDFN {
-  color: inherit;
-  border-bottom: 1px solid #99c;
-  text-decoration: none;
-}
-
-a.externalDFN {
-  color: inherit;
-  border-bottom: 1px dotted #ccc;
-  text-decoration: none;
-}
-
-a.bibref {
-  text-decoration: none;
-}
-
-.respec-offending-element:target {
-  animation: pop 0.25s ease-in-out 0s 1;
-}
-
-.respec-offending-element,
-a[href].respec-offending-element {
-  text-decoration: red wavy underline;
-}
-@supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
-  }
-  .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
-  }
-}
-
-#references :target {
-  background: #eaf3ff;
-  animation: pop 0.4s ease-in-out 0s 1;
-}
-
-cite .bibref {
-  font-style: normal;
-}
-
-code {
-  color: #c63501;
-}
-
-th code {
-  color: inherit;
-}
-
-a[href].orcid {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-a[href].orcid > svg {
-    margin-bottom: -2px;
-}
-
-/* --- TOC --- */
-
-.toc a,
-.tof a {
-  text-decoration: none;
-}
-
-a .secno,
-a .figno {
-  color: #000;
-}
-
-ul.tof,
-ol.tof {
-  list-style: none outside none;
-}
-
-.caption {
-  margin-top: 0.5em;
-  font-style: italic;
-}
-
-/* --- TABLE --- */
-
-table.simple {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 3px solid #005a9c;
-}
-
-.simple th {
-  background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th a {
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th[scope="row"] {
-  background: inherit;
-  color: inherit;
-  border-top: 1px solid #ddd;
-}
-
-.simple td {
-  padding: 3px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.simple tr:nth-child(even) {
-  background: #f0f6ff;
-}
-
-/* --- DL --- */
-
-.section dd > p:first-child {
-  margin-top: 0;
-}
-
-.section dd > p:last-child {
-  margin-bottom: 0;
-}
-
-.section dd {
-  margin-bottom: 1em;
-}
-
-.section dl.attrs dd,
-.section dl.eldef dd {
-  margin-bottom: 0;
-}
-
-#issue-summary > ul,
-.respec-dfn-list {
-  column-count: 2;
-}
-
-#issue-summary li,
-.respec-dfn-list li {
-  list-style: none;
-}
-
-details.respec-tests-details {
-  margin-left: 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-details.respec-tests-details > * {
-  padding-right: 2em;
-}
-
-details.respec-tests-details[open] {
-  z-index: 999999;
-  position: absolute;
-  border: thin solid #cad3e2;
-  border-radius: 0.3em;
-  background-color: white;
-  padding-bottom: 0.5em;
-}
-
-details.respec-tests-details[open] > summary {
-  border-bottom: thin solid #cad3e2;
-  padding-left: 1em;
-  margin-bottom: 1em;
-  line-height: 2em;
-}
-
-details.respec-tests-details > ul {
-  width: 100%;
-  margin-top: -0.3em;
-}
-
-details.respec-tests-details > li {
-  padding-left: 1em;
-}
-
-a[href].self-link:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-aside.example .marker > a.self-link {
-  color: inherit;
-}
-
-h2 > a.self-link,
-h3 > a.self-link,
-h4 > a.self-link,
-h5 > a.self-link,
-h6 > a.self-link {
-  border: none;
-  color: inherit;
-  font-size: 83%;
-  height: 2em;
-  left: -1.6em;
-  opacity: 0.5;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: opacity 0.2s;
-  width: 2em;
-}
-
-h2 > a.self-link::before,
-h3 > a.self-link::before,
-h4 > a.self-link::before,
-h5 > a.self-link::before,
-h6 > a.self-link::before {
-  content: "§";
-  display: block;
-}
-
-@media (max-width: 767px) {
-  dd {
-    margin-left: 0;
-  }
-
-  /* Don't position self-link in headings off-screen */
-  h2 > a.self-link,
-  h3 > a.self-link,
-  h4 > a.self-link,
-  h5 > a.self-link,
-  h6 > a.self-link {
-    left: auto;
-    top: auto;
-  }
-}
-
-@media print {
-  .removeOnSave {
-    display: none;
-  }
-}
-</style>
+		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
         
-	<meta name="description" content="The Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to  incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has:"><style>var {
-  position: relative;
-  cursor: pointer;
-}
-
-var[data-type]::before,
-var[data-type]::after {
-  position: absolute;
-  left: 50%;
-  top: -6px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-/* the triangle or arrow or caret or whatever */
-var[data-type]::before {
-  content: "";
-  transform: translateX(-50%);
-  border-width: 4px 6px 0 6px;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #000;
-}
-
-/* actual text */
-var[data-type]::after {
-  content: attr(data-type);
-  transform: translateX(-50%) translateY(-100%);
-  background: #000;
-  text-align: center;
-  /* additional styling */
-  font-family: "Dank Mono", "Fira Code", monospace;
-  font-style: normal;
-  padding: 6px;
-  border-radius: 3px;
-  color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
-}
-
-var[data-type]:hover::after,
-var[data-type]:hover::before {
-  opacity: 1;
-}
-</style><script id="initialUserConfig" type="application/json">{
+	<script async="" src="/cdn-cgi/bm/cv/1284585713/api.js"></script><meta name="description" content="The Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to  incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has:"><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "specStatus": "CG-DRAFT",
   "wg": "Silver Community Group",
   "editors": [
@@ -486,61 +35,55 @@ var[data-type]:hover::before {
   "github": "https://github.com/w3c/silver/tree/master/requirements",
   "copyrightStart": "2018",
   "shortName": "silver-requirements",
-  "publishDate": "2020-03-11",
-  "publishISODate": "2020-03-11T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 11 March 2020"
+  "publishDate": "2020-06-22",
+  "publishISODate": "2020-06-22T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 22 June 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
-	<body class="h-entry informative"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Requirements for Silver</h1>
+	<body class="h-entry informative toc-inline"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Requirements for Silver</h1>
+    
+    <h2>
+      Draft Community Group Report
+      <time class="dt-published" datetime="2020-06-22">22 June 2020</time>
+    </h2>
+    <dl>
       
-      <h2>
-        Draft Community Group Report
-        <time class="dt-published" datetime="2020-03-11">11 March 2020</time>
-      </h2>
-      <dl>
-        
-        
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/">https://w3c.github.io/silver/</a></dd>
-        
-        
-        
-        
-        <dt>Editors:</dt>
-        <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a>
-            (Tetralogical)
-          </dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a>
-            (Google, Inc.)
-          </dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
-            (W3C)
-          </dd>
-        
-        
-        <dt>Participate:</dt><dd>
-      <a href="https://github.com/w3c/silver/tree/master/requirements/">GitHub w3c/silver</a>
-    </dd><dd>
-      <a href="https://github.com/w3c/silver/tree/master/requirements/issues/">File a bug</a>
-    </dd><dd>
-      <a href="https://github.com/w3c/silver/tree/master/requirements/commits/gh-pages">Commit history</a>
-    </dd><dd>
-      <a href="https://github.com/w3c/silver/tree/master/requirements/pulls/">Pull requests</a>
-    </dd>
-      </dl>
       
-      <p class="copyright">
-              <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-              ©
-              2018-2020
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/">https://w3c.github.io/silver/</a></dd>
+      
+      
+      
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (Tetralogical) </dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (Google, Inc.) </dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
+      
+      
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/w3c/silver/tree/master/requirements/">GitHub w3c/silver</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/tree/master/requirements/issues/">File a bug</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/tree/master/requirements/commits/gh-pages">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/tree/master/requirements/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    <p class="copyright">
+          <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+          ©
+          2018-2020
+          
+          the Contributors to the Requirements for Silver
+          Specification, published by the
+          <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
+          <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
+                <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+                is available.
               
-              the Contributors to the Requirements for Silver
-              Specification, published by the
-              <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
-              <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
-                    <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
-                    is available.
-                  
-            </p>
-      <hr title="Separator for header">
-    </div>
+        </p>
+    <hr title="Separator for header">
+  </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
 			<p>The Requirements for Silver document is the next phase in the development of the next major upgrade to accessibility guidelines that will be the successor to Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to  incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has: </p>
 			<ol>
@@ -565,12 +108,12 @@ var[data-type]:hover::before {
 			<p>The Requirements for Silver is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20Requirements%20for%20Silver">email</a>. </p>
 			<p>This is the second phase of the Requirements developed during Q1 2019 after months of protoyping work. We anticipate one additional phase in Q3-Q4 2019 after months of evaluating how well actual content can be developed for Silver.  </p>
 		<p>
-            If you wish to make comments regarding this document, please send
-            them to
-            <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
-            (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
-            <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
-          </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.1 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><bdi class="secno">1.2 </bdi>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#problem_statements"><bdi class="secno">1.3 </bdi>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><bdi class="secno">1.3.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><bdi class="secno">1.3.2 </bdi>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><bdi class="secno">1.3.3 </bdi>Maintenance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><bdi class="secno">1.4 </bdi>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design_principles"><bdi class="secno">2. </bdi>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">3. </bdi>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><bdi class="secno">3.1 </bdi>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><bdi class="secno">3.2 </bdi>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><bdi class="secno">3.3 </bdi>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><bdi class="secno">3.4 </bdi>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability-usability"><bdi class="secno">3.5 </bdi>Readability/Usability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><bdi class="secno">3.6 </bdi>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">3.7 </bdi>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope-0"><bdi class="secno">3.8 </bdi>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">B.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><bdi class="secno">B.3 </bdi>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">B.4 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">B.5 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">B.6 </bdi>Research Partners</a></li></ol></li></ol></nav>
+          If you wish to make comments regarding this document, please send them
+          to
+          <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
+          (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
+          <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
+        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.1 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><bdi class="secno">1.2 </bdi>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#problem_statements"><bdi class="secno">1.3 </bdi>Opportunities for Silver          </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><bdi class="secno">1.3.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_conformance"><bdi class="secno">1.3.2 </bdi>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#oppotunities_maintenance"><bdi class="secno">1.3.3 </bdi>Maintenance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><bdi class="secno">1.4 </bdi>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design_principles"><bdi class="secno">2. </bdi>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">3. </bdi>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multiple-ways-to-measure"><bdi class="secno">3.1 </bdi>Multiple ways to measure</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><bdi class="secno">3.2 </bdi>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><bdi class="secno">3.3 </bdi>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><bdi class="secno">3.4 </bdi>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability-usability"><bdi class="secno">3.5 </bdi>Readability/Usability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><bdi class="secno">3.6 </bdi>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">3.7 </bdi>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope-0"><bdi class="secno">3.8 </bdi>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">B.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><bdi class="secno">B.3 </bdi>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">B.4 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">B.5 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">B.6 </bdi>Research Partners</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<h2 id="intro"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2>
             <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or recurring limitations. </p>
@@ -908,6 +451,8 @@ var[data-type]:hover::before {
         </ul>
         </section>
 		</section>
-	
+	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'5a7633edcd16e6d4',m:'82e870f7f437c29c8a1c7b0d859a64a9b38c6308-1592831357-1800-ARP3+gULFPlD/ykTyvW+Bu5fFRw5ZVZ3FdxkXZsZimXz4SfEEXXXJVb4ZAzIHbmnV/m3b+LiPw1JmG82Cy+gnHBefmMw/Z2q9BFZIZPf3zhAfA2uXcPQeo7IOmv/JeKNEVj7MeT/Wp3hxqs3ZZYulnr+sUbuRzSZgHARSUVH4CU20Ka7RYQHvyP6FpPTv24w3Le9q5h3xmIyREpn5Ve6FnE=',s:[0x6b98f718b7,0x7a6410944b],}})();</script>
 
-<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>

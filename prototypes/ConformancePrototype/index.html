@@ -1,460 +1,9 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.4.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-.issue-label {
-    text-transform: initial;
-}
-
-.warning > p:first-child { margin-top: 0 }
-.warning {
-    padding: .5em;
-    border-left-width: .5em;
-    border-left-style: solid;
-}
-span.warning { padding: .1em .5em .15em; }
-
-.issue.closed span.issue-number {
-    text-decoration: line-through;
-}
-
-.warning {
-    border-color: #f11;
-    border-width: .2em;
-    border-style: solid;
-    background: #fbe9e9;
-}
-
-.warning-title:before{
-    content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 1.3em;
-    float: left;
-    padding-right: .3em;
-    margin-top: -0.3em;
-}
-
-li.task-list-item {
-    list-style: none;
-}
-
-input.task-list-item-checkbox {
-    margin: 0 0.35em 0.25em -1.6em;
-    vertical-align: middle;
-}
-
-.issue a.respec-gh-label {
-  padding: 5px;
-  margin: 0 2px 0 2px;
-  font-size: 10px;
-  text-transform: none;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  position: relative;
-  bottom: 2px;
-  border: none;
-  display: inline-block;
-}
-</style><style>/* dfn popup panel that list all local references to a dfn */
-dfn {
-  cursor: pointer;
-}
-
-.dfn-panel {
-  position: absolute;
-  left: var(--left); /* set via JS */
-  top: var(--top); /* set via JS */
-  z-index: 35;
-  height: auto;
-  width: max-content;
-  max-width: 300px;
-  max-height: 500px;
-  overflow: auto;
-  padding: 0.5em 0.75em;
-  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-  background: #dddddd;
-  color: black;
-  border: outset 0.2em;
-}
-
-.dfn-panel * {
-  margin: 0;
-}
-
-.dfn-panel > b {
-  display: block;
-}
-
-.dfn-panel ul a[href] {
-  color: black;
-}
-
-.dfn-panel a:not(:hover) {
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-.dfn-panel a[href]:hover {
-  border-bottom-width: 1px;
-}
-
-.dfn-panel > b + b {
-  margin-top: 0.25em;
-}
-
-.dfn-panel ul {
-  padding: 0;
-}
-
-.dfn-panel li {
-  list-style: inside;
-}
-
-.dfn-panel.docked {
-  display: inline-block;
-  position: fixed;
-  left: 0.5em;
-  top: unset;
-  bottom: 2em;
-  margin: 0 auto;
-  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
-  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
-  max-height: 30vh;
-}
-</style>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
 		<title>Silver Conformance Prototype</title>
 		
-		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec specific CSS
- *****************************************************************/
-@keyframes pop {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.25, 1.25);
-    opacity: 0.75;
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-/* Override code highlighter background */
-.hljs {
-  background: transparent !important;
-}
-
-/* --- INLINES --- */
-h1 abbr,
-h2 abbr,
-h3 abbr,
-h4 abbr,
-h5 abbr,
-h6 abbr,
-a abbr {
-  border: none;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-a.internalDFN {
-  color: inherit;
-  border-bottom: 1px solid #99c;
-  text-decoration: none;
-}
-
-a.externalDFN {
-  color: inherit;
-  border-bottom: 1px dotted #ccc;
-  text-decoration: none;
-}
-
-a.bibref {
-  text-decoration: none;
-}
-
-.respec-offending-element:target {
-  animation: pop 0.25s ease-in-out 0s 1;
-}
-
-.respec-offending-element,
-a[href].respec-offending-element {
-  text-decoration: red wavy underline;
-}
-@supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
-  }
-  .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
-  }
-}
-
-#references :target {
-  background: #eaf3ff;
-  animation: pop 0.4s ease-in-out 0s 1;
-}
-
-cite .bibref {
-  font-style: normal;
-}
-
-code {
-  color: #c63501;
-}
-
-th code {
-  color: inherit;
-}
-
-a[href].orcid {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-a[href].orcid > svg {
-    margin-bottom: -2px;
-}
-
-/* --- TOC --- */
-
-.toc a,
-.tof a {
-  text-decoration: none;
-}
-
-a .secno,
-a .figno {
-  color: #000;
-}
-
-ul.tof,
-ol.tof {
-  list-style: none outside none;
-}
-
-.caption {
-  margin-top: 0.5em;
-  font-style: italic;
-}
-
-/* --- TABLE --- */
-
-table.simple {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 3px solid #005a9c;
-}
-
-.simple th {
-  background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th a {
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th[scope="row"] {
-  background: inherit;
-  color: inherit;
-  border-top: 1px solid #ddd;
-}
-
-.simple td {
-  padding: 3px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.simple tr:nth-child(even) {
-  background: #f0f6ff;
-}
-
-/* --- DL --- */
-
-.section dd > p:first-child {
-  margin-top: 0;
-}
-
-.section dd > p:last-child {
-  margin-bottom: 0;
-}
-
-.section dd {
-  margin-bottom: 1em;
-}
-
-.section dl.attrs dd,
-.section dl.eldef dd {
-  margin-bottom: 0;
-}
-
-#issue-summary > ul,
-.respec-dfn-list {
-  column-count: 2;
-}
-
-#issue-summary li,
-.respec-dfn-list li {
-  list-style: none;
-}
-
-details.respec-tests-details {
-  margin-left: 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-details.respec-tests-details > * {
-  padding-right: 2em;
-}
-
-details.respec-tests-details[open] {
-  z-index: 999999;
-  position: absolute;
-  border: thin solid #cad3e2;
-  border-radius: 0.3em;
-  background-color: white;
-  padding-bottom: 0.5em;
-}
-
-details.respec-tests-details[open] > summary {
-  border-bottom: thin solid #cad3e2;
-  padding-left: 1em;
-  margin-bottom: 1em;
-  line-height: 2em;
-}
-
-details.respec-tests-details > ul {
-  width: 100%;
-  margin-top: -0.3em;
-}
-
-details.respec-tests-details > li {
-  padding-left: 1em;
-}
-
-a[href].self-link:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-aside.example .marker > a.self-link {
-  color: inherit;
-}
-
-h2 > a.self-link,
-h3 > a.self-link,
-h4 > a.self-link,
-h5 > a.self-link,
-h6 > a.self-link {
-  border: none;
-  color: inherit;
-  font-size: 83%;
-  height: 2em;
-  left: -1.6em;
-  opacity: 0.5;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: opacity 0.2s;
-  width: 2em;
-}
-
-h2 > a.self-link::before,
-h3 > a.self-link::before,
-h4 > a.self-link::before,
-h5 > a.self-link::before,
-h6 > a.self-link::before {
-  content: "§";
-  display: block;
-}
-
-@media (max-width: 767px) {
-  dd {
-    margin-left: 0;
-  }
-
-  /* Don't position self-link in headings off-screen */
-  h2 > a.self-link,
-  h3 > a.self-link,
-  h4 > a.self-link,
-  h5 > a.self-link,
-  h6 > a.self-link {
-    left: auto;
-    top: auto;
-  }
-}
-
-@media print {
-  .removeOnSave {
-    display: none;
-  }
-}
-</style>
+		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
 		
-	<meta name="description" content="A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018. This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported."><style>var {
-  position: relative;
-  cursor: pointer;
-}
-
-var[data-type]::before,
-var[data-type]::after {
-  position: absolute;
-  left: 50%;
-  top: -6px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-/* the triangle or arrow or caret or whatever */
-var[data-type]::before {
-  content: "";
-  transform: translateX(-50%);
-  border-width: 4px 6px 0 6px;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #000;
-}
-
-/* actual text */
-var[data-type]::after {
-  content: attr(data-type);
-  transform: translateX(-50%) translateY(-100%);
-  background: #000;
-  text-align: center;
-  /* additional styling */
-  font-family: "Dank Mono", "Fira Code", monospace;
-  font-style: normal;
-  padding: 6px;
-  border-radius: 3px;
-  color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
-}
-
-var[data-type]:hover::after,
-var[data-type]:hover::before {
-  opacity: 1;
-}
-</style><script id="initialUserConfig" type="application/json">{
+	<script async="" src="/cdn-cgi/bm/cv/1284585713/api.js"></script><meta name="description" content="A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018. This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported."><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "specStatus": "CG-DRAFT",
   "wg": "Silver Task Force and Community Group",
   "editors": [
@@ -476,59 +25,55 @@ var[data-type]:hover::before {
   "wgURI": "https://www.w3.org/community/silver/",
   "github": "https://github.com/w3c/silver/prototypes/ConformancePrototype.html",
   "copyrightStart": "2018",
-  "publishDate": "2020-03-11",
-  "publishISODate": "2020-03-11T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 11 March 2020"
+  "publishDate": "2020-06-22",
+  "publishISODate": "2020-06-22T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 22 June 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
-<body class="h-entry informative"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Silver Conformance Prototype</h1>
+<body class="h-entry informative toc-inline"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Silver Conformance Prototype</h1>
+    
+    <h2>
+      Draft Community Group Report
+      <time class="dt-published" datetime="2020-06-22">22 June 2020</time>
+    </h2>
+    <dl>
       
-      <h2>
-        Draft Community Group Report
-        <time class="dt-published" datetime="2020-03-11">11 March 2020</time>
-      </h2>
-      <dl>
-        
-        
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/">https://w3c.github.io/silver/</a></dd>
-        
-        
-        
-        
-        <dt>Editors:</dt>
-        <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a>
-            (The Paciello Group, LLC)
-          </dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a>
-            (Google, Inc.)
-          </dd>
-        
-        
-        <dt>Participate:</dt><dd>
-      <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html/">GitHub w3c/silver</a>
-    </dd><dd>
-      <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html/issues/">File a bug</a>
-    </dd><dd>
-      <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html/commits/gh-pages">Commit history</a>
-    </dd><dd>
-      <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html/pulls/">Pull requests</a>
-    </dd>
-      </dl>
       
-      <p class="copyright">
-              <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-              ©
-              2018-2020
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/">https://w3c.github.io/silver/</a></dd>
+      
+      
+      
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (The Paciello Group, LLC) </dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (Google, Inc.) </dd>
+      
+      
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html/">GitHub w3c/silver</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html/issues/">File a bug</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html/commits/gh-pages">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/prototypes/ConformancePrototype.html/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    <p class="copyright">
+          <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+          ©
+          2018-2020
+          
+          the Contributors to the Silver Conformance Prototype
+          Specification, published by the
+          <a href="https://www.w3.org/community/silver/">Silver Task Force and Community Group</a> under the
+          <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
+                <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+                is available.
               
-              the Contributors to the Silver Conformance Prototype
-              Specification, published by the
-              <a href="https://www.w3.org/community/silver/">Silver Task Force and Community Group</a> under the
-              <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
-                    <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
-                    is available.
-                  
-            </p>
-      <hr title="Separator for header">
-    </div>
+        </p>
+    <hr title="Separator for header">
+  </div>
 <section id="abstract" class="introductory"><h2>Abstract</h2>
 	<p>A new conformance structure is integral to Silver meeting the needs of people with disabilities, rapidly evolving technology, and the needs of regulators for clear compliance measurement. This editors' draft of a prototype of a conformance structure is based on the Silver research of 2017-2018, the results of the Silver Design Sprint of March 2018, and input from the AccessU Prototyping session of May 2018. This prototype is divided into three areas: Compliance, Measurement, and Accessibility Supported. </p>
 	<p class="highlight">This is still a rough draft.  Please comment on the general direction.  Specific examples would be helpful.  </p>
@@ -797,6 +342,8 @@ var[data-type]:hover::before {
         </section>
 
 </section>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'5a76340c69daccd6',m:'19d8007a46d4cab790fbafaa07efa331079778b9-1592831362-1800-AbIG5PcT58zHZB9mA5XQ5YfWlop/cHMNUeDnbu3D3r2c3IMGAePZhxbrmRI+1ukFlBWq4kkYfnQ6BVwu5anNzHZM6M5AmWcqouQ1HzPF/Ux1ASHq0ri2q7jELkpAlL6B42G0Wmsc59wjmIsugZPoijMbTj3ryCvNfCn/LeAuhw4rtr3wKOIBWylin/aLKMHXisegwCNPVUsYPwYroVmq1/WnNyLjn0qqIOPeKut04LZX',s:[0xe5bb40f68a,0x9fc0e2444b],}})();</script>
 
-
-<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
