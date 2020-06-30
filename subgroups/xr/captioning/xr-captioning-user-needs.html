@@ -5,7 +5,13 @@
   <meta charset="utf-8">
   <title>Silver XR Subgroup</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.1.min.css"/>
-
+  <style media="screen">
+    .notification{
+      background-color: LemonChiffon;
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,7 +29,61 @@
       </nav>
     </header>
     <article>
+      <p class="notification">Note: This is a living document and we appreciate all feedback and comments in order to improve its contents. We ask that comments are submitted as a <a href="https://github.com/w3c/silver/issues/new">New GitHub Issue</a> within the W3C Silver GitHub Repository.</p>
 
+      <h3>Abstract</h3>
+      <p>This document presents the accessibility requirements for users when using captions and audio descriptions within a web based mixed reality environment.</p>
+      <p>It provides an introduction to the needs of users in relation to XR Captioned content using Functional Needs provided in Section 4.2 of <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301-549</a>. We anticipate that this will be updated by a functional needs list created by the <em>Silver Functional Needs Sub-Group</em> at a later date.</p>
+
+      <p>The User Needs that are outlined below were contructed by taking two approaches:</p>
+      <ol>
+        <li>A <strong>Top-Down</strong> apporach was used where existing user needs identified in <a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements</a> were analysed and relevance determined</li>
+        <li>A <strong>Bottom-Up</strong> approach was used where functional needs from <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301-549</a> were used as a basis to determine needs for specific accessibility areas.</li>
+      </ol>
+      <p>The results from both of these approaches have been combined and are reported on below.</p>
+
+      <h3>Summary of Accessibility User Needs</h3>
+      <p>This section provides examples of XR Captioning accessibility requirements based on functional performance associated with a number of accessibility areas. For a broader exploration of how people with different disabilities interact with web content and tools, see <a href="https://www.w3.org/WAI/people-use-web/">How People with Disabilities Use the Web</a>.</p>
+
+      <!-- TODO: DEAF-BLIND is not mentioned in 301549. Need guidance here. A deaf-blind user communicating via a RTC application in XR may have sophisticated 'routing' requirements for various inputs and outputs. -->
+
+      <h4>Usage Without Vision</h4>
+      <p>People that do not have access to visual information will require to have information presented in an alternative method. For XR captioning this should take into consideration the text that is being output and the orientation of sound location. In addition, any meta-information that is attached to textual content (e.g. the name of the person speaking) should be made available.</p>
+
+      <h4>Usage with Limited Vision</h4>
+      <p>People with limited vision may have similar requirements to those without vision and all of the items mentioned previously should be considered. In addition to this, screen magnification users may need to carry out additional customization options that relate to the size of textual content and meta-information.</p>
+
+      <h4>Usage without Perception of Colour</h4>
+      <p>People that have atypical perceptions of colour may need to customise the presentation of captions within an XR environment. The presentation of captions in XR should take into account the real/virtual world that the user is interacting with and should make sure that text remains legible in regard to contrast with the background. Care should also be taken to ensure that any meta-information relating to the directionality of sound (e.g. radar plots, directional arrows) also takes color contrast issues into consideration.</p>
+
+
+      <h4>Usage without Hearing</h4>
+      <p>People that use XR without hearing will require auditory information to be translated into an alternative format. Auditory information can include, but is not limited to, speech and key sound effects. In addition, the directionality of any sound will also have to be communicated to the user with this taking into consideration sound that takes place outside of the current view screen.</p>
+      <p>The exact format that auditory information is translated into is not confined to captions. People may have a preference for signing of text alternatives or equivalents</p>
+
+      <h4>Usage with Limited Hearing</h4>
+      <p>People with limited hearing may have some of the needs that are described when using XR captions without hearing. In addition to this alternative customisation options relating to sound direction may be required.</p>
+      <p class="notification">Note: We are aware that there may be additional user needs in this area and would appreciate input to identify these.</p>
+
+      <h4>Usage without Vocal Capability</h4>
+      <p class="notification">Note: We are aware that there may be additional user needs in this area and would appreciate input to identify these.</p>
+
+      <h4>Usage with Limited Manipulation or Strength</h4>
+      <p>People with limited manipulation or strength may want to interact with content in an immersive environment that doesnt require particular bodily movement. These interactions can include captioning services where the timings for interactions may need to be modified or extended. In addition users of assistive technology may want to identify locations, objects, and interact with immersive environments.</p>
+
+      <h4>Usage with Limited Reach</h4>
+      <p>People with limited reach may have similar user needs to people with limited manipulation or strength so these should be considered.</p>
+        <p class="notification">Note: We are aware that there may be additional user needs in this area and would appreciate input to identify these.</p>
+
+
+      <h4>Minimise Photosensitive Seizure Triggers</h4>
+      <p>In order to minimise photosensitive seizure triggers, people may need to personalise the immersive environment in various ways. This can include personalisation of XR captions which should take into consideration methods that can reduce photosensitive seizures.</p>
+
+      <h4>Usage with Limited Cognition</h4>
+      <p>People with limited congnition may require to change the speed at which they travel through an immsersive environment. The timing of captioned content should take this into consideration. Personalisation of captioned services may be required in order to assist in creating an accessible immsersive environment.</p>
+
+      <h4>Privacy</h4>
+      <p class="notification">Note: We are aware that there may be user needs in this area and would appreciate input to identify these.</p>
     </article>
   </section>
 
