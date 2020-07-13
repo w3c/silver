@@ -1,9 +1,21 @@
 <html>
   <head>
+    <link rel="stylesheet" href="styles/inaccessible/styles.css">
+    <style>
+      .disclaimer{
+        grid-column: 1 / -1;
+        text-align: center;
+      }
+
+      .reg-form{
+        grid-column: 3 / 4;
+      }
+
+    </style>
   </head>
-  <body>
-  <p>Note: This page is deliberately inaccessible. The links and submit do not work. It is used for testing. 
-  <form action="#" name="Registration">
+  <body class="l-login-form-grid">
+  <p class="disclaimer">Note: This page is deliberately inaccessible. The links and submit do not work. It is used for testing. 
+  <form action="#" class="reg-form" name="Registration">
 <table cellpadding="2" width="20%" bgcolor="99FFFF" align="center" cellspacing="2">
 <tr>
   <td colspan=2>

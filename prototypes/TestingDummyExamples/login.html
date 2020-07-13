@@ -3,35 +3,73 @@
   <head>
     <meta charset="utf-8">
     <title>Login - An Inaccessible Test</title>
-    <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="styles/inaccessible/styles.css">
+		<style>
+      header{
+        grid-column: 1 / -1;
+        text-align: center;
+      }
+
+      main{
+        grid-column: 3 / 4;
+			}
+
+    </style>
   </head>
-  <body>
-  <p>Note: This is not a working page, the links and submit don't do anything.  It is only for testing HTML. </p>
+  <body class="l-login-form-grid">
+		<a class="u-hidden-visually skip-link" href="#main">skip to the main content</a>
+		<header class="banner">
+			<p class="disclaimer">Note: This is not a working page, the links and submit don't do anything.  It is only for testing HTML. </p>
+		</header>
+		<main id="main" tabindex="-1">
+			<h6>Login to the site</h6>
+			<form class="form--login" name="login" method="post">
+				<table width="20%" align="center">
+					<tr>
+						<td colspan=2><center><font size=4><b>Login</b></font></center></td>
+					</tr>
+					<tr>
+						<td>Username:</td>
+						<td><input class="input--text u-no-focus-highlight" type="text" size=25 name="userid"></td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><input class="input--text u-no-focus-highlight" type="Password" size=25 name="pwd"></td>
+					</tr>
+					<tr>
+						<td><input class="u-no-focus-highlight" type="Reset"></td>
+						<td><input aria-label="Submit" class="u-no-focus-highlight" type="submit" value="Login"></td>
+					</tr>
+				</table>
+				<p>Don't have an account? Click <a href="registration-form.html">here</a> to register. Forgot your password? Click <a href="forgot-password.html">here</a> to get a reminder.</p>
+			</form>
+		</main>
 
-<form name="login" method="post">
-<table width="20%" bgcolor="0033dd" align="center">
+  <script>
 
-<tr>
-<td colspan=2><center><font size=4><b>Login</b></font></center></td>
-</tr>
+    document.addEventListener("DOMContentLoaded", function(e){
 
-<tr>
-<td>Username:</td>
-<td><input type="text" size=25 name="userid"></td>
-</tr>
+      const loginForm = document.querySelector(".form--login");
+      const inputs = document.querySelectorAll(".input--text");
 
-<tr>
-<td>Password:</td>
-<td><input type="Password" size=25 name="pwd"></td>
-</tr>
+      loginForm.addEventListener("submit", function(e){
+        for(let i=0;i<inputs.length;i++){
+          if(!inputs[i].value){
+            e.preventDefault();
+            inputs[i].closest("tr").classList.add("has-error");
+          }
+        }
 
-<tr>
-<td ><input type="Reset"></td>
-<td><input type="submit" value="Login"></td>
-</tr>
+      }, false);
 
-</table>
-</form>
+
+
+    });
+
+
+
+  </script>
+
 
 </body>
 </html>

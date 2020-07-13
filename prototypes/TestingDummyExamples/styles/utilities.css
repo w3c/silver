@@ -1,0 +1,18 @@
+.u-hidden-visually {
+  clip:rect(0,0,0,0);
+  -webkit-clip-path:inset(50%);
+  clip-path:inset(50%);
+  height:1px;
+  overflow:hidden;
+  position:absolute;
+  white-space:nowrap;
+  width:1px;
+}
+
+.u-block{
+  display:block;
+}
+
+.u-no-focus-highlight:focus{
+  outline:none;
+}

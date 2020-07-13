@@ -1,0 +1,16 @@
+.form--login{
+  background:hsl(226, 100%, 43%);
+  width:100%;
+}
+
+input:not([type="checkbox"]):not([type="file"]):not([type="image"]):not([type="radio"]):not([type="range"]){
+  height:20px; /* set height on element to break text resizing */
+}
+
+.has-error{
+  color:var(--inaccessible-error);
+}
+
+.has-error input:not([type="checkbox"]):not([type="file"]):not([type="image"]):not([type="radio"]):not([type="range"]){
+  border:1px solid var(--inaccessible-error);
+}

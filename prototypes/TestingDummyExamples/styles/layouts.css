@@ -1,0 +1,6 @@
+.l-login-form-grid{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: max-content;
+}
