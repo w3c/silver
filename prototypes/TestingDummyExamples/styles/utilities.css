@@ -9,6 +9,10 @@
   width:1px;
 }
 
+.u-hidden, [hidden]{
+  display:none !important;
+}
+
 .u-block{
   display:block;
 }
