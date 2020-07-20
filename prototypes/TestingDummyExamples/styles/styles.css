@@ -1,8 +1,7 @@
-@import url(../utilities.css);
-@import url(../variables.css);
-@import url(../layouts.css);
-@import url(../typography.css);
-@import url(login-form.css);
+@import url(utilities.css);
+@import url(variables.css);
+@import url(layouts.css);
+@import url(typography.css);
 
 :root{
   font-size:16px; /* set font size in px to prevent resizing in Chromium browsers */
