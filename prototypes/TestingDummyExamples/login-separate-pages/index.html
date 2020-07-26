@@ -168,13 +168,18 @@
         loginForm.addEventListener(
           "submit",
           function (e) {
+            let c = 0;
+            e.preventDefault();
             for (let i = 0; i < inputs.length; i++) {
+              inputs[i].closest("tr").classList.remove("has-error");
               if (!inputs[i].value) {
-                e.preventDefault();
                 inputs[i].closest("tr").classList.add("has-error");
-              } else {
-                window.location.href = "https://rawcdn.githack.com/w3c/silver/0577092791a876e7b978981f30699c078946ba10/prototypes/TestingDummyExamples/login-separate-pages/success.html";
+                c++;
               }
+            }
+            if(c === 0){
+                window.location.href = "https://rawcdn.githack.com/w3c/silver/0577092791a876e7b978981f30699c078946ba10/prototypes/TestingDummyExamples/login-separate-pages/success.html";
+              
             }
           },
           false
