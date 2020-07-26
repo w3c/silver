@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="relative-font-sizing" lang="us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login - An Inaccessible Test</title>
+    <link rel="stylesheet" href="../global-styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body class="l-login-form-grid">
+    <a class="u-hidden-visually skip-link" href="#main"
+      >skip to the main content</a
+    >
+    <header class="banner">
+      <p class="disclaimer" role="note">
+        Note: This is not a working page, the links and submit don't do
+        anything. It is only for testing HTML.
+      </p>
+    </header>
+    <main class="main" id="main" tabindex="-1">
+      <h6>Login to the site</h6>
+      <form class="form--login" name="login" method="post">
+        <table width="20%" align="center">
+          <tr>
+            <td colspan="2">
+              <center>
+                <font size="4"><b>Login</b></font>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <th>Username:</th>
+            <td>
+              <input
+                class="input--text u-failing-form-border-grey u-fixed-px-height--20 u-no-focus-highlight"
+                type="text"
+                size="25"
+                name="userid"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Password:</th>
+            <td>
+              <input
+                class="input--text u-failing-form-border-grey u-fixed-px-height--20 u-no-focus-highlight"
+                type="Password"
+                size="25"
+                name="pwd"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <input
+                class="u-failing-form-border-grey u-fixed-px-height--30 u-no-focus-highlight"
+                type="Reset"
+              />
+            </th>
+            <td>
+              <input
+                aria-label="Submit"
+                class="u-failing-form-border-grey u-fixed-px-height--30 u-no-focus-highlight"
+                type="submit"
+                value="Login"
+              />
+            </td>
+          </tr>
+        </table>
+        <p>
+          Don't have an account? Click
+          <a href="registration-form.html">here</a> to register. Forgot your
+          password? Click <a href="forgot-password.html">here</a> to get a
+          reminder.
+        </p>
+      </form>
+
+      <section class="full-columns notes">
+        <details class="page-notes">
+          <summary>Notes on inaccessibility</summary>
+          <div class="content">
+            <ol>
+              <li>The page specifies an invalid language.</li>
+              <li>
+                The &#8220;login to the site&#8221; header is an
+                <code class="language-markup">&lt;h6&gt;</code>.
+              </li>
+              <li>
+                The form uses
+                <code class="language-markup">&lt;table&gt;</code>, including
+                <code class="language-markup">&lt;th&gt;</code> elements to make
+                the "labels" bold, not marked as presentational, for laying out
+                content.
+              </li>
+              <li>
+                The form input elements:
+                <ol>
+                  <li>don't have accessible names.</li>
+                  <li>have had their focus highlighting removed.</li>
+                  <li>don't identify their input purpose.</li>
+                  <li>
+                    have heights set in
+                    <code class="language-markup">px</code> which results in
+                    user-entered text being cropped when text is resized to
+                    200%.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                All input-related text inside the form fails color contrast.
+							</li>
+							<li>When the form is in an error state:
+								<ol>
+									<li>Color alone is used to indicate the error.</li>
+									<li>The red text fails contrast.</li>
+									<li>The red borders around the <code class="language-markup">&lt;input&gt;</code> elements fails color contrast.</li>
+									<li>There is no best-practice announcement to screen readers that an error has occured.</li>
+								</ol>
+							</li>
+              <li>
+                The form contains two links, going to two different URLs, with
+                just &#8220;here&#8221; as the accessible name.
+              </li>
+              <li>Horizontal scrolling happens at 400% zoom.</li>
+              <li>
+                The Contact Us link in the footer:
+                <ol>
+                  <li>isn't keyboard accessible</li>
+                  <li>has a non-conforming focus state</li>
+                  <li>Goes to a page that isn't contact information</li>
+                </ol>
+              </li>
+              <li>
+                The page footer has an invalid
+                <code class="language-markup">role</code> attribute.
+              </li>
+            </ol>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="contentinfo" role="contont-info">
+      <a
+        data-elemtype="link"
+        data-targetview="https://example.com?q=help"
+        role="link"
+        >Contact Us</a
+      >
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (e) {
+        const loginForm = document.querySelector(".form--login");
+        const inputs = document.querySelectorAll(".input--text");
+        const notLinks = document.querySelectorAll("[data-elemtype=link]");
+
+        for (let i = 0; i < notLinks.length; i++) {
+          notLinks[i].addEventListener(
+            "click",
+            function (e) {
+              var targetUrl = e.currentTarget.getAttribute("data-targetview");
+              window.location.href = targetUrl;
+            },
+            false
+          );
+        }
+
+        loginForm.addEventListener(
+          "submit",
+          function (e) {
+            for (let i = 0; i < inputs.length; i++) {
+              if (!inputs[i].value) {
+                e.preventDefault();
+                inputs[i].closest("tr").classList.add("has-error");
+              } else {
+                window.location.href = "success.html";
+              }
+            }
+          },
+          false
+        );
+      });
+    </script>
+  </body>
+</html>
