@@ -1,0 +1,35 @@
+@import url(utilities.css);
+@import url(variables.css);
+@import url(components.css);
+@import url(typography.css);
+
+:root{
+  font-size:16px; /* set font size in px to prevent resizing in Chromium browsers */
+}
+
+*, *::after, *::before{
+  box-sizing:inherit;
+}
+
+body{
+  background: var(--white);
+  color:var(--black);
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, sans-serif;  
+  line-height:24px; /* set with an absolute unit to make text-resizing easier to fail */
+}
+
+.skip-link:focus{
+background:hsl(0,0%,0%);
+clip:auto;
+clip-path:none;
+color:hsl(50,100%,50%);
+height:initial;
+padding:1rem;
+text-decoration:none;
+width:initial;
+}
+
+main:focus{
+  outline:0;
+}
+
