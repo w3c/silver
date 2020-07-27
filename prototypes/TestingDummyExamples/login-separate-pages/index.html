@@ -88,13 +88,13 @@
                 The form uses
                 <code class="language-markup">&lt;table&gt;</code>, including
                 <code class="language-markup">&lt;th&gt;</code> elements to make
-                the "labels" bold, not marked as presentational, for laying out
+                the &#8220;labels&#8221; bold, not marked as presentational, for laying out
                 content.
               </li>
               <li>
                 The form input elements:
                 <ol>
-                  <li>don't have accessible names.</li>
+                  <li>don't have accessible names or, in the case of the Login input, have their visible label overwritten by a different <code class="language-markup">aria-label</code>.</li>
                   <li>have had their focus highlighting removed.</li>
                   <li>don't identify their input purpose.</li>
                   <li>
@@ -106,14 +106,14 @@
                 </ol>
               </li>
               <li>
-                All input-related text inside the form fails color contrast.
+                All next not in an <code class="language-markup">&lt;input&gt; element doesn't have sufficient contrast.</code>
 							</li>
 							<li>When the form is in an error state:
 								<ol>
 									<li>Color alone is used to indicate the error.</li>
 									<li>The red text fails contrast.</li>
 									<li>The red borders around the <code class="language-markup">&lt;input&gt;</code> elements fails color contrast.</li>
-									<li>There is no best-practice announcement to screen readers that an error has occured.</li>
+									<li>There is no best-practice announcement to screen readers that an error has occurred.</li>
 								</ol>
 							</li>
               <li>
