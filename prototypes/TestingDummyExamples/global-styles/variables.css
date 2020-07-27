@@ -1,0 +1,15 @@
+/* colors */
+
+:root{
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  --black:hsl(0,0%,0%);
+  --white:hsl(0,0%,100%);
+  --disabled-link:hsl(0,0%,45%);
+  --failing-error:hsl(0,100%,50%);
+  --failing-light-grey:hsl(0,0%,85%);
+  --blue-dark:hsl(200,50%,30%);
+
+}

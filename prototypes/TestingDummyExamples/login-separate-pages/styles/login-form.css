@@ -1,0 +1,91 @@
+.form--login{
+  background:hsl(226, 100%, 43%);
+  width:100%;
+}
+
+input:not([type="checkbox"]):not([type="file"]):not([type="image"]):not([type="radio"]):not([type="range"]):not([type="reset"]):not([type="submit"]){
+  font:inherit;
+}
+
+input[type="reset"],[type="submit"]{
+  font:inherit;
+  font-weight: normal;
+}
+
+.has-error{
+  color:var(--failing-error);
+}
+
+.has-error input:not([type="checkbox"]):not([type="file"]):not([type="image"]):not([type="radio"]):not([type="range"]){
+  border:1px solid var(--failing-error);
+}
+
+.contentinfo{
+  border-top:2px solid hsl(226, 100%, 43%);
+  padding:1rem;
+}
+
+.btn{
+  border: 1px solid hsl(0,0%,60%);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.25em;
+  vertical-align: middle;
+}
+
+.forgot-pwd-btn-submit{
+  align-items: center;
+  background: hsl(83,73%,36%);
+  border:0;
+  color:hsla(0,0%,100%,.7);
+  display:inline-flex;
+  grid-column: 3 / 5;
+  justify-content: space-between;
+  margin-top:0.75rem;
+}
+
+.forgot-pwd-btn-submit img{
+  width:80%;
+}
+
+.login-form-input-block{
+  grid-column: 3 / 5;
+}
+
+/* modal dialog */
+
+.modal-backer{
+  align-items: center;
+  background: hsla(0,0%,40%,.8);
+  bottom: 0;
+  display:flex;
+  left:0;
+  justify-content: center;
+  position:fixed;
+  right:0;
+  top:0;
+}
+
+.dialog{
+  align-items: center;
+  background: white;
+  display:flex;
+  flex-wrap:wrap;
+  height:200px;
+  padding:30px;
+  position: relative;
+  width:400px;
+}
+
+.close-dialog{
+  color:hsl(0,0%,70%);
+  cursor: pointer;
+  font-size:30px;
+  display:block;
+  line-height:0;
+  padding:20px;
+  position:absolute;
+  right:0px;
+  top:0px;
+}

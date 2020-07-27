@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+		<link rel="stylesheet" href="../global-styles/styles.css">
+		<link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body class="l-login-form-grid">
+    <header class="banner" role="banner">
+      <p class="banner login-form-disclaimer" role="note">Note: this page is for testing purposes only.</p>
+    </header>
+    
+    <main class="main">
+      
+      <h1 class="full-columns u-text-centered">Contact Us</h1>
+    
+      <p>Fake contact us page for testing. Part of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Accessibility Guidelines Working Group&#8217;s Silver Task Force</a>.</p>
+   
+  </main>
+
+  <div class="contentinfo" role="contentinfo">
+    <a aria-current="page" aria-disabled="true" class="contact-us-link u-disabled-link" href="contact-us.html">Contact Us</a>
+  </div>
+
+  </body>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function(e){
+
+      const contactUsLink = document.querySelector(".contact-us-link");
+      const currentUrl = window.location.href;
+      contactUsLink.setAttribute("href", currentUrl);
+
+      contactUsLink.addEventListener("click", function(e){
+        e.preventDefault();
+      }, false);
+
+    });
+
+  </script>
+
+  </html>

@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../global-styles/styles.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
+		<meta content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">	
+  </head>
+  <body class="l-login-form-grid">
+    <header class="banner">
+      <p class="disclaimer" role="note">
+        Note: This is not a working page, the links and submit don't do
+        anything. It is only for testing HTML.
+      </p>
+    </header>
+    <main class="main" id="main" tabindex="-1">
+      <form action="#" class="reg-form" name="Registration">
+        <table
+          cellpadding="2"
+          width="425"
+          bgcolor="99FFFF"
+          align="center"
+          cellspacing="2"
+        >
+          <tr>
+            <td colspan="4">
+              <center>
+                <font size="4"><b>Registration</b></font>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td class="u-px-line-height--8">First Name</td>
+            <td colspan="3">
+              <input
+                class="u-no-borders"
+                type="text"
+                name="firstnames"
+                id="firstname"
+                size="30"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="u-px-line-height--8">Last Name</td>
+            <td colspan="3">
+              <input
+                class="u-no-borders"
+                type="text"
+                name="lastname"
+                id="lastname"
+                size="30"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="u-px-line-height--8">Address</td>
+            <td colspan="3">
+              <input
+                class="u-no-borders"
+                type="text"
+                name="saddress"
+                id="saddress"
+                size="30"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="u-px-line-height--8">Email Address</td>
+            <td colspan="3">
+              <input
+                class="u-no-borders"
+                type="text"
+                name="emailaddress"
+                id="emailaddress"
+                size="30"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="u-px-line-height--8">Sex</td>
+            <td class="u-px-line-height--8">
+              <input
+                class="u-no-borders"
+                type="radio"
+                name="sex"
+                value="male"
+                size="10"
+              />Male
+            </td>
+            <td class="u-px-line-height--8">
+              <input type="radio" name="sex" value="Female" size="10" />Female
+            </td>
+            <td class="u-px-line-height--8">
+              <input type="radio" name="sex" value="no say" size="10" />I'd Rather Not Say
+            </td>
+          </tr>
+          <tr>
+            <td class="u-px-line-height--8">State</td>
+            <td colspan="3">
+              <select name="State">
+                <option value="-1" selected>select..</option>
+                <option value="CT">Connecticut</option>
+                <option value="MA">Massachusetts</option>
+                <option value="ME">Maine</option>
+                <option value="NH">New Hampshire</option>
+                <option value="RI">Rhode Island</option>
+                <option value="VT">Vermont</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="u-px-line-height--8">DOB</td>
+            <td colspan="3">
+              <input
+                class="u-no-borders"
+                type="text"
+                name="dob"
+                id="dob"
+                size="30"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="u-px-line-height--8">MobileNo</td>
+            <td colspan="3">
+              <input
+                class="u-no-borders"
+                type="text"
+                name="mphone"
+                id="mphone"
+                size="30"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="reset" /></td>
+            <td colspan="2">
+              <input class="u-no-borders" type="submit" value="Submit Form" />
+            </td>
+          </tr>
+        </table>
+      </form>
+
+      <section class="full-columns notes">
+        <details class="page-notes">
+          <summary>Notes on inaccessibility</summary>
+          <div class="content">
+            <ol>
+							<li>The page doesn't specify a language.</li>
+							<li>There is no <code class="language-markup">&lt;title&gt;</code> element.</li>
+							<li>Scaling/zooming has been disabled in those user agents that still honor <code class="language-markup">&lt;meta name="viewport"&gt;</code> scaling restrictions.
+								<ol>
+									<li>Side note: there are no <code class="language-markup">&lt;!doctype&gt;</code> element or <code class="language-markup">&lt;meta charset&gt;</code> elements.</li>
+								</ol>
+							</li>
+							<li>There are no heading elements on the page.</li>
+							<li>The <code class="language-markup">&lt;b&gt;</code> element is used to make the &#8220;Registration&#8221; text bold.</li>
+              <li>
+                The form uses
+                <code class="language-markup">&lt;table&gt;</code> not marked as presentational, for laying out
+                content.
+              </li>
+              <li>
+                The form input elements:
+                <ol>
+									<li>don't have accessible names.</li>
+									<li>have had their borders removed and don't have enough contrast with the exterior adjacent light-blue of the form / table.</li>
+									<li>don't identify their input purpose.</li>
+									<li>aren't grouped where required.</li>
+                </ol>
+							</li>
+							<li>Form &#8220;labels&#8221;:
+								<ol>
+									<li>use abbreviations without a mechanism to their form or meaning.</li>
+									<li>have <code class="language-css">line-height</code> set in <code class="language-markup">px</code> which causes overlapping text and the radio buttons becoming un-clickable at 200%.</li>
+								</ol>
+								</li>
+							<li>Horizontal scrolling happens at 400% zoom.</li>
+							<li>The footer has a role of <code class="language-markup">banner</code>.</li>
+            </ol>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="contentinfo" role="banner">
+      <a class="u-inaccessible-link-accessible-focus u-inaccessible-link-accessible-hover" data-elemtype="link" data-targetview="contact-us.html" role="link" tabindex="0"
+        >Contact Us</a
+      >
+    </div>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function(e){
+
+        const regForm = document.querySelector("form");
+        regForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          window.location.href = "success.html?action=register";
+
+        }, false);
+
+      });
+    
+    
+    </script>
+
+  </body>
+</html>
