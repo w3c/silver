@@ -1,0 +1,49 @@
+
+:root{
+  height: 100%;
+}
+
+.l-login-form-grid{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: [header-start] 3em [header-end disclaimer-start] max-content [disclaimer-end main-start] auto [main-end footer-start] 3em [footer-end];
+  height:100%;
+  margin:0;
+}
+
+.banner{
+  grid-column: 1 / -1;
+  grid-row:header;
+  text-align: center;
+}
+
+.main{
+  grid-column: 3 / 6;
+  grid-row:main;
+}
+
+.grid-six-col{
+  display:grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-auto-rows:max-content;
+}
+
+.full-columns{
+  grid-column: 1 / -1;
+}
+
+.contentinfo{
+  grid-column: 1 / -1;
+  grid-row:footer;
+}
+
+[data-elemtype="link"]{
+  color:blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+[data-elemtype="link"]:hover{
+  color:hsl(0,0%,70%);
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Test inaccessible login using a disclosure panel</title>
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <style>
+
+    .btn{
+      background:hsl(0,0%,100%);
+      cursor:pointer;
+      font:inherit;
+      margin:0;
+    }
+
+ .header--disclosure-login{
+   align-items: center;
+   display:flex;
+   height:70px;
+   border-bottom:1px solid darkblue;
+ }
+
+ .login-group{
+   position: relative;
+ }
+
+ .login-button, .logout-button{
+  border-radius:5px; 
+  padding:10px;
+ }
+
+ .login-button:hover,.logout-button:hover{
+  background:hsl(220,100%,70%);
+  font-weight: bold;
+ }
+
+ .logout-button:focus{
+   box-shadow: (0,0,2px, hsl(220,100%,70%));
+ }
+
+ .login-panel{
+   background: hsl(0,0%,100%);
+   border:1px solid hsl(0,0%,70%);
+   display:grid;
+   gap:0.5rem;
+   grid-template-columns: 1fr 1em;
+   grid-auto-rows: max-content;
+   padding:10px;
+   position: absolute;
+   width:13rem;
+ }
+
+ .login-panel__header{
+   font-weight: bold;
+   grid-column: 1 / -1;
+   text-align: center;
+ }
+
+ .login-panel__close{
+   color:hsl(0,0%,60%);
+   grid-column: 2;
+   text-align: center;
+ }
+
+ .login-panel--error{
+   background: hsla(0,100%,50%,0.3);
+   border:1px solid hsla(0,100%,50%,0.5);
+   color:hsl(0,100%,50%);
+   grid-column: 1 / -1;
+   padding:6px;
+   margin:0.5rem 0;
+   text-align: center;
+ }
+
+ .text-input.input-error{
+   border:1px solid hsla(0,100%,50%,0.3);
+ }
+
+ .error-text{
+  color:hsl(0,100%,50%);
+ }
+
+ .login-panel--success{
+   background: hsla(120,50%,40%,0.3);
+   border:1px solid hsl(120,50%,40%);
+   color:hsl(120,40%,30%);
+   grid-column: 1 / -1;
+   padding:6px;
+   margin:0.5rem 0;
+   text-align: center;
+ }
+
+ .login-panel__logging-in-msg{
+   animation: fadeText 1s ease-in infinite;
+ }
+
+ @keyframes fadeText{
+   0%{
+     opacity:100%;
+   }
+   50%{
+     opacity:45%;
+   }
+   100%{
+     opacity:10%;
+   }
+ }
+
+
+ .label{
+   display: block;
+ }
+ 
+ .u-form-block{
+   grid-column: 1 / -1;
+   margin:0.5rem 0;
+ }
+
+.text-input{
+  border:1px solid hsl(0,0%,80%);
+  padding:0.25em;
+  width:100%;
+}
+
+.text-input:focus{
+  outline: none;
+}
+
+.aria-button, .inaccessible-button{
+  cursor: pointer;
+}
+
+.login-panel__submit{
+  background:hsl(120,50%,40%);
+  border:0;
+  color:hsla(0,0%,100%,.8);
+  font-weight:bold;
+  grid-column: 1 / -1;
+  padding:6px;
+}
+
+.login-panel__submit:focus{
+  outline:1px solid hsla(120,50%,40%,0.5);
+  outline-offset: 1px;
+}
+  
+  </style>
+</head>
+<body class="inaccessible">
+  <header class="header--disclosure-login">
+    <div class="login-group">
+      <a class="aria-button btn login-button" role="button">Login</a>
+      <a class="aria-button btn logout-button" hidden role="button" tabindex="-1">Logout</a>
+      <form class="login-panel" hidden>
+        <a class="inaccessible-button login-panel__close">&times;</a>
+        <div class="login-panel__header">log in to our site</div>
+        <div class="login-panel--error" hidden>
+          Error!
+        </div>
+        <div class="login-panel--success" hidden>
+          <div>Woo!</div>
+          <div class="login-panel__logging-in-msg">Working on it! Hang on!</div>
+        </div>
+        <div class="u-form-block">
+          <span class="label">email address</span>
+          <input class="text-input" name="login-email" type="text">
+        </div>
+        <div class="u-form-block">
+          <span class="label">password</span>
+          <input class="text-input" name="login-password" type="password">
+        </div>
+        <button class="login-panel__submit">&lt; Go! &gt;</button>
+      </form> <!-- end panel -->
+    </div> <!-- end login-group -->
+  </header>
+  <main>
+    <h1>Test inaccessible page for a login panel</h1>
+    <div role="note">
+      This is a test page. There is no other functionality on the page, so you're not getting logged into or out of anything.
+    </div>
+
+    <p><strong>The code on this page is intentionally inaccessible.</strong></p>
+
+  </main>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function(e){
+
+        const loginGroup = document.querySelector(".login-group");
+        const loginPanel = document.querySelector(".login-panel");
+        const loginBtn = document.querySelector(".login-button");
+        const logoutBtn = document.querySelector(".logout-button");
+        const closeBtn = document.querySelector(".login-panel__close");
+        const panelSubmitBtn = document.querySelector(".login-panel__submit");
+        const errorPanel = document.querySelector(".login-panel--error");
+        const successPanel = document.querySelector(".login-panel--success");
+        const panelInputs = loginPanel.querySelectorAll(".text-input");
+
+        closeBtn.addEventListener("click", closePanel,false);
+        loginGroup.addEventListener("mouseenter", openPanel,false);
+        loginGroup.addEventListener("mouseleave", closePanel,false);
+        loginPanel.addEventListener("submit", checkInputs,false);
+        logoutBtn.addEventListener("click", logout,false);
+
+        function checkInputs(e){
+          e.preventDefault();
+          let errorCount = 0;
+          for(let i=0;i<panelInputs.length;i++){
+            if(!panelInputs[i].value){
+              errorCount ++;
+              updateInput(panelInputs[i], "error");
+            }
+            else{
+              updateInput(panelInputs[i], "initial");
+            }
+          }
+          if(errorCount !== 0){
+            errorPanel.removeAttribute("hidden");
+          }
+          else{
+            errorPanel.setAttribute("hidden", "");
+            successPanel.removeAttribute("hidden");
+            setTimeout(() => {
+              loginPanel.setAttribute("hidden", "");
+              loginBtn.setAttribute("hidden", "");
+              loginGroup.removeEventListener("mouseenter", openPanel, false);
+              loginGroup.removeEventListener("mouseleave", closePanel, false);
+              logoutBtn.removeAttribute("hidden");
+              logoutBtn.focus();
+            }, 5000);
+          }
+        }
+
+        function logout(){
+          location.reload();
+        }
+
+        function updateInput(elm, state){
+          if(state === "initial"){
+            elm.classList.remove("input-error");
+            elm.previousElementSibling.classList.remove("error-text");
+          }
+          else{
+            elm.classList.add("input-error");
+            elm.previousElementSibling.classList.add("error-text");
+          }
+        }
+
+        function closePanel(){
+          loginPanel.setAttribute("hidden", "");
+        }
+
+        function openPanel(){
+          loginPanel.removeAttribute("hidden");
+        }
+
+      });
+
+
+
+    </script>
+
+</body>
+</html>
