@@ -12,9 +12,33 @@
 		</header>
 		<main class="main" id="main">
 			<h1>Success!</h1>
-			<p>You've logged in.</p>
+			<p class="user-action">You've logged in.</p>
 			<p>Here&#8217;s a list of <a href="../index.html">pages in this suggested login path</a>.</p>
 		</main>
+
+		<script>
+			
+			document.addEventListener("DOMContentLoaded", function(e){
+
+				const userActionText = document.querySelector(".user-action");
+				const viewTitle = document.querySelector("title");
+
+				if(URLSearchParams){
+					const urlParams = new URLSearchParams(window.location.search);
+					if(urlParams.get('action')==="register"){
+						userActionText.textContent="You've registered.";
+						viewTitle.textContent="Registration - Success";
+					}
+					
+				}
+
+
+
+			});
+
+		</script>
+
+
 </body>
 </html>
   
