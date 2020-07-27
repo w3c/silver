@@ -194,7 +194,8 @@
 
         const regForm = document.querySelector("form");
         regForm.addEventListener("submit", function (e) {
-          window.location.href = "success.html";
+          e.preventDefault();
+          window.location.href = "success.html?action=register";
 
         }, false);
 
