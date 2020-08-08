@@ -1,10 +1,10 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
-		<title>Editors' Draft Accessibility Guidelines (Silver)</title>
+		<title>Editors' Draft W3C Accessibility Guidelines (WCAG) 3.0</title>
 		
 		
 		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
         
-	<meta name="description" content="The Silver Accessibility Guidelines is major revision that will be the successor to Web Content Accessibility Guidelines (WCAG) 2.x.  This specification creates a new framework and guidelines to make web content and applications accessible to people with disabilities, supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. Each guideline in the new standard will focus on user needs rather than structural features or types of content, and will be supported by technology-specific methods to meet that need. Content that conforms to WCAG 2.2 is expected to substantially conform to a conformance level of the new standard, though the new standard is expected to have many differences from WCAG 2.x."><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
+	<meta name="description" content="W3C Accessibility Guidelines (WCAG) 3.0 is major revision that will be the successor to Web Content Accessibility Guidelines (WCAG) 2.x.  This specification creates a new framework and guidelines to make web content and applications accessible to people with disabilities, supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. Each guideline in the new standard will focus on user needs rather than structural features or types of content, and will be supported by technology-specific methods to meet that need. Content that conforms to WCAG 2.2 is expected to substantially conform to a conformance level of the new standard, though the new standard is expected to have many differences from WCAG 2.x."><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "specStatus": "CG-DRAFT",
   "wg": "Silver Community Group",
   "editors": [
@@ -36,16 +36,16 @@
   "copyrightStart": "2019",
   "shortName": "silver",
   "edDraftURI": "https://w3c.github.io/silver/guidelines/",
-  "publishDate": "2020-08-04",
-  "publishISODate": "2020-08-04T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 04 August 2020"
+  "publishDate": "2020-08-08",
+  "publishISODate": "2020-08-08T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 08 August 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Editors' Draft Accessibility Guidelines (Silver)</h1>
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Editors' Draft W3C Accessibility Guidelines (WCAG) 3.0</h1>
     
     <h2>
       Draft Community Group Report
-      <time class="dt-published" datetime="2020-08-04">04 August 2020</time>
+      <time class="dt-published" datetime="2020-08-08">08 August 2020</time>
     </h2>
     <dl>
       
@@ -75,7 +75,7 @@
           ©
           2019-2020
           
-          the Contributors to the Editors' Draft Accessibility Guidelines (Silver)
+          the Contributors to the Editors' Draft W3C Accessibility Guidelines (WCAG) 3.0
           Specification, published by the
           <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
           <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
@@ -88,12 +88,11 @@
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
 			 
 			
-			<p>The Silver Accessibility Guidelines is major revision that will be the successor to Web Content Accessibility Guidelines (WCAG) 2.x.  This specification creates a new framework and guidelines to make web content and applications accessible to people with disabilities, supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. Each guideline in the new standard will focus on user needs rather than structural features or types of content, and will be supported by technology-specific methods to meet that need. Content that conforms to WCAG 2.2 is expected to substantially conform to a conformance level of the new standard, though the new standard is expected to have many differences from WCAG 2.x. </p>
-			
-			<p>"Silver Accessibility Guidelines" is a temporary project name. The formal name is still under discussion. <span class="note">This will be removed when the CfC on the Silver name is approved and the name is updated throughout the ED. </span></p><p>
+			<p>W3C Accessibility Guidelines (WCAG) 3.0 is major revision that will be the successor to Web Content Accessibility Guidelines (WCAG) 2.x.  This specification creates a new framework and guidelines to make web content and applications accessible to people with disabilities, supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. Each guideline in the new standard will focus on user needs rather than structural features or types of content, and will be supported by technology-specific methods to meet that need. Content that conforms to WCAG 2.2 is expected to substantially conform to a conformance level of the new standard, though the new standard is expected to have many differences from WCAG 2.x. </p>
 			
 			
-    </p></section>
+			
+    </section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
       This specification was published by the
       <a href="https://www.w3.org/community/silver/">Silver Community Group</a>. It is not a W3C Standard nor is it
@@ -106,14 +105,14 @@
       Learn more about
       <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
     </p>
-			<p>This is an Editor's Draft for the Silver Accessibility Guidelines project, published by the Silver Community Group.  This document illustrates: </p>
+			<p>This is an Editor's Draft for W3C Accessibility Guidelines (WCAG) 3.0, published by the Silver Community Group.  This document illustrates: </p>
 			<ul>
-				<li>structural changes from prior versions</li>
+				<li>structural changes from prior versions of WCAG 2.x</li>
 				<li>examples of content updates </li>
 				<li>conformance model</li>
 			</ul>
-			<p>The purpose of this draft is to get feedback and discussion to inform and refine the structure and conformance model.  We expect feedback and discussion as part of the public review. The content is <em>only an example of the structure</em> and <em>is not content that is approved by the Accessibility Guidelines Working Group (AGWG).</em> The Silver task force and AGWG will continue to expand this draft while addressing public comments.  Revisions will be announced and user testing will be conducted.</p>
-			<p>The Silver Editor's Draft is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20EdDraft%20for%20Silver">email</a>  as described in the following paragraph. </p>
+			<p>The purpose of this draft is to get feedback and discussion to inform and refine the structure and conformance model.  We expect feedback and discussion as part of the public review. The content is <em>only an example of the structure</em>. The Silver Community Group, Silver Task Force and the Accessibility Guidelines Working Group (AGWG) will continue to expand this draft while addressing public comments.  Revisions will be announced and user testing will be conducted.</p>
+			<p>The WCAG3 Editor's Draft is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20EdDraft%20for%20Silver">email</a>  as described in the following paragraph. </p>
 		<p>
           If you wish to make comments regarding this document, please send them
           to
@@ -130,8 +129,8 @@
               <li>Provide requirements that overcome barriers encountered by people with disabilities. </li>
               <li>Explain how to solve the problems these barriers pose. </li>
             </ul>
-			<p>The Silver Accessibility Guidelines cover a wide range of recommendations for making Web content more accessible. Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, learning disabilities, cognitive disabilities and combinations of these; but will not address every user need for people with these disabilities. These guidelines address accessibility of web content and applications on desktops, laptops, tablets, mobile devices and emerging technologies on the web such as web XR (augmented, virtual and mixed reality) and voice input. It can be applied to other content addressed by the W3C. Following these guidelines will also often make content more usable to users in general as well as accessible to individuals with disabilities. </p>
-			<p>During the year of research conducte by the Silver Community Group and their research partners, a recurring theme was the popularity and quality of the guidance in WCAG 2.0. Most of the opportunities identified in the research were improvements in the structure and presentation of accessibility guidance to:</p>  
+			<p>W3C Accessibility Guidelines (WCAG) 3.0 covers a wide range of recommendations for making Web content more accessible. Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, learning disabilities, cognitive disabilities and combinations of these; but will not address every user need for people with these disabilities. These guidelines address accessibility of web content and applications on desktops, laptops, tablets, mobile devices and emerging technologies on the web such as web XR (augmented, virtual and mixed reality) and voice input. It can be applied to other content addressed by the W3C. Following these guidelines will also often make content more usable to users in general as well as accessible to individuals with disabilities. </p>
+			<p>During the year of research conducted by the Silver Community Group and their research partners, a recurring theme was the popularity and quality of the guidance in WCAG 2.0. Most of the opportunities identified in the research were improvements in the structure and presentation of accessibility guidance to:</p>  
 			<ul>
 			<li>improve usability — especially for beginners
 			</li><li>support more disability needs that cannot be tested by true/false success criteria
@@ -140,7 +139,7 @@
 
 			<section id="scope">
 			<h3 id="x1-1-scope"><bdi class="secno">1.1 </bdi>Scope<a class="self-link" aria-label="§" href="#scope"></a></h3>
-			<p>The goal of the Silver Accessibility Guidlelines is to provide information that can be used to improve the accessibility of products when using the guidelines on a variety of platforms. It will use a different framework to allow it to address more disability needs, address publishing requirements and emerging technologies on the web such as web XR (augmented, virtual and mixed reality) and voice input. It will provide non-normative information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. This framework is intended to support better coverage across disabilities, and be easier to maintain, so that the new framework will be more durable over time as technologies evolve. This will require development of a new conformance model, engaging policy makers in that process, and testing the model with policy makers from different settings. <span class="note">Adapted from the <a href="https://www.w3.org/2019/12/ag-charter#scope">AGWG Charter Scope</a>.</span></p>
+			<p>The goal of W3C Accessibility Guidelines (WCAG) 3.0 is to provide information that can be used to improve the accessibility of products when using the guidelines on a variety of platforms. It will use a different framework to allow it to address more disability needs, address publishing requirements and emerging technologies on the web such as web XR (augmented, virtual and mixed reality) and voice input. It will provide non-normative information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. This framework is intended to support better coverage across disabilities, and be easier to maintain, so that the new framework will be more durable over time as technologies evolve. This will require development of a new conformance model, engaging policy makers in that process, and testing the model with policy makers from different settings. <span class="note">Adapted from the <a href="https://www.w3.org/2019/12/ag-charter#scope">AGWG Charter Scope</a>.</span></p>
 			</section>
 			<section id="relationship-to-other-w3c-guidelines">
 			<h3 id="x1-2-relationship-to-other-w3c-guidelines"><bdi class="secno">1.2 </bdi>Relationship to other W3C Guidelines<a class="self-link" aria-label="§" href="#relationship-to-other-w3c-guidelines"></a></h3>
@@ -148,20 +147,20 @@
  was designed to be technology neutral, and has stayed relevant for over 10 years. The <cite><a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a></cite> [<cite><a href="#atag20">ATAG20</a></cite>] has been implemented in open source authoring tool communities (chiefly Wordpress and Drupal) with little known uptake in commercial authoring tools. <cite><a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a></cite> [<cite><a href="#uaag20">UAAG20</a></cite>] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis. There is no known user agent that has implemented all of UAAG 2.0. These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents and assistive technologies. 
 			</p>
 			<ul>
-			<li>Silver incorporates but may not be all encompassing of WCAG, ATAG, and UAAG.  
-			</li><li>Silver is not backward compatible with WCAG, ATAG, and UAAG.  
+			<li>WCAG 3.0 incorporates but may not be all encompassing of WCAG, ATAG, and UAAG.  
+			</li><li>WCAG 3.0 is not backward compatible with WCAG, ATAG, and UAAG.  
 			</li></ul>
 			</section>
-			<p>Since the new standard will use a different conformance model, the Working Group expects that some organizations may wish to continue using WCAG 2.x, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping and / or other approaches to facilitate migration. </p>
+			<p>Since the new standard will use a different conformance model, the Working Group expects that some organizations may wish to continue using WCAG 2.x, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping or other approaches to facilitate migration. </p>
 		</section>
 		
 <section id="guidelines">
 		<h2 id="x2-guidelines"><bdi class="secno">2. </bdi>Guidelines<a class="self-link" aria-label="§" href="#guidelines"></a></h2>
 		<p>Guidelines are requirements that need to be met.  They are <em>normative</em>, which means they are required.  The Methods (listed in the Explanation section for each Guideline) show the ways that the requirement can be met. The Methods for each guideline are more flexible. They are <em>informative</em>, which means they are not requirements, they are techniques, explanations, and tests that an author can use to meet the required guideline. </p><p>
-		</p><p>WCAG 2.x has normative success criteria as requirements.  The <cite><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive">Silver Research</a></cite> [<cite><a href="#SilverResearch">SilverResearch</a></cite>] showed that the structure of normative success criteria was difficult to understand and made it difficult to include needs of people with disabilities that were not conducive to a binary true/false success criterion.  Silver attempts to solve that problem by having Guidelines in plain language that are normative requirements and apply broadly across platforms as recommended by the <cite><a href="https://www.w3.org/community/silver/draft-final-report-of-silver">Silver Design Sprint Report</a></cite> [<cite><a href="#DesignSprint">DesignSprint</a></cite>].  The specific tests to evaluate the Guidelines are in informative Methods.  This solution is intended to provide greater flexibility to include the needs of people with disabilities that could not be included in the WCAG 2.x structure. </p>
-		<p>The headings below are guidelines, which map approximately to WCAG 2.x success critera.  The How-to link for each guideline opens explanatory material which maps approximately to WCAG 2.x Understanding.  The Methods for each guideline are linked in the How-to. They map to WCAG 2.x Techniques. The process of migrating information from WCAG 2.x to Silver has just begun. There are samples below to give an example of how the structure works.  You may want to first look at the <a href="explainers/template.html">template for the new content</a> to see the skeleton of the architecture before looking at the early drafts of the guidelines.  </p>
+		</p><p>WCAG 2.x has normative success criteria as requirements.  The <cite><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive">Silver Research</a></cite> [<cite><a href="#SilverResearch">SilverResearch</a></cite>] showed that the structure of normative success criteria was difficult to understand and made it difficult to include needs of people with disabilities that were not conducive to a binary true/false success criterion.  WCAG 3.0 attempts to solve that problem by having Guidelines in plain language that are normative requirements and apply broadly across platforms as recommended by the <cite><a href="https://www.w3.org/community/silver/draft-final-report-of-silver">Silver Design Sprint Report</a></cite> [<cite><a href="#DesignSprint">DesignSprint</a></cite>].  The specific tests to evaluate the Guidelines are in informative Methods.  This solution is intended to provide greater flexibility to include the needs of people with disabilities that could not be included in the WCAG 2.x structure. </p>
+		<p>The headings below are guidelines, which map approximately to WCAG 2.x success critera.  The How-to link for each guideline opens explanatory material which maps approximately to WCAG 2.x Understanding.  The Methods for each guideline are linked in the How-to. They map to WCAG 2.x Techniques. The process of migrating information from WCAG 2.x to WCAG 3.0 has just begun. There are samples below to give an example of how the structure works.  You may want to first look at the <a href="explainers/template.html">template for the new content</a> to see the skeleton of the architecture before looking at the early drafts of the guidelines.  </p>
 			<table class="OEtable">
-			<tbody><tr><th>WCAG 2 maps to </th><th>Silver</th></tr>
+			<tbody><tr><th>WCAG 2 roughly maps to </th><th>WCAG 3.0</th></tr>
 			<tr><td>Success Criteria</td><td>Guidelines</td></tr>
 			<tr><td>Techniques</td><td>Methods</td></tr>
 			<tr><td>Understanding</td><td>How-to</td><td></td></tr>
@@ -169,10 +168,17 @@
 		<p><a href="explainers/template.html">How to Template</a> and <a href="methods/template.html">Method template</a> give an overview of the structure for content. </p>
 		
 		<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><div class="">
-		<p>These are <em> early drafts</em> of guidelines. They are used to illustrate what Silver could look like and to test the process of writing content.  These guideline drafts should not be considered as final content of Silver. They are there to show how the structure would work.  As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. Guidelines will be identified by unique name. Translations should have an appropriate unique name.  </p>  
-		<p>As more content is developed, this section will be a list of normative guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to Silver, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit
+		<p>These are <em> early drafts</em> of guidelines. They are used to illustrate what WCAG 3.0 could look like and to test the process of writing content.  These guideline drafts should not be considered as final content of WCAG 3.0. They are there to show how the structure would work.  As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. Guidelines will be identified by unique name. Translations should have an appropriate unique name.  </p>
+		<p>The Guidelines have been selected to show different types of content:</p>
+			<ul>
+				<li>Text Alternatives - a direct migration from WCAG 2.x success criterion</li>
+				<li>Visual Contrast of Text - a migration of WCAG 2.x with substantial changes</li>
+				<li>Structured Text - migration and merging of several previous unrelated WCAG 2.x success criteria</li>
+				<li>Clear Language - new guidance that could not previously be included in WCAG 2.x</li>
+				<li>Captions - an example of adapting WCAG 2.x guidance to emerging technologies, such as Web Virtual Reality</li>
+		<p>As more content is developed, this section will be a list of normative guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to WCAG 3.0, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit
 		">WCAG to Silver Outline Map</a>.  </p><p>
-		</p></div></div>
+		</p></ul></div></div>
 		
 <section id="headings">
 <h3 id="x2-1-headings"><bdi class="secno">2.1 </bdi> Headings <a class="self-link" aria-label="§" href="#headings"></a></h3>
@@ -180,7 +186,7 @@
 </p> 
 <p><a href="explainers/SectionHeading.html">Headings How-to</a></p>
 <div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="4"><span>Editor's note</span></div><div class="">
-<p>Headings is the first guideline that Silver worked on as part of the prototyping process.  It migrated WCAG 2.4.10 Section Headings. It is a draft that illustrate the Silver architecture. It should not be considered finished.  </p>
+<p>Headings is the first guideline that Silver Community Group worked on as part of the prototyping process.  It migrated WCAG 2.4.10 Section Headings. It is a draft that illustrate the WCAG 3.0 architecture. It should not be considered finished.  </p>
 <p></p>
 </div></div></section>
 <section id="clear-language">
@@ -224,7 +230,7 @@ This model is more responsive to user needs and allows designers more choice in 
 <div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="3"><span>Editor's note</span></div><p class="">This section is under development. Comments are welcome. </p></div>
 <h3 id="introduction-0">Introduction<a class="self-link" aria-label="§" href="#scoring-and-conformance"></a></h3>
 <p>A conformance claim or following the recommended scoring below is optional. </p>
-<p>When the Silver Task Force researched WCAG 2.0, they found that, generally, people like WCAG guidance but wanted changes to the structure, including the conformance. The major issues that Silver conformance addresses are: </p>
+<p>When the Silver Task Force and Community Group researched WCAG 2.0, they found that, generally, people like WCAG guidance but wanted changes to the structure, including the conformance. The major issues that WCAG 3.0 conformance addresses are: </p>
 <ul>
 <li>Make the site or product's conformance better reflect the needs and experiences of people with disabilities. Change from the "all-or-nothing-to-pass" method of WCAG conformance to scores based on percentage, so organizations can show their degree of conformance. This allows an organization to say: "Our product or site may not be 100% conformant, but it's usable by people with disabilities."
 </li><li>Change the conformance definition from an emphasis of "one page, a series of pages, or multiple related Web pages" <span class="note">[Challenges] [WCAG 2.1]</span> to a broader orientation that: 
@@ -333,12 +339,12 @@ Representative sampling is a way to assess large properties without having to te
 </p>
 <ul> 
 <li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points (0%). Each guideline cannot have a score higher than 1 or lower than 0. Multiple methods for one guideline don’t gain more points. 
-</li><li>The scope tested must score a minimum percentage in each disability category, based on the modified EN301 549 Functional Performance Statements. <span class="note">Note: We'll continue to research the minimum percentage for each functional performance statement, after writing more content and testing it against websites that claim WCAG 2.x conformance. This will allow most sites that meet WCAG 2.x AA today to pass this minimum in Silver. </span>
+</li><li>The scope tested must score a minimum percentage in each disability category, based on the modified EN301 549 Functional Performance Statements. <span class="note">Note: We'll continue to research the minimum percentage for each functional performance statement, after writing more content and testing it against websites that claim WCAG 2.x conformance. This will allow most sites that meet WCAG 2.x AA today to pass this minimum in WCAG 3.0. </span>
 </li><li>Once the minimum level is achieved in each category, all of the guidelines that are met to whatever percentage they are met increase the score.  
 </li><li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
 </li><li>Different guidelines will evaluate the site or product by different measures.  Some will apply to the entire site or product, others may apply by the page or screen. Many will apply to the number of instances of the element.  
 </li><li>How the percentage is calculated will change by the guideline.  For  example, if a guideline score is calculated by instances of an element (like total number of images), then the total passes for that condition are divided by the total instances of the condition.  That gives a percentage response.  
-</li><li>For advanced Silver tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. <span class="note">(We need examples of other tests.)</span> 
+</li><li>For advanced WCAG 3.0 tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. <span class="note">(We need examples of other tests.)</span> 
 </li><li>The total score is averaged by the number of guidelines that apply to give a final percentage.  Typically, if a guideline isn’t used (or isn't applicable), then you don’t divide by that one. For example, if a site has no video or audio, the captioning guideline isn't applicable. <span class="note">Some guidelines, like Flashing Content, will need a way to include their score, since there should be credit given for not having flashing content. </span> 
 </li><li>If the tester uses sampling (see the following section), then the score is set by the pages or screens tested.  
 </li></ul>
@@ -356,7 +362,7 @@ Note: We've chosen these level names since they’re understood internationally 
 <li>Authors are responsible for testing that what they authored actually works for their users.</li>
 <li>Authors are not responsible for bugs or lack of support for WCAG techniques in browsers or assistive technology.  (We encourage authors to file bugs with the makers of user agents and assistive technologies, to fix bugs that testers believe are related to the user agent or assistive technology.)</li>
 <li>
-Browsers, user agents, and assistive technologies receive non-normative guidance on how their product could help authors meet Silver. 
+Browsers, user agents, and assistive technologies receive non-normative guidance on how their product could help authors meet WCAG 3.0. 
 </li>
 </ul>
 </section> 

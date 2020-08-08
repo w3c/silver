@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
     
-    <title>Explainer for "Silver" Accessibility Guidelines</title>
+    <title>Explainer for W3C Accessibility Guidelines (WCAG) 3.0</title>
     <style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
     
-  <meta name="description" content="This Explainer accompanies the drafts of the &quot;Silver&quot; Accessbility Guidelines.  &quot;Silver&quot; is a project name, as the guideline does not have a formal name as yet. The Explainer has background information that could be helpful to people who want to understand the project and the decisions leading up to this draft."><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
+  <meta name="description" content="This Explainer accompanies the drafts of the W3C Accessibility Guidelines (WCAG) 3.0."><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "specStatus": "CG-DRAFT",
   "wg": "Silver Community Group",
   "editors": [
@@ -35,16 +35,16 @@
   "copyrightStart": "2019",
   "shortName": "silver",
   "edDraftURI": "https://w3c.github.io/silver/guidelines/",
-  "publishDate": "2020-08-04",
-  "publishISODate": "2020-08-04T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 04 August 2020"
+  "publishDate": "2020-08-08",
+  "publishISODate": "2020-08-08T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 08 August 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
-  <body class="h-entry informative toc-inline"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Explainer for "Silver" Accessibility Guidelines</h1>
+  <body class="h-entry informative"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Explainer for W3C Accessibility Guidelines (WCAG) 3.0</h1>
     
     <h2>
       Draft Community Group Report
-      <time class="dt-published" datetime="2020-08-04">04 August 2020</time>
+      <time class="dt-published" datetime="2020-08-08">08 August 2020</time>
     </h2>
     <dl>
       
@@ -74,7 +74,7 @@
           ©
           2019-2020
           
-          the Contributors to the Explainer for "Silver" Accessibility Guidelines
+          the Contributors to the Explainer for W3C Accessibility Guidelines (WCAG) 3.0
           Specification, published by the
           <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
           <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
@@ -86,9 +86,8 @@
   </div>
     <section id="abstract" class="introductory"><h2>Abstract</h2>
       <p>
-        This Explainer accompanies the drafts of the "Silver" Accessbility Guidelines.  "Silver" is a project name, as the guideline does not have a formal name as yet. The Explainer has background information that could be helpful to people who want to understand the project and the decisions leading up to this draft.  
-      </p>
-	  <p>
+        This Explainer accompanies the drafts of the W3C Accessibility Guidelines (WCAG) 3.0. 
+	  </p><p>
     </p></section>
     <section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
       This specification was published by the
@@ -103,7 +102,7 @@
       <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
     </p>
       <p>
-        This is a first draft of the Explainer.  It is not normative and is not expected to become a W3C Recommendation.  It provides background on the Silver Accessbility Guidelines project. 
+        This is a first draft of the Explainer.  It is not normative and is not expected to become a W3C Recommendation.  It provides background on W3C Accessibility Guidelines (WCAG) 3.0. 
       </p>
     <p>
           If you wish to make comments regarding this document, please send them
@@ -114,7 +113,7 @@
         </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#research"><bdi class="secno">2. </bdi>Research and Input from Industry Leaders </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problemStatements"><bdi class="secno">2.1 </bdi>Problem Statements</a></li><li class="tocline"><a class="tocxref" href="#DesignSprint"><bdi class="secno">2.2 </bdi>Silver Design Sprint Suggestions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#DSusability"><bdi class="secno">2.2.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#DSconformance"><bdi class="secno">2.2.2 </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#DSmaintenance"><bdi class="secno">2.2.3 </bdi>Maintenance</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3. </bdi>Goals</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inclusionGoals"><bdi class="secno">3.1 </bdi>Goals for Inclusion</a></li><li class="tocline"><a class="tocxref" href="#ContentGoals"><bdi class="secno">3.2 </bdi>Goals for Content</a></li><li class="tocline"><a class="tocxref" href="#ConformanceGoals"><bdi class="secno">3.3 </bdi>Goals for Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nonGoals"><bdi class="secno">4. </bdi>Non-Goals or Out-of-Scope</a></li><li class="tocline"><a class="tocxref" href="#explanation-behind-decisions"><bdi class="secno">5. </bdi>Explanation Behind Decisions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#how-conformance-fits-into-the-information-architecture"><bdi class="secno">5.1 </bdi>How Conformance Fits into the Information Architecture</a></li><li class="tocline"><a class="tocxref" href="#selecting-a-representative-sample"><bdi class="secno">5.2 </bdi>Selecting a Representative Sample</a></li></ol></li></ol></nav>
     <section id="intro">
       <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2>
-      <p>Silver Accessibility Guidelines does not yet have an official name. It is intended to be the next major version that will replace the Web Content Accessibility Guidelines (WCAG). One of the goals of the Silver Accessibility Guidelines is that it will be written using plain language as much as possible so that people who are not technical can still understand it, and so Silver can be more easily translated into other languages. When it is finished, Silver Accessibility Guidelines will have many ways for making the web and other digital content (like video or mobile apps) more accessible to people with disabilities. 
+      <p>W3C Accessibility Guidelines (WCAG) 3.0 is the next major version that will replace the Web Content Accessibility Guidelines (WCAG) 2.2. One of the goals of W3C Accessibility Guidelines (WCAG) 3.0 is that it will be written using plain language as much as possible so that people who are not technical can still understand it, and so WCAG 3.0 can be more easily translated into other languages. When it is finished, WCAG 3.0 will have many ways for making the web and other digital content (like video or mobile apps) more accessible to people with disabilities. WCAG 3.0 had a project name of "Silver", so the original groups working on it and much of the early design work carries that project name.  
 	  </p>
 	  <p>
 	  The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to produce the needs, requirements, and structure for the new accessibility guidance. To date, the group has: 
@@ -281,14 +280,14 @@
 <li>Guidelines will include: 
 	<ul>
 		<li>updated WCAG 2.1 guidance (technology-specific success criteria will become Methods)
-		</li><li>new guidance written for Silver
+		</li><li>new guidance written for WCAG 3.0
 		</li><li>new guidance for task completion testing 
 	</li></ul>
 	</li>
 <li>Methods are associated with Guidelines.  In general, Methods are technology specific.  
 	<ul>
 		<li>Methods include tests for each Method.</li>
-		<li>Each Guideline will have multiple Methods with existing WCAG Technique guidance or new Methods written for Silver. 
+		<li>Each Guideline will have multiple Methods with existing WCAG Technique guidance or new Methods written for WCAG 3.0. 
 		</li><li>Methods can include tests for determining the percentage points to apply to the conformance score. See the <a href="#points-and-levels" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">Points and Levels</a> section following for details. </li>
 		<li>Methods can provide guidance for: 
 		<ul>
