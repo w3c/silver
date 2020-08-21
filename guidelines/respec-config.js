@@ -37,13 +37,18 @@ var respecConfig = {
 		companyURI: "https://www.paciellogroup.com/",
 		w3cid: 42417
 	}, {
+		name: "Rachael Montgomery",
+		mailto: "rachael@accessiblecommunity.org",
+		company: "Invited Expert",
+		w3cid: 90310
+	}, {
 		name: "Shawn Lauriat",
 		mailto: "lauriat@google.com",
 		company: "Google, Inc.",
 		companyURI: "https://www.google.com/",
 		w3cid: 90646
 	}, {
-				name: "Michael Cooper",
+		name: "Michael Cooper",
 		mailto: "cooper@w3.org",
 		company: "W3C",
 		companyURI: "https://www.w3.org/",
