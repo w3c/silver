@@ -7,23 +7,21 @@ var respecConfig = {
 	permalinkHide: false,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
 	specStatus: "ED",
-	noRecTrack: true,
 	//crEnd:                "2012-04-30",
 	//perEnd:               "2013-07-23",
 	//publishDate:          "2013-08-22",
-	diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "silver",
+	shortName: "WCAG30",
 	
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
-	copyrightStart: "2019",
+	copyrightStart: "2020",
 	license: "document",
 	
 	// if there a publicly available Editors Draft, this is the link
-	edDraftURI: "https://w3c.github.io/silver/requirements/",
+	edDraftURI: "https://w3c.github.io/silver/guidelines/",
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
