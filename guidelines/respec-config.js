@@ -73,7 +73,7 @@ var respecConfig = {
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
 	// name of the WG
-	wg: "Web Content Accessibility Guidelines Working Group",
+	wg: "Accessibility Guidelines Working Group",
 	
 	// URI of the public WG page
 	wgURI: "https://www.w3.org/WAI/GL/",
