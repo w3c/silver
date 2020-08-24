@@ -1,19 +1,32 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
-		<title>Editors' Draft W3C Accessibility Guidelines (WCAG) 3.0</title>
+		<title>W3C Accessibility Guidelines (WCAG) 3.0</title>
 		
 		
 		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
-        
-	<meta name="description" content="W3C Accessibility Guidelines (WCAG) 3.0 is major revision that will be the successor to Web Content Accessibility Guidelines (WCAG) 2.x.  This specification creates a new framework and guidelines to make web content and applications accessible to people with disabilities, supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. Each guideline in the new standard will focus on user needs rather than structural features or types of content, and will be supported by technology-specific methods to meet that need. Content that conforms to WCAG 2.2 is expected to substantially conform to a conformance level of the new standard, though the new standard is expected to have many differences from WCAG 2.x."><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
-  "specStatus": "CG-DRAFT",
-  "wg": "Silver Community Group",
+	<meta name="description" content="W3C Accessibility Guidelines (WCAG) 3.0 provides a wide range of recommendations for making Web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness and low vision, deafness and hearing loss, learning disabilities and cognitive limitations, limited movement, speech disabilities, photosensitivity, and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other Web of Things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools."><link rel="canonical" href="https://www.w3.org/TR/WCAG30/"><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "specStatus": "ED",
+  "shortName": "WCAG30",
+  "copyrightStart": "2020",
+  "license": "document",
+  "edDraftURI": "https://w3c.github.io/silver/guidelines/",
   "editors": [
     {
       "name": "Jeanne Spellman",
       "mailto": "jspellman@spellmanconsulting.com",
-      "company": "Tetralogical",
-      "companyURI": "https://tetralogical.com/",
+      "company": "The Paciello Group, LLC",
+      "companyURI": "https://www.paciellogroup.com/",
       "w3cid": 42417
+    },
+    {
+      "name": "Rachael Montgomery",
+      "mailto": "rachael@accessiblecommunity.org",
+      "company": "Invited Expert",
+      "w3cid": 90310
     },
     {
       "name": "Shawn Lauriat",
@@ -30,515 +43,478 @@
       "w3cid": 34017
     }
   ],
-  "wgURI": "https://www.w3.org/community/silver/",
+  "wg": "Web Content Accessibility Guidelines Working Group",
+  "wgURI": "https://www.w3.org/WAI/GL/",
   "wgPublicList": "public-silver",
-  "github": "https://github.com/w3c/silver/",
-  "copyrightStart": "2019",
-  "shortName": "silver",
-  "edDraftURI": "https://w3c.github.io/silver/guidelines/",
-  "publishDate": "2020-08-08",
-  "publishISODate": "2020-08-08T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 08 August 2020"
-}</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
-	<body class="h-entry informative toc-inline"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Editors' Draft W3C Accessibility Guidelines (WCAG) 3.0</h1>
+  "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/35422/status",
+  "maxTocLevel": 4,
+  "publishDate": "2020-08-24",
+  "publishISODate": "2020-08-24T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 24 August 2020"
+}</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+	<body class="h-entry informative"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">W3C Accessibility Guidelines (WCAG) 3.0</h1>
     
     <h2>
-      Draft Community Group Report
-      <time class="dt-published" datetime="2020-08-08">08 August 2020</time>
+      W3C Editor's Draft
+      <time class="dt-published" datetime="2020-08-24">24 August 2020</time>
     </h2>
     <dl>
-      
-      
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://w3c.github.io/silver/guidelines/">https://w3c.github.io/silver/guidelines/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/WCAG30/">https://www.w3.org/TR/WCAG30/</a>
+            </dd>
       <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/guidelines/">https://w3c.github.io/silver/guidelines/</a></dd>
       
       
       
       
+      
       <dt>Editors:</dt>
-      <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (Tetralogical) </dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (Google, Inc.) </dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
+      <dd class="p-author h-card vcard" data-editor-id="42417"><a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (The Paciello Group, LLC) </dd><dd class="p-author h-card vcard" data-editor-id="90310"><a class="ed_mailto u-email email p-name" href="mailto:rachael@accessiblecommunity.org">Rachael Montgomery</a> (Invited Expert) </dd><dd class="p-author h-card vcard" data-editor-id="90646"><a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (Google, Inc.) </dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
       
       
-      <dt>Participate:</dt><dd>
-    <a href="https://github.com/w3c/silver/">GitHub w3c/silver</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/silver/issues/">File a bug</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/silver/commits/gh-pages">Commit history</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/silver/pulls/">Pull requests</a>
-  </dd>
+      
     </dl>
     
+    
+    
     <p class="copyright">
-          <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-          ©
-          2019-2020
-          
-          the Contributors to the Editors' Draft W3C Accessibility Guidelines (WCAG) 3.0
-          Specification, published by the
-          <a href="https://www.w3.org/community/silver/">Silver Community Group</a> under the
-          <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
-                <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
-                is available.
-              
-        </p>
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2020
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+    apply.
+  </p>
     <hr title="Separator for header">
   </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
-			 
-			
-			<p>W3C Accessibility Guidelines (WCAG) 3.0 is major revision that will be the successor to Web Content Accessibility Guidelines (WCAG) 2.x.  This specification creates a new framework and guidelines to make web content and applications accessible to people with disabilities, supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. Each guideline in the new standard will focus on user needs rather than structural features or types of content, and will be supported by technology-specific methods to meet that need. Content that conforms to WCAG 2.2 is expected to substantially conform to a conformance level of the new standard, though the new standard is expected to have many differences from WCAG 2.x. </p>
-			
-			
-			
-    </section>
-		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
-      This specification was published by the
-      <a href="https://www.w3.org/community/silver/">Silver Community Group</a>. It is not a W3C Standard nor is it
-      on the W3C Standards Track.
-      
-            Please note that under the
-            <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>
-            there is a limited opt-out and other conditions apply.
-          
-      Learn more about
-      <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
-    </p>
-			<p>This is an Editor's Draft for W3C Accessibility Guidelines (WCAG) 3.0, published by the Silver Community Group.  This document illustrates: </p>
-			<ul>
-				<li>structural changes from prior versions of WCAG 2.x</li>
-				<li>examples of content updates </li>
-				<li>conformance model</li>
-			</ul>
-			<p>The purpose of this draft is to get feedback and discussion to inform and refine the structure and conformance model.  We expect feedback and discussion as part of the public review. The content is <em>only an example of the structure</em>. The Silver Community Group, Silver Task Force and the Accessibility Guidelines Working Group (AGWG) will continue to expand this draft while addressing public comments.  Revisions will be announced and user testing will be conducted.</p>
-			<p>The WCAG3 Editor's Draft is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20EdDraft%20for%20Silver">email</a>  as described in the following paragraph. </p>
+			<p><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 provides a wide range of recommendations for making Web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness and low vision, deafness and hearing loss, learning disabilities and cognitive limitations, limited movement, speech disabilities, photosensitivity, and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other Web of Things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
+			<p>[@RM: The next 2 sentences need reworking.] Each <a href="#dfn-guideline" class="internalDFN" data-link-type="dfn">guideline</a> in this standard addresses <a href="#dfn-functional-outcome" class="internalDFN" data-link-type="dfn">functional outcomes</a> of accessibility practices that address documented <a href="#dfn-user-need" class="internalDFN" data-link-type="dfn">user needs</a> of people with disabilities. Guidelines are supported by multiple alternative technology-specific <a href="#dfn-method" class="internalDFN" data-link-type="dfn">methods</a> to meet each need. This specification is expected to be updated regularly to keep pace with technology change, both by updating or adding methods as well as adding guidelines to address new needs as technologies evolve. For entities that make formal claims of <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> to these guidelines, several grades of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
+			<p><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag22" title="Web Content Accessibility Guidelines (WCAG) 2.2">WCAG22</a></cite>] and previous versions. They also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>]. Content that conforms to WCAG 2.2 is expected to substantially conform to a conformance level of WCAG 3.0, though these guidelines have many differences from WCAG 2.x. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative and more modern set of guidelines. Once these guidelines become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation, the <abbr title="World Wide Web Consortium">W3C</abbr> will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts.  However, web sites that conform to earlier versions of
+				WCAG continue to conform to those versions.</p>
+			<p>See <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) Overview</a> for an introduction and links to WCAG technical and educational material.</p>
+		</section>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+			<p>To comment, <a href="https://github.com/w3c/silver/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> silver GitHub repository</a>. The Working Group requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, send email to <a href="mailto:public-agwg-comments@w3.org?subject=WCAG%203.0%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>). In-progress updates to the guidelines can be viewed in the <a href="https://w3c.github.io/silver/guidelines/">public editors' draft</a>.</p>
 		<p>
-          If you wish to make comments regarding this document, please send them
-          to
+    This document was published by the <a href="https://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as an
+    Editor's Draft.
+    
+  </p><p>
+    
+    Comments regarding this document are welcome.
+          Please send them to
           <a href="mailto:public-silver@w3.org">public-silver@w3.org</a>
-          (<a href="mailto:public-silver-request@w3.org?subject=subscribe">subscribe</a>,
-          <a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
-        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.1 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#relationship-to-other-w3c-guidelines"><bdi class="secno">1.2 </bdi>Relationship to other W3C Guidelines</a></li></ol></li><li class="tocline"><a class="tocxref" href="#guidelines"><bdi class="secno">2. </bdi>Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#headings"><bdi class="secno">2.1 </bdi> Headings </a></li><li class="tocline"><a class="tocxref" href="#clear-language"><bdi class="secno">2.2 </bdi>Clear Language </a></li><li class="tocline"><a class="tocxref" href="#visual-contrast-of-text"><bdi class="secno">2.3 </bdi>Visual Contrast of Text</a></li></ol></li><li class="tocline"><a class="tocxref" href="#scoring-and-conformance"><bdi class="secno">3. </bdi>Scoring and Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope-of-conformance-claim"><bdi class="secno">3.1 </bdi>Scope of Conformance Claim</a></li><li class="tocline"><a class="tocxref" href="#sampling"><bdi class="secno">3.2 </bdi>Sampling</a></li><li class="tocline"><a class="tocxref" href="#points-and-levels"><bdi class="secno">3.3 </bdi>Points and Levels</a></li><li class="tocline"><a class="tocxref" href="#accessibility-supported"><bdi class="secno">3.4 </bdi>Accessibility Supported</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">4. </bdi>References</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">A.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">A.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><bdi class="secno">A.3 </bdi>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#participants-in-the-silver-design-sprint"><bdi class="secno">A.4 </bdi>Participants in the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#contributions-to-the-silver-design-sprint"><bdi class="secno">A.5 </bdi>Contributions to the Silver Design Sprint</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">A.6 </bdi>Research Partners</a></li></ol></li></ol></nav>
-		<section id="introduction">
-			<h2 id="intro"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2>
-
-			<p>People with disabilities can face problems using online content and applications. Disabilities can be permanent, temporary, or recurring limitations</p>
-            <p>We need guidelines to: </p>
-            <ul>
-              <li>Provide requirements that overcome barriers encountered by people with disabilities. </li>
-              <li>Explain how to solve the problems these barriers pose. </li>
-            </ul>
-			<p>W3C Accessibility Guidelines (WCAG) 3.0 covers a wide range of recommendations for making Web content more accessible. Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, learning disabilities, cognitive disabilities and combinations of these; but will not address every user need for people with these disabilities. These guidelines address accessibility of web content and applications on desktops, laptops, tablets, mobile devices and emerging technologies on the web such as web XR (augmented, virtual and mixed reality) and voice input. It can be applied to other content addressed by the W3C. Following these guidelines will also often make content more usable to users in general as well as accessible to individuals with disabilities. </p>
-			<p>During the year of research conducted by the Silver Community Group and their research partners, a recurring theme was the popularity and quality of the guidance in WCAG 2.0. Most of the opportunities identified in the research were improvements in the structure and presentation of accessibility guidance to:</p>  
-			<ul>
-			<li>improve usability — especially for beginners
-			</li><li>support more disability needs that cannot be tested by true/false success criteria
-			</li><li>improve maintenance to keep the guidelines more current
-			</li></ul>
-
-			<section id="scope">
-			<h3 id="x1-1-scope"><bdi class="secno">1.1 </bdi>Scope<a class="self-link" aria-label="§" href="#scope"></a></h3>
-			<p>The goal of W3C Accessibility Guidelines (WCAG) 3.0 is to provide information that can be used to improve the accessibility of products when using the guidelines on a variety of platforms. It will use a different framework to allow it to address more disability needs, address publishing requirements and emerging technologies on the web such as web XR (augmented, virtual and mixed reality) and voice input. It will provide non-normative information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. This framework is intended to support better coverage across disabilities, and be easier to maintain, so that the new framework will be more durable over time as technologies evolve. This will require development of a new conformance model, engaging policy makers in that process, and testing the model with policy makers from different settings. <span class="note">Adapted from the <a href="https://www.w3.org/2019/12/ag-charter#scope">AGWG Charter Scope</a>.</span></p>
-			</section>
+          (<a href="https://lists.w3.org/Archives/Public/public-silver/">archives</a>).
+        
+  </p><p>
+    Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+    Membership. This is a draft document and may be updated, replaced or
+    obsoleted by other documents at any time. It is inappropriate to cite this
+    document as other than work in progress.
+  </p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+       
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/35422/status">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope-of-wcag-3-0"><bdi class="secno">1.1 </bdi>Scope of WCAG 3.0</a></li><li class="tocline"><a class="tocxref" href="#relationship-to-other-w3c-guidelines"><bdi class="secno">1.2 </bdi>Relationship to Other <abbr title="World Wide Web Consortium">W3C</abbr> Guidelines</a></li><li class="tocline"><a class="tocxref" href="#key-requirements"><bdi class="secno">1.3 </bdi>Key Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#structure-of-these-guidelines"><bdi class="secno">2. </bdi>Structure of These Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#functional-categories"><bdi class="secno">2.1 </bdi>Functional Categories</a></li><li class="tocline"><a class="tocxref" href="#functional-needs"><bdi class="secno">2.2 </bdi>Functional Needs</a></li><li class="tocline"><a class="tocxref" href="#guidelines"><bdi class="secno">2.3 </bdi>Guidelines</a></li><li class="tocline"><a class="tocxref" href="#how-tos"><bdi class="secno">2.4 </bdi>How-Tos</a></li><li class="tocline"><a class="tocxref" href="#functional-outcomes"><bdi class="secno">2.5 </bdi>Functional Outcomes</a></li><li class="tocline"><a class="tocxref" href="#methods"><bdi class="secno">2.6 </bdi>Methods</a></li><li class="tocline"><a class="tocxref" href="#tests"><bdi class="secno">2.7 </bdi>Tests</a></li></ol></li><li class="tocline"><a class="tocxref" href="#normative-requirements"><bdi class="secno">3. </bdi>Normative Requirements</a></li><li class="tocline"><a class="tocxref" href="#the-guidelines"><bdi class="secno">4. </bdi>The Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#text-alternatives"><bdi class="secno">4.1 </bdi>Text Alternatives</a></li><li class="tocline"><a class="tocxref" href="#clear-language"><bdi class="secno">4.2 </bdi>Clear Language</a></li><li class="tocline"><a class="tocxref" href="#captions"><bdi class="secno">4.3 </bdi>Captions</a></li><li class="tocline"><a class="tocxref" href="#structured-content"><bdi class="secno">4.4 </bdi>Structured Content</a></li><li class="tocline"><a class="tocxref" href="#visual-contrast-of-text"><bdi class="secno">4.5 </bdi>Visual Contrast of Text</a></li></ol></li><li class="tocline"><a class="tocxref" href="#evaluation"><bdi class="secno">5. </bdi>Evaluation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#testing"><bdi class="secno">5.1 </bdi>Testing</a></li><li class="tocline"><a class="tocxref" href="#scoring"><bdi class="secno">5.2 </bdi>Scoring</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">6. </bdi>Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#conformance-requirements"><bdi class="secno">6.1 </bdi>Conformance Requirements</a></li><li class="tocline"><a class="tocxref" href="#defining-conformance-scope"><bdi class="secno">6.2 </bdi>Defining Conformance Scope</a></li><li class="tocline"><a class="tocxref" href="#conformance-claims"><bdi class="secno">6.3 </bdi>Conformance Claims</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#required-components-of-a-conformance-claim"><bdi class="secno">6.3.1 </bdi>Required Components of a Conformance Claim</a></li><li class="tocline"><a class="tocxref" href="#example-conformance-claim"><bdi class="secno">6.3.2 </bdi>Example Conformance Claim</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#glossary"><bdi class="secno">7. </bdi>Glossary</a></li><li class="tocline"><a class="tocxref" href="#guidelines-development-methodology"><bdi class="secno">A. </bdi>Guidelines Development Methodology</a></li><li class="tocline"><a class="tocxref" href="#differences-from-wcag-2"><bdi class="secno">B. </bdi>Differences From WCAG 2</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#functional-outcomes-0"><bdi class="secno">B.1 </bdi>Functional Outcomes</a></li><li class="tocline"><a class="tocxref" href="#approximate-mapping-of-wcag-2-and-wcag-3-documentation"><bdi class="secno">B.2 </bdi>Approximate Mapping of WCAG 2 and WCAG 3 Documentation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#change-log"><bdi class="secno">C. </bdi>Change Log</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>
+        Informative references
+      </a></li></ol></li></ol></nav>
+		<section class="informative" id="introduction">
+			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
+			<p>This specification creates a new framework and guidelines to make web content and applications accessible to people with disabilities. <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 supports a wide set of user needs, uses new approaches to testing, and allows frequent maintenance of guidelines to keep pace with accelerating technology change. WCAG 3.x continues this evolution by focusing on users’ functional needs. These are then supported by technology-specific methods to meet that need.&nbsp;</p>
+			<p>Following these guidelines will make content more accessible to a wider range of people with disabilities. This includes accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, learning disabilities, cognitive disabilities and combinations of these. Following these guidelines will also often make content more usable to users in general as well as accessible to individuals with disabilities.</p>
+			<p>WCAG 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag22" title="Web Content Accessibility Guidelines (WCAG) 2.2">WCAG22</a></cite>] and previous versions. They also incorporate content from and partially extend<a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] and<a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>]. These earlier versions provided a flexible framework that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities has led to the need for a new framework to address content accessibility more comprehensively and flexibly. </p>
+			<p>There are many differences between WCAG 2.x and WCAG 3.x but content that conforms to WCAG 2.2 A &amp; AA is expected to substantially conform to the minimum conformance level of this new standard. Since the new standard will use a different conformance model, the Working Group expects that some organizations may wish to continue using WCAG 2.x, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping and / or other approaches to facilitate migration.</p>
+			<section id="scope-of-wcag-3-0"><h3 id="x1-1-scope-of-wcag-3-0"><bdi class="secno">1.1 </bdi>Scope of WCAG 3.0<a class="self-link" aria-label="§" href="#scope-of-wcag-3-0"></a></h3><p>During the year of research conducted by the Silver Community Group and their research partners, a recurring theme was the popularity and quality of the guidance in WCAG 2.0. Most of the opportunities identified in the research were changes in the structure and presentation of accessibility guidance to:</p><ul>
+					<li>improve usability — especially for beginners;</li>
+					<li>support disability needs that cannot be tested by true/false success criteria; and</li>
+					<li>improve maintenance to keep the guidelines more current.</li>
+				</ul>The goal of WCAG 3.0 is to provide information that can be used to improve the accessibility of products on a variety of platforms. WCAG 3.0 uses a framework that allows it to address more disability needs than WCAG 2.X, as well as address publishing requirements and emerging technologies on the web such as web XR (augmented, virtual and mixed reality) and voice input. It will also provide non-<a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a> information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. The WCAG 3.0 framework is designed to support better coverage across disabilities and be easier to maintain, so that the new framework will be more durable over time as technologies evolve. [@RM: This sentence was in future tense but that didn't seem to fit. Maybe remove it?] This requires development of a new conformance model, engaging policy makers in that process, and testing the model with policy makers from different settings.</section>
 			<section id="relationship-to-other-w3c-guidelines">
-			<h3 id="x1-2-relationship-to-other-w3c-guidelines"><bdi class="secno">1.2 </bdi>Relationship to other W3C Guidelines<a class="self-link" aria-label="§" href="#relationship-to-other-w3c-guidelines"></a></h3>
-			<p>The <cite><a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a></cite> [<cite><a href="#wcag20">WCAG20</a></cite>]
- was designed to be technology neutral, and has stayed relevant for over 10 years. The <cite><a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a></cite> [<cite><a href="#atag20">ATAG20</a></cite>] has been implemented in open source authoring tool communities (chiefly Wordpress and Drupal) with little known uptake in commercial authoring tools. <cite><a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a></cite> [<cite><a href="#uaag20">UAAG20</a></cite>] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis. There is no known user agent that has implemented all of UAAG 2.0. These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents and assistive technologies. 
-			</p>
-			<ul>
-			<li>WCAG 3.0 incorporates but may not be all encompassing of WCAG, ATAG, and UAAG.  
-			</li><li>WCAG 3.0 is not backward compatible with WCAG, ATAG, and UAAG.  
-			</li></ul>
+				<h3 id="x1-2-relationship-to-other-w3c-guidelines"><bdi class="secno">1.2 </bdi>Relationship to Other <abbr title="World Wide Web Consortium">W3C</abbr> Guidelines<a class="self-link" aria-label="§" href="#relationship-to-other-w3c-guidelines"></a></h3>
+				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20" title="Web Content Accessibility Guidelines (WCAG) 2.0">WCAG20</a></cite>] was designed to be technology neutral, and has stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>] has been implemented in open source authoring tool communities (chiefly Wordpress and Drupal) with little known uptake in commercial authoring tools. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis. There is no known user agent that has implemented all of UAAG 2.0.&nbsp;</p>
+				<p>These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents and assistive technologies.</p>
+				<ul>
+					<li>WCAG 3.0 incorporates but may not be all encompassing of WCAG, ATAG, and UAAG.</li>
+					<li>WCAG 3.0 is not backward compatible with WCAG 2.0, ATAG 2.0, and UAAG 2.0.</li>
+				</ul>
+				<p>For more details about differences from previous guidelines, see <a href="#differences-from-wcag-2">Appendix: Differences From WCAG 2</a>.</p>
 			</section>
-			<p>Since the new standard will use a different conformance model, the Working Group expects that some organizations may wish to continue using WCAG 2.x, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping or other approaches to facilitate migration. </p>
+			<section id="key-requirements">
+				<h3 id="x1-3-key-requirements"><bdi class="secno">1.3 </bdi>Key Requirements<a class="self-link" aria-label="§" href="#key-requirements"></a></h3>
+				<p>Research and design work performed by the Silver Task Force identified key requirements needed to improve upon the existing WCAG 2.x structure. These requirements shaped the conformance proposal that follows and should be taken into account when evaluating and updating this proposal.</p>
+				<p>The <a href="https://w3c.github.io/silver/requirements/">Requirements for Silver</a> documents the following requirements which are met by this document:</p>
+				<ul>
+					<li><a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">Multiple ways to measure</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#flexible-maintenance-and-extensibility">Flexible maintenance and extensibility</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-display">Multiple ways to display</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#technology-neutral">Technology Neutral</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#readability-usability">Readability/Usability</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#regulatory-environment">Regulatory Environment</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#motivation">Motivation</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#scope-0">Scope</a></li>
+				</ul>
+			</section>
 		</section>
-		
-<section id="guidelines">
-		<h2 id="x2-guidelines"><bdi class="secno">2. </bdi>Guidelines<a class="self-link" aria-label="§" href="#guidelines"></a></h2>
-		<p>Guidelines are requirements that need to be met.  They are <em>normative</em>, which means they are required.  The Methods (listed in the Explanation section for each Guideline) show the ways that the requirement can be met. The Methods for each guideline are more flexible. They are <em>informative</em>, which means they are not requirements, they are techniques, explanations, and tests that an author can use to meet the required guideline. </p><p>
-		</p><p>WCAG 2.x has normative success criteria as requirements.  The <cite><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive">Silver Research</a></cite> [<cite><a href="#SilverResearch">SilverResearch</a></cite>] showed that the structure of normative success criteria was difficult to understand and made it difficult to include needs of people with disabilities that were not conducive to a binary true/false success criterion.  WCAG 3.0 attempts to solve that problem by having Guidelines in plain language that are normative requirements and apply broadly across platforms as recommended by the <cite><a href="https://www.w3.org/community/silver/draft-final-report-of-silver">Silver Design Sprint Report</a></cite> [<cite><a href="#DesignSprint">DesignSprint</a></cite>].  The specific tests to evaluate the Guidelines are in informative Methods.  This solution is intended to provide greater flexibility to include the needs of people with disabilities that could not be included in the WCAG 2.x structure. </p>
-		<p>The headings below are guidelines, which map approximately to WCAG 2.x success critera.  The How-to link for each guideline opens explanatory material which maps approximately to WCAG 2.x Understanding.  The Methods for each guideline are linked in the How-to. They map to WCAG 2.x Techniques. The process of migrating information from WCAG 2.x to WCAG 3.0 has just begun. There are samples below to give an example of how the structure works.  You may want to first look at the <a href="explainers/template.html">template for the new content</a> to see the skeleton of the architecture before looking at the early drafts of the guidelines.  </p>
-			<table class="OEtable">
-			<tbody><tr><th>WCAG 2 roughly maps to </th><th>WCAG 3.0</th></tr>
-			<tr><td>Success Criteria</td><td>Guidelines</td></tr>
-			<tr><td>Techniques</td><td>Methods</td></tr>
-			<tr><td>Understanding</td><td>How-to</td><td></td></tr>
-			</tbody></table>
-		<p><a href="explainers/template.html">How to Template</a> and <a href="methods/template.html">Method template</a> give an overview of the structure for content. </p>
-		
-		<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><div class="">
-		<p>These are <em> early drafts</em> of guidelines. They are used to illustrate what WCAG 3.0 could look like and to test the process of writing content.  These guideline drafts should not be considered as final content of WCAG 3.0. They are there to show how the structure would work.  As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. Guidelines will be identified by unique name. Translations should have an appropriate unique name.  </p>
-		<p>The Guidelines have been selected to show different types of content:</p>
-			<ul>
-				<li>Text Alternatives - a direct migration from WCAG 2.x success criterion</li>
-				<li>Visual Contrast of Text - a migration of WCAG 2.x with substantial changes</li>
-				<li>Structured Text - migration and merging of several previous unrelated WCAG 2.x success criteria</li>
-				<li>Clear Language - new guidance that could not previously be included in WCAG 2.x</li>
-				<li>Captions - an example of adapting WCAG 2.x guidance to emerging technologies, such as Web Virtual Reality</li>
-		<p>As more content is developed, this section will be a list of normative guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to WCAG 3.0, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit
-		">WCAG to Silver Outline Map</a>.  </p><p>
-		</p></ul></div></div>
-		
-<section id="headings">
-<h3 id="x2-1-headings"><bdi class="secno">2.1 </bdi> Headings <a class="self-link" aria-label="§" href="#headings"></a></h3>
-<p>Use headings and sub-headings for your text. Headings — including titles and subtitles — organize words and images on a web page.
-</p> 
-<p><a href="explainers/SectionHeading.html">Headings How-to</a></p>
-<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="4"><span>Editor's note</span></div><div class="">
-<p>Headings is the first guideline that Silver Community Group worked on as part of the prototyping process.  It migrated WCAG 2.4.10 Section Headings. It is a draft that illustrate the WCAG 3.0 architecture. It should not be considered finished.  </p>
-<p></p>
-</div></div></section>
-<section id="clear-language">
-<h3 id="x2-2-clear-language"><bdi class="secno">2.2 </bdi>Clear Language <a class="self-link" aria-label="§" href="#clear-language"></a></h3>
-<p>Use clear language to make it easier for readers to understand. </p> 
-<p><a href="explainers/ClearWords.html">Clear Language How-to</a></p>
-<div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="4"><span>Editor's note</span></div><div class="">
-<p>Clear Language is a new guideline proposed by the Cognitive Accessibility Task Force (COGA), and includes research, documents and comments from COGA.  It showcases a proof-of-concept example of a rubric-type test that could not be included in WCAG 2.x. </p>
-
-</div></div>
-</section>
-<section id="visual-contrast-of-text">
-<h3 id="x2-3-visual-contrast-of-text"><bdi class="secno">2.3 </bdi>Visual Contrast of Text<a class="self-link" aria-label="§" href="#visual-contrast-of-text"></a></h3>
-<p>Provide sufficient contrast between foreground text and its background. 
-</p>
-<p><a href="explainers/visualContrast.html">Visual Contrast of Text How-to</a></p>
-<div class="note" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="4"><span>Editor's note</span></div><div class="">
-<p>Visual Contrast is a migration from WCAG 2.1 with significant updates: </p>
-		<ul>
-		<li>New calculations of contrast based on more modern research on color perception.
-		</li><li>Merging the 1.4.3 AA and 1.4.6 AAA levels into one guideline. 
-		</li><li>New test of text contrast.
-		</li><li>At this time, it only includes textual visual contrast. 
-		</li></ul>
-<p>We propose changing the name of “Color Contrast” to “Visual Contrast” as a signal of a paradigm change from one about color to one about “perception of light intensity”. The reason for this change is that the understanding of contrast has matured and the available research and body of knowledge has made breakthroughs in advancing the understanding of “visual contrast”.
-</p>
-<p>
-The proposed new guidance more accurately models current research in human visual perception of contrast and light intensity.  The goal is to improve understanding of the functional needs of all users, and more effectively match the needs of those who face barriers accessing content. This new perception-based model is more context dependent than a strict light ratio measurement; results can, for example, vary with size of text and the darkness of the colors or page.
-</p>
-<p>
-This model is more responsive to user needs and allows designers more choice in visual presentation.  It does this by including multi-factor assessment tests which integrate contrast with interrelated elements of visual readability, such as font features.  It includes tests to determine an upper limit of contrast, where elevated contrast may impact usability.  
-</p></div></div>
-<p></p>
-
-</section>
-</section>
-
-
-<section id="scoring-and-conformance">
-		<h2 id="x3-scoring-and-conformance"><bdi class="secno">3. </bdi>Scoring and Conformance<a class="self-link" aria-label="§" href="#scoring-and-conformance"></a></h2>
-<div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="3"><span>Editor's note</span></div><p class="">This section is under development. Comments are welcome. </p></div>
-<h3 id="introduction-0">Introduction<a class="self-link" aria-label="§" href="#scoring-and-conformance"></a></h3>
-<p>A conformance claim or following the recommended scoring below is optional. </p>
-<p>When the Silver Task Force and Community Group researched WCAG 2.0, they found that, generally, people like WCAG guidance but wanted changes to the structure, including the conformance. The major issues that WCAG 3.0 conformance addresses are: </p>
-<ul>
-<li>Make the site or product's conformance better reflect the needs and experiences of people with disabilities. Change from the "all-or-nothing-to-pass" method of WCAG conformance to scores based on percentage, so organizations can show their degree of conformance. This allows an organization to say: "Our product or site may not be 100% conformant, but it's usable by people with disabilities."
-</li><li>Change the conformance definition from an emphasis of "one page, a series of pages, or multiple related Web pages" <span class="note">[Challenges] [WCAG 2.1]</span> to a broader orientation that: 
-<ul>
-<li>is more inclusive of digital technologies beyond web pages
-</li><li>allows organizations to claim entire sites, products, or sub-sections of a site or product. 
-</li></ul>
-</li><li>Use a "representative sampling" conformance method to address the needs of large, complex, or dynamic sites, apps, projects, or products. In these cases, organizations can't test every page as WCAG 2.x Conformance requires. We refer to specific sections of WCAG-EM to define the representative sampling approach.  
-</li><li>Allow organizations to decide the important parts of their products or sites to assess for accessibility. Some sites may have workflows that are less critical than other portions of their product, site, or app. Thus, it wouldn't fail accessibility tests if it has bugs that don't impact its accessibility or its users with disabilities. 
-</li><li>Ensure that conformance doesn't favor any disability over another. 
-</li></ul>
-<p>Scoring and Conformance is divided into the following sections: </p><p>
-</p><ul>
-<li>Scope of conformance claim
-</li><li>Sampling
-</li><li>Points and Levels
-</li><li>Accessibility Supported
-</li></ul>
-<div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="3"><span>Editor's note</span></div><p class="">The sections on <a href="explainer.html#ConformanceGoals">Goals</a> and <a href="explainer.html#how-conformance-fits-into-the-information-architecture">How Conformance Fits in the Information Architecture</a> have moved to the <a href="explainer.html">Explainer</a> document. </p></div>
-
-
-<section id="scope-of-conformance-claim">
-<h3 id="x3-1-scope-of-conformance-claim"><bdi class="secno">3.1 </bdi>Scope of Conformance Claim<a class="self-link" aria-label="§" href="#scope-of-conformance-claim"></a></h3>
-<p>As technology advances, the WCAG 2.x scope of an individual page becomes more limiting and a flexible way is needed. Needs vary by factors that include but are not limited to: size; complexity; dynamic content; statefulness; frequency of publishing; third-party integrations; custom and scoped web components; critical user flows; etc.
-</p>
-<p>An organization or author who want to make an conformance claim can select a logical sub-section of the site, application, or product.  It cannot be used to make a claim outside the scope. This is common practice today, but has never been a formal part of WCAG 2.x Conformance. </p>
-<p>
-The organization (or author) should consider its own factors and determine the scope of what they are claiming. This allows the scope of the claim to be narrower than the entire site or product. Examples: a newspaper might have a different claim for the crosswords section than for the news section; or an app may have a different scope than the main website. Note that scope does not need to be expressed as a URL.  Complex single page apps or mobile apps are examples of products that could declare a scope that could not be expressed as a URL.  
-</p>
-
-</section>
-
-<section id="sampling">
-<h3 id="x3-2-sampling"><bdi class="secno">3.2 </bdi>Sampling<a class="self-link" aria-label="§" href="#sampling"></a></h3>
-<p>
-Sampling helps give confidence whether people building the product, app, site, or digital property have done the accessibility work that makes the product more accessible to people with disabilities. Sampling gives an indication of where you are in accessibility, but it doesn't guarantee that the tester finds every problem.  It's particularly effective when a product or site is built with accessible components. The more a site is created from a set of components, the more you want to get those components accessible.  </p>
-<p>
-Representative sampling is a way to assess large properties without having to test every screen. Representative sampling is common in accessibility testing, particularly for manual testing.  Sampling is optional. Anyone who wants to test all their pages or screens can do so. 
-</p>
-<p>There are many approaches to sampling. <cite><a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a></cite> [<cite><a href="#wcag-em">WCAG-EM</a></cite>] is web-oriented, but the principles can be applied more broadly. 
-</p>
-
-<h4 id="highlights-from-wcag-em-on-selecting-representative-samples">Highlights from WCAG-EM on Selecting Representative Samples<a class="self-link" aria-label="§" href="#sampling"></a></h4>
-<p><a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0)</a> has helpful information.  See the following sections on choosing a representative sample. They will need minor modifications to make them more broadly applicable than web pages.   
-</p><ul class="nobullet">
-<li><a href="https://www.w3.org/TR/WCAG-EM/#step2">Step 2: Explore the Target Website</a>
-	<ul class="nobullet">
-    <li>Step 2.a: Identify Common Web Pages of the Website
-    </li><li>Step 2.b: Identify Essential Functionality of the Website
-    </li><li>Step 2.c: Identify the Variety of Web Page Types
-    </li><li>Step 2.d: Identify Web Technologies Relied Upon
-    </li><li>Step 2.e: Identify Other Relevant Web Pages
-    </li></ul></li>
-<li><a href="https://www.w3.org/TR/WCAG-EM/#step3">Step 3: Select a Representative Sample</a>
-	<ul class="nobullet">	
-    <li>Step 3.a: Include a Structured Sample
-	<ol>
-		<li>All common web pages and web page states that were identified in Step 2.a: Identify Common Web Pages of the Website:
-    	</li><li>All other relevant web pages and web page states that were identified in Step 2.e: Identify Other Relevant Web Pages;
-    	</li><li>If not already reflected in the previous steps, select additional web pages and web page states with:
-		<ol>
-			<li>Content from each essential functionality identified in Step 2.b: Identify Essential Functionality of the Website;
-			</li><li>Content from the different types of web pages identified in Step 2.c: Identify the Variety of Web Page Types;
-			</li><li>Content provided using the web technologies identified in Step 2.d: Identify Web Technologies Relied Upon.
-		</li></ol>
-	</li></ol>
-    </li><li>Step 3.b: Include a Randomly Selected Sample
-    </li><li>Step 3.c: Include Complete Processes
-	</li></ul>
-</li></ul>
-
-<h4 id="different-sample-size-requirements-for-different-sized-products">Different Sample Size Requirements for Different Sized Products<a class="self-link" aria-label="§" href="#sampling"></a></h4>
-<ul>
-<li>Sites under 10 pages or products under 10 screens need to test every page or screen
-</li><li>Sites from 11 - 100 pages or products with 11 - 100 screens (including counting the different dynamic states)  
-	<ul>
-	<li>Test all pages automated tool(s). <span class="note">(We need to find a way of saying "use a good test tool", perhaps "Use a trusted, reputable tool."). </span>
-	</li><li>Review at least 10 pages or screens with in-depth manual testing.
-		<ul>
-		<li>These should be representative samples of the pages. See WCAG-EM Parts 2-3 for guidance in selecting a representative sample.  
-		</li><li>Common elements such as headers, footers and navigation must also have manual testing.  
-		</li></ul></li>
-	<li>There may be some guidelines, like clear language, that need a higher percentage of sample pages for testing. We are waiting for research results. 
-	</li></ul></li>
-<li>Sites or products from 100 - 1000 pages or screens
-	<ul>
-	<li>Test all pages or screens with and automated tool. 
-	</li><li>Test 10% of the pages or screens (up to 40 samples) with in-depth, manual methods. See WCAG-EM Parts 2-3 for guidance in selecting a representative sample and random selections. 
-	</li><li>Pick out primary workflows plus high traffic pages and make sure that the workflows are accessible. 
-	</li></ul></li>
-<li>Sites or products over 1000 pages or screens 
-	<ul>
-	<li>Run automated tests on different sub-sections on a rotating basis.  
-	</li><li>Pick out primary workflows plus high traffic pages and make sure that the workflows are accessible.  
-	</li><li>Test representative material, common elements (like header, footer, log-in, or navigation), unique elements, and common templates with representative data.   
-	</li><li>Organizations doing continuous development could test conformance by components or workflows. 
-	</li><li class="nobullet"><span class="note">Note: Should we also have different requirements for different levels of complex or dynamic products?</span>    
-	</li></ul></li>
-</ul>
-
-</section>
-
-<section id="points-and-levels">
-<h3 id="x3-3-points-and-levels"><bdi class="secno">3.3 </bdi>Points and Levels<a class="self-link" aria-label="§" href="#points-and-levels"></a></h3>
-<p>Each guideline awards a percentage of a point. A perfect accessibility score would be 100%, and a complete failure is 0%. All points count towards an overall total. The site or product tested must meet a minimum score for each disability category. The categories are based on the <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN301 549 Functional Performance Statements</a>, but will need more categories such as needs of people with vestibular disorders and a detailed breakdown of cognitive disability categories.  
-</p>
-<ul> 
-<li>Scoring will be by percentage: each guideline will be worth 1 point (100%) -- a complete failure would be worth 0 points (0%). Each guideline cannot have a score higher than 1 or lower than 0. Multiple methods for one guideline don’t gain more points. 
-</li><li>The scope tested must score a minimum percentage in each disability category, based on the modified EN301 549 Functional Performance Statements. <span class="note">Note: We'll continue to research the minimum percentage for each functional performance statement, after writing more content and testing it against websites that claim WCAG 2.x conformance. This will allow most sites that meet WCAG 2.x AA today to pass this minimum in WCAG 3.0. </span>
-</li><li>Once the minimum level is achieved in each category, all of the guidelines that are met to whatever percentage they are met increase the score.  
-</li><li>There is no weighting for importance, severity, difficulty (both of difficulty for humans to use and difficulty for coders to implement), or other reason.  
-</li><li>Different guidelines will evaluate the site or product by different measures.  Some will apply to the entire site or product, others may apply by the page or screen. Many will apply to the number of instances of the element.  
-</li><li>How the percentage is calculated will change by the guideline.  For  example, if a guideline score is calculated by instances of an element (like total number of images), then the total passes for that condition are divided by the total instances of the condition.  That gives a percentage response.  
-</li><li>For advanced WCAG 3.0 tests, there will be a mathematical condition that will be a part of the test. For example, a rubric test would have the total points scored divided by the  number of factors. <span class="note">(We need examples of other tests.)</span> 
-</li><li>The total score is averaged by the number of guidelines that apply to give a final percentage.  Typically, if a guideline isn’t used (or isn't applicable), then you don’t divide by that one. For example, if a site has no video or audio, the captioning guideline isn't applicable. <span class="note">Some guidelines, like Flashing Content, will need a way to include their score, since there should be credit given for not having flashing content. </span> 
-</li><li>If the tester uses sampling (see the following section), then the score is set by the pages or screens tested.  
-</li></ul>
-<p>The overall points total contribute to the level of conformance achieved. 
-Bronze is the lowest level of conformance; Silver is the middle level of conformance; and Gold is the highest level of conformance that can be met. Higher point totals will be needed to reach higher levels of conformance. <span class="note">We'll need more research to determine where the break points will be.</span>  
-</p>
-<p>
-Note: We've chosen these level names since they’re understood internationally  and are easily translated.
-</p>
-</section>
-
-<section id="accessibility-supported">
-<h3 id="x3-4-accessibility-supported"><bdi class="secno">3.4 </bdi>Accessibility Supported<a class="self-link" aria-label="§" href="#accessibility-supported"></a></h3>
-<ul>
-<li>Authors are responsible for testing that what they authored actually works for their users.</li>
-<li>Authors are not responsible for bugs or lack of support for WCAG techniques in browsers or assistive technology.  (We encourage authors to file bugs with the makers of user agents and assistive technologies, to fix bugs that testers believe are related to the user agent or assistive technology.)</li>
-<li>
-Browsers, user agents, and assistive technologies receive non-normative guidance on how their product could help authors meet WCAG 3.0. 
-</li>
-</ul>
-</section> 
-
-
-		
-</section>
-<section id="references">
-<h2 id="x4-references"><bdi class="secno">4. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2>
-<dl>
-<dt id="wcag21">[WCAG21]</dt>
-<dd><div>Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper. <a href="https://www.w3.org/TR/WCAG21/"><cite><mark>Web Content Accessibility Guidelines</mark> (WCAG) 2.1</cite></a>. 5 June 2018. W3C Recommendation. URL:&nbsp;<a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a> </div>
-
-</dd><dt id="wcag20">[WCAG20]</dt>
-<dd><div>Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al. <a href="https://www.w3.org/TR/WCAG20/"><cite><mark>Web Content Accessibility Guidelines</mark> (WCAG) 2.0</cite></a>. 11 December 2008. W3C Recommendation. URL:&nbsp;<a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></div>
-
-</dd><dt id="atag20">[ATAG20]</dt>
-<dd><div>Jan Richards; Jeanne F Spellman; Jutta Treviranus. <a href="https://www.w3.org/TR/ATAG20/"><cite><mark>Authoring Tool Accessibility Guidelines</mark> (ATAG) 2.0</cite></a>. 24 September 2015. W3C Recommendation. URL:&nbsp;<a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a> </div>
-
-</dd><dt id="uaag20">[UAAG20]</dt>
-<dd><div>James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman. <a href="https://www.w3.org/TR/UAAG20/"><cite><mark>User Agent Accessibility Guidelines</mark> (UAAG) 2.0</cite></a>. 15 December 2015. W3C Note. URL:&nbsp;<a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a> ED:&nbsp;<a href="https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/">https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/</a> </div>
-
-</dd><dt id="wcag-em">[WCAG-EM]</dt>
-<dd><div>Eric Velleman; Shadi Abou-Zahra. <a href="https://www.w3.org/TR/WCAG-EM/"><cite>Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0</cite></a>. 10 July 2014. W3C Note. URL:&nbsp;<a href="https://www.w3.org/TR/WCAG-EM/"><mark>https://www.w3.org/TR/WCAG-EM/</mark></a></div>
-
-</dd><dt id="SilverResearch">[SilverResearch Archive]</dt>
-<dd><div>Michael Cooper, Shawn Lauriat, Jeanne Spellman. eds. <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive"><cite><mark>Silver Research Archive</mark></cite></a>. 29 April 2019. Wiki page.  URL:&nbsp;<a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive">https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive</a>  </div>
-
-</dd><dt id="DesignSprint">[DesignSprint]</dt>
-<dd><div>Jeanne Spellman. ed. <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive"><cite><mark>Silver Design Sprint Report</mark></cite></a>. 29 April 2019. W3C Community Group Report.  URL:&nbsp;<a href="https://www.w3.org/community/silver/draft-final-report-of-silver">https://www.w3.org/community/silver/draft-final-report-of-silver/</a>  </div>
-
-</dd><dt id="Challenges">[Challenges]</dt>
-<dd><div>Janina Sajka, Michael Cooper, eds.  <a href="https://w3c.github.io/wcag/conformance-challenges/"><cite><mark>Challenges with Accessibility Guidelines Conformance and Testing</mark></cite></a>. Work in Progress. W3C Editors Draft.  URL:&nbsp;<a href="https://w3c.github.io/wcag/conformance-challenges/">https://w3c.github.io/wcag/conformance-challenges/</a>  </div>
-
-</dd></dl>
-
-
-</section>
-		
-<section class="appendix" id="acknowledgements">
-			<h2 id="a-acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2>
-			<section id="participants-in-the-silver-task-force-active-in-the-development-of-this-document">
-				<h3 id="a-1-participants-in-the-silver-task-force-active-in-the-development-of-this-document"><bdi class="secno">A.1 </bdi>Participants in the Silver Task Force Active in the Development of This Document<a class="self-link" aria-label="§" href="#participants-in-the-silver-task-force-active-in-the-development-of-this-document"></a></h3>
-<ul>
-<li>Adams, Charles (Oracle Corporation)</li>
-<li>Bailey, Bruce</li>
-<li>Boudreau, Denis (Deque Systems, Inc)
-</li><li> Butler, Shari (Pearson plc)</li>
-<li> Campbell, Alastair (Nomensa)</li>
-<li> Cooper, Michael (W3C Staff)</li>
-<li>Cronin, Joe (Amazon)
-</li><li>Dirks, Kim (Thomson Reuters Corp.)</li>
-<li>Fazio, David </li>
-<li>Fischer, Detlev</li>
-<li>Foliot, John (Deque)</li>
-<li>Hall, Charles</li>
-<li>Horton, Sarah (The Paciello Group, LLC)</li>
-<li>Korn, Peter (Amazon)
-</li><li> Ku, JaEun (University of Illinois at Urbana-Champaign)</li>
-<li> Lauriat, Shawn(Google, Inc.)</li>
-<li> McSorley, Jan (Pearson plc)</li>
-<li>Montgomery, Rachael</li>
-<li> Ran, Ruoxi
-    (W3C Staff)</li>
-<li>Sack, Cybele </li>
-<li>Sahasrabudhe, Shrirang
-    (Educational Testing Service)</li>
-<li> Sajka, Janina (Amazon) </li>
-<li> Sloan, David
-    (The Paciello Group, LLC)</li>
-<li> Spellman, Jeanne
-	(Tetralogical)</li>
-<li> Ueki, Makoto (Infoaxia, Inc.)</li>
-<li>Watson, Leonie (Tetralogical) </li>
-</ul>
+		<section class="informative" id="structure-of-these-guidelines">
+			<h2 id="x2-structure-of-these-guidelines"><bdi class="secno">2. </bdi>Structure of These Guidelines<a class="self-link" aria-label="§" href="#structure-of-these-guidelines"></a></h2><p><em>This section is non-normative.</em></p>
+			<section id="functional-categories">
+				<h3 id="x2-1-functional-categories"><bdi class="secno">2.1 </bdi>Functional Categories<a class="self-link" aria-label="§" href="#functional-categories"></a></h3>
+				<p>WCAG 3.0 is organized by <a href="#dfn-functional-category" class="internalDFN" data-link-type="dfn">Functional Categories</a> of disabilities which reflect the diverse needs of users with disabilities. Within each Functional Category, Functional Needs are applied to specific topics (for example: contrast, forms, readability, and more)&nbsp; to identify the barriers experienced by people with disabilities.&nbsp;The barriers in these topics inform the Functional Outcomes, which state the conditions to test whether the Functional Needs have been met.  </p>
+				<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">The work of cataloging functional needs is still in process and will continue after the First Public Working Draft.&nbsp; Those interested can see more information in this draft Google document <a href="https://docs.google.com/document/d/1eJkgXqbh7dx3uD6XAy8XAANmwfbbVZ5GKb_gbsUdkVs/">Functional Needs - Expanded</a></p></div>
 			</section>
-		<section id="participants-in-the-silver-community-group-active-in-the-development-of-this-document">
-		  <h3 id="a-2-participants-in-the-silver-community-group-active-in-the-development-of-this-document"><bdi class="secno">A.2 </bdi>Participants in the Silver Community Group Active in the Development of This Document<a class="self-link" aria-label="§" href="#participants-in-the-silver-community-group-active-in-the-development-of-this-document"></a></h3>
-<ul>
-
-<li>Alice Boxhall, Google, Inc.
-</li><li>Angela Hooker, Microsoft Corp.
-</li><li>Charles Hall, MRM//McCann
-</li><li>Charles McCathie Nevile
-</li><li>Cybele Sack
-</li><li>Eleanor Loiacono, Worcester Polytechnic Institute
-</li><li>Imelda Llanos
-</li><li>Jake Abma, ING Groep N.V.
-</li><li>Jennifer Chadwick, Siteimprove
-</li><li>Jennison Asuncion, LinkedIn
-</li><li>Jill Power, EBSCO Publishing
-</li><li>John Kirkwood, CityMouse, inc
-</li><li>John McNabb, Canadian Imperial Bank of Commerce
-</li><li>John Rochford, University of Massachusetts Medical Center
-</li><li>Katharina Herzog
-</li><li>Kelsey Collister
-</li><li>Luis Garcia, eBay
-</li><li>Lyn Muldrow, LinkedIn
-</li><li>Léonie Watson, Tetrological
-</li><li>Makoto Ueki, Infoaxia, Inc.
-</li><li>Mark Tanner
-</li><li>Matthew King, Facebook
-</li><li>Michael Crabb, The University of Dundee
-</li><li>Michellanne Li, Palantir.net
-</li><li>Peter McNally, User Experience Center, Bentley University
-</li><li>Ruth Spina, North East ISD
-</li><li>Ryan Hemphill
-</li><li>Sarah Pulis, Intopia
-</li><li>Scott Hollier
-</li><li>sweta wakodkar, Prakat Solutions Pvt Ltd
-</li><li>Takayuki Watanabe, Tokyo Woman's Christian University
-</li><li>Thomas Logan, Equal Entry
-</li><li>Thomas Westin, Stockholm University
-</li><li>Victoria Clark, JP Morgan Chase
-</li><li>Wendy Chisholm, Microsoft Corp.
-</li></ul>
-
-		  </section>
-			<section id="participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document">
-				<h3 id="a-3-participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"><bdi class="secno">A.3 </bdi>Participants in the Accessibility Guidelines Working Group Active in the Development of This Document<a class="self-link" aria-label="§" href="#participants-in-the-accessibility-guidelines-working-group-active-in-the-development-of-this-document"></a></h3>
+			<section id="functional-needs">
+				<h3 id="x2-2-functional-needs"><bdi class="secno">2.2 </bdi>Functional Needs<a class="self-link" aria-label="§" href="#functional-needs"></a></h3>
+				<p>A Functional Need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p>
+				<p>Note: The intent is to express the need in a contextual model, as opposed to a lack of ability in a medical model. This is similar to the ICF (International Classification of Functioning – a biopsychosocial model), “outcomes of interactions between health conditions (diseases, disorders and injuries) and contextual factors”, focusing on the interactions. </p>
+				<blockquote>Example: Use without vision.</blockquote>
+				<p>Functional Needs are documented in the supplementary material accompanying the Guidelines and Functional Outcomes.</p><p>
+			</p></section>
+			<section id="guidelines">
+				<h3 id="x2-3-guidelines"><bdi class="secno">2.3 </bdi>Guidelines<a class="self-link" aria-label="§" href="#guidelines"></a></h3>
+				<p>Guidelines are high level plain language summaries that address Functional Needs on specific topics, such as contrast, forms, readability, and more.  They organize and group the Functional Outcomes. Guidelines are technology independent.</p>	
+				<p>Guidelines will be identified by unique name. Translations should have an appropriate unique name.</p>				
 			</section>
-			<section id="participants-in-the-silver-design-sprint">
-            <h3 id="a-4-participants-in-the-silver-design-sprint"><bdi class="secno">A.4 </bdi>Participants in the Silver Design Sprint<a class="self-link" aria-label="§" href="#participants-in-the-silver-design-sprint"></a></h3>
-            <p>The following people participated in the Design Sprint of 2018 held   in San Diego, California prior to the CSUN AT 2018 conference.  We thank   them for the generous gift of time that they donated to the Silver   project. </p>
-            <ul>
-              <li> Camron Shimy, Google, (Sprint Facilitator)</li>
-              <li> Alice Boxhall, Google </li>
-              <li> Shari Butler, Pearson</li>
-              <li> Wendy Chisholm, Microsoft</li>
-              <li> Michael Cooper, W3C</li>
-              <li> Wayne Dick, Knowbility</li>
-              <li> Rob Dodson, Google</li>
-              <li> Lainey Feingold, Law Office of Lainey Feingold</li>
-              <li> Lucy Greco, University of California Berkley</li>
-              <li> Charles Hall, MRM//McCann</li>
-              <li> Shilpi Kapoor, BarrierBreak</li>
-              <li> George Kerscher, DAISY Consortium, Benetech</li>
-              <li> Sharon Krevor-Weisbaum, Brown, Goldstein &amp; Levy, LLP</li>
-              <li> Matt King, Facebook</li>
-              <li> John Kirkwood, CityMouse, Inc</li>
-              <li> JaEun Jemma Ku, University of Illinois Urbana-Champaign</li>
-              <li> Shawn Lauriat, Google</li>
-              <li> Chaals McCathy-Neville, Yandex</li>
-              <li> Jan McSorley, Pearson</li>
-              <li> Whitney Quesenbery, Center for Civic Design</li>
-              <li> Melanie Richards, Microsoft</li>
-              <li> John Rochford, University of Massachusetts Medical School</li>
-              <li> Jeanne Spellman, The Paciello Group (TPG)</li>
-              <li> Adam Spencer, Accessibil-IT</li>
-              <li> Makoto Ueki, Infoaxia, Inc.</li>
-              <li> Leonie Watson, The Paciello Group (TPG)</li>
-            </ul>
-
+			<section id="how-tos">
+				<h3 id="x2-4-how-tos"><bdi class="secno">2.4 </bdi>How-Tos<a class="self-link" aria-label="§" href="#how-tos"></a></h3>
+				<p>The How-To provides explanatory material for the guideline that applies across technologies. This plain language resource includes information on getting started, who the guideline helps and how, as well information for designers and developers.  </p>
 			</section>
-            <section id="contributions-to-the-silver-design-sprint">
-        <h3 id="a-5-contributions-to-the-silver-design-sprint"><bdi class="secno">A.5 </bdi>Contributions to the Silver Design Sprint<a class="self-link" aria-label="§" href="#contributions-to-the-silver-design-sprint"></a></h3>
-        <ul>
-          <li>San Diego State University Interwork Institue and Center for Distance Learning donated the space and AV for the Design Sprint.</li>
-          <li>University of Illinois Urbana-Champaign Libraries donated the lunch and breaks</li>
-          <li>Google donated the supplies and coffee</li>
-        </ul>
+			<section id="functional-outcomes">
+				<h3 id="x2-5-functional-outcomes"><bdi class="secno">2.5 </bdi>Functional Outcomes<a class="self-link" aria-label="§" href="#functional-outcomes"></a></h3>
+				<p><a href="#dfn-functional-outcome" class="internalDFN" data-link-type="dfn">Functional Outcomes</a> are the results of practices that reduce or eliminate barriers that people with disabilities experience. Functional Outcomes form the basis of a flexible and expansive architecture for accessibility guidelines that relates closely to the needs of people with disabilities. Specific tests can be used to assess the accessibility of common technologies and the overall Functional Outcome can be used to assess proprietary and new technologies.&nbsp;</p>
+				<p>Functional Outcomes are normative. They are located in the normative section of specific guidelines.  They are repeated in the Methods that apply to that Guideline.  
+				</p><figure id="fig-functional-categories-inform-functional-needs-the-guideline-topics-with-the-functional-needs-inform-the-functional-outcomes-how-to-documents-are-related-to-guidelines-methods-are-specific-to-technology-and-include-techniques-and-tests">
+					<img height="451" src="img/guidelines-structure.png" width="311">
+					<figcaption>Figure <bdi class="figno">1</bdi> <span class="fig-title">Functional Categories inform Functional Needs. The Guideline topics with the Functional Needs inform the Functional Outcomes.  How To documents are related to Guidelines. Methods are specific to technology and include Techniques and Tests.  </span></figcaption>
+				</figure>
+				<p>Functional Outcomes are intended to be applied across different technologies, but they have less emphasis on Web technologies.</p>
+			</section>
+			<section id="methods">
+				<h3 id="x2-6-methods"><bdi class="secno">2.6 </bdi>Methods<a class="self-link" aria-label="§" href="#methods"></a></h3>
+				<p>Each Functional Outcome has one or more <a href="#dfn-method" class="internalDFN" data-link-type="dfn">Methods</a>. The Methods include detailed techniques and tests for meeting and testing the functional outcome for a specific technology. Existing WCAG 2.2 techniques may be referenced in the appropriate Method for the Functional Outcome. New tests and how to score existing and new tests are included in the Method.  </p>
+			</section>
+			<section id="tests">
+				<h3 id="x2-7-tests"><bdi class="secno">2.7 </bdi>Tests<a class="self-link" aria-label="§" href="#tests"></a></h3>
+				<p>@@ [Jeanne recommends deleting, we have too much in this. I included it in Methods. Michael would prefer this in. RB: If we leave it in we should have a section for techniques. I am in favor of removing it.]</p>
+			</section>
+
 		</section>
-<section id="research-partners">
-		<h3 id="a-6-research-partners"><bdi class="secno">A.6 </bdi>Research Partners<a class="self-link" aria-label="§" href="#research-partners"></a></h3>
-        <p>These researchers selected a Silver research question, did the research, and graciously allowed us to use the results.</p>
-        <ul>
-          <li>David Sloan and Sarah Horton, The Paciello Group, “WCAG Success Criteria Usability Study”</li>
-          <li>Scott Hollier et al, Curtin University, “Internet of Things (IoT) Education: Implications for Students with Disabilities”</li>
-          <li>Peter McNally, Bentley University, “WCAG Use by UX Professionals”</li>
-          <li>Professor Mike Crabb, student papers of Silver research topics</li>
-          <li>Eleanor Loiacono, Worcester Polytechnic Institute “Web Accessibility   Perceptions” (Student project from Worcester Polytechnic Institute)</li>
-        </ul>
-        </section>
+		<section id="normative-requirements">
+			<h2 id="x3-normative-requirements"><bdi class="secno">3. </bdi>Normative Requirements<a class="self-link" aria-label="§" href="#normative-requirements"></a></h2>
+			<p>The main content of WCAG 3.0 is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a> and defines requirements that impact conformance claims. Introductory material, appendices, sections marked as "non-normative", diagrams, examples, and notes are <a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
+			<p>The key words <em class="rfc2119" title="MAY"><em class="rfc2119" title="MAY">MAY</em></em>, <em class="rfc2119" title="MUST"><em class="rfc2119" title="MUST">MUST</em></em>, <em class="rfc2119" title="MUST NOT"><em class="rfc2119" title="MUST NOT">MUST NOT</em></em>, <em class="rfc2119" title="NOT RECOMMENDED"><em class="rfc2119" title="NOT RECOMMENDED">NOT RECOMMENDED</em></em>, <em class="rfc2119" title="RECOMMENDED"><em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em></em>, <em class="rfc2119" title="SHOULD"><em class="rfc2119" title="SHOULD">SHOULD</em></em>, and <em class="rfc2119" title="SHOULD NOT"><em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em></em> are to be interpreted as described in [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>].</p>
+		</section>
+		<section id="the-guidelines">
+			<h2 id="x4-the-guidelines"><bdi class="secno">4. </bdi>The Guidelines<a class="self-link" aria-label="§" href="#the-guidelines"></a></h2>
+			<p>The individuals and organizations that use WCAG vary widely and include Web designers and developers, policy makers, purchasing agents, teachers, and students. In order to meet the varying needs of this audience, several layers of guidance are provided including functional categories of disabilities, general guidelines, functional outcomes that can be tested and a rich collection of methods, and documented common failures with examples, resource links, and code.</p>
+
+			<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span></div><p class="">The process of migrating information from WCAG 2.x to WCAG 3.0 has just begun. This document presents initial examples of how the structure works. The <a href="https://w3c.github.io/silver/guidelines/explainers/template.html">template for the new content</a> presents the skeleton of the architecture and may help . We welcome comments on this.&nbsp;</p></div>
+			<div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="3"><span>Editor's note</span></div><p class="">These are early drafts of guidelines. They are used to illustrate what WCAG 3.0 could look like and to test the process of writing content. These guideline drafts should not be considered as final content of WCAG 3.0. They are there to show how the structure would work. As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests.&nbsp;</p></div>
+			<p>As more content is developed, this section will be a list of guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to WCAG 3.0, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit">WCAG to Silver Outline Map</a>.</p>
+
+			<p>The Guidelines included in this draft have been selected to show different types of content:</p>
+			<ul>
+				<li><p>Text Alternatives - a direct migration from WCAG 2.x success criterion</p></li>
+				<li><p>Visual Contrast of Text - a migration of WCAG 2.x with substantial changes</p></li>
+				<li><p>Structured Content - migration and merging of several previously unrelated WCAG 2.x success criteria</p></li>
+				<li><p>Clear Language - new guidance that could not previously be included in WCAG 2.x</p></li>
+				<li><p>Captions - an example of adapting WCAG 2.x guidance to emerging technologies, such as Web Virtual Reality</p></li>
+			</ul>
+			<section id="text-alternatives">
+				<h3 id="x4-1-text-alternatives"><bdi class="secno">4.1 </bdi>Text Alternatives<a class="self-link" aria-label="§" href="#text-alternatives"></a></h3>
+			</section>
+			<section id="clear-language">
+				<h3 id="x4-2-clear-language"><bdi class="secno">4.2 </bdi>Clear Language<a class="self-link" aria-label="§" href="#clear-language"></a></h3>
+				<p>Use clear language to make it easier for readers to understand.</p>
+				<p><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
+				<div class="note" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="4"><span>Editor's note</span></div><p class="">Clear Language is a new guideline proposed by the Cognitive Accessibility Task Force (COGA), and includes research, documents and comments from COGA. It showcases a proof-of-concept example of a rubric-type test that could not be included in WCAG 2.x.</p></div>
+			</section>
+			<section id="captions">
+				<h3 id="x4-3-captions"><bdi class="secno">4.3 </bdi>Captions<a class="self-link" aria-label="§" href="#captions"></a></h3>
+			</section>
+			<section id="structured-content">
+				<h3 id="x4-4-structured-content"><bdi class="secno">4.4 </bdi>Structured Content<a class="self-link" aria-label="§" href="#structured-content"></a></h3>
+				<ol>
+					<li><p>Organizes text into logical chunks to make locating information easier and faster.</p></li>
+					<li><p>Uses visually distinct headings so sighted readers can determine the structure.</p></li>
+					<li><p>Provides semantic structure to support assistive technology-- headings are coded as headings.</p></li>
+					<li><p>Conveys a sense of hierarchy that helps the user explore and navigate the text material.</p></li>
+				</ol>
+				<p>Or (same text, more usable format)</p>
+
+				<table>
+					<tbody>
+						<tr>
+							<th scope="col"> Results (What) </th>
+							<th scope="col"> Benefits (Why and Who) </th>
+							<th scope="col"> Examples (Not Restrictive/Exhaustive) </th>
+						</tr>
+						<tr>
+							<td> Organizes text into logical chunks </td>
+							<td> Make locating information easier and faster </td>
+							<td> Headings, HTML sections </td>
+						</tr>
+						<tr>
+							<td> Uses visually distinct headings </td>
+							<td> Sighted readers can determine the structure </td>
+							<td> Using different font sizes and color so structure stands out </td>
+						</tr>
+						<tr>
+							<td> Provides semantic structure </td>
+							<td> Support assistive technology </td>
+							<td> HTML headings code, ARIA roles, Word heading styles </td>
+						</tr>
+						<tr>
+							<td> Conveys a sense of hierarchy </td>
+							<td> helps the user explore and navigate the text material </td>
+							<td> Headings and subheadings, using sections to structure content </td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p><a href="https://w3c.github.io/silver/guidelines/explainers/SectionHeading.html">Structured Content How-to</a></p>
+				<p>Structured Content Methods</p>
+			</section>
+			<section id="visual-contrast-of-text">
+				<h3 id="x4-5-visual-contrast-of-text"><bdi class="secno">4.5 </bdi>Visual Contrast of Text<a class="self-link" aria-label="§" href="#visual-contrast-of-text"></a></h3>
+				<p>Provide sufficient contrast between foreground text and its background.</p>
+				<p><a href="https://w3c.github.io/silver/guidelines/explainers/visualContrast.html">Visual Contrast of Text How-to</a></p>
+				<div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="4"><span>Editor's note</span></div><div class="">
+					<p>Visual Contrast is a migration from WCAG 2.1 with significant updates:</p>
+					<ul>
+						<li>New calculations of contrast based on more modern research on color perception.</li>
+						<li>Merging the 1.4.3 AA and 1.4.6 AAA levels into one guideline.</li>
+						<li>New test of text contrast.</li>
+						<li>At this time, it only includes textual visual contrast.</li>
+					</ul>
+				</div></div>
+				<p>We propose changing the name of “Color Contrast” to “Visual Contrast” as a signal of a paradigm change from one about color to one about “perception of light intensity”. The reason for this change is that the understanding of contrast has matured and the available research and body of knowledge has made breakthroughs in advancing the understanding of “visual contrast”.</p>
+				<p>The proposed new guidance more accurately models current research in human visual perception of contrast and light intensity. The goal is to improve understanding of the functional needs of all users, and more effectively match the needs of those who face barriers accessing content. This new perception-based model is more context dependent than a strict light ratio measurement; results can, for example, vary with size of text and the darkness of the colors or page.</p>
+				<p>This model is more responsive to user needs and allows designers more choice in visual presentation. It does this by including multi-factor assessment tests which integrate contrast with interrelated elements of visual readability, such as font features. It includes tests to determine an upper limit of contrast, where elevated contrast may impact usability.</p>
+			</section>
+		</section>
+		<section id="evaluation">
+			<h2 id="x5-evaluation"><bdi class="secno">5. </bdi>Evaluation<a class="self-link" aria-label="§" href="#evaluation"></a></h2>
+			<div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="3"><span>Editor's note</span></div><p class="">We continue to test this approach and others for validity, reliability, sensitivity, and adequacy, and complexity.&nbsp; Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p></div>
+			<section id="testing">
+				<h3 id="x5-1-testing"><bdi class="secno">5.1 </bdi>Testing<a class="self-link" aria-label="§" href="#testing"></a></h3>
+				<p>WCAG 3.0 includes two types of tests:</p>
+
+				<ol>
+					<li>Traditional tests include the tests that support A, AA, and AAA Success Criteria in WCAG 2.x. In WCAG 3.0, these tests support functional outcomes and lead to a Bronze rating. In most cases, testing individual elements will result in binary, pass/fail outcome for that element. These results are then used to assign a score to each functional outcome.&nbsp;&nbsp;</li>
+					<li>Holistic tests include assistive technology testing, user-centered design methods, and both user and expert usability testing.&nbsp; Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected.&nbsp; Holistic tests are used to reach a Silver or Gold rating.</li>
+				</ol>
+				<p>All WCAG 3.0 Functional Outcomes are written as testable criteria for objectively determining if content satisfies them. Testing the Functional Outcomes using the traditional tests involves a combination of automated testing and human evaluation. The content should be tested by those who understand how people with different types of disabilities use the technology being tested.</p>
+				<p>Although content may satisfy all Functional Outcomes using the traditional tests, the content may not always be usable by people with a wide variety of disabilities. The holistic tests address this gap.</p>
+			</section>
+			<section id="scoring"><h3 id="x5-2-scoring"><bdi class="secno">5.2 </bdi>Scoring<a class="self-link" aria-label="§" href="#scoring"></a></h3><div class="note" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><p class="">One the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample functional outcomes that demonstrate alternatives such as rubrics and scales.We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each functional outcome within the WCAG 3.0 framework .&nbsp;</p></div><p>Each functional outcome has methods associated with different technologies. Each method contains tests and techniques for meeting that functional outcome.&nbsp; Testers can test the accessibility of new and emerging technologies that do not have related methods based on the functional
+					outcome.&nbsp;</p><p>Tests are applied at the view level and can be scored in one of three ways which will be included in the test statement:</p><ul>
+					<li>Pass/Fail (100%/0%)</li>
+					<li>Rating Scale (0 (0%), 1 (20%), 2 (40%), 3 (60%), 4 (80%), and 5 (100%)</li>
+					<li>Percentage (# passed/total # of instances)</li>
+				</ul>Testers then aggregate the results of related tests across the views and count the number of <a href="#dfn-critical-errors" class="internalDFN" data-link-type="dfn">critical failures</a> that occur. Testers will then use the guidelines below along with reasonable judgement of the context to assign a rating:<ul>
+					<li>Very Poor (0) = Any critical failures or less than 50% of related tests fail</li>
+					<li>Poor (1) = No critical failures, ~50-79%</li>
+					<li>Fair (2) = No critical failures, ~80-89%</li>
+					<li>Good&nbsp; (3) = No critical failures, ~90-98%</li>
+					<li>Excellent (4) = No critical failures, ~99%-100%</li>
+				</ul><p>The ratings given to functional outcomes are then averaged for a total score and a score by the functional category(ies) they support.&nbsp; Conformance at the Bronze level require no critical failures and at least 3.5 score within each functional category and overall.&nbsp;</p><div class="note" id="issue-container-generatedID-6"><div role="heading" class="ednote-title marker" id="h-ednote-6" aria-level="4"><span>Editor's note</span></div><p class="">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a Bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number will likely shift as we continue testing.&nbsp; We invite comment on these options as well as suggestions for an alternative solution. </p></div></section>
+		</section>
+		<section id="conformance">
+			<h2 id="x6-conformance"><bdi class="secno">6. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2>
+			<p>@@NEEDS MORE WORK </p>
+			<p>Conformance to a standard means that you meet or satisfy the 'requirements' of the standard. In WCAG 3.0 the 'requirements' are the Functional Outcomes. </p>
+			<p>Technology can meet the Functional Outcomes without a conformance claim.  If you want to claim conformance, you must follow the process below; however, even if you are not making a formal conformance claim, you can use this process to assess the accessibility of content.</p>
+
+
+			<section id="conformance-requirements">
+				<h3 id="x6-1-conformance-requirements"><bdi class="secno">6.1 </bdi>Conformance Requirements<a class="self-link" aria-label="§" href="#conformance-requirements"></a></h3>
+				<p>In order for technology to <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conform</a> to WCAG 3.0, all of the following conformance requirements must be satisfied:</p>
+				<ol>
+					<li><b>Conformance Level</b> - One of the following conformance levels is met in full: <ul>
+							<li><b>Bronze</b> - For Bronze level conformance (the minimum level of conformance): <ul>
+									<li>The total score and score within each of the functional categories is at least 3.5</li>
+									<li>Views and paths include no <a href="#dfn-critical-errors" class="internalDFN" data-link-type="dfn">critical errors</a>.</li>
+								</ul></li>
+							<li><b>Silver</b> - For Silver level conformance: <ul>
+									<li>All views satisfy Bronze criteria</li>
+									<li>TBD of holistic tests</li>
+								</ul></li>
+							<li><b>Gold</b> - For Gold level conformance: <ul>
+									<li>Meets Bronze criteria</li>
+									<li>TBD of holistic tests</li>
+								</ul></li>
+						</ul></li>
+					<li><b>Processes and Views</b> - Conformance (and conformance level) is for complete <a href="#dfn-process" class="internalDFN" data-link-type="dfn">Processes</a> and <a href="#dfn-view" class="internalDFN" data-link-type="dfn">Views</a>, and cannot be achieved if part of a process or view is excluded.</li>
+				</ol>
+			</section>
+			<section id="defining-conformance-scope">
+				<h3 id="x6-2-defining-conformance-scope"><bdi class="secno">6.2 </bdi>Defining Conformance Scope<a class="self-link" aria-label="§" href="#defining-conformance-scope"></a></h3>
+				<p>Conformance is defined only for <a href="#dfn-process" class="internalDFN" data-link-type="dfn">processes</a> and <a href="#dfn-view" class="internalDFN" data-link-type="dfn">views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.&nbsp; All unique steps in a process must be represented in the set of views. Views outside of the process may also be included in the scope.</p>
+				<div class="note" id="issue-container-generatedID-7"><div role="heading" class="ednote-title marker" id="h-ednote-7" aria-level="4"><span>Editor's note</span></div><p class="">The AG WG and Silver Task Force recognize that representative sampling is an important strategy that large and complex sites use to assess accessibility. While it is not addressed within this document at this time, our intent is to later address it within this document or in a separate document before the guidelines reach the Candidate Recommendation stage. We welcome your suggestions and feedback about the best way to incorporate representative sampling in WCAG 3.0.</p></div>
+			</section>
+			<section id="conformance-claims">
+				<h3 id="x6-3-conformance-claims"><bdi class="secno">6.3 </bdi>Conformance Claims<a class="self-link" aria-label="§" href="#conformance-claims"></a></h3>
+				<p>Conformance claims are not required. Authors can conform to WCAG 3.0 without making a claim. The material below describes how to make a conformance claim if that option is chosen.</p>
+				<section id="required-components-of-a-conformance-claim"><h4 id="x6-3-1-required-components-of-a-conformance-claim"><bdi class="secno">6.3.1 </bdi>Required Components of a Conformance Claim<a class="self-link" aria-label="§" href="#required-components-of-a-conformance-claim"></a></h4><p>A conformance claim <em class="rfc2119" title="MUST">MUST</em> include the following information:</p><ol>
+						<li><b>Date</b> of the claim</li>
+						<li><b>Guidelines title, version and URI</b> "Web Content Accessibility Guidelines 3.0 at ???"</li>
+						<li><b>Conformance level</b> satisfied: (Bronze, Silver, or Gold)</li>
+					</ol><b>A concise description of the views and processes</b>, such as a list of URIs for which the claim is made, including any state changes which lead to a new view.</section>
+				<section id="example-conformance-claim">
+					<h4 id="x6-3-2-example-conformance-claim"><bdi class="secno">6.3.2 </bdi>Example Conformance Claim<a class="self-link" aria-label="§" href="#example-conformance-claim"></a></h4>
+					<p>On 12 August 2020, the following 10 views and 2 paths conform to WCAG 3.0 at a Bronze level. Paths were selected because they are the most common activities on the site and include 4 unique views. The other 6 views are additional commonly used pages.</p>
+					<ul>
+						<li>Path 1: Order Newsletter (<a href="http://www.example.com">www.example.com</a>, www.example.com/newsletter)</li>
+						<li>Path 2: Comment on Blog Post (<a href="http://www.example.com">www.example.com</a>, <a href="http://www.example.com/blog">www.example.com/blog</a>, <a href="http://www.example.com/blog">www.example.com/blog</a> (with comment model open)</li>
+						<li><a href="http://www.example.com/contact">www.example.com/contact</a></li>
+						<li><a href="http://www.example.com/search_results">www.example.com/search_results</a></li>
+						<li><a href="http://www.example.com/recent_news">www.example.com/recent_news</a></li>
+						<li><a href="http://www.example.com/about">www.example.com/about</a></li>
+						<li><a href="http://www.example.com/leadership">www.example.com/leadership</a></li>
+						<li><a href="http://www.example.com/learnmore">www.example.com/learn_more</a></li>
+					</ul>
+				</section>
+			</section>
+		</section>
+		<section id="glossary">
+			<h2 id="x7-glossary"><bdi class="secno">7. </bdi>Glossary<a class="self-link" aria-label="§" href="#glossary"></a></h2>
+			<div class="note" role="note" id="issue-container-generatedID-8"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">Many of the terms defined here have common meanings. When terms appear with a link to the definition, the meaning is as formally defined here. When terms appear without a link to the definition, their meaning is not explicitly related to the formal definition here.</p></div>
+			<dl>
+				<dt><dfn data-lt="Conform|Conformance" data-dfn-type="dfn" id="dfn-conform">Conformance</dfn></dt>
+				<dd><p>@@</p></dd>
+				<dt><dfn data-lt="Critical Errors|Critical Failure|Critical Failures|Critical Error" data-dfn-type="dfn" data-plurals="critical errors|critical failures" id="dfn-critical-errors">Critical Error</dfn></dt>
+				<dd><p>Critical errors are:</p>
+					<ul>
+						<li>items that will stop a user from being able to complete the task if it exists anywhere on the page (examples: flashing, keyboard trap, audio with no pause)</li>
+						<li>errors that when located within a process means the process cannot be completed (example: submit button not in tab order)</li>
+						<li>errors that when aggregated within a view or across a process cause failure (example: a large amount of confusing, ambiguous language)</li>
+					</ul>
+					</dd>
+				<dt><dfn data-dfn-type="dfn" data-plurals="functional categories" id="dfn-functional-category">Functional Category</dfn></dt>
+				<dd><p>@@</p></dd>
+
+				<dt><dfn data-dfn-type="dfn" id="dfn-functional-need">Functional Need</dfn></dt>
+				<dd><p>A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p></dd>
+
+				<dt><dfn data-dfn-type="dfn" data-plurals="functional outcomes" id="dfn-functional-outcome">Functional Outcome</dfn></dt>
+				<dd><p>@@</p></dd>
+
+				<dt><dfn data-dfn-type="dfn" id="dfn-guideline">Guideline</dfn></dt>
+				<dd><p>@@</p></dd>
+				<dt><dfn data-dfn-type="dfn" id="dfn-how-to">How-To</dfn></dt>
+				<dd><p>@@</p></dd>
+				<dt><dfn data-dfn-type="dfn" id="dfn-informative">Informative</dfn></dt>
+				<dd>
+					<p>for information purposes and not required for conformance</p>
+					<div class="note" role="note" id="issue-container-generatedID-9"><div role="heading" class="note-title marker" id="h-note-0" aria-level="3"><span>Note</span></div><p class="">Content required for <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> is referred to as "<a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a>."</p></div>
+				</dd>
+
+				<dt><dfn data-dfn-type="dfn" data-plurals="methods" id="dfn-method">Method</dfn></dt>
+				<dd><p>@@</p></dd>
+				<dt><dfn data-dfn-type="dfn" id="dfn-normative">Normative</dfn></dt>
+				<dd>
+					<p>required for conformance</p>
+					<div class="note" role="note" id="issue-container-generatedID-10"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Note</span></div><p class="">One may conform in a variety of well-defined ways to this document.</p></div>
+					<div class="note" role="note" id="issue-container-generatedID-11"><div role="heading" class="note-title marker" id="h-note-2" aria-level="3"><span>Note</span></div><p class="">Content identified as "<a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a>" or "non-normative" is never required for <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a>.</p></div>
+				</dd>
+
+				<dt><dfn data-dfn-type="dfn" id="dfn-path">Path</dfn></dt>
+				<dd><p>@@</p></dd>
+				<dt><dfn data-dfn-type="dfn" data-plurals="processes" id="dfn-process">Process</dfn></dt>
+				<dd><p>A sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end.</p></dd>
+				<dt><dfn data-dfn-type="dfn" data-plurals="user needs" id="dfn-user-need">User Need</dfn></dt>
+				<dd><p>@@</p></dd>
+				<dt><dfn data-dfn-type="dfn" data-plurals="views" id="dfn-view">View</dfn></dt>
+				<dd><p>All content visually and programatically available without a substantive change.&nbsp; Defining views will vary based on the technology being tested. While we provide guidance on scoping a view, the tester will make and declare the decisions and these will often vary by technology.&nbsp; Views typically include state permutations that are based on that view such as dialogs and alerts; however some states may deserve to be treated as separate views. </p></dd>
+			</dl>
+		</section>
+		<section class="appendix" id="guidelines-development-methodology">
+			<h2 id="a-guidelines-development-methodology"><bdi class="secno">A. </bdi>Guidelines Development Methodology<a class="self-link" aria-label="§" href="#guidelines-development-methodology"></a></h2>
+		</section>
+		<section class="appendix" id="differences-from-wcag-2">
+			<h2 id="b-differences-from-wcag-2"><bdi class="secno">B. </bdi>Differences From WCAG 2<a class="self-link" aria-label="§" href="#differences-from-wcag-2"></a></h2>
+			<section id="functional-outcomes-0">
+				<h3 id="b-1-functional-outcomes"><bdi class="secno">B.1 </bdi>Functional Outcomes<a class="self-link" aria-label="§" href="#functional-outcomes-0"></a></h3>
+				<p>Functional Outcomes are different from WCAG 2.x Success Criteria. Compared to Success Criteria, Functional Outcomes are written to be:</p>
+				<ul>
+					<li>in plain language;&nbsp;</li>
+					<li>&nbsp;More understandable by people who are not experts in technology;</li>
+					<li>More user-need oriented instead of technology oriented;</li>
+					<li>More granular, so there will be more of them;</li>
+					<li>More flexible to allow more tests than the true/false statements of WCAG 2.x.&nbsp;</li>
+				</ul>
+				<p>The design of Functional Outcomes allows more varied needs of people with disabilities than could have been included in WCAG 2.x.&nbsp;</p>
+				<p>Methods map approximately to WCAG 2.x Techniques documents.</p>
+			</section>
+			<section id="approximate-mapping-of-wcag-2-and-wcag-3-documentation">
+				<h3 id="b-2-approximate-mapping-of-wcag-2-and-wcag-3-documentation"><bdi class="secno">B.2 </bdi>Approximate Mapping of WCAG 2 and WCAG 3 Documentation<a class="self-link" aria-label="§" href="#approximate-mapping-of-wcag-2-and-wcag-3-documentation"></a></h3>
+
+				<table>
+					<tbody>
+						<tr>
+							<th scope="col"> WCAG 2 </th>
+							<th scope="col"> WCAG 3 </th>
+						</tr>
+						<tr>
+							<td> Success Criteria </td>
+							<td> Functional Outcomes </td>
+						</tr>
+						<tr>
+							<td> Techniques </td>
+							<td> Methods </td>
+						</tr>
+						<tr>
+							<td> Understanding </td>
+							<td> How-to </td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+		<section class="appendix" id="change-log">
+			<h2 id="c-change-log"><bdi class="secno">C. </bdi>Change Log<a class="self-link" aria-label="§" href="#change-log"></a></h2>
+		</section>
+		<section class="appendix" id="acknowledgements">
+			<h2 id="d-acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2>
 		</section>
 	
 
-<p role="navigation" id="back-to-top">
+<section id="references" class="appendix"><h2 id="e-references"><bdi class="secno">E. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
+      <h3 id="e-1-informative-references"><bdi class="secno">E.1 </bdi>
+        Informative references
+      <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <dl class="bibliography">
+      <dt id="bib-atag20">[ATAG20]</dt><dd><a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-uaag20">[UAAG20]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al.  W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></dd><dt id="bib-wcag22">[WCAG22]</dt><dd><a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Charles Adams; Alastair Campbell; Rachael Montgomery; Michael Cooper; Andrew Kirkpatrick.  W3C. 11 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a></dd>
+    </dl></section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
