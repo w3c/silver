@@ -1,6 +1,5 @@
 <!--
 Code for the tabbed interface for this W3C Silver Prototype was lovingly ripped from https://inclusive-components.design/tabbed-interfaces/ with the example code taken from https://codepen.io/heydon/pen/veeaEa .
-
 All credit for this goes to Heydon Pickering https://twitter.com/heydonworks.
 You should totally buy his book on Inclusive Components.
 -->
@@ -76,13 +75,55 @@ You should totally buy his book on Inclusive Components.
 </ul></li>
 </ul>
 <h3>How</h3>
-<p>[TBD: paragraph describing the generic cross-platform solution]</p>
+<p>From <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html#intent">“Intent” in “Understanding WCAG 2.1”</a></p>
+<ul>
+<li>make information conveyed by non-text content accessible through the use of a text alternative.</li>
+<li>Text alternatives are a primary way for making information accessible because they can be rendered through any sensory modality (for example, visual, auditory or tactile) to match the needs of the user.
+</li>
+<li>Providing text alternatives allows the information to be rendered in a variety of ways by a variety of user agents.
+	<ul>
+	<li>a person who cannot see a picture can have the text alternative read aloud using synthesized speech.
+</li>
+	<li>A person who cannot hear an audio file can have the text alternative displayed so that he or she can read it.</li>
+	<li>In the future, text alternatives will also allow information to be more easily translated into sign language or into a simpler form of the same language.</li>
+	</ul>
+</li>
+</ul>
+<p>From <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html#intent">“Note on CAPTCHA” in “Understanding WCAG 2.1”</a></p>
+<ul>
+<li>Requiring two different forms of CAPTCHA on a given site ensures that most people with disabilities will find a form they can use.
+</li>
+</ul>
+<p>From <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html#intent">“Additional information” in “Understanding WCAG 2.1”</a></p>
+<ul>
+<li>text alternatives can make the same information available in a form that can be rendered through any modality (for example, visual, auditory or tactile) 
+</li>
+</ul>
 <h3>Exceptions</h3>
+<p>From “SC 1.1.1” in WCAG 2.1</p>
 <ol>
-<li>[TBD: numbered list of any exceptions. Platform-specific exceptions shoud refer to the Method for that platform.]
+	<li><strong>Controls, Input</strong> If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to Success Criterion 4.1.2 for additional requirements for controls and content that accepts user input.)</li>
+	<li><strong>Time-Based Media</strong> If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)</li>
+	<li><strong>Test</strong> If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content.</li>
+	<li><strong>Sensory</strong> If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content.</li>
+	<li><strong>CAPTCHA</strong> If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities.</li>
+	<li><strong>Decoration, Formatting, Invisible</strong> If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology.</li>
 </ol>
 <h3>Examples</h3>
-<p>[TBD: 1-3 short examples how the guideline could be used or implemented.]</p>
+<p>From <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content#examples">"Examples" in "Understanding WCAG 2.1"</a></p>
+<ol>
+	<li><strong>A data chart</strong> A bar chart compares how many widgets were sold in June, July, and August. The short label says, "Figure one - Sales in June, July and August." The longer description identifies the type of chart, provides a high-level summary of the data, trends and implications comparable to those available from the chart. Where possible and practical, the actual data is provided in a table.</li>
+	<li><strong>An audio recording of a speech</strong> The link to an audio clip says, "Chairman's speech to the assembly." A link to a text transcript is provided immediately after the link to the audio clip.</li>
+	<li><strong>An animation that illustrates how a car engine works</strong> An animation shows how a car engine works. There is no audio and the animation is part of a tutorial that describes how an engine works. Since the text of the tutorial already provides a full explanation, the image is an alternative for text and the text alternative includes only a brief description of the animation and refers to the tutorial text for more information.</li>
+	<li><strong>A traffic Web camera</strong> A Web site allows users to select from a variety of Web cameras positioned throughout a major city. After a camera is selected, the image updates every two minutes. A short text alternative identifies the Web camera as "traffic Web camera." The site also provides a table of travel times for each of the routes covered by the Web cameras. The table is also updated every two minutes.</li>
+	<li><strong>A photograph of an historic event in a news story</strong> A photograph of two world leaders shaking hands accompanies a news story about an international summit meeting. The text alternative says, "President X of Country X shakes hands with Prime Minister Y of country Y."</li>
+	<li><strong>A photograph of a historic event in content discussing diplomatic relationships</strong> The same image is used in a different context intended to explain nuances in diplomatic encounters. The image of the president shaking hands with the prime minister appears on a Web site discussing intricate diplomatic relationships. The first text alternative reads, "President X of country X shakes hands with Prime Minister Y of country Y on January 2, 2009." An additional text alternative describes the room where the leaders are standing as well as the expressions on the leaders' faces, and identifies the other people in the room. The additional description might be included on the same page as the photograph or in a separate file associated with the image through a link or other standard programmatic mechanism.</li>
+	<li><strong>An audio recording of a press conference</strong> A Web page includes a link to an audio recording of a press conference. The link text identifies the audio recording. The page also links to a text transcript of the press conference. The transcript includes a verbatim record of everything the speakers say. It identifies who is speaking as well as noting other significant sounds that are part of the recording, such as applause, laughter, questions from the audience, and so on.</li>
+	<li><strong>An e-learning application</strong> An e-learning application uses sound effects to indicate whether or not the answers are correct. The chime sound indicates that the answer is correct and the beep sound indicates that the answer is incorrect. A text description is also included so that people who can't hear or understand the sound understand whether the answer is correct or incorrect.</li>
+	<li><strong>A linked thumbnail image</strong> A thumbnail image of the front page of a newspaper links to the home page of the "Smallville Times". The text alternative says "Smallville Times".</li>
+	<li><strong>The same image used on different sites</strong> Different alternatives for an image of the world: An image of the world that is used on a travel site as a link to the International Travel section has the text alternative "International Travel". The same image is used as a link on a university Web site with the text alternative "International Campuses".</li>
+	<li><strong>An image map</strong> An image of a building floor plan is interactive, allowing the user to select a particular room and navigate to a page containing information about that room. The short text alternative describes the image and its interactive purpose: "Building floor plan. Select a room for more information."</li>
+</ol>
 </section>
 
 <section id="section2">

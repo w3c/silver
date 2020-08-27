@@ -9,7 +9,7 @@
 	<body>
 		<section id="abstract">
 			<p>W3C Accessibility Guidelines (WCAG) 3.0 provides a wide range of recommendations for making Web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness and low vision, deafness and hearing loss, learning disabilities and cognitive limitations, limited movement, speech disabilities, photosensitivity, and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other Web of Things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
-			<p>[@RM: The next 2 sentences need reworking.] Each <a>guideline</a> in this standard addresses <a>functional outcomes</a> of accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple alternative technology-specific <a>methods</a> to meet each need. This specification is expected to be updated regularly to keep pace with technology change, both by updating or adding methods as well as adding guidelines to address new needs as technologies evolve. For entities that make formal claims of <a>conformance</a> to these guidelines, several grades of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
+			<p>Each <a>guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a>functional outcomes</a> to measure if the need has been met.  Guidelines are also supported by technology-specific <a>methods</a> to meet each functional outcome. This specification is expected to be updated regularly to keep pace with technology change, both by updating or adding methods as well as adding guidelines to address new needs as technologies evolve. For entities that make formal claims of <a>conformance</a> to these guidelines, several grades of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
 			<p>W3C Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions. They also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. Content that conforms to WCAG 2.2 is expected to substantially conform to a conformance level of WCAG 3.0, though these guidelines have many differences from WCAG 2.x. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative and more modern set of guidelines. Once these guidelines become a W3C Recommendation, the W3C will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts.  However, web sites that conform to earlier versions of
 				WCAG continue to conform to those versions.</p>
 			<p>See <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) Overview</a> for an introduction and links to WCAG technical and educational material.</p>
@@ -30,7 +30,7 @@
 				</ul>The goal of WCAG 3.0 is to provide information that can be used to improve the accessibility of products on a variety of platforms. WCAG 3.0 uses a framework that allows it to address more disability needs than WCAG 2.X, as well as address publishing requirements and emerging technologies on the web such as web XR (augmented, virtual and mixed reality) and voice input. It will also provide non-<a>normative</a> information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. The WCAG 3.0 framework is designed to support better coverage across disabilities and be easier to maintain, so that the new framework will be more durable over time as technologies evolve. [@RM: This sentence was in future tense but that didn't seem to fit. Maybe remove it?] This requires development of a new conformance model, engaging policy makers in that process, and testing the model with policy makers from different settings.</section>
 			<section>
 				<h3>Relationship to Other W3C Guidelines</h3>
-				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [[WCAG20]] was designed to be technology neutral, and has stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [[ATAG20]] has been implemented in open source authoring tool communities (chiefly Wordpress and Drupal) with little known uptake in commercial authoring tools. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [[UAAG20]] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis. There is no known user agent that has implemented all of UAAG 2.0. </p>
+				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [[WCAG20]] was designed to be technology neutral, and has stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [[ATAG20]] provide guidance for various types of software that assist people in writing accessible content. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [[UAAG20]] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis. </p>
 				<p>These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents and assistive technologies.</p>
 				<ul>
 					<li>WCAG 3.0 incorporates but may not be all encompassing of WCAG, ATAG, and UAAG.</li>
@@ -58,29 +58,26 @@
 			<h2>Structure of These Guidelines</h2>
 			<section>
 				<h3>Functional Categories</h3>
-				<p>WCAG 3.0 is organized by <a>Functional Categories</a> of disabilities which reflect the diverse needs of users with disabilities. Within each Functional Category, Functional Needs are applied to specific topics (for example: contrast, forms, readability, and more)  to identify the barriers experienced by people with disabilities. The barriers in these topics inform the Functional Outcomes, which state the conditions to test whether the Functional Needs have been met.  </p>
+				<p>WCAG 3.0 is organized by <a>Functional Categories</a> of disabilities which reflect the diverse needs of users with disabilities. Within each Functional Category, <a>Functional Needs</a> are applied to specific topics (for example: contrast, forms, readability, and more)  to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a>Functional Outcomes</a>, which state the conditions to test whether the Functional Needs have been met.  </p>
 				<p class="ednote">The work of cataloging functional needs is still in process and will continue after the First Public Working Draft.  Those interested can see more information in this draft Google document <a href="https://docs.google.com/document/d/1eJkgXqbh7dx3uD6XAy8XAANmwfbbVZ5GKb_gbsUdkVs/">Functional Needs - Expanded</a></p>
 			</section>
 			<section>
 				<h3>Functional Needs</h3>
-				<p>A Functional Need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p>
-				<p>Note: The intent is to express the need in a contextual model, as opposed to a lack of ability in a medical model. This is similar to the ICF (International Classification of Functioning – a biopsychosocial model), “outcomes of interactions between health conditions (diseases, disorders and injuries) and contextual factors”, focusing on the interactions. </p>
+				<p>A <a>Functional Need</a> is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p>
+				<p class="note">The intent is to express the need in a contextual model, as opposed to a lack of ability in a medical model. This is similar to the ICF (International Classification of Functioning – a biopsychosocial model), “outcomes of interactions between health conditions (diseases, disorders and injuries) and contextual factors”, focusing on the interactions. </p>
+				<p class="ednote">Need link and reference for ICF</p>
 				<blockquote>Example: Use without vision.</blockquote>
-				<p>Functional Needs are documented in the supplementary material accompanying the Guidelines and Functional Outcomes.<p>
+				<p>Functional Needs are documented in the supplementary material accompanying the Guidelines and Functional Outcomes.</p>
 			</section>
 			<section>
 				<h3>Guidelines</h3>
-				<p>Guidelines are high level plain language summaries that address Functional Needs on specific topics, such as contrast, forms, readability, and more.  They organize and group the Functional Outcomes. Guidelines are technology independent.</p>	
+				<p><a>Guidelines</a> are high level plain language summaries that address Functional Needs on specific topics, such as contrast, forms, readability, and more.  They organize and group the Functional Outcomes. Guidelines are technology independent.</p>	
 				<p>Guidelines will be identified by unique name. Translations should have an appropriate unique name.</p>				
-			</section>
-			<section>
-				<h3>How-Tos</h3>
-				<p>The How-To provides explanatory material for the guideline that applies across technologies. This plain language resource includes information on getting started, who the guideline helps and how, as well information for designers and developers.  </p>
 			</section>
 			<section>
 				<h3>Functional Outcomes</h3>
 				<p><a>Functional Outcomes</a> are the results of practices that reduce or eliminate barriers that people with disabilities experience. Functional Outcomes form the basis of a flexible and expansive architecture for accessibility guidelines that relates closely to the needs of people with disabilities. Specific tests can be used to assess the accessibility of common technologies and the overall Functional Outcome can be used to assess proprietary and new technologies. </p>
-				<p>Functional Outcomes are normative. They are located in the normative section of specific guidelines.  They are repeated in the Methods that apply to that Guideline.  
+				<p>Functional Outcomes are <a>normative</a>. They are located in the normative section of specific guidelines.  They are repeated in the Methods that apply to that Guideline.  </p>
 				<figure>
 					<img height="451" src="img/guidelines-structure.png" width="311" />
 					<figcaption>Functional Categories inform Functional Needs. The Guideline topics with the Functional Needs inform the Functional Outcomes.  How To documents are related to Guidelines. Methods are specific to technology and include Techniques and Tests.  </figcaption>
@@ -88,12 +85,16 @@
 				<p>Functional Outcomes are intended to be applied across different technologies, but they have less emphasis on Web technologies.</p>
 			</section>
 			<section>
+				<h3>How-Tos</h3>
+				<p>The <a>How-To</a> provides explanatory material for the guideline that applies across technologies. This plain language resource includes information on getting started, who the guideline helps and how, as well information for designers and developers.  </p>
+			</section>
+			<section>
 				<h3>Methods</h3>
-				<p>Each Functional Outcome has one or more <a>Methods</a>. The Methods include detailed techniques and tests for meeting and testing the functional outcome for a specific technology. Existing WCAG 2.2 techniques may be referenced in the appropriate Method for the Functional Outcome. New tests and how to score existing and new tests are included in the Method.  </p>
+				<p>Each Functional Outcome has one or more <a>Methods</a>. The Methods include detailed techniques and tests for meeting and testing the functional outcome for specific technologies. Existing WCAG 2.2 techniques may be referenced in the appropriate Method for the Functional Outcome. New tests and how to score existing and new tests are included in the Method.  </p>
 			</section>
 			<section>
 				<h3>Tests</h3>
-				<p>@@ [Jeanne recommends deleting, we have too much in this. I included it in Methods. Michael would prefer this in. RB: If we leave it in we should have a section for techniques. I am in favor of removing it.]</p>
+				<p>Specific <a>tests</a> and how to score them are included in the Method.  Tests are designed to be more flexible to allow more user needs of people with disabilities to be included in the Guidelines.  Tests can include true /false evaluation or various types of rating scales as appropriate for the Guideline, Functional Outcome, or technology.  Tests may vary by technology as needed.  Each Method includes information on how to score individual instances of the test, and how to score the Functional Outcome in an optional <a href="#conformance-claims">Conformance Claim</a>. </p>
 			</section>
 
 		</section>
@@ -112,23 +113,90 @@
 
 			<p>The Guidelines included in this draft have been selected to show different types of content:</p>
 			<ul>
-				<li><p>Text Alternatives - a direct migration from WCAG 2.x success criterion</p></li>
-				<li><p>Visual Contrast of Text - a migration of WCAG 2.x with substantial changes</p></li>
-				<li><p>Structured Content - migration and merging of several previously unrelated WCAG 2.x success criteria</p></li>
-				<li><p>Clear Language - new guidance that could not previously be included in WCAG 2.x</p></li>
-				<li><p>Captions - an example of adapting WCAG 2.x guidance to emerging technologies, such as Web Virtual Reality</p></li>
+				<li><a href="#text-alternatives">Text Alternatives</a> - a direct migration from WCAG 2.x success criterion</li>
+				<li><a href="#clear-written-content">Clear Written Content</a> - new guidance that could not previously be included in WCAG 2.x</li>
+				<li><a href="#clear-written-structure">Clear Written Structure</a> - migration and merging of several previously unrelated WCAG 2.x success criteria</li>
+				<li><a href="#provide-help-and-support">Provide Help and Support</a></li>
+				<li><a href="#captions">Captions</a> - an example of adapting WCAG 2.x guidance to emerging technologies, such as Web Virtual Reality</li>
+				<li><a href="#structured-content">Structured Content</a> - migration and merging of several previously unrelated WCAG 2.x success criteria</li>
+				<li><a href="#visual-contrast-of-text">Visual Contrast of Text</a> - a migration of WCAG 2.x with substantial changes</li>
 			</ul>
 			<section>
 				<h3>Text Alternatives</h3>
+				<p class="guideline-text">Guideline: Provide text alternative for non-text content.</p>
+				<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/AltText.html">Text Alternatives How-to</a></p>
+				<p class="fo">Functional Outcome: People using different user agents and assistive technologies have access to the equivalent text provided by the text alternative.</p>
+				<p class="method-link">Method: <a href="https://docs.google.com/document/d/1h5IiwbIvsWZr8N2qXNm9NQBR46gQWmfvWpDvtxHxR9o/edit#heading=h.ejfzqyn2flr7">Text alternative for Image of text (HTML)</a><span class="ednote">@@ - google doc</span></p>			
 			</section>
 			<section>
-				<h3>Clear Language</h3>
-				<p>Use clear language to make it easier for readers to understand.</p>
-				<p><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
-				<p class="ednote">Clear Language is a new guideline proposed by the Cognitive Accessibility Task Force (COGA), and includes research, documents and comments from COGA. It showcases a proof-of-concept example of a rubric-type test that could not be included in WCAG 2.x.</p>
+				<h3>Clear Written Content</h3>
+				<p>[@@JS: I'm working on sorting out the Functional Outcomes. The docs are confusing.]</p>
+				<p class="ednote">Clear Written Content, Clear Written Structure, and Provide Help and Support are new guidelines proposed by the Cognitive Accessibility Task Force (COGA) and includes research, documents and comments from COGA. It showcases a proof-of-concept example of a rubric-type test that could not be included in WCAG 2.x. [@@JS: Is this where this should go?] They have been revised to align with the new COGA publication, <a href="Making content usable for people with cognitive and learning disabilities"> Making content usable for people with cognitive and learning disabilities</a> [[coga-usable]].</p>
+				<p class="guideline-text">Guideline: Use clear and understandable content. </p>
+				<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
+				<p class="fo">Functional Outcomes: </p>
+				<p><strong>Exception</strong>: If this doesn’t apply to your language, you don’t have to do it.</p>
+				<ul>
+				<li>Uses clear words.
+					<ul><li class="method-link">Method: <a href="https://docs.google.com/document/d/1p-FayvZYonpDIlojblFSofi_KzjNdY5SrBOKauvV0u8/edit">Use Clear Words</a><span class="ednote">@@ - google doc</span></li></ul></li>
+				<li>Uses a simple tense and voice.</li>
+				<li>Avoids double negatives or nested clauses</li>
+				<li>Uses literal language.</li>
+				<li>Keeps text succinct.</li>
+				<li>Uses clear, unambiguous text, formatting and punctuation.</li>
+				<li>Includes symbols and letters necessary to decipher the words.</li>
+				<li>Provides summary of long documents and media.</li>
+				<li>Separates each instruction.</li>
+				<li>Uses white spacing.</li>
+				<li>Ensures foreground content is not obscured by background.</li>
+				<li>Explains implied content.</li>
+				<li>Provides alternatives for numbers.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Clear Written Structure </h3>
+				<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
+				<p class="fo">Functional Outcomes: </p>
+				<p><strong>Exception</strong>: If this doesn’t apply to your language, you don’t have to do it.</p>
+				<ul>
+				<li>Uses proper grammar for the language, as defined by a style guide or by standard language rules.</li>
+				<li>Uses correct spelling.</li>
+				<li>Uses shorter sentences and paragraphs with accurate text formatting and punctuation to aid reading comprehension and retention.</li>
+				<li>Uses consistent writing structure to help users understand. </li>
+				<li>Breaks down complex ideas into multiple paragraphs and creates natural breakpoints to reduce fatigue.</li>
+				<li>??? Numbers sequential steps</li>
+				<li>??? Provides brief summaries at the top of long documents</li>
+				<li>Provides context, points out the most important content, and avoids distractions to help the reader understand what is important.</li>
+				<li>Provides common words and phrases for headings, labels, and navigational elements so that people with print disabilities will be able to understand and operate the structure of the page.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Provide Help and Support</h3>
+				<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
+				<p class="fo">Functional Outcomes: </p>
+				<ul>
+				<li>Provides clear instructions</li>
+				<li>Helps people avoid mistakes or correct them.</li>
+				<li>Ensures processes do not rely on memory</li>
+				</ul>
 			</section>
 			<section>
 				<h3>Captions</h3>
+				<p class="guideline-text">Guideline: @@</p>
+				<p class="how-to-link">How To: @@</p>
+				<p class="fo">Functional Outcomes: @@JS: Needs the updated FO from the meeting of 17 August</p>
+				<ul>
+					<li>Translates speech and key sound effects into alternative formats (e.g. captions) so media can be understood when sound is unavailable or limited
+					<ul>
+						<li class="method-link">Method: <a href="https://docs.google.com/document/d/1lUoy00PrdsJjsqfqv8T4U1KokDM9LqbEe2GMWOwsEM4/edit">Provides text equivalents of speech and key sound effects</a><span class="ednote">@@ - google doc</span> </li>
+						<li class="method-link">Method: <a href="">Reflow of captions nad other text (in context)</a><span class="ednote">@@ - email that needs to be translated to a google doc</span> </li>
+					</ul></li>
+					<li>Conveys information about the sound in addition to the text of the sound (for example, sound source, duration, and direction) so users know the necessary information about the context of the sound in relation to the environment it is situated in</li>
+					<li>Provides captions and caption meta-data in alternative formats (for example, second screen or braille display) to allow users the opportunity to move caption and meta-data to alternative displays. For example, this benefits users without sound and vision, users who need assistive technology to magnify portions of the view, or users who have limited reach.</li>
+					<li>Provides customisation of caption style and position to support people with limited vision or color perception. Customisation options can benefit all users.</li>
+					<li>Provides customisation of caption timing to support people with limited manipulation, strength, or cognition.</li>
+				</ul>
+					
 			</section>
 			<section>
 				<h3>Structured Content</h3>
@@ -321,6 +389,8 @@
 				<dd><p>@@</p></dd>
 				<dt><dfn>Process</dfn></dt>
 				<dd><p>A sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end.</p></dd>
+				<dt><dfn data-lt="Tests">Test</dfn></dt>
+				<dd><p>@@</p></dd>
 				<dt><dfn>User Need</dfn></dt>
 				<dd><p>@@</p></dd>
 				<dt><dfn>View</dfn></dt>
