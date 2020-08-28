@@ -277,11 +277,11 @@
 					<p>Although content may satisfy all Functional Outcomes using the traditional tests, the content may not always be usable by people with a wide variety of disabilities. The holistic tests address this gap by evaluating more of the user experience than traditional testing. </p>
 					<section>
 						<h5>Traditional Tests</h5>
-						<p>Traditional tests evaluate content, often at an <a>object</a> level, for accessibility. Traditional tests include the existing tests that support A, AA, and AAA <a>Success Criteria</a> in WCAG 2.x. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.x structure.  In WCAG 3.0, traditional tests are used to test both processes and views.  Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the traditional tests are used to reach a <a>Bronze</a> rating.</p>
+						<p>Traditional tests evaluate content, often at an <a>object</a> level, for accessibility. Traditional tests include the existing tests that support A, AA, and AAA <a>Success Criteria</a> in WCAG 2.x. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.x structure.  In WCAG 3.0, traditional tests are used to test both processes and views.  Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the traditional tests are used to reach a <a href="#bronze">Bronze</a> rating.</p>
 					</section>
 					<section>
 						<h5>Holistic Tests</h5>
-						<p>Holistic tests include assistive technology testing, user-centered design methods, and both user and expert usability testing.  Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected.  Successful results of holistic tests are used to reach a <a>Silver</a> or <a>Gold</a> rating.</p>
+						<p>Holistic tests include assistive technology testing, user-centered design methods, and both user and expert usability testing.  Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected.  Successful results of holistic tests are used to reach a <a href="#silver">Silver</a> or <a href="#gold">Gold</a> rating.</p>
 					</section>
 
 				</section>
@@ -335,14 +335,14 @@
 				
 				<section>
 				<h4>Overall Scores</h4>
-				<p>After all Functional Outcomes have been scored, the ratings are averaged for a total score and a score by the <a>functional category(ies)</a> they support. Conformance at the <a>Bronze</a> level requires no critical failures and at least 3.5 total score and at least a 3.5 score within each functional category. </p>
+				<p>After all Functional Outcomes have been scored, the ratings are averaged for a total score and a score by the <a>functional category(ies)</a> they support. Conformance at the <a href="#bronze">Bronze</a> level requires no critical failures and at least 3.5 total score and at least a 3.5 score within each functional category. </p>
 				
 				<p class="ednote">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a Bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number will likely shift as we continue testing.  We invite comment on these options as well as suggestions for an alternative solution. </p>
 				</section>
 
 				<section>
 				<h4>Scoring Holistic Tests</h4>			
-				<p>The points from <a href="#holistic-tests">holistic tests</a> do not affect the scores of <a href="#traditional-tests">traditional tests</a>. Rather a minimum number of holistic tests will need to be met in order to reach a <a>Silver</a> rating and additional holistic tests will be needed to reach a <a>Gold</a> rating. Getting a Silver or Gold rating requires a bronze rating.</p>  
+				<p>The points from <a href="#holistic-tests">holistic tests</a> do not affect the scores of <a href="#traditional-tests">traditional tests</a>. Rather a minimum number of holistic tests will need to be met in order to reach a <a href="#silver">Silver</a> rating and additional holistic tests will be needed to reach a <a href="#gold">Gold</a> rating. Getting a Silver or Gold rating requires a bronze rating.</p>  
 				<p class="ednote">We continue to work on the scoring of holistic tests and will provide more details in a future iteration of this document. </p>
 				</section>
 			</section>
@@ -352,26 +352,44 @@
 			<p>Conformance to a standard means that you meet or satisfy the 'requirements' of the standard. In WCAG 3.0 the 'requirements' are the Functional Outcomes. </p>
 			<p>Technology can meet the Functional Outcomes without a conformance claim.  If you want to claim conformance, you must follow the process below; however, even if you are not making a formal conformance claim, you can use this process to assess the accessibility of content.</p>
 
-
+			<section>
+				<h3>Conformance Levels</h3>
+				<p>WCAG 3.0 defines three levels of conformance: <a href="#bronze">Bronze</a>, <a href="#silver">Silver</a>, and <a href="#gold">Gold</a>.</p>
+				<section>
+					<h4>Bronze</h4>
+					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the Bronze level does not conform to WCAG 3.0. The Bronze level can be verified using <a href="#traditional-tests">traditional tests</a>. Content that conforms to WCAG 2.x generally can conform to the Bronze level of WCAG 3.0, though WCAG 3-specific evaluation is still needed.</p>
+					<p>For content that conforms to the Bronze level:</p>
+					<ul>
+						<li>The total score and score within each of the functional categories MUST be at least 3.5; and</li>
+						<li><a>Views</a> and <a>paths</a> MUST NOT have <a>critical errors</a>.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Silver</h4>
+					<p>Silver is a higher conformance level that addresses additional functional outcomes. Some <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
+					<p>For content that conforms to the Silver level:</p>
+					<ul>
+						<li>All <a>views</a> MUST satisfy the <a href="#bronze">Bronze</a> criteria; and</li>
+						<li>TBD of holistic tests</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Gold</h4>
+					<p>Gold is the highest conformance level that addresses the remaining functional outcomes described in the guidelines. Additional <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
+					<p>For content that conforms to the Gold level:</p>
+					<ul>
+						<li>All <a>views</a> MUST satisfy the <a href="#bronze">Bronze</a> criteria; and</li>
+						<li>TBD of holistic tests</li>
+					</ul>
+				</section>
+			</section>
+			
 			<section>
 				<h3>Conformance Requirements</h3>
-				<p>In order for technology to <a>conform</a> to WCAG 3.0, all of the following conformance requirements must be satisfied:</p>
+				<p>In order for technology to <a>conform</a> to WCAG 3.0, the following conformance requirements apply:</p>
 				<ol>
-					<li><b>Conformance Level</b> - One of the following conformance levels is met in full: <ul>
-							<li><b>Bronze</b> - For Bronze level conformance (the minimum level of conformance): <ul>
-									<li>The total score and score within each of the functional categories is at least 3.5</li>
-									<li>Views and paths include no <a>critical errors</a>.</li>
-								</ul></li>
-							<li><b>Silver</b> - For Silver level conformance: <ul>
-									<li>All views satisfy Bronze criteria</li>
-									<li>TBD of holistic tests</li>
-								</ul></li>
-							<li><b>Gold</b> - For Gold level conformance: <ul>
-									<li>Meets Bronze criteria</li>
-									<li>TBD of holistic tests</li>
-								</ul></li>
-						</ul></li>
-					<li><b>Processes and Views</b> - Conformance (and conformance level) is for complete <a>Processes</a> and <a>Views</a>, and cannot be achieved if part of a process or view is excluded.</li>
+					<li><b>Conformance Level</b> - Content MUST meet the requirements of the selected <a href="#conformance-levels">conformance level</a>.</li>
+					<li><b>Processes and Views</b> - Conformance (and conformance level) MUST apply to complete <a>Processes</a> and <a>Views</a>, and MUST NOT exclude any part of a process or view.</li>
 				</ol>
 			</section>
 			<section>
@@ -411,8 +429,6 @@
 				<dd><p>@@</p></dd>
 				<dt><dfn>Automated Testing</dfn></dt>
 				<dd><p>@@</p></dd>
-				<dt><dfn>Bronze</dfn></dt>
-				<dd><p>@@</p></dd>
 				<dt><dfn data-lt="Conform">Conformance</dfn></dt>
 				<dd><p>@@</p></dd>
 				<dt><dfn data-lt="Critical Errors|Critical Failure|Critical Failures">Critical Error</dfn></dt>
@@ -430,8 +446,6 @@
 				<dd><p>A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p></dd>
 
 				<dt><dfn>Functional Outcome</dfn></dt>
-				<dd><p>@@</p></dd>
-				<dt><dfn>Gold</dfn></dt>
 				<dd><p>@@</p></dd>
 				<dt><dfn>Guideline</dfn></dt>
 				<dd><p>@@</p></dd>
@@ -462,8 +476,6 @@
 				<dt><dfn data-lt="Rubrics">Rubric</dfn></dt>
 				<dd><p>@@</p></dd>
 				<dt><dfn data-lt="Rating Scale|Rating Scales|Scales">Scale</dfn></dt>
-				<dd><p>@@</p></dd>
-				<dt><dfn>Silver</dfn></dt>
 				<dd><p>@@</p></dd>
 				<dt><dfn data-lt="Success Criteria">Success Criterion</dfn></dt>
 				<dd><p>@@</p></dd>
