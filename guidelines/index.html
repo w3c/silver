@@ -266,27 +266,67 @@
 			<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, and adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 			<section>
 				<h3>Testing</h3>
+				
+				<p>WCAG 3.0 tests and scores Functional Outcomes. Functional Outcomes are written as testable criteria that allow testers to objectively determine if the content they are evaluating satisfies the criteria. </p> 
+				<p>Testing Functional Outcomes uses both views and processes to define what is being tested.  Views include all content visually and programatically available without a substantive change. Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated views need to be included in the test. </p>
+
+				<h4>Types of Tests</h4>
+								
 				<p>WCAG 3.0 includes two types of tests:</p>
 
 				<ol>
-					<li>Traditional tests include the tests that support A, AA, and AAA Success Criteria in WCAG 2.x. In WCAG 3.0, these tests support functional outcomes and lead to a Bronze rating. In most cases, testing individual elements will result in binary, pass/fail outcome for that element. These results are then used to assign a score to each functional outcome.  </li>
-					<li>Holistic tests include assistive technology testing, user-centered design methods, and both user and expert usability testing.  Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected.  Holistic tests are used to reach a Silver or Gold rating.</li>
+					<li><strong>Traditional tests</strong> evaluate content, often at an element level, for accessibility. Traditional tests include the existing tests that support A, AA, and AAA Success Criteria in WCAG 2.x. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.x structure.  In WCAG 3.0, traditional tests are used to test both processes and views.  Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the traditional tests are used to reach a Bronze rating.</li>
+					<li><strong>Holistic tests</strong> include assistive technology testing, user-centered design methods, and both user and expert usability testing.  Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected.  Successful results of holistic tests are used to reach a Silver or Gold rating.</li>
 				</ol>
-				<p>All WCAG 3.0 Functional Outcomes are written as testable criteria for objectively determining if content satisfies them. Testing the Functional Outcomes using the traditional tests involves a combination of automated testing and human evaluation. The content should be tested by those who understand how people with different types of disabilities use the technology being tested.</p>
-				<p>Although content may satisfy all Functional Outcomes using the traditional tests, the content may not always be usable by people with a wide variety of disabilities. The holistic tests address this gap.</p>
+				<p>Testing the Functional Outcomes using the traditional tests involves a combination of automated testing and human evaluation. The content should be tested by those who understand how people with different types of disabilities use the technology being tested.</p>
+				<p>Although content may satisfy all Functional Outcomes using the traditional tests, the content may not always be usable by people with a wide variety of disabilities. The holistic tests address this gap by evaluating more of the user experience than traditional testing. </p>
+				
+				<h4>Technology Specific Testing</h4>				
+				<p>Each functional outcome includes methods associated with different technologies. Each method contains tests and techniques for satisfying the functional outcome.  The functional outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the functional outcome. </p>
+				
 			</section>
-			<section><h3>Scoring</h3><p class="ednote">One the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample functional outcomes that demonstrate alternatives such as rubrics and scales.We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each functional outcome within the WCAG 3.0 framework . </p><p>Each functional outcome has methods associated with different technologies. Each method contains tests and techniques for meeting that functional outcome.  Testers can test the accessibility of new and emerging technologies that do not have related methods based on the functional
-					outcome. </p><p>Tests are applied at the view level and can be scored in one of three ways which will be included in the test statement:</p><ul>
-					<li>Pass/Fail (100%/0%)</li>
-					<li>Rating Scale (0 (0%), 1 (20%), 2 (40%), 3 (60%), 4 (80%), and 5 (100%)</li>
-					<li>Percentage (# passed/total # of instances)</li>
-				</ul>Testers then aggregate the results of related tests across the views and count the number of <a>critical failures</a> that occur. Testers will then use the guidelines below along with reasonable judgement of the context to assign a rating:<ul>
+			<section>
+				<h3>Scoring</h3>
+				<p class="ednote">One the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample functional outcomes that demonstrate alternatives such as rubrics and scales.We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each functional outcome within the WCAG 3.0 framework . </p><p>Each functional outcome has methods associated with different technologies. Each method contains tests and techniques for meeting that functional outcome.  Testers can test the accessibility of new and emerging technologies that do not have related methods based on the functional
+					outcome. </p>
+
+				<h4>Scoring Traditional Tests</h4>
+				<p>In most cases, testing individual elements will result in binary, pass/fail outcome for each element. This leads to either a pass/fail or a percentage rating depending on the test. A rating scale may be provided for some tests to allow the tester to assign a quality judgement of an element or block of content. Each of these results can be assigned a percentage and the percentages to help determine the overall score of a functional outcome. For example:</p>
+				<ul>
+					<li>Tests that results in a pass or fail condition will be assigned a 100% or 0%;</li>
+					<li>Tests at the element level that can be consistently counted will be assigned a percentage (# passed/total # of instances);</li>
+					<li>Tests that apply to content without clear boundaries will be scored using a rating Scale. The rating scales may vary based on the test and may be presented as numeric scale, an adjective-based rating system, or a rubric. Each of these can be converted into a percentage to make it easier to compare across tests.</li>
+				</ul>
+				
+				<p>Evaluating processes requires counting critical errors that occur within the process and associated views. Critical errors are:</p>
+				<ul>
+					<li>Errors that stop a user from being able to complete the task if it exists anywhere on the page (examples: flashing, keyboard trap, audio with no pause);</li>
+					<li>Errors that when located within a process means the process cannot be completed (example: submit button not in tab order); and</li>
+					<li>Errors that when aggregated within a view or across a process cause failure (example: a large amount of confusing, ambiguous language).</li>
+				</ul>				
+				<p>Functional Outcomes specify the related critical errors that can occur and how to identify them. </p>
+				
+
+				<h4>Scoring Functional Outcomes</h4>
+				<p>The results from the traditional tests are aggregated across views and used along with the number of critical errors to assign an adjectival rating to the Functional Outcome. Testers will then use the guidance below along with reasonable judgement of the context that the errors occur in to assign an accessibility score of the functional outcome:</p>
+				<ul>
 					<li>Very Poor (0) = Any critical failures or less than 50% of related tests fail</li>
 					<li>Poor (1) = No critical failures, ~50-79%</li>
 					<li>Fair (2) = No critical failures, ~80-89%</li>
 					<li>Good  (3) = No critical failures, ~90-98%</li>
 					<li>Excellent (4) = No critical failures, ~99%-100%</li>
-				</ul><p>The ratings given to functional outcomes are then averaged for a total score and a score by the functional category(ies) they support.  Conformance at the Bronze level require no critical failures and at least 3.5 score within each functional category and overall. </p><p class="ednote">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a Bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number will likely shift as we continue testing.  We invite comment on these options as well as suggestions for an alternative solution. </p></section>
+				</ul>
+				<p class="ednote">These cutoff points are still being tested and adjusted. These are included as examples to gather feedback on this scoring approach. </p>
+				
+				<h4>Overall Scores</h4>
+				<p>After all functional outcomes have been scored, the ratings are averaged for a total score and a score by the functional category(ies) they support. Conformance at the Bronze level requires no critical failures and at least 3.5 total score and at least a 3.5 score within each functional category. </p>
+				
+				<p class="ednote">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a Bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number will likely shift as we continue testing.  We invite comment on these options as well as suggestions for an alternative solution. </p></section>
+
+				<h4>Scoring Holistic Tests</h4>			
+				<p>The points from holistic tests do not affect the scores of traditional tests. Rather a minimum number of holistic tests will need to be met in order to reach Silver and additional holistic tests will be needed to reach Gold. Getting a silver or gold rating requires a bronze rating.  
+				<p class="ednote">We continue to work on the scoring of holistic tests and will provide more details in a future iteration of this document. </p>
+
 		</section>
 		<section>
 			<h2>Conformance</h2>
