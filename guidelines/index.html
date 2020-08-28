@@ -264,6 +264,7 @@
 		<section>
 			<h2>Evaluation</h2>
 			<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, and adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
+			
 			<section>
 				<h3>Testing</h3>
 				
@@ -278,6 +279,7 @@
 					<section>
 						<h5>Traditional Tests</h5>
 						<p>Traditional tests evaluate content, often at an <a>object</a> level, for accessibility. Traditional tests include the existing tests that support A, AA, and AAA <a>Success Criteria</a> in WCAG 2.x. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.x structure.  In WCAG 3.0, traditional tests are used to test both processes and views.  Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the traditional tests are used to reach a <a href="#bronze">Bronze</a> rating.</p>
+						<p class="ednote">MC: think we need to describe automated vs manual tests here.</p>
 					</section>
 					<section>
 						<h5>Holistic Tests</h5>
@@ -299,6 +301,33 @@
 						<li>Errors that when aggregated within a view or across a process cause failure (example: a large amount of confusing, ambiguous language).</li>
 					</ul>				
 					<p><a>Functional Outcomes</a> specify the related critical errors that can occur and how to identify them. </p>
+				</section>
+			</section>
+			<section>
+				<h3>Evaluation Scope</h3>
+				<p>Web content that follows the requirements of WCAG 3.0 apply them to a specific scope. While the scope can be an entire web site, it is usually one or more sub-sets of the site. Reasons for this include:</p>
+				<ul>
+					<li>Large web sites are impractical to evaluate comprehensively using anything beyond <a href="#traditional-tests">traditional tests</a>;</li>
+					<li>The content of many sites changes frequently, causing evaluation to be accurate only for a specific moment in time;</li>
+					<li>Some portions of a site content are more important to more users than others;</li>
+					<li>Content that mostly meets the requirements but has problems can interfere with the user's ability to complete a process begun elsewhere on the site.</li>
+				</ul>
+				<p>WCAG 3.0 therefore defines two inter-related ways to scope content: <a href="#views">views</a> and <a href="#processes">processes</a>. Evaluation is done on a complete view or process, and conformance is determined on the basis of a complete view or process. This is defined further in <a href="#defining-conformance-scope">Defining Conformance Scope</a>.</p>
+				<section>
+					<h4>Views</h4>
+					<p>A view is a single interaction with web content. Conceptually, it corresponds to the definition of a "web page" as used in WCAG 2.x, but is not restricted to content meeting that definition. Each change of content as understood by the user comprises a new view.</p>
+					<p class="ednote">To flesh out more.</p>
+				</section>
+				<section>
+					<h4>Processes</h4>
+					<p>A process is a complete activity the user performs on the web site. Example tasks include:</p>
+					<ul>
+						<li>Logging into a site and being recognized as an authenticated user;</li>
+						<li>Ordering an item, in which case the process includes the entire set of tasks from searching for the item, adding it to the shopping cart, paying for it, and receiving confirmation;</li>
+						<li>Submitting tax information, from start to end of the process;</li>
+						<li>Interacting with other users in a comment site or social network.</li>
+					</ul>
+					<p>Process comprise one or more <a href="#views">views</a>.</p>
 				</section>
 			</section>
 			<section>
@@ -389,7 +418,7 @@
 			
 			<section>
 				<h3>Defining Conformance Scope</h3>
-				<p>Conformance is defined only for <a>processes</a> and <a>views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.  All unique steps in a process must be represented in the set of views. Views outside of the process may also be included in the scope.</p>
+				<p>Conformance is defined only for <a>processes</a> and <a>views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.  All unique steps in a process MUST be represented in the set of views. Views outside of the process MAY also be included in the scope.</p>
 				<p class="ednote">The AG WG and Silver Task Force recognize that representative sampling is an important strategy that large and complex sites use to assess accessibility. While it is not addressed within this document at this time, our intent is to later address it within this document or in a separate document before the guidelines reach the Candidate Recommendation stage. We welcome your suggestions and feedback about the best way to incorporate representative sampling in WCAG 3.0.</p>
 			</section>
 			<section>
