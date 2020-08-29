@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<script src="respec-config.js" class="remove"></script>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<link rel="stylesheet" type="text/css" href="guidelines.css" />
 	</head>
 	<body>
 		<section id="abstract">
@@ -19,6 +20,39 @@
 		</section>
 		<section class="informative">
 			<h2>Introduction</h2>
+			<aside class="summary">
+				<p>The W3C Accessibility Guidelines (WCAG) 3.0 specify ways to make Web content accessible to users with disabilities. These guidelines extend the Web Content Accessibility Guidelines 2.2. </p>
+				<p><strong>What’s new in WCAG 3.0?</strong></p>
+				<p>WCAG 3.0 speaks to a wider range of people with disabilities. It covers the design of Web content and applications across a variety of platforms. It presents new methods and tests for making content accessible using more recent technologies.</p>
+				<p>The WCAG 3.0 guidelines form an up-to-date standard for addressing the diverse needs of people with disabilities. The Silver Task Force and its research partners integrated recent ideas about what works. Importantly, we changed our model for conforming to the standard. </p>
+				<p>Some organizations may wish to use the previous guidelines. Others may wish to migrate to the new standard. Those who wish to use the new standard can get help from the Silver Community Group.</p>
+				<p><strong>Who benefits from the guidelines?</strong></p>
+				<p>Following the guidelines will improve the experience of <em>all</em> who use the content, not only people with disabilities.</p>
+				<p><strong>What did the Silver Task Force focus on?</strong></p>
+				<p>Our aim for these updated guidelines was to make them more current and usable. To that end, most of the changes focused on</p>
+				<ul>
+					<li>Improving usability – especially for people starting out in accessible design</li>
+					<li>Supporting a wider range of accessibility needs – such as cognitive disabilities, whose needs aren’t readily tested by true/false success criteria</li>
+					<li>Keeping the guidelines current – by improving ways of maintaining them</li>
+					<li>Considering new technological issues – such as publishing requirements and emerging technologies</li>
+					<li>Designing the standard to be more durable – especially as technologies evolve</li>
+					<li>Specifying clear guidance – by using plain language, structure, and design</li>
+					<li>Offering advice about web technologies and how they need to work – particularly with authoring tools, user agents, and assistive technologies</li>
+				</ul>
+				<p><strong>How did the focus evolve?</strong></p>
+				<p>The Silver Task Force identified a set of requirements for improving on earlier guidelines. Our research led us to make these a priority:</p>
+				<ul>
+					<li>Multiple ways to measure – to provide more ways to gauge success</li>
+					<li>Flexible maintenance and extensibility – so guidelines can be updated quickly</li>
+					<li>Multiple ways to display – to enable the guidelines to be customized</li>
+					<li>Technology neutral – so guidance applies across platforms and technologies</li>
+					<li>Readability/Usability – to ensure the guidelines are usable and understandable</li>
+					<li>Regulatory environment – to support adopting the guidelines into policy and law</li>
+					<li>Motivation – by using a scoring system that nudges organizations to take accessibility to the next level</li>
+					<li>Scope – to offer guidance for digital assets and technology of varying size and complexity</li>
+				</ul>
+				<p>These requirements shaped our model for conforming to the standard. </p>
+			</aside>
 			<p>This specification creates a new framework and guidelines to make web content and applications accessible to people with disabilities. W3C Accessibility Guidelines (WCAG) 3.0 supports a wide set of user needs, uses new approaches to testing, and allows frequent maintenance of guidelines to keep pace with accelerating technology change. WCAG 3.x continues this evolution by focusing on users’ functional needs. These are then supported by technology-specific methods to meet that need. </p>
 			<p>Following these guidelines will make content more accessible to a wider range of people with disabilities. This includes accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, learning disabilities, cognitive disabilities and combinations of these. Following these guidelines will also often make content more usable to users in general as well as accessible to individuals with disabilities.</p>
 			<p>WCAG 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions. They also incorporate content from and partially extend<a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and<a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. These earlier versions provided a flexible framework that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities has led to the need for a new framework to address content accessibility more comprehensively and flexibly. </p>
@@ -56,6 +90,21 @@
 		</section>
 		<section class="informative">
 			<h2>Structure of These Guidelines</h2>
+			<aside class="summary">
+				<p>The WCAG 3.0 guidelines evolved by focusing on the diverse needs of people with disabilities. We studied ways that the designed digital context may create barriers for people. </p>
+				<p>Our research led to cataloging users’ functional needs. That is, what in the designed context could be changed to reduce barriers and promote ease of use?  </p>
+				<p>The guidelines highlight users’ functional needs, such as the need for contrast. We elaborate the advice by specifying practices that reduce barriers. The results of using these practices can be tested. We offer a variety of tests to rate how well user needs have actually been met. </p>
+				<p><strong>How is the advice organized?</strong></p>
+				<p>To help make the advice usable, we structured it in layers:</p>
+				<ul>
+					<li><strong>Functional categories</strong>: the range of disabilities – from blindness to limited movement</li>
+					<li><strong>Functional needs</strong>: the mismatch between the user and the designed context (such as, people with limited vision want to use virtual reality)</li>
+					<li><strong>Functional outcomes</strong>: the result (or outcome) of practices that reduce barriers and support ease of use in the designed context (such as, blind users understood which parts of Web content were headings)</li>
+					<li><strong>Guidelines</strong>: plain language advice on topics for adapting content to meet users’ functional needs (such as, design voice input for people with limited movement)</li>
+					<li><strong>How-to information</strong>: content about getting started and how guidelines apply across technologies</li>
+					<li><strong>Methods</strong>: detailed techniques and tests for rating how well a functional outcome for a technology has been met</li>
+				</ul>
+			</aside>
 			<section>
 				<h3>Functional Categories</h3>
 				<p>WCAG 3.0 is organized by <a>Functional Categories</a> of disabilities which reflect the diverse needs of users with disabilities. Within each Functional Category, <a>Functional Needs</a> are applied to specific topics (for example: contrast, forms, readability, and more)  to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a>Functional Outcomes</a>, which state the conditions to test whether the Functional Needs have been met.  </p>
@@ -108,6 +157,14 @@
 		</section>
 		<section>
 			<h2>Normative Requirements</h2>
+			<aside class="summary">
+				<p>WCAG 3.0 details the needs of people with disabilities and suggests how to test for what works. You may to want to make formal claims about how well the results of your testing conform to the standard set out by the guidelines. </p>
+				<p>If you do, notice there are two types of content signaled in this document:</p>
+				<ul>
+					<li><strong>Normative</strong>. Refers to requirements that impact the accessibility of content. Normative requirements specify what conforming to the standard means.</li>
+					<li><strong>Non-normative</strong>. Refers to parts of this document that do not impact conforming to the standard. This advisory content is never required. Non-normative content includes overviews, appendices, diagrams, and examples. It is also called “Informative”. </li>
+				</ul>
+			</aside>
 			<p>The main content of WCAG 3.0 is <a>normative</a> and defines requirements that impact conformance claims. Introductory material, appendices, sections marked as "non-normative", diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
 			<p>The key words <em class="rfc2119" title="MAY">MAY</em>, <em class="rfc2119" title="MUST">MUST</em>, <em class="rfc2119" title="MUST NOT">MUST NOT</em>, <em class="rfc2119" title="NOT RECOMMENDED">NOT RECOMMENDED</em>, <em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em>, <em class="rfc2119" title="SHOULD">SHOULD</em>, and <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> are to be interpreted as described in [[RFC2119]].</p>
 		</section>
@@ -271,6 +328,20 @@
 		</section>
 		<section>
 			<h2>Evaluation</h2>
+			<aside class="summary">
+				<p>Testing has always been important in designing for accessibility. Web content should be tested by people who understand how people with different types of disabilities use the technology being tested.</p>
+				<p><strong>What types of tests are used?</strong></p>
+				<p>WCAG 3.0 includes two types of tests:</p>
+				<ul>
+					<li><strong>Traditional tests</strong>: Those are similar to the tests for A, AA, and AAA Success Criteria in WCAG 2.x. (These tests are used to reach a Bronze rating.)</li>
+					<li><strong>Holistic tests</strong>: User-centered design methods, assistive technology testing, user and expert usability testing. (These tests are used to reach a Silver or Gold rating.)</li>
+				</ul>
+				<p>Some content will meet functional outcomes using traditional tests. Even so, that content may not be usable by the range of people with disabilities. We address this gap with holistic tests.</p>
+				<p><strong>How are tests scored?</strong></p>
+				<p>An important goal of WCAG 3.0 was to go beyond binary true/false scoring methods. We include testing options for new guidance, such as rubrics and scales. </p>
+				<p>Each functional outcome has methods related to different technologies. Methods contain tests and techniques for meeting functional outcomes.</p>
+				<p>Tests are applied at the view level and totaled across views. We describe ways that results can be scored by the functional categories they support. Views are a general way of describing digital content such as web pages, pdf documents, ebook pages, mobile screens, the wrap around of virtual reality, and more. </p>
+			</aside>
 			<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, and adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 			
 			<section>
@@ -393,6 +464,13 @@
 		</section>
 		<section>
 			<h2>Conformance</h2>
+			<aside class="summary">
+				<p>WCAG 3.0 offers guidance on ways to meet functional outcomes that reduce barriers and support ease of use. Taken together, this guidance forms a standard. In WCAG 3.0 the functional outcomes are the requirements for the standard.</p>
+				<p>You may want to make a claim that your content or product conforms to the standard. If it does meet the requirements, we call this conformance. There are three levels of conformance: Bronze, Silver, and Gold.</p>
+				<p>Each level of conformance requires a number of criteria. To conform to WCAG 3.0, your test results must meet certain thresholds. The Bronze level, for example, is the minimum level of conformance. This document details the conformance requirements for each level.</p>
+				<p>If you want to make a conformance claim, you must follow the process we describe in this document. Even if you don’t want to make a formal claim, you can use this process to assess the accessibility of content.</p>
+				<p>Technology and digital content can conform to WCAG 3.0 without you making a claim. The process we offer here will help you get there. Reducing barriers. Supporting ease of use.</p>
+			</aside>
 			<p>Conformance to a standard means that you meet or satisfy the 'requirements' of the standard. In WCAG 3.0 the 'requirements' are the Functional Outcomes. </p>
 			<p>Technology can meet the Functional Outcomes without a conformance claim.  If you want to claim conformance, you must follow the process below; however, even if you are not making a formal conformance claim, you can use this process to assess the accessibility of content.</p>
 
