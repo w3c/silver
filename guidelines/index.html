@@ -131,190 +131,201 @@
 			</ul>
 			<section>
 				<h3>Essential</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Vision and Visual</h3>
+				<section>
+					<h3>Text Alternatives</h3>
+					<p class="guideline-text">Guideline: Provide text alternative for non-text content.</p>
+					<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/AltText.html">Text Alternatives How-to</a></p>
+					<p class="fo">Functional Outcome: People using different user agents and assistive technologies have access to the equivalent text provided by the text alternative.</p>
+					<p class="fo">Functional Outcome Reworded: A text alternative for non-text content is available via user agents and assistive technologies, which allows users who are unable to perceive and / or understand the next content to determine its meaning.</p>
+					<p class="method-link">Method: <a href="https://docs.google.com/document/d/1h5IiwbIvsWZr8N2qXNm9NQBR46gQWmfvWpDvtxHxR9o/edit#heading=h.ejfzqyn2flr7">Text alternative for Image of text (HTML)</a><span class="ednote">@@ - google doc</span></p>			
+				</section>
+				<section>
+					<h3>Structured Content</h3>
+					<ol>
+						<li><p>Organizes text into logical chunks to make locating information easier and faster.</p></li>
+						<li><p>Uses visually distinct headings so sighted readers can determine the structure.</p></li>
+						<li><p>Provides semantic structure to support assistive technology-- headings are coded as headings.</p></li>
+						<li><p>Conveys a sense of hierarchy that helps the user explore and navigate the text material.</p></li>
+					</ol>
+					<p>Or (same text, more usable format)</p>
+					
+					<table>
+						<tbody>
+							<tr>
+								<th scope="col"> Results (What) </th>
+								<th scope="col"> Benefits (Why and Who) </th>
+								<th scope="col"> Examples (Not Restrictive/Exhaustive) </th>
+							</tr>
+							<tr>
+								<td> Organizes text into logical chunks </td>
+								<td> Make locating information easier and faster </td>
+								<td> Headings, HTML sections </td>
+							</tr>
+							<tr>
+								<td> Uses visually distinct headings </td>
+								<td> Sighted readers can determine the structure </td>
+								<td> Using different font sizes and color so structure stands out </td>
+							</tr>
+							<tr>
+								<td> Provides semantic structure </td>
+								<td> Support assistive technology </td>
+								<td> HTML headings code, ARIA roles, Word heading styles </td>
+							</tr>
+							<tr>
+								<td> Conveys a sense of hierarchy </td>
+								<td> helps the user explore and navigate the text material </td>
+								<td> Headings and subheadings, using sections to structure content </td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<p><a href="https://w3c.github.io/silver/guidelines/explainers/SectionHeading.html">Structured Content How-to</a></p>
+					<p>Structured Content Methods</p>
+				</section>
+				<section>
+					<h3>Visual Contrast of Text</h3>
+					<p>Provide sufficient contrast between foreground text and its background.</p>
+					<p><a href="https://w3c.github.io/silver/guidelines/explainers/visualContrast.html">Visual Contrast of Text How-to</a></p>
+					<div class="ednote">
+						<p>Visual Contrast is a migration from WCAG 2.1 with significant updates:</p>
+						<ul>
+							<li>New calculations of contrast based on more modern research on color perception.</li>
+							<li>Merging the 1.4.3 AA and 1.4.6 AAA levels into one guideline.</li>
+							<li>New test of text contrast.</li>
+							<li>At this time, it only includes textual visual contrast.</li>
+						</ul>
+					</div>
+					<p>We propose changing the name of “Color Contrast” to “Visual Contrast” as a signal of a paradigm change from one about color to one about “perception of light intensity”. The reason for this change is that the understanding of contrast has matured and the available research and body of knowledge has made breakthroughs in advancing the understanding of “visual contrast”.</p>
+					<p>The proposed new guidance more accurately models current research in human visual perception of contrast and light intensity. The goal is to improve understanding of the functional needs of all users, and more effectively match the needs of those who face barriers accessing content. This new perception-based model is more context dependent than a strict light ratio measurement; results can, for example, vary with size of text and the darkness of the colors or page.</p>
+					<p>This model is more responsive to user needs and allows designers more choice in visual presentation. It does this by including multi-factor assessment tests which integrate contrast with interrelated elements of visual readability, such as font features. It includes tests to determine an upper limit of contrast, where elevated contrast may impact usability.</p>
+				</section>
 			</section>
 			<section>
 				<h3>Hearing and Auditory</h3>
+				<section>
+					<h3>Captions</h3>
+					<p class="guideline-text">Guideline: @@</p>
+					<p class="how-to-link">How To: @@</p>
+					<p class="fo">Functional Outcomes: @@JS: Needs the updated FO from the meeting of 17 August</p>
+					<ul>
+						<li>Translates speech and key sound effects into alternative formats (e.g. captions) so media can be understood when sound is unavailable or limited
+							<ul>
+								<li class="method-link">Method: <a href="https://docs.google.com/document/d/1lUoy00PrdsJjsqfqv8T4U1KokDM9LqbEe2GMWOwsEM4/edit">Provides text equivalents of speech and key sound effects</a><span class="ednote">@@ - google doc</span> </li>
+								<li class="method-link">Method: <a href="">Reflow of captions nad other text (in context)</a><span class="ednote">@@ - email that needs to be translated to a google doc</span> </li>
+							</ul></li>
+						<li>Conveys information about the sound in addition to the text of the sound (for example, sound source, duration, and direction) so users know the necessary information about the context of the sound in relation to the environment it is situated in</li>
+						<li>Provides captions and caption meta-data in alternative formats (for example, second screen or braille display) to allow users the opportunity to move caption and meta-data to alternative displays. For example, this benefits users without sound and vision, users who need assistive technology to magnify portions of the view, or users who have limited reach.</li>
+						<li>Provides customisation of caption style and position to support people with limited vision or color perception. Customisation options can benefit all users.</li>
+						<li>Provides customisation of caption timing to support people with limited manipulation, strength, or cognition.</li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<h3>Sensory Intersections</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Mobility</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Motor Ability</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Physical and Sensory Intersections</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Speech</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Attention</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Language and Literacy</h3>
+				<section>
+					<h3>Clear Written Content</h3>
+					<p>[@@JS: I'm working on sorting out the Functional Outcomes. The docs are confusing.]</p>
+					<p class="ednote">Clear Written Content, Clear Written Structure, and Provide Help and Support are new guidelines proposed by the Cognitive Accessibility Task Force (COGA) and includes research, documents and comments from COGA. It showcases a proof-of-concept example of a rubric-type test that could not be included in WCAG 2.x. [@@JS: Is this where this should go?] They have been revised to align with the new COGA publication, <a href="Making content usable for people with cognitive and learning disabilities"> Making content usable for people with cognitive and learning disabilities</a> [[coga-usable]].</p>
+					<p class="guideline-text">Guideline: Use clear and understandable content. </p>
+					<p><strong>Exception</strong>: If this doesn’t apply to your language, you don’t have to do it.</p>
+					<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
+					<p class="fo">Functional Outcomes: </p>
+					<ul>
+						<li>Uses clear words.
+							<ul><li class="method-link">Method: <a href="https://docs.google.com/document/d/1p-FayvZYonpDIlojblFSofi_KzjNdY5SrBOKauvV0u8/edit">Use Clear Words</a><span class="ednote">@@ - google doc</span></li></ul></li>
+						<li>Uses a simple tense and voice.</li>
+						<li>Avoids double negatives or nested clauses</li>
+						<li>Uses literal language.</li>
+						<li>Keeps text succinct.</li>
+						<li>Uses clear, unambiguous text, formatting and punctuation.</li>
+						<li>Includes symbols and letters necessary to decipher the words.</li>
+						<li>Provides summary of long documents and media.</li>
+						<li>Separates each instruction.</li>
+						<li>Uses white spacing.</li>
+						<li>Ensures foreground content is not obscured by background.</li>
+						<li>Explains implied content.</li>
+						<li>Provides alternatives for numbers.</li>
+					</ul>
+					<p class="ednote">The above need the second clause of the functional outcomes for benefits; these could potentially be identical.</p>
+				</section>
+				<section>
+					<h3>Clear Written Structure </h3>
+					<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
+					<p class="fo">Functional Outcomes: </p>
+					<p><strong>Exception</strong>: If this doesn’t apply to your language, you don’t have to do it.</p>
+					<ul>
+						<li>Uses proper grammar for the language, as defined by a style guide or by standard language rules.</li>
+						<li>Uses correct spelling.</li>
+						<li>Uses shorter sentences and paragraphs with accurate text formatting and punctuation to aid reading comprehension and retention.</li>
+						<li>Uses consistent writing structure to help users understand. </li>
+						<li>Breaks down complex ideas into multiple paragraphs and creates natural breakpoints to reduce fatigue.</li>
+						<li>??? Numbers sequential steps</li>
+						<li>??? Provides brief summaries at the top of long documents</li>
+						<li>Provides context, points out the most important content, and avoids distractions to help the reader understand what is important.</li>
+						<li>Provides common words and phrases for headings, labels, and navigational elements so that people with print disabilities will be able to understand and operate the structure of the page.</li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<h3>Learning</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Memory</h3>
+				<section>
+					<h3>Provide Help and Support</h3>
+					<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
+					<p class="fo">Functional Outcomes: </p>
+					<ul>
+						<li>Provides clear instructions</li>
+						<li>Helps people avoid mistakes or correct them.</li>
+						<li>Ensures processes do not rely on memory</li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<h3>Executive Function</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Mental Health</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Cognitive and Sensory Intersections</h3>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 			<section>
 				<h3>Independence</h3>
-			</section>
-			<section>
-				<h3>Text Alternatives</h3>
-				<p class="guideline-text">Guideline: Provide text alternative for non-text content.</p>
-				<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/AltText.html">Text Alternatives How-to</a></p>
-				<p class="fo">Functional Outcome: People using different user agents and assistive technologies have access to the equivalent text provided by the text alternative.</p>
-				<p class="fo">Functional Outcome Reworded: A text alternative for non-text content is available via user agents and assistive technologies, which allows users who are unable to perceive and / or understand the next content to determine its meaning.</p>
-				<p class="method-link">Method: <a href="https://docs.google.com/document/d/1h5IiwbIvsWZr8N2qXNm9NQBR46gQWmfvWpDvtxHxR9o/edit#heading=h.ejfzqyn2flr7">Text alternative for Image of text (HTML)</a><span class="ednote">@@ - google doc</span></p>			
-			</section>
-			<section>
-				<h3>Clear Written Content</h3>
-				<p>[@@JS: I'm working on sorting out the Functional Outcomes. The docs are confusing.]</p>
-				<p class="ednote">Clear Written Content, Clear Written Structure, and Provide Help and Support are new guidelines proposed by the Cognitive Accessibility Task Force (COGA) and includes research, documents and comments from COGA. It showcases a proof-of-concept example of a rubric-type test that could not be included in WCAG 2.x. [@@JS: Is this where this should go?] They have been revised to align with the new COGA publication, <a href="Making content usable for people with cognitive and learning disabilities"> Making content usable for people with cognitive and learning disabilities</a> [[coga-usable]].</p>
-				<p class="guideline-text">Guideline: Use clear and understandable content. </p>
-				<p><strong>Exception</strong>: If this doesn’t apply to your language, you don’t have to do it.</p>
-				<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
-				<p class="fo">Functional Outcomes: </p>
-				<ul>
-				<li>Uses clear words.
-					<ul><li class="method-link">Method: <a href="https://docs.google.com/document/d/1p-FayvZYonpDIlojblFSofi_KzjNdY5SrBOKauvV0u8/edit">Use Clear Words</a><span class="ednote">@@ - google doc</span></li></ul></li>
-				<li>Uses a simple tense and voice.</li>
-				<li>Avoids double negatives or nested clauses</li>
-				<li>Uses literal language.</li>
-				<li>Keeps text succinct.</li>
-				<li>Uses clear, unambiguous text, formatting and punctuation.</li>
-				<li>Includes symbols and letters necessary to decipher the words.</li>
-				<li>Provides summary of long documents and media.</li>
-				<li>Separates each instruction.</li>
-				<li>Uses white spacing.</li>
-				<li>Ensures foreground content is not obscured by background.</li>
-				<li>Explains implied content.</li>
-				<li>Provides alternatives for numbers.</li>
-				</ul>
-				<p class="ednote">The above need the second clause of the functional outcomes for benefits; these could potentially be identical.</p>
-			</section>
-			<section>
-				<h3>Clear Written Structure </h3>
-				<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
-				<p class="fo">Functional Outcomes: </p>
-				<p><strong>Exception</strong>: If this doesn’t apply to your language, you don’t have to do it.</p>
-				<ul>
-				<li>Uses proper grammar for the language, as defined by a style guide or by standard language rules.</li>
-				<li>Uses correct spelling.</li>
-				<li>Uses shorter sentences and paragraphs with accurate text formatting and punctuation to aid reading comprehension and retention.</li>
-				<li>Uses consistent writing structure to help users understand. </li>
-				<li>Breaks down complex ideas into multiple paragraphs and creates natural breakpoints to reduce fatigue.</li>
-				<li>??? Numbers sequential steps</li>
-				<li>??? Provides brief summaries at the top of long documents</li>
-				<li>Provides context, points out the most important content, and avoids distractions to help the reader understand what is important.</li>
-				<li>Provides common words and phrases for headings, labels, and navigational elements so that people with print disabilities will be able to understand and operate the structure of the page.</li>
-				</ul>
-			</section>
-			<section>
-				<h3>Provide Help and Support</h3>
-				<p class="how-to-link"><a href="https://w3c.github.io/silver/guidelines/explainers/ClearWords.html">Clear Language How-to</a></p>
-				<p class="fo">Functional Outcomes: </p>
-				<ul>
-				<li>Provides clear instructions</li>
-				<li>Helps people avoid mistakes or correct them.</li>
-				<li>Ensures processes do not rely on memory</li>
-				</ul>
-			</section>
-			<section>
-				<h3>Captions</h3>
-				<p class="guideline-text">Guideline: @@</p>
-				<p class="how-to-link">How To: @@</p>
-				<p class="fo">Functional Outcomes: @@JS: Needs the updated FO from the meeting of 17 August</p>
-				<ul>
-					<li>Translates speech and key sound effects into alternative formats (e.g. captions) so media can be understood when sound is unavailable or limited
-					<ul>
-						<li class="method-link">Method: <a href="https://docs.google.com/document/d/1lUoy00PrdsJjsqfqv8T4U1KokDM9LqbEe2GMWOwsEM4/edit">Provides text equivalents of speech and key sound effects</a><span class="ednote">@@ - google doc</span> </li>
-						<li class="method-link">Method: <a href="">Reflow of captions nad other text (in context)</a><span class="ednote">@@ - email that needs to be translated to a google doc</span> </li>
-					</ul></li>
-					<li>Conveys information about the sound in addition to the text of the sound (for example, sound source, duration, and direction) so users know the necessary information about the context of the sound in relation to the environment it is situated in</li>
-					<li>Provides captions and caption meta-data in alternative formats (for example, second screen or braille display) to allow users the opportunity to move caption and meta-data to alternative displays. For example, this benefits users without sound and vision, users who need assistive technology to magnify portions of the view, or users who have limited reach.</li>
-					<li>Provides customisation of caption style and position to support people with limited vision or color perception. Customisation options can benefit all users.</li>
-					<li>Provides customisation of caption timing to support people with limited manipulation, strength, or cognition.</li>
-				</ul>
-					
-			</section>
-			<section>
-				<h3>Structured Content</h3>
-				<ol>
-					<li><p>Organizes text into logical chunks to make locating information easier and faster.</p></li>
-					<li><p>Uses visually distinct headings so sighted readers can determine the structure.</p></li>
-					<li><p>Provides semantic structure to support assistive technology-- headings are coded as headings.</p></li>
-					<li><p>Conveys a sense of hierarchy that helps the user explore and navigate the text material.</p></li>
-				</ol>
-				<p>Or (same text, more usable format)</p>
-
-				<table>
-					<tbody>
-						<tr>
-							<th scope="col"> Results (What) </th>
-							<th scope="col"> Benefits (Why and Who) </th>
-							<th scope="col"> Examples (Not Restrictive/Exhaustive) </th>
-						</tr>
-						<tr>
-							<td> Organizes text into logical chunks </td>
-							<td> Make locating information easier and faster </td>
-							<td> Headings, HTML sections </td>
-						</tr>
-						<tr>
-							<td> Uses visually distinct headings </td>
-							<td> Sighted readers can determine the structure </td>
-							<td> Using different font sizes and color so structure stands out </td>
-						</tr>
-						<tr>
-							<td> Provides semantic structure </td>
-							<td> Support assistive technology </td>
-							<td> HTML headings code, ARIA roles, Word heading styles </td>
-						</tr>
-						<tr>
-							<td> Conveys a sense of hierarchy </td>
-							<td> helps the user explore and navigate the text material </td>
-							<td> Headings and subheadings, using sections to structure content </td>
-						</tr>
-					</tbody>
-				</table>
-
-				<p><a href="https://w3c.github.io/silver/guidelines/explainers/SectionHeading.html">Structured Content How-to</a></p>
-				<p>Structured Content Methods</p>
-			</section>
-			<section>
-				<h3>Visual Contrast of Text</h3>
-				<p>Provide sufficient contrast between foreground text and its background.</p>
-				<p><a href="https://w3c.github.io/silver/guidelines/explainers/visualContrast.html">Visual Contrast of Text How-to</a></p>
-				<div class="ednote">
-					<p>Visual Contrast is a migration from WCAG 2.1 with significant updates:</p>
-					<ul>
-						<li>New calculations of contrast based on more modern research on color perception.</li>
-						<li>Merging the 1.4.3 AA and 1.4.6 AAA levels into one guideline.</li>
-						<li>New test of text contrast.</li>
-						<li>At this time, it only includes textual visual contrast.</li>
-					</ul>
-				</div>
-				<p>We propose changing the name of “Color Contrast” to “Visual Contrast” as a signal of a paradigm change from one about color to one about “perception of light intensity”. The reason for this change is that the understanding of contrast has matured and the available research and body of knowledge has made breakthroughs in advancing the understanding of “visual contrast”.</p>
-				<p>The proposed new guidance more accurately models current research in human visual perception of contrast and light intensity. The goal is to improve understanding of the functional needs of all users, and more effectively match the needs of those who face barriers accessing content. This new perception-based model is more context dependent than a strict light ratio measurement; results can, for example, vary with size of text and the darkness of the colors or page.</p>
-				<p>This model is more responsive to user needs and allows designers more choice in visual presentation. It does this by including multi-factor assessment tests which integrate contrast with interrelated elements of visual readability, such as font features. It includes tests to determine an upper limit of contrast, where elevated contrast may impact usability.</p>
+				<p class="ednote">There are not yet any guidelines under this category.</p>
 			</section>
 		</section>
 		<section>
