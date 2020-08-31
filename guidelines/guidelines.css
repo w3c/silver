@@ -8,3 +8,6 @@
 	content: "Simplified Summary";
 	font-weight: bold;
 }
+figure {
+	float: right;
+}
