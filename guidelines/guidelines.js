@@ -1,4 +1,4 @@
-var version="22";
+var version="30";
 
 function titleToPathFrag (title) {
 	return title.toLowerCase().replace(/[\s,]+/g, "-").replace(/[\(\)]/g, "");
@@ -46,47 +46,10 @@ function addTextSemantics() {
 	})
 }
 
-function markConformanceLevel() {
-}
-
-function swapInDefinitions() {
-	if (new URLSearchParams(window.location.search).get("defs") != null) document.querySelectorAll('.internalDFN').forEach(function(node){
-		node.title = node.textContent;
-		node.textContent = findDef(document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild).textContent;
+// scripts after Respec has run
+document.respecIsReady.then(() => {
+	// put definitions into title attributes of term references
+	document.querySelectorAll('.internalDFN').forEach(function(node){
+		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
 	})
-	function findDef(el){
-		if (el.hasAttribute('class')) return findDef(el.nextElementSibling);
-		else return el;
-	}
-}
-
-require(["core/pubsubhub"], function(respecEvents) {
-    "use strict";
-    respecEvents.sub('end', function(message) {
-    	if (message === 'core/link-to-dfn') {
-    		linkUnderstanding();
-    	}
-	})
-})
-
-// Change the authors credit to WCAG 2.0 editors credit
-require(["core/pubsubhub"], function(respecEvents) {
-    "use strict";
-    respecEvents.sub('end', function(message) {
-    	if (message === 'core/link-to-dfn') {
-    		document.querySelectorAll("div.head dt").forEach(function(node){
-    			if (node.textContent == "Former editors:") node.textContent = "WCAG 2.0 Editors (until December 2008):";
-    		});
-    	}
-	})
-})
-
-// Fix the scroll-to-fragID problem:
-require(["core/pubsubhub"], function (respecEvents) {
-    "use strict";
-    respecEvents.sub("end-all", function () {
-        if(window.location.hash) {
-            window.location = window.location.hash;
-        }
-    });
 });
