@@ -11,3 +11,6 @@
 figure {
 	float: right;
 }
+a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
+	cursor: help;
+}
