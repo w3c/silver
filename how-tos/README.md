@@ -20,6 +20,10 @@ Each file in the how-to contains particular content.
 
 ### develop.html
 
+### examples.html
+
+### resources.html
+
 ## Other Resources in How-Tos
 
 You may add resources to how-tos, such as images, stylesheets, scripts, and examples. Create sub-directories for each type of resource you add: "img" for images, "style" for stylesheets, "script" for scripts, "examples" for examples. Use relative links to any resource that is part of the how-to.
