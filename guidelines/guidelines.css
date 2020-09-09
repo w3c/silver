@@ -11,3 +11,17 @@
 figure {
 	float: right;
 }
+a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
+	cursor: help;
+}
+.outcome {
+	margin-left: 2rem;
+}
+.outcome h4 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	color: #005A9C;
+	margin-top: 1rem;
+	margin-left: -2rem;
+}
