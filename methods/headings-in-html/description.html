@@ -12,19 +12,26 @@
 				<h2>Outcome and Functional Categories</h2>
 				<p>This method supports the outcome <q>Provides semantic structure that conveys a sense of hierarchy that helps the user explore and navigate the text material to support assistive technology -- headings are coded as headings</q>.</p>
 				<p>This outcome relates to the following functional categories:</p>
-			</section>
 			<ul>
-				<li>Sensory - Vision and Visual</li>
-				<li>Physical - Motor</li>
-				<li>Cognitive - Executive</li>
+				<li>Sensory - Vision &amp; Visual </li>
+				<li>Sensory Intersections </li>
+				<li>Physical &amp; Sensory Intersections </li>
+				<li>Cognitive - Language &amp; Literacy </li>
+				<li>Cognitive &amp; Sensory Intersections </li>
 			</ul>
+			</section>
 			<section id="technical">
 				<h2>Technical description</h2>
-			</section>
-			<p>Nest headings by their rank (or level). The most important heading has the rank 1 (<code>&lt;h1></code>), the least important heading rank 6 (<code>&lt;h6></code>). Headings with an equal or higher rank start a new section, headings with a lower rank start new subsections that are part of the higher ranked section.</p>
-			<p>Skipping heading ranks can be confusing and should be avoided where possible: Make sure that a <code>&lt;h2></code> is <strong>not</strong> followed directly by an <code>&lt;h4></code>, for example. It is ok to skip ranks when closing subsections, for instance, a <code>&lt;h2></code> beginning a new section, can follow an <code>&lt;h4></code> as it closes the previous section.</p>
-			<section>
-				<h3>Exception for fixed page sections</h3>
+			<p>Every page should have only one perceivable H1-type heading.  There may be more than one in the code, but only one is in view or in the accessibility tree at one time. </p>
+			<p>There are two ways to approach providing structure in HTML: </p>
+			<ul>
+				<li>Native HTML semantic tags, such as <code>&lt;h3&gt;</code> or <code>&lt;main&gt;</code> </li>
+				<li>ARIA attributes for HTML tags  </li>
+				<li>Use one or the other.  Don’t use both in the same tag or element.   </li>
+			</ul>
+			<p>Headings are not only used for organizing text.  Headings are also used to organize forms, controls, multimedia and complex applications. They help people locate the information or controls they need.  </p>
+
+				<p><strong>Exception for fixed page sections:</strong></p>
 				<p>In fixed sections of the page, for example in sidebars, the heading ranks <em>should not</em> change depending on the ranks in the content area. In those cases, consistency across pages is more important.</p>
 			</section>
 			<section id="dependencies">
