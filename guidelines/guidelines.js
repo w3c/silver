@@ -19,6 +19,13 @@ function linkHowTo() {
 	})
 }
 
+function addGuidelineMarkers() {
+	document.querySelectorAll('.guideline').forEach(function(node){
+		var guideline = node.querySelector('p');
+		guideline.innerHTML = "<strong>Guideline:</strong> " + guideline.innerHTML;
+	})
+}
+
 function addTextSemantics() {
 	// put brackets around the change marker
 	document.querySelectorAll('p.change').forEach(function(node){
@@ -57,5 +64,6 @@ function termTitles() {
 // scripts after Respec has run
 document.respecIsReady.then(() => {
 	termTitles();
+	addGuidelineMarkers();
 	linkHowTo();
 });
