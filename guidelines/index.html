@@ -115,26 +115,26 @@
 				<p>Not all of these layers are directly in this document. Some are pieces linked from here.</p>
 			</aside>
 			<figure id="guidelines-structure-diagram" aria-labelledby="guidelines-structure-description">
-				<img height="451" src="img/guidelines-structure.png" width="311" />
+				<img height="503" src="img/wcag3-structure.png" width="475" />
 				<figcaption>Structure of WCAG 3 Guidance</figcaption>
 			</figure>
-			<p>WCAG 3 has several layers and types of content with interrelationships. <a href="#guidelines-structure-diagram">Figure 1</a> shows how <span id="guidelines-structure-description">Functional Categories inform Functional Needs. The Guideline topics with the Functional Needs inform the Outcomes. How To documents are related to Guidelines. Methods are specific to technology and include Techniques and Tests.</span></p>
+			<p>WCAG 3 has several layers and types of content with interrelationships. <a href="#guidelines-structure-diagram">Figure 1</a> shows the layers.  <span id="guidelines-structure-description">Functional Needs are grouped in Functional Categories. These combine with Guideline topics to inform the Outcomes. How To documents are information about the Guidelines. Methods are specific to technology and include sections of description, examples, tests, and scoring. The scoring section information is used to calculate the overall score for the optional conformance claim. The overall score determines the conformance level of bronze, silver or gold.  </span></p>
 			<section>
-				<h3>Functional Categories</h3>
-				<p>The highest level of organization, Functional Categories of disabilities, group the diverse needs of users with disabilities. Within each Functional Category, <a href="#functional-needs">Functional Needs</a> are applied to specific topics (for example: contrast, forms, readability, and more)  to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a href="#outcomes">Outcomes</a>, which state the conditions to test whether the Functional Needs have been met.  </p>
-				<p>Functional Categories are used when reporting test results to reduce bias across different types of disabilities.</p>
+				<h3>Functional Categories and Functional Needs</h3>
+				<p>The development of WCAG 3 guidelines start with <a href="#functional-needs">Functional Needs</a>. A Functional Need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional Categories group the diverse needs of users with disabilities. Within each Functional Category, Functional Needs are applied to specific topics (for example: contrast, forms, readability, and more)  to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a href="#outcomes">Outcomes</a>, which state the conditions to test whether the Functional Needs have been met. Functional Needs are documented in the supplementary material accompanying the Guidelines in the How-To.  </p>
+				<p>Functional Categories are used when reporting test results in the optional conformance claim. </p>
 				<blockquote>Example: Vision and Visual</blockquote>
 				<p class="ednote">The work of cataloging functional needs is still in process and will continue after the First Public Working Draft.  Those interested can see more information in this draft Google document <a href="https://docs.google.com/document/d/1eJkgXqbh7dx3uD6XAy8XAANmwfbbVZ5GKb_gbsUdkVs/">Functional Needs - Expanded</a></p>
 			</section>
 			<section>
 				<h3>Guidelines</h3>
 				<p>Guidelines provide a high-level, plain-language version of the content for  managers, policy makers, beginners to accessibility and other individuals who need to understand the concepts but not dive into the technical details. They provide an easy-to-understand way of organizing and presenting the outcomes so that non-experts can learn about and understand the concepts. Guidelines include a unique, descriptive name along with high level plain language summaries that address Functional Needs on specific topics, such as contrast, forms, readability, and more. Guidelines group related Outcomes and are technology-independent.</p>
-				
+				<blockquote>Example: Use headings, sections, and sub-headings to organize your text. </blockquote>			
 			</section>
 			<section>
 				<h3>How-Tos Information</h3>
 				<p>The <a href="#how-to">How-To</a> content provides explanatory material for each guideline that applies across technologies. This guidance explains how to apply the concepts presented in the guidelines for non-technical readers. This plain language resource includes information on getting started, who the guideline helps and how, as well information for project managers, designers and developers.  </p>
-				
+			
 			</section>
 			<section>
 				<h3>Outcomes</h3>
@@ -150,7 +150,7 @@
 				<p>The methods include detailed information on techniques to meet the outcome as well as tests and scoring information. Methods are designed for developers, testers, and other technical experts.</p>
 				<blockquote>Example: Headings (HTML & ARIA)</blockquote>
 				
-				<p>Techniques provide technology-specific approaches to follow methods. They include code samples and working examples, and provide information about testing and scoring.</p>
+				<p>The method descriptions provide technology-specific approaches to follow methods. They include code samples and working examples, and provide information about testing and scoring.</p>
 				<p class="note">While WCAG 3 Techniques have some similarity with WCAG 2 Techniques, they are not the same and are not interchangable.</p>
 				<blockquote>Example: There are two ways to approach providing structure in HTML: 
 					<ul><li>Native HTML semantic tags, such as h3 and main</li>
@@ -164,12 +164,14 @@
 			
 			<section>
 				<h3>Tags</h3>
-				<p>Tags will be added to WCAG 3.0 to improve findability and usability. For example, tags will be provided for functional needs. </p>
-				<p>A Functional Need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional Needs are documented in the supplementary material accompanying the Guidelines and Outcomes. </p>
-				<p class="note">The intent is to express the need in a contextual model, as opposed to a lack of ability in a medical model. This is similar to the ICF (International Classification of Functioning – a biopsychosocial model), “outcomes of interactions between health conditions (diseases, disorders and injuries) and contextual factors”, focusing on the interactions. </p>
-				<p class="ednote">Need link and reference for ICF</p>
-				<blockquote>Example: Use without vision.</blockquote>
+				<p>Tags will be added to WCAG 3.0 to improve findability and usability. For example, tags will be provided for functional categories, technologies, WCAG 2 principles and WCAG 2 success criteria, and others still under discussion. </p>
 				<p class="ednote">Tagging is still in process and will continue after the First Public Working Draft.</p>
+			</section>
+			
+			<section>
+				<h3>Conformance Levels</h3>
+				<p>WCAG 3 has an optional scoring system that can better inform organizations on the quality of their accessibility effort. The optional conformance levels provide a way for organizations to report their conformance in simple manner. The bronze level is based on the overall score. Silver and gold levels require an overall score that passes the bronze level plus additional improved usability for people with disabilties.  </p>
+				<p class="ednote">This first draft focuses on bronze level. Future drafts will have more information on silver and gold levels.  We expect that bronze will be similar to WCAG 2 AA, while silver and gold will include more usability-type testing. This is still under development. WCAG 2.x AAA success criteria are generally included in WCAG 3.  The design of the scoring model awards more points for implementing the outcomes that come from WCAG 2.x AAA. </p> 
 			</section>
 
 		</section>
