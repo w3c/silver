@@ -26,6 +26,13 @@ function addGuidelineMarkers() {
 	})
 }
 
+function addOutcomeMarkers() {
+	document.querySelectorAll('.outcome').forEach(function(node){
+		var outcome = node.querySelector('p');
+		outcome.innerHTML = "<strong>Outcome:</strong> " + outcome.innerHTML;
+	})
+}
+
 function addTextSemantics() {
 	// put brackets around the change marker
 	document.querySelectorAll('p.change').forEach(function(node){
@@ -65,5 +72,6 @@ function termTitles() {
 document.respecIsReady.then(() => {
 	termTitles();
 	addGuidelineMarkers();
+	addOutcomeMarkers();
 	linkHowTo();
 });
