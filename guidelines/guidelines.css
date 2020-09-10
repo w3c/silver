@@ -25,3 +25,14 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	margin-top: 1rem;
 	margin-left: -2rem;
 }
+.howto-link {
+	float: right;
+	width: 15em;
+	text-align: right;
+	margin: .5em;
+	padding: .5ex;
+	border: thin solid #005A9C;
+}
+.howto-link span {
+	white-space: nowrap;
+}

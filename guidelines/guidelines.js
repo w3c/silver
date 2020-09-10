@@ -4,16 +4,17 @@ function titleToPathFrag (title) {
 	return title.toLowerCase().replace(/[\s,]+/g, "-").replace(/[\(\)]/g, "");
 }
 
-function linkUnderstanding() {
-	var understandingBaseURI;
-	if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
-	else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
-	document.querySelectorAll('.sc').forEach(function(node){
-		var heading = node.firstElementChild.textContent;
+function linkHowTo() {
+	var howtoBaseURI = "https://www.w3.org/WAI/GL/WCAG3/2020/how-tos/";
+	//if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
+	//else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
+	document.querySelectorAll('.guideline').forEach(function(node){
+		//this is brittle, depends on how respec does the heading
+		var heading = node.firstElementChild.childNodes[1].textContent;
 		var pathFrag = titleToPathFrag(heading);
-		var el = document.createElement("div");
-		el.setAttribute("class", "doclinks");
-		el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">Understanding " + heading + "</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">How to Meet " + heading + "</a>";
+		var el = document.createElement("p");
+		el.setAttribute("class", "howto-link");
+		el.innerHTML = "<a href=\"" + howtoBaseURI + pathFrag + "/\">" + heading + " <span>how-to</span></a>";
 		node.insertBefore(el, node.children[1]);
 	})
 }
@@ -46,10 +47,15 @@ function addTextSemantics() {
 	})
 }
 
-// scripts after Respec has run
-document.respecIsReady.then(() => {
+function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
 		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
-	})
+	});	
+}
+
+// scripts after Respec has run
+document.respecIsReady.then(() => {
+	termTitles();
+	linkHowTo();
 });
