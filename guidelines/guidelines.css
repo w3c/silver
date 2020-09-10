@@ -36,3 +36,17 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 .howto-link span {
 	white-space: nowrap;
 }
+.guideline h3 bdi::before {
+	content: url(img/guideline.svg);
+	display: inline-block;
+	width: 2em;
+	margin-right: .5em;
+	vertical-align: text-top;
+}
+.outcome h4::before {
+	content: url(img/outcome.svg);
+	display: inline-block;
+	vertical-align: text-top;
+	margin-right: .5em;
+	width: 2em;
+}
