@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Method - Examples</title>
+	</head>
+	<body>
+		<header>
+			<h1>Examples</h1>
+		</header>
+		<main>
+			
+			<section class="example">
+				<h3>Page Structure Code Example</h3>
+				<p>The following HTML code yields a heading structure that corresponds to this list:</p>
+				<ol>
+					<li>Space Teddy Inc.<ol>
+							<li>Navigation Menu</li>
+							<li>An inside look at the new Space Teddy 6<ol>
+									<li>Table of Contents</li>
+									<li>Cotton Fur</li>
+									<li>Related Articles</li>
+									<li>Latest Articles</li>
+								</ol></li>
+						</ol></li>
+				</ol>
+				<pre>
+&lt;body>
+  &lt;header>
+    &lt;h1>Space Teddy Inc.&lt;/h1>
+  &lt;/header>
+  &lt;nav aria-labelledby="mainnavheader">
+    &lt;h2 id="mainnavheader">Navigation Menu&lt;/h2>
+    …
+  &lt;/nav>
+  &lt;main>
+    &lt;article>
+      &lt;h2>An inside look at the new Space Teddy 6&lt;/h2>
+      &lt;nav aria-labelledby="tocheader">
+        &lt;h3 id="tocheader">Table of Contents&lt;/h3>
+        …
+      &lt;/nav>
+      &lt;p>…&lt;/p>
+      &lt;h3>Cotton Fur&lt;/h3>
+      &lt;p>…&lt;/p>
+      &lt;aside aria-labelledby="relatedheader">
+        &lt;h3 id="relatedheader">Related Articles&lt;/h3>
+        &lt;ul>
+          &lt;li>…&lt;/li>
+        &lt;/ul>
+      &lt;/aside>
+    &lt;/article>
+    &lt;aside aria-labelledby="latestheader">
+      &lt;h3 id="latestheader">Latest Articles&lt;/h3>
+      &lt;ul>
+        &lt;li>…&lt;/li>
+      &lt;/ul>
+    &lt;/aside>
+  &lt;/main>
+&lt;/body>					
+				</pre>
+			</section>
+		</main>
+	</body>
+</html>
