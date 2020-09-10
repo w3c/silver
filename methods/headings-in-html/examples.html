@@ -9,7 +9,6 @@
 		</header>
 		<main>
 			
-			<section class="example">
 				<h2>Page Structure Code Example</h2>
 				<p>Three examples</p>
 				<ul>
@@ -17,7 +16,9 @@
 					<li><a href="#example2">Three column example</a> (Stock Market Up)</li>
 					<li><a href="#example3">ARIA example of level 7 heading</a> (Apples)</li>	
 				</ul>
-				<h3 id="example1">Simple example (Space Teddy Inc)</h3>
+			<section class="example" id="example1">
+				
+				<h3>Simple example (Space Teddy Inc)</h3>
 				<p>The following HTML code yields a heading structure that corresponds to this list:</p>
 				<ol>
 					<li>Space Teddy Inc.<ol>
@@ -65,9 +66,11 @@
   &lt;/main>
 &lt;/body>					
 				</pre>
-							<h3 id="example2">Three column example (Stock Market Up </h3>
+			</section>
+			<section class="example" id="example2"> 
+							<h3>Three column example (Stock Market Up </h3>
 							<p>In this example, the main content of the page is in the middle column of a 3-column page. The title of the main content matches the title of the page, and is marked as h1, even though it is not the first thing on the page. The content in the first and third columns is less important, and marked with h2. </p>
-							<p><strong>Note:</strong> It is important to note that the example code below is not intended to prescribe what level of heading should be used for a particular section of the web page. In the example, the layout could be presented with the first heading in each column at the same logical level (such as an h1), or as found in the example, where the logical level reflects its importance in relation to the main content.</p>
+							<p class="note"><strong>Note:</strong> It is important to note that the example code below is not intended to prescribe what level of heading should be used for a particular section of the web page. In the example, the layout could be presented with the first heading in each column at the same logical level (such as an h1), or as found in the example, where the logical level reflects its importance in relation to the main content.</p>
 
 <pre>
   &lt;head>
@@ -95,9 +98,10 @@
   &lt;/div>
   &lt;/body>
 </pre>
-
-						<h3 id="example3">ARIA example of level 7 heading </h3>
-						<p><span class="ednote">[Copied from ARIA12]</span> This example demonstrates how to implement a level 7 heading using role="heading" and the aria-level attribute. Since HTML only supports headings through level 6, there is no native element to provide these semantics.
+			</section>
+			<section class="example" id="example3">
+						<h3>ARIA example of level 7 heading </h3>
+						<p><span class="ednote">[Copied from ARIA12]</span> This example demonstrates how to implement a level 7 heading using role="heading" and the aria-level attribute. Since HTML only supports headings through level 6, there is no native element to provide these semantics.</p>
 <pre>
 ...
   &lt;h5>Fruit Trees  &lt;/h5>
