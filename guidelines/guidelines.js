@@ -33,6 +33,16 @@ function addOutcomeMarkers() {
 	})
 }
 
+function addOutcomeIndicators() {
+	document.querySelectorAll('.guideline').forEach(function(node){
+		var guidelineName = node.firstElementChild.childNodes[1].textContent;
+		var firstOutcome = node.querySelector("section");
+		var el = document.createElement("p");
+		el.innerHTML = "<strong>Outcomes for " + guidelineName + ":</strong>";
+		node.insertBefore(el, firstOutcome);
+	})
+}
+
 function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
@@ -45,5 +55,6 @@ document.respecIsReady.then(() => {
 	termTitles();
 	addGuidelineMarkers();
 	addOutcomeMarkers();
+	addOutcomeIndicators();
 	linkHowTo();
 });
