@@ -60,12 +60,9 @@ function termTitles() {
 
 function removeDraftMethodLinks() {
 	document.querySelectorAll('.method-link').forEach(function(node){
-		link = node.querySelector('a');
-		if (link) {
-			uri = link.href;
-			if (!uri.startsWith("https://www.w3.org")) {
-				node.innerHTML = link.textContent;	
-			}
+		uri = node.href;
+		if (!uri.startsWith("https://www.w3.org")) {
+			node.parentElement.innerHTML = node.textContent;	
 		}
 	});
 }
