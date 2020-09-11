@@ -1,8 +1,18 @@
 .summary {
-	margin: 2em;
+	margin: 3em;
 	padding: 1em;
 	color: #404040;
 	border: medium solid #d9d9d9;
+}
+.summary::before {
+	content: url(img/summary.svg);
+	display: block;
+	vertical-align: text-top;
+	width: 2em;
+	position: relative;
+	left: -4em;
+	float: left;
+	margin-right: -3em;
 }
 figure {
 	float: right;
