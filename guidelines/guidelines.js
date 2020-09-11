@@ -58,6 +58,18 @@ function termTitles() {
 	});	
 }
 
+function removeDraftMethodLinks() {
+	document.querySelectorAll('.method-link').forEach(function(node){
+		link = node.querySelector('a');
+		if (link) {
+			uri = link.href;
+			if (!uri.startsWith("https://www.w3.org")) {
+				node.innerHTML = link.textContent;	
+			}
+		}
+	});
+}
+
 // scripts after Respec has run
 document.respecIsReady.then(() => {
 	termTitles();
@@ -66,4 +78,5 @@ document.respecIsReady.then(() => {
 	addOutcomeIndicators();
 	addSummaryMarkers();
 	linkHowTo();
+	removeDraftMethodLinks();
 });
