@@ -43,6 +43,16 @@ function addOutcomeIndicators() {
 	})
 }
 
+function addMethodIndicators() {
+	document.querySelectorAll('.outcome').forEach(function(node){
+		var outcome = node.querySelector('h4');
+		var methodList = node.querySelector('ol');
+		var el = document.createElement("p");
+		el.innerHTML = "<strong>Methods for " + outcome.innerHTML + ":</strong>";
+		node.insertBefore(el, methodList);
+	})
+}
+
 function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
 		var el = document.createElement("p");
@@ -73,6 +83,7 @@ document.respecIsReady.then(() => {
 	addGuidelineMarkers();
 	addOutcomeMarkers();
 	addOutcomeIndicators();
+	addMethodIndicators();
 	addSummaryMarkers();
 	linkHowTo();
 	removeDraftMethodLinks();
