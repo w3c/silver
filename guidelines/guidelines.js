@@ -43,6 +43,14 @@ function addOutcomeIndicators() {
 	})
 }
 
+function addSummaryMarkers() {
+	document.querySelectorAll('.summary').forEach(function(node){
+		var el = document.createElement("p");
+		el.innerHTML = "<strong>Simplified Summary:</strong>";
+		node.insertBefore(el, node.childNodes[0]);
+	})
+}
+
 function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
@@ -56,5 +64,6 @@ document.respecIsReady.then(() => {
 	addGuidelineMarkers();
 	addOutcomeMarkers();
 	addOutcomeIndicators();
+	addSummaryMarkers();
 	linkHowTo();
 });
