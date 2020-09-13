@@ -10,38 +10,28 @@
 		<main>
 			<section id="outcome">
 				<h2>Outcome and Functional Categories</h2>
-				<p>This method supports the outcome {Outcome name and link}.</p>
+				<p>This method supports the outcome Text Alternatives for Functional Images.</p>
 				<p>This outcome relates to the following functional categories:</p>
 				<ul>
-					<li><strong>{Delete this line and those categories not applicable}</strong><li>
-					<li>Essential </li>
 					<li>Sensory - Vision &amp; Visual </li>
-					<li>Sensory - Hearing &amp; Auditory </li>
 					<li>Sensory Intersections </li>
-					<li>Physical - Mobility </li>
 					<li>Physical - Motor </li>
-					<li>Physical &amp; Sensory Intersections </li>
-					<li>Speech </li>
-					<li>Cognitive - Attention </li>
 					<li>Cognitive - Language &amp; Literacy </li>
-					<li>Cognitive - Learning </li>
-					<li>Cognitive - Memory </li>
-					<li>Cognitive - Executive </li>
-					<li>Cognitive - Mental Health </li>
 					<li>Cognitive &amp; Sensory Intersections </li>
-					<li>Independence </li>
 				</ul>
 			</section>
 			<section id="technical">
 				<h2>Technical description</h2>
-				{detailed description of the method, including instructions to implement that don't depend on examples}
+				<ul>
+					<li>Functional images are used to initiate actions rather than to convey information. They are used in buttons, links, and other interactive elements. The text alternative for the image should convey the action that will be initiated (the purpose of the image), rather than a description of the image. For instance, as shown in examples below, the text alternative should be “print this page” rather than “(image of a) printer”, “search” rather than “magnifying lens” or “Example.com homepage” rather than “Example.com logo”. </li>
+					<li>Missing or empty alt values create significant problems for screen reader users because functional images are essential to the functionality of the content. Screen readers will typically announce the image file name, the image URL, or the URL for the link destination, which is unlikely to help users understand the action that will be initiated by the image.</li>
+					<li>When an a element that is a hyperlink, or a button element, has no text content but contains one or more images, include text in the alt attribute(s) that together convey the purpose of the link or button.</li>
+				</ul>
+				<p>from <a href="https://www.w3.org/WAI/tutorials/images/functional/">WAI Tutorials - Images - Functional Images</a>.</p>
 			</section>
 			<section id="dependencies">
 				<h2>Dependencies</h2>
 				<p>None</p>
-				<ul>
-					<li>{list of other methods that must be used along with this one} </li>
-				</ul>
 			</section>
 		</main>
 	</body>
