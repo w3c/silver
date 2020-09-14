@@ -99,12 +99,12 @@
 		<section class="informative">
 			<h2>Structure of these guidelines</h2>
 			<aside class="summary" role="complementary">
-				<p>The WCAG 3.0 guidelines evolved by focusing on the diverse needs of people with disabilities. We studied ways the designed digital context may create barriers for people. </p>
-				<p>Our research led to cataloging users’ functional needs. That is, what in the designed context could be changed to reduce barriers and promote ease of use?  </p>
+				<p>The WCAG 3.0 guidelines focus on the diverse needs of people to use digital content. Each guideline helps reduce the barriers that "dis-able" people. </p>
 				<p>The guidelines highlight users’ functional needs, such as the need for contrast. We elaborate on the advice by specifying practices that reduce barriers. The results of using these practices can be tested. We offer a variety of tests to rate how well user needs have actually been met. </p>
 				<p><strong>How is the advice organized?</strong></p>
 				<p>To help make the advice usable, we structured it in layers:</p>
 				<ul>
+					<li><strong>Functional needs</strong>: a way to express the condition that people encounter.</li>
 					<li><strong>Functional categories</strong>: high level groupings of disabilities to aid in testing and remediating technology. Similar to functional performance criteria in Section 508 and functional performance statements in EN 301 549.  </li>
 					<li><strong>Guidelines</strong>: related solutions to functional needs that cross technologies and functional categories</li>
 					<li><strong>How-to information:</strong> plain language advice by guideline on adapting content to meet users’ functional needs including information on getting started and how guidelines apply across technologies.</li>
@@ -118,7 +118,7 @@
 				<img height="503" src="img/wcag3-structure.png" width="475" />
 				<figcaption>Structure of WCAG 3 Guidance</figcaption>
 			</figure>
-			<p>WCAG 3 has several layers and types of content with interrelationships. <a href="#guidelines-structure-diagram">Figure 1</a> shows the layers.  <span id="guidelines-structure-description">Functional needs are grouped into functional categories. These combine with guidelines to inform the outcomes. How-to documents are information about the guidelines. Methods are specific to technology and include sections of description, examples, tests, and scoring. The scoring section information is used to calculate the overall score for the optional conformance claim. The score in each functional category as well as an overall score determines conformance at a level of bronze. If bronze level conformance is reached, then scores against holistic tests determines conformance at a level of silver or gold. Tags will be applies to guidelines and methods. </span></p>
+			<p>WCAG 3 has several layers and types of content with interrelationships. <a href="#guidelines-structure-diagram">Figure 1</a> shows the layers.  <span id="guidelines-structure-description">Functional needs are grouped into functional categories. These combine with guidelines to inform the outcomes. How-to documents are information about the guidelines. Methods are specific to technology and include sections of description, examples, tests, and scoring. The scoring section information is used to calculate the overall score for the optional conformance claim. The score in each functional category as well as an overall score determines conformance at a level of bronze. If bronze level conformance is reached, then scores against holistic tests determines conformance at a level of silver or gold. Tags will be applied to guidelines and methods. </span></p>
 			<section>
 				<h3>Functional needs</h3>
 				<p>The development of WCAG 3 guidelines starts with <a>functional needs</a>. A functional need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional needs are applied to specific topics (for example: contrast, forms, readability, and more)  to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a href="#outcomes">outcomes</a>, which state the conditions to test whether the functional needs have been met. Functional needs are documented in the how-tTos, supplementary material accompanying the guidelines. </p>
@@ -129,7 +129,6 @@
 				<h3>Functional categories</h3>
 				<p>Functional categories of disabilities group the functional needs of users with disabilities. Functional categories are used when reporting test results in the optional conformance claim. </p>
 				<p class="example">Example: Vision and Visual</p>
-				<p class="ednote">The work of cataloging functional needs is still in process and will continue after the First Public Working Draft.  Those interested can see more information in this draft Google document <a href="https://docs.google.com/document/d/1eJkgXqbh7dx3uD6XAy8XAANmwfbbVZ5GKb_gbsUdkVs/">Functional Needs - Expanded</a></p>
 			</section>
 			<section>
 				<h3>Guidelines</h3>
@@ -139,29 +138,31 @@
 			<section>
 				<h3>How-to information</h3>
 				<p>The <a>How-To</a> content provides explanatory material for each guideline that applies across technologies. This guidance explains how to apply the concepts presented in the guidelines for non-technical readers. This plain language resource includes information on getting started, who the guideline helps and how, as well information for project managers, designers and developers.  </p>
-				<p class="example">Example: Provides semantic structure that conveys a sense of hierarchy </p>
+				<figure id="howTo_screenshot" aria-labelledby="howTo_screenshot_description">
+				<img width="608" height="267" src="img/StructuredContent_How-To.png" />
+				<figcaption>Example screenshot of a How-To for Structured Content</figcaption>
+				</figure>
+				<p id="howTo_screenshot_description">The example of a How-To for Structured Content provides basic information organized by tabs to help people get started with accessibility for structured content, plan for implementing accesible structured content across a project, design accessible structured content, and basics for developers new to accessibility of structured content. It also includes information on examples, the outcomes for meeting the guideline, and resources.  </p>
 			</section>
 			<section>
 				<h3>Outcomes</h3>
 				<p>Outcomes are the results of practices that reduce or eliminate barriers that people with disabilities experience. Outcomes form the basis of a flexible and expansive architecture for accessibility guidelines that relates closely to the needs of people with disabilities. Specific tests can be used to assess the accessibility of common technologies and each outcome also includes methods that can be used to assess proprietary and new technologies. Outcomes are designed for developers, testers, and other technical experts.</p>
 				<p>Outcomes are <a>normative</a>. They are located in the normative section of specific guidelines. </p>
-				<p class="example">Example: Headings (HTML &amp; ARIA)</p>
 				<p class="example">Example: Provides semantic structure that conveys a sense of hierarchy </p>
 			</section> 
 			<section>
 				<h3>Methods</h3>
 				<p>Each outcome has one or more <a href="#methods">methods</a>. Methods are technology specific or technology agnostic depending on the outcome. When technology specific methods are provided, the outcomes also include one or more methods for use with technology that is emerging, proprietary or does not yet have a method written. </p>
-				<p>The methods include detailed information on techniques to meet the outcome, code samples, working examples, as well as information about testing and scoring. Methods are designed for developers, testers, and other technical experts.</p>
-				<blockquote>Example: Headings (HTML and ARIA)</blockquote>
-				<p class="note">While WCAG 3 Techniques have some similarity with WCAG 2 Techniques, they are not the same and are not interchangable.</p>
-				<div class="example"><p>Example: There are two ways to approach providing structure in HTML:</p> 
-					<ul><li>Native HTML semantic tags, such as h3 and main</li>
-						<li>ARIA attributes for HTML tags</li> 
-						<li>Use one or the other.  Don’t use both in the same tag or element. </li></ul>
-				</div>
+				<p class="example">Example: Headings (HTML and ARIA)</p>
+				<figure id="method_screenshot" aria-labelledby="method_screenshot_description">
+				<img width="411" height="236" src="img/MethodHeadingsHTML.png" />
+				<figcaption>Example screenshot of a How-To for Structured Content</figcaption>
+				</figure>
+				<p id="method_screenshot_description">The methods include detailed information on techniques to meet the outcome, code samples, working examples, resources, as well as information about testing and scoring. </p>
 				<p>Tests provide ways to check that methods and techniques have been followed. Tests include step-by-step instructions on evaluating the method based on the technology being used. </p>
-				<p>Scoring is designed to be more flexible than in WCAG 2.x in order to allow more user needs of people with disabilities to be included in the guidelines.  Tests can include true /false evaluation or various types of rating scales as appropriate for the outcome and technology.  Tests may vary by technology as needed.</p>  				
+				<p>Scoring is designed to be flexible in order to allow more functional needs of people with disabilities to be included in the guidelines.  Tests can include true /false evaluation or various types of rating scales as appropriate for the outcome and technology.  Tests may vary by technology as needed.</p>  				
 				<p>Each method includes information on how to score individual instances of the test, and how to score the Outcome in an optional <a href="#conformance-claims">Conformance Claim</a>. </p>
+				<p class="note">While WCAG 3 Methods have some similarity with WCAG 2 Techniques, they are not the same and are not interchangable.</p>
 			</section>
 			
 			<section>
