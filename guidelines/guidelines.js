@@ -4,52 +4,87 @@ function titleToPathFrag (title) {
 	return title.toLowerCase().replace(/[\s,]+/g, "-").replace(/[\(\)]/g, "");
 }
 
-function linkUnderstanding() {
-	var understandingBaseURI;
-	if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
-	else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
-	document.querySelectorAll('.sc').forEach(function(node){
-		var heading = node.firstElementChild.textContent;
+function linkHowTo() {
+	var howtoBaseURI = "https://www.w3.org/WAI/GL/WCAG3/2020/how-tos/";
+	//if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
+	//else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
+	document.querySelectorAll('.guideline').forEach(function(node){
+		//this is brittle, depends on how respec does the heading
+		var heading = node.firstElementChild.childNodes[1].textContent;
 		var pathFrag = titleToPathFrag(heading);
-		var el = document.createElement("div");
-		el.setAttribute("class", "doclinks");
-		el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">Understanding " + heading + "</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">How to Meet " + heading + "</a>";
+		var el = document.createElement("p");
+		el.setAttribute("class", "howto-link");
+		el.innerHTML = "<a href=\"" + howtoBaseURI + pathFrag + "/\">" + heading + " <span>how-to</span></a>";
 		node.insertBefore(el, node.children[1]);
 	})
 }
 
-function addTextSemantics() {
-	// put brackets around the change marker
-	document.querySelectorAll('p.change').forEach(function(node){
-		var change = node.textContent;
-		node.textContent = "[" + change + "]";
+function addGuidelineMarkers() {
+	document.querySelectorAll('.guideline').forEach(function(node){
+		var guideline = node.querySelector('p');
+		guideline.innerHTML = "<strong>Guideline:</strong> " + guideline.innerHTML;
 	})
-	// put level before and parentheses around the conformance level marker
-	document.querySelectorAll('p.conformance-level').forEach(function(node){
-		var level = node.textContent;
-		node.textContent = "(Level " + level + ")";
+}
+
+function addOutcomeMarkers() {
+	document.querySelectorAll('.outcome').forEach(function(node){
+		var outcome = node.querySelector('p');
+		outcome.innerHTML = "<strong>Outcome:</strong> " + outcome.innerHTML;
 	})
-	// put principle in principle headings
-	document.querySelectorAll('section.sc h2 bdi.secno').forEach(function(node){
-		var num = node.textContent;
-		node.textContent = "Principle " + num;
+}
+
+function addOutcomeIndicators() {
+	document.querySelectorAll('.guideline').forEach(function(node){
+		var guidelineName = node.firstElementChild.childNodes[1].textContent;
+		var firstOutcome = node.querySelector("section");
+		var el = document.createElement("p");
+		el.innerHTML = "<strong>Outcomes for " + guidelineName + ":</strong>";
+		node.insertBefore(el, firstOutcome);
 	})
-	// put guideline in GL headings
-	document.querySelectorAll('section.guideline h3 bdi.secno').forEach(function(node){
-		var num = node.textContent;
-		node.textContent = "Guideline " + num;
+}
+
+function addMethodIndicators() {
+	document.querySelectorAll('.outcome').forEach(function(node){
+		var outcome = node.querySelector('h4');
+		var methodList = node.querySelector('ol');
+		var el = document.createElement("p");
+		el.innerHTML = "<strong>Methods for " + outcome.innerHTML + ":</strong>";
+		node.insertBefore(el, methodList);
 	})
-	// put success criterion in SC headings
-	document.querySelectorAll('section.sc h4 bdi.secno').forEach(function(node){
-		var num = node.textContent;
-		node.textContent = "Success Criterion " + num;
+}
+
+function addSummaryMarkers() {
+	document.querySelectorAll('.summary').forEach(function(node){
+		var el = document.createElement("p");
+		el.innerHTML = "<strong>Simplified Summary:</strong>";
+		node.insertBefore(el, node.childNodes[0]);
 	})
+}
+
+function termTitles() {
+	// put definitions into title attributes of term references
+	document.querySelectorAll('.internalDFN').forEach(function(node){
+		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
+	});	
+}
+
+function removeDraftMethodLinks() {
+	document.querySelectorAll('.method-link').forEach(function(node){
+		uri = node.href;
+		if (!uri.startsWith("https://www.w3.org")) {
+			node.parentElement.innerHTML = node.textContent;	
+		}
+	});
 }
 
 // scripts after Respec has run
 document.respecIsReady.then(() => {
-	// put definitions into title attributes of term references
-	document.querySelectorAll('.internalDFN').forEach(function(node){
-		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
-	})
+	termTitles();
+	addGuidelineMarkers();
+	addOutcomeMarkers();
+	addOutcomeIndicators();
+	addMethodIndicators();
+	addSummaryMarkers();
+	linkHowTo();
+	removeDraftMethodLinks();
 });
