@@ -11,16 +11,53 @@
 			<section id="atomic">
 				<h2>Atomic Tests</h2>
 				<ul>
-					<li>{list of links to tests}</li>
+					<li><a href="https://act-rules.github.io/rules/qt1vmo">ACT-Rules: Image accessible name is descriptive</a></li>
+					<li><a href="https://act-rules.github.io/rules/23a2a8">ACT-Rules: Image has non-empty accessible name</a></li>
 				</ul>
 				<section>
 					<h3>Test Name</h3>
 					<ol>
-						<li>Step 1</li>
-						<li>CStep 2</li>
+						<li>This test is measured by the number of the following elements only for “Functional Images” in the HTML document
+						<ul>
+							<li>img elements</li>
+							<li>input elements with type=”image”</li>
+						</ul>
+						</li>
+						<li>Percentage (# passed/total # of img elements for “Functional Images”)</li>
 					</ol>
+					<section>
+					<h4>Procedure [for HTML]</h4>
+					<ol>
+						<li>Examine each img element in the content </li>
+						<li>Check that each img element which conveys meaning contains an alt attribute. </li>
+						<li>If the image contains text that is not purely decorative, the value of the alt attribute is the same as the text. </li>
+						<li>If it is within a link together with text, check that an img element within an a element has either a null alt attribute value or a value that supplements the link text and describes the image </li>
+						<li>If it is a button, check that the text alternative indicates the button's function. </li>
+					</ol>
+					</section>
 					<h4>Expected Results</h4>
-					<p>Check #2 is true. </p>
+					<p>Checks #1 and #2 are true</p>
+					<ul>
+						<li>If a functional image is not purely decorative and CSS is used instead of an img or input (type=”image”) element, that does not pass.
+						<li>If a functional image is not purely decorative and the img or input (type=”image”) element doesn’t have an alt attribute, that does not pass. 
+						<li>If a functional image is not purely decorative and the value of the alt attribute of the img or input (type=”image”) element is not the equivalent of the image, that does not pass. 
+
+					</ul>
+					</section>
+					<section>
+					<h4>Procedure [Technology Agnostic]</h4>
+					<ol>
+						<li>Examine each functional image in the content. </li>
+						<li>Check that each functional image that conveys meaning has its text alternative. </li>
+						<li>If the image contains text that is not purely decorative, the text alternative contains the same text.  </li>
+						<li>If it is within a link together with text, check that it is implemented to be ignored by assistive technology or the text alternative describes the image and supplements the link text. </li>
+						<li>If it is a button, check that the text alternative indicates the button's function. </li>
+					</ol>
+					</section>
+					<section>
+					<h4>Expected Results</h4>
+					<p>Checks #2 and #3, or #2 and #4, or #2 and #5 are true.</p>
+					</section>
 				</section>
 			</section>
 			<section id="holistic">
