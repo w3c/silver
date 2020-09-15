@@ -3,6 +3,7 @@
 	padding: 1em;
 	color: #404040;
 	border: medium solid #d9d9d9;
+	background-color: #F3F3F3;
 }
 .summary::before {
 	content: url(img/summary.svg);
@@ -13,6 +14,13 @@
 	left: -4em;
 	float: left;
 	margin-right: -3em;
+}
+.summary h2 {
+	margin-top: 0;
+}
+.summaryEnd {
+	text-align: center;
+	font-weight: bold;
 }
 figure {
 	float: right;
