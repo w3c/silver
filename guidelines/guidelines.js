@@ -4,6 +4,10 @@ function titleToPathFrag (title) {
 	return title.toLowerCase().replace(/[\s,]+/g, "-").replace(/[\(\)]/g, "");
 }
 
+function findHeading(el) {
+	return el.querySelector('h1') || el.querySelector('h2') || el.querySelector('h3') || el.querySelector('h4') || el.querySelector('h5') || el.querySelector('h6');
+}
+
 function linkHowTo() {
 	var howtoBaseURI = "https://www.w3.org/WAI/GL/WCAG3/2020/how-tos/";
 	//if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
@@ -55,9 +59,13 @@ function addMethodIndicators() {
 
 function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
+		var heading = findHeading(node.parentElement).childNodes[1].textContent;
 		var el = document.createElement("p");
-		el.innerHTML = "<strong>Simplified Summary:</strong>";
-		node.insertBefore(el, node.childNodes[0]);
+		el.className = "summaryEnd";
+		el.innerHTML = "~ End of summary for " + heading + " ~";
+		node.appendChild(el);
+		
+		node.setAttribute("role", "region");
 	})
 }
 
@@ -77,6 +85,14 @@ function removeDraftMethodLinks() {
 	});
 }
 
+function updateSummaryTitles() {
+	document.querySelectorAll('.summary').forEach(function(node){
+		var heading = findHeading(node.parentElement).childNodes[1].textContent;
+		var header = findHeading(node);
+		header.childNodes[0].textContent = "Summary for " + heading;
+	});
+}
+
 // scripts after Respec has run
 document.respecIsReady.then(() => {
 	termTitles();
@@ -85,6 +101,7 @@ document.respecIsReady.then(() => {
 	addOutcomeIndicators();
 	addMethodIndicators();
 	addSummaryMarkers();
+	updateSummaryTitles();
 	linkHowTo();
 	removeDraftMethodLinks();
 });
