@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>How-To - Design</title>
+	</head>
+	<body>
+		<header>
+			<h1>Design</h1>
+		</header>
+		<main>
+			<section id="responsibilities">
+				<h2>Design responsibilities</h2>
+				<section>
+					<h3>Design considerations for displays &amp; devices</h3>
+
+					<p>Much of classical design theory for print is built around readability, and can provide a solid foundation for good interactive design. Nevertheless, design for displays and devices present unique challenges in terms of perceived contrast and readability.</p>
+					<p>In physical printing where there is often only a single color ink for text, even in 4 color printing, design contrast is modulated by adjusting the font weight &amp; size. With CSS, any color can be selected in addition to font weight &amp; size, but this greater flexibility carries with it the need to mindful of end user perceptions. </p>
+					<p>For instance, using a thin light-weight font combined with a low contrast color choice can make text literally unreadable. A suggested best practice is to either modulate contrast by maintaining relative weight and adjusting font colors, or maintaining font colors and adjusting weight—but not both.</p>
+					<p>Classical color theory does not always apply directly to backlit or otherwise illuminated displays. Nevertheless the old adage "make it right in black and white" is still good practice, as it is most important for readability to have good luminance contrast (i.e. light vs dark). Luminance contrast is perceived three times more than hue contrast. Good design will not rely on a change in hue &amp; saturation (color contrast).</p>
+
+
+					<ul>
+						<li>Smaller, lighter weight fonts require higher contrast colors.</li>
+						<li>The CSS property "Font-Smooth:" should be set to auto (default), and <em>not "antialiased".</em>
+							<ul>
+								<li>This is especially true for normal weight fonts less than 24px, and light fonts less than 48px. </li>
+								<li>The "antialiased" mode in font smoothing is actually a blending that reduces contrast by 30% or more.</li>
+								<li>If the faux "antialiasing" mode is to be used, take note that normal and thin fonts will need to have their CSS colors set to a 30% higher APCA contrast.</li>
+							</ul></li>
+						<li>Certain color combinations can be very problematic on a computer monitor or mobile device. <ul>
+								<li>Never rely on hue alone for differentiating details. Adequate luminance contrast is required.</li>
+								<li>The green in a monitor makes up the vast majority of luminance (light), so it will usually be a significant part of the lighter colors.</li>
+								<li>Pure blues should typically be the darkest of two colors <ul>
+										<li>To use blue as the lighter of two colors, green needs to be added, otherwise there will be insufficient contrast and poor readability.</li>
+										<li>This is both due to the low contrast and due to the human eye seeing blue at a lower resolution than green and red.</li>
+										<li>The nature of blue light causes it to focus at a different location on the retina than red, so a pure red and a pure blue may "shimmer" when next to each other. </li>
+										<li>In the example below: Left, pure red (#F00) and a pure blue (#00D). Right, an equal amount of blue was added to the background which removes all detail from the blue channel.<br />
+											<div style="display: inline-block; margin: 0.25em 0; padding: 0.25em; color: #00D; background: #F00; font-size: 32px; font-weight: bold; border-radius: 0.5em;">BG #F00 TEXT #00D </div>
+											<div style="display: inline-block; margin: 0.25em 0; padding: 0.25em; color: #00D; background: #E0D; font-size: 32px; font-weight: bold; border-radius: 0.5em;"> BG #E0D TEXT #00D </div>
+										</li>
+										<li>For many people, reducing or avoiding details in the blue channel can prevent chromatic aberration or shimmer.</li>
+									</ul></li>
+								<li>Pure red (#F00) text on a pure black (#000) background is the bare minimum contrast for a 16px 400 weight (normal) standard font.</li>
+							</ul></li>
+
+						<li>Different font designs affect perceived contrast and readability. <ul>
+								<li>While different font families use weights such as 400 or 700, those are not standardized in terms of contrast.</li>
+								<li>Different families also vary in terms of x-height, so a 16px font in one family may be smaller or larger than a 16px font in another.</li>
+								<li>Other font design attributes also create inconsistent perceived contrast between families.</li>
+								<li>It is useful to visually compare a font family against the standard fonts used in the visual contrast matrix and take note of the differences in size, weight and the perceived contrast.</li>
+							</ul></li>
+
+						<li>When placing text in a container with a significantly different background color than the overall page, it is typically necessary to add padding around the text, so the eye can "locally adapt" to the text and container background.</li>
+						<li>Line spacing and letter spacing (leading and tracking), line length, and effects such as transparency and shadow all have an effect on perceived contrast and readability.</li>
+						<li>Generally speaking, blocks or columns of text should be set to the highest contrast colors, especially for thin fonts. Contrast can be reduced for big bold headlines to reduce glare. </li>
+					</ul>
+				</section>
+				<section>
+
+					<h3>Color Examples</h3>
+					<div class="testBox" style="padding: 0.65em; color: #00A; background: #000;">
+
+						<p>#00F <span style="color: #00F;">This is maximum blue on black. Hard to read. ☆ ★ ◯ ♥ ☎ </span></p>
+						<p>#07F <span style="color: #07F;">Add some green for a readable blue. ☆ ★ ◯ ♥ ☎ </span></p>
+						<p>#F00 <span style="color: #F00;">This is pure red on black, a minimum contrast. ☆ ★ ◯ ♥ ☎ </span></p>
+						<p>#090 <span style="color: #090;">This is green on black at a minimum contrast. ☆ ★ ◯ ♥ ☎ </span></p>
+						<p>#D0F <span style="color: #D0F;">This is purple; red and blue with no green. ☆ ★ ◯ ♥ ☎ </span></p>
+						<p>#0F0 <span style="color: #0F0;">This is maximum green, no blue. ☆ ★ ◯ ♥ ☎ ;</span></p>
+						<p>#FF0 <span style="color: #FF0;">This is maximum yellow, no blue. ☆ ★ ◯ ♥ ☎ </span></p>
+					</div>
+
+					<div class="testBox" style="padding: 0.65em; color: #00A; background: #EEA">
+						<p>#00A This is medium blue on a #EEA beige with equal blue (this removes all detail in the blue channel for reduced glare). ☆ ★ ◯ ♥ ☎</p>
+					</div>
+
+					<div class="testBox" style="padding: 0.65em; color: #00F; background: #EE0">
+						<p>#00F This is maximum blue on a #EE0 yellow. Do you notice the glare or shimmer compared to the above example? ☆ ★ ◯ ♥ ☎</p>
+					</div>
+				</section>
+			</section>
+			<section id="tips">
+				<h2>Designer tips</h2>
+				<ol>
+					<li>Keep in mind that web content is displayed on a wide variety of display types, devices, and resolutions. It is important to test how content renders on different browsers and systems. 
+						<ul><li>If you normally work on a "retina" display it is particularly important to examine content on a normal display.</li>
+							<li>Different browsers and operating systems render content differently, especially features such as shadows and other effects.</li>
+							<li>Don't rely on "developer mode, mobil emulation" in a desktop browser, verify with different actual devices.</li>
+						</ul></li>
+					<li>The sRGB colorspace is the standard for web content, and the standard for accessibility. This should be the default colorspace, and any other colorspaces should be a selectable user option.</li>
+					<li>Workspace is important. Variations in monitor calibration and ambient lighting will affect the final output. See the <a href="#section5">Develop Tab</a> for details on workplace setup.</li>
+				</ol>
+			</section>
+			<section id="users">
+				<h2>User testing and meaningful involvement</h2>
+				<p>The need for a beta period for testing designs with the input of end users cannot be understated. During planning, design, and development, familiarity with user interface controls may obscure elements that an enduser finds non-intuitive. It is important to identify these stumbling blocks early in design.</p>
+
+				<p>In the context of visual contrast and readability, this includes features where the user can adjust color or theme, and where the user may want to adjust font size or line spacing on their end.</p>
+			</section>
+		</main>
+	</body>
+</html>
