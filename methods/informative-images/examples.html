@@ -15,8 +15,6 @@
 				<li><a href="#example4">Images conveying an impression or emotion</a></li>
 				<li><a href="#example5">Images conveying file format</a></li>
 				<li><a href="#example6">Graphical representations: charts, diagrams, graphs, maps, illustrations</a></li>
-				<li><a href="#example7">Narrative text conveying processes or relationships</a></li>
-				<li><a href="#example8">Integrating the text alternative into the surrounding text</a></li>
 			</ul>
 			<section class="example1">
 				<h3> Images used to label other content</h3>
@@ -98,36 +96,7 @@
 &lt;img src="piechart.gif" alt="A pie chart is titled Browser Share. The pie chart shows the percentages of users who prefer different browsers: Firefox 40%, Internet Explorer 25%, Chrome 25%, Safari 6% and Opera 4%.">
 </pre>
 			</section>
-			<section class="example7">
-				<h3>Narrative text conveying processes or relationships</h3>
-				<p>This image has a very technical description that is almost too long for a text alternative.  If the alternative is much longer, it would be better handled in a longdesc or aria-describedby attribute. </p>
-				<p><img src="img/network.png" alt="example of a flow chart" />
-<pre>
-&lt;p>In the common case, the data handled by the tokenization stage comes from the network, but it can also come from script.&lt;/p>
-&lt;p>&lt;img src="images/parsing-model-overview.svg" alt="The Network passes data to the Input Stream Preprocessor via the Byte Stream Decoder. The Input Stream Preprocessor then passes the data to the Tokenizer, which in turn sends it to the Tree Construction stage. From there, data goes to both the DOM and Script Execution. Script Execution is linked to the DOM, and, using document.write(), passes data to the Tokenizer via the Input Stream Preprocessor.">&lt;/p>
-<p class="ednote">This example and the next came from the WCAGWG version of HTML. Do we need different examples?</p>
-</pre>
-			</section>
-			<section class="example8">
-				<h3>Integrating the text alternative into the surrounding text</h3>
-				<p>When an unlabeled image is part of a narrative, the wording of the text alternative should match the wording of the surrounding text, based on reading order. The following two examples show good and bad solutions for inserting a text alternative into a story.</p>
-				<p>First, here's the good solution. This sample shows how the text alternative should just be what you would have put in the prose if the image had never existed. </p>
-<pre>
-&lt;p>
- You are standing in an open field west of a house.
- &lt;img src="house.jpeg" alt="The house is white, with a boarded front door.">
- There is a small mailbox here.
-&lt;/p>
-</pre>
-<p>Second, here's the bad solution. In this incorrect way of doing things, the alternative text is simply a description of the image, instead of a textual replacement for the image. The differences are subtle, but when the image isn't shown, the text doesn't flow as well as in the first example.</p>
-<pre>
-&lt;p>
- You are standing in an open field west of a house.
- &lt;img src="house.jpeg" alt="A white house, with a boarded front door.">
- There is a small mailbox here.
-&lt;/p>
-</pre>
-			</section>
+
 		</main>
 	</body>
 </html>
