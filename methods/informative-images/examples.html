@@ -9,14 +9,123 @@
 		</header>
 		<main>
 			<ul>
-				<li>{list of examples, unless using sub-sections, then delete this list}</li>
+				<li><a href="#example1">Images used to label other content</a></li>
+				<li><a href="#example2">Images used to supplement other content</a></li>
+				<li><a href="#example3">Images conveying succinct information</a></li>
+				<li><a href="#example4">Images conveying an impression or emotion</a></li>
+				<li><a href="#example5">Images conveying file format</a></li>
+				<li><a href="#example6">Graphical representations: charts, diagrams, graphs, maps, illustrations</a></li>
+				<li><a href="#example7">Narrative text conveying processes or relationships</a></li>
+				<li><a href="#example8">Integrating the text alternative into the surrounding text</a></li>
 			</ul>
-			<section class="example">
-				<h3>{Example Name}</h3>
-				{Use a copy of this section for each example if not using a bullet list of examples}
-				<p>{explanation}</p>
+			<section class="example1">
+				<h3> Images used to label other content</h3>
+				<p>This example shows two image icons – one of a telephone, one of a fax machine. A phone number follows each image. The user needs to know the purpose of each number. So, the text alternatives “Telephone” and “Fax” are used to identify the device associated with each number. </p>
+				<p><img src="img/phone.png" alt="Telephone" /> 0123 456 7890</p>
+				<p><img src="img/fax.png" alt="Fax" /> 0123 456 7891</p>
+
 <pre>
-&lt; 
+&lt;p>
+    &lt;img src="phone.png" alt="Telephone"> 0123 456 7890
+&lt;/p>
+&lt;p>
+    &lt;img src="fax.png" alt="Fax"> 0123 456 7891
+&lt;/p>
+</pre>
+<p>This example is from the <a href="https://www.w3.org/WAI/tutorials/images/informative/#images-used-to-label-other-information">Web Accessibility Tutorials Images</a>. </p>
+			</section>
+			<section class="example2">
+				<h3>Images used to supplement other content</h3>
+				<p>The following image shows a dog wearing a bell. The nearby text explains the purpose of the bell, but it does not explain how the dog actually wears the bell. A short text alternative can describe the information that is displayed, but not explained in the text. In this case, the text alternative is “A dog with a bell attached to its collar.” </p>
+				<p><img src="img/dog.png" alt="Dog with a bell attached to its collar." /></p>
+				<p>Off-duty guide dogs often wear a bell. Its ring helps the blind owner keep track of the dog’s location. </p>
+				<p><strong>Note:</strong> If the text included an explanation of how the dog wears a bell, the image might be considered redundant and therefore decorative. </p>
+<pre>
+&lt;p>
+    &lt;img src="dog.jpg" alt="Dog with a bell attached to its collar.">
+    Off-duty guide dogs often wear ...
+&lt;/p>
+</pre>
+				<p>This example is from the <a href="https://www.w3.org/WAI/tutorials/images/informative/#images-used-to-supplement-other-information">Web Accessibility Tutorials Images</a>. </p>
+			</section>
+			<section class="example3">
+				<h3>Images conveying succinct information</h3>
+				<p>This simple diagram shows how to unscrew a bottle cap. The information can be described in a short sentence: Push the cap down and turn it counter-clockwise.</p>
+				<p><img src="img/cap.png" alt="Push the cap down and turn it counter-clockwise." /></p>
+<pre>
+&lt;img src="cap.png" alt="Push the cap down and turn it counter-clockwise."> 
+</pre>
+				<p>This example is from the <a href="https://www.w3.org/WAI/tutorials/images/informative/#images-conveying-succinct-information">Web Accessibility Tutorials Images</a>. </p>
+			</section>
+			<section class="example4">
+				<h3>Images conveying an impression or emotion</h3>
+				<p>This photograph shows a man and woman sitting side by side. The man holds a boy in his lap, and they are all smiling. It’s a stock image. So, the individuals should not be identified. The image indicates that the website or the company it represents is family-friendly. The text alternative is “We’re family-friendly,” because this best describes the intended impression.</p>
+				<p><img src="img/family.png" alt="We’re family-friendly." /></p>
+</p>
+<pre>
+&lt;img src="family.png" alt="We’re family-friendly.">
+</pre>
+			<p>This example is from the <a href="https://www.w3.org/WAI/tutorials/images/informative/#images-conveying-an-impression-or-emotion">Web Accessibility Tutorials Images</a>. </p>
+			</section>
+			<section class="example5">
+				<h3>Images conveying file format</h3>
+				<p>In this example, a document is available to download in three different formats identified by format icons within text links. They have the text alternatives “HTML,” “Word document,” and “PDF” to distinguish the file type for each link.</p>
+				<p><a href="">2012 Annual report and accounts<img src="img/html5logo.png" alt="HTML"> (43KB)</a>, also available in <a href=""><img src="img/worddocument.png" alt="Word document">(254KB)</a> or <a href=""><img src="img/pdfdocument.png" alt="PDF">(353KB)</a> format. </p>
+				<p>Note: If the format identification were written as part of the link text, the image might be considered decorative and have a null (empty) alt attribute (alt=""). It could remain in the same link element (&lt;a>) as the text, to include it in the clickable area. </p>
+<pre>
+&lt;p>
+    &lt;a href="…">
+        2012 Annual report and accounts
+        &lt;img src="html5logo.png" alt="HTML"> (43KB)
+    &lt;/a>, also available in
+    &lt;a href="…">
+        &lt;img src="worddocument.png" alt="Word document"> (254KB)
+    &lt;/a>
+    or
+    &lt;a href="…">
+        &lt;img src="pdfdocument.png" alt="PDF"> (353KB)
+    &lt;/a>
+    format.
+&lt;/p>
+</pre>			
+				<p>This example is from the <a href="https://www.w3.org/WAI/tutorials/images/informative/#images-conveying-file-format">Web Accessibility Tutorials Images</a>. </p>
+			</section>
+			<section class="example6">
+				<h3>Graphical representations: charts, diagrams, graphs, maps, illustrations</h3>
+				<p>In the following example, we have an image of a pie chart, with text in the alt attribute representing the data shown in the pie chart. This example is from <a href="https://www.w3.org/TR/html53/semantics-embedded-content.html#graphical-representations-charts-diagrams-graphs-maps-illustrations">4.7.5.1.4. Graphical Representations: Charts, diagrams, graphs, maps, illustrations from HTML 5.3</a>. </p>
+				<p><img src="img/piechart.png" alt="A pie chart is titled Browser Share. The pie chart shows the percentages of users who prefer different browsers: Firefox 40%, Internet Explorer 25%, Chrome 25%, Safari 6% and Opera 4%." /></p>
+<pre>
+&lt;img src="piechart.gif" alt="A pie chart is titled Browser Share. The pie chart shows the percentages of users who prefer different browsers: Firefox 40%, Internet Explorer 25%, Chrome 25%, Safari 6% and Opera 4%.">
+</pre>
+			</section>
+			<section class="example7">
+				<h3>Narrative text conveying processes or relationships</h3>
+				<p>This image has a very technical description that is almost too long for a text alternative.  If the alternative is much longer, it would be better handled in a longdesc or aria-describedby attribute. </p>
+				<p><img src="img/network.png" alt="example of a flow chart" />
+<pre>
+&lt;p>In the common case, the data handled by the tokenization stage comes from the network, but it can also come from script.&lt;/p>
+&lt;p>&lt;img src="images/parsing-model-overview.svg" alt="The Network passes data to the Input Stream Preprocessor via the Byte Stream Decoder. The Input Stream Preprocessor then passes the data to the Tokenizer, which in turn sends it to the Tree Construction stage. From there, data goes to both the DOM and Script Execution. Script Execution is linked to the DOM, and, using document.write(), passes data to the Tokenizer via the Input Stream Preprocessor.">&lt;/p>
+<p class="ednote">This example and the next came from the WCAGWG version of HTML. Do we need different examples?</p>
+</pre>
+			</section>
+			<section class="example8">
+				<h3>Integrating the text alternative into the surrounding text</h3>
+				<p>When an unlabeled image is part of a narrative, the wording of the text alternative should match the wording of the surrounding text, based on reading order. The following two examples show good and bad solutions for inserting a text alternative into a story.</p>
+				<p>First, here's the good solution. This sample shows how the text alternative should just be what you would have put in the prose if the image had never existed. </p>
+<pre>
+&lt;p>
+ You are standing in an open field west of a house.
+ &lt;img src="house.jpeg" alt="The house is white, with a boarded front door.">
+ There is a small mailbox here.
+&lt;/p>
+</pre>
+<p>Second, here's the bad solution. In this incorrect way of doing things, the alternative text is simply a description of the image, instead of a textual replacement for the image. The differences are subtle, but when the image isn't shown, the text doesn't flow as well as in the first example.</p>
+<pre>
+&lt;p>
+ You are standing in an open field west of a house.
+ &lt;img src="house.jpeg" alt="A white house, with a boarded front door.">
+ There is a small mailbox here.
+&lt;/p>
 </pre>
 			</section>
 		</main>
