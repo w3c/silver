@@ -9,39 +9,40 @@
 		</header>
 		<main>
 			<section id="failures">
-				<h2>Critical Failures for informative images</h2>
+				<h2>Critical Failures</h2>
 				<ul>
-					<li>Any image without alternative text that stops people from completing a task</li>
+					<li>Any functional image without a text alternative is a critical failure.</li>
+					<li>Any informative image or image of text without a text alternative that stops people from completing a task on the path is a critical failure.</li>
+					<li>Decorative images do not have critical failures.</li>
 				</ul>
 			</section>
 			<section id="rating">
-				<h2>Rating for all images</h2>
-				<p>Calculating the rating</p>
+				<h2>Rating</h2>
 				<ul>
 					<li>The average of the adjectival rating of all the HTML Alternative Text Methods  OR </li>
-					<li>The number of images in the document that pass divided by the total  number of images in the document. Give the answer as a percentage.  (This allows for automated testing of images. </li> 
+					<li>The number of images in the document that pass divided by the total  number of images in the document. Give the answer as a percentage.  (This allows for automated testing of images.)  </li>
 				</ul>
 				<table class="rating-table">
-					<caption>Rating Scale</caption>
+					<caption>Rating Scale for All Images</caption>
 				<tr>
 					<td>Rating 0</td>
-					<td>Less than 60% of all images have appropriate alternative text OR there is a  critical failures on the path  </td>
+					<td>Less than 60% of all images have appropriate text alternatives OR there is <strong>one or more critical failures.</strong></td>
 				</tr>
 				<tr>
 					<td>Rating 1</td>
-					<td>60% - 69% of all images have appropriate alternative text and no critical failures on the path </td>
+					<td>60% - 69% of all images have appropriate text alternatives and no critical failures.  </td>
 				</tr>
 				<tr>
 					<td>Rating 2</td>
-					<td>70%-79% of all images have appropriate alternative text and no critical failures on the path</td>
+					<td>70%-79% of all images have appropriate text alternatives and no critical failures.</td>
 				</tr>
 				<tr>
 					<td>Rating 3</td>
-					<td>80%-94% of all images have appropriate alternative text and no critical failures on the path</td>
+					<td>80%-94% of all images have appropriate text alternatives and no critical failures.</td>
 				</tr>
 				<tr>
 					<td>Rating 4</td>
-					<td>95% to 100% of all images have appropriate alternative text and no critical failures on the path</td>
+					<td>95% to 100% of all images have appropriate text alternatives and no critical failures.</td>
 				</tr>
 				</table>
 			</section>
