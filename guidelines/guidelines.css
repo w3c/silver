@@ -64,3 +64,13 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	margin-right: .5em;
 	width: 2em;
 }
+.rating-table {
+	border: 1px solid black;
+	vertical-align: top;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+.rating-cell {
+	min-width: 76px;
+}
