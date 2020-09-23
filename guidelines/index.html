@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 25.16.2">
+<meta name="generator" content="ReSpec 25.16.5">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -153,17 +153,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-silver",
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/35422/status",
   "maxTocLevel": 4,
-  "publishDate": "2020-09-16",
-  "publishISODate": "2020-09-16T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 16 September 2020"
+  "publishDate": "2020-09-23",
+  "publishISODate": "2020-09-23T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 23 September 2020"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
-	<body class="h-entry informative"><div class="head">
+	<body class="h-entry informative toc-inline"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">W3C Accessibility Guidelines (WCAG) 3.0</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-09-16">16 September 2020</time>
+      <time class="dt-published" datetime="2020-09-23">23 September 2020</time>
     </h2>
     
     <dl>
@@ -229,7 +229,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p><p>
       Publication as an Editor's Draft does not imply endorsement
       by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
-    </p><p>This document may be updated, replaced or obsoleted at any time. It is inappropriate to cite this document as other than work in progress. </p><p></p><p>
+    </p><p>This is a draft document and may be updated, replaced
+  or obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress.
+  </p><p></p><p>
     
         This document was produced by a group
         operating under the
@@ -272,7 +275,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<p>Our aim for these updated guidelines is to make them usable for a broader audience. To that end, most of the changes focus on</p>
 				<ul>
 					<li>Improving usability of the guidelines – especially for people starting out in accessible design;</li>
-					<li>Supporting a wider range of accessibility needs – such as cognitive disabilities, whose needs aren’t readily tested by true/false success criteria;</li>
+					<li>Supporting a wider range of accessibility needs – such as users with cognitive disabilities, whose needs aren’t readily tested by true/false success criteria;</li>
 					<li>Keeping the guidelines current – by improving ways of maintaining them;</li>
 					<li>Considering new technological issues – such as publishing requirements and emerging technologies;</li>
 					<li>Designing the standard to be easy to update and maintain – especially as technologies evolve;</li>
@@ -314,7 +317,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			<section id="relationship-to-other-w3c-guidelines">
 				<h3 id="x1-2-relationship-to-other-w3c-guidelines"><bdi class="secno">1.2 </bdi>Relationship to other <abbr title="World Wide Web Consortium">W3C</abbr> guidelines<a class="self-link" aria-label="§" href="#relationship-to-other-w3c-guidelines"></a></h3>
 				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20" title="Web Content Accessibility Guidelines (WCAG) 2.0">WCAG20</a></cite>] was designed to be technology neutral, and has stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>] provide guidance for various types of software that assist people in writing accessible content. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis.</p>
-				<p>These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents and assistive technologies.</p>
+				<p>These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents, and assistive technologies.</p>
 				<ul>
 					<li>WCAG 3.0 incorporates but may not be all encompassing of WCAG, ATAG, and UAAG.</li>
 					<li>WCAG 3.0 is not backward compatible with WCAG 2.0, ATAG 2.0, and UAAG 2.0.</li>
@@ -329,14 +332,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<li><a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">Multiple ways to measure</a></li>
 					<li><a href="https://w3c.github.io/silver/requirements/#flexible-maintenance-and-extensibility">Flexible maintenance and extensibility</a></li>
 					<li><a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-display">Multiple ways to display</a></li>
-					<li><a href="https://w3c.github.io/silver/requirements/#technology-neutral">Technology Neutral</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#technology-neutral">Technology neutral</a></li>
 					<li><a href="https://w3c.github.io/silver/requirements/#readability-usability">Readability/Usability</a></li>
-					<li><a href="https://w3c.github.io/silver/requirements/#regulatory-environment">Regulatory Environment</a></li>
+					<li><a href="https://w3c.github.io/silver/requirements/#regulatory-environment">Regulatory environment</a></li>
 					<li><a href="https://w3c.github.io/silver/requirements/#motivation">Motivation</a></li>
 					<li><a href="https://w3c.github.io/silver/requirements/#scope-0">Scope</a></li>
 				</ul>
 			</section>
-			<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">The goal of WCAG 3.0 and supporting documents is to make digital products including web, ePub, PDF, mobile apps, and others more accessible and usable for all persons with disabilities. WCAG 3.0 strives to meet this goal by providing guidance on how to make accessing, interacting with, creating, and publishing content work well for people regardless of the disability they live with. WCAG 3.0 hopes to make it significantly easier for both beginners and experts to create accessible digital products. While the majority of guidelines need to be written, we seek wider public review on the approach presented here.</p></div>
+			<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">The goal of WCAG 3.0 and supporting documents is to make digital products including web, ePub, PDF, mobile apps, and others more accessible and usable for all persons with disabilities. WCAG 3.0 strives to meet this goal by providing guidance on how to make accessing, interacting with, creating, and publishing content work well for people regardless of ability or disability. The Silver Task Force hopes WCAG 3.0 will make it significantly easier for both beginners and experts to create accessible digital products. While the majority of guidelines need to be written, we seek wider public review on the approach presented here.</p></div>
 		</section>
 		<section class="informative" id="structure-of-these-guidelines">
 			<h2 id="x2-structure-of-these-guidelines"><bdi class="secno">2. </bdi>Structure of these guidelines<a class="self-link" aria-label="§" href="#structure-of-these-guidelines"></a></h2><p><em>This section is non-normative.</em></p>
@@ -484,7 +487,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<section class="outcome notoc"><h4 id="double-negatives">Double negatives<a class="self-link" aria-label="§" href="#double-negatives"></a></h4><p><strong>Outcome:</strong> Avoids double negatives.</p><p><strong>Methods for Double negatives<a class="self-link" aria-label="§" href="#double-negatives"></a>:</strong></p><ol><li>@@</li></ol></section>
 				<section class="outcome notoc"><h4 id="literal-language">Literal language<a class="self-link" aria-label="§" href="#literal-language"></a></h4><p><strong>Outcome:</strong> Uses literal language.</p><p><strong>Methods for Literal language<a class="self-link" aria-label="§" href="#literal-language"></a>:</strong></p><ol><li>@@</li></ol></section>
 				<section class="outcome notoc"><h4 id="nested-clauses">Nested Clauses<a class="self-link" aria-label="§" href="#nested-clauses"></a></h4><p><strong>Outcome:</strong> Avoids nested clauses</p><p><strong>Methods for Nested Clauses<a class="self-link" aria-label="§" href="#nested-clauses"></a>:</strong></p><ol><li>@@</li></ol></section>
-				<section class="outcome notoc"><h4 id="diacritical-marks">Diacritical marks<a class="self-link" aria-label="§" href="#diacritical-marks"></a></h4><p><strong>Outcome:</strong> Includes symbols and letters necessary to spell words correctly.</p><p><strong>Methods for Diacritical marks<a class="self-link" aria-label="§" href="#diacritical-marks"></a>:</strong></p><ol><li>@@</li></ol></section>
+				<section class="outcome notoc"><h4 id="diacritical-marks">Diacritical marks<a class="self-link" aria-label="§" href="#diacritical-marks"></a></h4><p><strong>Outcome:</strong> Include symbols and letters necessary to decipher the words for languages that require diacriticals with letters to understand the meaning of the word — like French, Spanish, Arabic, and Hebrew</p><p><strong>Methods for Diacritical marks<a class="self-link" aria-label="§" href="#diacritical-marks"></a>:</strong></p><ol><li>@@</li></ol></section>
 			</section>
 			<section class="guideline" id="captions">
 				<h3 id="x4-3-captions"><bdi class="secno">4.3 </bdi>Captions<a class="self-link" aria-label="§" href="#captions"></a></h3>
