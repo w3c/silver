@@ -64,13 +64,17 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	margin-right: .5em;
 	width: 2em;
 }
-.rating-table {
+.rating-table, .rating-table th, .rating-table td {
 	border: 1px solid black;
 	vertical-align: top;
 	border-collapse: collapse;
 	padding: 5px;
 }
-
-.rating-cell {
-	min-width: 76px;
+.rating-table th[scope=row] {
+	white-space: nowrap;
+}
+caption {
+	font-style: normal !important;
+	font-weight: bold;
+	font-size: 100% !important;
 }
