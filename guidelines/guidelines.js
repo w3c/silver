@@ -57,6 +57,25 @@ function addMethodIndicators() {
 	})
 }
 
+function addFailureMarkers() {
+	document.querySelectorAll('.failures').forEach(function(node){
+		var heading = findHeading(node.parentElement).childNodes[1].textContent;
+		var sectionHeader = node.childNodes[1];
+		sectionHeader.childNodes[0].textContent = "Critical failures for " + heading;
+	})
+}
+
+function addRatingMarkers() {
+	document.querySelectorAll('.rating').forEach(function(node){
+		var heading = findHeading(node.parentElement).childNodes[1].textContent;
+		var sectionHeader = node.childNodes[1];
+		sectionHeader.childNodes[0].textContent = "Rating for " + heading;
+		
+		var caption = node.querySelector('caption');
+		caption.innerHTML = "Rating scale for " + heading;
+	})
+}
+
 function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
 		var heading = findHeading(node.parentElement).childNodes[1].textContent;
@@ -100,6 +119,8 @@ document.respecIsReady.then(() => {
 	addOutcomeMarkers();
 	addOutcomeIndicators();
 	addMethodIndicators();
+	addFailureMarkers();
+	addRatingMarkers();
 	addSummaryMarkers();
 	updateSummaryTitles();
 	linkHowTo();

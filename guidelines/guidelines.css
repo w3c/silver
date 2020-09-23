@@ -31,13 +31,11 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 .outcome {
 	margin-left: 2rem;
 }
-.outcome h4 {
+.outcome h4, .failures h4, .rating h4 {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 100%;
 	color: #005A9C;
-	margin-top: 1rem;
-	margin-left: -2rem;
 }
 .howto-link {
 	float: right;
@@ -56,6 +54,10 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	width: 2em;
 	margin-right: .5em;
 	vertical-align: text-top;
+}
+.outcome h4 {
+	margin-top: 1rem;
+	margin-left: -2rem;
 }
 .outcome h4::before {
 	content: url(img/outcome.svg);
