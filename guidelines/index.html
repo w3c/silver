@@ -225,52 +225,55 @@
 				<h3>Text alternatives</h3>
 				<p class="guideline-text">Provide text alternative for non-text content.</p>
 				<section class="outcome notoc"><h4>Text alternative available</h4>
-				<p>A text alternative for non-text content is available via user agents and assistive technologies, which allows users who are unable to perceive and / or understand the non-text content to determine its meaning.</p>				
-					<ol>
-						<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/images-of-text/">Text alternative for Image of text (HTML)</a></li>
-						<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/functional-images/">Functional Images</a></li>
-					</ol>
-			</section>
-
-			<section class="failures notoc">
-				<h3>Critical Failures</h3>	
-				<ul>
-					<li> Any informative image without alternative text that stops people from completing a task.</li>
-				</ul>
-			</section>
-			<section class="rating notoc">
-				<h3>Rating</h3>
-				<p>Calculating the rating:</p>
-				<ul>
-					<li>The average of the adjectival rating of all the HTML Alternative Text Methods OR </li>
-					<li>The number of images in the document that pass divided by the total  number of images in the document. Give the answer as a percentage.  (This allows for automated testing of images.)</li>
-				</ul>
+				<p>A text alternative for non-text content is available via user agents and assistive technologies, which allows users who are unable to perceive and / or understand the non-text content to determine its meaning.</p>
+					<section class="methods">
+						<h5>Methods</h5>
+						<ol>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/images-of-text/">Text alternative for Image of text (HTML)</a></li>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/functional-images/">Functional Images</a></li>
+						</ol>
+					</section>
+					<section class="failures notoc">
+						<h5>Critical Failures</h5>	
+						<ul>
+							<li> Any informative image without alternative text that stops people from completing a task.</li>
+						</ul>
+					</section>
+					<section class="rating notoc">
+						<h5>Rating</h5>
+						<p>Calculating the rating:</p>
+						<ul>
+							<li>The average of the adjectival rating of all the HTML Alternative Text Methods OR </li>
+							<li>The number of images in the document that pass divided by the total  number of images in the document. Give the answer as a percentage.  (This allows for automated testing of images.)</li>
+						</ul>
+						
+						<table class="rating-table">
+							<caption>Rating Scale</caption>
+						<thead><tr><th scope="col">Rating</th><th scope="col">Criteria</th></tr></thead>
+						<tbody><tr>
+							<th scope="row">Rating 0</th>
+							<td>Less than 60% of all images have appropriate text alternatives OR there is a critical failures on the path.</td>
+						</tr>
+						<tr>
+							<th scope="row">Rating 1</th>
+							<td>60% - 69% of all images have appropriate text alternatives and no critical failures on the path</td>
+						</tr>
+						<tr>
+							<th scope="row">Rating 2</th>
+							<td>70%-79% of all images have appropriate text alternatives and no critical failures on the path</td>
+						</tr>
+						<tr>
+							<th scope="row">Rating 3</th>
+							<td>80%-94% of all images have appropriate text alternatives and no critical failures on the path</td>
+						</tr>
+						<tr>
+							<th scope="row">Rating 4</th>
+							<td>95% to 100% of all images have appropriate text alternatives and no critical failures on the path</td>
+						</tr>
+						</tbody></table>
+					</section>
+				</section>
 				
-				<table class="rating-table">
-					<caption>Rating Scale</caption>
-				<thead><tr><th scope="col">Rating</th><th scope="col">Criteria</th></tr></thead>
-				<tbody><tr>
-					<th scope="row">Rating 0</th>
-					<td>Less than 60% of all images have appropriate text alternatives OR there is a critical failures on the path.</td>
-				</tr>
-				<tr>
-					<th scope="row">Rating 1</th>
-					<td>60% - 69% of all images have appropriate text alternatives and no critical failures on the path</td>
-				</tr>
-				<tr>
-					<th scope="row">Rating 2</th>
-					<td>70%-79% of all images have appropriate text alternatives and no critical failures on the path</td>
-				</tr>
-				<tr>
-					<th scope="row">Rating 3</th>
-					<td>80%-94% of all images have appropriate text alternatives and no critical failures on the path</td>
-				</tr>
-				<tr>
-					<th scope="row">Rating 4</th>
-					<td>95% to 100% of all images have appropriate text alternatives and no critical failures on the path</td>
-				</tr>
-				</tbody></table>
-			</section>
 			</section>
 			<section class="guideline">
 				<h3>Clear words</h3>
