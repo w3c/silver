@@ -53,6 +53,8 @@ function addOutcomeMarkers() {
 		var parentHeader = findHeading(node.parentElement);
 		var outcomeHeader = findHeading(node);
 		outcomeHeader.innerHTML = "<span class=\"inserted\">" + textNoDescendant(parentHeader) + " outcome: </span>" + outcomeHeader.innerHTML;
+		
+		node.classList.add("notoc");
 	})
 }
 
