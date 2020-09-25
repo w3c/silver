@@ -21,7 +21,7 @@ script:
   - git clone --depth=1 --branch=gh-pages https://github.com/w3c/silver.git
   - cd silver
   - cp -r ../../w3c/silver/index.html ../../w3c/silver/assets ../../w3c/silver/prototypes ../../w3c/silver/requirements .
-  - cp -r ../../w3c/silver/guidelines/explainers ../../w3c/silver/guidelines/methods ../../w3c/silver/guidelines/img ../../w3c/silver/guidelines/guidelines.css ../../w3c/silver/guidelines/guidelines.js guidelines
+  - cp -r ../../w3c/silver/guidelines/explainers ../../w3c/silver/guidelines/methods ../../w3c/silver/guidelines/img ../../w3c/silver/guidelines/guidelines.css guidelines
   - cp -r ../../w3c/silver/subgroups .
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/silver/master/guidelines/index.html -o guidelines/index.html -f --retry 3
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/silver/master/guidelines/explainer.html -o guidelines/explainer.html -f --retry 3
