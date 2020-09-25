@@ -116,6 +116,21 @@ function removeDraftMethodLinks() {
 	});
 }
 
+function adjustNormativity() {
+	document.querySelectorAll('body > section').forEach(function(node){
+		if (node.classList.contains("informative")) {
+			var normativeStatement = node.querySelector('p');
+			normativeStatement.classList.add("informative-statement");
+			normativeStatement.innerHTML = "<em>This section (with its subsections) provides advice only and does not specify guidelines, meaning it is <a href=\"#dfn-informative\" class=\"internalDFN\" data-link-type=\"dfn\">informative</a> or non-normative.</em>";
+		} else {
+			var el = document.createElement("p");
+			el.className = "normative-statement";
+			el.innerHTML = "<em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href=\"#dfn-normative\" class=\"internalDFN\" data-link-type=\"dfn\">normative</a>.</em>";
+			node.insertBefore(el, findHeading(node).nextSibling);
+		}
+	});
+}
+
 function adjustDfnData() {
 	document.querySelectorAll('dfn').forEach(function(node){
 		var datalt = node.getAttributeNode("data-lt");
@@ -138,6 +153,7 @@ function preRespec() {
 
 // scripts after Respec has run
 function postRespec() {
+	adjustNormativity();
 	termTitles();
 	removeDraftMethodLinks();
 }
