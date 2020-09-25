@@ -59,7 +59,7 @@ function addOutcomeMarkers() {
 function addMethodMarkers() {
 	document.querySelectorAll('.methods').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
-		var methodHeader = findHeading(node);
+		var methodHeader = node.querySelector('summary');
 		methodHeader.innerHTML = "Methods for " + textNoDescendant(parentHeader);
 	})
 }
@@ -67,7 +67,7 @@ function addMethodMarkers() {
 function addFailureMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
-		var failureHeader = findHeading(node);
+		var failureHeader = node.querySelector('summary');
 		failureHeader.innerHTML = "Critical failures for " + textNoDescendant(parentHeader);
 	})
 }
@@ -75,7 +75,7 @@ function addFailureMarkers() {
 function addRatingMarkers() {
 	document.querySelectorAll('.rating').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
-		var sectionHeader = findHeading(node);
+		var sectionHeader = node.querySelector('summary');
 		sectionHeader.innerHTML = "Rating for " + textNoDescendant(parentHeader);
 		
 		var caption = node.querySelector('caption');
