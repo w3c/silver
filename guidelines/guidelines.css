@@ -31,7 +31,7 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 .outcome {
 	margin-left: 2rem;
 }
-.outcome h4, .failures h4, .rating h4 {
+.outcome h4 {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 100%;
@@ -65,6 +65,10 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	vertical-align: text-top;
 	margin-right: .5em;
 	width: 2em;
+}
+.methods h5, .failures h5, .rating h5 {
+	font-size: 100%;
+	color: #005A9C;
 }
 .rating-table, .rating-table th, .rating-table td {
 	border: 1px solid black;
