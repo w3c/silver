@@ -43,52 +43,55 @@ function linkHowTo() {
 
 function addGuidelineMarkers() {
 	document.querySelectorAll('.guideline').forEach(function(node){
-		var guideline = node.querySelector('p');
-		guideline.innerHTML = "Guideline: <strong>" + guideline.innerHTML + "</strong>";
+		var guidelineHeader = findHeading(node);
+		guidelineHeader.innerHTML = "<span class=\"inserted\">Guideline: </span>" + guidelineHeader.innerHTML;
 	})
 }
 
 function addOutcomeMarkers() {
 	document.querySelectorAll('.outcome').forEach(function(node){
-		var heading = textNoDescendant(findHeading(node.parentElement));
-		var outcome = findHeading(node);
-		outcome.innerHTML = heading + " outcome: <strong>" + outcome.innerHTML + "</strong>";
+		var parentHeader = findHeading(node.parentElement);
+		var outcomeHeader = findHeading(node);
+		outcomeHeader.innerHTML = "<span class=\"inserted\">" + textNoDescendant(parentHeader) + " outcome: </span>" + outcomeHeader.innerHTML;
 	})
 }
 
 function addMethodMarkers() {
 	document.querySelectorAll('.methods').forEach(function(node){
-		var heading = findHeading(node.parentElement).querySelector('strong').textContent;
-		var sectionHeader = findHeading(node);
-		sectionHeader.innerHTML = "Methods for <strong>" + heading + "</strong>";
+		var parentHeader = findHeading(node.parentElement);
+		var methodHeader = findHeading(node);
+		methodHeader.innerHTML = "Methods for " + textNoDescendant(parentHeader);
 	})
 }
 
 function addFailureMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
-		var heading = findHeading(node.parentElement).querySelector('strong').textContent;
-		var sectionHeader = findHeading(node);
-		sectionHeader.innerHTML = "Critical failures for <strong>" + heading + "</strong>";
+		var parentHeader = findHeading(node.parentElement);
+		var failureHeader = findHeading(node);
+		failureHeader.innerHTML = "Critical failures for " + textNoDescendant(parentHeader);
 	})
 }
 
 function addRatingMarkers() {
 	document.querySelectorAll('.rating').forEach(function(node){
-		var heading = findHeading(node.parentElement).querySelector('strong').textContent;
+		var parentHeader = findHeading(node.parentElement);
 		var sectionHeader = findHeading(node);
-		sectionHeader.innerHTML = "Rating for <strong>" + heading + "</strong>";
+		sectionHeader.innerHTML = "Rating for " + textNoDescendant(parentHeader);
 		
 		var caption = node.querySelector('caption');
-		caption.innerHTML = "Rating scale for " + heading;
+		caption.innerHTML = "Rating scale for " + textNoDescendant(parentHeader);
 	})
 }
 
 function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
-		var heading = textNoDescendant(findHeading(node.parentElement));
+		var parentHeader = findHeading(node.parentElement);
+		var summaryHeader = node.querySelector('summary');
+		summaryHeader.innerHTML = "Simplified summary for " + textNoDescendant(parentHeader);
+		
 		var el = document.createElement("p");
 		el.className = "summaryEnd";
-		el.innerHTML = "~ End of summary for " + heading + " ~";
+		el.innerHTML = "~ End of summary for " + textNoDescendant(parentHeader) + " ~";
 		node.appendChild(el);
 		
 		node.setAttribute("role", "region");
@@ -119,9 +122,8 @@ function updateSummaryTitles() {
 	});
 }
 
-// scripts after Respec has run
-document.respecIsReady.then(() => {
-	termTitles();
+// scripts before Respec has run
+function preRespec() {
 	addGuidelineMarkers();
 	linkHowTo();
 	addOutcomeMarkers();
@@ -130,5 +132,10 @@ document.respecIsReady.then(() => {
 	addRatingMarkers();
 	addSummaryMarkers();
 	updateSummaryTitles();
+}
+
+// scripts after Respec has run
+function postRespec() {
+	termTitles();
 	removeDraftMethodLinks();
-});
+}
