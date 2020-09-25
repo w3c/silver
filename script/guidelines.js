@@ -113,15 +113,6 @@ function removeDraftMethodLinks() {
 		}
 	});
 }
-
-function updateSummaryTitles() {
-	document.querySelectorAll('.summary').forEach(function(node){
-		var heading = findHeading(node.parentElement).childNodes[1].textContent;
-		var header = findHeading(node);
-		header.childNodes[0].textContent = "Summary for " + heading;
-	});
-}
-
 // scripts before Respec has run
 function preRespec() {
 	addGuidelineMarkers();
@@ -131,7 +122,6 @@ function preRespec() {
 	addFailureMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
-	updateSummaryTitles();
 }
 
 // scripts after Respec has run
