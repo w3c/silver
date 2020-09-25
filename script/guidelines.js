@@ -115,8 +115,18 @@ function removeDraftMethodLinks() {
 		}
 	});
 }
+
+function adjustDfnData() {
+	document.querySelectorAll('dfn').forEach(function(node){
+		var datalt = node.getAttributeNode("data-lt");
+		var curVal = node.getAttribute("data-lt");
+		node.setAttribute("data-lt", node.textContent + (curVal == "" ? "|" : ""));
+	});
+}
+
 // scripts before Respec has run
 function preRespec() {
+	adjustDfnData();
 	addGuidelineMarkers();
 	linkHowTo();
 	addOutcomeMarkers();
