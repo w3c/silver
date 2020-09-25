@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Guideline template</title>
+	</head>
+	<body>
+		<p>Instructions:</p>
+		<ol>
+			<li>Copy the <code>&lt;section></code> element below all the way to the last closing <code>&lt;/section></code>. </li>
+			<li>Put the section as a direct child of the <code>&lt;section id="guidelines"></code> in the guidelines document. </li>
+			<li>The following elements can be repeated as many times as needed:<ul>
+					<li><code>&lt;li></code> elements</li>
+					<li><code>&lt;section class="outcome"></code> and all its children.</li>
+				</ul></li>
+			<li>Update text in <em>{curly braces}</em>. Leave all other content, markup, and attributes alone, the script will key off these features to enhance presentation.</li>
+		</ol>
+		
+		<!-- begin guideline -->
+		<section class="guideline">
+			<h3>{Guideline name}</h3>
+			<p>{Guideline description}</p>
+			<section class="outcome">
+				<h4>{Outcome name}</h4>
+				<p>{Outcome description}</p>
+				<details class="methods">
+					<summary>Methods</summary>
+					<ol>
+						<li><a class="method-link" href="{folder name of deployed method}">{Method title}</a></li>
+					</ol>
+				</details>
+				<details class="failures">
+					<summary>Critical Failures</summary>	
+					<ul>
+						<li>{Failure description}</li>
+					</ul>
+				</details>
+				<details class="rating">
+					<summary>Rating</summary>
+					<p>Calculating the rating:</p>
+					<ul>
+						<li>{Rating calculation steps}</li>
+					</ul>
+					
+					<table class="rating-table">
+						<caption>Rating Scale</caption>
+						<thead>
+							<tr>
+								<th scope="col">Rating</th>
+								<th scope="col">Criteria</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							<th scope="row">Rating 0</th>
+							<td>{Criteria for rating} OR there is a <a>critical failure</a> in the <a>process</a></td>
+						</tr>
+							<tr>
+								<th scope="row">Rating 1</th>
+								<td>{Criteria for rating} AND no <a>critical failures</a> in the <a>process</a></td>
+							</tr>
+							<tr>
+								<th scope="row">Rating 2</th>
+								<td>{Criteria for rating} AND no <a>critical failures</a> in the <a>process</a></td>
+							</tr>
+							<tr>
+								<th scope="row">Rating 3</th>
+								<td>{Criteria for rating} AND no <a>critical failures</a> in the <a>process</a></td>
+							</tr>
+							<tr>
+								<th scope="row">Rating 4</th>
+								<td>{Criteria for rating} AND no <a>critical failures</a> in the <a>process</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</details>
+			</section>
+		</section>
+		<!-- end guideline -->
+	</body>
+</html>
