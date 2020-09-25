@@ -3,9 +3,10 @@
 	<head>
 		<title>W3C Accessibility Guidelines (WCAG) 3.0</title>
 		<meta charset="UTF-8" />
+		<script src="../script/guidelines.js" class="remove"></script>
 		<script src="respec-config.js" class="remove"></script>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
-		<script src="guidelines.js" class="remove"></script>
+		<script>document.respecIsReady.then(() => {postRespec();});</script>
 		<link rel="stylesheet" type="text/css" href="guidelines.css" />
 	</head>
 	<body>
@@ -21,8 +22,8 @@
 		</section>
 		<section class="informative">
 			<h2>Introduction</h2>
-			<aside class="summary">
-				<h3>Summary</h3>
+			<details class="summary">
+				<summary>Summary</summary>
 				<p>The W3C Accessibility Guidelines (WCAG) 3.0 specify ways to make Web content accessible to users with disabilities. These guidelines will replace the Web Content Accessibility Guidelines 2.2.</p>
 				<section>
 				<h4>What’s new in WCAG 3.0?</h4>
@@ -62,7 +63,7 @@
 				</ul>
 				<p>These requirements shaped our model for conforming to the standard.</p>
 				</section>
-			</aside>
+			</details>
 			<p>This specification creates a new model and guidelines to make web content and applications accessible to people with disabilities. W3C Accessibility Guidelines (WCAG) 3.0 supports a wide set of user needs, uses new approaches to testing, and allows frequent maintenance of guidelines to keep pace with accelerating technology change. WCAG 3.0 continues this evolution by focusing on users’ functional needs. These are then supported by technology-specific methods to meet those needs. </p>
 			<p>Following these guidelines will make content more accessible to a wider range of people with disabilities. This includes accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, sensory disorders, learning disabilities, cognitive disabilities and combinations of these. Following these guidelines will also often make content more usable to users in general as well as accessible to individuals with disabilities.</p>
 			<p>WCAG 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions. They also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/"> User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/"> Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. These earlier versions provided a flexible model that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities has led to the need for a new model to address content accessibility more comprehensively and flexibly.</p>
@@ -107,8 +108,8 @@
 		</section>
 		<section class="informative">
 			<h2>Structure of these guidelines</h2>
-			<aside class="summary">
-				<h3>Summary</h3>
+			<details class="summary">
+				<summary>Summary</summary>
 				<p>The WCAG 3.0 guidelines focus on the diverse needs of people to use digital content. Each guideline helps reduce the barriers that "dis-able" people.</p>
 				<p>The guidelines highlight users’ functional needs, such as the need for contrast. We elaborate on the advice by specifying practices that reduce barriers. The results of using these practices can be tested. We offer a variety of tests to rate how well user needs have actually been met.</p>
 				<section>
@@ -125,7 +126,7 @@
 				</ul>
 				<p>Not all of these layers are directly in this document. Some are pieces linked from here.</p>
 				</section>
-			</aside>
+			</details>
 			<figure id="guidelines-structure-diagram" aria-labelledby="guidelines-structure-description">
 				<img height="503" src="img/wcag3-structure.png" width="475" />
 				<figcaption>Structure of WCAG 3 Guidance</figcaption>
@@ -192,15 +193,15 @@
 		</section>
 		<section>
 			<h2>Normative requirements</h2>
-			<aside class="summary">
-				<h3>Summary</h3>
+			<details class="summary">
+				<summary>Summary</summary>
 				<p>WCAG 3.0 details the needs of people with disabilities and suggests how to test for what works. You may to want to make formal claims about how well the results of your testing conform to the standard set out by the guidelines.</p>
 				<p>If you do, notice there are two types of content signaled in this document:</p>
 				<ul>
 					<li><strong>Normative</strong>. Refers to requirements that impact the accessibility of content. Normative requirements specify what conforming to the standard means.</li>
 					<li><strong>Non-normative</strong>. Refers to parts of this document that do not impact conforming to the standard. This advisory content is never required. Non-normative content includes overviews, appendices, diagrams, and examples. It is also called “Informative”.</li>
 				</ul>
-			</aside>
+			</details>
 			<p>The main content of WCAG 3.0 is <a>normative</a> and defines requirements that impact conformance claims. Introductory material, appendices, sections marked as "non-normative", diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
 			<p>The key words <em class="rfc2119" title="MAY">MAY</em>, <em class="rfc2119" title="MUST">MUST</em>, <em class="rfc2119" title="MUST NOT">MUST NOT</em>, <em class="rfc2119" title="NOT RECOMMENDED">NOT RECOMMENDED</em>, <em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em>, <em class="rfc2119" title="SHOULD">SHOULD</em>, and <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> are to be interpreted as described in [[RFC2119]].</p>
 			<p class="ednote">The working group is looking for feedback whether the just the functional outcomes should be normative or whether both the guidelines and the functional outcomes should be normative.</p>
@@ -215,32 +216,32 @@
 
 			<p>The Guidelines included in this draft have been selected to show different types of content:</p>
 			<ul>
-				<li><a href="#text-alternatives">Text Alternatives</a> - a direct migration from WCAG 2.x success criterion</li>
-				<li><a href="#clear-words">Clear Words</a> - new guidance that could not previously be included in WCAG 2.x. It is directly based on <a href="https://www.w3.org/TR/coga-usable/"> Making content usable for people with cognitive and learning disabilities</a> [[coga-usable]].</li>
-				<li><a href="#captions">Captions</a> - an example of adapting WCAG 2.x guidance to emerging technologies, such as Web Virtual Reality</li>
-				<li><a href="#structured-content">Structured Content</a> - migration and merging of several previously unrelated WCAG 2.x success criteria</li>
-				<li><a href="#visual-contrast-of-text">Visual Contrast of Text</a> - a migration of WCAG 2.x with substantial changes</li>
+				<li><a href="#guideline-text-alternatives">Text Alternatives</a> - a direct migration from WCAG 2.x success criterion</li>
+				<li><a href="#guideline-clear-words">Clear Words</a> - new guidance that could not previously be included in WCAG 2.x. It is directly based on <a href="https://www.w3.org/TR/coga-usable/"> Making content usable for people with cognitive and learning disabilities</a> [[coga-usable]].</li>
+				<li><a href="#guideline-captions">Captions</a> - an example of adapting WCAG 2.x guidance to emerging technologies, such as Web Virtual Reality</li>
+				<li><a href="#guideline-structured-content">Structured Content</a> - migration and merging of several previously unrelated WCAG 2.x success criteria</li>
+				<li><a href="#guideline-visual-contrast-of-text">Visual Contrast of Text</a> - a migration of WCAG 2.x with substantial changes</li>
 			</ul>
 			<section class="guideline">
 				<h3>Text alternatives</h3>
 				<p class="guideline-text">Provide text alternative for non-text content.</p>
 				<section class="outcome notoc"><h4>Text alternative available</h4>
 				<p>A text alternative for non-text content is available via user agents and assistive technologies, which allows users who are unable to perceive and / or understand the non-text content to determine its meaning.</p>
-					<section class="methods">
-						<h5>Methods</h5>
+					<details class="methods">
+						<summary>Methods</summary>
 						<ol>
 							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/images-of-text/">Text alternative for Image of text (HTML)</a></li>
 							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/functional-images/">Functional Images</a></li>
 						</ol>
-					</section>
-					<section class="failures notoc">
-						<h5>Critical Failures</h5>	
+					</details>
+					<details class="failures">
+						<summary>Critical Failures</summary>	
 						<ul>
 							<li> Any informative image without alternative text that stops people from completing a task.</li>
 						</ul>
-					</section>
-					<section class="rating notoc">
-						<h5>Rating</h5>
+					</details>
+					<details class="rating">
+						<summary>Rating</summary>
 						<p>Calculating the rating:</p>
 						<ul>
 							<li>The average of the adjectival rating of all the HTML Alternative Text Methods OR </li>
@@ -271,7 +272,7 @@
 							<td>95% to 100% of all images have appropriate text alternatives and no critical failures on the path</td>
 						</tr>
 						</tbody></table>
-					</section>
+					</details>
 				</section>
 				
 			</section>
@@ -384,8 +385,8 @@
 		</section>
 		<section>
 			<h2>Evaluation</h2>
-			<aside class="summary">
-				<h3>Summary</h3>
+			<details class="summary">
+				<summary>Summary</summary>
 				<p>Testing has always been important in designing for accessibility. <!-- Web content should be tested by people who understand how people with different types of disabilities use the technology being tested. --></p>
 				<section>
 				<h4>What types of tests are used?</h4>
@@ -403,7 +404,7 @@
 				<p>Each outcome has methods related to different technologies. Methods contain tests and techniques for meeting outcomes.</p>
 				<p>Tests are applied at the view level and totaled across views. We describe ways that results can be scored by the functional categories they support. Views are a general way of describing digital content such as web pages, pdf documents, ebook pages, mobile screens, the wraparound of virtual reality, and more.</p>
 				</section>
-			</aside>
+			</details>
 			
 			<section>
 				<h3>Testing</h3>
@@ -530,14 +531,14 @@
 		</section>
 		<section>
 			<h2>Conformance</h2>
-			<aside class="summary">
-				<h3>Summary</h3>
+			<details class="summary">
+				<summary>Summary</summary>
 				<p>WCAG 3.0 offers guidance on ways to meet outcomes that reduce barriers and support ease of use. Taken together, this guidance forms a standard. In WCAG 3.0 the outcomes are the requirements for the standard.</p>
 				<p>You may want to make a claim that your content or product conforms to the standard. If it does meet the requirements, we call this conformance. There are three levels of conformance: bronze, silver, and gold.</p>
 				<p>Each level of conformance requires a number of criteria. To conform to WCAG 3.0, your test results must meet certain thresholds. The bronze level, for example, is the minimum level of conformance. This document details the conformance requirements for each level.</p>
 				<p>If you want to make a conformance claim, you must follow the process we describe in this document. Even if you don’t want to make a formal claim, you can use this process to assess the accessibility of content.</p>
 				<p>Technology and digital content can conform to WCAG 3.0 without you making a claim. The process we offer here will help you get there. Reducing barriers. Supporting ease of use.</p>
-			</aside>
+			</details>
 			<p>Conformance to a standard means that you meet or satisfy the 'requirements' of the standard. In WCAG 3.0 the 'requirements' are the outcomes.</p>
 			<p>Technology can meet the outcomes without a conformance claim. If you want to claim conformance, you must follow the process below; however, even if you are not making a formal conformance claim, you can use this process to assess the accessibility of content.</p>
 

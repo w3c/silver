@@ -8,80 +8,90 @@ function findHeading(el) {
 	return el.querySelector('h1') || el.querySelector('h2') || el.querySelector('h3') || el.querySelector('h4') || el.querySelector('h5') || el.querySelector('h6');
 }
 
+function findFirstTextChild(el) {
+	var children = el.childNodes;
+	for (i = 0; i < children.length; i++) {
+		if (children[i].nodeType == 3) {
+			return children[i];
+			break;
+		}
+	}
+}
+
+function textNoDescendant(el) {
+	var textContent = "";
+	el.childNodes.forEach(function(node) {
+		if (node.nodeType == 3) textContent += node.textContent;
+	})
+	return textContent;
+}
+
 function linkHowTo() {
 	var howtoBaseURI = "https://www.w3.org/WAI/GL/WCAG3/2020/how-tos/";
 	//if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
 	//else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
 	document.querySelectorAll('.guideline').forEach(function(node){
 		//this is brittle, depends on how respec does the heading
-		var heading = node.firstElementChild.childNodes[1].textContent;
+		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
 		var el = document.createElement("p");
 		el.setAttribute("class", "howto-link");
 		el.innerHTML = "<a href=\"" + howtoBaseURI + pathFrag + "/\">" + heading + " <span>how-to</span></a>";
-		node.insertBefore(el, node.children[1]);
+		node.insertBefore(el, node.querySelector('section'));
 	})
 }
 
 function addGuidelineMarkers() {
 	document.querySelectorAll('.guideline').forEach(function(node){
-		var guideline = node.querySelector('p');
-		guideline.innerHTML = "<strong>Guideline:</strong> " + guideline.innerHTML;
+		var guidelineHeader = findHeading(node);
+		guidelineHeader.innerHTML = "<span class=\"inserted\">Guideline: </span>" + guidelineHeader.innerHTML;
 	})
 }
 
 function addOutcomeMarkers() {
 	document.querySelectorAll('.outcome').forEach(function(node){
-		var outcome = node.querySelector('p');
-		outcome.innerHTML = "<strong>Outcome:</strong> " + outcome.innerHTML;
+		var parentHeader = findHeading(node.parentElement);
+		var outcomeHeader = findHeading(node);
+		outcomeHeader.innerHTML = "<span class=\"inserted\">" + textNoDescendant(parentHeader) + " outcome: </span>" + outcomeHeader.innerHTML;
 	})
 }
 
-function addOutcomeIndicators() {
-	document.querySelectorAll('.guideline').forEach(function(node){
-		var guidelineName = node.firstElementChild.childNodes[1].textContent;
-		var firstOutcome = node.querySelector("section");
-		var el = document.createElement("p");
-		el.innerHTML = "<strong>Outcomes for " + guidelineName + ":</strong>";
-		node.insertBefore(el, firstOutcome);
-	})
-}
-
-function addMethodIndicators() {
-	document.querySelectorAll('.outcome').forEach(function(node){
-		var outcome = node.querySelector('h4');
-		var methodList = node.querySelector('ol');
-		var el = document.createElement("p");
-		el.innerHTML = "<strong>Methods for " + outcome.innerHTML + ":</strong>";
-		node.insertBefore(el, methodList);
+function addMethodMarkers() {
+	document.querySelectorAll('.methods').forEach(function(node){
+		var parentHeader = findHeading(node.parentElement);
+		var methodHeader = node.querySelector('summary');
+		methodHeader.innerHTML = "Methods for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
 	})
 }
 
 function addFailureMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
-		var heading = findHeading(node.parentElement).childNodes[1].textContent;
-		var sectionHeader = node.childNodes[1];
-		sectionHeader.childNodes[0].textContent = "Critical failures for " + heading;
+		var parentHeader = findHeading(node.parentElement);
+		var failureHeader = node.querySelector('summary');
+		failureHeader.innerHTML = "Critical failures for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
 	})
 }
 
 function addRatingMarkers() {
 	document.querySelectorAll('.rating').forEach(function(node){
-		var heading = findHeading(node.parentElement).childNodes[1].textContent;
-		var sectionHeader = node.childNodes[1];
-		sectionHeader.childNodes[0].textContent = "Rating for " + heading;
+		var parentHeader = findHeading(node.parentElement);
+		var sectionHeader = node.querySelector('summary');
+		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
 		
 		var caption = node.querySelector('caption');
-		caption.innerHTML = "Rating scale for " + heading;
+		caption.innerHTML = "Rating scale for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
 	})
 }
 
 function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
-		var heading = findHeading(node.parentElement).childNodes[1].textContent;
+		var parentHeader = findHeading(node.parentElement);
+		var summaryHeader = node.querySelector('summary');
+		summaryHeader.innerHTML = "Simplified summary for " + textNoDescendant(parentHeader);
+		
 		var el = document.createElement("p");
 		el.className = "summaryEnd";
-		el.innerHTML = "~ End of summary for " + heading + " ~";
+		el.innerHTML = "~ End of summary for " + textNoDescendant(parentHeader) + " ~";
 		node.appendChild(el);
 		
 		node.setAttribute("role", "region");
@@ -103,26 +113,19 @@ function removeDraftMethodLinks() {
 		}
 	});
 }
-
-function updateSummaryTitles() {
-	document.querySelectorAll('.summary').forEach(function(node){
-		var heading = findHeading(node.parentElement).childNodes[1].textContent;
-		var header = findHeading(node);
-		header.childNodes[0].textContent = "Summary for " + heading;
-	});
-}
-
-// scripts after Respec has run
-document.respecIsReady.then(() => {
-	termTitles();
+// scripts before Respec has run
+function preRespec() {
 	addGuidelineMarkers();
+	linkHowTo();
 	addOutcomeMarkers();
-	addOutcomeIndicators();
-	addMethodIndicators();
+	addMethodMarkers();
 	addFailureMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
-	updateSummaryTitles();
-	linkHowTo();
+}
+
+// scripts after Respec has run
+function postRespec() {
+	termTitles();
 	removeDraftMethodLinks();
-});
+}
