@@ -14,18 +14,25 @@
 					<li>{list of links to tests}</li>
 				</ul>
 				<section>
-					{Use copies of this section for WCAG 2-style tests}
-					<h3>Test Name</h3>
+					<h3>Calculated luminosity contrast</h3>
 					<section>
 						<h4>Test Procedure</h4>
 						<ol>
-							<li>Step 1</li>
-							<li>Step 2</li>
+							<li>Obtain representative sRGB values for the foreground text and the background color. <ul style="font-size: smaller">
+									<li>If an “eye dropper” type tool is used it must report values relative to the sRGB colorspace. </li>
+									<li>The eye dropper sample should be a pixel in the middle of a major stroke of the font at the smallest size to be tested, with the content size set to default with no user scaling. </li>
+								</ul></li>
+							<li>Calculate the predicted contrast between foreground text and background color. <ul style="font-size: smaller">
+									<li>Important: do not swap the background or text colors in the tool entry fields. </li>
+									<li>The contrast evaluation is based in part on polarity, so it is important that the text color value be entered into the text color field, and likewise for the background. </li>
+								</ul></li>
+							<li>Compare this calculated value against the lookup table "Accessible Contrast by Font Size and Weight" on the description tab. </li>
+							<li>Check that the absolute value of the predicted contrast percentage meets or exceeds the required value for the font weight and size. </li>
 						</ol>
 					</section>
 					<section>
 						<h4>Expected Results</h4>
-						<p>Check #2 is true. </p>
+						<p>Check #4 is true. </p>
 					</section>
 				</section>
 			</section>
