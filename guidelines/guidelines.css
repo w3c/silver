@@ -37,17 +37,6 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	font-size: 100%;
 	color: #005A9C;
 }
-.howto-link {
-	float: right;
-	width: 15em;
-	text-align: right;
-	margin: .5em;
-	padding: .5ex;
-	border: thin solid #005A9C;
-}
-.howto-link span {
-	white-space: nowrap;
-}
 .guideline h3 bdi::before {
 	content: url(img/guideline.svg);
 	display: inline-block;
