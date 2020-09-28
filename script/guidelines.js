@@ -43,8 +43,8 @@ function linkHowTo() {
 
 function addGuidelineMarkers() {
 	document.querySelectorAll('.guideline').forEach(function(node){
-		var guidelineHeader = findHeading(node);
-		guidelineHeader.innerHTML = "<span class=\"inserted\">Guideline: </span>" + guidelineHeader.innerHTML;
+		var guidelineText = node.querySelector("p");
+		guidelineText.innerHTML = "<span class=\"inserted\">Guideline: </span>" + guidelineText.innerHTML;
 	})
 }
 
