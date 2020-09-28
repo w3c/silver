@@ -31,8 +31,8 @@ var respecConfig = {
 	editors:[ {
 		name: "Jeanne Spellman",
 		mailto: "jspellman@spellmanconsulting.com",
-		company: "The Paciello Group, LLC",
-		companyURI: "https://www.paciellogroup.com/",
+		company: "TetraLogical",
+		companyURI: "https://tetralogical.com/",
 		w3cid: 42417
 	}, {
 		name: "Rachael Montgomery",
