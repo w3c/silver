@@ -238,7 +238,7 @@
 						</ol>
 					</details>
 					<details class="failures">
-						<summary>Critical Failures</summary>	
+						<summary>Critical errors</summary>	
 						<ul>
 							<li> Any informative image without alternative text that stops people from completing a task.</li>
 						</ul>
@@ -256,23 +256,23 @@
 						<thead><tr><th scope="col">Rating</th><th scope="col">Criteria</th></tr></thead>
 						<tbody><tr>
 							<th scope="row">Rating 0</th>
-							<td>Less than 60% of all images have appropriate text alternatives OR there is a <a>critical failure</a> in the <a>process</a></td>
+							<td>Less than 60% of all images have appropriate text alternatives OR there is a <a>critical error</a> in the <a>process</a></td>
 						</tr>
 						<tr>
 							<th scope="row">Rating 1</th>
-							<td>60% - 69% of all images have appropriate text alternatives AND no <a>critical failures</a> in the <a>process</a></td>
+							<td>60% - 69% of all images have appropriate text alternatives AND no <a>critical errors</a> in the <a>process</a></td>
 						</tr>
 						<tr>
 							<th scope="row">Rating 2</th>
-							<td>70%-79% of all images have appropriate text alternatives AND no <a>critical failures</a> in the <a>process</a></td>
+							<td>70%-79% of all images have appropriate text alternatives AND no <a>critical errors</a> in the <a>process</a></td>
 						</tr>
 						<tr>
 							<th scope="row">Rating 3</th>
-							<td>80%-94% of all images have appropriate text alternatives AND no <a>critical failures</a> in the <a>process</a></td>
+							<td>80%-94% of all images have appropriate text alternatives AND no <a>critical errors</a> in the <a>process</a></td>
 						</tr>
 						<tr>
 							<th scope="row">Rating 4</th>
-							<td>95% to 100% of all images have appropriate text alternatives AND no <a>critical failures</a> in the <a>process</a></td>
+							<td>95% to 100% of all images have appropriate text alternatives AND no <a>critical errors</a> in the <a>process</a></td>
 						</tr>
 						</tbody></table>
 					</details>
@@ -397,7 +397,7 @@
 				<p class="ednote">We are looking for more appropriate terms to distinguish between these two types of tests and welcome suggestions</p> 
 					<section>
 						<h5>Atomic tests</h5>
-						<p>Atomic tests evaluate content, often at an <a>object</a> level, for accessibility. Atomic tests include the existing tests that support A, AA, and AAA <a>success criteria</a> in WCAG 2.x. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.x structure. In WCAG 3.0, atomic tests are used to test both processes and views. Test results are then aggregated across the selected views. Critical failures within selected processes are also totaled. Successful results of the atomic tests are used to reach a <a href="#bronze">Bronze</a> rating.</p>
+						<p>Atomic tests evaluate content, often at an <a>object</a> level, for accessibility. Atomic tests include the existing tests that support A, AA, and AAA <a>success criteria</a> in WCAG 2.x. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.x structure. In WCAG 3.0, atomic tests are used to test both processes and views. Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the atomic tests are used to reach a <a href="#bronze">Bronze</a> rating.</p>
 						<p>Atomic tests may be <a>automated</a> or <a>manual</a>. <a>Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
 					</section>
 					<section>
@@ -411,15 +411,15 @@
 				<p>Each outcome includes <a href="#methods">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
 				</section>
 				<section>
-					<h4>Critical failures</h4>
+					<h4>Critical errors</h4>
 					
-					<p>Evaluating <a>processes</a> requires counting <a>critical failures</a> that occur within the process and associated <a>views</a>. Critical failures are:</p>
+					<p>Evaluating <a>processes</a> requires counting <a>Critical errors</a> that occur within the process and associated <a>views</a>. Critical errors are:</p>
 					<ul>
 						<li>Errors located anywhere within the view that stop a user from being able to use that view (examples: flashing, keyboard trap, audio with no pause);</li>
 						<li>Errors that when located within a <a>process</a> stop a user from completing a process (example: submit button not in tab order); and</li>
 						<li>Errors that when aggregated within a view or across a process stop a user from using the view or completing the process (example: a large amount of confusing, ambiguous language).</li>
 					</ul>				
-					<p><a href="#outcomes">Outcomes</a> specify the related critical failures that can occur and how to identify them. Any critical failures will result in the lowest score for the functional outcome.</p>
+					<p><a href="#outcomes">Outcomes</a> specify the related critical errors that can occur and how to identify them. Any critical errors will result in the lowest score for the functional outcome.</p>
 					<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, and adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 				</section>
 			</section>
@@ -466,25 +466,25 @@
 						<li>Tests at the element level that can be consistently counted will be assigned a percentage (number passed / total number of instances);</li>
 						<li>Tests that apply to content without clear boundaries will be scored using a <a>rating scale</a>. The rating scales may vary based on the test and may be presented as numeric scale, an <a>adjectival rating</a> or a <a>rubric</a>. Each of these can be converted into a percentage to make it easier to compare across tests.</li>
 					</ul>
-				<p>In addition, <a>critical failures</a> within selected processes will be identified and totaled. Any critical failures will result in score of very poor (0).</p>
+				<p>In addition, <a>critical errors</a> within selected processes will be identified and totaled. Any critical errors will result in score of very poor (0).</p>
 				</section>
 
 				<section>
 				<h4>Scoring outcomes</h4>
-				<p>The results from the atomic tests are aggregated across views and used along with the number of critical failures to assign an <a>adjectival rating</a> to the outcome. Testers will then use the guidance provided in the outcome along with reasonable judgement of the context that the errors occur in to assign an accessibility score of the outcome.</p>
+				<p>The results from the atomic tests are aggregated across views and used along with the number of critical errors to assign an <a>adjectival rating</a> to the outcome. Testers will then use the guidance provided in the outcome along with reasonable judgement of the context that the errors occur in to assign an accessibility score of the outcome.</p>
 					<div class="example">
 						<p>Potential thresholds for adjectival ratings of test results:</p>
 					<dl>
 					<dt>Very Poor (0)</dt>
-					<dd>Any critical failures or less than 50% of related tests pass</dd>
+					<dd>Any critical errors or less than 50% of related tests pass</dd>
 					<dt>Poor (1)</dt>
-					<dd>No critical failures, <abbr title="approximately">approx.</abbr> 50% to 79% of related tests pass</dd>
+					<dd>No critical errors, <abbr title="approximately">approx.</abbr> 50% to 79% of related tests pass</dd>
 					<dt>Fair (2)</dt>
-						<dd>No critical failures, approx. 80% to 89% of related tests pass</dd>
+						<dd>No critical errors, approx. 80% to 89% of related tests pass</dd>
 					<dt>Good  (3)</dt>
-						<dd>No critical failures, approx. 90% to 98% of related tests pass</dd>
+						<dd>No critical errors, approx. 90% to 98% of related tests pass</dd>
 					<dt>Excellent (4)</dt>
-						<dd>No critical failures, approx. 99% to 100% of related tests pass</dd>
+						<dd>No critical errors, approx. 99% to 100% of related tests pass</dd>
 				</dl>
 						<p class="note">The thresholds are different for different outcomes.</p>
 				<p class="ednote">These cut-off points are still being tested and adjusted. These are included as examples to gather feedback on this scoring approach.</p>
@@ -493,7 +493,7 @@
 				
 				<section>
 				<h4>Overall scores</h4>
-				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a href="#functional-categories">functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical failures and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
+				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a href="#functional-categories">functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
 				
 				<p class="ednote">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number would likely shift as we continue testing.  We invite comment on these options as well as suggestions for an alternative solution.</p>
 				</section>
@@ -527,7 +527,7 @@
 					<p>For content that conforms to the bronze level:</p>
 					<ul>
 						<li>The total score and score within each of the functional categories MUST be at least 3.5; and</li>
-						<li><a>Views</a> and <a>processes</a> MUST NOT have <a>critical failures</a>.</li>
+						<li><a>Views</a> and <a>processes</a> MUST NOT have <a>critical errors</a>.</li>
 					</ul>
 				</section>
 				<section>
@@ -610,10 +610,10 @@
 				<dd><p>Satisfying all the requirements of the guidelines. Conformance is an important part of following
 						the guidelines even when not making a formal Conformance Claim.</p>
 					<p>See <a href="#conformance">Conformance</a>.</p></dd>
-				<dt><dfn data-lt="Critical errors|Critical failure|Critical failures">Critical failure</dfn></dt>
+				<dt><dfn data-lt="Critical errors|Critical failure|Critical failures">Critical error</dfn></dt>
 				<dd>
 					<p>An accessibility problem that will stop a user from being able to complete a
-						process.</p><p>Critical failures include:</p>
+						process.</p><p>Critical errors include:</p>
 					<ul>
 						<li>Items that will stop a user from being able to complete the task if it exists anywhere on
 							the view (examples: flashing, keyboard trap, audio with no pause);</li>
