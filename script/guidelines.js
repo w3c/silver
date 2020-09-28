@@ -35,8 +35,7 @@ function linkHowTo() {
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
 		var el = document.createElement("span");
-		el.setAttribute("class", "howto-link");
-		el.innerHTML = " <a href=\"" + howtoBaseURI + pathFrag + "/\">[" + heading + " <span>how-to</span>]</a>";
+		el.innerHTML = " <a href=\"" + howtoBaseURI + pathFrag + "/\" class=\"howto-link\">[" + heading + " <span>how-to</span>]</a>";
 		node.querySelector("p.guideline-text").append(el);
 	})
 }
