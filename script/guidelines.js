@@ -34,17 +34,17 @@ function linkHowTo() {
 		//this is brittle, depends on how respec does the heading
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
-		var el = document.createElement("p");
+		var el = document.createElement("span");
 		el.setAttribute("class", "howto-link");
-		el.innerHTML = "<a href=\"" + howtoBaseURI + pathFrag + "/\">" + heading + " <span>how-to</span></a>";
-		node.insertBefore(el, node.querySelector('section'));
+		el.innerHTML = " <a href=\"" + howtoBaseURI + pathFrag + "/\">[" + heading + " <span>how-to</span>]</a>";
+		node.querySelector("p.guideline-text").append(el);
 	})
 }
 
 function addGuidelineMarkers() {
 	document.querySelectorAll('.guideline').forEach(function(node){
-		var guidelineHeader = findHeading(node);
-		guidelineHeader.innerHTML = "<span class=\"inserted\">Guideline: </span>" + guidelineHeader.innerHTML;
+		var guidelineText = node.querySelector("p");
+		guidelineText.innerHTML = "<span class=\"inserted\">Guideline: </span>" + guidelineText.innerHTML;
 	})
 }
 
