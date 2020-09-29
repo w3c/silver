@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Method - Tests</title>
+	</head>
+	<body>
+		<header>
+			<h1>Tests</h1>
+		</header>
+		<main>
+			<section id="atomic">
+				<h2>Atomic Tests</h2>
+				<ul>
+					<li><a href="https://act-rules.github.io/rules/23a2a8">ACT Rules 23a2a8: Image has non-empty accessible name</a></li>
+					<li><a href="https://act-rules.github.io/rules/e88epe">ACT Rules e88epe: Image not in the accessibility tree is decorative</a></li>
+				</ul>
+				<section>
+					<h3>Procedure to test if an image is a CSS background image</h3>
+					<section>
+						<h4>Test Procedure</h4>
+						<ol>
+							<li>Check for the presence of decorative images.</li>
+							<li>Check that they are included as CSS background images.</li>
+						</ol>
+					</section>
+					<section>
+						<h4>Expected Results</h4>
+						<p>If #1 is true then #2 is true.</p>
+					</section>
+				</section>
+				<section>
+					<h3>Procedure to test if an image is CSS generated content</h3>
+					<section>
+						<h4>Test Procedure</h4>
+						<ol>
+							<li>Check for the presence of decorative images.</li>
+							<li>Check if decorative images are included using CSS generated content.</li>
+							<li>Check that the image has an empty alt value.</li>
+						</ol>
+					</section>
+					<section>
+						<h4>Expected Results</h4>
+						<p>If 1 is true then 2 and 3 are true.</p>
+					</section>
+				</section>
+				<section>
+
+					<h3>Procedure to test if an image uses null alt text and no title attribute for decorative images</h3>
+					<section>
+						<h4>Test Procedure</h4>
+						<ol>
+							<li>Check for the presence of decorative images</li>
+							<li>Check that the <code>title</code> attribute is either absent <strong>or</strong> has no value.</li>
+							<li>Check that the alt attribute is present <strong>and</strong> has no value. </li>
+						</ol>
+					</section>
+					<section>
+						<h4>Expected Results</h4>
+						<p>If 1 is true then 2 and 3 are true.</p>
+					</section>
+				</section>
+			</section>
+			<section id="holistic">
+				<h2>Holistic Tests</h2>
+				<ul>
+					<li>{list of links to tests}</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>

@@ -1,10 +1,11 @@
-.summary {
+details {
 	margin: 3em;
 	padding: 1em;
 	color: #404040;
 	border: medium solid #d9d9d9;
+	background-color: #F3F3F3;
 }
-.summary::before {
+.summary summary::before {
 	content: url(img/summary.svg);
 	display: block;
 	vertical-align: text-top;
@@ -13,6 +14,13 @@
 	left: -4em;
 	float: left;
 	margin-right: -3em;
+}
+.summaryEnd {
+	text-align: center;
+	font-weight: bold;
+}
+.howto-link {
+	font-style: italic;
 }
 figure {
 	float: right;
@@ -28,19 +36,6 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	font-weight: normal;
 	font-size: 100%;
 	color: #005A9C;
-	margin-top: 1rem;
-	margin-left: -2rem;
-}
-.howto-link {
-	float: right;
-	width: 15em;
-	text-align: right;
-	margin: .5em;
-	padding: .5ex;
-	border: thin solid #005A9C;
-}
-.howto-link span {
-	white-space: nowrap;
 }
 .guideline h3 bdi::before {
 	content: url(img/guideline.svg);
@@ -49,10 +44,32 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	margin-right: .5em;
 	vertical-align: text-top;
 }
+.outcome h4 {
+	margin-top: 1rem;
+	margin-left: -2rem;
+}
 .outcome h4::before {
 	content: url(img/outcome.svg);
 	display: inline-block;
 	vertical-align: text-top;
 	margin-right: .5em;
 	width: 2em;
+}
+.methods h5, .failures h5, .rating h5 {
+	font-size: 100%;
+	color: #005A9C;
+}
+.rating-table, .rating-table th, .rating-table td {
+	border: 1px solid black;
+	vertical-align: top;
+	border-collapse: collapse;
+	padding: 5px;
+}
+.rating-table th[scope=row] {
+	white-space: nowrap;
+}
+caption {
+	font-style: normal !important;
+	font-weight: bold;
+	font-size: 100% !important;
 }
