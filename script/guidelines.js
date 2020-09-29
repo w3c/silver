@@ -69,7 +69,7 @@ function addFailureMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var failureHeader = node.querySelector('summary');
-		failureHeader.innerHTML = "Critical failures for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		failureHeader.innerHTML = "Critical errors for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
 	})
 }
 
