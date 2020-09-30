@@ -5,15 +5,20 @@ details {
 	border: medium solid #d9d9d9;
 	background-color: #F3F3F3;
 }
+summary::before {
+	display: inline-block;
+	margin-top: -1em;
+	width: 3em;
+	position: relative;
+	left: -4.5em;
+	float: left;
+	margin-right: -3.5em;
+}
 .summary summary::before {
 	content: url(img/summary.svg);
-	display: block;
-	vertical-align: text-top;
-	width: 2em;
-	position: relative;
-	left: -4em;
-	float: left;
-	margin-right: -3em;
+}
+.methods summary::before {
+	content: url(img/method.svg);
 }
 .summaryEnd {
 	text-align: center;
