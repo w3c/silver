@@ -40,6 +40,20 @@ function linkHowTo() {
 	})
 }
 
+function linkOutcome() {
+	var outcomeBaseURI = "https://www.w3.org/WAI/GL/WCAG3/2020/outcomes/";
+	//if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
+	//else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
+	document.querySelectorAll('.outcome').forEach(function(node){
+		//this is brittle, depends on how respec does the heading
+		var heading = textNoDescendant(findHeading(node));
+		var pathFrag = titleToPathFrag(heading);
+		var el = document.createElement("p");
+		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + ".html\" class=\"outcome-link\"><span>Detailed information on </span>" + heading + "</a>";
+		node.insertBefore(el, node.querySelector("details"));
+	})
+}
+
 function addGuidelineMarkers() {
 	document.querySelectorAll('.guideline').forEach(function(node){
 		var guidelineText = node.querySelector("p");
@@ -135,6 +149,7 @@ function preRespec() {
 	adjustDfnData();
 	addGuidelineMarkers();
 	linkHowTo();
+	linkOutcome();
 	addOutcomeMarkers();
 	addErrorMarkers();
 	addRatingMarkers();
