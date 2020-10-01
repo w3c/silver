@@ -57,15 +57,7 @@ function addOutcomeMarkers() {
 	})
 }
 
-function addMethodMarkers() {
-	document.querySelectorAll('.methods').forEach(function(node){
-		var parentHeader = findHeading(node.parentElement);
-		var methodHeader = node.querySelector('summary');
-		methodHeader.innerHTML = "Methods for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
-	})
-}
-
-function addFailureMarkers() {
+function addErrorMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var failureHeader = node.querySelector('summary');
@@ -144,8 +136,7 @@ function preRespec() {
 	addGuidelineMarkers();
 	linkHowTo();
 	addOutcomeMarkers();
-	addMethodMarkers();
-	addFailureMarkers();
+	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
 }
