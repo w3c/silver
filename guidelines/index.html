@@ -114,9 +114,11 @@
 				<p class="example">Example: Convey hierarchy with semantic structure</p>
 				<section>
 					<h4>Critical errors</h4>
+						<p><a href="#outcomes">Outcomes</a> include the related critical errors that can occur and how to identify them. Not all outcomes have critical errors.  Any critical errors will result in the lowest score for the outcome.</p>
 				</section> 
 				<section>
-					<h4>Scoring</h4>
+					<h4>Rating</h4>
+					<p>Each outcome is rated on a scale of 0 to 4. The outcomes define the rating criteria or that outcomes.  The rating criteria are designed to be technology agnostic but tie to the available methods so that method level ratings can be rolled up when possible or the tester can make an informed judgmeent call about the outcome rating. 
 				</section> 
 			</section>
 			
@@ -152,20 +154,24 @@
 					
 					<section>
 						<h4>Description</h4>
-					</section>
+						<p>Each method includes a detailed technical description of the method with including instructions on how the method works that do not depend on examples.  If there are dependencies between methods these are also listed here.  Dependencies between methods will be a rare situtation. 
 					<section>
 						<h4>Examples</h4>
+						<p>Each method also includes working code samples and detailed examples.  </p>
 					</section>
-					<section>
+				
 						<h4>Tests</h4>
 						<p>Tests provide ways to check that methods and techniques have been followed. Tests include step-by-step instructions on evaluating the method based on the technology being used. Tests may vary by technology as needed.</p>
-						<p> Tests specify the unit being tested and the approach to scoring for that test. Scoring can be binary (pass/fail) scoring or rating scales as appropriate for the outcome and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. </p>	
-						
-						<p>Each method includes information on how to score individual instances of the test. The testing results for methods inform the scoring of the related outcome.</p>
+						<p> Tests specify the unit being tested and the approach to scoring for that test. 
 						<p class="note">While WCAG 3 Methods have some similarity with WCAG 2 Techniques, they are not the same and are not interchangeable.</p>
 					</section>
 					<section>
 						<h4>Scoring</h4>
+						<p>Each method includes information on how to score individual instances of the test. The testing results for methods inform the scoring of the related outcome.</p>
+
+						<p>Scoring can be binary (pass/fail) scoring or rating scales as appropriate for the outcome and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. </p>	
+						
+					
 					</section>
 				</section>
 			</section>
@@ -258,10 +264,10 @@
 						<summary>Methods</summary>
 						<ol>
 							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/images-of-text/">Text alternative for Image of text (HTML)</a></li>
-							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/functional-images/">Functional Images</a></li>
-							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/decorative-images/">Decorative images</a></li>
-							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/images-of-text/">Images of text</a></li>
-							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/informative-images/">Informative images</a></li>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/functional-images/">Functional Images (HTML, PDF, ePub)</a></li>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/decorative-images/">Decorative images  (HTML, PDF, ePub)</a></li>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/images-of-text/">Images of tex (HTML)</a></li>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/informative-images/">Informative images (HTML)</a></li>
 						</ol>
 					</details>
 					<details class="failures">
@@ -314,7 +320,7 @@
 					<details class="methods">
 						<summary>Methods</summary>
 						<ol>
-							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/clear-words/">Use Clear Words</a></li>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/clear-words/">Use Clear Words (All)</a></li>
 						</ol>
 					</details>
 					<details class="failures">
@@ -437,18 +443,18 @@
 			</section>
 			<section class="guideline">
 				<h3>Structured content</h3>
-				<p class="guideline-text">Use sections, headings, and sub-headings to organize content</p>
-				<section class="outcome"><h4>Headings with levels organize content</h4><p>Organizes content into logical blocks with both heading text and level relevant to the subsequent content to make locating and navigating information easier and faster.</p>
+				<p class="guideline-text">Uss sections, headings, and sub-headings to organize content </p>
+				<section class="outcome"><h4>Headings organize content</h4><p>Organizes content into logical blocks with both heading text relevant to the subsequent content to make locating and navigating information easier and faster.</p>
 					<details class="methods">
 						<summary>Methods</summary>
 						<ol>
-							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/relevant-headings/">Relevant headings</a></li>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/relevant-headings/">Relevant headings (All)</a></li>
 						</ol>
 					</details>
 					<details class="failures">
-						<summary>Critical errors</summary>	
+						<summary>More than one heading in the path is missing</summary>	
 						<ul>
-							<li>{Failure description}</li>
+							<li>None.</li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -465,29 +471,30 @@
 							<tbody>
 								<tr>
 									<th scope="row">Rating 0</th>
-									<td>25% or less of expected headings are present and the heaig</td>
+									<td>25% or less of expected headings are present and describe the content contained in the section </td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 1</th>
-									<td>26-50% or less of expected headings are present and relate to the content contained in the section</td>
+									<td>26-50% or less of expected headings are present and describe the content contained in the section</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 2</th>
-									<td>51-80% or less of expected headings are present and relate to the content contained in the section</td>
+									<td>51-80% or less of expected headings are present and describe the content contained in the section</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 3</th>
-									<td>81-95% or less of expected headings are present and relate to the content contained in the section</td>
+									<td>81-95% or less of expected headings are present and describe the content contained in the section</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 4</th>
-									<td>96-100% or less of expected headings are present and relate to the content contained in the section</td>
+									<td>96-100% or less of expected headings are present and describe the content contained in the section</td>
 								</tr>
 							</tbody>
 						</table>
 					</details>
 				</section>
-				<section class="outcome"><h4>Use visually distinct headings</h4><p>Uses visually distinct headings so sighted readers can determine the structure.</p>					<details class="methods">
+				<section class="outcome"><h4>Uses visually distinct headings</h4>
+					<p>Uses visually distinct headings so sighted readers can determine the structure (All)</p>					<details class="methods">
 						<summary>Methods</summary>
 						<ol>
 							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/visually-distinct/">Visually distinct</a></li>
@@ -561,23 +568,23 @@
 							<tbody>
 								<tr>
 									<th scope="row">Rating 0</th>
-									<td>25% or less OR there is a <a>critical error</a> in the <a>process</a></td>
+									<td>25% or less are correctly semantically coded (including level) OR there is a <a>critical error</a> in the <a>process</a></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 1</th>
-									<td>26-50% or less of the visual headings are semantically coded AND no <a>critical errors</a> in the <a>process</a></td>
+									<td>26-50% or less of the visual headings are correctly semantically coded (including level) AND no <a>critical errors</a> in the <a>process</a></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 2</th>
-									<td>51-80% or less of the visual headings are semantically coded AND no <a>critical errors</a> in the <a>process</a></td>
+									<td>51-80% or less of the visual headings are correctly semantically coded (including level) AND no <a>critical errors</a> in the <a>process</a></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 3</th>
-									<td>81-95% or less of the visual headings are semantically coded AND no <a>critical errors</a> in the <a>process</a></td>
+									<td>81-95% or less of the visual headings are correctly semantically coded (including level) AND no <a>critical errors</a> in the <a>process</a></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 4</th>
-									<td>96-100% or less of the visual headings are semantically coded AND no <a>critical errors</a> in the <a>process</a></td>
+									<td>96-100% or less of the visual headings are correctly semantically coded (including level) AND no <a>critical errors</a> in the <a>process</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -604,7 +611,7 @@
 					<details class="methods">
 						<summary>Methods</summary>
 						<ol>
-							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/font-characteristics-contrast/">Select font characteristics and background colors to provide enough contrast for readability</a></li>
+							<li><a class="method-link" href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/font-characteristics-contrast/">Select font characteristics and background colors to provide enough contrast for readability (HTML)</a></li>
 						</ol>
 					</details>
 					<details class="failures">
@@ -714,7 +721,6 @@
 						<li>Errors that when located within a <a>process</a> stop a user from completing a process (example: submit button not in tab order); and</li>
 						<li>Errors that when aggregated within a view or across a process stop a user from using the view or completing the process (example: a large amount of confusing, ambiguous language).</li>
 					</ul>				
-					<p><a href="#outcomes">Outcomes</a> include the related critical errors that can occur and how to identify them. Any critical errors will result in the lowest score for the outcome.</p>
 					<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, and adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 				</section>
 			</section>
