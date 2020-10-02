@@ -20,6 +20,9 @@ summary::before {
 .methods summary::before {
 	content: url(img/method.svg);
 }
+.rating summary::before {
+	content: url(img/rating.svg);
+}
 .summaryEnd {
 	text-align: center;
 	font-weight: bold;
