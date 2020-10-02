@@ -85,8 +85,9 @@ function addRatingMarkers() {
 		var sectionHeader = node.querySelector('summary');
 		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
 		
-		var caption = node.querySelector('caption');
-		caption.innerHTML = "Rating scale for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		var table = node.querySelector('table');
+		table.setAttribute("summary", "Rating scale for \"" + textNoDescendant(parentHeader).toLowerCase() + "\"");
+		table.querySelector("caption").remove();
 	})
 }
 
