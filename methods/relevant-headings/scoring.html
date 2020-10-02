@@ -8,59 +8,16 @@
 			<h1>Scoring</h1>
 		</header>
 		<main>
-			<section id="failures">
-				<h2>Critical Failures</h2>
-				<ul>
-					<li>If a heading is not usable for navigation purposes.  Examples of this include:
-					<ul>
-						<li>Too short (i.e. #Win) </li>
-						<li>Too vague (i.e. “Who wouldn’t love this?”) </li>
-						<li>Too long (i.e. entire paragraphs, or stuffed with SEO terms) </li>
-						<li>Doesn’t match (i.e. heading is “Win a trip to Costa Rica” and text is about cotton candy machine repair) </li>
-						<li>Wrong level (i.e. should be an H3 and was tagged as an H6, an H1 that is not the first heading in the document) </li>
-						<li>A repeat instance of an H1 </li>
-					</ul>
-					</li>
-					<li>If a heading is not present when content indicates there should be a heading, that is a critical failure.  Examples of this include:
-					<ul>
-						<li>Missing from the beginning of a new section of content (unless it is an Exception) </li>
-					</ul>
-					</li>
-				</ul>
+			<section id="errors">
+				<h2>Critical Errors</h2>
+				<p>More than one heading in the path is missing.</p>
 			</section>
+
 			<section id="rating">
-				<h2>Rating</h2>
-				<p><strong>What is important and why</strong></p>
-				<p>The ability to use valid headings to navigate to relevant content that the user is interested in reduces the amount of time assistive technology users need to spend processing information that they know that they are not interested in. </p>
-				<table class="rating-table">
-					<caption>Rating Scale</caption>
-				<tr>
-					<td>Rating 0</td>
-					<td>A critical failure on the path OR only 25% or less of the headings that should exist meet the requirements in Rating 4.  </td>
-				</tr>
-				<tr>
-					<td>Rating 1</td>
-					<td>No critical failures AND 26-50% or less of the headings that should exist meet the requirements in Rating 4 </td>
-				</tr>
-				<tr>
-					<td>Rating 2</td>
-					<td>No critical failures AND  51-80% of the visual headings that should exist meet the requirements in Rating 4 </td>
-				</tr>
-				<tr>
-					<td>Rating 3</td>
-					<td>No critical failures AND  81-95% of the visual headings that should exist meet the requirements in Rating 4</td>
-				</tr>
-				<tr>
-					<td>Rating 4</td>
-					<td>96% - 100% of the headings that should exist are:
-						<ol>
-							<li>present</li>
-							<li>at the correct level, and </li>
-							<li>can be used for navigation purposes </li>
-						</ol>
-					</td>
-				</tr>
-				</table>
+				<h2>Scoring</h2>
+				<p><strong>Unit Tested:</strong> Segments or groups of content</p>
+
+				<p><strong>Approach:</strong> Create a percentage of the expected headings within a view that have appropriate text alternatives percentage of the expected headings that are present is provided.</p>
 			</section>
 		</main>
 	</body>

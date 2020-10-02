@@ -8,41 +8,17 @@
 			<h1>Scoring</h1>
 		</header>
 		<main>
-			<section id="failures">
-				<h2>Critical Failures</h2>
-				<p>If headings necessary to locating the content that is necessary to accomplish the task or follow the path are not coded as headings, that is a critical failure. </p> 
+			<section id="errors">
+				<h2>Critical Errors</h2>
+				<p>One or more headings necessary to locate the content needed to accomplish the task or follow the path are not coded as headings.</p>
+				<p>All headings have incorrect semantics.</p>
 			</section>
+
 			<section id="rating">
-				<h2>Rating</h2>
-				<p>What is important and why</p>
-				<ul>
-				<li>Headings that only have visual styling without underlying semantic code cannot be properly interpreted by assistive technologies like screen readers.  If headings have a <code>&lt;div></code> or other tag than an <code>&lt;h1></code>-<code>&lt;h6></code>, then aria attributes are used to create a heading with the correct level.</li>
-				<li>If a hierarchy of headings is used, then the semantic structure must communicate that hierarchy.  </li>
-				<li>Without semantic structure the page, screen, or view is just a large blob of text with no organization.  People who listen to a page sequentially need the organization to give them the ability to “browse” the material.  </li>
-				</ul>
-				<table class="rating-table">
-					<caption>Rating Scale</caption>
-				<tr>
-					<td>Rating 0</td>
-					<td>Headings have the incorrect semantics (any non-heading element without the necessary heading-related ARIA attributes, like role="heading" aria-level="3"). </td>
-				</tr>
-				<tr>
-					<td>Rating 1</td>
-					<td>50% or less of the visual headings are semantically coded</td>
-				</tr>
-				<tr>
-					<td>Rating 2</td>
-					<td>51-80% of the visual headings are semantically coded</td>
-				</tr>
-				<tr>
-					<td>Rating 3</td>
-					<td>81-95% of the visual headings are semantically coded</td>
-				</tr>
-				<tr>
-					<td>Rating 4</td>
-					<td>Whatever technique is used, the 96% - 100% of the sections have properly coded headings and the levels communicate the hierarchy</td>
-				</tr>
-				</table>
+				<h2>Scoring</h2>
+				<p><strong>Unit Tested: </strong>Visual headings</p>
+
+				<p><strong>Approach: </strong> Create a percentage of the visual headings within a view that have correctly coded as a heading, are coded at the correct level, and can be used as navigation. </p>
 			</section>
 		</main>
 	</body>
