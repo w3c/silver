@@ -40,6 +40,20 @@ function linkHowTo() {
 	})
 }
 
+function linkOutcome() {
+	var outcomeBaseURI = "https://www.w3.org/WAI/GL/WCAG3/2020/outcomes/";
+	//if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
+	//else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
+	document.querySelectorAll('.outcome').forEach(function(node){
+		//this is brittle, depends on how respec does the heading
+		var heading = textNoDescendant(findHeading(node));
+		var pathFrag = titleToPathFrag(heading);
+		var el = document.createElement("p");
+		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Detailed information on </span>" + heading + "</a>";
+		node.insertBefore(el, node.querySelector("details"));
+	})
+}
+
 function addGuidelineMarkers() {
 	document.querySelectorAll('.guideline').forEach(function(node){
 		var guidelineText = node.querySelector("p");
@@ -57,15 +71,7 @@ function addOutcomeMarkers() {
 	})
 }
 
-function addMethodMarkers() {
-	document.querySelectorAll('.methods').forEach(function(node){
-		var parentHeader = findHeading(node.parentElement);
-		var methodHeader = node.querySelector('summary');
-		methodHeader.innerHTML = "Methods for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
-	})
-}
-
-function addFailureMarkers() {
+function addErrorMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var failureHeader = node.querySelector('summary');
@@ -143,9 +149,9 @@ function preRespec() {
 	adjustDfnData();
 	addGuidelineMarkers();
 	linkHowTo();
+	linkOutcome();
 	addOutcomeMarkers();
-	addMethodMarkers();
-	addFailureMarkers();
+	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
 }
