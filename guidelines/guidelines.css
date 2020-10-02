@@ -24,7 +24,7 @@ summary::before {
 	text-align: center;
 	font-weight: bold;
 }
-.howto-link {
+.howto-link, .outcome-link {
 	font-style: italic;
 }
 figure {
@@ -60,7 +60,7 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	margin-right: .5em;
 	width: 2em;
 }
-.methods h5, .failures h5, .rating h5 {
+.methods h5, .errors h5, .rating h5 {
 	font-size: 100%;
 	color: #005A9C;
 }
