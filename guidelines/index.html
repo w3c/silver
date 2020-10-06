@@ -263,7 +263,7 @@
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li> Any informative image without an appropriate text alternative that stops people from completing a task.</li>
+							<li></li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -567,11 +567,14 @@
 				<p>The proposed new guidance more accurately models current research in human visual perception of contrast and light intensity. The goal is to improve understanding of the functional needs of all users, and more effectively match the needs of those who face barriers accessing content. This new perception-based model is more context dependent than a strict light ratio measurement; results can, for example, vary with size of text and the darkness of the colors or background.</p>
 				<p>This model is more responsive to user needs and allows designers more choice in visual presentation. It does this by including multi-factor assessment tests which integrate contrast with interrelated elements of visual readability, such as font features. It includes tests to determine an upper limit of contrast, where elevated contrast may impact usability.</p>
 				</div>
-				<section class="outcome"><h4>Luminance contrast between background and text</h4><p>Provides adequate luminance contrast (lightness/darkness difference) between background and text colors in order to read the text easily.</p>
+				<section class="outcome"><h4>Luminance contrast between background and text</h4>
+					<p>Provides adequate luminance contrast (lightness/darkness difference) between background and text colors in order to read the text easily.</p>
+					<p class="ednote">This outcome will eventually include a second rating approach based on the mean average APCA value for all text in the path and view based on a character count.</p>
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li>{Failure description}</li>
+							<li>None.</li>
+		
 						</ul>
 					</details>
 					<details class="rating">
@@ -587,23 +590,23 @@
 							<tbody>
 								<tr>
 									<th scope="row">Rating 0</th>
-									<td>{Criteria for rating} OR there is a <a>critical error</a> in the <a>process</a></td>
+									<td>Any failures on the APCA lookup table or the lowest APCA value is more than 15% below the values on the APCA lookup table</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 1</th>
-									<td>{Criteria for rating} AND no <a>critical errors</a> in the <a>process</a></td>
+									<td>The lowest APCA value is 10-15% below the values on the APCA lookup table></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 2</th>
-									<td>{Criteria for rating} AND no <a>critical errors</a> in the <a>process</a></td>
+									<td>The lowest APCA value is 5-9% below the values on the APCA lookup table</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 3</th>
-									<td>{Criteria for rating} AND no <a>critical errors</a> in the <a>process</a></td>
+									<td>The lowest APCA value is 1-4% below the values on the APCA lookup table</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 4</th>
-									<td>{Criteria for rating} AND no <a>critical errors</a> in the <a>process</a></td>
+									<td>All reading text meets or exceeds the values on the APCA lookup table </td>
 								</tr>
 							</tbody>
 						</table>
@@ -979,6 +982,9 @@
 				<dt><dfn data-lt="Views">View</dfn></dt>
 				<dd><p>All content visually and programmatically available without a substantive change.</p>
 					<p>Views vary based on the technology being tested. While these guidelines provide guidance on scoping a view, the tester will determine what constitutes a view, and describe it. Views will often vary by technology. Views typically include state permutations that are based on that view such as dialogs and alerts, but some states may deserve to be treated as separate views.</p></dd>
+				<dt><dfn data-lt="Views">Visual Contrast</dfn></dt>
+				<dd><p>The combination of foreground and background colors along with font weight and size that make text readable.</p>
+					</dd>
 			</dl>
 		</section>
 		<section class="appendix">
