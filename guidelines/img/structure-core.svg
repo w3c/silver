@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg version="1.1" viewBox="0 0 24.833 31.097" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 51 131" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <marker id="TriangleOutM" overflow="visible" orient="auto">
    <path transform="scale(.4)" d="m5.77 0-8.65 5v-10z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
@@ -9,7 +9,7 @@
    <path transform="scale(.4)" d="m5.77 0-8.65 5v-10z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
   </marker>
  </defs>
- <g transform="translate(-12.584 -96.452)">
+ <g transform="translate(.5 -1.5)">
   <g>
    <rect y="2" width="50" height="30" fill="#fff" stroke="#000" stroke-linecap="round"/>
    <g transform="matrix(.26458 0 0 .26458 -57.523 2.3872)" aria-label="Guidelines">
