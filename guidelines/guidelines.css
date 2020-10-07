@@ -73,3 +73,21 @@ caption {
 	font-weight: bold;
 	font-size: 100% !important;
 }
+.figure-float {
+	
+}
+.figure-float-odd {
+	float: right;
+	margin-left: 2em;
+}
+.figure-float-even {
+	float: left;
+	margin-right: 2em;
+}
+.figure-full {
+	display: block;
+	margin: auto;
+}
+.screenshot {
+	width: 400px;
+}
