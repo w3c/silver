@@ -168,7 +168,7 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
-	alternateFloats();
+	//alternateFloats();
 }
 
 // scripts after Respec has run
