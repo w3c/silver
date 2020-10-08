@@ -14,7 +14,7 @@ summary::before {
 	float: left;
 	margin-right: -3.5em;
 }
-details:focus summary::before, details:hover summary::before, .guideline:focus h3 bdi::before, .guideline:hover h3 bdi::before, .outcome:focus h4 bdi::before, .outcome:hover h4 bdi::before {
+details:focus summary::before, details:hover summary::before, .guideline:focus h3::before, .guideline:hover h3::before, .outcome:focus h4::before, .outcome:hover h4::before {
 	background-color: #ffff99 ;
 	box-shadow: 0 0 1em .25em #ffff99;
 }
@@ -52,16 +52,16 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	font-size: 100%;
 	color: #005A9C;
 }
-.guideline h3 bdi::before, .outcome h4 bdi::before {
+.guideline h3::before, .outcome h4::before {
 	display: inline-block;
 	width: 2em;
 	margin-right: .5em;
 	vertical-align: text-top;
 }
-.guideline h3 bdi::before {
+.guideline h3::before {
 	content: url(img/guideline.svg);
 }
-.outcome h4 bdi::before {
+.outcome h4::before {
 	content: url(img/outcome.svg);
 }
 .outcome h4 {
