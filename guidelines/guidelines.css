@@ -14,6 +14,10 @@ summary::before {
 	float: left;
 	margin-right: -3.5em;
 }
+details:focus summary::before, details:hover summary::before, .guideline:focus h3 bdi::before, .guideline:hover h3 bdi::before, .outcome:focus h4 bdi::before, .outcome:hover h4 bdi::before {
+	background-color: #ffff99 ;
+	box-shadow: 0 0 1em .25em #ffff99;
+}
 .summary summary::before {
 	content: url(img/summary.svg);
 }
