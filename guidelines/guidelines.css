@@ -23,6 +23,9 @@ summary::before {
 .rating summary::before {
 	content: url(img/rating.svg);
 }
+.errors summary::before {
+	content: url(img/error.svg);
+}
 .summaryEnd {
 	text-align: center;
 	font-weight: bold;
@@ -45,23 +48,21 @@ a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	font-size: 100%;
 	color: #005A9C;
 }
-.guideline h3 bdi::before {
-	content: url(img/guideline.svg);
+.guideline h3 bdi::before, .outcome h4 bdi::before {
 	display: inline-block;
 	width: 2em;
 	margin-right: .5em;
 	vertical-align: text-top;
+}
+.guideline h3 bdi::before {
+	content: url(img/guideline.svg);
+}
+.outcome h4 bdi::before {
+	content: url(img/outcome.svg);
 }
 .outcome h4 {
 	margin-top: 1rem;
 	margin-left: -2rem;
-}
-.outcome h4::before {
-	content: url(img/outcome.svg);
-	display: inline-block;
-	vertical-align: text-top;
-	margin-right: .5em;
-	width: 2em;
 }
 .methods h5, .errors h5, .rating h5 {
 	font-size: 100%;
