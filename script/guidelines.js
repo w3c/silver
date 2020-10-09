@@ -128,7 +128,7 @@ function adjustNormativity() {
 			var normativeStatement = node.querySelector('p');
 			normativeStatement.classList.add("informative-statement");
 			normativeStatement.innerHTML = "<em>This section (with its subsections) provides advice only and does not specify guidelines, meaning it is <a href=\"#dfn-informative\" class=\"internalDFN\" data-link-type=\"dfn\">informative</a> or non-normative.</em>";
-		} else {
+		} else if (node.id != "abstract" && node.id != "sotd" && !node.classList.contains("appendix")) {
 			var el = document.createElement("p");
 			el.className = "normative-statement";
 			el.innerHTML = "<em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href=\"#dfn-normative\" class=\"internalDFN\" data-link-type=\"dfn\">normative</a>.</em>";
