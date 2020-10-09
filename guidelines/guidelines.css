@@ -74,15 +74,20 @@ caption {
 	font-size: 100% !important;
 }
 .figure-float {
-	
+	float: right;
+	margin-left: 2em;
+	margin-right: 0;
+	margin-top: 0;
 }
 .figure-float-odd {
 	float: right;
 	margin-left: 2em;
+	margin-right: 0;
 }
 .figure-float-even {
 	float: left;
 	margin-right: 2em;
+	margin-left: 0;
 }
 .figure-full {
 	display: block;
