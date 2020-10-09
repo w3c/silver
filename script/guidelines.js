@@ -49,7 +49,7 @@ function linkOutcome() {
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
 		var el = document.createElement("p");
-		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Detailed information on </span>" + heading + "</a>";
+		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome, details, and methods for </span>" + heading + "</a>";
 		node.insertBefore(el, node.querySelector("details"));
 	})
 }
