@@ -37,9 +37,6 @@ details:focus summary::before, details:hover summary::before, .guideline:focus h
 .howto-link, .outcome-link {
 	font-style: italic;
 }
-figure {
-	float: right;
-}
 a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	cursor: help;
 }
