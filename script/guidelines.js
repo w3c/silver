@@ -145,6 +145,19 @@ function adjustDfnData() {
 	});
 }
 
+function alternateFloats() {
+	var order = "odd";
+	document.querySelectorAll(".figure-float").forEach(function(node){
+		if (order == "odd") {
+			node.classList.add("figure-float-odd");
+			order = "even";
+		} else {
+			node.classList.add("figure-float-even");
+			order = "odd";
+		}
+	});
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
@@ -155,6 +168,7 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
+	//alternateFloats();
 }
 
 // scripts after Respec has run
