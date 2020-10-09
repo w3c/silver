@@ -75,7 +75,7 @@ function addErrorMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var failureHeader = node.querySelector('summary');
-		failureHeader.innerHTML = "Critical errors for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		failureHeader.innerHTML = "Critical errors for <q>" + textNoDescendant(parentHeader) + "</q>";
 	})
 }
 
@@ -83,10 +83,10 @@ function addRatingMarkers() {
 	document.querySelectorAll('.rating').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var sectionHeader = node.querySelector('summary');
-		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader) + "</q>";
 		
 		var table = node.querySelector('table');
-		table.setAttribute("summary", "Rating scale for \"" + textNoDescendant(parentHeader).toLowerCase() + "\"");
+		table.setAttribute("summary", "Rating scale for \"" + textNoDescendant(parentHeader) + "\"");
 		table.querySelector("caption").remove();
 	})
 }
