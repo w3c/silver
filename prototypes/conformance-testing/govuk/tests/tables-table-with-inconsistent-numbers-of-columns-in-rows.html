@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessibility tools audit test - Table with inconsistent numbers of columns in rows - GDS accessibility team</title>
+  <script src="../assets/javascript/jquery-1.12.0.min.js"></script>
+  <script src="../assets/javascript/main.js"></script>
+  <script src="../assets/javascript/main2.js"></script>
+  <link rel="stylesheet" href="../assets/stylesheets/tests.css" />
+</head>
+<body>
+  <h1>Table with inconsistent numbers of columns in rows</h1>
+  <main>
+    <table>
+<caption>Requester information</caption>
+<thead>
+<tr>
+<th colspan="10">Requester Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="label" colspan="1" id="name">Name</th>
+<td colspan="7" headers="name">Jon Smith</td>
+<th class="label" colspan="1" id="date">Date</th>
+<td colspan="1" headers="date">9/9/2005</td>
+</tr>
+<tr>
+<th class="label" colspan="1" id="dept">Department</th>
+<td colspan="9" headers="dept">Customer Service</td>
+</tr>
+<tr>
+<th class="label" colspan="1" id="remail">E-mail</th>
+<td colspan="4" headers="remail">jon.smith@gov.uk</td>
+<th class="label" colspan="1" id="rphone">Phone</th>
+<td colspan="4" headers="rphone">07700 900258</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

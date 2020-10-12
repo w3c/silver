@@ -1,0 +1,439 @@
+.fake-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+.test-container {
+    overflow: hidden;
+}
+
+.constrained-box {
+    position: relative;
+    overflow: scroll;
+
+    .constrained {
+        width: 100em;
+        position: relative;
+    }
+
+    .constrained-extra {
+        position: relative;
+        float: right;
+        margin-right: -100%;
+    }
+}
+.no-outine, .no-outine:focus {
+    outline: none;
+    background: none;
+}
+
+.small-text {
+    font-size: 8px;
+}
+.italic {
+    font-style: italic;
+}
+.all-caps {
+    text-transform: uppercase;
+}
+.justify {
+    text-align: justify;
+}
+.line-height {
+    line-height: 90%;
+}
+
+.low-contrast-small-aa,
+a.low-contrast-small-aa:active,
+a.low-contrast-small-aa:focus,
+a.low-contrast-small-aa:visited {
+    font-size: 12px;
+    color: #757980;
+}
+
+.low-contrast-large-aa,
+a.low-contrast-large-aa:active,
+a.low-contrast-large-aa:focus,
+a.low-contrast-large-aa:visited {
+    font-size: 20px;
+    color: #878c8c;
+}
+
+.low-contrast-small-aaa,
+a.low-contrast-small-aaa:active,
+a.low-contrast-small-aaa:focus,
+a.low-contrast-small-aaa:visited {
+    font-size: 12px;
+    color: #9499a1;
+}
+
+.low-contrast-large-aaa,
+a.low-contrast-large-aaa:active,
+a.low-contrast-large-aaa:focus,
+a.low-contrast-large-aaa:visited {
+    font-size: 20px;
+    color: #81858c;
+}
+
+input.low-contrast {
+    border: 1px #dddddd solid;
+}
+
+.resize {
+    font-size:1.5em;
+    line-height: 24px;
+    max-height: 64px;
+    overflow: hidden;
+}
+
+#css-generated-text:after {
+    content: 'Pizza';
+}
+
+.poisonous {
+    color: #a1150b;
+}
+
+.safe {
+    color: #0a6703;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #00823b;
+    border-bottom: 2px solid #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.warning-icon {
+    background-image: url("../images/important.png");
+    background-size: 34px 34px;
+    background-repeat: no-repeat;
+    background-position: 0 4px;
+    min-height: 40px;
+    padding-left: 40px;
+    font-weight: bold;
+    width: 30em;
+}
+
+.display-table {
+    display:table;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+.display-table-cell {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.unobvious-link {
+    font-weight: bold;
+    color: #000;
+}
+
+.unobvious-link a,
+.unobvious-link a:visited,
+.unobvious-link a:active,
+.unobvious-link a:hover {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.unobvious-link a:hover {
+    text-decoration: underline;
+}
+
+.form-label {
+    display: block;
+}
+.form-hint {
+    color: #6f777b;
+    margin: 0;
+}
+
+/* Global breadcrumb lifted from GOV.UK */
+#global-breadcrumb {
+    background-color: #fff;
+    max-width: 1020px;
+    margin: 0 auto;
+    z-index: 50;
+    overflow: hidden;
+}
+
+#global-breadcrumb ol {
+    max-width: 960px;
+    margin: 0 30px;
+    padding: 0.75em 0
+}
+
+#global-breadcrumb ol li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    background-image: url(https://assets.publishing.service.gov.uk/static/separator-871ef28abf1920b1b8050934ebec4366c18e3cba6ddb704392935e076a7e744d.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    float: left;
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    padding-right: 1em
+}
+
+#global-breadcrumb ol li a {
+    color: #0b0c0c
+}
+
+#global-breadcrumb ol li strong {
+    font-weight: normal
+}
+
+#global-breadcrumb ol li:last-child {
+    background-image: none;
+    margin-right: 0
+}
+
+/* End of Global Breadcrumb */
+
+/* Outline not visible */
+.not-visible-outline {
+    background: #fff;
+    border: 2px solid #000;
+    padding: 0.4em 2em;
+
+}
+
+.not-visible-outline:focus {
+    border: 1px solid #000;
+    outline: #000 solid 1px;
+}
+
+.not-visible-outline-link:focus {
+    outline: #000 solid 1px;
+}
+
+/* Left aligned form labels */
+
+.too-much-whitespace {
+    overflow: hidden;
+}
+
+.too-much-whitespace label {
+    float: left;
+}
+
+.too-much-whitespace input {
+    float: right;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    width: 400px;
+    top: 20%;
+    left: 50%;
+    margin-left: -200px;
+    background: white;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.lightbox .close-button {
+    float: right;
+    color: #000;
+    text-decoration: none;
+}
+
+.lightbox span.close-button {
+    cursor: pointer;
+    cursor: hand;
+}
+
+/* Links only identifiable by colour alone */
+.links-by-colour-alone a {
+    color: #005ea5;
+}
+
+.links-by-colour-alone a:hover {
+    color: #2e8aca;
+}
+
+.links-by-colour-alone .colour-alone-link {
+    text-decoration: none;
+}
+
+/* Wrong focus order */
+
+.focus-order-broken a {
+    margin-left: 0.75em;
+}
+
+.focus-order-broken .first, 
+.focus-order-broken .third {
+    float: left;
+}
+
+.focus-order-broken .second {
+    float: right;
+}
+
+
+.wont-expand-box {
+    overflow: hidden;
+    height: 10em;
+}
+
+.wont-expand {
+    border: 1px solid #BFC1C3;
+    padding: 1em;
+    position: absolute;
+    width: 50%;
+    height: 4.2em;
+    overflow: hidden;
+}
+
+/* Concertina */
+.concertina dt {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    border-top: 1px solid #bfc1c3;
+}
+
+.concertina dt:hover {
+    cursor: pointer;
+    cursor: hand;
+    background: #f8f8f8;
+}
+
+.concertina dt:before {
+    content: '>';
+    font-size: 0.7em;
+    margin-left: 1em;
+    margin-right: 0.4em;
+    position: relative;
+    top: -0.25em;
+}
+
+.concertina dt.expanded:before {
+    content: 'v';
+}
+
+/* Validation */
+.errors-badly-identified .validation-summary {
+    padding: 1em;
+    border: 3px solid #df3034;
+    background: #fae1e1;
+}
+
+.errors-badly-identified label {
+    display: block;
+    margin: 1em 0 1em 0;
+}
+
+.errors-badly-identified label input {
+    display: block;
+}
+
+.errors-colour-only .has-errors {
+    background: #fae1e1;
+    border: 1px solid #df3034;
+}
+
+.error-poor-contrast .validation-summary {
+    color: #fff;
+}
+
+.error-poor-contrast .has-errors {
+    border: 1px solid #fae1e1;
+}
+
+.required-format-not-given .error-message {
+    display: block;
+    color: #df3034;
+    margin: 0 0 0.3em 0;
+}
+
+.dropdown-nav > ul > li > ul {
+    display: none;
+}
+
+.dropdown-nav > ul > li:hover > ul {
+    display: block;
+}
+
+.tooltips-not-focusable {
+    display: block;
+    margin-bottom: 1em;
+
+    .tooltip-icon {
+        cursor: pointer;
+        cursor: hand;
+        background: #6F777B;
+        color: #fff;
+        border-radius: 1em;
+        width: 1.5em;
+        height: 1.5em;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .tooltip-icon:hover + .tooltip-information {
+        display: block;
+    }
+
+    .tooltip-information {
+        display: none;
+        position: absolute;
+        width: 12em;
+        background: #6F777B;
+        color: white;
+        padding: 1em;
+        margin-top: -10em;
+        margin-left: 6.4em;
+    }
+
+    /* Tooltip arrow */
+
+    .tooltip-information:after, .tooltip-information:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .tooltip-information:after {
+        border-color: rgba(111, 119, 123, 0);
+        border-top-color: #6F777B;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+
+    .tooltip-information:before {
+        border-color: rgba(0, 0, 0, 0);
+        border-top-color: #6F777B;
+        border-width: 11px;
+        margin-left: -11px;
+    }
+}
+
+.not-article-content h2 {
+    margin: 0.5em 0;
+}

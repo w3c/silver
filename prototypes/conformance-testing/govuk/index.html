@@ -1,0 +1,2130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility tools audit results - What we tested - GDS accessibility team</title>
+  <link rel="stylesheet" href="assets/stylesheets/application.css" />
+  <link rel="stylesheet" href="assets/stylesheets/tests.css" />
+  <script src="assets/javascript/jquery-1.12.0.min.js"></script>
+  <script src="assets/javascript/main.js"></script>
+  <script src="assets/javascript/main2.js"></script>
+</head>
+<body class="tests">
+  <header id="global-header" role="banner">
+    <div class="header-wrapper">
+      <div class="header-global">
+        <div class="header-logo">
+          <a id="logo" class="content" href="index.html">Accessibility tool audit</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+<main id="wrapper">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="index.html">Overview</a></li>
+      <li>Test cases</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds intro-summary">
+      <h1>What we tested</h1>
+
+      <nav>
+        <ul>
+          <li><a href="#content">Content</a></li>
+          <li><a href="#pagelayout">Page Layout</a></li>
+          <li><a href="#colourandcontrast">Colour and Contrast</a></li>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#languageofcontent">Language of content</a></li>
+          <li><a href="#pagetitle">Page Title</a></li>
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#lists">Lists</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#images">Images</a></li>
+          <li><a href="#multimedia">Multimedia</a></li>
+          <li><a href="#links">Links</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#navigation">Navigation</a></li>
+          <li><a href="#keyboardaccess">Keyboard Access</a></li>
+          <li><a href="#frames">Frames</a></li>
+          <li><a href="#css">CSS</a></li>
+          <li><a href="#html">HTML</a></li>
+          </ul>
+      </nav>
+    </div>
+  </div>
+
+  <h2 id="content" class="heading-large">Content</h2>
+
+  
+  <h3 class="heading-medium" id="content-content-identified-by-location">
+    <a href="tests/content-content-identified-by-location.html">
+      Content identified by location
+    </a>
+  </h3>
+
+  <div class="example">
+    <p>The artist on the right won the Album of the year</p>
+<a href="swift.html" style="float:right">Taylor Swift</a>
+<a href="sheeran.html" style="float:left">Ed Sheeran</a>
+  </div>
+  
+  <h3 class="heading-medium" id="content-plain-language-is-not-used">
+    <a href="tests/content-plain-language-is-not-used.html">
+      Plain Language is not used
+    </a>
+  </h3>
+
+  <div class="example">
+            Title I of the CARE Act creates a program of formula and supplemental competitive grants to help metropolitan areas
+        with 2,000 or more reported AIDS cases meet emergency care needs of low-income HIV patients. Title II of the Ryan
+        White Act provides formula grants to States and territories for operation of HIV service consortia in the localities
+        most affected bu the epidemic, provision of home and community -based care, continuation of insurance coverage for
+        persons with HIV infection, and treatments that prolong life and prevent serious deterioration of health.
+        Up to 10 percent of the funds for this program can be used to support Special Projects of National Significance.
+    
+  </div>
+  
+  <h3 class="heading-medium" id="content-content-is-not-in-correct-reading-order-in-source-code">
+    <a href="tests/content-content-is-not-in-correct-reading-order-in-source-code.html">
+      Content is not in correct reading order in source code
+    </a>
+  </h3>
+
+  <div class="example">
+    <div class="test-container"><h4>3-Step Skin Care</h4>
+<div style="float:right; width:33%">Moisturise</div>
+<div style="float:right; width:33%">Exfoliate</div>
+<div style="float:right; width:33%">Cleanse</div></div>
+  </div>
+  
+  <h3 class="heading-medium" id="content-content-is-not-organised-into-well-defined-groups-or-chunks-using-headings,-lists,-and-other-visual-mechanisms">
+    <a href="tests/content-content-is-not-organised-into-well-defined-groups-or-chunks-using-headings,-lists,-and-other-visual-mechanisms.html">
+      Content is not organised into well-defined groups or chunks, using headings, lists, and other visual mechanisms
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/unorganised_content.html">Example page with a long block of unorganised content.</a>
+  </div>
+  
+  <h3 class="heading-medium" id="content-first-instance-of-abbreviation-not-expanded">
+    <a href="tests/content-first-instance-of-abbreviation-not-expanded.html">
+      First instance of abbreviation not expanded
+    </a>
+  </h3>
+
+  <div class="example">
+    <abbr>GDS</abbr> is part of the Cabinet Office. Our job is digital transformation of government.
+    
+  </div>
+  
+  <h2 id="pagelayout" class="heading-large">Page Layout</h2>
+
+  
+  <h3 class="heading-medium" id="page-layout-wide-page-forces-users-to-scroll-horizontally">
+    <a href="tests/page-layout-wide-page-forces-users-to-scroll-horizontally.html">
+      Wide page forces users to scroll horizontally
+    </a>
+  </h3>
+
+  <div class="example">
+    <div class="constrained-box"><p class="constrained">When sites are constructed to require horizontal scrolling in order to navigate or read content at a normal size of 100% using standard screen sizes, additional problems can arise for users with low vision or mobility impairments.</p><p class="constrained-extra">This is some text you have to horizontally scroll to read.</p></div>
+  </div>
+  
+  <h2 id="colourandcontrast" class="heading-large">Colour and Contrast</h2>
+
+  
+  <h3 class="heading-medium" id="colour-and-contrast-color-alone-is-used-to-convey-content">
+    <a href="tests/colour-and-contrast-color-alone-is-used-to-convey-content.html">
+      Color alone is used to convey content
+    </a>
+  </h3>
+
+  <div class="example">
+    <p>The green mushrooms listed here are OK to eat. The red mushrooms will kill you.</p>
+<ul>
+<li class="poisonous">Amanita</li>
+<li class="safe">Chanterelle</li>
+<li class="safe">Porcini</li>
+<li class="safe">Shitake</li>
+<li class="poisonous">Tylopilus</li>
+</ul>
+  </div>
+  
+  <h3 class="heading-medium" id="colour-and-contrast-small-text-does-not-have-a-contrast-ratio-of-at-least-45:1-so-does-not-meet-aa">
+    <a href="tests/colour-and-contrast-small-text-does-not-have-a-contrast-ratio-of-at-least-45:1-so-does-not-meet-aa.html">
+      Small text does not have a contrast ratio of at least 4.5:1 so does not meet AA
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="low-contrast-small-aa">This small text does not have enough contrast with it's background</p>
+  </div>
+  
+  <h3 class="heading-medium" id="colour-and-contrast-large-text-does-not-have-a-contrast-ratio-of-at-least-31-so-does-not-meet-aa">
+    <a href="tests/colour-and-contrast-large-text-does-not-have-a-contrast-ratio-of-at-least-31-so-does-not-meet-aa.html">
+      Large text does not have a contrast ratio of at least 3:1 so does not meet AA
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="low-contrast-large-aa">This small text does not have enough contrast with it's background</p>
+  </div>
+  
+  <h3 class="heading-medium" id="colour-and-contrast-small-text-does-not-have-a-contrast-ratio-of-at-least-71-so-does-not-meet-aaa">
+    <a href="tests/colour-and-contrast-small-text-does-not-have-a-contrast-ratio-of-at-least-71-so-does-not-meet-aaa.html">
+      Small text does not have a contrast ratio of at least 7:1 so does not meet AAA
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="low-contrast-small-aaa">This small text does not have enough contrast with it's background</p>
+  </div>
+  
+  <h3 class="heading-medium" id="colour-and-contrast-large-text-does-not-have-a-contrast-ratio-of-at-least-45:1-so-does-not-meet-aaa">
+    <a href="tests/colour-and-contrast-large-text-does-not-have-a-contrast-ratio-of-at-least-45:1-so-does-not-meet-aaa.html">
+      Large text does not have a contrast ratio of at least 4.5:1 so does not meet AAA
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="low-contrast-large-aa">This small text does not have enough contrast with it's background</p>
+  </div>
+  
+  <h3 class="heading-medium" id="colour-and-contrast-focus-not-visible">
+    <a href="tests/colour-and-contrast-focus-not-visible.html">
+      Focus not visible
+    </a>
+  </h3>
+
+  <div class="example">
+    <a class="not-visible-outline-link" href="#">This links has visible focus</a> but this button
+        <button class="not-visible-outline">Search</button> doesn't
+    
+  </div>
+  
+  <h2 id="typography" class="heading-large">Typography</h2>
+
+  
+  <h3 class="heading-medium" id="typography-inadequate-line-height-used">
+    <a href="tests/typography-inadequate-line-height-used.html">
+      Inadequate line height used
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="line-height">Many people with cognitive disabilities have trouble tracking lines of text when a block of text is single spaced. Providing spacing between 1.5 to 2 allows them to start a new line more easily once they have finished the previous one.</p>
+  </div>
+  
+  <h3 class="heading-medium" id="typography-all-caps-text-found">
+    <a href="tests/typography-all-caps-text-found.html">
+      All caps text found
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="all-caps">Typing sentences or phrases IN ALL CAPITALS is rarely a good idea. It may make sense under some circumstances, but only rarely. Lengthy segments of capitalized content are more difficult to read. In some cases, a screen reader may interpret ALL CAPITAL text as being an acronym and may read it as letters rather than words. For example, a screen reader may read the uppercase text CONTACT US as "Contact U. S." because it interprets the uppercase "US" as being an acronym for "United States".</p>
+  </div>
+  
+  <h3 class="heading-medium" id="typography-blink-element-found">
+    <a href="tests/typography-blink-element-found.html">
+      Blink element found
+    </a>
+  </h3>
+
+  <div class="example">
+    <blink>Blinking text and moving text (such as a marquee) can distract the reader's attention. This is especially relevant to people with attention deficits or cognitive disabilities. Neither is likely to cause a seizure, but they are likely to decrease the readability of the document as a whole and increase the time it takes for users to finish reading it.</blink>
+  </div>
+  
+  <h3 class="heading-medium" id="typography-italics-used-on-long-sections-of-text">
+    <a href="tests/typography-italics-used-on-long-sections-of-text.html">
+      Italics used on long sections of text
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="italic">Italics are sometimes used to highlight text. But you shouldn't use italicized text because they make letters hard to read. The letters have a jagged line compared to non-italic fonts. The letters also lean over making it hard for dyslexic users to make out the words. When the text size is small, the text is even more illegible.</p>
+  </div>
+  
+  <h3 class="heading-medium" id="typography-marquee-element-found">
+    <a href="tests/typography-marquee-element-found.html">
+      Marquee element found
+    </a>
+  </h3>
+
+  <div class="example">
+    <marquee>The BLINK and MARQUEE element animates content in a way that cannot be overridden or disabled by the user.</marquee>
+  </div>
+  
+  <h3 class="heading-medium" id="typography-long-lines-of-text">
+    <a href="tests/typography-long-lines-of-text.html">
+      Long lines of text
+    </a>
+  </h3>
+
+  <div class="example">
+    <p>For people with some reading or vision disabilities, long lines of text can become a significant barrier. They have trouble keeping their place and following the flow of text. Having a narrow block of text makes it easier for them to continue on to the next line in a block. Lines should not exceed 80 characters</p>
+  </div>
+  
+  <h3 class="heading-medium" id="typography-very-small-text-found">
+    <a href="tests/typography-very-small-text-found.html">
+      Very small text found
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="small-text">This is some tiny text, much too small for some people to read</p>
+  </div>
+  
+  <h3 class="heading-medium" id="typography-justified-text-found">
+    <a href="tests/typography-justified-text-found.html">
+      Justified text found
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="justify">When text is justified to both margins it may add additional spaces between words which may be difficult for users with visual or cognitive impairments to read. Full text justification can also cause words to be spaced closely together thus making it difficult to determine where a word starts and ends.</p>
+  </div>
+  
+  <h2 id="languageofcontent" class="heading-large">Language of content</h2>
+
+  
+  <h3 class="heading-medium" id="language-of-content-text-language-changed-without-required-change-in-direction">
+    <a href="tests/language-of-content-text-language-changed-without-required-change-in-direction.html">
+      Text language changed without required change in direction
+    </a>
+  </h3>
+
+  <div class="example">
+    <p lang="ar">الإعفاء الإلكتروني من التأشيرة</p>
+  </div>
+  
+  <h3 class="heading-medium" id="language-of-content-html-element-has-an-empty-lang-attribute">
+    <a href="tests/language-of-content-html-element-has-an-empty-lang-attribute.html">
+      html element has an empty lang attribute
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/empty.html">Example page with an empty lang attribute</a>
+  </div>
+  
+  <h3 class="heading-medium" id="language-of-content-lang-attribute-not-used-to-identify-change-of-language">
+    <a href="tests/language-of-content-lang-attribute-not-used-to-identify-change-of-language.html">
+      lang attribute not used to identify change of language
+    </a>
+  </h3>
+
+  <div class="example">
+    <p>Mother, he's asking you to go. He's saying, "Allons, Madame plaisante!"</p>
+  </div>
+  
+  <h3 class="heading-medium" id="language-of-content-text-language-is-in-the-wrong-direction">
+    <a href="tests/language-of-content-text-language-is-in-the-wrong-direction.html">
+      Text language is in the wrong direction
+    </a>
+  </h3>
+
+  <div class="example">
+    <p dir="rtl" lang="en">Electronic visa waiver</p>
+  </div>
+  
+  <h3 class="heading-medium" id="language-of-content-html-element-has-an-invalid-value-in-the-lang-attribute">
+    <a href="tests/language-of-content-html-element-has-an-invalid-value-in-the-lang-attribute.html">
+      html element has an invalid value in the lang attribute
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/invalid.html">Example page with a lang attribute set to an invalid</a>
+  </div>
+  
+  <h3 class="heading-medium" id="language-of-content-lang-attribute-used-to-identify-change-of-language-but-with-invalid-value">
+    <a href="tests/language-of-content-lang-attribute-used-to-identify-change-of-language-but-with-invalid-value.html">
+      lang attribute used to identify change of language, but with invalid value
+    </a>
+  </h3>
+
+  <div class="example">
+    <p>Mother, he's asking you to go. He's saying, <span lang="frrr">"Allons, Madame plaisante!"</span></p>
+  </div>
+  
+  <h3 class="heading-medium" id="language-of-content-html-element-is-missing-a-lang-attribute">
+    <a href="tests/language-of-content-html-element-is-missing-a-lang-attribute.html">
+      html element is missing a lang attribute
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/missing.html">Example page with a missing lang attribute</a>
+  </div>
+  
+  <h3 class="heading-medium" id="language-of-content-html-element-has-lang-attribute-set-to-wrong-language">
+    <a href="tests/language-of-content-html-element-has-lang-attribute-set-to-wrong-language.html">
+      html element has lang attribute set to wrong language
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/inappropriate.html">Example page with a lang attribute set to the wrong language</a>
+  </div>
+  
+  <h3 class="heading-medium" id="language-of-content-lang-attribute-used-to-identify-change-of-language-but-with-wrong-language">
+    <a href="tests/language-of-content-lang-attribute-used-to-identify-change-of-language-but-with-wrong-language.html">
+      lang attribute used to identify change of language, but with wrong language
+    </a>
+  </h3>
+
+  <div class="example">
+    <p>Mother, he's asking you to go. He's saying, <span lang="es">"Allons, Madame plaisante!"</span></p>
+  </div>
+  
+  <h2 id="pagetitle" class="heading-large">Page Title</h2>
+
+  
+  <h3 class="heading-medium" id="page-title-inappropriate-page-title">
+    <a href="tests/page-title-inappropriate-page-title.html">
+      Inappropriate page title
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/inappropriate.html">Example page with a inappropriate page title</a>
+  </div>
+  
+  <h3 class="heading-medium" id="page-title-empty-page-title">
+    <a href="tests/page-title-empty-page-title.html">
+      Empty page title
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/empty.html">Example page with a empty page title</a>
+  </div>
+  
+  <h3 class="heading-medium" id="page-title-missing-page-title">
+    <a href="tests/page-title-missing-page-title.html">
+      Missing page title
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/missing.html">Example page with a missing page title</a>
+  </div>
+  
+  <h2 id="headings" class="heading-large">Headings</h2>
+
+  
+  <h3 class="heading-medium" id="headings-empty-heading">
+    <a href="tests/headings-empty-heading.html">
+      Empty heading
+    </a>
+  </h3>
+
+  <div class="example">
+    <h4></h4>
+<p>This paragraph is preceded by an empty H4</p>
+  </div>
+  
+  <h3 class="heading-medium" id="headings-missing-h1">
+    <a href="tests/headings-missing-h1.html">
+      Missing H1
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="example-pages/missing.html">Example page with no H1</a>
+  </div>
+  
+  <h3 class="heading-medium" id="headings-text-formatting-used-instead-of-an-actual-heading">
+    <a href="tests/headings-text-formatting-used-instead-of-an-actual-heading.html">
+      Text formatting used instead of an actual heading
+    </a>
+  </h3>
+
+  <div class="example">
+    <div class="fake-heading">Fake Heading</div>
+<p>This paragraph is preceded by a div that is styled to look like a heading</p>
+  </div>
+  
+  <h3 class="heading-medium" id="headings-headings-not-structured-in-a-hierarchical-manner">
+    <a href="tests/headings-headings-not-structured-in-a-hierarchical-manner.html">
+      Headings not structured in a hierarchical manner
+    </a>
+  </h3>
+
+  <div class="example">
+    <h3>Heading 3</h3>
+<p>Pages should be structured in a hierarchical manner, generally with one 1st degree headings (h1) being the
+        most important (usually page titles or main content heading), then 2nd degree headings (h2 - usually major
+            section headings), down to 3rd degree headings (sub-sections of the h2), and so on. </p>
+<h5>Heading 5</h5>
+<p>Technically, lower degree headings should be contained within headings of the next highest degree
+            (i.e., one should not skip heading levels, such as from an h2 to an h4, going down the document).</p>
+<h4>Heading 4</h4>
+<p>This is an example where heading levels have been skipped and are not in a logical order, which makes the page
+            difficult to understand and navigate for people using assitive technologies such as screen reader.</p>
+  </div>
+  
+  <h2 id="lists" class="heading-large">Lists</h2>
+
+  
+  <h3 class="heading-medium" id="lists-li-element-with-no-parent">
+    <a href="tests/lists-li-element-with-no-parent.html">
+      LI element with no parent
+    </a>
+  </h3>
+
+  <div class="example">
+    <li>
+            no parent
+        </li>
+  </div>
+  
+  <h3 class="heading-medium" id="lists-list-not-marked-up-as-a-list">
+    <a href="tests/lists-list-not-marked-up-as-a-list.html">
+      List not marked up as a list
+    </a>
+  </h3>
+
+  <div class="example">
+            * apple <br/>
+        * orange <br/>
+        * banana <br/>
+        * pear
+    
+  </div>
+  
+  <h3 class="heading-medium" id="lists-dt-or-dd-elements-that-are-not-contained-within-a-dl-element">
+    <a href="tests/lists-dt-or-dd-elements-that-are-not-contained-within-a-dl-element.html">
+      DT or DD elements that are not contained within a DL element
+    </a>
+  </h3>
+
+  <div class="example">
+    <dt>html</dt>
+<dd>a markup language for describing web documents</dd>
+  </div>
+  
+  <h3 class="heading-medium" id="lists-improperly-nested-lists">
+    <a href="tests/lists-improperly-nested-lists.html">
+      Improperly nested lists
+    </a>
+  </h3>
+
+  <div class="example">
+    <ul>
+<ul>
+<li>improperly nested</li>
+</ul>
+</ul>
+  </div>
+  
+  <h2 id="tables" class="heading-large">Tables</h2>
+
+  
+  <h3 class="heading-medium" id="tables-table-with-column-headers-and-double-row-headers">
+    <a href="tests/tables-table-with-column-headers-and-double-row-headers.html">
+      Table with column headers and double row headers
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<caption>Road Traffic at Junctions</caption>
+<tr>
+<th>Road</th>
+<th>Junction</th>
+<th>Car</th>
+<th>Bus</th>
+</tr>
+<tr>
+<th>Regent Street</th>
+<th>Oxford Street</th>
+<td>307</td>
+<td>12</td>
+</tr>
+<tr>
+<th>Regent Street</th>
+<th>Bond Street</th>
+<td>1731</td>
+<td>58</td>
+</tr>
+<tr>
+<th>Southwark Street</th>
+<th>Union Street</th>
+<td>1975</td>
+<td>51</td>
+</tr>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-has-no-scope-attributes">
+    <a href="tests/tables-table-has-no-scope-attributes.html">
+      Table has no scope attributes
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<caption>Shelly's Daughters</caption>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Birthday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Jackie</th>
+<td>5</td>
+<td>April 5</td>
+</tr>
+<tr>
+<th>Beth</th>
+<td>8</td>
+<td>January 14</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-nested-within-table-header">
+    <a href="tests/tables-table-nested-within-table-header.html">
+      Table nested within table header
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<tr>
+<th>
+<table>
+<tr>
+<th>b.a</th>
+</tr>
+<tr>
+<td>b.b</td>
+</tr>
+</table>
+</th>
+</tr>
+<tr>
+<td>a.b</td>
+</tr>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-nested-within-table">
+    <a href="tests/tables-table-nested-within-table.html">
+      Table nested within table
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<tr>
+<th>1.1</th>
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<th>2.1</th>
+</tr>
+<tr>
+<td>2.2</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-has-no-table-headings">
+    <a href="tests/tables-table-has-no-table-headings.html">
+      Table has no table headings
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<caption>Shelly's Daughters</caption>
+<thead>
+<tr>
+<td>Name</td>
+<td>Age</td>
+<td>Birthday</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jackie</td>
+<td>5</td>
+<td>April 5</td>
+</tr>
+<tr>
+<td>Beth</td>
+<td>8</td>
+<td>January 14</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-with-inconsistent-numbers-of-columns-in-rows">
+    <a href="tests/tables-table-with-inconsistent-numbers-of-columns-in-rows.html">
+      Table with inconsistent numbers of columns in rows
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<caption>Requester information</caption>
+<thead>
+<tr>
+<th colspan="10">Requester Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="label" colspan="1" id="name">Name</th>
+<td colspan="7" headers="name">Jon Smith</td>
+<th class="label" colspan="1" id="date">Date</th>
+<td colspan="1" headers="date">9/9/2005</td>
+</tr>
+<tr>
+<th class="label" colspan="1" id="dept">Department</th>
+<td colspan="9" headers="dept">Customer Service</td>
+</tr>
+<tr>
+<th class="label" colspan="1" id="remail">E-mail</th>
+<td colspan="4" headers="remail">jon.smith@gov.uk</td>
+<th class="label" colspan="1" id="rphone">Phone</th>
+<td colspan="4" headers="rphone">07700 900258</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-that-only-has-th-elements-in-it">
+    <a href="tests/tables-table-that-only-has-th-elements-in-it.html">
+      Table that only has TH elements in it
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<thead>
+<tr>
+<th>Foo</th>
+<th>Bar</th>
+<th>Bat</th>
+<th>Baz</th>
+</tr>
+</thead>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-is-missing-a-caption">
+    <a href="tests/tables-table-is-missing-a-caption.html">
+      Table is missing a caption
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Age</th>
+<th scope="col">Birthday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Jackie</th>
+<td>5</td>
+<td>April 5</td>
+</tr>
+<tr>
+<th scope="row">Beth</th>
+<td>8</td>
+<td>January 14</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-used-for-layout">
+    <a href="tests/tables-table-used-for-layout.html">
+      Table used for layout
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<tr>
+<td>navigation</td>
+<td>main content</td>
+</tr>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-has-an-empty-table-header">
+    <a href="tests/tables-table-has-an-empty-table-header.html">
+      Table has an empty table header
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<caption>Shelly's Daughters</caption>
+<thead>
+<tr>
+<th></th>
+<th scope="col">Age</th>
+<th scope="col">Birthday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Jackie</th>
+<td>5</td>
+<td>April 5</td>
+</tr>
+<tr>
+<th scope="row">Beth</th>
+<td>8</td>
+<td>January 14</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  
+  <h3 class="heading-medium" id="tables-table-with-some-empty-cells">
+    <a href="tests/tables-table-with-some-empty-cells.html">
+      Table with some empty cells
+    </a>
+  </h3>
+
+  <div class="example">
+    <table>
+<caption>Bills before Parliament 2016-17</caption>
+<thead>
+<tr>
+<th>
+                        Current House
+                    </th>
+<th>
+                        Bill title
+                    </th>
+<th>
+                        Last updated
+                    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> </td>
+<td>A</td>
+<td> </td>
+</tr>
+<tr>
+<td>
+                        Lords
+                    </td>
+<td>
+                        Abortion (Disability Equality) Bill [HL]
+                    </td>
+<td>26.05.2016</td>
+</tr>
+<tr>
+<td>
+                        Lords
+                    </td>
+<td>
+                        Access to Palliative Care Bill [HL]
+                    </td>
+<td>10.06.2016</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  
+  <h2 id="images" class="heading-large">Images</h2>
+
+  
+  <h3 class="heading-medium" id="images-image-has-alt-and-title-that-are-different">
+    <a href="tests/images-image-has-alt-and-title-that-are-different.html">
+      Image has alt and title that are different
+    </a>
+  </h3>
+
+  <div class="example">
+    <img alt="BBC" src="assets/test_images/bbc-blocks-dark.png" title="BBC homepage"/>
+  </div>
+  
+  <h3 class="heading-medium" id="images-image-with-presentation-role-has-non-empty-alt">
+    <a href="tests/images-image-with-presentation-role-has-non-empty-alt.html">
+      Image with presentation role has non-empty alt
+    </a>
+  </h3>
+
+  <div class="example">
+    <img alt="Decorative line clipart" height="118" role="presentation" src="assets/test_images/decoration.png" width="368">
+</img>
+  </div>
+  
+  <h3 class="heading-medium" id="images-image-with-no-alt-attribute">
+    <a href="tests/images-image-with-no-alt-attribute.html">
+      Image with no alt attribute
+    </a>
+  </h3>
+
+  <div class="example">
+    <img src="assets/test_images/bbc-blocks-dark.png"/>
+  </div>
+  
+  <h3 class="heading-medium" id="images-background-image-that-conveys-information-does-not-have-a-text-alternative">
+    <a href="tests/images-background-image-that-conveys-information-does-not-have-a-text-alternative.html">
+      Background image that conveys information does not have a text alternative
+    </a>
+  </h3>
+
+  <div class="example">
+    <div class="warning-icon">
+            Taking too much of your pension money in early retirement could mean you don't have enough for later.
+        </div>
+  </div>
+  
+  <h3 class="heading-medium" id="images-image-has-empty-alt-and-non-empty-title">
+    <a href="tests/images-image-has-empty-alt-and-non-empty-title.html">
+      Image has empty alt and non-empty title
+    </a>
+  </h3>
+
+  <div class="example">
+    <img alt="" src="assets/test_images/bbc-blocks-dark.png" title="BBC"/>
+  </div>
+  
+  <h3 class="heading-medium" id="images-a-distraction-is-present-an-animated-gif">
+    <a href="tests/images-a-distraction-is-present-an-animated-gif.html">
+      A distraction is present, an animated gif
+    </a>
+  </h3>
+
+  <div class="example">
+    <img alt="Animated gif of a Christmas tree with a toy train round and round the base of the tree" height="193" src="assets/test_images/animated-tree.gif" width="157">
+</img>
+  </div>
+  
+  <h3 class="heading-medium" id="images-image-that-conveys-information-has-an-empty-alt-attribute">
+    <a href="tests/images-image-that-conveys-information-has-an-empty-alt-attribute.html">
+      Image that conveys information has an empty alt attribute
+    </a>
+  </h3>
+
+  <div class="example">
+    <img alt="" src="assets/test_images/bbc-blocks-dark.png"/>
+  </div>
+  
+  <h3 class="heading-medium" id="images-image-that-conveys-information-has-inappropriate-alt-text">
+    <a href="tests/images-image-that-conveys-information-has-inappropriate-alt-text.html">
+      Image that conveys information has inappropriate alt text
+    </a>
+  </h3>
+
+  <div class="example">
+    <img alt="Twitter" src="assets/test_images/bbc-blocks-dark.png"/>
+  </div>
+  
+  <h3 class="heading-medium" id="images-image-alt-attribute-contains-image-file-name">
+    <a href="tests/images-image-alt-attribute-contains-image-file-name.html">
+      Image alt attribute contains image file name
+    </a>
+  </h3>
+
+  <div class="example">
+    <img alt="bbc-blocks-dark.png" src="assets/test_images/bbc-blocks-dark.png"/>
+  </div>
+  
+  <h3 class="heading-medium" id="images-image-with-partial-text-alternative">
+    <a href="tests/images-image-with-partial-text-alternative.html">
+      Image with partial text alternative
+    </a>
+  </h3>
+
+  <div class="example">
+    <p>The image below contains a lot of information, such as which departments the sale is on. The text alternative in the alt attribute does not include this information, only a partial "25% off sale"</p>
+<img alt="25% off sale" src="assets/test_images/sale.jpg"/>
+  </div>
+  
+  <h2 id="multimedia" class="heading-large">Multimedia</h2>
+
+  
+  <h3 class="heading-medium" id="multimedia-embedded-video-file-is-missing-text-alternative">
+    <a href="tests/multimedia-embedded-video-file-is-missing-text-alternative.html">
+      Embedded video file is missing text alternative
+    </a>
+  </h3>
+
+  <div class="example">
+    <video controls="">
+<source src="http://introducinghtml5.com/examples/ch04/leverage-a-synergy.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
+<source src="http://introducinghtml5.com/examples/ch04/leverage-a-synergy.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
+</video>
+  </div>
+  
+  <h3 class="heading-medium" id="multimedia-flashing-content-doesnt-have-warning">
+    <a href="tests/multimedia-flashing-content-doesnt-have-warning.html">
+      Flashing content doesn&#39;t have warning
+    </a>
+  </h3>
+
+  <div class="example">
+    <iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/gwoQRKCEHgY" title="Banned Pokemon scene" width="560"></iframe>
+  </div>
+  
+  <h3 class="heading-medium" id="multimedia-embedded-audio-file-is-missing-text-alternative">
+    <a href="tests/multimedia-embedded-audio-file-is-missing-text-alternative.html">
+      Embedded audio file is missing text alternative
+    </a>
+  </h3>
+
+  <div class="example">
+    <audio controls="" src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"></audio>
+  </div>
+  
+  <h2 id="links" class="heading-large">Links</h2>
+
+  
+  <h3 class="heading-medium" id="links-image-link-with-no-alternative-text">
+    <a href="tests/links-image-link-with-no-alternative-text.html">
+      Image link with no alternative text
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="http://www.bbc.co.uk"><img alt="" src="assets/test_images/bbc-blocks-dark.png"/></a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-to-javascript-invalid-hypertext-reference">
+    <a href="tests/links-link-to-javascript-invalid-hypertext-reference.html">
+      Link to javascript, invalid hypertext reference
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="javascript:alert('Hello world!')">Press me!</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-uninformative-link-text">
+    <a href="tests/links-uninformative-link-text.html">
+      Uninformative link text
+    </a>
+  </h3>
+
+  <div class="example">
+    <h4>Polar bear</h4>
+<p>The polar bear is a carnivorous bear whose native range lies largely within the Arctic Circle,
+            encompassing the Arctic Ocean, its surrounding seas and surrounding land masses.</p>
+<a href="https://en.wikipedia.org/wiki/Polar_bear">Read more</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-launches-new-window-with-no-warning">
+    <a href="tests/links-link-launches-new-window-with-no-warning.html">
+      Link launches new window with no warning
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="https://twitter.com/" target="_blank">Twitter</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-links-not-seperated-by-printable-characters">
+    <a href="tests/links-links-not-seperated-by-printable-characters.html">
+      Links not seperated by printable characters
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="a.html">Page A</a> <a href="b.html">Page B</a> <a href="c.html">Page C</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-text-with-identical-title">
+    <a href="tests/links-link-text-with-identical-title.html">
+      Link text with identical title
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="http://www.google.com" title="Google">Google</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-links-to-a-sound-file-no-transcript">
+    <a href="tests/links-links-to-a-sound-file-no-transcript.html">
+      Links to a sound file, no transcript
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="interview.mp3">Listen to the interview</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-identifying-links-by-colour-alone">
+    <a href="tests/links-identifying-links-by-colour-alone.html">
+      Identifying links by colour alone
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="links-by-colour-alone">
+<a href="#">A normal link</a>
+<br/>
+            Some text
+            <br/>
+<a class="colour-alone-link" href="#">Link only identifiable by colour alone</a>
+</p>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-to-pdf-does-not-include-information-on-file-format-and-file-size">
+    <a href="tests/links-link-to-pdf-does-not-include-information-on-file-format-and-file-size.html">
+      Link to pdf does not include information on file format and file size
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="http://www.bdadyslexia.org.uk/common/ckeditor/filemanager/userfiles/About_Us/policies/Dyslexia_Style_Guide.pdf">Dyslexia style guide</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-to-,-invalid-hypertext-reference">
+    <a href="tests/links-link-to-,-invalid-hypertext-reference.html">
+      Link to #, invalid hypertext reference
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="#">Do something</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-blank-link-text">
+    <a href="tests/links-blank-link-text.html">
+      Blank link text
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="http://www.google.com"></a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-with-the-same-text-go-to-different-pages">
+    <a href="tests/links-link-with-the-same-text-go-to-different-pages.html">
+      Link with the same text go to different pages
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="https://en.wikipedia.org/wiki/Lion">Lions</a> are the only truly social cats, with related females
+        living together in prides overseen by male coalitio that compete for possession in fierce and often fatal battles.
+        <a href="http://animals.nationalgeographic.com/animals/mammals/african-lion/">Lions</a> are predatory carnivores and it's the females that perform most of the hunting at night; the majority
+        of the prey being antelope, zebra and wildebeest.
+    
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-text-does-not-make-sense-out-of-context">
+    <a href="tests/links-link-text-does-not-make-sense-out-of-context.html">
+      Link text does not make sense out of context
+    </a>
+  </h3>
+
+  <div class="example">
+    <p>To know more about me, visit my <a href="page.html">page</a>.</p>
+  </div>
+  
+  <h3 class="heading-medium" id="links-adjacent-links-going-to-the-same-destination">
+    <a href="tests/links-adjacent-links-going-to-the-same-destination.html">
+      Adjacent links going to the same destination
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="https://en.wikipedia.org/wiki/Red_panda"><img alt="Red Panda" height="165" src="assets/test_images/red_panda.jpg" width="220"/></a>
+<a href="https://en.wikipedia.org/wiki/Red_panda">Red Panda</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-contains-only-a-full-stop">
+    <a href="tests/links-link-contains-only-a-full-stop.html">
+      Link contains only a full stop
+    </a>
+  </h3>
+
+  <div class="example">
+            Visit the GOV.UK website <a href="https://www.gov.uk/">.</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-image-link-alt-text-repeats-text-in-the-link">
+    <a href="tests/links-image-link-alt-text-repeats-text-in-the-link.html">
+      Image link alt text repeats text in the link
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="https://en.wikipedia.org/wiki/Red_panda">
+<img alt="Red Panda" height="165" src="assets/test_images/red_panda.jpg" width="220"/>
+            Red Panda
+        </a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-not-clearly-identifiable-and-distinguishable-from-surrounding-text">
+    <a href="tests/links-link-not-clearly-identifiable-and-distinguishable-from-surrounding-text.html">
+      Link not clearly identifiable and distinguishable from surrounding text
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="unobvious-link">Find out more about <a href="http://www.bbc.co.uk/programmes/b006q2x0">Doctor Who</a></p>
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-to-a-multimedia-file-no-transcript">
+    <a href="tests/links-link-to-a-multimedia-file-no-transcript.html">
+      Link to a multimedia file, no transcript
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="interview.mov">Watch the interview</a>
+  </div>
+  
+  <h3 class="heading-medium" id="links-non-specific-link-text">
+    <a href="tests/links-non-specific-link-text.html">
+      Non-specific link text
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="rockies.html">Click here</a> for more information on the Rocky Mountains.
+    
+  </div>
+  
+  <h3 class="heading-medium" id="links-link-to-an-image-no-text-alternative">
+    <a href="tests/links-link-to-an-image-no-text-alternative.html">
+      Link to an image, no text alternative
+    </a>
+  </h3>
+
+  <div class="example">
+            My favourite <a href="assets/test_images/bat.jpg">bat</a>
+  </div>
+  
+  <h2 id="buttons" class="heading-large">Buttons</h2>
+
+  
+  <h3 class="heading-medium" id="buttons-image-button-has-no-alt-attribute">
+    <a href="tests/buttons-image-button-has-no-alt-attribute.html">
+      Image button has no alt attribute
+    </a>
+  </h3>
+
+  <div class="example">
+    <input src="assets/test_images/submit.png" type="image">
+</input>
+  </div>
+  
+  <h3 class="heading-medium" id="buttons-empty-button">
+    <a href="tests/buttons-empty-button.html">
+      Empty button
+    </a>
+  </h3>
+
+  <div class="example">
+    <button></button>
+  </div>
+  
+  <h3 class="heading-medium" id="buttons-uninformative-alt-attribute-value-on-image-button">
+    <a href="tests/buttons-uninformative-alt-attribute-value-on-image-button.html">
+      Uninformative alt attribute value on image button
+    </a>
+  </h3>
+
+  <div class="example">
+    <input alt="click" src="assets/test_images/submit.png" type="image"/>
+  </div>
+  
+  <h3 class="heading-medium" id="buttons-empty-alt-attribute-on-image-button">
+    <a href="tests/buttons-empty-alt-attribute-on-image-button.html">
+      Empty alt attribute on image button
+    </a>
+  </h3>
+
+  <div class="example">
+    <input alt="" src="assets/test_images/submit.png" type="image">
+</input>
+  </div>
+  
+  <h2 id="forms" class="heading-large">Forms</h2>
+
+  
+  <h3 class="heading-medium" id="forms-errors-identified-by-colour-only">
+    <a href="tests/forms-errors-identified-by-colour-only.html">
+      Errors identified by colour only
+    </a>
+  </h3>
+
+  <div class="example">
+    <form class="errors-badly-identified errors-colour-only">
+<div class="validation-summary" role="alert">
+                You need to fix the errors on this page before continuing.
+            </div>
+<label>
+                Passport number
+                <input class="has-errors" name="name" type="text"/>
+</label>
+<label>
+                Name on passport
+                <input name="surname" type="text"/>
+</label>
+<label>
+                Date of expiry
+                <input class="has-errors" name="date-of-birth" type="text"/>
+</label>
+</form>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-labels-missing-when-they-would-look-clumsy-for-some-form-controls">
+    <a href="tests/forms-labels-missing-when-they-would-look-clumsy-for-some-form-controls.html">
+      Labels missing when they would look clumsy for some form controls
+    </a>
+  </h3>
+
+  <div class="example">
+    <label for="missing-labels-day">Your child's date of birth</label>
+<p>
+<input id="missing-labels-day" type="text"/>
+<input id="missing-labels-month" type="text"/>
+<input id="missing-labels-year" type="text"/>
+</p>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-error-messages-no-suggestion-for-corrections-given-eg.-required-format">
+    <a href="tests/forms-error-messages-no-suggestion-for-corrections-given-eg.-required-format.html">
+      Error messages - no suggestion for corrections given, eg. required format
+    </a>
+  </h3>
+
+  <div class="example">
+    <label class="required-format-not-given">
+            Phone number
+            <span class="error-message">is not valid</span>
+<input class="has-errors" pattern="7[0-9]{9}" required="" type="tel"/>
+</label>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-left-aligned-form-labels-with-too-much-white-space">
+    <a href="tests/forms-left-aligned-form-labels-with-too-much-white-space.html">
+      Left aligned form labels with too much white space
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="too-much-whitespace">
+<label for="input-too-far-away">Country</label>
+<input id="input-too-far-away" type="text"/>
+</p>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-group-of-radio-buttons-not-enclosed-in-a-fieldset">
+    <a href="tests/forms-group-of-radio-buttons-not-enclosed-in-a-fieldset.html">
+      Group of radio buttons not enclosed in a fieldset
+    </a>
+  </h3>
+
+  <div class="example">
+    <h4>Do you already have a personal user account?</h4>
+<label class="block-label" for="radio-inline-1">
+<input id="radio-inline-1" name="radio-inline-group" type="radio" value="Yes">
+            Yes
+        </input></label><br/>
+<label class="block-label" for="radio-inline-2">
+<input id="radio-inline-2" name="radio-inline-group" type="radio" value="No">
+            No
+        </input></label>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-form-element-has-no-label">
+    <a href="tests/forms-form-element-has-no-label.html">
+      Form element has no label
+    </a>
+  </h3>
+
+  <div class="example">
+    <input type="text">
+</input>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-fieldset-without-a-legend">
+    <a href="tests/forms-fieldset-without-a-legend.html">
+      Fieldset without a legend
+    </a>
+  </h3>
+
+  <div class="example">
+    <fieldset>
+            I am a fieldset without a legend
+        </fieldset>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-empty-legend">
+    <a href="tests/forms-empty-legend.html">
+      Empty legend
+    </a>
+  </h3>
+
+  <div class="example">
+    <fieldset>
+<legend></legend>
+</fieldset>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-label-element-with-for-attribute-but-not-matching-id=-attribute-of-form-control">
+    <a href="tests/forms-label-element-with-for-attribute-but-not-matching-id=-attribute-of-form-control.html">
+      Label element with for= attribute but not matching id= attribute of form control
+    </a>
+  </h3>
+
+  <div class="example">
+    <fieldset>
+<legend>Non-matching for attribute</legend>
+<label id="not-matching-anything">form</label>
+<input id="label-for-not-matching" type="checkbox" value="yes"/>
+</fieldset>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-group-of-check-boxes-not-enclosed-in-a-fieldset">
+    <a href="tests/forms-group-of-check-boxes-not-enclosed-in-a-fieldset.html">
+      Group of check boxes not enclosed in a fieldset
+    </a>
+  </h3>
+
+  <div class="example">
+    <h4>Which types of waste do you transport regularly?</h4>
+<label class="block-label" for="waste-type-1">
+<input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+            Waste from animal carcasses
+        </input></label><br/>
+<label class="block-label" for="waste-type-2">
+<input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+            Waste from mines or quarries
+        </input></label><br/>
+<label class="block-label" for="waste-type-3">
+<input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+            Farm or agricultural waste
+        </input></label>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-empty-label-found">
+    <a href="tests/forms-empty-label-found.html">
+      Empty label found
+    </a>
+  </h3>
+
+  <div class="example">
+    <label for="empty"></label>
+<input id="empty" type="text" value="">
+</input>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-two-unique-labels-but-identical-for=-attributes">
+    <a href="tests/forms-two-unique-labels-but-identical-for=-attributes.html">
+      Two unique labels, but identical for= attributes
+    </a>
+  </h3>
+
+  <div class="example">
+    <label for="two-labels-day">Date of issue</label>
+<p>
+<label for="two-labels-day">Day</label>
+<input id="two-labels-day" type="text"/>
+<label for="two-labels-month">Month</label>
+<input id="two-labels-month" type="text"/>
+<label for="two-labels-year">Year</label>
+<input id="two-labels-year" type="text"/>
+</p>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-errors-identified-with-a-poor-colour-contrast">
+    <a href="tests/forms-errors-identified-with-a-poor-colour-contrast.html">
+      Errors identified with a poor colour contrast
+    </a>
+  </h3>
+
+  <div class="example">
+    <form class="errors-badly-identified error-poor-contrast">
+<div class="validation-summary" role="alert">
+                You need to fix the errors on this page before continuing.
+            </div>
+<label>
+                Claimant's name
+                <input class="has-errors" name="name" type="text"/>
+</label>
+<label>
+                Claimant's surname
+                <input name="surname" type="text"/>
+</label>
+<label>
+                Claimant's date of birth
+                <input class="has-errors" name="date-of-birth" type="text"/>
+</label>
+</form>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-non-unique-field-label-found">
+    <a href="tests/forms-non-unique-field-label-found.html">
+      Non-unique field label found
+    </a>
+  </h3>
+
+  <div class="example">
+    <label for="x_3">Name
+            <input id="x_3" name="x_3" type="text">
+</input></label><br>
+<label for="x_4">Name
+            <input id="x_4" name="x_4" type="text">
+</input></label>
+</br>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-missing-labels-in-checkboxes">
+    <a href="tests/forms-missing-labels-in-checkboxes.html">
+      Missing labels in checkboxes
+    </a>
+  </h3>
+
+  <div class="example">
+    <fieldset>
+<legend>What is your nationality?</legend>
+<label>British (including English, Scottish, Welsh and Northern Irish)</label>
+<input id="nationality_british" name="nationality.british" type="checkbox" value="true">
+<label>Irish</label>
+<input id="nationality_irish" name="nationality.irish" type="checkbox" value="true">
+<label>Citizen of a different country</label>
+<input id="nationality_hasOtherCountry" name="nationality.hasOtherCountry" type="checkbox" value="true">
+</input></input></input></fieldset>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-field-hint-not-associated-with-input">
+    <a href="tests/forms-field-hint-not-associated-with-input.html">
+      Field hint not associated with input
+    </a>
+  </h3>
+
+  <div class="example">
+    <label class="form-label" for="ni-number">
+            National Insurance number
+        </label>
+<p class="form-hint">It'll be on your last payslip. For example, JH 21 90 0A.</p>
+<input class="form-control" id="ni-number" type="text">
+</input>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-placeholder-no-label">
+    <a href="tests/forms-placeholder-no-label.html">
+      Placeholder no label
+    </a>
+  </h3>
+
+  <div class="example">
+    <input id="search-main" name="q" placeholder="Search" type="search">
+<input class="submit" type="submit" value="Search">
+</input></input>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-errors-are-not-identified">
+    <a href="tests/forms-errors-are-not-identified.html">
+      Errors are not identified
+    </a>
+  </h3>
+
+  <div class="example">
+    <form class="errors-badly-identified errors-not-identified">
+<div class="validation-summary" role="alert">
+                You need to fix the errors on this page before continuing.
+            </div>
+<label>
+                Name
+                <input name="name" type="text"/>
+</label>
+<label>
+                Surname
+                <input name="surname" type="text"/>
+</label>
+<label>
+                Date of birth
+                <input name="date-of-birth" type="text"/>
+</label>
+</form>
+  </div>
+  
+  <h3 class="heading-medium" id="forms-form-control-that-changes-context-without-warning">
+    <a href="tests/forms-form-control-that-changes-context-without-warning.html">
+      Form control that changes context without warning
+    </a>
+  </h3>
+
+  <div class="example">
+    <label for="language-selector">Select your language</label>
+<select class="language-selector" id="language-selector">
+<option value="">Change your language</option>
+<option value="en">English</option>
+<option value="de">German</option>
+<option value="fr">French</option>
+</select>
+  </div>
+  
+  <h2 id="navigation" class="heading-large">Navigation</h2>
+
+  
+  <h3 class="heading-medium" id="navigation-inadequately-sized-clickable-targets-found">
+    <a href="tests/navigation-inadequately-sized-clickable-targets-found.html">
+      Inadequately-sized clickable targets found
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="a.html">a</a>
+<a href="b.html">b</a>
+<a href="c.html">c</a>
+<a href="d.html">d</a>
+<a href="e.html">e</a>
+<a href="f.html">f</a>
+<a href="g.html">g</a>
+<a href="h.html">h</a>
+<a href="i.html">i</a>
+<a href="j.html">j</a>
+<a href="k.html">k</a>
+<a href="l.html">l</a>
+<a href="m.html">m</a>
+<a href="n.html">n</a>
+<a href="o.html">o</a>
+<a href="p.html">p</a>
+<a href="q.html">q</a>
+<a href="r.html">r</a>
+<a href="s.html">s</a>
+<a href="t.html">t</a>
+<a href="u.html">u</a>
+<a href="v.html">v</a>
+<a href="w.html">w</a>
+<a href="x.html">x</a>
+<a href="y.html">y</a>
+<a href="z.html">z</a>
+  </div>
+  
+  <h3 class="heading-medium" id="navigation-navigation-placement-display,-or-functionality-changes-from-from-page-to-page">
+    <a href="tests/navigation-navigation-placement-display,-or-functionality-changes-from-from-page-to-page.html">
+      Navigation placement, display, or functionality changes from from page to page
+    </a>
+  </h3>
+
+  <div class="example">
+            insert_example
+    
+  </div>
+  
+  <h2 id="keyboardaccess" class="heading-large">Keyboard Access</h2>
+
+  
+  <h3 class="heading-medium" id="keyboard-access-alert-shows-for-a-short-time">
+    <a href="tests/keyboard-access-alert-shows-for-a-short-time.html">
+      Alert shows for a short time
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="disappearing-alert hidden">
+            You should complete this form in 20 minutes
+        </p>
+<label>
+            Prisoner's name
+            <input type="text"/>
+</label>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-lightbox-close-button-doesnt-receive-focus">
+    <a href="tests/keyboard-access-lightbox-close-button-doesnt-receive-focus.html">
+      Lightbox - close button doesn&#39;t receive focus
+    </a>
+  </h3>
+
+  <div class="example">
+    <a class="open-lightbox-close-button" href="#">Open lightbox</a>
+<div class="lightbox close-button hidden">
+<span alt="Close lightbox" class="close-button">X</span>
+<p>
+                This lightbox's close button isn't a link so you can't focus on it.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" target="_blank">information about mental capacity</a>.
+            </p>
+</div>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-focus-order-in-wrong-order">
+    <a href="tests/keyboard-access-focus-order-in-wrong-order.html">
+      Focus order in wrong order
+    </a>
+  </h3>
+
+  <div class="example">
+    <div class="focus-order-broken">
+<a class="first" href="#">First link</a>
+<a class="second" href="#">Second link</a>
+<a class="Third" href="#">Third link</a>
+</div>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-tabindex-greater-than-0">
+    <a href="tests/keyboard-access-tabindex-greater-than-0.html">
+      Tabindex greater than 0
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="page.html" tabindex="5">A link with a tabindex greater than 0</a>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-keyboard-focus-is-not-indicated-visually">
+    <a href="tests/keyboard-access-keyboard-focus-is-not-indicated-visually.html">
+      Keyboard focus is not indicated visually
+    </a>
+  </h3>
+
+  <div class="example">
+    <a class="no-outine" href="link.html">Link with no focus style</a>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-keyboard-focus-assigned-to-a-non-focusable-element-using-tabindex0">
+    <a href="tests/keyboard-access-keyboard-focus-assigned-to-a-non-focusable-element-using-tabindex0.html">
+      Keyboard focus assigned to a non focusable element using tabindex=0
+    </a>
+  </h3>
+
+  <div class="example">
+    <p tabindex="0">My favourite car</p>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-concertina-items-dont-get-keyboard-focus">
+    <a href="tests/keyboard-access-concertina-items-dont-get-keyboard-focus.html">
+      Concertina items don&#39;t get keyboard focus
+    </a>
+  </h3>
+
+  <div class="example">
+    <dl class="concertina">
+<dt>Understanding user research</dt>
+<dd>
+<ul>
+<li>How user research improves service design</li>
+<li>Start by learning user needs</li>
+<li>Understanding users who don't use digital services</li>
+</ul>
+</dd>
+<dt>Preparing for user research</dt>
+<dd>
+<ul>
+<li>Plan user research for your service</li>
+<li>Plan a round of user research</li>
+<li>Find user research participants</li>
+<li>Choose a location for user research</li>
+<li>Write a recruitment brief</li>
+<li>Getting users' consent for research</li>
+</ul>
+</dd>
+<dt>Analysing and sharing findings</dt>
+<dd>
+<ul>
+<li>Sharing user research findings</li>
+<li>Analyse a research session</li>
+</ul>
+</dd>
+</dl>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-keyboard-trap">
+    <a href="tests/keyboard-access-keyboard-trap.html">
+      Keyboard trap
+    </a>
+  </h3>
+
+  <div class="example">
+    <p><a href="example-pages/keyboardtrap.html">Example page that contains a keyboard trap</a></p>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-dropdown-navigation-only-the-top-level-items-receive-focus">
+    <a href="tests/keyboard-access-dropdown-navigation-only-the-top-level-items-receive-focus.html">
+      Dropdown navigation - only the top level items receive focus
+    </a>
+  </h3>
+
+  <div class="example">
+    <nav class="dropdown-nav" role="navigation">
+<ul>
+<li>
+<a href="https://www.gov.uk/browse/benefits">Benefits</a>
+<ul class="submenu">
+<li><a href="#">Benefits entitlement</a></li>
+<li><a href="#">Benefits for families</a></li>
+<li><a href="#">Carers and disability benefits</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-lightbox-esc-key-doesnt-close-the-lightbox">
+    <a href="tests/keyboard-access-lightbox-esc-key-doesnt-close-the-lightbox.html">
+      Lightbox - ESC key doesn&#39;t close the lightbox
+    </a>
+  </h3>
+
+  <div class="example">
+    <a class="open-lightbox-unescapable" href="#">Open lightbox</a>
+<div class="lightbox unescapable hidden">
+<a alt="Close lightbox" class="close-button" href="#">X</a>
+<p>
+                This lightbox can't be closed with an escape key.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" target="_blank">information about mental capacity</a>.
+            </p>
+</div>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-link-with-a-rolebutton-does-not-work-with-space-bar">
+    <a href="tests/keyboard-access-link-with-a-rolebutton-does-not-work-with-space-bar.html">
+      Link with a role=button does not work with space bar
+    </a>
+  </h3>
+
+  <div class="example">
+    <a class="button" href="next.html" role="button">Continue</a>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-tooltips-dont-receive-keyboard-focus">
+    <a href="tests/keyboard-access-tooltips-dont-receive-keyboard-focus.html">
+      Tooltips don&#39;t receive keyboard focus
+    </a>
+  </h3>
+
+  <div class="example">
+    <label class="tooltips-not-focusable" for="drivers-licence-no">
+            Your driving licence number
+            <span class="tooltip-icon">?</span>
+<span class="tooltip-information">Your driving licence number can be found in section 5 of your driving licence photocard</span>
+</label>
+<input id="drivers-licence-no" type="text"/>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-dont-use-the-accesskey-attribute">
+    <a href="tests/keyboard-access-dont-use-the-accesskey-attribute.html">
+      Don&#39;t use the accesskey attribute
+    </a>
+  </h3>
+
+  <div class="example">
+    <a accesskey="A" href="page.html">A link with an accesskey attribute</a>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-lightbox-focus-is-not-moved-immediately-to-lightbox">
+    <a href="tests/keyboard-access-lightbox-focus-is-not-moved-immediately-to-lightbox.html">
+      Lightbox - focus is not moved immediately to lightbox
+    </a>
+  </h3>
+
+  <div class="example">
+    <a class="open-lightbox-focus-far" href="#">Open lightbox</a>
+<div class="lightbox focus-far hidden">
+<span alt="Close lightbox" class="close-button">X</span>
+<p>
+                This lightbox is placed at the end of the DOM so you'll have to tab through other links to reach it.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" target="_blank">information about mental capacity</a>.
+            </p>
+</div>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-lightbox-focus-is-not-retained-within-the-lightbox">
+    <a href="tests/keyboard-access-lightbox-focus-is-not-retained-within-the-lightbox.html">
+      Lightbox - focus is not retained within the lightbox
+    </a>
+  </h3>
+
+  <div class="example">
+    <a class="open-lightbox-not-focused" href="#">Open lightbox</a>
+<div class="lightbox not-focused hidden">
+<a alt="Close lightbox" class="close-button" href="#">X</a>
+<p>
+                This lightbox doesn't retain the focus within itself.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" target="_blank">information about mental capacity</a>.
+            </p>
+</div>
+  </div>
+  
+  <h3 class="heading-medium" id="keyboard-access-fake-button-is-not-keyboard-accessible">
+    <a href="tests/keyboard-access-fake-button-is-not-keyboard-accessible.html">
+      Fake button is not keyboard accessible
+    </a>
+  </h3>
+
+  <div class="example">
+    <div class="button" id="webchat">launch webchat</div>
+  </div>
+  
+  <h2 id="frames" class="heading-large">Frames</h2>
+
+  
+  <h3 class="heading-medium" id="frames-iframe-is-missing-a-title-attribute">
+    <a href="tests/frames-iframe-is-missing-a-title-attribute.html">
+      iframe is missing a title attribute
+    </a>
+  </h3>
+
+  <div class="example">
+    <iframe height="100" src="demo.html" width="300"></iframe>
+  </div>
+  
+  <h3 class="heading-medium" id="frames-iframe-title-attribute-does-not-describes-the-content-or-purpose-in-the-iframe">
+    <a href="tests/frames-iframe-title-attribute-does-not-describes-the-content-or-purpose-in-the-iframe.html">
+      iframe title attribute does not describes the content or purpose in the iframe
+    </a>
+  </h3>
+
+  <div class="example">
+    <iframe height="100" src="demo.html" title="Facebook" width="300"></iframe>
+  </div>
+  
+  <h2 id="css" class="heading-large">CSS</h2>
+
+  
+  <h3 class="heading-medium" id="css-content-is-not-readable-and-functional-when-text-is-increased">
+    <a href="tests/css-content-is-not-readable-and-functional-when-text-is-increased.html">
+      Content is not readable and functional when text is increased
+    </a>
+  </h3>
+
+  <div class="example">
+    <p class="resize">This text becomes unreadable when you increase the text-size  (Zoom text only) in
+            <a href="https://www.mozilla.org/en-GB/firefox/desktop/">Firefox</a></p>
+  </div>
+  
+  <h3 class="heading-medium" id="css-non-decorative-content-inserted-using-css">
+    <a href="tests/css-non-decorative-content-inserted-using-css.html">
+      Non-decorative content inserted using CSS
+    </a>
+  </h3>
+
+  <div class="example">
+    <p id="css-generated-text">My favourite food is </p>
+  </div>
+  
+  <h3 class="heading-medium" id="css-visibilityhidden-used-to-visually-hide-content-when-it-should-be-available-to-screenreader">
+    <a href="tests/css-visibilityhidden-used-to-visually-hide-content-when-it-should-be-available-to-screenreader.html">
+      visibility:hidden used to visually hide content when it should be available to screenreader
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="rugby.html">Read more <span style="visibility:hidden"> about rugby</span></a>
+  </div>
+  
+  <h3 class="heading-medium" id="css-displaynone-used-to-visually-hide-content-when-it-should-be-available-to-screenreader">
+    <a href="tests/css-displaynone-used-to-visually-hide-content-when-it-should-be-available-to-screenreader.html">
+      display:none used to visually hide content when it should be available to screenreader
+    </a>
+  </h3>
+
+  <div class="example">
+    <a href="football.html">Read more <span style="display:none"> about football</span></a>
+  </div>
+  
+  <h3 class="heading-medium" id="css-page-zoom-boxes-that-dont-expand-with-the-text">
+    <a href="tests/css-page-zoom-boxes-that-dont-expand-with-the-text.html">
+      Page zoom - boxes that don&#39;t expand with the text
+    </a>
+  </h3>
+
+  <div class="example">
+    <div class="wont-expand-box">The box below this example won't expand to fit the text contained within when zoomed in.<p class="wont-expand">This service is for England and Wales only. You must contact individual <a href="https://www.justice-ni.gov.uk/topics/prisons/prison-visits">prisons in Northern Ireland</a> or <a href="http://www.sps.gov.uk/Corporate/Prisons/Prisons.aspx">Scotland</a> to book a visit.</p></div>
+  </div>
+  
+  <h2 id="html" class="heading-large">HTML</h2>
+
+  
+  <h3 class="heading-medium" id="html-duplicate-id">
+    <a href="tests/html-duplicate-id.html">
+      Duplicate id
+    </a>
+  </h3>
+
+  <div class="example">
+    <div id="nav">global nav</div>
+<div id="nav">page nav</div>
+  </div>
+  
+  <h3 class="heading-medium" id="html-article-element-used-to-mark-up-an-element-thats-not-an-article-blog-post-etc.">
+    <a href="tests/html-article-element-used-to-mark-up-an-element-thats-not-an-article-blog-post-etc..html">
+      Article element used to mark-up an element that&#39;s not an article/blog post etc.
+    </a>
+  </h3>
+
+  <div class="example">
+    <article class="not-article-content">
+<h2 id="parent-other">Elsewhere on GOV.UK</h2>
+<nav aria-labelledby="parent-other" role="navigation">
+<ul>
+<li><a href="/agency-workers-your-rights">Your rights as an agency worker</a></li>
+<li><a href="/acas">Advisory, Conciliation and Arbitration Service (Acas)</a></li>
+</ul>
+</nav>
+</article>
+  </div>
+  
+  <h3 class="heading-medium" id="html-empty-paragraph">
+    <a href="tests/html-empty-paragraph.html">
+      Empty paragraph
+    </a>
+  </h3>
+
+  <div class="example">
+    <p></p>
+  </div>
+  
+  <h3 class="heading-medium" id="html-deprecated-center-element">
+    <a href="tests/html-deprecated-center-element.html">
+      Deprecated center element
+    </a>
+  </h3>
+
+  <div class="example">
+    <center>This text is centred using the center element</center>
+  </div>
+  
+  <h3 class="heading-medium" id="html-invalid-aria-role-names">
+    <a href="tests/html-invalid-aria-role-names.html">
+      Invalid ARIA role names
+    </a>
+  </h3>
+
+  <div class="example">
+    <div class="header-context" id="global-breadcrumb">
+<ol class="group" role="breadcrumbs">
+<li><a href="/">Home</a></li>
+<li><a href="/browse/housing-local-services">Housing and local services</a></li>
+<li><strong><a href="/browse/housing-local-services/local-councils">Local councils and services</a></strong></li>
+</ol>
+</div>
+  </div>
+  
+  <h3 class="heading-medium" id="html-object-not-embedded-accessibly-wmode-parameter-not-set-to-window">
+    <a href="tests/html-object-not-embedded-accessibly-wmode-parameter-not-set-to-window.html">
+      Object not embedded accessibly - wmode parameter not set to window
+    </a>
+  </h3>
+
+  <div class="example">
+    <object data="foo" type="bar"></object>
+  </div>
+  
+  <h3 class="heading-medium" id="html-spacer-image-found">
+    <a href="tests/html-spacer-image-found.html">
+      Spacer image found
+    </a>
+  </h3>
+
+  <div class="example">
+    <img alt="" height="1" src="assets/test_images/spacer.gif" width="100">
+</img>
+  </div>
+  
+  <h3 class="heading-medium" id="html-deprecated-color-definition">
+    <a href="tests/html-deprecated-color-definition.html">
+      Deprecated color definition
+    </a>
+  </h3>
+
+  <div class="example">
+    <p><font color="blue">The colour of this text is set using the font element and the color attribute</font></p>
+  </div>
+  
+  <h3 class="heading-medium" id="html-start-and-close-tags-dont-match">
+    <a href="tests/html-start-and-close-tags-dont-match.html">
+      Start and close tags don&#39;t match
+    </a>
+  </h3>
+
+  <div class="example">
+             <div>strings of pearls</span></div>
+  
+  </div>
+  
+  <h3 class="heading-medium" id="html-pre-element-without-code-element-inside-it">
+    <a href="tests/html-pre-element-without-code-element-inside-it.html">
+      PRE element without CODE element inside it
+    </a>
+  </h3>
+
+  <div class="example">
+    <pre>
+Your
+
+  /\ (`/`|| _     +
+ /--\,)\,||   (||`|
+
+        goes here
+</pre>
+  </div>
+  
+  <h3 class="heading-medium" id="html-deprecated-font-element">
+    <a href="tests/html-deprecated-font-element.html">
+      Deprecated font element
+    </a>
+  </h3>
+
+  <div class="example">
+    <p><font face="aria" size="5">The size and face of this text is set using the font element and the size and face attributes</font></p>
+  </div>
+  
+  
+</main>
+
+
+  <footer id="footer" class="group" role="contentinfo">
+    <div class="footer-wrapper">
+      <div class="footer-meta">
+        <div class="footer-meta-inner">
+            <div class="open-government-licence">
+              <p class="logo">
+                <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">
+                  Open Government Licence
+                </a>
+              </p>
+              <p>
+                All content is available under the
+                <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+              </p>
+            </div>
+        </div>
+        <div class="copyright">
+          <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">
+            © Crown copyright
+          </a>
+        </div>
+      </div>
+    </div>    
+  </footer>
+</body>
+</html>

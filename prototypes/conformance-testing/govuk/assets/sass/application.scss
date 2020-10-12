@@ -1,0 +1,567 @@
+/* libSass doesn’t implement image-url that govuk_template uses so polyfill that */
+
+$image-url-path: '../../assets/' !default;
+@function image-url($url) {
+  @return url("#{$image-url-path}#{$url}");
+}
+
+/* Import from govuk_frontend_toolkit */
+
+@import "colours";
+@import "conditionals";
+@import "css3";
+@import "device-pixels";
+@import "font_stack";
+@import "grid_layout";
+@import "measurements";
+@import "shims";
+@import "typography";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+/* Import from govuk_template */
+
+@import "styleguide/colours";
+@import "styleguide/conditionals2";
+
+@import "basic";
+@import "accessibility";
+@import "header";
+@import "footer";
+
+/* Import elements typography */
+@import "elements/elements-typography";
+
+/* Register styles */
+
+$pale-grey: #f5f5f5;
+$dark-grey: #BFC1C3;
+$register: #2372b5;
+$NTA-Light: $Helvetica-Regular;
+
+@import "details";
+@import "fingerprint";
+@import "home";
+@import "organisations";
+@import "page-navigation";
+
+
+// Typography
+
+body {
+  font-size: 19px;
+  font-family: $Helvetica-Regular;
+
+  &.results, .intro-summary {
+    @include core-19;
+  }
+}
+
+.heading-large {
+  @include bold-36;
+}
+
+.heading-medium {
+  @include bold-24;
+}
+
+#global-header {
+  background-color: $register;
+  .header-wrapper {
+    background-color: $register;
+    .header-global .header-logo {
+      width: auto;
+      float: none;
+    }
+  }
+  #logo {
+    background: none;
+  }
+}
+
+main {
+  @extend %site-width-container;
+}
+
+.phase-banner-alpha {
+  @include phase-banner($state: alpha);
+  margin-bottom: $gutter;
+}
+
+.phase-banner-beta {
+  @include phase-banner($state: beta);
+  margin-bottom: $gutter;
+}
+
+#footer .footer-meta .footer-meta-inner {
+  .custom-government-licence {
+    @extend .open-government-licence;
+
+    @include media(tablet) {
+      padding-left: 0px;
+    }
+  }
+}
+
+.registry-copyright {
+  white-space: pre; /* fallback for IE 6-7 */
+  white-space: pre-line;
+}
+
+// attribution in top-right of many pages
+.provided-by {
+  display: block;
+  margin-bottom: $gutter/2;
+}
+
+.field-column {
+  width: 33%;
+}
+.value-column {
+  width: 67%;
+}
+
+//grids
+
+.grid-row {
+  @extend %grid-row;
+
+  .column-third {
+    @include grid-column( 1/3 );
+  }
+  .column-two-thirds {
+    @include grid-column( 2/3 );
+  }
+}
+.hero-image {
+  @extend %outdent-to-full-width;
+}
+
+// comma-separated lists
+
+.field-list ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.field-list li {
+  font-family: monospace;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.field-list li:after {
+  content: ",\a0";
+}
+
+.field-list li:last-child:after {
+  content: "";
+}
+
+.field-list-in-table li {
+  font-size: 14px;
+  padding-right: 0px;
+}
+
+// tables
+
+$table-header: #f5f5f5;
+$table-row: #f9f9f9;
+
+table {
+  @include core-16;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+
+  td {
+  }
+
+  td, th {
+    vertical-align: top;
+    text-align: left;
+
+
+    // font-family: monospace;
+    padding: $gutter-one-third;
+    padding-left: 0;
+    border-bottom: 1px solid #bfc1c3;
+  }
+
+  th {
+    // background-color: $table-header;
+  }
+
+  tbody th {
+    font-weight: 400;
+
+  }
+
+  tr:nth-child(2n) {
+    // background-color: $table-row;
+  }
+
+  &.entry {
+    tr {
+      background-color: $table-header;
+    }
+    th, td {
+      border-bottom: 1px solid $border-colour;
+    }
+  }
+
+}
+
+table.numeric-results {
+  table-layout: fixed;
+
+  caption {
+    display: none;
+  }
+
+  tbody th {
+      width: 170px;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  td, thead th {
+    text-align: right;
+  }
+
+  .percent-result-cell {
+    width: 8%;
+  }
+}
+
+table caption {
+  display: none;
+}
+
+.features-table {
+  td {
+    width: 8%;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}
+
+.percentage-summary {
+  width: 24em;
+
+  td {
+    width: 10%;
+  }
+}
+
+// This has been overriden at some point, reverting
+a.button {
+  color: #fff;
+}
+
+h1 {
+  // @include bold-36;
+  // margin-top: 1.5em;
+}
+
+h2 {
+  // @include bold-24;
+  margin-top: 2em;
+}
+
+h3 {
+  // @include core-19;
+  margin: 1.5em 0 0.5em 0;
+}
+
+// .example {
+//   padding: 1em;
+//   margin-bottom: 1em;
+//   border: 1px solid $grey-1;
+// }
+
+.example {
+  position: relative;
+  // overflow: hidden;
+  border: 1px solid #bfc1c3;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 641px) {
+  .example {
+    // padding-top: 45px;
+    // padding-right: 30px;
+    // padding-bottom: 30px;
+    // padding-left: 30px;
+    padding: 30px;
+  }
+}
+
+// .example:before {
+//   content: "EXAMPLE";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+//   font-family: "nta", Arial, sans-serif;
+//   font-weight: 400;
+//   text-transform: none;
+//   font-size: 12px;
+//   line-height: 1.25;
+//   background: #bfc1c3;
+//   color: white;
+// }
+
+// @media (min-width: 641px) {
+//   .example:before {
+//     font-size: 14px;
+//     line-height: 1.4285714286;
+//   }
+// }
+
+@mixin result-status($colour) {
+  content: "";
+  background: $colour;
+  display: block;
+  width: 100%;
+  height: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+#results-table {
+
+  // Stick header for better viewing
+  thead {
+    background: $white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  // Positive results
+
+  $positive-colour: #43b93c;
+
+  // Issue found
+  .error:before{
+    @include result-status($positive-colour);
+  }
+
+  // Somewhat positive results
+  $somewhat-positive-colour: #c8ec86;
+
+  // Warning only
+  .warning:before {
+    @include result-status($somewhat-positive-colour);
+  }
+
+  // User to check
+  .manual:before {
+    @include result-status($somewhat-positive-colour);
+  }
+
+  // Neutral
+
+  $neutral-colour: $orange;
+
+  // Noticed but not a fail
+  .identified:before {
+    @include result-status($neutral-colour);
+  }
+
+
+
+  // Negative results
+
+  $negative-colour: $error-colour;
+
+  // Different error found
+  .different:before {
+    @include result-status($negative-colour);
+  }
+
+  // Wrong error reported
+  .wrong:before {
+    @include result-status($negative-colour);
+  }
+
+  // False positive
+  .false-positive:before {
+    @include result-status($negative-colour);
+  }
+
+  // Issue not found
+  .notfound:before {
+    @include result-status($error-colour);
+  }
+}
+
+.summary-data {
+  list-style: none;
+  padding: 0;
+  .timestamp, .result-type {
+    font-weight: 700;
+    display: block;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.feature-summary {
+  margin-top: 1em;
+}
+
+// Panels from Elements
+
+@function em($px, $base: 19) {
+  @return ($px / $base) + em;
+}
+
+.panel {
+  @include box-sizing(border-box);
+  @extend %contain-floats;
+  clear: both;
+  border-left-style: solid;
+  border-color: $border-colour;
+
+  padding: em(15, 19);
+  margin-bottom: em(15, 19);
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :only-child,
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.panel-border-wide {
+  border-left-width: 10px;
+}
+
+// Used to show the left edge of "toggled" content
+.panel-border-narrow {
+  border-left-width: 5px;
+}
+
+// Panels within form groups
+// By default, panels have 15px bottom margin
+.form-group .panel-border-narrow {
+  float: left;
+  width: 100%;
+  // Remove the bottom padding as .form-group sets a bottom margin
+  padding-bottom: 0;
+  // Don't remove the bottom margin for all panels, assume they are often within stacked groups
+}
+
+// Note: This is incredibly fragile, and needs rebuilding.
+
+// The first panel in a group
+.form-group .panel-border-narrow:first-child {
+  margin-top: 10px;
+}
+
+// The last panel in a group
+.form-group .panel-border-narrow:last-child {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+// For inline panels
+.inline .panel-border-narrow {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.breadcrumbs {
+
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+
+  ol {
+    @extend %contain-floats;
+    padding: 0;
+  }
+
+  li {
+    @include core-16;
+    float: left;
+
+    // background-image: url("assets/images/separator.png");
+    background-image: image-url("images/separator.png");
+
+    // @include device-pixel-ratio() {
+    //   background-image: "assets/images/separator-2x.png");
+    //   background-size: 6px 11px;
+    // }
+
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+
+    list-style: none;
+
+    margin-left: 0.6em;
+    margin-bottom: 0.4em;
+    padding-left: 0.9em;
+
+    &:first-child {
+      background-image: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+  }
+
+  a {
+    color: $text-colour;
+  }
+
+}
+
+.form-group {
+  @extend %contain-floats;
+  @include box-sizing(border-box);
+
+  float: left;
+  width: 100%;
+
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-bottom: $gutter;
+  }
+}
+
+.notes-page {
+
+  ul {
+    list-style: none;
+
+    p {
+      margin-left: 0.4em;
+    }
+  }
+
+  .score {
+    &.good  { color: $green;      }
+    &.ok    { color: $govuk-blue  }
+    &.bad   { color: $mellow-red; }
+  }
+}
+

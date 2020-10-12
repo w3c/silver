@@ -1,0 +1,107 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.es_caption {
+    padding-bottom: 1em;
+    padding-right: 0.5em;
+}
+
+.es_msg {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #F00;
+}
+
+.es_textbox {
+    padding-bottom: 10px;
+}
+
+.es_button {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.es_textbox_class {
+    width: 200px;
+}
+
+.es_lablebox {
+    padding-bottom: 3px;
+}
+
+.es_subscription_message.success {
+    color: #008000;
+    font-size: 16px;
+}
+
+.es_subscription_message.error {
+    color: #ff0000;
+    font-size: 16px;
+}
+
+.es_spinner_image {
+    display: none;
+    float: right;
+}
+.es-field-wrap{
+    margin-bottom: 0.6em;
+}
+
+.ig-es-form-list-selection, .ig-es-form-list-selection td, .ig-es-form-list-selection tr {
+    border: none;
+}
+
+.ig_es_form_wrapper {
+    width: 30%;
+    margin: 0 auto;
+    border: 2px #e8e3e3 solid;
+    padding: 0.9em;
+    border-radius: 5px;
+}
+
+.ig_es_form_heading {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.ig_es_list_checkbox {
+    margin-right: 0.5em;
+}
+
+.ig_es_submit {
+    color: #FFFFFF !important;
+    border-color: #03a025 !important;
+    background: #03a025 !important;
+    box-shadow: 0 1px 0 #03a025;
+    font-weight: bold;
+    height: 2.4em;
+    line-height: 1em;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-size: 1em;
+    padding: 0 2em;
+    margin-top: 1em;
+}
+
+.ig_es_submit:hover {
+    color: #FFF !important;
+    background: #0AAB2E !important;
+    border-color: #0AAB2E !important;
+}
+
+.ig_es_form_wrapper hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
