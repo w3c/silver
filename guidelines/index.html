@@ -101,12 +101,12 @@
 			</figure>
 			<p><a href="#guidelines-structure-diagram">Figure 1</a> shows <span id="guidelines-structure-description">the core structure of WCAG 3.0. WCAG 3.0 has three levels of content with associated documentation. Guidelines form the top level. Each guideline contains multiple outcomes, with associated critical errors and outcomes scoring. Each outcome contains multiple methods, with an associated description and examples, tests, and test scoring.</span></p>
 			<section>
-				<h3>Guidelines</h3>
+				<h3>Guidelines structure</h3>
 				<p>Guidelines provide a high-level, plain-language version of the content for managers, policy makers, individuals who are new to accessibility, and other individuals who need to understand the concepts but not dive into the technical details. They provide an easy-to-understand way of organizing and presenting the outcomes so that non-experts can learn about and understand the concepts. Each guideline includes a unique, descriptive name along with a high-level plain-language summary. Guidelines address functional needs on specific topics, such as contrast, forms, readability, and more. Guidelines group related outcomes and are technology-independent.</p>				
 				<p class="example">Example: Use sections, headings, and sub-headings to organize your content.</p>			
 			</section>
 			<section>
-				<h3>Outcomes</h3>
+				<h3>Outcomes structure</h3>
 				<p>Each guideline contains multiple outcomes. Outcomes result from practices that reduce or eliminate barriers that people with disabilities experience. Outcomes form the basis of a flexible and expansive architecture for accessibility guidelines that closely relates to the needs of people with disabilities. Outcomes are designed for use by developers, testers, and other technical experts. 
 				</p>
 				<p> Outcomes are written as testable criteria and include information on how to score the outcome in an optional <a href="#conformance-claims">Conformance Claim</a>. Within a guideline, outcomes have an AND relationship. All relevant outcomes must be addressed but not all outcomes will apply to all technologies and sitations. When an outcome does not apply, it is marked NA in the scoring.</p>
@@ -118,27 +118,15 @@
 						<p><a href="#outcomes">Outcomes</a> include the related critical errors that can occur and how to identify them. Not all outcomes have critical errors.  Any critical errors will result in the lowest score for the outcome.</p>
 				</section> 
 				<section>
-					<h4>Rating</h4>
+					<h4>Outcome rating</h4>
 					<p>Each outcome is rated on a scale of 0 to 4. The rating model is designed to be flexible in order to allow more functional needs of people with disabilities to be included in the guidelines. </p>
 					<p>Each outcome defines the rating criteria used for that outcome.  The rating criteria are designed to be technology agnostic but tie to the available methods so that method level scoring can be rolled up when possible or the tester can make an informed judgmeent call about the outcome rating. </p>
 
 				</section> 
 			</section>
-			
-			<section>
-				<h3>Key support resources</h3>
-				<section>
-					<h3>How-to information</h3>
-					<p>The <a>How-To</a> content provides explanatory material for each guideline that applies across technologies. This guidance explains how to apply the concepts presented in the guidelines for non-technical readers. This plain language resource includes information on getting started, who the guideline helps and how, as well information for project managers, designers and developers.  </p>
-					<figure id="howTo_screenshot" aria-labelledby="howTo_screenshot_description" class="figure-float screenshot">
-						<img src="img/how-to.png" />
-							<figcaption>Example screenshot of a How-To for Structured Content</figcaption>
-					</figure>
-					<p id="howTo_screenshot_description">The example of a How-To for Structured Content provides basic information organized by tabs to help people get started with accessibility for structured content, plan for implementing accessible structured content across a project, design accessible structured content, and basics for developers new to accessibility of structured content. It also includes information on examples, the outcomes for meeting the guideline, and resources.</p>
-				</section>
 				
 				<section>
-					<h3>Methods</h3>
+					<h3>Methods structure</h3>
 					<figure id="method_screenshot" aria-labelledby="method_screenshot_description" class="figure-float screenshot">
 						<img src="img/method.png" />
 							<figcaption>Screenshot of a Method for Structured Content</figcaption>
@@ -158,10 +146,12 @@
 					<section>
 						<h4>Description</h4>
 						<p>Each method includes a detailed technical description of the method with including instructions on how the method works that do not depend on examples.  If there are dependencies between methods these are also listed here.  Dependencies between methods will be a rare situtation.</p> 
+					</section>
 					<section>
 						<h4>Examples</h4>
 						<p>Each method also includes working code samples and detailed examples.  </p>
 					</section>
+					<section>
 				
 						<h4>Tests</h4>
 						<p>Tests provide ways to check that methods and techniques have been followed. Tests include step-by-step instructions on evaluating the method based on the technology being used. Tests may vary by technology as needed.</p>
@@ -169,12 +159,10 @@
 						<p class="note">While WCAG 3 Methods have some similarity with WCAG 2 Techniques, they are not the same and are not interchangeable.</p>
 					</section>
 					<section>
-						<h4>Scoring</h4>
+						<h4>Test Scoring</h4>
 						<p>Each method includes information on how to score individual instances of the test. The testing results for methods inform the rating of the related outcome.</p>
 
-						<p>Scoring can be binary (pass/fail) or use rating scales as appropriate for the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. </p>	
-						
-					
+						<p>Scoring can be binary (pass/fail) or use rating scales as appropriate for the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. </p>						
 					</section>
 				</section>
 			</section>
@@ -186,6 +174,15 @@
 				<img src="img/structure-scoring.svg" />
 				<figcaption>Documentation and Scoring Structure</figcaption>
 			</figure>
+				<section>
+					<h3>How tos</h3>
+					<p>The <a>How-To</a> content provides explanatory material for each guideline that applies across technologies. This guidance explains how to apply the concepts presented in the guidelines for non-technical readers. This plain language resource includes information on getting started, who the guideline helps and how, as well information for project managers, designers and developers.  </p>
+					<figure id="howTo_screenshot" aria-labelledby="howTo_screenshot_description" class="figure-float screenshot">
+						<img src="img/how-to.png" />
+							<figcaption>Example screenshot of a How-To for Structured Content</figcaption>
+					</figure>
+					<p id="howTo_screenshot_description">The example of a How-To for Structured Content provides basic information organized by tabs to help people get started with accessibility for structured content, plan for implementing accessible structured content across a project, design accessible structured content, and basics for developers new to accessibility of structured content. It also includes information on examples, the outcomes for meeting the guideline, and resources.</p>
+				</section>
 			<section>
 				<h3>Functional needs</h3>
 				<p>The development of WCAG 3 guidelines starts with <a>functional needs</a>. A functional need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional needs are applied to specific topics (for example: contrast, forms, readability, and more)  to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a href="#outcomes">outcomes</a>, which state the conditions to test whether the functional needs have been met. Functional needs are documented in the how-tos, supplementary material accompanying the guidelines.</p>
