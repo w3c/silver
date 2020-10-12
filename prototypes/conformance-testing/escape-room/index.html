@@ -50,6 +50,18 @@
       type="text/css"
       media="all"
     />
+
+    <style>
+
+      .silver-note{
+        background:hsl(0,100%,95%);
+        border:4px double hsl(0,100%,50%);
+        margin-block-end: 1rem;
+        padding:0.7 5em;
+      }
+
+    </style>
+
     <script src="assets/scripts/jquery.js" id="jquery-core-js"></script>
 
     <!-- start Simple Custom CSS and JS -->
@@ -271,11 +283,14 @@
 
                   <h3>Video: Experience the Accessible Escape Room</h3>
 
+                  <div class="silver-note" role="note">
+                    <p><strong>Conformance testing note:</strong> for security reasons, some browsers don't allow playing local video files. To get around this, you need to use a file picker to select the file on your hard drive.</p>
+                    
+                    <input class="video-picker" type="file" accept="video/*"/>
+                  </div>
+
                   <figure class="wp-block-video">
-                    <video
-                      controls=""
-                      src="assets/video/Accessible-Escape-Room_v3_050420.AD-MIX.mp4"
-                    ></video>
+                    <video controls src="assets/video/escape-room-video.mp4"></video>
                   </figure>
 
                   <h3>Subscribe</h3>
@@ -451,5 +466,24 @@
         </symbol>
       </defs>
     </svg>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function(e){
+        const videoPicker = document.querySelector(".video-picker");
+        videoPicker.addEventListener('change', playLocalVideoFile, false);
+
+        function playLocalVideoFile(){
+          const video = document.querySelector("video");
+          let file = videoPicker.files[0];
+          let fileURL = URL.createObjectURL(file);
+          video.src = fileURL;
+        };
+      });
+
+
+    </script>
+
+
   </body>
 </html>
