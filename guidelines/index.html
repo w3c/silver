@@ -12,7 +12,7 @@
 	<body>
 		<section id="abstract">
 			<p>The W3C Accessibility Guidelines (WCAG) 3.0 provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
-			<p>Each <a href="#guidelines">guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#outcomes">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#methods">methods</a> to meet each outcome. </p>
+			<p>Each <a href="#guidelines-structure">guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#outcomes">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#methods-structure">methods</a> to meet each outcome. </p>
 			<p>This specification is expected to be updated regularly to keep pace with changing technology by updating and adding methods, outcomes, and guidelines to address new needs as technologies evolve. For entities that make formal claims of <a>conformance</a> to these guidelines, several levels of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
 			<p>W3C Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> these versions. WCAG 3.0 will  incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. 
 			While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3.0 includes additional tests and different scoring mechanisms. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative and more modern set of guidelines. Once these guidelines become a W3C Recommendation, the W3C will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts. However, content that conforms to earlier versions of WCAG continue to conform to those versions.</p>
@@ -131,7 +131,7 @@
 						<img src="img/method.png" />
 							<figcaption>Screenshot of a Method for Structured Content</figcaption>
 					</figure>
-					<p>Each outcome has one or more <a href="#methods">methods</a>. There are three types of methods:</p>
+					<p>Each outcome has one or more <a href="#methods-structure">methods</a>. There are three types of methods:</p>
 					<ul>					
 						<li><strong>All</strong> - Methods that apply across all technologies. </li>
 						<li><strong>Technology specific</strong> - Methods that apply to one of a predetermined list of technologies such as HTML, PDF, or VR. </li>
@@ -231,7 +231,7 @@
 					<li><strong>Non-normative</strong>. Refers to parts of this document that do not impact conforming to the standard. This advisory content is never required. Non-normative content includes overviews, appendices, diagrams, and examples. It is also called <q>Informative</q>.</li>
 				</ul>
 			</details>
-			<p>In addition to this section, the <a href="#guidelines-0">Guidelines</a>, <a href="#evaluation">Evaluation</a>, and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a>normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
+			<p>In addition to this section, the <a href="#guidelines">Guidelines</a>, <a href="#evaluation">Evaluation</a>, and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a>normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
 			<p>The key words <em class="rfc2119" title="MAY">MAY</em>, <em class="rfc2119" title="MUST">MUST</em>, <em class="rfc2119" title="MUST NOT">MUST NOT</em>, <em class="rfc2119" title="NOT RECOMMENDED">NOT RECOMMENDED</em>, <em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em>, <em class="rfc2119" title="SHOULD">SHOULD</em>, and <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> are to be interpreted as described in [[RFC2119]].</p>
 			<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, critical errors, and outcome ratings.</p>
 		</section>
@@ -726,7 +726,7 @@
 				</section>
 				<section>
 				<h4>Technology specific testing</h4>				
-				<p>Each outcome includes <a href="#methods">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
+				<p>Each outcome includes <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
 				</section>
 				<section>
 					<h4>Critical errors</h4>
@@ -771,7 +771,7 @@
 			<section>
 				<h3>Scoring</h3>
 				<p class="ednote">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a>rubrics</a> and <a>scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p>
-				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>
+				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>
 
 				<section>
 				<h4>Scoring atomic tests</h4>
@@ -968,13 +968,13 @@
 				<dt><dfn data-lt="Guidelines">Guideline</dfn></dt>
 				<dd>
 					<p>High-level, plain-language content used to organize <a>outcomes</a>.</p>
-					<p>See <a href="#guidelines">Guidelines</a>.</p>
+					<p>See <a href="#guidelines-structure">Guidelines</a>.</p>
 				</dd>
 				<dt><dfn data-lt="How-tos">How-to</dfn></dt>
 				<dd>
 					<p>Provides explanatory material for each guideline that applies across technologies.</p>
 					<p>This plain language resource includes information on getting started, who the guideline helps and how, as well as information for designers and developers.</p>
-					<p>See <a href="#how-to-information">How-to information</a>.</p>
+					<p>See <a href="#how-tos">How-tos</a>.</p>
 				</dd>
 				<dt><dfn data-lt="Human testing|Human evaluated|Human tested|Manual|Manual evaluation|Manual testing|Manually tested">Human evaluation</dfn></dt>
 				<dd>
@@ -994,7 +994,7 @@
 				<dt><dfn data-lt="Methods">Method</dfn></dt>
 				<dd>
 					<p>Detailed information, either technology-specific or technology-agnostic, on ways to meet the <a>outcome</a> as well as <a>tests</a> and scoring information.</p>
-					<p>See <a href="#methods">Methods</a>.</p>
+					<p>See <a href="#methods-structure">Methods</a>.</p>
 				</dd>
 				<dt><dfn>Normative</dfn></dt>
 				<dd>
