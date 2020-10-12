@@ -12,7 +12,7 @@
 	<body>
 		<section id="abstract">
 			<p>The W3C Accessibility Guidelines (WCAG) 3.0 provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
-			<p>Each <a href="#guidelines">guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#outcomes">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#methods">methods</a> to meet each outcome. </p>
+			<p>Each <a href="#guidelines-structure">guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#outcomes">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#methods-structure">methods</a> to meet each outcome. </p>
 			<p>This specification is expected to be updated regularly to keep pace with changing technology by updating and adding methods, outcomes, and guidelines to address new needs as technologies evolve. For entities that make formal claims of <a>conformance</a> to these guidelines, several levels of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
 			<p>W3C Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> these versions. WCAG 3.0 will  incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. 
 			While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3.0 includes additional tests and different scoring mechanisms. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative and more modern set of guidelines. Once these guidelines become a W3C Recommendation, the W3C will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts. However, content that conforms to earlier versions of WCAG continue to conform to those versions.</p>
@@ -101,12 +101,12 @@
 			</figure>
 			<p><a href="#guidelines-structure-diagram">Figure 1</a> shows <span id="guidelines-structure-description">the core structure of WCAG 3.0. WCAG 3.0 has three levels of content with associated documentation. Guidelines form the top level. Each guideline contains multiple outcomes, with associated critical errors and outcomes scoring. Each outcome contains multiple methods, with an associated description and examples, tests, and test scoring.</span></p>
 			<section>
-				<h3>Guidelines</h3>
+				<h3>Guidelines structure</h3>
 				<p>Guidelines provide a high-level, plain-language version of the content for managers, policy makers, individuals who are new to accessibility, and other individuals who need to understand the concepts but not dive into the technical details. They provide an easy-to-understand way of organizing and presenting the outcomes so that non-experts can learn about and understand the concepts. Each guideline includes a unique, descriptive name along with a high-level plain-language summary. Guidelines address functional needs on specific topics, such as contrast, forms, readability, and more. Guidelines group related outcomes and are technology-independent.</p>				
 				<p class="example">Example: Use sections, headings, and sub-headings to organize your content.</p>			
 			</section>
 			<section>
-				<h3>Outcomes</h3>
+				<h3>Outcomes structure</h3>
 				<p>Each guideline contains multiple outcomes. Outcomes result from practices that reduce or eliminate barriers that people with disabilities experience. Outcomes form the basis of a flexible and expansive architecture for accessibility guidelines that closely relates to the needs of people with disabilities. Outcomes are designed for use by developers, testers, and other technical experts. 
 				</p>
 				<p> Outcomes are written as testable criteria and include information on how to score the outcome in an optional <a href="#conformance-claims">Conformance Claim</a>. Within a guideline, outcomes have an AND relationship. All relevant outcomes must be addressed but not all outcomes will apply to all technologies and sitations. When an outcome does not apply, it is marked NA in the scoring.</p>
@@ -118,32 +118,20 @@
 						<p><a href="#outcomes">Outcomes</a> include the related critical errors that can occur and how to identify them. Not all outcomes have critical errors.  Any critical errors will result in the lowest score for the outcome.</p>
 				</section> 
 				<section>
-					<h4>Rating</h4>
+					<h4>Outcome rating</h4>
 					<p>Each outcome is rated on a scale of 0 to 4. The rating model is designed to be flexible in order to allow more functional needs of people with disabilities to be included in the guidelines. </p>
 					<p>Each outcome defines the rating criteria used for that outcome.  The rating criteria are designed to be technology agnostic but tie to the available methods so that method level scoring can be rolled up when possible or the tester can make an informed judgmeent call about the outcome rating. </p>
 
 				</section> 
 			</section>
-			
-			<section>
-				<h3>Key support resources</h3>
-				<section>
-					<h3>How-to information</h3>
-					<p>The <a>How-To</a> content provides explanatory material for each guideline that applies across technologies. This guidance explains how to apply the concepts presented in the guidelines for non-technical readers. This plain language resource includes information on getting started, who the guideline helps and how, as well information for project managers, designers and developers.  </p>
-					<figure id="howTo_screenshot" aria-labelledby="howTo_screenshot_description" class="figure-float screenshot">
-						<img src="img/how-to.png" />
-							<figcaption>Example screenshot of a How-To for Structured Content</figcaption>
-					</figure>
-					<p id="howTo_screenshot_description">The example of a How-To for Structured Content provides basic information organized by tabs to help people get started with accessibility for structured content, plan for implementing accessible structured content across a project, design accessible structured content, and basics for developers new to accessibility of structured content. It also includes information on examples, the outcomes for meeting the guideline, and resources.</p>
-				</section>
 				
 				<section>
-					<h3>Methods</h3>
+					<h3>Methods structure</h3>
 					<figure id="method_screenshot" aria-labelledby="method_screenshot_description" class="figure-float screenshot">
 						<img src="img/method.png" />
 							<figcaption>Screenshot of a Method for Structured Content</figcaption>
 					</figure>
-					<p>Each outcome has one or more <a href="#methods">methods</a>. There are three types of methods:</p>
+					<p>Each outcome has one or more <a href="#methods-structure">methods</a>. There are three types of methods:</p>
 					<ul>					
 						<li><strong>All</strong> - Methods that apply across all technologies. </li>
 						<li><strong>Technology specific</strong> - Methods that apply to one of a predetermined list of technologies such as HTML, PDF, or VR. </li>
@@ -158,10 +146,12 @@
 					<section>
 						<h4>Description</h4>
 						<p>Each method includes a detailed technical description of the method with including instructions on how the method works that do not depend on examples.  If there are dependencies between methods these are also listed here.  Dependencies between methods will be a rare situtation.</p> 
+					</section>
 					<section>
 						<h4>Examples</h4>
 						<p>Each method also includes working code samples and detailed examples.  </p>
 					</section>
+					<section>
 				
 						<h4>Tests</h4>
 						<p>Tests provide ways to check that methods and techniques have been followed. Tests include step-by-step instructions on evaluating the method based on the technology being used. Tests may vary by technology as needed.</p>
@@ -169,12 +159,10 @@
 						<p class="note">While WCAG 3 Methods have some similarity with WCAG 2 Techniques, they are not the same and are not interchangeable.</p>
 					</section>
 					<section>
-						<h4>Scoring</h4>
+						<h4>Test Scoring</h4>
 						<p>Each method includes information on how to score individual instances of the test. The testing results for methods inform the rating of the related outcome.</p>
 
-						<p>Scoring can be binary (pass/fail) or use rating scales as appropriate for the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. </p>	
-						
-					
+						<p>Scoring can be binary (pass/fail) or use rating scales as appropriate for the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. </p>						
 					</section>
 				</section>
 			</section>
@@ -186,6 +174,15 @@
 				<img src="img/structure-scoring.svg" />
 				<figcaption>Documentation and Scoring Structure</figcaption>
 			</figure>
+				<section>
+					<h3>How tos</h3>
+					<p>The <a>How-To</a> content provides explanatory material for each guideline that applies across technologies. This guidance explains how to apply the concepts presented in the guidelines for non-technical readers. This plain language resource includes information on getting started, who the guideline helps and how, as well information for project managers, designers and developers.  </p>
+					<figure id="howTo_screenshot" aria-labelledby="howTo_screenshot_description" class="figure-float screenshot">
+						<img src="img/how-to.png" />
+							<figcaption>Example screenshot of a How-To for Structured Content</figcaption>
+					</figure>
+					<p id="howTo_screenshot_description">The example of a How-To for Structured Content provides basic information organized by tabs to help people get started with accessibility for structured content, plan for implementing accessible structured content across a project, design accessible structured content, and basics for developers new to accessibility of structured content. It also includes information on examples, the outcomes for meeting the guideline, and resources.</p>
+				</section>
 			<section>
 				<h3>Functional needs</h3>
 				<p>The development of WCAG 3 guidelines starts with <a>functional needs</a>. A functional need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional needs are applied to specific topics (for example: contrast, forms, readability, and more)  to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a href="#outcomes">outcomes</a>, which state the conditions to test whether the functional needs have been met. Functional needs are documented in the how-tos, supplementary material accompanying the guidelines.</p>
@@ -223,7 +220,6 @@
 
 		</section>
 
-		</section>
 		<section>
 			<h2>Normative requirements</h2>
 			<details class="summary">
@@ -235,7 +231,7 @@
 					<li><strong>Non-normative</strong>. Refers to parts of this document that do not impact conforming to the standard. This advisory content is never required. Non-normative content includes overviews, appendices, diagrams, and examples. It is also called <q>Informative</q>.</li>
 				</ul>
 			</details>
-			<p>In addition to this section, the <a href="#guidelines-0">Guidelines</a>, <a href="#evaluation">Evaluation</a>, and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a>normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
+			<p>In addition to this section, the <a href="#guidelines">Guidelines</a>, <a href="#evaluation">Evaluation</a>, and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a>normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
 			<p>The key words <em class="rfc2119" title="MAY">MAY</em>, <em class="rfc2119" title="MUST">MUST</em>, <em class="rfc2119" title="MUST NOT">MUST NOT</em>, <em class="rfc2119" title="NOT RECOMMENDED">NOT RECOMMENDED</em>, <em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em>, <em class="rfc2119" title="SHOULD">SHOULD</em>, and <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> are to be interpreted as described in [[RFC2119]].</p>
 			<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, critical errors, and outcome ratings.</p>
 		</section>
@@ -262,12 +258,12 @@
 				<h3>Text alternatives</h3>
 				<p class="guideline-text">Provide text alternative for non-text content.</p>
 				<p class="ednote">This draft focuses on HTML as the first step of our migration from WCAG 2.x. We'll add methods for additional technologies to a future working draft.</p>
-				<section class="outcome"><h4>Text alternative available</h4>
-				<p>A text alternative for non-text content is available via user agents and assistive technologies, which allows users who are unable to perceive and / or understand the non-text content to determine its meaning.</p>
+				<section class="outcome"><h4>Provides text alternatives</h4>
+				<p>Provides text alternatives for non-text content for user agents and assistive technologies. This allows users who are unable to perceive and / or understand the non-text content to determine its meaning.</p>
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li></li>
+							<li>Any image of text without an appropriate text alternative needed to complete a process.</li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -322,16 +318,16 @@
 			</section>
 			<section class="guideline">
 				<h3>Clear words</h3>
-				<p class="guideline-text">Use common clear words</p>
+				<p class="guideline-text">Use common clear words.</p>
 				<p class="exception"><strong>Exception</strong>:</p>
 				<ul>
 					<li>Technical documents that provide a clear language summary</li>
 				</ul>
-				<section class="outcome"><h4>Common clear words</h4><p>Uses common and clear words in all content.</p>
+				<section class="outcome"><h4>Uses common words</h4><p>Uses common words to reduce confusion and improve understanding.</p>
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li>None</li>
+							<li>None.</li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -378,7 +374,7 @@
 
 					<p>Use Clear Words is a new guideline proposed by the Cognitive Accessibility Task Force (COGA) and includes research, documents and comments from COGA. The selection of user needs and the outcomes necessary to address them is aligned with the new COGA publication, <a href="https://www.w3.org/TR/coga-usable/">Making content usable for people with cognitive and learning disabilities [coga-usable]</a>. </p>
 
-					<p>Clear words guideline was included to illustrate the silver scoring and structure can be used in non-binary testing. Clear words guideline uses a rating scale with flexible units of measure. For example, testing could be done by a webpage, a paragraph, a section of instructions on an application, or other. A manual tester evaluates the paragraph, webpage, or section on a rating scale. While we do not know of any mainstream accessibility tool that measures common words, there are some working prototypes of tools developed outside the W3C. We are interested in feedback on testing this guideline and its scoring.</p>
+					<p>The clear words guideline was included to illustrate that the proposed WCAG 3.0 scoring and structure can be used in non-binary testing. Clear words guideline uses a rating scale with flexible units of measure. For example, testing could be done by a webpage, a paragraph, a section of instructions on an application, or other. A manual tester evaluates the paragraph, webpage, or section on a rating scale. While we do not know of any mainstream accessibility tool that measures common words, there are some working prototypes of tools developed outside the W3C. We are interested in feedback on testing this guideline and its scoring.</p>
 
 					<p>There are a number of exceptions to this guideline. We are interested in feedback where to put that information for ease of use.</p> 
 
@@ -397,7 +393,7 @@
 			</section>
 			<section class="guideline">
 				<h3>Captions</h3>
-				<p class="guideline-text">Provide captions and associated metadata for audio content</p>
+				<p class="guideline-text">Provide captions and associated metadata for audio content.</p>
 				<p class="ednote">This guideline demonstrates how the WCAG 3.0 structure can be used with emerging technologies such as virtual reality, augmented reality and other immersive web technologies (XR). Research in this area is ongoing and we expect to complete more details in future drafts. Future drafts will also include more traditional caption guidance.</p>
 				<section class="outcome">
 					<h4>Translates speech and non-speech audio</h4>
@@ -405,7 +401,7 @@
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li>None</li>
+							<li>Any video without captioning that is needed to complete a process.</li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -452,7 +448,7 @@
 
 						<p>We are looking for feedback on the scoring of captions. Media that is essential to accomplishing the task that does not have captions is a critical error and automatically fails (a 0 rating).  Examples include educational videos, entertainment site previews, or directions for installing a product.  Other videos without captions that are not essential to the task such as advertising and promotional videos that are not essential to shopping experience are not automatically failed, but the cumulative lack of captioning reduces the score.  We want feedback on this approach. </p>
 
-						<p>We want public feedback about whether Open Captions (burned in captions) should be considered as equivalent to Closed Captions.  See the <a href="https://partnerhelp.netflixstudios.com/hc/en-us/articles/216360938-Burned-in-Subtitles">Netflix position on Burned In Subtitles</a>. If we receive sufficient feedback to leave captions as they are today (closed or open are accepted), then we will use a simple scoring rating. If we decide to not accept open captions as equivalent to closed captions, then we will give more points to closed captions than open. </p>
+						<p>We want public feedback about whether Open Captions (burned in captions) should be considered as equivalent to Closed Captions.  Closed captions are text that can be customized to meet user needs, for example, a hard of hearing person with low vision (like a lot of aging people). Open captions are burned in and cannot be customized. They can't be adapted to other languages. If closed captions are added, then they are overlaid on the Open Captions and hard to read. If we receive sufficient feedback to leave captions as they are today (both closed or open are equally acceptable), then we will use a simple scoring rating. If we decide to not accept open captions as equivalent to closed captions, then we will give more points to closed captions than open. </p>
 
 						<p>Note that the advanced XR outcomes and metadata do not have critical errors.  This is a way that best practices can be included so that they are not punitive, but could give extra points that an organization who implements them could use to potentially raise their score.  We are interested in your feedback about this approach. </p>
 
@@ -467,12 +463,14 @@
 			</section>
 			<section class="guideline">
 				<h3>Structured content</h3>
-				<p class="guideline-text">Use sections, headings, and sub-headings to organize content </p>
-				<section class="outcome"><h4>Headings organize content</h4><p>Organizes content into logical blocks with both heading text relevant to the subsequent content to make locating and navigating information easier and faster.</p>
+				<p class="guideline-text">Use sections, headings, and sub-headings to organize content.</p>
+				<section class="outcome">
+					<h4>Organizes content with headings</h4>
+					<p>Organizes content into logical blocks with headings relevant to the subsequent content. This makes locating and navigating information easier and faster.</p>
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li>More than one heading in the path is missing.</li>
+							<li>One or more headings necessary to locate the content needed to complete a process are missing.</li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -512,11 +510,11 @@
 					</details>
 				</section>
 				<section class="outcome"><h4>Uses visually distinct headings</h4>
-					<p>Uses visually distinct headings so sighted readers can determine the structure (All)</p>
+					<p>Uses visually distinct headings so sighted readers can determine the structure.</p>
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li>More than one heading in the path is not visually distinct.</li>
+							<li>One or more headings necessary to locate the content needed to complete a process are not visually distinct.</li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -554,11 +552,13 @@
 						</table>
 					</details>
 				</section>
-				<section class="outcome"><h4>Convey hierarchy with semantic structure</h4><p>Provides semantic structure that conveys a sense of hierarchy that helps the user explore and navigate the text material to support assistive technology -- headings are coded as headings.</p>
+				<section class="outcome">
+					<h4>Provides semantic structure</h4>
+					<p>Provides semantic structure that conveys the hierarchy to help explore and navigate the content.</p>
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li>One or more headings necessary to locate the content needed to accomplish the task or follow the path are not coded as headings</li>
+							<li>One or more headings necessary to locate the content needed to complete a process are not coded as headings.</li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -612,9 +612,10 @@
 			<section class="guideline">
 				<h3>Visual contrast of text</h3>
 				<p class="guideline-text">Provide sufficient contrast between foreground text and its background.</p>
-				<section class="outcome"><h4>Luminance contrast between background and text</h4>
-					<p>Provides adequate luminance contrast (lightness/darkness difference) between background and text colors in order to read the text easily.</p>
-					<p class="ednote">This outcome will eventually include a second rating approach based on the mean average APCA value for all text in the path and view based on a character count.</p>
+				<section class="outcome">
+					<h4>Provides adequate contrast between background and text</h4>
+					<p>Provides adequate luminance contrast between background and text colors to make the text easy to read.</p>
+					<p class="ednote">This outcome will eventually include a second rating approach based on the mean average APCA value for all text in a process and view based on a character count.</p>
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
@@ -725,7 +726,7 @@
 				</section>
 				<section>
 				<h4>Technology specific testing</h4>				
-				<p>Each outcome includes <a href="#methods">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
+				<p>Each outcome includes <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
 				</section>
 				<section>
 					<h4>Critical errors</h4>
@@ -770,7 +771,7 @@
 			<section>
 				<h3>Scoring</h3>
 				<p class="ednote">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a>rubrics</a> and <a>scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p>
-				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>
+				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>
 
 				<section>
 				<h4>Scoring atomic tests</h4>
@@ -868,6 +869,10 @@
 				<p class="ednote">For this first draft, the Accessibility Guidelines Working Group has focused on the basic conformance model. For a next draft, we will explore how <a href="https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version">conforming alternative versions</a> fit into the new conformance model.</p>
 			</section>
 			<section>
+				<h3>Only Accessibility-Supported Ways of Using Technologies</h3>
+				<p class="ednote">For this first draft, the Accessibility Guidelines Working Group has focused on the basic conformance model. For a next draft, we will explore how <a href="https://www.w3.org/TR/WCAG21/#cc4">accessibilty-supported</a> fits into the new conformance model.</p>
+			</section>
+			<section>
 				<h3>Defining conformance scope</h3>
 				<p>Conformance is defined only for <a>processes</a> and <a>views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.  All unique steps in a process MUST be represented in the set of views. Views outside of the process MAY also be included in the scope.</p>
 				<p class="ednote">The AG WG and Silver Task Force recognize that representative sampling is an important strategy that large and complex sites use to assess accessibility. While it is not addressed within this document at this time, our intent is to later address it within this document or in a separate document before the guidelines reach the Candidate Recommendation stage. We welcome your suggestions and feedback about the best way to incorporate representative sampling in WCAG 3.0.</p>
@@ -963,13 +968,13 @@
 				<dt><dfn data-lt="Guidelines">Guideline</dfn></dt>
 				<dd>
 					<p>High-level, plain-language content used to organize <a>outcomes</a>.</p>
-					<p>See <a href="#guidelines">Guidelines</a>.</p>
+					<p>See <a href="#guidelines-structure">Guidelines</a>.</p>
 				</dd>
 				<dt><dfn data-lt="How-tos">How-to</dfn></dt>
 				<dd>
 					<p>Provides explanatory material for each guideline that applies across technologies.</p>
 					<p>This plain language resource includes information on getting started, who the guideline helps and how, as well as information for designers and developers.</p>
-					<p>See <a href="#how-to-information">How-to information</a>.</p>
+					<p>See <a href="#how-tos">How-tos</a>.</p>
 				</dd>
 				<dt><dfn data-lt="Human testing|Human evaluated|Human tested|Manual|Manual evaluation|Manual testing|Manually tested">Human evaluation</dfn></dt>
 				<dd>
@@ -989,7 +994,7 @@
 				<dt><dfn data-lt="Methods">Method</dfn></dt>
 				<dd>
 					<p>Detailed information, either technology-specific or technology-agnostic, on ways to meet the <a>outcome</a> as well as <a>tests</a> and scoring information.</p>
-					<p>See <a href="#methods">Methods</a>.</p>
+					<p>See <a href="#methods-structure">Methods</a>.</p>
 				</dd>
 				<dt><dfn>Normative</dfn></dt>
 				<dd>
@@ -1046,7 +1051,7 @@
 					   
 					</dd>
 				<dt><dfn data-lt="User needs">User need</dfn></dt>
-				<dd><p>The end goal a user has when embarking on a path or process through digital means.</p></dd>
+				<dd><p>The end goal a user has when starting a process through digital means.</p></dd>
 				<dt><dfn>User testing</dfn></dt>
 				<dd>
 					<p>Evaluation of content by observation of how users with specific <a>functional needs</a> are able to complete a <a>process</a> and how the content meets the relevant <a href="#outcomes">outcomes</a>.</p>
