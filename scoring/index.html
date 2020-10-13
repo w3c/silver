@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WCAG 3.0 Scoring prototype</title>
+</head>
+<body>
+  <h1>WCAG 3.0 Scoring Prototype</h1>
+  <h2>Conformance</h2>
+  <conformance-table></conformance-table>
+
+  <h2>Functional categories</h2>
+  <functional-category-list></functional-category-list>
+
+  <h2>Outcomes</h2>
+  <outcome-section outcome-key="alt-available"></outcome-section>
+  <outcome-section outcome-key="clear-words"></outcome-section>
+
+  <script type="module">
+    import './element/conformance-table.js'
+    import './element/functional-category-list.js'
+    import './element/outcome-section.js'
+  </script>
+</body>
+</html>
