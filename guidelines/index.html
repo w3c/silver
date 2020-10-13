@@ -401,7 +401,7 @@
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li>Any video without captioning that is needed to complete a process.</li>
+							<li>Any video without captioning that is needed to complete a process.<br> For example, an education site with a video that a student will be tested on or a shopping experience of previewing movies. If they do not have captioning (closed or open captioning), they fail.</li>
 						</ul>
 					</details>
 					<details class="rating">
@@ -418,27 +418,78 @@
 							<tbody>
 								<tr>
 									<th scope="row">Rating 0</th>
-									<td>Average score rounded to 0</td>
+									<td>Average score 0-.7 or a critical error</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 1</th>
-									<td>Average score rounded to 1</td>
+									<td>Not applicable</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 2</th>
-									<td>Average score rounded to 2</td>
+									<td>Average score .8-1.5 and no critical error</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 3</th>
-									<td>Average score rounded to 3</td>
+									<td>Not applicable</td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 4</th>
-									<td>Average score rounded to 4</td>
+									<td>Average score 1.6 to 2 and no critical error</td>
 								</tr>
 							</tbody>
 						</table>
 					</details>
+					</div>	
+				</section>
+				<section class="outcome">
+					<h4>Conveys information about the sound</h4>
+					<p>Conveys information about the sound in addition to the text of the sound (for example, sound source, duration, and direction) so users know the necessary information about the context of the sound in relation to the environment it is situated in.</p>
+					<details class="errors">
+						<summary>Critical errors</summary>	
+						<ul>
+							<li>None.</li>
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating</summary>
+					<ul>
+						<li>Is meta-data directionality essential to this experience?</li>
+						<li>Can a user orientate themselves to the sound with/without any additional interface?</li>
+					</ul>
+						<table class="rating-table">
+							<caption>Rating Scale</caption>
+							<thead>
+								<tr>
+									<th scope="col">Rating</th>
+									<th scope="col">Criteria</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Rating 0</th>
+									<td>No meta-data</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 1</th>
+									<td>Sound visually indicates the direction of origin in 2D space</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 2</th>
+									<td>Not applicable</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 3</th>
+									<td>Meta-data includes the location the sound originates in 3D space</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 4</th>
+									<td>Meta-data includes the location the sound originates, Meta-data includes the direction of the sound.</td>
+								</tr>
+							</tbody>
+						</table>
+					</details>
+					</div>	
+				</section>
 					<div class="ednote">
 						<p>This guideline demonstrates how the WCAG3 structure can be used with emerging technologies such as virtual reality, augmented reality and other immersive web technologies (XR). Research in this area is ongoing and we expect to complete more details in future drafts. </p>
 
@@ -452,8 +503,7 @@
 
 						<p>Note that the advanced XR outcomes and metadata do not have critical errors.  This is a way that best practices can be included so that they are not punitive, but could give extra points that an organization who implements them could use to potentially raise their score.  We are interested in your feedback about this approach. </p>
 
-					</div>	
-				</section>
+
 				<!--
 				<section class="outcome"><h4>Convey information about sound</h4><p>Conveys information about the sound in addition to the text of the sound (for example, sound source, duration, and direction) so users know the necessary information about the context of the sound in relation to the environment it is situated in</p><ol><li>@@</li></ol></section>
 				<section class="outcome"><h4>Captions in alternative formats</h4><p>Provides captions and caption meta-data in alternative formats (for example, second screen or braille display) to allow users the opportunity to move caption and meta-data to alternative displays. For example, this benefits users without sound and vision, users who need assistive technology to magnify portions of the view, or users who have limited reach.</p><ol><li>@@</li></ol></section>
