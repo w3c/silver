@@ -56,111 +56,113 @@
 		</section>
 		<section>
 			<h2 id="intro">Introduction</h2>
-            <p>People with disabilities can face problems using online content and   applications. Disabilities can be permanent, temporary, or recurring limitations. </p>
-            <p>We need guidelines to: </p>
-            <ul>
-              <li>identify these barriers encountered by people with disabilities. </li>
-              <li>explain how to solve the problems they pose. </li>
-            </ul>
-            <p>The research done in 2017-2018 by the Silver Task Force, the Silver Community Group, and the <a href="https://rawgit.com/w3c/silver/master/prototypes/ConformancePrototype/index.html#research-partners">research partners</a> was used to identify the key problem statements related to the current accessibility guidelines (WCAG 2.x, ATAG 2.0 and UAAG 2.0).  See the <a href="https://docs.google.com/presentation/d/1POs7orJ4ALB0bq5_vyo4v8RxDcr-5ctwD1noVgpXuJc/edit#slide=id.gc6f73a04f_0_0">Silver Research Summary slides</a> for more detailed information. These problem statements were used to identify the opportunities for Silver to address that will improve accessibility guidance.          </p>
-          <p>The Web Content Accessibility Guidelines (WCAG) 2.0 were designed to be   technology neutral, and has stayed relevant for over 10 years. The Authoring Tool Accessibility Guidelines (ATAG) 2.0 has  been  implemented  in the open source authoring tool communities (chiefly Wordpress and Drupal) with little known uptake in commercial authoring tools. UAAG 2.0 offers useful guidance to user agent developers and has been implemented on an individual success criterion basis. There is no known user agent that has implemented all of UAAG 2.0. </p>
-            <p>During   the year of Silver research, a recurring theme was the popularity and quality of the   guidance in WCAG 2.0. Most of the opportunities identified in the research were   improvements in the structure and presentation accessibility guidance to improve usability, to support more disability needs, and to improve maintenance. </p>
-	
-	<section>
-		<h3>Scope</h3>
-		<p>Silver will have a broader scope than WCAG 2.0 and 2.1.  The Web Content Accessibility Guidelines (WCAG) are scoped to Web and to Content.  Silver is being designed to be able to include: 
-		</p>
-		<ul>
-			<li><strong>Disability Needs</strong>: An improved measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.</li>
-			<li><strong>Emerging Technologies</strong>: Flexibility to include emerging technologies, such as augmented/virtual reality(AR/VR/XR) and voice assistants</li>
-			<li><strong>Support for the Technologies that Impact Accessibility</strong>: Advice for all levels of the accessibility technology stack who wish to support the Silver core Guidelines including:
+			<p>People with disabilities can face problems using online content and applications. Disabilities can be permanent, temporary, or recurring limitations. </p>
+			<p>We need guidelines to: </p>
+			<ul>
+				<li>identify these barriers encountered by people with disabilities. </li>
+				<li>explain how to solve the problems they pose. </li>
+			</ul>
+			<p>The Web Content Accessibility Guidelines (WCAG) 2.0 were designed to be technology neutral, and has stayed relevant for over 10 years. The Authoring Tool Accessibility Guidelines (ATAG) 2.0 has been implemented in the open source authoring tool communities (chiefly Wordpress and Drupal) with little known uptake in commercial authoring tools. UAAG 2.0 offers useful guidance to user agent developers and has been implemented on an individual success criterion basis. There is no known user agent that has implemented all of UAAG 2.0. </p>
+			<section>
+				<h3>Comparison to WCAG 2.x Requirements</h3>
+				<p>Silver builds on the<a href="https://www.w3.org/TR/wcag2-req/"> WCAG 2.0 Requirements of 2006</a>. The WCAG 2.0 requirements are:</p>
+				<ol>
+					<li>Ensure that requirements may be applied across technologies</li>
+					<li>Ensure that the conformance requirements are clear</li>
+					<li>Design deliverables with ease of use in mind</li>
+					<li>Write to a more diverse audience</li>
+					<li>Clearly identify who benefits from accessible content</li>
+					<li>Ensure that the revision is "backwards and forward compatible"</li>
+				</ol>
+				<p>Silver wishes to advance the WCAG 2.0 Requirements of:</p>
+				<ol>
+					<li>applied across technologies</li>
+					<li>clear conformance</li>
+					<li>ease of use</li>
+					<li>diverse audience</li>
+					<li>identify who benefits</li>
+				</ol>
+				<p>Silver does not want to advance the WCAG 2.0 requirement: &quot;Ensure that the revision is 'backwards and forward compatible'&quot; . The intention is to include WCAG 2.x content, but migrate it to a different structure and conformance model. </p>
+				<p>The <a href="https://w3c.github.io/wcag/wcag21/requirements/">WCAG 2.1 Requirements</a> are very specific to WCAG 2.1 and will <em>not</em> be advanced by Silver. Silver plans to migrate the content of WCAG 2.1 to Silver, but the WCAG 2.1 Requirements document referred to structural requirements which are specific to WCAG 2.x. </p>
+				<p>The WCAG 2.1 Requirements are: </p>
+				<ol>
+					<li>Define a clear conformance model for WCAG 2.1/dot.x releases</li>
+					<li>Ensure the conformance structure utilizes the WCAG 2.0 A / AA / AAA model </li>
+				</ol>
+			</section>
+			<section>
+				<h3>Silver Scope</h3>
+				<p>Silver will have a broader scope than WCAG 2.0 and 2.1. The Web Content Accessibility Guidelines (WCAG) are scoped to Web and to Content. Silver is being designed to be able to include: </p>
 				<ul>
-					<li><strong>digital content</strong>, including guidance currently addressed by WCAG 2.x</li>
-					<li><strong>authoring tools</strong>, such as content management systems
-					<li><strong>user agents</strong>, such as browsers and media players
-					<li><strong>assistive technologies</strong>, such as screen readers, screen magnifiers, and assistants for memory, organization, or simplification
-					<li><strong>software and web applications</strong>, including mobile apps
-					<li><strong>operating systems</strong> and other platforms who may want advice for features to better support people with disabilities  
+					<li><strong>Disability Needs</strong>: An improved measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.</li>
+					<li><strong>Emerging Technologies</strong>: Flexibility to include emerging technologies, such as augmented/virtual reality(AR/VR/XR) and voice assistants</li>
+					<li><strong>Support for the Technologies that Impact Accessibility</strong>: Advice for all levels of the accessibility technology stack who wish to support the Silver core Guidelines including: <ul>
+						<li><strong>digital content</strong>, including guidance currently addressed by WCAG 2.x</li>
+						<li><strong>authoring tools</strong>, such as content management systems</li>
+						<li><strong>user agents</strong>, such as browsers and media players</li>
+						<li><strong>assistive technologies</strong>, such as screen readers, screen magnifiers, and assistants for memory, organization, or simplification</li>
+						<li><strong>software and web applications</strong>, including mobile apps</li>
+						<li><strong>operating systems</strong> and other platforms who may want advice for features to better support people with disabilities</li>
+					</ul>
+					</li>
 				</ul>
-			</li>
-		</ul>
-		<p>The current project design does not intend to write separate specifications or normative requirements for the technology stack beyond digital content.  The goal is to provide information that technology venders can choose to use to improve the accessibility of their products to support the guidelines.  
-		</p>
-	</section>
-	<section>
-      <h3>Comparison to WCAG 2.x Requirements</h3>
- <p>Silver builds on the<a href="https://www.w3.org/TR/wcag2-req/"> WCAG 2.0 Requirements of 2006</a>.
-      The WCAG 2.0 requirements are:
- <ol>
-   <li>Ensure that requirements may be applied across technologies</li>
-   <li>Ensure that the conformance requirements are clear</li>
-   <li>Design deliverables with ease of use in mind</li>
-   <li>Write to a more diverse audience</li>
-   <li>Clearly identify who benefits from accessible content</li>
-   <li>Ensure that the revision is "backwards and forward compatible"</li>
- </ol>
- <p>Silver wishes to advance the WCAG 2.0 Requirements of:
- <ol>
-   <li>applied across technologies</li>
-   <li>clear conformance</li>
-   <li>ease of use</li>
-   <li>diverse audience</li>
-   <li>identify who benefits</li>
- </ol>
-<p>Silver does not want to advance the WCAG 2.0 requirement: &quot;Ensure that the revision is 'backwards and forward compatible'&quot; . The intention is to include WCAG 2.x content, but migrate it to a different structure and conformance model. </p>
-<p>The <a href="https://w3c.github.io/wcag/wcag21/requirements/">WCAG 2.1 Requirements</a> are very specific to WCAG 2.1 and will <em>not</em> be advanced by Silver. Silver plans to migrate the content of WCAG 2.1 to Silver, but the WCAG 2.1 Requirements document referred to structural requirements which are specific to WCAG 2.x.  
-</p>
-<p>The WCAG 2.1 Requirements are:
-</p>
- <ol>
-   <li>Define a clear conformance model for WCAG 2.1/dot.x releases</li>
-   <li>Ensure the conformance structure utilizes the WCAG 2.0 A / AA / AAA model </li>
- </ol>
-    </section>
-	<section>
-		  <h3 id="problem_statements">Opportunities for Silver          </h3>
-		  <p>The   <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read">Problem Statements</a> describe areas identified during the Silver research in   2017-2018 that  can be addressed in the new guidelines. Each problem statement also has an opportunity section that is the basis for the Silver Requirements. </p>
-          <section id="oppotunities_usability">
-          <h4>Usability</h4>
-          <ul>
-            <li><strong>Readable</strong>: When guidelines are easier to read and understand, users – especially   people in the development cycle who are less technical – are more likely   to implement accessibility. When all audiences are considered in the   language and terminology used in the guidelines, the likelihood   increases that they will:
-              <ul>
-                <li>reach a larger audience</li>
-                <li>be better understood</li>
-                <li>be easier to translate</li>
-                <li>be interpreted as easier to implement</li>
-              </ul>
-            </li>
-            <li><strong>On-ramp for Beginners</strong>: When beginning users can develop understanding and mastery   of the accessibility guidance, this leads to faster and greater acceptance of   accessibility. This also creates the opportunity to convince developers   and project managers to include accessibility at the beginning of a   project instead of the end. </li>
-            <li><strong> Current and Future Technology Oriented</strong>: Eliminating underlying assumptions and structure that are oriented toward the historic static web and improving guidance for modern web applications can increase acceptance by developers and provide greater accessibility of web and native applications. </li>
-            <li><strong>Advocacy Tool</strong>:  Usability oriented toward a broad audience for  Silver can help improve the general advocacy   of digital accessibility. Improving the reach of Silver can help improve   the awareness of accessibility considerations. Compelling   information that is contextually relevant to the standards may also aid   in convincing audiences of any type. </li>
-          </ul>
-          </section>
-          <section id="oppotunities_conformance">
-          <h4>Conformance Model</h4>
+				<p>The current project design does not intend to write separate specifications or normative requirements for the technology stack beyond digital content. The goal is to provide information that technology venders can choose to use to improve the accessibility of their products to support the guidelines. </p>
+			</section>
+			<section>
+				<h3>Silver Task Force Research</h3>
+				<p class="ednote">Introductory text about the research efforts undertaken, with pointers to methodology and results</p>
+				<p>The research done in 2017-2018 by the Silver Task Force, the Silver Community Group, and the <a href="https://rawgit.com/w3c/silver/master/prototypes/ConformancePrototype/index.html#research-partners">research partners</a> was used to identify the key problem statements related to the current accessibility guidelines (WCAG 2.x, ATAG 2.0 and UAAG 2.0). See the <a href="https://docs.google.com/presentation/d/1POs7orJ4ALB0bq5_vyo4v8RxDcr-5ctwD1noVgpXuJc/edit#slide=id.gc6f73a04f_0_0">Silver Research Summary slides</a> for more detailed information. These problem statements were used to identify the opportunities for Silver to address that will improve accessibility guidance. </p>
+				<p>During the year of Silver research, a recurring theme was the popularity and quality of the guidance in WCAG 2.0. Most of the opportunities identified in the research were improvements in the structure and presentation accessibility guidance to improve usability, to support more disability needs, and to improve maintenance. </p>
+			</section>
+			<section>
+				<h3>Large and Dynamic Sites</h3>
+				<p>In addition to the above research, an issue was raised about how to apply accessibility evaluation and conformance to large and dynamic web sites which are updated frequently. This led to development of <a href="https://www.w3.org/TR/accessibility-conformance-challenges/">Challenges with Accessibility Guidelines Conformance and Testing, and Approaches for Mitigating Them</a>. Suggestions in that document are an additional source of input to these requirements.</p>
+			</section>
+			<section>
+				<h3>Design Principles and Requirements</h3>
+				<p>This document has two sections: a Design Principles section and a Requirements section. Requirements need to be measured or clearly demonstrated. They are used at the W3C phase of Candidate Recommendation, where the Candidate Recommendation Transition Request reports that the requirements were met. Design Principles are important statements that are less measurable, but are used to guide, shape and steer decision-making during the development process of Silver. Both are essential in guiding the development of the Silver project. </p>
+			</section>
+		</section>
+			<section>
+				<h3 id="problem_statements">Opportunities for Silver </h3>
+				<p>The <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read">Problem Statements</a> describe areas identified during the Silver research in 2017-2018 that can be addressed in the new guidelines. Each problem statement also has an opportunity section that is the basis for the Silver Requirements. </p>
+				<section id="oppotunities_usability">
+					<h4>Usability</h4>
+					<ul>
+						<li><strong>Readable</strong>: When guidelines are easier to read and understand, users – especially people in the development cycle who are less technical – are more likely to implement accessibility. When all audiences are considered in the language and terminology used in the guidelines, the likelihood increases that they will: <ul>
+								<li>reach a larger audience</li>
+								<li>be better understood</li>
+								<li>be easier to translate</li>
+								<li>be interpreted as easier to implement</li>
+							</ul>
+						</li>
+						<li><strong>On-ramp for Beginners</strong>: When beginning users can develop understanding and mastery of the accessibility guidance, this leads to faster and greater acceptance of accessibility. This also creates the opportunity to convince developers and project managers to include accessibility at the beginning of a project instead of the end. </li>
+						<li><strong> Current and Future Technology Oriented</strong>: Eliminating underlying assumptions and structure that are oriented toward the historic static web and improving guidance for modern web applications can increase acceptance by developers and provide greater accessibility of web and native applications. </li>
+						<li><strong>Advocacy Tool</strong>: Usability oriented toward a broad audience for Silver can help improve the general advocacy of digital accessibility. Improving the reach of Silver can help improve the awareness of accessibility considerations. Compelling information that is contextually relevant to the standards may also aid in convincing audiences of any type. </li>
+					</ul>
+				</section>
+				<section id="oppotunities_conformance">
+					<h4>Conformance Model</h4>
 					<p>There are several areas for exploration in how conformance can work. These opportunities may or may not be incorporated. Then need to work together, and that interplay will be governed by the design principles</p>
-          <ul>
-            <li><strong>Measurable Guidance</strong>: Certain accessibility guidance is quite clear and measurable. Others, far less so. There are needs of people with disabilities, especially cognitive and low vision disabilities that are not well served by guidance that can only be measured by pass/fail statement. Multiple means of measurement, in addition to pass/fail statements, allow inclusion of more accessibility guidance.</li>
-            <li><strong>Task-Based Assessment</strong>: Moving away from strictly web pages and web sites as a collection of web pages, Silver could set the scope of conformance as a comprehensive set of tasks as defined by the author of the site or application. A properly marked up button doesn't help anything if the user can&rsquo;t complete the task at hand. Task-based assessment allows flexibility for conformance of complex applications that are not conducive to component/tag assessment or full-page assessment.</li>
-            <li><strong>Accessibility Supported</strong>: As the technologies evolve, the interoperability of content, user agents, and assistive technology will continue to blur. Interoperability may be   affected by any number of factors outside of the control of the author   and publisher of digital content. Silver can include advice to user agents and assistive technology developers. Authors are not responsible for interoperability problems beyond a reasonable effort.</li>
-          </ul>
-          </section>
-          <section id="oppotunities_maintenance">
-          <h4>Maintenance</h4>
-          <ul>
-            <li> <strong>Flexibility</strong>: A flexible structure enables greater scaling of new methods to meet guidelines. It also allows for the expiration of outdated methods to meet guidelines. A flexible process of updating methods enables the overall guidance to keep pace with technology. Flexible participation – particularly of people with disabilities – empowers a community and enables more inclusive insights.</li>
-            <li> <strong>Scaling</strong>: We intend Silver to apply to multiple contexts and multiple use cases. Silver intends to be iterative, future-friendly, and user-centric. </li>
-            <li><strong>Evolving Technology</strong>: Silver needs a flexible design that can be updated as new technologies emerge, assistive technologies improve, and changing technologies produce new barriers for people with disabilities. Accessibility guidance and all supporting documentation should anticipate common scenarios like new technology and the introduction of new modalities like surface reaction and ultrahaptics. As content technology evolves, it must be re-evaluated against assistive technology for compatibility. Likewise, as assistive technology evolves or emerges, it must be evaluated against the backward compatibility of various content technology.</li>
-            <li> <strong>Governance</strong>: Utilize tools that allow interested parties to predict when issues important to them are being discussed. Maintain a backlog that reflects issues along with their   status. </li>
-          </ul>
-        </section>
-	</section>
-	<section>
-		<h3>Design Principles and Requirements</h3>
-		<p>This document has two sections: a Design Principles section and a Requirements section. Requirements need to be measured or clearly demonstrated. They are used at the W3C phase of Candidate Recommendation, where the Candidate Recommendation Transition Request reports that the requirements were met.  Design Principles are important statements that are less measurable, but are used to guide, shape and steer decision-making during the development process of Silver.  Both are essential in guiding the development of the Silver project.  
-		</p>
-	</section>
-  </section>
+					<ul>
+						<li><strong>Measurable Guidance</strong>: Certain accessibility guidance is quite clear and measurable. Others, far less so. There are needs of people with disabilities, especially cognitive and low vision disabilities that are not well served by guidance that can only be measured by pass/fail statement. Multiple means of measurement, in addition to pass/fail statements, allow inclusion of more accessibility guidance.</li>
+						<li><strong>Task-Based Assessment</strong>: Moving away from strictly web pages and web sites as a collection of web pages, Silver could set the scope of conformance as a comprehensive set of tasks as defined by the author of the site or application. A properly marked up button doesn't help anything if the user can't complete the task at hand. Task-based assessment allows flexibility for conformance of complex applications that are not conducive to component/tag assessment or full-page assessment.</li>
+						<li><strong>Accessibility Supported</strong>: As the technologies evolve, the interoperability of content, user agents, and assistive technology will continue to blur. Interoperability may be affected by any number of factors outside of the control of the author and publisher of digital content. Silver can include advice to user agents and assistive technology developers. Authors are not responsible for interoperability problems beyond a reasonable effort.</li>
+					</ul>
+				</section>
+				<section id="oppotunities_maintenance">
+					<h4>Maintenance</h4>
+					<ul>
+						<li>
+							<strong>Flexibility</strong>: A flexible structure enables greater scaling of new methods to meet guidelines. It also allows for the expiration of outdated methods to meet guidelines. A flexible process of updating methods enables the overall guidance to keep pace with technology. Flexible participation – particularly of people with disabilities – empowers a community and enables more inclusive insights.</li>
+						<li>
+							<strong>Scaling</strong>: We intend Silver to apply to multiple contexts and multiple use cases. Silver intends to be iterative, future-friendly, and user-centric. </li>
+						<li><strong>Evolving Technology</strong>: Silver needs a flexible design that can be updated as new technologies emerge, assistive technologies improve, and changing technologies produce new barriers for people with disabilities. Accessibility guidance and all supporting documentation should anticipate common scenarios like new technology and the introduction of new modalities like surface reaction and ultrahaptics. As content technology evolves, it must be re-evaluated against assistive technology for compatibility. Likewise, as assistive technology evolves or emerges, it must be evaluated against the backward compatibility of various content technology.</li>
+						<li>
+							<strong>Governance</strong>: Utilize tools that allow interested parties to predict when issues important to them are being discussed. Maintain a backlog that reflects issues along with their status. </li>
+					</ul>
+				</section>
+			</section>
 		<section>
 		  <h2 id="design_principles">Design Principles</h2>
           <p>The Silver Design Principles are based on the requirements of WCAG 2.0 and build on those requirements to meet needs identified in the Silver research. </p>
@@ -220,8 +222,9 @@
 	 </section>
           <section>
             <h3>Scope</h3>
-	    <p>The guidelines provide guidance for people and organizations that produce digital assets and technology of varying size and complexity. Our intent is to provide guidance for a diverse group of stakeholders including content creators, browsers, authoring tools, assistive technologies, and more.</p>
-	 </section>
+	    <p>The guidelines provide guidance for people and organizations that produce digital assets and technology of varying size and complexity. This includes large, dynamic, and complex websites.  Our intent is to provide guidance for a diverse group of stakeholders including content creators, browsers, authoring tools, assistive technologies, and more.</p>
+
+	</section>
 		</section>
 		<section class="appendix" id="changelog">
 	    <h2>Change Log</h2>
@@ -247,8 +250,8 @@
 			<h3 id="changes-before-the-second-requirements-draft">Changes Prior to Second Version of Requirements</h3>
 			<ul>
 			<li>New requirements for Readability, Regulatory Environment, Motivation, and Scope.  </li>
-			  <li>Added paragraph explaining the differences between Design Principles and Requirements as a result of requests from the AGWG face-to-face meeting of 11 & 12 March 2019. </li>
-			  <li>Added new Design Principles and Requirements and changed wording of existing Design Principles and Requirements based on feedback from AGWG in Q1 & Q2 2019 </li>
+			  <li>Added paragraph explaining the differences between Design Principles and Requirements as a result of requests from the AGWG face-to-face meeting of 11 and 12 March 2019. </li>
+			  <li>Added new Design Principles and Requirements and changed wording of existing Design Principles and Requirements based on feedback from AGWG in Q1 and Q2 2019 </li>
 			  <li>Added a new Scope section to the Introduction that clarifies that Silver plans to address Authoring  Tools, User agents and Apps. (26 April 2019)</li>
 			  <li>Reworded Technology Neutral to bring it more in line with the original WCAG 2.0 Requirements wording. (26 April 2019)</li>
 			  <li>changed Design Principle 9 to more clearly show that there will not be a hierarchy of disabilities and that when there is no research, how we will address that. </li>
@@ -296,42 +299,42 @@
 		  <h3>Participants in the Silver Community Group Active in the Development of This Document</h3>
 <ul>
 
-<li>Alice Boxhall, Google, Inc.
-<li>Angela Hooker, Microsoft Corp.
-<li>Charles Hall, MRM // McCANN
-<li>Charles McCathie Nevile
-<li>Corbb O'Connor, SiteImprove
-<li>Cybele Sack
-<li>Eleanor Loiacono, Worcester Polytechnic Institute
-<li>Imelda Llanos
-<li>Jake Abma, ING Groep N.V.
-<li>Jennifer Chadwick, Siteimprove
-<li>Jennison Asuncion, LinkedIn
-<li>Jill Power, EBSCO Publishing
-<li>John Kirkwood, CityMouse, inc
-<li>John McNabb, Canadian Imperial Bank of Commerce
-<li>John Rochford, University of Massachusetts Medical Center
-<li>Katharina Herzog
-<li>Kelsey Collister
-<li>Luis Garcia, eBay
-<li>Lyn Muldrow, LinkedIn
-<li>Léonie Watson, Tetralogical
-<li>Mark Tanner
-<li>Matthew King, Facebook
-<li>Michael Crabb, The University of Dundee
-<li>Michellanne Li, Palantir.net
-<li>Makoto Ueki, Infoaxia, Inc.
-<li>Peter McNally, User Experience Center, Bentley University
-<li>Ruth Spina, North East ISD
-<li>Ryan Hemphill
-<li>Sarah Pulis, Intopia
-<li>Scott Hollier
-<li>sweta wakodkar, Prakat Solutions Pvt Ltd
-<li>Takayuki Watanabe, Tokyo Woman's Christian University
-<li>Thomas Logan, Equal Entry
-<li>Thomas Westin, Stockholm University
-<li>Victoria Clark, JP Morgan Chase
-<li>Wendy Chisholm, Microsoft Corp.
+	<li>Alice Boxhall, Google, Inc.</li>
+	<li>Angela Hooker, Microsoft Corp.</li>
+	<li>Charles Hall, MRM // McCANN</li>
+	<li>Charles McCathie Nevile</li>
+	<li>Corbb O'Connor, SiteImprove</li>
+	<li>Cybele Sack</li>
+	<li>Eleanor Loiacono, Worcester Polytechnic Institute</li>
+	<li>Imelda Llanos</li>
+	<li>Jake Abma, ING Groep N.V.</li>
+	<li>Jennifer Chadwick, Siteimprove</li>
+	<li>Jennison Asuncion, LinkedIn</li>
+	<li>Jill Power, EBSCO Publishing</li>
+	<li>John Kirkwood, CityMouse, inc</li>
+	<li>John McNabb, Canadian Imperial Bank of Commerce</li>
+	<li>John Rochford, University of Massachusetts Medical Center</li>
+	<li>Katharina Herzog</li>
+	<li>Kelsey Collister</li>
+	<li>Luis Garcia, eBay</li>
+	<li>Lyn Muldrow, LinkedIn</li>
+	<li>Léonie Watson, Tetralogical</li>
+	<li>Mark Tanner</li>
+	<li>Matthew King, Facebook</li>
+	<li>Michael Crabb, The University of Dundee</li>
+	<li>Michellanne Li, Palantir.net</li>
+	<li>Makoto Ueki, Infoaxia, Inc.</li>
+	<li>Peter McNally, User Experience Center, Bentley University</li>
+	<li>Ruth Spina, North East ISD</li>
+	<li>Ryan Hemphill</li>
+	<li>Sarah Pulis, Intopia</li>
+	<li>Scott Hollier</li>
+	<li>sweta wakodkar, Prakat Solutions Pvt Ltd</li>
+	<li>Takayuki Watanabe, Tokyo Woman's Christian University</li>
+	<li>Thomas Logan, Equal Entry</li>
+	<li>Thomas Westin, Stockholm University</li>
+	<li>Victoria Clark, JP Morgan Chase</li>
+	<li>Wendy Chisholm, Microsoft Corp.</li>
 </ul>
 
 		  </section>
@@ -383,11 +386,11 @@
 		<h3>Research Partners</h3>
         <p>These researchers selected a Silver research question, did the research, and graciously allowed us to use the results.</p>
         <ul>
-          <li>David Sloan and Sarah Horton, The Paciello Group, &ldquo;WCAG Success Criteria Usability Study&rdquo;</li>
-          <li>Scott Hollier et al, Curtin University, &ldquo;Internet of Things (IoT) Education: Implications for Students with Disabilities&rdquo;</li>
-          <li>Peter McNally, Bentley University, &ldquo;WCAG Use by UX Professionals&rdquo;</li>
+          <li>David Sloan and Sarah Horton, The Paciello Group, "WCAG Success Criteria Usability Study"</li>
+          <li>Scott Hollier et al, Curtin University, "Internet of Things (IoT) Education: Implications for Students with Disabilities"</li>
+          <li>Peter McNally, Bentley University, "WCAG Use by UX Professionals"</li>
           <li>Professor Mike Crabb, student papers of Silver research topics</li>
-          <li>Eleanor Loiacono, Worcester Polytechnic Institute &ldquo;Web Accessibility   Perceptions&rdquo; (Student project from Worcester Polytechnic Institute)</li>
+          <li>Eleanor Loiacono, Worcester Polytechnic Institute "Web Accessibility   Perceptions" (Student project from Worcester Polytechnic Institute)</li>
         </ul>
         </section>
 		</section>

@@ -35,9 +35,22 @@ function linkHowTo() {
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
 		var el = document.createElement("span");
-		el.setAttribute("class", "howto-link");
-		el.innerHTML = " <a href=\"" + howtoBaseURI + pathFrag + "/\">[" + heading + " <span>how-to</span>]</a>";
+		el.innerHTML = " <a href=\"" + howtoBaseURI + pathFrag + "/\" class=\"howto-link\">[" + heading + " <span>how-to</span>]</a>";
 		node.querySelector("p.guideline-text").append(el);
+	})
+}
+
+function linkOutcome() {
+	var outcomeBaseURI = "https://www.w3.org/WAI/GL/WCAG3/2020/outcomes/";
+	//if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
+	//else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
+	document.querySelectorAll('.outcome').forEach(function(node){
+		//this is brittle, depends on how respec does the heading
+		var heading = textNoDescendant(findHeading(node));
+		var pathFrag = titleToPathFrag(heading);
+		var el = document.createElement("p");
+		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome, details, and methods for </span>" + heading + "</a>";
+		node.insertBefore(el, node.querySelector("details"));
 	})
 }
 
@@ -58,19 +71,11 @@ function addOutcomeMarkers() {
 	})
 }
 
-function addMethodMarkers() {
-	document.querySelectorAll('.methods').forEach(function(node){
-		var parentHeader = findHeading(node.parentElement);
-		var methodHeader = node.querySelector('summary');
-		methodHeader.innerHTML = "Methods for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
-	})
-}
-
-function addFailureMarkers() {
+function addErrorMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var failureHeader = node.querySelector('summary');
-		failureHeader.innerHTML = "Critical failures for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		failureHeader.innerHTML = "Critical errors for <q>" + textNoDescendant(parentHeader) + "</q>";
 	})
 }
 
@@ -78,10 +83,11 @@ function addRatingMarkers() {
 	document.querySelectorAll('.rating').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var sectionHeader = node.querySelector('summary');
-		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader) + "</q>";
 		
-		var caption = node.querySelector('caption');
-		caption.innerHTML = "Rating scale for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		var table = node.querySelector('table');
+		table.setAttribute("summary", "Rating scale for \"" + textNoDescendant(parentHeader) + "\"");
+		table.querySelector("caption").remove();
 	})
 }
 
@@ -89,11 +95,11 @@ function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var summaryHeader = node.querySelector('summary');
-		summaryHeader.innerHTML = "Simplified summary for " + textNoDescendant(parentHeader);
+		summaryHeader.innerHTML = "Simplified summary for <q>" + textNoDescendant(parentHeader) + "</q>";
 		
 		var el = document.createElement("p");
 		el.className = "summaryEnd";
-		el.innerHTML = "~ End of summary for " + textNoDescendant(parentHeader) + " ~";
+		el.innerHTML = "End of summary for <q>" + textNoDescendant(parentHeader) + "</q>";
 		node.appendChild(el);
 		
 		node.setAttribute("role", "region");
@@ -122,7 +128,7 @@ function adjustNormativity() {
 			var normativeStatement = node.querySelector('p');
 			normativeStatement.classList.add("informative-statement");
 			normativeStatement.innerHTML = "<em>This section (with its subsections) provides advice only and does not specify guidelines, meaning it is <a href=\"#dfn-informative\" class=\"internalDFN\" data-link-type=\"dfn\">informative</a> or non-normative.</em>";
-		} else {
+		} else if (node.id != "abstract" && node.id != "sotd" && !node.classList.contains("appendix")) {
 			var el = document.createElement("p");
 			el.className = "normative-statement";
 			el.innerHTML = "<em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href=\"#dfn-normative\" class=\"internalDFN\" data-link-type=\"dfn\">normative</a>.</em>";
@@ -139,16 +145,30 @@ function adjustDfnData() {
 	});
 }
 
+function alternateFloats() {
+	var order = "odd";
+	document.querySelectorAll(".figure-float").forEach(function(node){
+		if (order == "odd") {
+			node.classList.add("figure-float-odd");
+			order = "even";
+		} else {
+			node.classList.add("figure-float-even");
+			order = "odd";
+		}
+	});
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
 	addGuidelineMarkers();
 	linkHowTo();
+	linkOutcome();
 	addOutcomeMarkers();
-	addMethodMarkers();
-	addFailureMarkers();
+	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
+	//alternateFloats();
 }
 
 // scripts after Respec has run
