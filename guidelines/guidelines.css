@@ -30,6 +30,9 @@ details:focus summary::before, details:hover summary::before, .guideline:focus h
 .errors summary::before {
 	content: url(img/error.svg);
 }
+.categories summary::before {
+	content: url(img/category.svg);
+}
 .summaryEnd {
 	text-align: center;
 	font-weight: bold;
