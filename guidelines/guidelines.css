@@ -30,6 +30,9 @@ details:focus summary::before, details:hover summary::before, .guideline:focus h
 .errors summary::before {
 	content: url(img/error.svg);
 }
+.categories summary::before {
+	content: url(img/category.svg);
+}
 .summaryEnd {
 	text-align: center;
 	font-weight: bold;
@@ -105,4 +108,28 @@ caption {
 }
 .screenshot {
 	width: 400px;
+}
+.note {
+	overflow: visible !important;
+}
+.marker {
+	position: relative;
+}
+.marker > a.self-link{
+	border: none;
+	color: inherit;
+	font-size: 83%;
+	height: 2em;
+	left: -3em;
+	opacity: .5;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	top: 0;
+	transition: opacity .2s;
+	width: 2em;
+}
+.marker > a.self-link::before {
+	content: "§";
+	display: block;
 }
