@@ -103,7 +103,7 @@ function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var summaryHeader = node.querySelector('summary');
-		summaryHeader.innerHTML = "Simplified summary for <q>" + textNoDescendant(parentHeader) + "</q>";
+		summaryHeader.innerHTML = "Plain language summary of <q>" + textNoDescendant(parentHeader) + "</q>";
 		
 		var el = document.createElement("p");
 		el.className = "summaryEnd";
