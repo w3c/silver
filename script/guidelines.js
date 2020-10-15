@@ -65,9 +65,7 @@ function addOutcomeMarkers() {
 	document.querySelectorAll('.outcome').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var outcomeHeader = findHeading(node);
-		outcomeHeader.innerHTML = "<span class=\"inserted\">" + textNoDescendant(parentHeader) + " outcome: </span>" + outcomeHeader.innerHTML;
-		
-		node.classList.add("notoc");
+		outcomeHeader.innerHTML = outcomeHeader.innerHTML + " <span class=\"inserted\">(outcome for <q>" + textNoDescendant(parentHeader) + "</q>)</span>";
 	})
 }
 
@@ -172,7 +170,6 @@ function preRespec() {
 	addGuidelineMarkers();
 	linkHowTo();
 	linkOutcome();
-	addOutcomeMarkers();
 	addCategoryMarkers();
 	addErrorMarkers();
 	addRatingMarkers();
@@ -182,6 +179,7 @@ function preRespec() {
 
 // scripts after Respec has run
 function postRespec() {
+	addOutcomeMarkers();
 	adjustNormativity();
 	termTitles();
 	removeDraftMethodLinks();
