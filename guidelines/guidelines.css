@@ -109,3 +109,24 @@ caption {
 .screenshot {
 	width: 400px;
 }
+.marker {
+	position: relative;
+}
+.marker > a.self-link{
+	border: none;
+	color: inherit;
+	font-size: 83%;
+	height: 2em;
+	/* left: -2.6em;*/
+	opacity: .5;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	top: 0;
+	transition: opacity .2s;
+	width: 2em;
+}
+.marker > a.self-link::before {
+	content: "§";
+	display: block;
+}

@@ -169,6 +169,15 @@ function alternateFloats() {
 
 function edNotePermalinks() {
 	//<a class="self-link" aria-label="§" href="#text-alternative-available"></a>
+	document.querySelectorAll(".note").forEach(function(node){
+		var id = node.id;
+		var heading = node.querySelector(".marker");
+		var permaLink = document.createElement("a");
+		permaLink.classList.add("self-link");
+		permaLink.setAttribute("aria-label", "§");
+		permaLink.setAttribute("href", "#" + id);
+		heading.appendChild(permaLink);
+	});
 }
 
 // scripts before Respec has run
@@ -190,4 +199,5 @@ function postRespec() {
 	adjustNormativity();
 	termTitles();
 	removeDraftMethodLinks();
+	edNotePermalinks();
 }
