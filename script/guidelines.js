@@ -65,7 +65,10 @@ function addOutcomeMarkers() {
 	document.querySelectorAll('.outcome').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var outcomeHeader = findHeading(node);
-		outcomeHeader.innerHTML = outcomeHeader.innerHTML + " <span class=\"inserted\">(outcome for <q>" + textNoDescendant(parentHeader) + "</q>)</span>";
+		var insertion = document.createElement("span");
+		insertion.classList.add("inserted");
+		insertion.innerHTML = " (outcome for <q>" + textNoDescendant(parentHeader) + "</q>)";
+		outcomeHeader.insertBefore(insertion, outcomeHeader.querySelector(".self-link"));
 	})
 }
 
@@ -162,6 +165,10 @@ function alternateFloats() {
 			order = "odd";
 		}
 	});
+}
+
+function edNotePermalinks() {
+	//<a class="self-link" aria-label="§" href="#text-alternative-available"></a>
 }
 
 // scripts before Respec has run
