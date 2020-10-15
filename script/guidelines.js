@@ -80,10 +80,10 @@ function addCategoryMarkers() {
 }
 
 function addErrorMarkers() {
-	document.querySelectorAll('.failures').forEach(function(node){
+	document.querySelectorAll('.errors').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
-		var failureHeader = node.querySelector('summary');
-		failureHeader.innerHTML = "Critical errors for <q>" + textNoDescendant(parentHeader) + "</q>";
+		var errorHeader = node.querySelector('summary');
+		errorHeader.innerHTML = "Critical errors for <q>" + textNoDescendant(parentHeader) + "</q>";
 	})
 }
 
