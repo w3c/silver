@@ -71,6 +71,14 @@ function addOutcomeMarkers() {
 	})
 }
 
+function addCategoryMarkers() {
+	document.querySelectorAll('.categories').forEach(function(node){
+		var parentHeader = findHeading(node.parentElement);
+		var sectionHeader = node.querySelector('summary');
+		sectionHeader.innerHTML = "Functional categories for <q>" + textNoDescendant(parentHeader) + "</q>";
+	})
+}
+
 function addErrorMarkers() {
 	document.querySelectorAll('.failures').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
@@ -165,6 +173,7 @@ function preRespec() {
 	linkHowTo();
 	linkOutcome();
 	addOutcomeMarkers();
+	addCategoryMarkers();
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
