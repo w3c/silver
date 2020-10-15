@@ -109,6 +109,9 @@ caption {
 .screenshot {
 	width: 400px;
 }
+.note {
+	overflow: visible !important;
+}
 .marker {
 	position: relative;
 }
@@ -117,7 +120,7 @@ caption {
 	color: inherit;
 	font-size: 83%;
 	height: 2em;
-	/* left: -2.6em;*/
+	left: -3em;
 	opacity: .5;
 	position: absolute;
 	text-align: center;
