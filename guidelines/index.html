@@ -840,17 +840,15 @@
 			<section>
 				<h2>Scoring</h2>
 
+				<details class="summary">
+					<summary>Summary</summary>
+					<p>How are tests scored?</p>
+					<p>Besides true/false scoring methods, we’ve included testing options for new guidance, such as rating scales.</p>
+					<p>Each outcome has a section that shows how it is scored.</p>
+				</details>
+				
 				<p class="ednote">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a>rubrics</a> and <a>scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p>
 				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>
-							<details class="summary">
-				<summary>Summary</summary>
-				<section>
-					<h3>How are tests scored?</h3>
-				<p>Besides true/false scoring methods, we’ve included testing options for new guidance, such as rating scales.</p>
-				<p>Each outcome has a section that shows how it is scored.</p>
-				</section>
-			</details>
-
 				<section>
 				<h3>Scoring atomic tests</h3>
 				<p>In most cases, testing individual <a>objects</a> will result in binary, pass / fail outcome for each element. This leads to either a pass / fail or a percentage rating depending on the test. A rating scale may be provided for some tests to allow the tester to assign a quality judgement of an element or block of content. Each of these results can be assigned a percentage and the percentage informs the overall score of an outcome.</p>
@@ -864,7 +862,7 @@
 				</section>
 
 				<section>
-				<h3>Scoring outcomes</h4>
+				<h3>Scoring outcomes</h3>
 				<p>The results from the atomic tests are aggregated across views and used along with the number of critical errors to assign an <a>adjectival rating</a> to the outcome. Testers will then use the guidance provided in the outcome along with reasonable judgement of the context that the errors occur in to assign an accessibility score of the outcome.</p>
 					<div class="example">
 						<p>Potential thresholds for adjectival ratings of test results:</p>
@@ -898,7 +896,6 @@
 				<p>The points from <a href="#holistic-tests">holistic tests</a> do not affect the scores of <a href="#atomic-tests">atomic tests</a>. Rather a minimum number of holistic tests will need to be met in order to reach a <a href="#silver">silver</a> rating and additional holistic tests will be needed to reach a <a href="#gold">Gold</a> rating. Getting a silver or gold rating requires a Bronze rating.</p>
 				<p class="ednote">We continue to work on the scoring of holistic tests and will provide more details in a future iteration of this document.</p>
 				</section>
-			</section>
 		</section>
 		<section>
 			<h2>Conformance</h2>
@@ -932,7 +929,7 @@
 						<li>The total score and score within each of the functional categories MUST be at least 3.5; and</li>
 						<li><a>Views</a> and <a>processes</a> MUST NOT have <a>critical errors</a>.</li>
 					</ul>
-					<p>Conformance to this specification at the bronze level does not mean every requirement in every guideline is fully met. Bronze level means that the content in scope does have any critical errors and meets the minimum percentage of 
+					<p>Conformance to this specification at the bronze level does not mean every requirement in every guideline is fully met. Bronze level means that the content in scope does have any critical errors and meets the minimum percentage of @@</p>
 				</section>
 				<section>
 					<h4>Silver</h4>
