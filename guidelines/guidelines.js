@@ -104,7 +104,9 @@ function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var summaryHeader = node.querySelector('summary');
-		summaryHeader.innerHTML = "Plain language summary of <q>" + textNoDescendant(parentHeader) + "</q>";
+		var extraTitle = "";
+		if (summaryHeader.textContent.toLowerCase() != "summary") extraTitle = " - " + summaryHeader.textContent;
+		summaryHeader.innerHTML = "Plain language summary of <q>" + textNoDescendant(parentHeader) + "</q>" + extraTitle;
 		
 		var el = document.createElement("p");
 		el.className = "summaryEnd";
@@ -168,7 +170,6 @@ function alternateFloats() {
 }
 
 function edNotePermalinks() {
-	//<a class="self-link" aria-label="§" href="#text-alternative-available"></a>
 	document.querySelectorAll(".note").forEach(function(node){
 		var id = node.id;
 		var heading = node.querySelector(".marker");
@@ -177,6 +178,16 @@ function edNotePermalinks() {
 		permaLink.setAttribute("aria-label", "§");
 		permaLink.setAttribute("href", "#" + id);
 		heading.appendChild(permaLink);
+	});
+}
+
+// somewhere along the chain image sizes are being added where I don't want them, doesn't happen locally
+function removeImgSize() {
+	document.querySelectorAll("img").forEach(function(node){
+		if (node.getAttribute("src").endsWith(".svg")) {
+			node.removeAttribute("width");
+			node.removeAttribute("height");
+		}
 	});
 }
 
@@ -200,4 +211,5 @@ function postRespec() {
 	termTitles();
 	removeDraftMethodLinks();
 	edNotePermalinks();
+	removeImgSize();
 }
