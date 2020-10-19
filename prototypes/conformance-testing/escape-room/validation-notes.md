@@ -26,3 +26,7 @@
 2. The `<h2>` element doesn't have enough color contrast.
 2. The responsive Menu button has a `tabindex="-1"` attribute.
 3. The social-media icons have had their accessible names removed.
+
+## Blog post page
+1. The `<h1>` element is a `<div>`.
+2. The `<h1>` is the same size and weight as the body text.
