@@ -50,6 +50,12 @@
       type="text/css"
       media="all"
     />
+    <link
+      rel="stylesheet"
+      href="assets/css/silver-breaking-things-for-testing.css"
+      type="text/css"
+      media="all"
+    />    
     <script src="assets/scripts/jquery.js" id="jquery-core-js"></script>
 
     <!-- start Simple Custom CSS and JS -->
@@ -103,7 +109,7 @@
             <div class="site-branding">
               <div class="wrap">
                 <p class="site-title">
-                  <a href="index.html" rel="home">Accessible Escape Room</a>
+                  <a aria-label="home page" href="index.html" rel="home">Accessible Escape Room</a>
                 </p>
 
                 <p class="site-description">Puzzling Inclusive Fun</p>
@@ -121,6 +127,7 @@
                 class="menu-toggle"
                 aria-controls="top-menu"
                 aria-expanded="false"
+                tabindex="-1"
               >
                 <svg class="icon icon-bars" aria-hidden="true" role="img">
                   <use xlink:href="#icon-bars"></use>
@@ -286,7 +293,6 @@
               class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"
             >
               <a href="https://www.facebook.com/AccessibleEscapeRoom/">
-                <span class="screen-reader-text">Facebook</span>
                 <svg class="icon icon-facebook" aria-hidden="true" role="img">
                   <use xlink:href="#icon-facebook"></use>
                 </svg>
@@ -297,7 +303,6 @@
               class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24"
             >
               <a href="https://twitter.com/A11yEscapeRoom">
-                <span class="screen-reader-text">Twitter</span>
                 <svg class="icon icon-twitter" aria-hidden="true" role="img">
                   <use xlink:href="#icon-twitter"></use>
                 </svg>
@@ -308,7 +313,6 @@
               class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"
             >
               <a href="mailto:escaperoom@accessiblecommunity.org">
-                <span class="screen-reader-text">Email</span>
                 <svg class="icon icon-envelope-o" aria-hidden="true" role="img">
                   <use xlink:href="#icon-envelope-o"></use>
                 </svg>

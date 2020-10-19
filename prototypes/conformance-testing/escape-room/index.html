@@ -50,7 +50,12 @@
       type="text/css"
       media="all"
     />
-
+    <link
+      rel="stylesheet"
+      href="assets/css/silver-breaking-things-for-testing.css"
+      type="text/css"
+      media="all"
+    />
     <style>
 
       .silver-note{
@@ -119,7 +124,7 @@
             <div class="site-branding">
               <div class="wrap">
                 <p class="site-title">
-                  <a href="/index.html" rel="home">Accessible Escape Room</a>
+                  <a href="index.html" rel="home">Accessible Escape Room</a>
                 </p>
 
                 <p class="site-description">Puzzling Inclusive Fun</p>
@@ -218,7 +223,7 @@
                   class="post-7 page type-page status-publish has-post-thumbnail hentry"
                 >
                   <header class="entry-header">
-                    <h1 class="entry-title">Home</h1>
+                    <div class="h1 entry-title">Home</div>
                   </header>
                   <!-- .entry-header -->
 
@@ -308,6 +313,7 @@
                     <div>
                       <label for="email">Email:</label>
                       <input
+                        aria-label="sign up address"
                         type="email"
                         name="ms-email"
                         id="email"
