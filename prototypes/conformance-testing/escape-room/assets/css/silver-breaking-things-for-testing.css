@@ -23,3 +23,8 @@ h2, h3, h4, h5, h6{
 :is(h2, h3, h4, h5, h6) a[rel=bookmark]{
   color:inherit;
 }
+
+.form-subscribe-button{
+  height:42px;
+  width:121px;
+}
