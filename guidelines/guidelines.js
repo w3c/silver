@@ -5,7 +5,7 @@ function titleToPathFrag (title) {
 }
 
 function findHeading(el) {
-	return el.querySelector('h1') || el.querySelector('h2') || el.querySelector('h3') || el.querySelector('h4') || el.querySelector('h5') || el.querySelector('h6');
+	return el.querySelector('h1, h2, h3, h4, h5, h6');
 }
 
 function findFirstTextChild(el) {
@@ -49,8 +49,10 @@ function linkOutcome() {
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
 		var el = document.createElement("p");
-		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Detailed information on </span>" + heading + "</a>";
+		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome, details, and methods for </span>" + heading + "</a>";
 		node.insertBefore(el, node.querySelector("details"));
+		
+		node.classList.add("notoc");
 	})
 }
 
@@ -65,17 +67,26 @@ function addOutcomeMarkers() {
 	document.querySelectorAll('.outcome').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var outcomeHeader = findHeading(node);
-		outcomeHeader.innerHTML = "<span class=\"inserted\">" + textNoDescendant(parentHeader) + " outcome: </span>" + outcomeHeader.innerHTML;
-		
-		node.classList.add("notoc");
+		var insertion = document.createElement("span");
+		insertion.classList.add("inserted");
+		insertion.innerHTML = " (outcome for <q>" + textNoDescendant(parentHeader) + "</q>)";
+		outcomeHeader.insertBefore(insertion, outcomeHeader.querySelector(".self-link"));
+	})
+}
+
+function addCategoryMarkers() {
+	document.querySelectorAll('.categories').forEach(function(node){
+		var parentHeader = findHeading(node.parentElement);
+		var sectionHeader = node.querySelector('summary');
+		sectionHeader.innerHTML = "Functional categories for <q>" + textNoDescendant(parentHeader) + "</q>";
 	})
 }
 
 function addErrorMarkers() {
-	document.querySelectorAll('.failures').forEach(function(node){
+	document.querySelectorAll('.errors').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
-		var failureHeader = node.querySelector('summary');
-		failureHeader.innerHTML = "Critical errors for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		var errorHeader = node.querySelector('summary');
+		errorHeader.innerHTML = "Critical errors for <q>" + textNoDescendant(parentHeader) + "</q>";
 	})
 }
 
@@ -83,10 +94,10 @@ function addRatingMarkers() {
 	document.querySelectorAll('.rating').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var sectionHeader = node.querySelector('summary');
-		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader).toLowerCase() + "</q>";
+		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader) + "</q>";
 		
 		var table = node.querySelector('table');
-		table.setAttribute("summary", "Rating scale for \"" + textNoDescendant(parentHeader).toLowerCase() + "\"");
+		table.setAttribute("summary", "Rating scale for \"" + textNoDescendant(parentHeader) + "\"");
 		table.querySelector("caption").remove();
 	})
 }
@@ -95,11 +106,13 @@ function addSummaryMarkers() {
 	document.querySelectorAll('.summary').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var summaryHeader = node.querySelector('summary');
-		summaryHeader.innerHTML = "Simplified summary for " + textNoDescendant(parentHeader);
+		var extraTitle = "";
+		if (summaryHeader.textContent.toLowerCase() != "summary") extraTitle = " - " + summaryHeader.textContent;
+		summaryHeader.innerHTML = "Plain language summary of <q>" + textNoDescendant(parentHeader) + "</q>" + extraTitle;
 		
 		var el = document.createElement("p");
 		el.className = "summaryEnd";
-		el.innerHTML = "~ End of summary for " + textNoDescendant(parentHeader) + " ~";
+		el.innerHTML = "End of summary for <q>" + textNoDescendant(parentHeader) + "</q>";
 		node.appendChild(el);
 		
 		node.setAttribute("role", "region");
@@ -128,7 +141,7 @@ function adjustNormativity() {
 			var normativeStatement = node.querySelector('p');
 			normativeStatement.classList.add("informative-statement");
 			normativeStatement.innerHTML = "<em>This section (with its subsections) provides advice only and does not specify guidelines, meaning it is <a href=\"#dfn-informative\" class=\"internalDFN\" data-link-type=\"dfn\">informative</a> or non-normative.</em>";
-		} else {
+		} else if (node.id != "abstract" && node.id != "sotd" && !node.classList.contains("appendix")) {
 			var el = document.createElement("p");
 			el.className = "normative-statement";
 			el.innerHTML = "<em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href=\"#dfn-normative\" class=\"internalDFN\" data-link-type=\"dfn\">normative</a>.</em>";
@@ -145,21 +158,60 @@ function adjustDfnData() {
 	});
 }
 
+function alternateFloats() {
+	var order = "odd";
+	document.querySelectorAll(".figure-float").forEach(function(node){
+		if (order == "odd") {
+			node.classList.add("figure-float-odd");
+			order = "even";
+		} else {
+			node.classList.add("figure-float-even");
+			order = "odd";
+		}
+	});
+}
+
+function edNotePermalinks() {
+	document.querySelectorAll(".note").forEach(function(node){
+		var id = node.id;
+		var heading = node.querySelector(".marker");
+		var permaLink = document.createElement("a");
+		permaLink.classList.add("self-link");
+		permaLink.setAttribute("aria-label", "§");
+		permaLink.setAttribute("href", "#" + id);
+		heading.appendChild(permaLink);
+	});
+}
+
+// somewhere along the chain image sizes are being added where I don't want them, doesn't happen locally
+function removeImgSize() {
+	document.querySelectorAll("img").forEach(function(node){
+		if (node.getAttribute("src").endsWith(".svg")) {
+			node.removeAttribute("width");
+			node.removeAttribute("height");
+		}
+	});
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
 	addGuidelineMarkers();
 	linkHowTo();
 	linkOutcome();
-	addOutcomeMarkers();
+	addCategoryMarkers();
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
+	//alternateFloats();
 }
 
 // scripts after Respec has run
 function postRespec() {
+	addOutcomeMarkers();
 	adjustNormativity();
 	termTitles();
 	removeDraftMethodLinks();
+	edNotePermalinks();
+	removeImgSize();
 }
