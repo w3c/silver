@@ -51,6 +51,8 @@ function linkOutcome() {
 		var el = document.createElement("p");
 		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome, details, and methods for </span>" + heading + "</a>";
 		node.insertBefore(el, node.querySelector("details"));
+		
+		node.classList.add("notoc");
 	})
 }
 
