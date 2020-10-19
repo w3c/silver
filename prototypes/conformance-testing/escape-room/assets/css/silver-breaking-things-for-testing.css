@@ -1,0 +1,25 @@
+:root{
+  /* color contrast tool: https://www.myndex.com/SAPC/ */
+  --sapc-apca-667-grey-on-white: #929292;
+  --sapc-apca-636-green-on-white: #42ad08;
+}
+
+h2, h3, h4, h5, h6{
+  color:var(--sapc-apca-636-green-on-white);
+  font-weight:300;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  clear: both;
+  line-height: 1.25;
+  margin: 0 0 0.75em;
+  padding: 0.75em 0 0 0
+}
+
+.front-page-content-area .entry-title.h1:first-child{
+  padding:0;
+}
+
+:is(h2, h3, h4, h5, h6) a[rel=bookmark]{
+  color:inherit;
+}
