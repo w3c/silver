@@ -5,7 +5,7 @@ function titleToPathFrag (title) {
 }
 
 function findHeading(el) {
-	return el.querySelector('h1') || el.querySelector('h2') || el.querySelector('h3') || el.querySelector('h4') || el.querySelector('h5') || el.querySelector('h6');
+	return el.querySelector('h1, h2, h3, h4, h5, h6');
 }
 
 function findFirstTextChild(el) {
