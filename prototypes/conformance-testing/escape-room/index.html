@@ -289,7 +289,11 @@
                   <h3>Video: Experience the Accessible Escape Room</h3>
 
                   <div class="silver-note" role="note">
-                    <p><strong>Conformance testing note:</strong> for security reasons, some browsers don't allow playing local video files. To get around this, you need to use a file picker to select the file on your hard drive.</p>
+                    <p><strong>Conformance testing notes:</strong>
+                      <ul>
+                        <li>For security reasons, some browsers don't allow playing local video files. To get around this, you need to use a file picker to select the file on your hard drive.</li>
+                        <li>Similarly, the video player won't load the caption file unless the page is being served locally (for example, using Python's <code>python -mSimpleHTTPServer</code>).</li>
+                      </ul></p>
                     
                     <input class="video-picker" type="file" accept="video/*"/>
                   </div>
