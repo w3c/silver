@@ -28,3 +28,11 @@ h2, h3, h4, h5, h6{
   height:42px;
   width:121px;
 }
+
+/* 
+if we want to change the vtt caption's appearance
+video::cue {
+color: yellow;
+font-family: system-ui, "Segoe UI", Roboto, Helvetica;
+font-size: 2rem;
+} */
