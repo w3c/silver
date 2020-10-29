@@ -1,5 +1,7 @@
 /* Optional Styles for APCA Lookup Table */
 
+.APCAtable td:first-child {font-weight: bold;}
+
 .APCAtable {
 	text-align: center;
 }
