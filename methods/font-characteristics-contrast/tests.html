@@ -17,18 +17,18 @@
 						<h4>Test Procedure</h4>
 						<ol>
 							<li>Obtain representative sRGB values for the foreground text and the background color. </li>
-							<li>This can be done via the calculated values as determined by a browser or user agent, by sampling the rendered page using a color meter or eye-dropper tool, or by auditing the CSS styles in use.</li>
-								<ul style="font-size: 0.96em">
+							<li>This can be done via the calculated values as determined by a browser or user agent, by sampling the rendered page using a color meter or eye-dropper tool, or by auditing the CSS styles in use.
+								<ul>
 									<li>If an “eye dropper” type tool is used it must report values relative to the sRGB colorspace. </li>
 									<li>The eye dropper sample should be a pixel in the middle of a major stroke of the font at the smallest size to be tested, with the content size set to default with no user scaling. </li>
-									<li>For small and thin fonts, sample at least three different letters and average the result.
+									<li>For small and thin fonts, sample at least three different letters and average the result.</li>
 									<li>If auditing the CSS styles, it is important to confirm that a particular style property is active. For complex style sheets, it is recommended to use the values as calculated by the browser.</li>
-								</ul>
-							<li>With a contrast calculator that uses the APCA contrast method, calculate the predicted contrast between foreground text and background colors.</li>
-								<ul style="font-size: 0.96em">
+								</ul></li>
+							<li>With a contrast calculator that uses the APCA contrast method, calculate the predicted contrast between foreground text and background colors.
+								<ul>
 									<li>Important: do not swap the background or text colors in the tool entry fields. </li>
 									<li>The contrast evaluation is based in part on polarity, so it is important that the text color value be entered into the text color field, and likewise for the background. </li>
-								</ul>
+								</ul></li>
 							<li>For calculators that provide only a contrast result: Compare the calculated contrast value against the lookup table <q>Accessible Contrast by Font Size and Weight</q> below. </li>
 							<li>Check that the absolute value of the predicted contrast percentage meets or exceeds the required value for the font weight and size in the content. </li>
 							
@@ -41,7 +41,7 @@
 						<p>Check either #5 or #6 is true. </p>
 						<p>The following table cross indexes APCA contrast values to the reference font's CSS font-size and CSS font-weight. Reference fonts for comparison include Helvetica Neue, Helvetica, Fira Sans, Kanit, and Arial. Contrast percentage must meet or exceed the value listed, using the absolute value for negative values. A <span class="underWeightSpan">⊘</span> indicates that a larger font size (or heavier font weight) must be used. </p>
 		<div style="overflow: scroll;">
-			<table class="TFtable APCAtable" style="text-align: center;">
+			<table class="TFtable APCAtable">
 				<caption>APCA Contrast Lookup Table</caption>
 				<colgroup>
 					<col></col>
@@ -59,7 +59,7 @@
 				</colgroup>			
 		
 			<tr>
-				<th>&nbsp;</th>
+				<th></th>
 				<th scope="colgroup" colspan="9">Reference Font Weight</th>
 			</tr>
 			<tr>
@@ -225,7 +225,7 @@
 					<li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet). </li>
 					<li>Some fonts such as Times have a smaller than usual x-height. Such fonts should be compared to the reference and adjust the needed contrast accordingly.
 					</li>
-					<li>Similarly, some fonts such as "Courier New" have an unusually thin weight, and thus need much higher contrast.
+					<li>Similarly, some fonts such as <q>Courier New</q> have an unusually thin weight, and thus need much higher contrast.
 					</li>
 					<li>Decorative, unusual, and very thin fonts should be avoided for columns of body text. </li>
 					<li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica, using the size and weight of Helvetica that most closesly matches the appearance of the tested font as a guide. </li>
