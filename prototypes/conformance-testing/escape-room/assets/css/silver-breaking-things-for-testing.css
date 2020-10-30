@@ -4,6 +4,10 @@
   --sapc-apca-636-green-on-white: #42ad08;
 }
 
+.no-padding{
+  padding:0 !important;
+}
+
 h2, h3, h4, h5, h6{
   color:var(--sapc-apca-636-green-on-white);
   font-weight:300;
@@ -14,6 +18,16 @@ h2, h3, h4, h5, h6{
   line-height: 1.25;
   margin: 0 0 0.75em;
   padding: 0.75em 0 0 0
+}
+
+.looks-like-body-copy{
+  font-size:1rem;
+  font-weight: 400;
+  margin:0;
+}
+
+h1.entry-title.looks-like-body-copy{
+  margin:0
 }
 
 .front-page-content-area .entry-title.h1:first-child{
