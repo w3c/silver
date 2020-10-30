@@ -26,6 +26,14 @@ function textNoDescendant(el) {
 	return textContent;
 }
 
+function sentenceCase(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function pathToName(path) {
+	return sentenceCase(path.replace(/-/g, " "));
+}
+
 function linkHowTo() {
 	var howtoBaseURI = "https://www.w3.org/WAI/GL/WCAG3/2020/how-tos/";
 	//if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
@@ -193,6 +201,69 @@ function removeImgSize() {
 	});
 }
 
+function outputJson() {
+	params = new URLSearchParams(window.location.search);
+	if (params.get("json") != null) {
+		var result = new Object();
+		result.guidelines = new Array();
+		document.querySelectorAll(".guideline").forEach(function(glnode) {
+			var gl = {
+				id: titleToPathFrag(findFirstTextChild(findHeading(glnode)).textContent),
+				name: findFirstTextChild(findHeading(glnode)).textContent,
+				guideline: findFirstTextChild(glnode.querySelector("p")).textContent
+			};
+			gl.outcomes = new Array();
+			glnode.querySelectorAll(".outcome").forEach(function(ocnode) {
+				var ocid = titleToPathFrag(findFirstTextChild(findHeading(ocnode)).textContent);
+				var oc = {
+					id: ocid,
+					name: findFirstTextChild(findHeading(ocnode)).textContent,
+					outcome: findFirstTextChild(ocnode.querySelector("p")).textContent,
+					methods: loadMethods(ocid)
+				}
+				gl.outcomes.push(oc);
+			});
+			result.guidelines.push(gl);
+		});
+		
+	    var a = document.createElement("a");
+	    var file = new Blob([JSON.stringify(result)], {type: "application/json"});
+	    a.href = URL.createObjectURL(file);
+	    a.download = "wcag3.json";
+	    a.click();
+	}
+	
+	function loadMethods(path) {
+		var returnVal;
+		var ocpath = "../outcomes/" + path + ".html";
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (xhttp.readyState == 4 && xhttp.status == 200) {
+				methodList = new Array();
+				xml = xhttp.responseXML;
+				xml.querySelectorAll(".method-link").forEach(function(node) {
+					var methodid = node.href.match(/\/([a-z-]*)\/$/)[1]; 
+					var method = {
+						id: methodid,
+						name: pathToName(methodid),
+						method: node.textContent
+					}
+					methodList.push(method);
+				});
+				returnVal = methodList;
+			}
+		};
+		xhttp.open("GET", ocpath, false);
+		xhttp.overrideMimeType("text/xml");
+		xhttp.send();
+
+		return returnVal;
+	}
+}
+
+function loadDoc(path) {
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
@@ -214,4 +285,5 @@ function postRespec() {
 	removeDraftMethodLinks();
 	edNotePermalinks();
 	removeImgSize();
+	outputJson();
 }
