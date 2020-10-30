@@ -8,6 +8,10 @@
   padding:0 !important;
 }
 
+.no-border{
+  border:none !important;
+}
+
 h2, h3, h4, h5, h6{
   color:var(--sapc-apca-636-green-on-white);
   font-weight:300;
