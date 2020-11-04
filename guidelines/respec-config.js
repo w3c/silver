@@ -12,7 +12,7 @@ var respecConfig = {
 	//publishDate:          "2013-08-22",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "WCAG30",
+	shortName: "wcag-3.0",
 	
 	
 	// if you wish the publication date to be other than today, set this
