@@ -16,7 +16,7 @@ var respecConfig = {
 	
 	
 	// if you wish the publication date to be other than today, set this
-	// publishDate:  "2009-08-06",
+	publishDate:  "2020-01-19",
 	copyrightStart: "2021",
 	license: "document",
 	
