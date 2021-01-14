@@ -14,12 +14,12 @@ var respecConfig = {
 	diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "wcag-3-requirements",
+	shortName: "wcag-3.0-requirements",
 	
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
-	copyrightStart: "2020",
+	copyrightStart: "2021",
 	license: "w3c-software-doc",
 	
 	// if there a publicly available Editors Draft, this is the link
