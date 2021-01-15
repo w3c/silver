@@ -12,12 +12,12 @@ var respecConfig = {
 	//publishDate:          "2013-08-22",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "WCAG30",
+	shortName: "wcag-3.0",
 	
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
-	copyrightStart: "2020",
+	copyrightStart: "2021",
 	license: "document",
 	
 	// if there a publicly available Editors Draft, this is the link
@@ -73,6 +73,7 @@ var respecConfig = {
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
 	group: "ag",
+	github: "w3c/silver",
 
 	maxTocLevel: 4,
 	
