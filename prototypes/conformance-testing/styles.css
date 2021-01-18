@@ -1,0 +1,63 @@
+:root {
+  font-size: 100%;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  --white: #fff;
+  --black: #000;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  display: grid;
+  font: 1rem/1.5 system-ui, "Segoe UI", Roboto, Helvetica,
+    sans-serif;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h1{
+  font-size:2rem;
+  margin:0.75em 0 0.25em 0;
+}
+
+h2{
+  font-size:1.5rem;
+  margin:0.75em 0 0.25em 0;
+}
+
+p{
+  margin:0 0 1.5em;
+}
+
+main {
+  grid-column: 3 / 6;
+}
+
+@media screen and (max-width:768px){
+  main{
+    grid-column: 2 / 7;
+  }
+}
+
+@media screen and (max-width:475px){
+  main{
+    grid-column: 1 / -1;
+  }
+}
