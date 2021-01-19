@@ -84,7 +84,7 @@ var respecConfig = {
 			"title": "Section 508 Functional Performance Criteria",
 			"publisher": "United States Access Board",
 			"date": "8 December 2011",
-			"href": "https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/draft-rule-2011/chapter-3-functional-performance-criteria"
+			"href": "https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria"
 		},
 		"en-301-549": {
 			"title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe",
