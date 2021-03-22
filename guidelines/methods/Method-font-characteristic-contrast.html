@@ -60,7 +60,7 @@ You should totally buy his book on Inclusive Components.
 <li>Any web technology where text and background color are specified separately and browsers can control default colors. 
 </ul>
 <h3>How It Solves User Need</h3>
-<p>All sighted users need adaquate luminance contrast (lightness/darkness difference) between background and text colors in order to read the text easily.
+<p>All sighted users need adequate luminance contrast (lightness/darkness difference) between background and text colors in order to read the text easily.
 </p>
 <h3>Related Guidelines</h3>
 <ul>
@@ -79,7 +79,7 @@ You should totally buy his book on Inclusive Components.
 	<p>The eye consists of an optical portion including a lens, and a light sensitive portion known as the retina. Muscles in the eye adjust the shape of the lens to adjust the focus of incoming light, so that an image of the world around us is focused onto the retina. Light sensitive cells on the retina then convert light into electrical impulses that are sent to the brain's vision processing center, called the visual cortex.</p>
 	  <p>This complex system is subject to many forms of impairment. And even "normal" vision changes substantially over a person's lifetime. For instance contrast sensitivity is very poor at birth, and it takes 20 years of development for normal vision to reach peak contrast sensitivity. Many people over the age of 45 develop the need for reading glasses as the natural lens in their eye grows larger and stiffer to where the muscles can no longer pull it into focus. And while people often think of acuity as a defining factor (i.e. 20/20, the ability to focus), vision is often more impacted by contrast sensitivity related impairments. 
 	  
-	<p>Our perception of contrast and ultimately the readability of text is affected by many interdependant factors, including:
+	<p>Our perception of contrast and ultimately the readability of text is affected by many interdependent factors, including:
 	<ul>
 		<li>The user's personal vision quality in terms of sharpness, glare, and contrast sensitivity		
 		<li>Font weight or stroke width, and font size
@@ -88,8 +88,8 @@ You should totally buy his book on Inclusive Components.
 		<li>The padding and spacing around the text which affects the eye's <em>local</em> adaptation to the text area
 		<li>The hue or color difference between the background and text, not including the lightness difference	mentioned above
 	  </ul>
-	<p>All of these interdependant factors affect the perception of contrast and ultimately readability. As we are concerned with readability on computer screens, we can made some assumptions about a range of brightness, and a typical viewing environment. This provides a baseline standard for all users for best readability of content, or a minimum level of legibility for non-content. Then, we can set how different impairments require different adjustments or user customization to accomodate the neads of each individual user.</p>
-	  <p>For instance, a user with poor "acuity", that is, poor sharpness where they cannot focus on small text, will need to be able to zoom the text larger. A user with poor contrast sensitivity may have good sharpness, but unable to perceive colors that are too similar in lightness. Yet another user with a glare problem may need lower contrast, and/or a reduction in blue, to reduce glare or halos interfereing with readability. Those with a color vision problem (sometimes called 'color blind') may have difficulty detecting contrast or lightness for certain colors, such as deep red.
+	<p>All of these interdependent factors affect the perception of contrast and ultimately readability. As we are concerned with readability on computer screens, we can made some assumptions about a range of brightness, and a typical viewing environment. This provides a baseline standard for all users for best readability of content, or a minimum level of legibility for non-content. Then, we can set how different impairments require different adjustments or user customization to accommodate the needs of each individual user.</p>
+	  <p>For instance, a user with poor "acuity", that is, poor sharpness where they cannot focus on small text, will need to be able to zoom the text larger. A user with poor contrast sensitivity may have good sharpness, but unable to perceive colors that are too similar in lightness. Yet another user with a glare problem may need lower contrast, and/or a reduction in blue, to reduce glare or halos interfering with readability. Those with a color vision problem (sometimes called 'color blind') may have difficulty detecting contrast or lightness for certain colors, such as deep red.
 
 	    
 	    </p>
@@ -106,7 +106,7 @@ You should totally buy his book on Inclusive Components.
   <p>Predicted contrast is reported as a percentage using the methods in this guideline, based on the CSS color values in sRGB colorspace, and with device default antialiasing<sup>1</sup>. The <b>Tests</b> section has a lookup table for specific font and contrast combinations, but as a general guide:</p>
 	  
 	  <ul>
-	<li>25% is the point of invisibility (<em>i.e., no perceptable contrast</em>) for many people with contrast related impairments. Designers should assume that contrsts lower than this may be invisible to some users.
+	<li>25% is the point of invisibility (<em>i.e., no perceptible contrast</em>) for many people with contrast related impairments. Designers should assume that contrasts lower than this may be invisible to some users.
 	<li>40% for Large, Bold Headlines where the major stroke width is at least 8px (6pt), or Non-text elements that are at least a solid 8x8px square such as buttons.
 	<li>60% For Bold Text no less than 16px (12pt) or non-text elements no less than 3px in the thinnest dimension.
 	<li>80% Normal Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 2px.
@@ -783,7 +783,7 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
 <li>Serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier).
 <li>Decorative, unusual, and very thin fonts should be avoided for columns of body text. 	
-<li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica, using the size and weight of Helvetica that most closesly matches the appearance of the tested font as a guide.
+<li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica, using the size and weight of Helvetica that most closely matches the appearance of the tested font as a guide.
 <li>Designers are cautioned that bypassing default font smoothing can drastically reduce contrast for small or thin fonts. For instance, the use of "webkit-font-smoothing: antialiasing" is strongly discouraged.	
 </ul>
 <h3>Expected Results</h3>
@@ -840,7 +840,7 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <dl id="dfn-relative-contrast">
   <h3>Predicted Contrast</h3>
   <dd>
-    <p>The Predicted Visual Contrast (<var>APCA</var>) between a foreground color and a background color is expressed as a percentange and is calculated by:</p>
+    <p>The Predicted Visual Contrast (<var>APCA</var>) between a foreground color and a background color is expressed as a percentage and is calculated by:</p>
 	 
 <pre>
 //  Define Constants for Basic APCA Version:
@@ -919,7 +919,7 @@ if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
 <h2>Changelog</h2>
 <ul>
 <li>20 January 2020 New Method 
-<li>24 February 2020 First Working Draft Updates (corrected math, moved math and gloassary to Resources tab, added description, added clarification to Tests tab). (AMS)
+<li>24 February 2020 First Working Draft Updates (corrected math, moved math and glossary to Resources tab, added description, added clarification to Tests tab). (AMS)
 <li>25 February 2020 Addl. First Working Draft Updates (updated lookup table, minor spelling errors, added paragraph in Description, fixed formatting for code samples). (AMS)
 	</ul>
 </section>
