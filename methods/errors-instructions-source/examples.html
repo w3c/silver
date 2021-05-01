@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Method - Examples</title>
+	</head>
+	<body>
+		<header>
+			<h1>Examples</h1>
+		</header>
+		<main>
+			<section class="example">
+				<h3>Example 1: Providing instructions within labels</h3>
+				<p>For simple use cases, providing instructions within labels may be sufficient. 
+					This approach is reliable across different web browsers and assistive technologies, 
+					although it may require some additional thought to support some styling needs.
+				</p>
+				<p>In the example below, the required format for the "Date of Birth" is indicated by "MM/DD/YYYY"
+					within the same label:
+				</p>
+				<p>
+					<pre><label for="dob">Date of Birth (MM/DD/YYYY)</label></pre><br />
+					<pre><input type="text" id="dob"></pre>
+				</p>
+				<h3>Example 2: Providing instructions outside of labels</h3>
+				<p>Another approach to associate additional instructions with a form field is to use
+					aria-describedby. Information referenced by this attribute is made available to the 
+					users after the label and other information is announced.
+				</p>
+				<p>
+					<pre><label for="date">Date</label><span id="date-tip">MM-DD-YYYY</span></pre><br />
+					<pre><input type="text" id="date" aria-describedby="date-tip"></pre>
+				</p>
+			</section>
+		</main>
+	</body>
+</html>
