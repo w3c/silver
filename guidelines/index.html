@@ -42,21 +42,8 @@
 			<p>Following these guidelines will make content more accessible to people with a wide range of disabilities, including accommodations for blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. Following these guidelines will also often make content more usable to users in general as well as accessible to people with disabilities.</p>
 			<p>WCAG 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> WCAG 2.X. It will also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/"> User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/"> Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. These earlier versions provided a flexible model that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities have led to the need for a new model to address content accessibility more comprehensively and flexibly.</p>
 			<p>There are many differences between WCAG 2.X and WCAG 3.0. Content that conforms to WCAG 2.2 A &amp; AA is expected to meet most of the minimum conformance level of this new standard but, since WCAG 3.0 includes additional tests and different scoring mechanics, additional work will be needed to reach full conformance. Since the new standard will use a different conformance model, the Accessibility Guidelines Working Group expects that some organizations may wish to continue using WCAG 2.X, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping and other approaches to facilitate migration.</p>
-				<p class="ednote">This version of the guidelines includes an example method for <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> (<a href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/text-alternative-editable/">Author control of text alternatives</a>) and <abbr title="User Agent Accessibility Guidelines">UAAG</abbr> (<a href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/caption-reflow/"> Reflow of captions and other text in context</a>). Future drafts of the guidelines will include additional examples of ATAG- and UAAG-related content.</p>
 			</section>
-			<section>
-			<h3>Background on WCAG 3.0</h3>
-				<p>The <a href="https://www.w3.org/community/silver/">Silver Community Group</a> and their research partners conducted a year of research which included a literature review as well as interviews, surveys, and self-reporting with people with disabilities, content developers, quality assurance professionals, tool developers, designers and policy makers.</p>
-				<p>The results are available in <a href="https://docs.google.com/presentation/d/1POs7orJ4ALB0bq5_vyo4v8RxDcr-5ctwD1noVgpXuJc/edit#slide=id.gc6f73a04f_0_0">The Research Summary Slide Deck</a>. One recurring theme was positive perceptions about the popularity and quality of the guidance in WCAG 2.0. Most of the opportunities identified in the research were changes in the structure and presentation of accessibility guidance to:</p>
-				<ul>
-					<li>improve usability — especially for beginners;</li>
-					<li>support disability needs that cannot be tested by true/false success criteria; and</li>
-					<li>facilitate maintenance to keep the guidelines more current.</li>
-				</ul>
-				<p>The goal of WCAG 3.0 is to provide information that can be used to improve the accessibility of products on a variety of platforms. WCAG 3.0 uses a model that allows it to address more disability needs than WCAG 2.X, as well as address publishing requirements and emerging technologies such as web XR (augmented, virtual and mixed reality) and voice input. It will also provide non-<a>normative</a> information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. The WCAG 3.0 model is designed to support better coverage across disabilities and be easier to maintain, so that the new model will be more enduring over time as technologies evolve.</p>
-				<p>For further introduction to WCAG 3, see the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3 Introduction</a>.</p>
-				<p class="ednote">W3C strives to be as inclusive as possible, and has actively sought participation and input from a broad range of stakeholder groups. We recognize, however, that there is always room for improvement in practices to support inclusion and representation. As you evaluate this document, please consider whether there are ways the Working Group can better support your review, feedback, or inclusion within the process of creating this standard. We welcome feedback on this question as part of your comments.</p>
-			</section>
+			
 			<section>
 				<h3>Relationship to other W3C guidelines</h3>
 				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [[WCAG20]] were designed to be technology neutral, and have stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [[ATAG20]] provide guidance for various types of software that assist people in writing accessible content. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [[UAAG20]] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis.</p>
@@ -66,6 +53,7 @@
 					<li>WCAG 3.0 is not backward compatible with WCAG 2.0, ATAG 2.0, and UAAG 2.0.</li>
 				</ul>
 				<p>For more details about differences from previous guidelines, see <a href="#differences-from-wcag-2">Appendix: Differences From WCAG 2</a>.</p>
+				<p class="ednote">This version of the guidelines includes an example method for <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> (<a href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/text-alternative-editable/">Author control of text alternatives</a>) and <abbr title="User Agent Accessibility Guidelines">UAAG</abbr> (<a href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/caption-reflow/"> Reflow of captions and other text in context</a>). Future drafts of the guidelines will include additional examples of ATAG- and UAAG-related content.</p>
 			</section>
 			<section>
 				<h3>Goals and Requirements</h3>
@@ -75,158 +63,8 @@
 			</section>
 			<p class="ednote"> While the majority of guidelines are still to be written and we continue to explore additional ways of validating conformance, we seek wider public review on the approach presented here. </p>
 		</section>
-		<section class="informative">
-			<h2>Structure of these guidelines</h2>
-			<details class="summary">
-				<summary>Summary</summary>
-				<ul>
-					<li><strong>Guidelines:</strong> solutions to accessibility problems.</li>
-					<li><strong>Outcomes:</strong> the desired result (or “outcome”) of reducing accessibility problems. This is what you test for.</li>
-					<li><strong>Methods:</strong> detailed ways and tests for rating how well your project meets an outcome.</li>
-				</ul>
-				<p>Some of these sections are in this document. You can find others in links within the sections.</p>
-			</details>
-			<figure id="guidelines-structure-diagram" aria-labelledby="guidelines-structure-description" class="figure-float">
-				<img src="img/structure-core.svg" />
-				<figcaption>Core Structure</figcaption>
-			</figure>
-			<p><a href="#guidelines-structure-diagram">Figure 1</a> shows <span id="guidelines-structure-description">the core structure of WCAG 3.0. WCAG 3.0 has three levels of content with associated documentation. Guidelines form the top level. Each guideline contains multiple outcomes, with associated critical errors and outcomes scoring. Each outcome contains multiple methods, with an associated description and examples, tests, and test scoring.</span></p>
-			<section>
-				<h3>Guidelines structure</h3>
-				<p>Guidelines provide a high-level, plain-language version of the content for managers, policy makers, individuals who are new to accessibility, and other individuals who need to understand the concepts but not dive into the technical details. They provide an easy-to-understand way of organizing and presenting the outcomes so that non-experts can learn about and understand the concepts. Each guideline includes a unique, descriptive name along with a high-level plain-language summary. Guidelines address functional needs on specific topics, such as contrast, forms, readability, and more. Guidelines group related outcomes and are technology-independent.</p>				
-				<p class="example">Example: Use sections, headings, and sub-headings to organize your content.</p>			
-			</section>
-			<section>
-				<h3>Outcomes structure</h3>
-				<p>Each guideline contains multiple outcomes. Outcomes result from practices that reduce or eliminate barriers that people with disabilities experience. Outcomes form the basis of a flexible and expansive architecture for accessibility guidelines that closely relates to the needs of people with disabilities. Outcomes are designed for use by developers, testers, and other technical experts. 
-				</p>
-				<p> Outcomes are written as testable criteria and include information on how to score the outcome in an optional <a href="#conformance-claims">Conformance Claim</a>. Within a guideline, outcomes have an AND relationship. All relevant outcomes must be addressed but not all outcomes will apply to all technologies and situations. When an outcome does not apply, it is marked NA in the scoring.</p>
-
-				<p class="example">Example: Convey hierarchy with semantic structure</p>
-				<section>
-					<h4>Critical errors</h4>
-						<p><a href="#outcomes">Outcomes</a> include the related <a>critical errors</a> that can occur and how to identify them. Not all outcomes have critical errors.  Any critical errors will result in the lowest score for the outcome.</p>
-					
-					<p>Evaluating <a>processes</a> requires counting critical errors that occur within the process and associated <a>views</a>. Critical errors are:</p>
-					<ul>
-						<li>Errors located anywhere within the view that stop a user from being able to use that view (examples: flashing, keyboard trap, audio with no pause);</li>
-						<li>Errors that when located within a <a>process</a> stop a user from completing a process (example: submit button not in tab order); and</li>
-						<li>Errors that when aggregated within a view or across a process stop a user from using the view or completing the process (example: a large amount of confusing, ambiguous language).</li>
-					</ul>				
-				</section>
-				<section>
-					<h4>Outcome rating</h4>
-					<p>Each outcome is rated on a scale of 0 to 4. The rating model is designed to be flexible in order to allow more functional needs of people with disabilities to be included in the guidelines. </p>
-					<p>Each outcome defines the rating criteria used for that outcome.  The rating criteria are designed to be technology agnostic but tie to the available methods so that method level scoring can be rolled up when possible or the tester can make an informed judgment call about the outcome rating. </p>
-
-				</section> 
-			</section>
-				
-				<section>
-					<h3>Methods structure</h3>
-					<figure id="method_screenshot" aria-labelledby="method_screenshot_description" class="figure-float screenshot">
-						<img src="img/method.png" />
-							<figcaption>Screenshot of a Method for Structured Content</figcaption>
-					</figure>
-					<p>Each outcome has one or more <a href="#methods-structure">methods</a>. There are three types of methods:</p>
-					<ul>					
-						<li><strong>All</strong> - Methods that apply across all technologies. </li>
-						<li><strong>Technology specific</strong> - Methods that apply to one of a predetermined list of technologies such as HTML, PDF, or VR. </li>
-						<li><strong>Fallback</strong> - Methods that apply to emerging or proprietary technology and for technology that does not yet have a method written</li>
-					</ul>
-					<p>When technology specific methods are provided, the outcomes will also include one or more fallback methods.</p>
-					
-					<p id="method_screenshot_description">The methods include detailed information on how to meet the outcome, code samples, working examples, resources, as well as information about testing and scoring the method.</p>
-					
-					<p class="example">Example: Semantic headings (HTML)</p>
-					<p class="note">While WCAG 3 Methods have some similarity with WCAG 2 Techniques, they are not the same and are not interchangeable.</p>
-					
-					<section>
-						<h4>Description</h4>
-						<p>Each method includes a detailed technical description of the method with instructions on how the method works that do not depend on examples.  If there are dependencies between methods, these are also listed here.  Dependencies between methods will be a rare situation.</p> 
-					</section>
-					<section>
-						<h4>Examples</h4>
-						<p>Each method also includes working code samples and detailed examples.  </p>
-					</section>
-					<section>
-				
-						<h4>Tests</h4>
-						<p>Tests provide ways to check that methods and techniques have been followed. Tests include step-by-step instructions on evaluating the method based on the technology being used. Tests may vary by technology as needed.</p>
-						<p> Tests specify the unit being tested and the approach to scoring for that test. </p>
-					</section>
-					<section>
-						<h4>Test Scoring</h4>
-						<p>Each method includes information on how to score individual instances of the test. The testing results for methods inform the rating of the related outcome.</p>
-				
-					</section>
-				</section>
-			</section>
-
-		<section class="informative">
-			<h4>Additional Documentation and Scoring Information</h4>
 		
-			<details class="summary">
-				<summary>Summary</summary>
-				<ul>
-					<li><strong>How-to information:</strong> advice written in plain language, including information on how to get started with accessibility.</li>
-					<li><strong>Functional needs:</strong> how to solve the access problems that people face.</li>
-					<li><strong>Functional categories:</strong> groups of disability types.</li>
-					<li><strong>Conformance levels:</strong> scoring your project’s accessibility. There are three levels for your project’s final score: bronze, silver, or gold. Scoring is not required.</li>
-				</ul>
-				<p>Some of these sections are in this document. You can find others in links within the sections.</p>
-			</details>
 
-		<p>The core structure has inter-relationships with supporting documents and the scoring process. <span id="guidelines--full-structure-description"> Functional needs inform both outcomes and functional categories. The tests within methods are used to inform the scores for each outcome. Then outcome scores are aggregated to create scores by functional category and an overall score. These then result in a bronze rating.  Silver and gold ratings build on the bronze rating to demonstrate improved accessibility. General information about guidelines is available in How To documents. </span></p>
-			<figure id="guidelines-full-structure-diagram" aria-labelledby="guidelines--full-structure-description" class="figure-full">
-				<img src="img/structure-scoring.svg" />
-				<figcaption>Documentation and Scoring Structure</figcaption>
-			</figure>
-				<section>
-					<h3>How tos</h3>
-					<p>The <a>How-To</a> content provides explanatory material for each guideline that applies across technologies. This guidance explains how to apply the concepts presented in the guidelines for non-technical readers. This plain language resource includes information on getting started, who the guideline helps and how, as well information for project managers, designers and developers.  </p>
-					<figure id="howTo_screenshot" aria-labelledby="howTo_screenshot_description" class="figure-float screenshot">
-						<img src="img/how-to.png" />
-							<figcaption>Example screenshot of a How-To for Structured Content</figcaption>
-					</figure>
-					<p id="howTo_screenshot_description">The example of a How-To for Structured Content provides basic information organized by tabs to help people get started with accessibility for structured content, plan for implementing accessible structured content across a project, design accessible structured content, and basics for developers new to accessibility of structured content. It also includes information on examples, the outcomes for meeting the guideline, and resources.</p>
-				</section>
-			<section>
-				<h3>Functional needs</h3>
-				<p>The development of WCAG 3 guidelines starts with <a>functional needs</a>. A functional need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional needs are applied to specific topics (for example: contrast, forms, readability, and more) to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a href="#outcomes">outcomes</a>, which state the conditions to test whether the functional needs have been met. Functional needs are documented in the how-tos, supplementary material accompanying the guidelines.</p>
-				<p class="example">Example: Use without vision.</p>
-				<p class="ednote">The work of cataloging functional needs is still in process and will continue after the First Public Working Draft.  Those interested can see more information in the draft <a href="https://www.w3.org/WAI/GL/WCAG3/2020/functional-needs/">Functional Needs</a>.</p>
-			</section>
-			<section>
-				<h3>Functional categories</h3>
-				<p>Functional categories of disabilities group the functional needs of users with disabilities. Functional categories are used when reporting test results in the optional conformance claim.</p>
-				<p>Functional categories are similar to functional performance criterial in <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria">Section 508</a> [[508-criteria]] and functional performance statements in <a href="https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf">en 301 549</a> [[en-301-549]]. The current list of functional categories is: </p>
-				<ul>
-					<li>Vision and Visual</li>
-					<li>Hearing and Auditory</li>
-					<li>Sensory Intersections</li>
-					<li>Mobility </li>
-					<li>Motor</li>
-					<li>Physical and Sensory Intersections</li>
-					<li>Speech</li>
-					<li>Attention</li>
-					<li>Language and Literacy</li>
-					<li>Learning</li>
-					<li>Memory</li>
-					<li>Executive</li>
-					<li>Mental Health</li>
-					<li>Cognitive and Sensory Intersections</li>
-				</ul>
-				<p class="ednote">The list of functional categories is a draft.  Creating meaningful groupings is still a work in progress and currently evolving along with the work on cataloging functional needs. This work will continue after the First Public Working Draft.  Those interested can see more information in the document <a href="https://www.w3.org/WAI/GL/WCAG3/2020/functional-needs/">DRAFT Functional Needs</a>.</p>
-			</section>
-
-			<section>
-				<h3>Conformance Levels</h3>
-				<p>WCAG 3 has an optional scoring system that can better inform organizations on the quality of their accessibility effort. The optional conformance levels provide a way for organizations to report their conformance in simple manner. The bronze level is based on the score in each functional category and the overall score. Silver and gold levels require conforming at the bronze level plus additional improved usability for people with disabilities.</p>
-				<p class="ednote">This first draft focuses on bronze level. Future drafts will have more information on silver and gold levels. We expect that bronze will be similar to WCAG 2 AA, while silver and gold will include more usability-type testing. This is still under development. WCAG 2.X AAA success criteria are generally included in WCAG 3. The design of the scoring model awards more points for implementing the outcomes that come from WCAG 2.X AAA.</p> 
-			</section>
-
-		</section>
 		<section>
 			<h2>Normative requirements</h2>
 			<details class="summary">
@@ -241,122 +79,8 @@
 			<p>The key words <em class="rfc2119" title="MAY">MAY</em>, <em class="rfc2119" title="MUST">MUST</em>, <em class="rfc2119" title="MUST NOT">MUST NOT</em>, <em class="rfc2119" title="NOT RECOMMENDED">NOT RECOMMENDED</em>, <em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em>, <em class="rfc2119" title="SHOULD">SHOULD</em>, and <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> are to be interpreted as described in [[RFC2119]].</p>
 			<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, critical errors, and outcome ratings.</p>
 		</section>
-		<section>
-			<h2>Testing</h2>
-			<details class="summary">
-				<summary>What types of tests are used?</summary>
-				<p>WCAG 3.0 includes two types of tests:</p>
-					<ul><li><strong>Atomic tests:</strong> simple tests (usually of the code), like the way we test today. You use these tests to reach the bronze level.</li>
-					<li><strong>Holistic tests:</strong> usability tests and manual tests with hardware and software used by people with disabilities (assistive technologies). You use these tests to reach the silver or gold level.</li></ul>
-					<p>Some content will meet outcomes if it passes atomic tests, but that content still might not be usable by all people with disabilities. Holistic tests can help you fix that.</p>
-
-			</details>
-			
-			<p class="ednote">The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using holistic tests, sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
-			
-				<p>WCAG 3.0 tests and scores <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to objectively determine if the content they are evaluating satisfies the criteria.</p> 
-				<p>Testing outcomes uses both <a>views</a> and <a>processes</a> to define what is being tested. Views include all content visually and programmatically available without a substantive change. Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated views need to be included in the test.</p>
-			<section>
-					<h3>Views</h3>
-					<p>A view is a single interaction with content. Conceptually, it corresponds to the definition of a <q>web page</q> as used in WCAG 2.X, but is not restricted to content meeting that definition. Each change of content as understood by the user comprises a new view.</p>
-				</section>
-				<section>
-					<h3>Processes</h3>
-					<p>A process is a complete activity the user performs. Example tasks include:</p>
-					<ul>
-						<li>Logging into a site and being recognized as an authenticated user;</li>
-						<li>Ordering an item, in which case the process includes the entire set of tasks from searching for the item, adding it to the shopping cart, paying for it, and receiving confirmation;</li>
-						<li>Submitting tax information, from start to end of the process; and</li>
-						<li>Interacting with other users in a virtual reality environment.</li>
-					</ul>
-					<p>A process is comprised of one or more <a href="#views">views</a>.</p>
-				</section>
-
-				<section>
-				<h3>Types of tests</h3>
-								
-				<p>WCAG 3.0 includes two types of tests: <a href="#atomic-tests">atomic tests</a> and <a href="#holistic-tests">holistic tests</a>. Testing the outcomes using the atomic tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>. <!--The content should be tested by those who understand how people with different types of disabilities use the technology being tested.--></p>
-				
-				<p>Although content may satisfy all outcomes using the atomic tests, the content may not always be usable by people with a wide variety of disabilities. The holistic tests address this gap by evaluating more of the user experience than atomic testing.</p>
-				<p class="ednote">We are looking for more appropriate terms to distinguish between these two types of tests and welcome suggestions</p> 
-					<section>
-						<h4>Atomic tests</h4>
-						<p>Atomic tests evaluate content, often at an <a>object</a> level, for accessibility. Atomic tests include the existing tests that support A, AA, and AAA <a>success criteria</a> in WCAG 2.X. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.X structure. In WCAG 3.0, atomic tests are used to test both processes and views. Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the atomic tests are used to reach a <a href="#bronze">Bronze</a> rating.</p>
-						<p>Atomic tests may be <a>automated</a> or <a>manual</a>. <a>Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
-					</section>
-					<section>
-						<h4>Holistic tests</h4>
-						<p>Holistic tests include assistive technology testing, user-centered design methods, and both user and expert usability testing. Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected. Successful results of holistic tests are used to reach a <a href="#silver">silver</a> or <a href="#gold">gold</a> rating.</p>
-						<p class="ednote">Future drafts will further explore holistic tests and provide examples as well as detail how to apply them.</p>
-					</section>
-
-				</section>
-				<section>
-				<h3>Technology specific testing</h3>				
-				<p>Each outcome includes <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
-				</section>
-				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
-			</section>
-	
-			<section>
-				<h2>Scoring</h2>
-
-				<details class="summary">
-					<summary>How are tests scored?</summary>
-					<p>Besides true/false scoring methods, we’ve included testing options for new guidance, such as rating scales.</p>
-					<p>Each outcome has a section that shows how it is scored.</p>
-				</details>
-				
-				<p class="ednote">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a>rubrics</a> and <a>scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p>
-				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>	
-				<section>
-				<h3>Scoring atomic tests</h3>
-				<p>In most cases, testing individual <a>objects</a> will result in binary, pass / fail outcome for each element. This leads to either a pass / fail or a percentage rating depending on the test. A rating scale may be provided for some tests to allow the tester to assign a quality judgement of an element or block of content. Whether scoring is binary (pass/fail) or uses rating scales, will depend on the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. Each of these results can then be assigned a percentage or averaged to inform the overall score of an outcome.</p>
-					<p>Test results for views:</p>
-					<ul>
-						<li>Tests that results in a pass or fail condition will be assigned a 100% or 0%;</li>
-						<li>Tests at the element level that can be consistently counted will be assigned a percentage (number passed / total number of instances);</li>
-						<li>Tests that apply to content without clear boundaries will be scored using a <a>rating scale</a>. The rating scales may vary based on the test and may be presented as numeric scale, an <a>adjectival rating</a> or a <a>rubric</a>. Each of these can be converted into a percentage to make it easier to compare across tests.</li>
-					</ul>
-				<p>In addition, <a>critical errors</a> within selected processes will be identified and totaled. Any critical errors will result in score of very poor (0).</p>
-				</section>
-
-				<section>
-				<h3>Scoring outcomes</h3>
-				<p>The results from the atomic tests are aggregated across views and used along with the number of critical errors to assign an <a>adjectival rating</a> to the outcome. Testers will then use the guidance provided in the outcome along with reasonable judgement of the context that the errors occur in to assign an accessibility score of the outcome.</p>
-					<div class="example">
-						<p>Potential thresholds for adjectival ratings of test results:</p>
-					<dl>
-					<dt>Very Poor (0)</dt>
-					<dd>Any critical errors or less than 50% of related tests pass</dd>
-					<dt>Poor (1)</dt>
-					<dd>No critical errors, <abbr title="approximately">approx.</abbr> 50% to 79% of related tests pass</dd>
-					<dt>Fair (2)</dt>
-						<dd>No critical errors, approx. 80% to 89% of related tests pass</dd>
-					<dt>Good (3)</dt>
-						<dd>No critical errors, approx. 90% to 98% of related tests pass</dd>
-					<dt>Excellent (4)</dt>
-						<dd>No critical errors, approx. 99% to 100% of related tests pass</dd>
-				</dl>
-						<div class="note"><p>The thresholds are different for different outcomes.</p>
-				<p>These thresholds are still being tested and adjusted. These are included as examples to gather feedback on this scoring approach.</p>
-			</div>
-					</div>
-				</section>
-				
-				<section>
-				<h3>Overall scores</h3>
-				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a href="#functional-categories">functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
-				
-				<p class="ednote">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number would likely shift as we continue testing.  We invite comment on these options as well as suggestions for an alternative solution.</p>
-				</section>
-
-				<section>
-				<h3>Scoring holistic tests</h3>			
-				<p>The points from <a href="#holistic-tests">holistic tests</a> do not affect the scores of <a href="#atomic-tests">atomic tests</a>. Rather a minimum number of holistic tests will need to be met in order to reach a <a href="#silver">silver</a> rating and additional holistic tests will be needed to reach a <a href="#gold">Gold</a> rating. Getting a silver or gold rating requires a Bronze rating.</p>
-				<p class="ednote">We continue to work on the scoring of holistic tests and will provide more details in a future iteration of this document.</p>
-				</section>
-		</section>
+		
+		
 		<section>
 			<h2>Guidelines</h2>
 				<details class="summary">
@@ -945,6 +669,118 @@
 				-->
 			</section>
 		</section>
+		<section>
+			<h2>Testing</h2>
+			<details class="summary">
+				<summary>What types of tests are used?</summary>
+				<p>WCAG 3.0 includes two types of tests:</p>
+					<ul><li><strong>Atomic tests:</strong> simple tests (usually of the code), like the way we test today. You use these tests to reach the bronze level.</li>
+					<li><strong>Holistic tests:</strong> usability tests and manual tests with hardware and software used by people with disabilities (assistive technologies). You use these tests to reach the silver or gold level.</li></ul>
+					<p>Some content will meet outcomes if it passes atomic tests, but that content still might not be usable by all people with disabilities. Holistic tests can help you fix that.</p>
+
+			</details>
+			
+			<p class="ednote">The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using holistic tests, sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
+			
+				<p>WCAG 3.0 tests and scores <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to objectively determine if the content they are evaluating satisfies the criteria.</p> 
+				<p>Testing outcomes uses both <a>views</a> and <a>processes</a> to define what is being tested. Views include all content visually and programmatically available without a substantive change. Conceptually, it corresponds to the definition of a <q>web page</q> as used in WCAG 2.X, but is not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
+				</p>
+				<p>
+				Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated <a href="#views">views</a> need to be included in the test. A process is a subset of a view or a group of views.  It includes only the sections of the view needed to accomplish the activity or task.</p>
+				<p>Examples of a process include:</p>
+					<ul>
+						<li>Logging into a site and being recognized as an authenticated user;</li>
+						<li>Ordering an item, in which case the process includes the entire set of tasks from searching for the item, adding it to the shopping cart, paying for it, and receiving confirmation;</li>
+						<li>Submitting tax information, from start to end of the process; and</li>
+						<li>Interacting with other users in a virtual reality environment.</li>
+					</ul>
+					<p>A process is comprised of one or more <a href="#views">views</a>.</p>
+				<section>
+				<h3>Types of tests</h3>
+								
+				<p>WCAG 3.0 includes two types of tests: <a href="#atomic-tests">atomic tests</a> and <a href="#holistic-tests">holistic tests</a>. Testing the outcomes using the atomic tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>. <!--The content should be tested by those who understand how people with different types of disabilities use the technology being tested.--></p>
+				
+				<p>Although content may satisfy all outcomes using the atomic tests, the content may not always be usable by people with a wide variety of disabilities. The holistic tests address this gap by evaluating more of the user experience than atomic testing.</p>
+				<p class="ednote">We are looking for more appropriate terms to distinguish between these two types of tests and welcome suggestions</p> 
+					<section>
+						<h4>Atomic tests</h4>
+						<p>Atomic tests evaluate content, often at an <a>object</a> level, for accessibility. Atomic tests include the existing tests that support A, AA, and AAA <a>success criteria</a> in WCAG 2.X. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.X structure. In WCAG 3.0, atomic tests are used to test both processes and views. Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the atomic tests are used to reach a <a href="#bronze">Bronze</a> rating.</p>
+						<p>Atomic tests may be <a>automated</a> or <a>manual</a>. <a>Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
+					</section>
+					<section>
+						<h4>Holistic tests</h4>
+						<p>Holistic tests include assistive technology testing, user-centered design methods, and both user and expert usability testing. Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected. Successful results of holistic tests are used to reach a <a href="#silver">silver</a> or <a href="#gold">gold</a> rating.</p>
+						<p class="ednote">Future drafts will further explore holistic tests and provide examples as well as detail how to apply them.</p>
+					</section>
+
+				</section>
+				<section>
+				<h3>Technology specific testing</h3>				
+				<p>Each outcome includes <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
+				</section>
+				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
+			</section>
+	
+			<section>
+				<h2>Scoring</h2>
+
+				<details class="summary">
+					<summary>How are tests scored?</summary>
+					<p>Besides true/false scoring methods, we’ve included testing options for new guidance, such as rating scales.</p>
+					<p>Each outcome has a section that shows how it is scored.</p>
+				</details>
+				
+				<p class="ednote">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a>rubrics</a> and <a>scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p>
+				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>	
+				<section>
+				<h3>Scoring atomic tests</h3>
+				<p>In most cases, testing individual <a>objects</a> will result in binary, pass / fail outcome for each element. This leads to either a pass / fail or a percentage rating depending on the test. A rating scale may be provided for some tests to allow the tester to assign a quality judgement of an element or block of content. Whether scoring is binary (pass/fail) or uses rating scales, will depend on the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. Each of these results can then be assigned a percentage or averaged to inform the overall score of an outcome.</p>
+					<p>Test results for views:</p>
+					<ul>
+						<li>Tests that results in a pass or fail condition will be assigned a 100% or 0%;</li>
+						<li>Tests at the element level that can be consistently counted will be assigned a percentage (number passed / total number of instances);</li>
+						<li>Tests that apply to content without clear boundaries will be scored using a <a>rating scale</a>. The rating scales may vary based on the test and may be presented as numeric scale, an <a>adjectival rating</a> or a <a>rubric</a>. Each of these can be converted into a percentage to make it easier to compare across tests.</li>
+					</ul>
+				<p>In addition, <a>critical errors</a> within selected processes will be identified and totaled. Any critical errors will result in score of very poor (0).</p>
+				</section>
+
+				<section>
+				<h3>Scoring outcomes</h3>
+				<p>The results from the atomic tests are aggregated across views and used along with the number of critical errors to assign an <a>adjectival rating</a> to the outcome. Testers will then use the guidance provided in the outcome along with reasonable judgement of the context that the errors occur in to assign an accessibility score of the outcome.</p>
+					<div class="example">
+						<p>Potential thresholds for adjectival ratings of test results:</p>
+					<dl>
+					<dt>Very Poor (0)</dt>
+					<dd>Any critical errors or less than 50% of related tests pass</dd>
+					<dt>Poor (1)</dt>
+					<dd>No critical errors, <abbr title="approximately">approx.</abbr> 50% to 79% of related tests pass</dd>
+					<dt>Fair (2)</dt>
+						<dd>No critical errors, approx. 80% to 89% of related tests pass</dd>
+					<dt>Good (3)</dt>
+						<dd>No critical errors, approx. 90% to 98% of related tests pass</dd>
+					<dt>Excellent (4)</dt>
+						<dd>No critical errors, approx. 99% to 100% of related tests pass</dd>
+				</dl>
+						<div class="note"><p>The thresholds are different for different outcomes.</p>
+				<p>These thresholds are still being tested and adjusted. These are included as examples to gather feedback on this scoring approach.</p>
+			</div>
+					</div>
+				</section>
+				
+				<section>
+				<h3>Overall scores</h3>
+				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a href="#functional-categories">functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
+				
+				<p class="ednote">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number would likely shift as we continue testing.  We invite comment on these options as well as suggestions for an alternative solution.</p>
+				</section>
+
+				<section>
+				<h3>Scoring holistic tests</h3>			
+				<p>The points from <a href="#holistic-tests">holistic tests</a> do not affect the scores of <a href="#atomic-tests">atomic tests</a>. Rather a minimum number of holistic tests will need to be met in order to reach a <a href="#silver">silver</a> rating and additional holistic tests will be needed to reach a <a href="#gold">Gold</a> rating. Getting a silver or gold rating requires a Bronze rating.</p>
+				<p class="ednote">We continue to work on the scoring of holistic tests and will provide more details in a future iteration of this document.</p>
+				</section>
+		</section>
+		
 		<section>
 			<h2>Conformance</h2>
 			<details class="summary">
