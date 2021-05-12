@@ -12,16 +12,16 @@ var respecConfig = {
 	//publishDate:          "2013-08-22",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "wcag-3.0",
+	shortName: "wcag-3.0-explainer",
 	
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
 	copyrightStart: "2021",
-	license: "document",
+	license: "w3c-software-doc",
 	
 	// if there a publicly available Editors Draft, this is the link
-	edDraftURI: "https://w3c.github.io/silver/guidelines/",
+	edDraftURI: "https://w3c.github.io/silver/explainer/",
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
