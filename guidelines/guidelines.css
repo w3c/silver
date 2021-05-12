@@ -40,6 +40,21 @@ details:focus summary::before, details:hover summary::before, .guideline:focus h
 .howto-link, .outcome-link {
 	font-style: italic;
 }
+.howto-link::before, .outcome-link::before, .method-link::before {
+	display: inline-block;
+	width: 2ex;
+	margin-right: .25em;
+	vertical-align: text-top;
+}
+.howto-link::before {
+	content: url(img/how-to.svg);
+}
+.outcome-link::before {
+	content: url(img/outcome.svg);
+}
+.method-link::before {
+	content: url(img/method.svg);
+}
 a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
 	cursor: help;
 }
