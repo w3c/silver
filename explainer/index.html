@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.8.2">
+<meta name="generator" content="ReSpec 26.8.3">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -134,7 +134,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "url": "mailto:jspellman@spellmanconsulting.com"
     },
     {
-      "name": "Rachael Montgomery",
+      "name": "Rachael Bradley Montgomery",
       "mailto": "rachael@accessiblecommunity.org",
       "company": "Invited Expert",
       "w3cid": 90310,
@@ -179,9 +179,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "en-301-549"
     }
   },
-  "publishDate": "2021-05-24",
-  "publishISODate": "2021-05-24T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 24 May 2021"
+  "publishDate": "2021-05-27",
+  "publishISODate": "2021-05-27T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 27 May 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
   <body class="h-entry informative"><div class="head">
@@ -189,7 +189,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-05-24">24 May 2021</time>
+      <time class="dt-published" datetime="2021-05-27">27 May 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -207,7 +207,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <dd class="editor p-author h-card vcard" data-editor-id="42417">
     <a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (<span class="p-org org h-org">TetraLogical</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="90310">
-    <a class="ed_mailto u-email email p-name" href="mailto:rachael@accessiblecommunity.org">Rachael Montgomery</a> (<span class="p-org org h-org">Invited Expert</span>)
+    <a class="ed_mailto u-email email p-name" href="mailto:rachael@accessiblecommunity.org">Rachael Bradley Montgomery</a> (<span class="p-org org h-org">Invited Expert</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="90646">
     <a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (<span class="p-org org h-org">Google, Inc.</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="34017">
@@ -254,7 +254,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p>
       <p>
-        This is a first draft of the Explainer.  It is not normative and is not expected to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.  It provides background on <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0. 
+        This is a first draft of the Explainer.  It is not normative (informative) and is not expected to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.  It provides background on <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0. 
       </p>
     <p>
     This document was published by the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as an
@@ -298,7 +298,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2>
       <p><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0  is a successor to Web Content Accessibility Guidelines 2.2 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag22" title="Web Content Accessibility Guidelines (WCAG) 2.2">WCAG22</a></cite>] and previous versions, but does not deprecate WCAG 2.X. It will also incorporate content from and partially extend User Agent Accessibility Guidelines 2.0 [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] and Authoring Tool Accessibility Guidelines 2.0 [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>]. These earlier versions provided a flexible model that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities have led to the need for a new model to address content accessibility more comprehensively and flexibly. WCAG 3.0 originally had a project name of "Silver", so the original groups working on it and much of the early design work carries that project name.
 	  </p>
-	  <p>One of the goals of <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 is that it will be written using plain language as much as possible so that people who are not technical can still understand it, and so WCAG 3.0 can be more easily translated into other languages. When it is finished, WCAG 3.0 will have many ways for making the web and other digital content (like video or mobile apps) more accessible to people with disabilities.   
+	  <p>One of the goals of <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 is that it will be written using plain language as much as possible so that people who are not technical can still understand it, and so WCAG 3.0 can be more easily translated into other languages. When it is published, WCAG 3.0 will have many ways for making the web and other digital content (like video or mobile apps) more accessible to people with disabilities.   
 	  </p>
 	  <p>This Explainer includes background information on the development of WCAG 3.0, its goals and research.  It also provides additional explanation of structure and differences from the current WCAG 2 guidelines to make it easier for people to understand.  
 	</p></section>
@@ -324,7 +324,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<li>support disability needs that cannot be tested by true/false success criteria; and</li>
 					<li>facilitate maintenance to keep the guidelines more current.</li>
 				</ul>
-				<p>The goal of WCAG 3.0 is to provide information that can be used to improve the accessibility of products on a variety of platforms. WCAG 3.0 uses a model that allows it to address more disability needs than WCAG 2.X, as well as address publishing requirements and emerging technologies such as web XR (augmented, virtual and mixed reality) and voice input. It will also provide non-<a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-normative">normative</a> information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. The WCAG 3.0 model is designed to support better coverage across disabilities and be easier to maintain, so that the new model will be more enduring over time as technologies evolve.</p>
+				<p>The goal of WCAG 3.0 is to provide information that can be used to improve the accessibility of products on a variety of platforms. WCAG 3.0 uses a model that allows it to address more disability needs than WCAG 2.X, as well as address publishing requirements and emerging technologies such as web XR (augmented, virtual and mixed reality) and voice input. It will also provide non-<a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-normative">normative</a> (informative) information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. The WCAG 3.0 model is designed to support better coverage across disabilities and be easier to maintain, so that the new model will be more enduring over time as technologies evolve.</p>
 				<p>For further introduction to WCAG 3, see the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3 Introduction</a>.</p>
 				<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class=""><abbr title="World Wide Web Consortium">W3C</abbr> strives to be as inclusive as possible, and has actively sought participation and input from a broad range of stakeholder groups. We recognize, however, that there is always room for improvement in practices to support inclusion and representation. As you evaluate this document, please consider whether there are ways the Working Group can better support your review, feedback, or inclusion within the process of creating this standard. We welcome feedback on this question as part of your comments.</p></div>
 		</section>
@@ -400,7 +400,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<p>Some of these sections are in this document. You can find others in links within the sections.</p>
 			<p class="summaryEnd">End of summary for <q>Structure of these guidelines</q></p></details>
 			<figure id="guidelines-structure-diagram" aria-labelledby="guidelines-structure-description" class="figure-float">
-				<img src="../guidelines/img/structure-core.svg">
+				<img src="../guidelines/img/structure-core.svg" height="150" width="58">
 				<figcaption>Figure <bdi class="figno">1</bdi> <span class="fig-title">Core Structure</span></figcaption>
 			</figure>
 			<p><a href="#guidelines-structure-diagram">Figure 1</a> shows <span id="guidelines-structure-description">the core structure of WCAG 3.0. WCAG 3.0 has three levels of content with associated documentation. Guidelines form the top level. Each guideline contains multiple outcomes, with associated critical errors and outcomes scoring. Each outcome contains multiple methods, with an associated description and examples, tests, and test scoring.</span></p>
@@ -438,7 +438,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<section id="methods-structure">
 					<h4 id="x5-1-3-methods-structure"><bdi class="secno">5.1.3 </bdi>Methods structure<a class="self-link" aria-label="§" href="#methods-structure"></a></h4>
 					<figure id="method_screenshot" aria-labelledby="method_screenshot_description" class="figure-float screenshot">
-						<img src="../guidelines/img/method.png">
+						<img src="../guidelines/img/method.png" height="600" width="800">
 							<figcaption>Figure <bdi class="figno">2</bdi> <span class="fig-title">Screenshot of a Method for Structured Content</span></figcaption>
 					</figure>
 					<p>Each outcome has one or more <a href="#methods-structure">methods</a>. There are three types of methods:</p>
@@ -512,7 +512,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			<section id="functional-categories">
 				<h4 id="x5-2-3-functional-categories"><bdi class="secno">5.2.3 </bdi>Functional categories<a class="self-link" aria-label="§" href="#functional-categories"></a></h4>
 				<p>Functional categories of disabilities group the functional needs of users with disabilities. Functional categories are used when reporting test results in the optional conformance claim.</p>
-				<p>Functional categories are similar to functional performance criterial in <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria">Section 508</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-508-criteria" title="Section 508 Functional Performance Criteria">508-criteria</a></cite>] and functional performance statements in <a href="https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf">en 301 549</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-en-301-549" title="Accessibility requirements suitable for public procurement of ICT products and services in Europe">en-301-549</a></cite>]. The current list of functional categories is: </p>
+				<p>Functional categories are similar to functional performance criteria in <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria">Section 508</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-508-criteria" title="Section 508 Functional Performance Criteria">508-criteria</a></cite>] and functional performance statements in <a href="https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf">en 301 549</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-en-301-549" title="Accessibility requirements suitable for public procurement of ICT products and services in Europe">en-301-549</a></cite>]. The current list of functional categories is: </p>
 				<ul>
 					<li>Vision and Visual</li>
 					<li>Hearing and Auditory</li>
@@ -535,18 +535,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			<section id="conformance-levels">
 				<h4 id="x5-2-4-conformance-levels"><bdi class="secno">5.2.4 </bdi>Conformance Levels<a class="self-link" aria-label="§" href="#conformance-levels"></a></h4>
 				<p>WCAG 3 has an optional scoring system that can better inform organizations on the quality of their accessibility effort. The optional conformance levels provide a way for organizations to report their conformance in simple manner. The bronze level is based on the score in each functional category and the overall score. Silver and gold levels require conforming at the bronze level plus additional improved usability for people with disabilities.</p>
-				<div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="5"><span>Editor's note</span></div><p class="">This first draft focuses on bronze level. Future drafts will have more information on silver and gold levels. We expect that bronze will be similar to WCAG 2 AA, while silver and gold will include more usability-type testing. This is still under development. WCAG 2.X AAA success criteria are generally included in WCAG 3. The design of the scoring model awards more points for implementing the outcomes that come from WCAG 2.X AAA.</p></div> 
+				<div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="5"><span>Editor's note</span></div><p class="">This first draft focuses on bronze level. Future drafts will have more information on silver and gold levels. Bronze level will be similar to WCAG 2 AA, while silver and gold will include more usability-type testing. This is still under development. WCAG 2.X AAA success criteria are generally included in WCAG 3. The design of the scoring model awards more points for implementing the outcomes that come from WCAG 2.X AAA.</p></div> 
 			</section>
 
 		</section>
 <section id="how-conformance-fits-into-the-information-architecture">
 <h3 id="x5-3-how-conformance-fits-into-the-information-architecture"><bdi class="secno">5.3 </bdi>How Conformance Fits into the Information Architecture<a class="self-link" aria-label="§" href="#how-conformance-fits-into-the-information-architecture"></a></h3>
-<p><strong>We aren’t losing content, we are restructuring</strong></p>
 <ul>
 <li><strong>Guidelines</strong> are general information and intent written in plain language. </li>
-<li><strong>Methods</strong> are specific examples, instructions, and tests with more technical information.</li>
-<li>We will add a <strong>tagging engine</strong> to make it easier for people to find information by tags.</li>
-<li>We want organizations to be able to use an API to copy the guideline data to use for their own purposes.</li>
+<li><strong>Outcomes</strong> are testable statements in plain language. 
+</li><li><strong>Methods</strong> are specific examples, instructions, and tests with more technical information.</li>
+<li>Future enhancements include a <strong>tagging engine</strong> to make it easier for people to find information by tags.</li>
+<li>Many organizations need an API to copy the guideline data to use for their own purposes.</li>
 <li>Guidelines will include: 
 	<ul>
 		<li>updated WCAG 2.1 guidance (technology-specific success criteria will become Methods)
@@ -670,7 +670,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   
 <section id="references" class="appendix"><h2 id="a-references"><bdi class="secno">A. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
     <h3 id="a-1-informative-references"><bdi class="secno">A.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-    <dl class="bibliography"><dt id="bib-508-criteria">[508-criteria]</dt><dd><a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria"><cite>Section 508 Functional Performance Criteria</cite></a>.  United States Access Board. 8 December 2011. URL: <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria">https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria</a></dd><dt id="bib-appmanifest">[appmanifest]</dt><dd><a href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>. Marcos Caceres; Kenneth Christiansen; Mounir Lamouri; Anssi Kostiainen; Matt Giuca; Aaron Gustafson.  W3C. 7 April 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/appmanifest/">https://www.w3.org/TR/appmanifest/</a></dd><dt id="bib-atag20">[ATAG20]</dt><dd><a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a></dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf"><cite>Accessibility requirements suitable for public procurement of ICT products and services in Europe</cite></a>.  European Telecommunications Standards Institute. February 2014. URL: <a href="https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf">https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf</a></dd><dt id="bib-uaag20">[UAAG20]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wai-aria">[wai-aria]</dt><dd><a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al.  W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a></dd><dt id="bib-wcag22">[WCAG22]</dt><dd><a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Charles Adams; Alastair Campbell; Rachael Bradley Montgomery; Michael Cooper; Andrew Kirkpatrick.  W3C. 21 May 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a></dd></dl>
+    <dl class="bibliography"><dt id="bib-508-criteria">[508-criteria]</dt><dd><a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria"><cite>Section 508 Functional Performance Criteria</cite></a>.  United States Access Board. 8 December 2011. URL: <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria">https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria</a></dd><dt id="bib-appmanifest">[appmanifest]</dt><dd><a href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>. Marcos Caceres; Kenneth Christiansen; Mounir Lamouri; Anssi Kostiainen; Matt Giuca; Aaron Gustafson.  W3C. 26 May 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/appmanifest/">https://www.w3.org/TR/appmanifest/</a></dd><dt id="bib-atag20">[ATAG20]</dt><dd><a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a></dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf"><cite>Accessibility requirements suitable for public procurement of ICT products and services in Europe</cite></a>.  European Telecommunications Standards Institute. February 2014. URL: <a href="https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf">https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf</a></dd><dt id="bib-uaag20">[UAAG20]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wai-aria">[wai-aria]</dt><dd><a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al.  W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a></dd><dt id="bib-wcag22">[WCAG22]</dt><dd><a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Charles Adams; Alastair Campbell; Rachael Bradley Montgomery; Michael Cooper; Andrew Kirkpatrick.  W3C. 21 May 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script id="respec-dfn-panel">(() => {
