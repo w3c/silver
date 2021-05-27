@@ -11,7 +11,7 @@
 	<body>
 		<section id="abstract">
 			<p>The W3C Accessibility Guidelines (WCAG) 3.0 provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
-			<p>Each <a href="#guidelines-structure">guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#outcomes">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#methods-structure">methods</a> to meet each outcome. </p>
+			<p>Each <a>guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a>outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a>methods</a> to meet each outcome. </p>
 			<p>This specification is expected to be updated regularly to keep pace with changing technology by updating and adding methods, outcomes, and guidelines to address new needs as technologies evolve. For entities that make formal claims of <a>conformance</a> to these guidelines, several levels of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
 			<p>W3C Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> these versions. WCAG 3.0 will  incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. 
 			While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3.0 includes additional tests and different scoring mechanisms. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative set of guidelines. Once these guidelines become a W3C Recommendation, the W3C will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts. However, content that conforms to earlier versions of WCAG continue to conform to those versions.</p>
@@ -766,7 +766,7 @@
 				<p>Testing outcomes uses both <a>views</a> and <a>processes</a> to define what is being tested. Views include all content visually and programmatically available without a substantive change. Conceptually, it corresponds to the definition of a <q>web page</q> as used in WCAG 2.X, but is not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
 				</p>
 				<p>
-				Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated <a href="#views">views</a> need to be included in the test. A process is a subset of a view or a group of views.  It includes only the sections of the view needed to accomplish the activity or task.</p>
+				Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated <a>views</a> need to be included in the test. A process is a subset of a view or a group of views.  It includes only the sections of the view needed to accomplish the activity or task.</p>
 				<p>Examples of a process include:</p>
 					<ul>
 						<li>Logging into a site and being recognized as an authenticated user;</li>
@@ -774,7 +774,7 @@
 						<li>Submitting tax information, from start to end of the process; and</li>
 						<li>Interacting with other users in a virtual reality environment.</li>
 					</ul>
-					<p>A process is comprised of one or more <a href="#views">views</a>.</p>
+					<p>A process is comprised of one or more <a>views</a>.</p>
 				<section>
 				<h3>Types of tests</h3>
 								
@@ -796,7 +796,7 @@
 				</section>
 				<section>
 				<h3>Technology specific testing</h3>				
-				<p>Each outcome includes <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
+				<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
 				</section>
 				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 			</section>
@@ -811,7 +811,7 @@
 				</details>
 				
 				<p class="ednote">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a>rubrics</a> and <a>scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p>
-				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods-structure">methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>	
+				<p>Each <a>outcome</a> has <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>	
 				<section>
 				<h3>Scoring atomic tests</h3>
 				<p>In most cases, testing individual <a>objects</a> will result in binary, pass / fail outcome for each element. This leads to either a pass / fail or a percentage rating depending on the test. A rating scale may be provided for some tests to allow the tester to assign a quality judgement of an element or block of content. Whether scoring is binary (pass/fail) or uses rating scales, will depend on the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. Each of these results can then be assigned a percentage or averaged to inform the overall score of an outcome.</p>
@@ -849,7 +849,7 @@
 				
 				<section>
 				<h3>Overall scores</h3>
-				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a href="#functional-categories">functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
+				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a>functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
 				
 				<p class="ednote">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number would likely shift as we continue testing.  We invite comment on these options as well as suggestions for an alternative solution.</p>
 				</section>
@@ -931,7 +931,7 @@
 					<li>Some content is more important to the majority of users than other content; and</li>
 					<li>Content that mostly meets the requirements but has problems can interfere with the user's ability to complete a process begun elsewhere.</li>
 				</ul>
-				<p>WCAG 3.0 therefore defines two inter-related ways to scope content: <a href="#views">views</a> and <a href="#processes">processes</a>. Evaluation is done on one or more complete views or processes, and conformance is determined on the basis of one or more complete views or processes. </p>
+				<p>WCAG 3.0 therefore defines two inter-related ways to scope content: <a>views</a> and <a>processes</a>. Evaluation is done on one or more complete views or processes, and conformance is determined on the basis of one or more complete views or processes. </p>
 
 				<p>Conformance is defined only for <a>processes</a> and <a>views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.  All unique steps in a process MUST be represented in the set of views. Views outside of the process MAY also be included in the scope.</p>
 				<p class="ednote">The AG WG and Silver Task Force recognize that representative sampling is an important strategy that large and complex sites use to assess accessibility. While it is not addressed within this document at this time, our intent is to later address it within this document or in a separate document before the guidelines reach the Candidate Recommendation stage. We welcome your suggestions and feedback about the best way to incorporate representative sampling in WCAG 3.0.</p>
@@ -1019,7 +1019,7 @@
 				<dt><dfn data-lt="Functional categories|Functional category(ies)">Functional category</dfn></dt>
 				<dd><p>A conceptual grouping of <a>functional needs</a> that represent generalized sets of user
 						groups.</p>
-					<p>See <a href="#functional-categories">Functional Categories</a>.</p></dd>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#functional-categories">Functional Categories</a>.</p></dd>
 				<dt><dfn data-lt="Functional needs">Functional need</dfn></dt>
 				<dd>
 					<p>A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p>
@@ -1027,13 +1027,13 @@
 				<dt><dfn data-lt="Guidelines">Guideline</dfn></dt>
 				<dd>
 					<p>High-level, plain-language content used to organize <a>outcomes</a>.</p>
-					<p>See <a href="#guidelines-structure">Guidelines</a>.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#guidelines-structure">Guidelines</a> in the Explainer.</p>
 				</dd>
 				<dt><dfn data-lt="How-tos">How-to</dfn></dt>
 				<dd>
 					<p>Provides explanatory material for each guideline that applies across technologies.</p>
 					<p>This plain language resource includes information on getting started, who the guideline helps and how, as well as information for designers and developers.</p>
-					<p>See <a href="#how-tos">How-tos</a>.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#how-tos">How-tos</a> in the Explainer.</p>
 				</dd>
 				<dt><dfn data-lt="Human testing|Human evaluated|Human tested|Manual|Manual evaluation|Manual testing|Manually tested">Human evaluation</dfn></dt>
 				<dd>
@@ -1053,7 +1053,7 @@
 				<dt><dfn data-lt="Methods">Method</dfn></dt>
 				<dd>
 					<p>Detailed information, either technology-specific or technology-agnostic, on ways to meet the <a>outcome</a> as well as <a>tests</a> and scoring information.</p>
-					<p>See <a href="#methods-structure">Methods</a>.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#methods-structure">Methods</a> in the Explainer.</p>
 				</dd>
 				<dt><dfn>Normative</dfn></dt>
 				<dd>
