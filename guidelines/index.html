@@ -18,7 +18,7 @@
 			<p>See <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3 Introduction</a> for an introduction and links to WCAG technical and educational material.</p>
 		</section>
 		<section id="sotd">
-			<p>This is a Working Draft of W3C Accessibility Guidelines (WCAG) 3.0 by the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> together with the <a href="https://www.w3.org/WAI/GL/task-forces/silver/">Silver Task Force</a> and <a href="https://www.w3.org/community/silver/">Silver Community Group</a>. WCAG 3 was published on 21 January 2021. This version moves much of the introduction to the <a href="https://w3c.github.io/silver/explainer/">Explainer for W3C Accessibility Guidelines (WCAG) 3.0</a>, adds a new proposed guideline, <a href="#error-prevention">error prevention</a>, and addresses  editorial fixes from <a href="https://github.com/w3c/silver/issues/">comments received on that draft</a>. Not all comments on the previous draft have been processed yet.  In particular, <a href="#testing">testing</a> and <a href="#conformance">conformance</a> have received many comments which are being actively explored, but the group has not yet adopted
+			<p>This is a Working Draft of W3C Accessibility Guidelines (WCAG) 3.0 by the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> together with the <a href="https://www.w3.org/WAI/GL/task-forces/silver/">Silver Task Force</a> and <a href="https://www.w3.org/community/silver/">Silver Community Group</a>. WCAG 3 was published on 21 January 2021. This version moves much of the introduction to the <a href="https://w3c.github.io/silver/explainer/">Explainer for W3C Accessibility Guidelines (WCAG) 3.0</a> and addresses  editorial fixes from <a href="https://github.com/w3c/silver/issues/">comments received on that draft</a>. Not all comments on the previous draft have been processed yet.  In particular, <a href="#testing">testing</a> and <a href="#conformance">conformance</a> have received many comments which are being actively explored, but the group has not yet adopted
 				updated content for those sections. The group will continue processing comments from the previous draft as well as on this draft.</p>
 			<p>The Working Group seeks input on the following general questions:</p>
 			<ul>
@@ -93,13 +93,12 @@
 			<h2>Guidelines</h2>
 				<details class="summary">
 				<summary>Summary</summary>
-				<p>The following six guideline examples show different features of WCAG 3.0: </p>
+				<p>The following five guideline examples show different features of WCAG 3.0: </p>
 					<ul><li>Text alternatives; </li>
 					<li>Clear words;</li>
 					<li>Captions;</li>
 					<li>Structured content (headings); and</li>
 					<li>Visual contrast of text (color contrast);</li>
-					<li>Error prevention.</li>
 					</ul>
 			</details>
 			<p>The individuals and organizations that use WCAG vary widely and include web designers and developers, policy makers, purchasing agents, teachers, and students. In order to meet the varying needs of this audience, several layers of guidance are provided including functional categories of disabilities, general guidelines, outcomes that can be tested, a rich collection of methods, resource links, and code samples.</p>
@@ -111,7 +110,6 @@
 				<li><a href="#captions">Captions</a> - an example of adapting WCAG 2.X guidance to emerging technologies, such as web virtual reality</li>
 				<li><a href="#structured-content">Structured content</a> - migration and merging of several previously unrelated WCAG 2.X success criteria</li>
 				<li><a href="#visual-contrast-of-text">Visual contrast of text</a> - a migration of WCAG 2.X with substantial changes</li>
-				<li><a href="#error-prevention">Error Prevention</a> - a migration of WCAG 2.X with substantial changes</li>
 			</ul>
 			
 			<div class="ednote">
@@ -672,76 +670,6 @@
 				<p>This model is more responsive to user needs and allows designers more choice in visual presentation. It does this by including multi-factor assessment tests which integrate contrast with inter-related elements of visual readability, such as font features. It includes tests to determine an upper limit of contrast, where elevated contrast may impact usability.</p>
 				<p>This outcome will eventually include a second rating approach based on the mean average APCA value for all text in a process and view based on a character count.</p>
 				</div>
-				</section>
-				<!--
-				<section class="outcome"><h4>Font appropriate for luminance contrast</h4><p>Selects a font family, font weight, and x-height appropriate for the luminance contrast.</p><ol><li>@@</li></ol></section>
-				<section class="outcome"><h4>Select background and text colors</h4><p>Selects both the background and text colors OR uses the default color of both background and text. Selecting only one causes problems for people with low vision when they adapt the colors. (<span class="ednote">Note: @@ this needs work)</span></p><ol><li>@@</li></ol></section>
-				-->
-			</section>
-			<section class="guideline">
-				<h3>Error prevention</h3>
-				<p class="guideline-text">Provide features that help users avoid errors.</p>
-				<section class="outcome">
-					<h4>Input instructions provided</h4>
-					<p>Provides instructions for inputs that have requirements (for example, required, date format, password) so users know how to provide valid information.</p>
-					<details class="categories">
-						<summary>Functional categories</summary>
-						<p>This outcome relates to the following functional categories:</p>
-						<ul>
-							<li>Essential</li>
-							<li>Sensory - Vision &amp; Visual</li>
-							<li>Sensory - Sensory Intersections</li>
-							<li>Cognitive - Attention</li>
-							<li>Cognitive - Language &amp; Literacy</li>
-							<li>Cognitive - Learning</li>
-							<li>Cognitive - Memory</li>
-							<li>Cognitive - Executive</li>
-							<li>Cognitive - Mental Health</li>
-							<li>Cognitive - Cognitive &amp; Sensory Intersections</li>
-							<li>Independence</li>
-						</ul>
-					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>Any input that has specific data requirements (e.g., date format, password) that is provided without instructions.</li>
-							<li>Any input for collecting sensitive information (e.g., social security number) that fails “Input instructions provided” tests.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-						<table class="rating-table">
-							<caption>Rating for "Input instructions provided</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>Score of 25% or less OR there is a <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical error</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>Score of 26-50% or less AND there are no <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical errors</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>Score of 51-80% or less AND there are no <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical errors</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>Score of 81-95% or less AND there are no <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical errors</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>Score of 96-100% or less AND there are no <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical errors</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</details>
 				</section>
 				<!--
 				<section class="outcome"><h4>Font appropriate for luminance contrast</h4><p>Selects a font family, font weight, and x-height appropriate for the luminance contrast.</p><ol><li>@@</li></ol></section>
