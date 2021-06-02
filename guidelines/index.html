@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 26.8.3">
+<meta name="generator" content="ReSpec 26.8.7">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -178,9 +178,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "href": "https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf"
     }
   },
-  "publishDate": "2021-05-27",
-  "publishISODate": "2021-05-27T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 27 May 2021"
+  "publishDate": "2021-06-02",
+  "publishISODate": "2021-06-02T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 02 June 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
@@ -188,7 +188,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-05-27">27 May 2021</time>
+      <time class="dt-published" datetime="2021-06-02">02 June 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -217,7 +217,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <dt>Participate:</dt><dd>
     <a href="https://github.com/w3c/silver/">GitHub w3c/silver</a>
   </dd><dd>
-    <a href="https://github.com/w3c/silver/issues/">File a bug</a>
+    <a href="https://github.com/w3c/silver/issues/">File an issue</a>
   </dd><dd>
     <a href="https://github.com/w3c/silver/commits/gh-pages">Commit history</a>
   </dd><dd>
@@ -243,7 +243,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
 			<p>The <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
-			<p>Each <a href="#guidelines-structure" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document">guideline</a> in this standard provides information on accessibility practices that address documented <a href="#dfn-user-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-need-1" title="The end goal a user has when starting a process through digital means.">user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#outcomes">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#methods-structure" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-0">methods</a> to meet each outcome. </p>
+			<p>Each <a href="#dfn-guideline" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-guideline-1" title="High-level, plain-language content used to organize outcomes.">guideline</a> in this standard provides information on accessibility practices that address documented <a href="#dfn-user-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-need-1" title="The end goal a user has when starting a process through digital means.">user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-1" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-1" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">methods</a> to meet each outcome. </p>
 			<p>This specification is expected to be updated regularly to keep pace with changing technology by updating and adding methods, outcomes, and guidelines to address new needs as technologies evolve. For entities that make formal claims of <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-1" title="Satisfying all the requirements of the guidelines. Conformance is an important part of following the guidelines even when not making a formal Conformance Claim.">conformance</a> to these guidelines, several levels of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
 			<p><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag22" title="Web Content Accessibility Guidelines (WCAG) 2.2">WCAG22</a></cite>] and previous versions, but does not <a href="#dfn-deprecate" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-deprecate-1" title="To declare something outdated and in the process of being phased out, usually in favor of a specified replacement.">deprecate</a> these versions. WCAG 3.0 will  incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>]. 
 			While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3.0 includes additional tests and different scoring mechanisms. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative set of guidelines. Once these guidelines become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation, the <abbr title="World Wide Web Consortium">W3C</abbr> will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts. However, content that conforms to earlier versions of WCAG continue to conform to those versions.</p>
@@ -332,7 +332,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<h3 id="x1-3-goals-and-requirements"><bdi class="secno">1.3 </bdi>Goals and Requirements<a class="self-link" aria-label="§" href="#goals-and-requirements"></a></h3>
 				<p>The goal of WCAG 3.0 and supporting documents is to make digital products including web, ePub, PDF, applications, mobile apps, and other emerging technologies more accessible and usable to people with disabilities. It is the intention for WCAG 3.0 to meet this goal by supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. The hope is that WCAG 3.0 will make it significantly easier for both beginners and experts to create accessible digital products that support the needs of people with disabilities.</p>
 
-				<p>Research and design work performed by the Silver Task Force identified key requirements needed to improve upon the existing WCAG 2.X structure. These requirements, presented in the <a href="https://w3c.github.io/silver/requirements/">Requirements for Silver</a> document, shaped the guidelines that follow and should be taken into account when evaluating and updating the guidelines.</p>
+				<p>Research and design work performed by the Silver Task Force identified key requirements needed to improve upon the existing WCAG 2.X structure. These requirements, presented in the <a href="https://www.w3.org/TR/wcag-3.0-requirements/">Requirements for Silver</a> document, shaped the guidelines that follow and should be taken into account when evaluating and updating the guidelines.</p>
 			</section>
 			<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-0"></a></div><p class=""> While the majority of guidelines are still to be written and we continue to explore additional ways of validating conformance, we seek wider public review on the approach presented here. </p></div>
 		</section>
@@ -971,23 +971,23 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							<tbody>
 								<tr>
 									<th scope="row">Rating 0</th>
-									<td>Score of 25% or less OR there is a <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical error</a></td>
+									<td>Score of 25% or less OR there is a <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical error</a></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 1</th>
-									<td>Score of 26-50% or less AND there are no <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical errors</a></td>
+									<td>Score of 26-50% or less AND there are no <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical errors</a></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 2</th>
-									<td>Score of 51-80% or less AND there are no <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical errors</a></td>
+									<td>Score of 51-80% or less AND there are no <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical errors</a></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 3</th>
-									<td>Score of 81-95% or less AND there are no <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical errors</a></td>
+									<td>Score of 81-95% or less AND there are no <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical errors</a></td>
 								</tr>
 								<tr>
 									<th scope="row">Rating 4</th>
-									<td>Score of 96-100% or less AND there are no <a href="https://w3c.github.io/silver/guidelines/#dfn-critical-error">critical errors</a></td>
+									<td>Score of 96-100% or less AND there are no <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical errors</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1013,7 +1013,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<p>Testing outcomes uses both <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-1" title="All content visually and programmatically available without a substantive change.">views</a> and <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-21" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> to define what is being tested. Views include all content visually and programmatically available without a substantive change. Conceptually, it corresponds to the definition of a <q>web page</q> as used in WCAG 2.X, but is not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
 				</p>
 				<p>
-				Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated <a href="#views" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-1">views</a> need to be included in the test. A process is a subset of a view or a group of views.  It includes only the sections of the view needed to accomplish the activity or task.</p>
+				Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-2" title="All content visually and programmatically available without a substantive change.">views</a> need to be included in the test. A process is a subset of a view or a group of views.  It includes only the sections of the view needed to accomplish the activity or task.</p>
 				<p>Examples of a process include:</p>
 					<ul>
 						<li>Logging into a site and being recognized as an authenticated user;</li>
@@ -1021,7 +1021,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<li>Submitting tax information, from start to end of the process; and</li>
 						<li>Interacting with other users in a virtual reality environment.</li>
 					</ul>
-					<p>A process is comprised of one or more <a href="#views" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-2">views</a>.</p>
+					<p>A process is comprised of one or more <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-3" title="All content visually and programmatically available without a substantive change.">views</a>.</p>
 				<section id="types-of-tests">
 				<h3 id="x4-1-types-of-tests"><bdi class="secno">4.1 </bdi>Types of tests<a class="self-link" aria-label="§" href="#types-of-tests"></a></h3>
 								
@@ -1043,7 +1043,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</section>
 				<section id="technology-specific-testing">
 				<h3 id="x4-2-technology-specific-testing"><bdi class="secno">4.2 </bdi>Technology specific testing<a class="self-link" aria-label="§" href="#technology-specific-testing"></a></h3>				
-				<p>Each outcome includes <a href="#methods-structure" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-3">methods</a> associated with different technologies. Each method contains <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-1" title="Mechanism to evaluate implementation of a method.">tests</a> and <a href="#dfn-technique" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technique-1" title="Technology-specific approach to follow a method.">techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
+				<p>Each outcome includes <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-2" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">methods</a> associated with different technologies. Each method contains <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-1" title="Mechanism to evaluate implementation of a method.">tests</a> and <a href="#dfn-technique" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technique-1" title="Technology-specific approach to follow a method.">techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
 				</section>
 				<div class="note" id="issue-container-generatedID-11"><div role="heading" class="ednote-title marker" id="h-ednote-11" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-11"></a></div><p class="">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.&nbsp; Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p></div>
 			</section>
@@ -1058,7 +1058,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<p class="summaryEnd">End of summary for <q>Scoring</q></p></details>
 				
 				<div class="note" id="issue-container-generatedID-12"><div role="heading" class="ednote-title marker" id="h-ednote-12" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-12"></a></div><p class="">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a href="#dfn-rubric" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-rubric-1" title="An approach to evaluation that defines a set of criteria for conformance and describes the result qualitatively.">rubrics</a> and <a href="#dfn-scale" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-scale-1" title="An way of reporting results of evaluation using quantitative values.">scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p></div>
-				<p>Each <a href="#outcomes"> outcome</a> has <a href="#methods-structure" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-4">methods</a> associated with different technologies. Each method contains <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-2" title="Mechanism to evaluate implementation of a method.">tests</a> and <a href="#dfn-technique" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technique-2" title="Technology-specific approach to follow a method.">techniques</a> for meeting that outcome.&nbsp;Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>	
+				<p>Each <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-2" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcome</a> has <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-3" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">methods</a> associated with different technologies. Each method contains <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-2" title="Mechanism to evaluate implementation of a method.">tests</a> and <a href="#dfn-technique" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technique-2" title="Technology-specific approach to follow a method.">techniques</a> for meeting that outcome.&nbsp;Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>	
 				<section id="scoring-atomic-tests">
 				<h3 id="x5-1-scoring-atomic-tests"><bdi class="secno">5.1 </bdi>Scoring atomic tests<a class="self-link" aria-label="§" href="#scoring-atomic-tests"></a></h3>
 				<p>In most cases, testing individual <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-2" title="An item in the perceptual user experience.">objects</a> will result in binary, pass / fail outcome for each element. This leads to either a pass / fail or a percentage rating depending on the test. A rating scale may be provided for some tests to allow the tester to assign a quality judgement of an element or block of content. Whether scoring is binary (pass/fail) or uses rating scales, will depend on the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. Each of these results can then be assigned a percentage or averaged to inform the overall score of an outcome.</p>
@@ -1096,7 +1096,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				
 				<section id="overall-scores">
 				<h3 id="x5-3-overall-scores"><bdi class="secno">5.3 </bdi>Overall scores<a class="self-link" aria-label="§" href="#overall-scores"></a></h3>
-				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a href="#functional-categories" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-5">functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
+				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a class="respec-offending-element" title="Error: No matching dfn found." id="respec-offender-error-no-matching-dfn-found-2">functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
 				
 				<div class="note" id="issue-container-generatedID-14"><div role="heading" class="ednote-title marker" id="h-ednote-13" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-14"></a></div><p class="">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number would likely shift as we continue testing.&nbsp; We invite comment on these options as well as suggestions for an alternative solution.</p></div>
 				</section>
@@ -1138,7 +1138,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<p>For content that conforms to the bronze level:</p>
 					<ul>
 						<li>The total score and score within each of the functional categories <em class="rfc2119">MUST</em> be at least 3.5; and</li>
-						<li><a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-2" title="All content visually and programmatically available without a substantive change.">Views</a> and <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-22" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> <em class="rfc2119">MUST NOT</em> have <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-22" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a>.</li>
+						<li><a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-4" title="All content visually and programmatically available without a substantive change.">Views</a> and <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-22" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> <em class="rfc2119">MUST NOT</em> have <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-22" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a>.</li>
 					</ul>
 					<p>Conformance to this specification at the bronze level does not mean every requirement in every guideline is fully met. Bronze level means that the content in scope does have any critical errors and meets the minimum percentage of @@</p>
 				</section>
@@ -1147,7 +1147,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<p>Silver is a higher conformance level that addresses additional outcomes. Some <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
 					<p>For content that conforms to the silver level:</p>
 					<ul>
-						<li>All <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-3" title="All content visually and programmatically available without a substantive change.">views</a> <em class="rfc2119">MUST</em> satisfy the <a href="#bronze">Bronze</a> criteria; and</li>
+						<li>All <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-5" title="All content visually and programmatically available without a substantive change.">views</a> <em class="rfc2119">MUST</em> satisfy the <a href="#bronze">Bronze</a> criteria; and</li>
 						<li>Use of holistic tests to meet this level will be further explored in future drafts</li>
 					</ul>
 				</section>
@@ -1156,7 +1156,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<p>Gold is the highest conformance level that addresses the remaining outcomes described in the guidelines. Additional <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
 					<p>For content that conforms to the gold level:</p>
 					<ul>
-						<li>All <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-4" title="All content visually and programmatically available without a substantive change.">views</a> <em class="rfc2119">MUST</em> satisfy the <a href="#silver">Silver</a> criteria; and</li>
+						<li>All <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-6" title="All content visually and programmatically available without a substantive change.">views</a> <em class="rfc2119">MUST</em> satisfy the <a href="#silver">Silver</a> criteria; and</li>
 						<li>Use of holistic tests to meet this level will be further explored in future drafts</li>
 					</ul>
 				</section>
@@ -1178,17 +1178,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<li>Some content is more important to the majority of users than other content; and</li>
 					<li>Content that mostly meets the requirements but has problems can interfere with the user's ability to complete a process begun elsewhere.</li>
 				</ul>
-				<p>WCAG 3.0 therefore defines two inter-related ways to scope content: <a href="#views" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-6">views</a> and <a href="#processes" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-7">processes</a>. Evaluation is done on one or more complete views or processes, and conformance is determined on the basis of one or more complete views or processes. </p>
+				<p>WCAG 3.0 therefore defines two inter-related ways to scope content: <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-7" title="All content visually and programmatically available without a substantive change.">views</a> and <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-23" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a>. Evaluation is done on one or more complete views or processes, and conformance is determined on the basis of one or more complete views or processes. </p>
 
-				<p>Conformance is defined only for <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-23" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> and <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-5" title="All content visually and programmatically available without a substantive change.">views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.&nbsp; All unique steps in a process <em class="rfc2119">MUST</em> be represented in the set of views. Views outside of the process <em class="rfc2119">MAY</em> also be included in the scope.</p>
+				<p>Conformance is defined only for <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-24" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> and <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-8" title="All content visually and programmatically available without a substantive change.">views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.&nbsp; All unique steps in a process <em class="rfc2119">MUST</em> be represented in the set of views. Views outside of the process <em class="rfc2119">MAY</em> also be included in the scope.</p>
 				<div class="note" id="issue-container-generatedID-19"><div role="heading" class="ednote-title marker" id="h-ednote-18" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-19"></a></div><p class="">The AG WG and Silver Task Force recognize that representative sampling is an important strategy that large and complex sites use to assess accessibility. While it is not addressed within this document at this time, our intent is to later address it within this document or in a separate document before the guidelines reach the Candidate Recommendation stage. We welcome your suggestions and feedback about the best way to incorporate representative sampling in WCAG 3.0.</p></div>
 			</section>
 			<section id="conformance-requirements">
 				<h3 id="x6-5-conformance-requirements"><bdi class="secno">6.5 </bdi>Conformance requirements<a class="self-link" aria-label="§" href="#conformance-requirements"></a></h3>
-				<p>In order for technology to <a class="respec-offending-element" title="Error: No matching dfn found." id="respec-offender-error-no-matching-dfn-found-2">conform</a> to WCAG 3.0, the following conformance requirements apply:</p>
+				<p>In order for technology to <a class="respec-offending-element" title="Error: No matching dfn found." id="respec-offender-error-no-matching-dfn-found-3">conform</a> to WCAG 3.0, the following conformance requirements apply:</p>
 				<ol>
 					<li><b>Conformance level</b> - Content <em class="rfc2119">MUST</em> meet the requirements of the selected <a href="#conformance-levels">conformance level</a>.</li>
-					<li><b>Processes and views</b> - Conformance (and conformance level) <em class="rfc2119">MUST</em> apply to complete <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-24" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> and <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-6" title="All content visually and programmatically available without a substantive change.">views</a>, and <em class="rfc2119">MUST NOT</em> exclude any part of a process or view.</li>
+					<li><b>Processes and views</b> - Conformance (and conformance level) <em class="rfc2119">MUST</em> apply to complete <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-25" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> and <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-9" title="All content visually and programmatically available without a substantive change.">views</a>, and <em class="rfc2119">MUST NOT</em> exclude any part of a process or view.</li>
 				</ol>
 			</section>
 			<section id="conformance-claims">
@@ -1267,26 +1267,26 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<dt><dfn data-lt="Functional category" id="dfn-functional-category" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Functional category</dfn></dt>
 				<dd><p>A conceptual grouping of <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-1" title="A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.">functional needs</a> that represent generalized sets of user
 						groups.</p>
-					<p>See <a href="#functional-categories" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-8">Functional Categories</a>.</p></dd>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#functional-categories">Functional Categories</a>.</p></dd>
 				<dt><dfn data-lt="Functional need" data-plurals="functional needs" id="dfn-functional-need" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Functional need</dfn></dt>
 				<dd>
 					<p>A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p>
 				</dd>
 				<dt><dfn data-lt="Guideline" id="dfn-guideline" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Guideline</dfn></dt>
 				<dd>
-					<p>High-level, plain-language content used to organize <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-1" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcomes</a>.</p>
-					<p>See <a href="#guidelines-structure" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-9">Guidelines</a>.</p>
+					<p>High-level, plain-language content used to organize <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-3" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcomes</a>.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#guidelines-structure">Guidelines</a> in the Explainer.</p>
 				</dd>
 				<dt><dfn data-lt="How-to" id="dfn-how-to" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">How-to</dfn></dt>
 				<dd>
 					<p>Provides explanatory material for each guideline that applies across technologies.</p>
 					<p>This plain language resource includes information on getting started, who the guideline helps and how, as well as information for designers and developers.</p>
-					<p>See <a href="#how-tos" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-10">How-tos</a>.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#how-tos">How-tos</a> in the Explainer.</p>
 				</dd>
 				<dt><dfn data-lt="Human evaluation" id="dfn-human-evaluation" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Human evaluation</dfn></dt>
 				<dd>
 					<p>Evaluation conducted by a human, typically to apply human judgement to tests
-						that cannot be fully <a class="respec-offending-element" title="Error: No matching dfn found." id="respec-offender-error-no-matching-dfn-found-3">automatically evaluated</a>.</p>
+						that cannot be fully <a class="respec-offending-element" title="Error: No matching dfn found." id="respec-offender-error-no-matching-dfn-found-4">automatically evaluated</a>.</p>
 					<p>Human evaluation is contrasted with <a href="#dfn-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-automated-evaluation-4" title="Evaluation conducted using software tools, typically evaluating code-level features and applying heuristics for other tests.">automated evaluation</a> which is done entirely by
 						machine, though it includes <a href="#dfn-semi-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-semi-automated-evaluation-4" title="Evaluation conducted using machines to guide humans to areas that need inspection.">semi-automated evaluation</a> which allows
 						machines to guide humans to areas that need inspection. Human evaluation
@@ -1298,10 +1298,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<p>Content provided for information purposes and not required for <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-3" title="Satisfying all the requirements of the guidelines. Conformance is an important part of following the guidelines even when not making a formal Conformance Claim.">conformance</a>.</p>
 					<div class="note" role="note" id="issue-container-generatedID-21"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-21"></a></div><p class="">Content required for <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-4" title="Satisfying all the requirements of the guidelines. Conformance is an important part of following the guidelines even when not making a formal Conformance Claim.">conformance</a> is referred to as <q><a href="#dfn-normative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-normative-2" title="Content whose instructions are required for conformance.">normative</a></q>.</p></div>
 				</dd>
-				<dt><dfn data-lt="Method" id="dfn-method" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Method</dfn></dt>
+				<dt><dfn data-lt="Method" data-plurals="methods" id="dfn-method" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Method</dfn></dt>
 				<dd>
-					<p>Detailed information, either technology-specific or technology-agnostic, on ways to meet the <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-2" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcome</a> as well as <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-3" title="Mechanism to evaluate implementation of a method.">tests</a> and scoring information.</p>
-					<p>See <a href="#methods-structure" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document-11">Methods</a>.</p>
+					<p>Detailed information, either technology-specific or technology-agnostic, on ways to meet the <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-4" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcome</a> as well as <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-3" title="Mechanism to evaluate implementation of a method.">tests</a> and scoring information.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#methods-structure">Methods</a> in the Explainer.</p>
 				</dd>
 				<dt><dfn data-lt="Normative" id="dfn-normative" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Normative</dfn></dt>
 				<dd>
@@ -1337,12 +1337,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<p>The closest counterpart to success criteria in WCAG 3 are <a href="#outcomes">outcomes</a>.</p></dd>
 				<dt><dfn data-lt="Test" data-plurals="tests" id="dfn-test" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Test</dfn></dt>
 				<dd>
-					<p>Mechanism to evaluate implementation of a <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-1" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">method</a>.</p>
-					<p>Tests can include true / false evaluation or various types of rating scales as appropriate for the <a href="#dfn-guideline" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-guideline-1" title="High-level, plain-language content used to organize outcomes.">guideline</a>, <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-3" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcome</a>, or technology.</p>
+					<p>Mechanism to evaluate implementation of a <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-4" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">method</a>.</p>
+					<p>Tests can include true / false evaluation or various types of rating scales as appropriate for the <a href="#dfn-guideline" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-guideline-2" title="High-level, plain-language content used to organize outcomes.">guideline</a>, <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-5" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcome</a>, or technology.</p>
 				</dd>
 				<dt><dfn data-lt="Technique" data-plurals="techniques" id="dfn-technique" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Technique</dfn></dt>
 				<dd>
-					<p>Technology-specific approach to follow a <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-2" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">method</a>.</p>
+					<p>Technology-specific approach to follow a <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-5" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">method</a>.</p>
 				</dd>
 				<dt><dfn data-lt="Text alternative" id="dfn-text-alternative" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Text alternative</dfn></dt>
 				<dd>   
@@ -1360,7 +1360,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<dd><p>The end goal a user has when starting a process through digital means.</p></dd>
 				<dt><dfn data-lt="User testing" id="dfn-user-testing" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">User testing</dfn></dt>
 				<dd>
-					<p>Evaluation of content by observation of how users with specific <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-2" title="A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.">functional needs</a> are able to complete a <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-25" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a> and how the content meets the relevant <a href="#outcomes">outcomes</a>.</p>
+					<p>Evaluation of content by observation of how users with specific <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-2" title="A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.">functional needs</a> are able to complete a <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-26" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a> and how the content meets the relevant <a href="#outcomes">outcomes</a>.</p>
 				</dd>
 				<dt><dfn data-lt="View" data-plurals="views" id="dfn-view" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">View</dfn></dt>
 				<dd><p>All content visually and programmatically available without a substantive change.</p>
@@ -1733,7 +1733,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-guideline-1" title="§ 7. Glossary">§ 7. Glossary</a> 
+    <a href="#ref-for-dfn-guideline-1" title="§ Abstract">§ Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-guideline-2" title="§ 7. Glossary">§ 7. Glossary</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-how-to" aria-label="Links in this document to definition: How-to">
@@ -1783,7 +1785,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-method-1" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-method-2" title="Reference 2">(2)</a> 
+    <a href="#ref-for-dfn-method-1" title="§ Abstract">§ Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-method-2" title="§ 4.2 Technology specific testing">§ 4.2 Technology specific testing</a> 
+  </li><li>
+    <a href="#ref-for-dfn-method-3" title="§ 5. Scoring">§ 5. Scoring</a> 
+  </li><li>
+    <a href="#ref-for-dfn-method-4" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-method-5" title="Reference 2">(2)</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-normative" aria-label="Links in this document to definition: Normative">
@@ -1823,7 +1831,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-outcome-1" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-outcome-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-outcome-3" title="Reference 3">(3)</a> 
+    <a href="#ref-for-dfn-outcome-1" title="§ Abstract">§ Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-outcome-2" title="§ 5. Scoring">§ 5. Scoring</a> 
+  </li><li>
+    <a href="#ref-for-dfn-outcome-3" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-outcome-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-outcome-5" title="Reference 3">(3)</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-process" aria-label="Links in this document to definition: Process">
@@ -1847,11 +1859,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </li><li>
     <a href="#ref-for-dfn-process-22" title="§ 6.1.1 Bronze">§ 6.1.1 Bronze</a> 
   </li><li>
-    <a href="#ref-for-dfn-process-23" title="§ 6.4 Defining conformance scope">§ 6.4 Defining conformance scope</a> 
+    <a href="#ref-for-dfn-process-23" title="§ 6.4 Defining conformance scope">§ 6.4 Defining conformance scope</a> <a href="#ref-for-dfn-process-24" title="Reference 2">(2)</a> 
   </li><li>
-    <a href="#ref-for-dfn-process-24" title="§ 6.5 Conformance requirements">§ 6.5 Conformance requirements</a> 
+    <a href="#ref-for-dfn-process-25" title="§ 6.5 Conformance requirements">§ 6.5 Conformance requirements</a> 
   </li><li>
-    <a href="#ref-for-dfn-process-25" title="§ 7. Glossary">§ 7. Glossary</a> 
+    <a href="#ref-for-dfn-process-26" title="§ 7. Glossary">§ 7. Glossary</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-rubric" aria-label="Links in this document to definition: Rubric">
@@ -1979,17 +1991,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-view-1" title="§ 4. Testing">§ 4. Testing</a> 
+    <a href="#ref-for-dfn-view-1" title="§ 4. Testing">§ 4. Testing</a> <a href="#ref-for-dfn-view-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-view-3" title="Reference 3">(3)</a> 
   </li><li>
-    <a href="#ref-for-dfn-view-2" title="§ 6.1.1 Bronze">§ 6.1.1 Bronze</a> 
+    <a href="#ref-for-dfn-view-4" title="§ 6.1.1 Bronze">§ 6.1.1 Bronze</a> 
   </li><li>
-    <a href="#ref-for-dfn-view-3" title="§ 6.1.2 Silver">§ 6.1.2 Silver</a> 
+    <a href="#ref-for-dfn-view-5" title="§ 6.1.2 Silver">§ 6.1.2 Silver</a> 
   </li><li>
-    <a href="#ref-for-dfn-view-4" title="§ 6.1.3 Gold">§ 6.1.3 Gold</a> 
+    <a href="#ref-for-dfn-view-6" title="§ 6.1.3 Gold">§ 6.1.3 Gold</a> 
   </li><li>
-    <a href="#ref-for-dfn-view-5" title="§ 6.4 Defining conformance scope">§ 6.4 Defining conformance scope</a> 
+    <a href="#ref-for-dfn-view-7" title="§ 6.4 Defining conformance scope">§ 6.4 Defining conformance scope</a> <a href="#ref-for-dfn-view-8" title="Reference 2">(2)</a> 
   </li><li>
-    <a href="#ref-for-dfn-view-6" title="§ 6.5 Conformance requirements">§ 6.5 Conformance requirements</a> 
+    <a href="#ref-for-dfn-view-9" title="§ 6.5 Conformance requirements">§ 6.5 Conformance requirements</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-visual-contrast" aria-label="Links in this document to definition: Visual Contrast">
