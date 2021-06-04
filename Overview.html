@@ -1,0 +1,2181 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head>
+<meta charset="UTF-8">
+<meta name="generator" content="ReSpec 26.8.10">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+		
+<title>W3C Accessibility Guidelines (WCAG) 3.0</title>
+		
+		
+		
+		
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+		
+<link rel="stylesheet" type="text/css" href="guidelines.css">
+	
+<meta name="description" content="The W3C Accessibility Guidelines (WCAG) 3.0 provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.">
+<link rel="canonical" href="https://www.w3.org/TR/wcag-3.0/">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "specStatus": "WD",
+  "previousMaturity": "FPWD",
+  "shortName": "wcag-3.0",
+  "publishDate": "2021-06-08",
+  "previousPublishDate": "2021-01-21",
+  "copyrightStart": "2021",
+  "license": "document",
+  "edDraftURI": "https://w3c.github.io/silver/guidelines/",
+  "editors": [
+    {
+      "name": "Jeanne Spellman",
+      "mailto": "jspellman@spellmanconsulting.com",
+      "company": "TetraLogical",
+      "companyURI": "https://tetralogical.com/",
+      "w3cid": 42417,
+      "url": "mailto:jspellman@spellmanconsulting.com"
+    },
+    {
+      "name": "Rachael Bradley Montgomery",
+      "mailto": "rachael@accessiblecommunity.org",
+      "company": "Invited Expert",
+      "w3cid": 90310,
+      "url": "mailto:rachael@accessiblecommunity.org"
+    },
+    {
+      "name": "Shawn Lauriat",
+      "mailto": "lauriat@google.com",
+      "company": "Google, Inc.",
+      "companyURI": "https://www.google.com/",
+      "w3cid": 90646,
+      "url": "mailto:lauriat@google.com"
+    },
+    {
+      "name": "Michael Cooper",
+      "mailto": "cooper@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org/",
+      "w3cid": 34017,
+      "url": "mailto:cooper@w3.org"
+    }
+  ],
+  "group": "ag",
+  "github": "w3c/silver",
+  "maxTocLevel": 4,
+  "preProcess": [
+    null
+  ],
+  "postProcess": [
+    null
+  ],
+  "localBiblio": {
+    "508-criteria": {
+      "title": "Section 508 Functional Performance Criteria",
+      "publisher": "United States Access Board",
+      "date": "8 December 2011",
+      "href": "https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria"
+    },
+    "en-301-549": {
+      "title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe",
+      "publisher": "European Telecommunications Standards Institute",
+      "date": "February 2014",
+      "href": "https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf"
+    }
+  },
+  "publishISODate": "2021-06-08T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 08 June 2021"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
+	<body class="h-entry informative"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48"></a> <h1 id="title" class="title">W3C Accessibility Guidelines (WCAG) 3.0</h1>
+    
+    <h2>
+      W3C Working Draft
+      <time class="dt-published" datetime="2021-06-08">08 June 2021</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://www.w3.org/TR/2021/WD-wcag-3.0-20210608/">https://www.w3.org/TR/2021/WD-wcag-3.0-20210608/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/wcag-3.0/">https://www.w3.org/TR/wcag-3.0/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/guidelines/">https://w3c.github.io/silver/guidelines/</a></dd>
+      
+      
+      
+      <dt>Previous version:</dt><dd><a href="https://www.w3.org/TR/2021/WD-wcag-3.0-20210121/">https://www.w3.org/TR/2021/WD-wcag-3.0-20210121/</a></dd>
+      
+      <dt>Editors:</dt>
+      <dd class="editor p-author h-card vcard" data-editor-id="42417">
+    <a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (<span class="p-org org h-org">TetraLogical</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="90310">
+    <a class="ed_mailto u-email email p-name" href="mailto:rachael@accessiblecommunity.org">Rachael Bradley Montgomery</a> (<span class="p-org org h-org">Invited Expert</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="90646">
+    <a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (<span class="p-org org h-org">Google, Inc.</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="34017">
+    <a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<span class="p-org org h-org">W3C</span>)
+  </dd>
+      
+      
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/w3c/silver/">GitHub w3c/silver</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/issues/">File an issue</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/commits/gh-pages">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/silver/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2021
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
+			<p>The <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
+			<p>Each <a href="#dfn-guideline" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-guideline-1" title="High-level, plain-language content used to organize outcomes.">guideline</a> in this standard provides information on accessibility practices that address documented <a href="#dfn-user-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-need-1" title="The end goal a user has when starting a process through digital means.">user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-1" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-1" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">methods</a> to meet each outcome. </p>
+			<p>This specification is expected to be updated regularly to keep pace with changing technology by updating and adding methods, outcomes, and guidelines to address new needs as technologies evolve. For entities that make formal claims of <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-1" title="Satisfying all the requirements of the guidelines. Conformance is an important part of following the guidelines even when not making a formal Conformance Claim.">conformance</a> to these guidelines, several levels of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
+			<p><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag22" title="Web Content Accessibility Guidelines (WCAG) 2.2">WCAG22</a></cite>] and previous versions, but does not <a href="#dfn-deprecate" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-deprecate-1" title="To declare something outdated and in the process of being phased out, usually in favor of a specified replacement.">deprecate</a> these versions. WCAG 3.0 will  incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>]. 
+			While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3.0 includes additional tests and different scoring mechanisms. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative set of guidelines. Once these guidelines become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation, the <abbr title="World Wide Web Consortium">W3C</abbr> will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts. However, content that conforms to earlier versions of WCAG continue to conform to those versions.</p>
+			<p>See <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3 Introduction</a> for an introduction and links to WCAG technical and educational material.</p>
+		</section>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+			<p>This is a Working Draft of <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 by the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> together with the <a href="https://www.w3.org/WAI/GL/task-forces/silver/">Silver Task Force</a> and <a href="https://www.w3.org/community/silver/">Silver Community Group</a>. WCAG 3 was published on 21 January 2021. This version moves much of the introduction to the <a href="https://w3c.github.io/silver/explainer/">Explainer for <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0</a> and addresses  editorial fixes from <a href="https://github.com/w3c/silver/issues/">comments received on that draft</a>. Not all comments on the previous draft have been processed yet.  In particular, <a href="#testing">testing</a> and <a href="#conformance">conformance</a> have received many comments which are being actively explored, but the group has not yet adopted
+				updated content for those sections. The group will continue processing comments from the previous draft as well as on this draft.</p>
+			<p>The Working Group seeks input on the following general questions:</p>
+			<ul>
+				<li>How well will this proposal of conformance work in your type of organization and why? </li>
+				<li>What do you see as the possible tradeoffs in using a flexible conformance approach? Would you want to see multiple conformance models? </li>
+				<li>How will the change to a different conformance model than WCAG 2 affect your organization? How readily would you see moving from WCAG 2 to WCAG 3 when it is complete?</li>
+				<li>Are there usability improvements that would make WCAG 3 easier to use and find information? Is the structuring of the How-To, outcomes, and methods clear? Are there improvements to structure and style that you would like to see? Is there another way we can make content more usable?</li>
+			</ul>
+			<p>To comment, <a href="https://github.com/w3c/silver/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> silver GitHub repository</a>. The Working Group requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, send email to <a href="mailto:public-agwg-comments@w3.org?subject=WCAG%203.0%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>). The Working Group requests comments on this draft be sent by <b>9 July 2021</b>. In-progress updates to the guidelines can be viewed in the <a href="https://w3c.github.io/silver/guidelines/">public editors' draft</a>.</p>
+		<p>
+    This document was published by the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as a
+    Working Draft. 
+    This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+  </p><p>
+    <a href="https://github.com/w3c/silver/issues/">GitHub Issues</a> are preferred for
+          discussion of this specification.
+        
+    
+  </p><p>
+      Publication as a Working Draft does not imply endorsement
+      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
+    </p><p>This is a draft document and may be updated, replaced
+  or obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress.
+  </p><p></p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/">1 August 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+       
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/groups/wg/ag/ipr">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#about-wcag-3-0"><bdi class="secno">1.1 </bdi>About WCAG 3.0</a></li><li class="tocline"><a class="tocxref" href="#relationship-to-other-w3c-guidelines"><bdi class="secno">1.2 </bdi>Relationship to other <abbr title="World Wide Web Consortium">W3C</abbr> guidelines</a></li><li class="tocline"><a class="tocxref" href="#goals-and-requirements"><bdi class="secno">1.3 </bdi>Goals and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#normative-requirements"><bdi class="secno">2. </bdi>Normative requirements</a></li><li class="tocline"><a class="tocxref" href="#guidelines"><bdi class="secno">3. </bdi>Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#text-alternatives"><bdi class="secno">3.1 </bdi>Text alternatives</a></li><li class="tocline"><a class="tocxref" href="#clear-words"><bdi class="secno">3.2 </bdi>Clear words</a></li><li class="tocline"><a class="tocxref" href="#captions"><bdi class="secno">3.3 </bdi>Captions</a></li><li class="tocline"><a class="tocxref" href="#structured-content"><bdi class="secno">3.4 </bdi>Structured content</a></li><li class="tocline"><a class="tocxref" href="#visual-contrast-of-text"><bdi class="secno">3.5 </bdi>Visual contrast of text</a></li></ol></li><li class="tocline"><a class="tocxref" href="#testing"><bdi class="secno">4. </bdi>Testing</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#types-of-tests"><bdi class="secno">4.1 </bdi>Types of tests</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#atomic-tests"><bdi class="secno">4.1.1 </bdi>Atomic tests</a></li><li class="tocline"><a class="tocxref" href="#holistic-tests"><bdi class="secno">4.1.2 </bdi>Holistic tests</a></li></ol></li><li class="tocline"><a class="tocxref" href="#technology-specific-testing"><bdi class="secno">4.2 </bdi>Technology specific testing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#scoring"><bdi class="secno">5. </bdi>Scoring</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scoring-atomic-tests"><bdi class="secno">5.1 </bdi>Scoring atomic tests</a></li><li class="tocline"><a class="tocxref" href="#scoring-outcomes"><bdi class="secno">5.2 </bdi>Scoring outcomes</a></li><li class="tocline"><a class="tocxref" href="#overall-scores"><bdi class="secno">5.3 </bdi>Overall scores</a></li><li class="tocline"><a class="tocxref" href="#scoring-holistic-tests"><bdi class="secno">5.4 </bdi>Scoring holistic tests</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">6. </bdi>Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#conformance-levels"><bdi class="secno">6.1 </bdi>Conformance levels</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#bronze"><bdi class="secno">6.1.1 </bdi>Bronze</a></li><li class="tocline"><a class="tocxref" href="#silver"><bdi class="secno">6.1.2 </bdi>Silver</a></li><li class="tocline"><a class="tocxref" href="#gold"><bdi class="secno">6.1.3 </bdi>Gold</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conforming-alternative-version"><bdi class="secno">6.2 </bdi>Conforming alternative version</a></li><li class="tocline"><a class="tocxref" href="#only-accessibility-supported-ways-of-using-technologies"><bdi class="secno">6.3 </bdi>Only accessibility-supported ways of using technologies</a></li><li class="tocline"><a class="tocxref" href="#defining-conformance-scope"><bdi class="secno">6.4 </bdi>Defining conformance scope</a></li><li class="tocline"><a class="tocxref" href="#conformance-requirements"><bdi class="secno">6.5 </bdi>Conformance requirements</a></li><li class="tocline"><a class="tocxref" href="#conformance-claims"><bdi class="secno">6.6 </bdi>Conformance claims</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#required-components-of-a-conformance-claim"><bdi class="secno">6.6.1 </bdi>Required components of a conformance claim</a></li><li class="tocline"><a class="tocxref" href="#example-conformance-claim"><bdi class="secno">6.6.2 </bdi>Example conformance claim</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#glossary"><bdi class="secno">7. </bdi>Glossary</a></li><li class="tocline"><a class="tocxref" href="#guidelines-development-methodology"><bdi class="secno">A. </bdi>Guidelines development methodology</a></li><li class="tocline"><a class="tocxref" href="#differences-from-wcag-2"><bdi class="secno">B. </bdi>Differences from WCAG 2</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#outcomes"><bdi class="secno">B.1 </bdi>Outcomes</a></li><li class="tocline"><a class="tocxref" href="#approximate-mapping-of-wcag-2-and-wcag-3-documentation"><bdi class="secno">B.2 </bdi>Approximate mapping of WCAG 2 and WCAG 3 documentation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#change-log"><bdi class="secno">C. </bdi>Change log</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-who-made-notable-contributions-to-the-creation-of-this-document"><bdi class="secno">D.1 </bdi>Participants who made notable contributions to the creation of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-this-document"><bdi class="secno">D.2 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-this-document"><bdi class="secno">D.3 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">D.4 </bdi>Research Partners</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">D.5 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+		<section class="informative" id="introduction">
+			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p class="informative-statement"><em>This section (with its subsections) provides advice only and does not specify guidelines, meaning it is <a href="#dfn-informative" class="internalDFN" data-link-type="dfn" title="Content provided for information purposes and not required for conformance.">informative</a> or non-normative.</em></p>
+			<details class="summary" role="region">
+				<summary>Plain language summary of <q>Introduction</q></summary>
+				<p>The <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 show ways to make web content accessible to people with disabilities. WCAG 3.0 is a newer standard than the Web Content Accessibility Guidelines (WCAG) 2.2. You may use WCAG 2.2 or the new standard.</p>
+				<p>What’s new in WCAG 3.0?</p>
+				 
+				<ul>
+				<li>WCAG 3.0 includes the needs of people with more types of disabilities.</li>
+				<li>It includes mobile and desktop applications, along with web content.</li>
+				<li>It has new guidelines and new tests.</li>
+				<li>It has new scoring. Your site or product no longer has to pass 100% of the guidelines, as long as people with disabilities can use it.</li>
+				</ul>
+			<p class="summaryEnd">End of summary for <q>Introduction</q></p></details>
+
+			<section id="about-wcag-3-0">
+			<h3 id="x1-1-about-wcag-3-0"><bdi class="secno">1.1 </bdi>About WCAG 3.0<a class="self-link" aria-label="§" href="#about-wcag-3-0"></a></h3>
+			<p>This specification presents a new model and guidelines to make web content and applications accessible to people with disabilities. The <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 support a wide set of user needs, use new approaches to testing, and allow frequent maintenance of guidelines and related content to keep pace with accelerating technology change. WCAG 3.0 supports this evolution by focusing on users’ functional needs. These needs are then supported by outcomes and technology-specific methods to meet those needs.&nbsp;</p>
+			<p>Following these guidelines will make content more accessible to people with a wide range of disabilities, including accommodations for blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. Following these guidelines will also often make content more usable to users in general as well as accessible to people with disabilities.</p>
+			<p>WCAG 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag22" title="Web Content Accessibility Guidelines (WCAG) 2.2">WCAG22</a></cite>] and previous versions, but does not <a href="#dfn-deprecate" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-deprecate-2" title="To declare something outdated and in the process of being phased out, usually in favor of a specified replacement.">deprecate</a> WCAG 2.X. It will also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/"> User Agent Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] and <a href="https://www.w3.org/TR/ATAG20/"> Authoring Tool Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>]. These earlier versions provided a flexible model that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities have led to the need for a new model to address content accessibility more comprehensively and flexibly.</p>
+			<p>There are many differences between WCAG 2.X and WCAG 3.0. Content that conforms to WCAG 2.2 A &amp; AA is expected to meet most of the minimum conformance level of this new standard but, since WCAG 3.0 includes additional tests and different scoring mechanics, additional work will be needed to reach full conformance. Since the new standard will use a different conformance model, the Accessibility Guidelines Working Group expects that some organizations may wish to continue using WCAG 2.X, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping and other approaches to facilitate migration.</p>
+			</section>
+			
+			<section id="relationship-to-other-w3c-guidelines">
+				<h3 id="x1-2-relationship-to-other-w3c-guidelines"><bdi class="secno">1.2 </bdi>Relationship to other <abbr title="World Wide Web Consortium">W3C</abbr> guidelines<a class="self-link" aria-label="§" href="#relationship-to-other-w3c-guidelines"></a></h3>
+				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20" title="Web Content Accessibility Guidelines (WCAG) 2.0">WCAG20</a></cite>] were designed to be technology neutral, and have stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (<abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr>) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>] provide guidance for various types of software that assist people in writing accessible content. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (<abbr title="User Agent Accessibility Guidelines">UAAG</abbr>) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis.</p>
+				<p>These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents, and assistive technologies.</p>
+				<ul>
+					<li>WCAG 3.0 incorporates but may not be all encompassing of WCAG 2.X, <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr>, and <abbr title="User Agent Accessibility Guidelines">UAAG</abbr>.</li>
+					<li>WCAG 3.0 is not backward compatible with WCAG 2.0, <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> 2.0, and <abbr title="User Agent Accessibility Guidelines">UAAG</abbr> 2.0.</li>
+				</ul>
+				<p>For more details about differences from previous guidelines, see <a href="#differences-from-wcag-2">Appendix: Differences From WCAG 2</a>.</p>
+				<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID"></a></div><p class="">This version of the guidelines includes an example method for <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> (<a href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/text-alternative-editable/">Author control of text alternatives</a>) and <abbr title="User Agent Accessibility Guidelines">UAAG</abbr> (<a href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/caption-reflow/"> Reflow of captions and other text in context</a>). Future drafts of the guidelines will include additional examples of <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr>- and <abbr title="User Agent Accessibility Guidelines">UAAG</abbr>-related content.</p></div>
+			</section>
+			<section id="goals-and-requirements">
+				<h3 id="x1-3-goals-and-requirements"><bdi class="secno">1.3 </bdi>Goals and Requirements<a class="self-link" aria-label="§" href="#goals-and-requirements"></a></h3>
+				<p>The goal of WCAG 3.0 and supporting documents is to make digital products including web, ePub, PDF, applications, mobile apps, and other emerging technologies more accessible and usable to people with disabilities. It is the intention for WCAG 3.0 to meet this goal by supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. The hope is that WCAG 3.0 will make it significantly easier for both beginners and experts to create accessible digital products that support the needs of people with disabilities.</p>
+
+				<p>Research and design work performed by the Silver Task Force identified key requirements needed to improve upon the existing WCAG 2.X structure. These requirements, presented in the <a href="https://w3c.github.io/silver/requirements/">Requirements for Silver</a> document, shaped the guidelines that follow and should be taken into account when evaluating and updating the guidelines.</p>
+			</section>
+			<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-0"></a></div><p class=""> While the majority of guidelines are still to be written and we continue to explore additional ways of validating conformance, we seek wider public review on the approach presented here. </p></div>
+		</section>
+		
+
+		<section id="normative-requirements">
+			<h2 id="x2-normative-requirements"><bdi class="secno">2. </bdi>Normative requirements<a class="self-link" aria-label="§" href="#normative-requirements"></a></h2><p class="normative-statement"><em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" title="Content whose instructions are required for conformance.">normative</a>.</em></p>
+			<details class="summary" role="region">
+				<summary>Plain language summary of <q>Normative requirements</q></summary>
+				<p>There are two types of content in this document:</p>
+				<ul>
+				<li><strong>Normative:</strong> what you must do to meet the guidelines.</li>
+				<li><strong>Non-normative:</strong> advice to help you meet the guidelines. This is also called <q>Informative</q>.</li>
+				</ul>
+			<p class="summaryEnd">End of summary for <q>Normative requirements</q></p></details>
+			<p>In addition to this section, the <a href="#guidelines">Guidelines</a>, <a href="#testing">Testing</a>, and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-normative-1" title="Content whose instructions are required for conformance.">normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a href="#dfn-informative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-informative-1" title="Content provided for information purposes and not required for conformance.">informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
+			<p>The key words <em class="rfc2119" title="MAY"><em class="rfc2119">MAY</em></em>, <em class="rfc2119" title="MUST"><em class="rfc2119">MUST</em></em>, <em class="rfc2119" title="MUST NOT"><em class="rfc2119">MUST NOT</em></em>, <em class="rfc2119" title="NOT RECOMMENDED"><em class="rfc2119">NOT RECOMMENDED</em></em>, <em class="rfc2119" title="RECOMMENDED"><em class="rfc2119">RECOMMENDED</em></em>, <em class="rfc2119" title="SHOULD"><em class="rfc2119">SHOULD</em></em>, and <em class="rfc2119" title="SHOULD NOT"><em class="rfc2119">SHOULD NOT</em></em> are to be interpreted as described in [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>].</p>
+			<div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-1"></a></div><p class="">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, critical errors, and outcome ratings.</p></div>
+		</section>
+		
+		
+		<section id="guidelines">
+			<h2 id="x3-guidelines"><bdi class="secno">3. </bdi>Guidelines<a class="self-link" aria-label="§" href="#guidelines"></a></h2><p class="normative-statement"><em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" title="Content whose instructions are required for conformance.">normative</a>.</em></p>
+				<details class="summary" role="region">
+				<summary>Plain language summary of <q>Guidelines</q></summary>
+				<p>The following five guideline examples show different features of WCAG 3.0: </p>
+					<ul><li>Text alternatives; </li>
+					<li>Clear words;</li>
+					<li>Captions;</li>
+					<li>Structured content (headings); and</li>
+					<li>Visual contrast of text (color contrast);</li>
+					</ul>
+			<p class="summaryEnd">End of summary for <q>Guidelines</q></p></details>
+			<p>The individuals and organizations that use WCAG vary widely and include web designers and developers, policy makers, purchasing agents, teachers, and students. In order to meet the varying needs of this audience, several layers of guidance are provided including functional categories of disabilities, general guidelines, outcomes that can be tested, a rich collection of methods, resource links, and code samples.</p>
+			
+			<p>The guidelines included in this draft have been selected to show different types of content:</p>
+			<ul>
+				<li><a href="#text-alternatives">Text alternatives</a> - a direct migration from WCAG 2.X success criterion</li>
+				<li><a href="#clear-words">Clear words</a> - new guidance that could not previously be included in WCAG 2.X. It is directly based on <a href="https://www.w3.org/TR/coga-usable/"> Making content usable for people with cognitive and learning disabilities</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-coga-usable" title="Making Content Usable for People with Cognitive and Learning Disabilities">coga-usable</a></cite>].</li>
+				<li><a href="#captions">Captions</a> - an example of adapting WCAG 2.X guidance to emerging technologies, such as web virtual reality</li>
+				<li><a href="#structured-content">Structured content</a> - migration and merging of several previously unrelated WCAG 2.X success criteria</li>
+				<li><a href="#visual-contrast-of-text">Visual contrast of text</a> - a migration of WCAG 2.X with substantial changes</li>
+			</ul>
+			
+			<div class="note" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-2"></a></div><div class="">
+			<p>These are <strong>early drafts of guidelines included to serve as initial examples</strong>. They are used to illustrate what WCAG 3.0 could look like and to test the process of writing content. These guideline drafts should not be considered as final content of WCAG 3.0. They are included to show how the structure would work. As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests.&nbsp;WCAG 2.x success criteria will be migrated to this new structure before WCAG 3.0 moves to candidate recommendation.</p>
+
+			<p>As more content is developed, this section will be a list of guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to WCAG 3.0, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit">WCAG to Silver Outline Map</a>.</p>
+			</div></div>
+			<section class="guideline" id="text-alternatives">
+				<h3 id="x3-1-text-alternatives"><bdi class="secno">3.1 </bdi>Text alternatives<a class="self-link" aria-label="§" href="#text-alternatives"></a></h3>
+				<p class="guideline-text"><span class="inserted">Guideline: </span>Provide text alternative for non-text content.<span> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/how-tos/text-alternatives/" class="howto-link">Text alternatives <span>how-to</span></a></span></p>
+				<section class="outcome notoc"><h4 id="text-alternative-available">Text alternative available<span class="inserted"> (outcome for <q>Text alternatives</q>)</span><a class="self-link" aria-label="§" href="#text-alternative-available"></a></h4>
+				<p>Provides text alternatives for non-text content for user agents and assistive technologies. This allows users who are unable to perceive and / or understand the non-text content to determine its meaning.</p>
+					<p> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/text-alternative-available" class="outcome-link"><span>Outcome, details, and methods for </span>Text alternative available</a></p><details class="categories">
+						<summary>Functional categories for <q>Text alternative available</q></summary>
+						<p>This outcome relates to the following functional categories:</p>
+						<ul>
+							<li>Sensory - Vision &amp; Visual </li>
+							<li>Sensory Intersections </li>
+							<li>Cognitive - Language &amp; Literacy </li>
+							<li>Cognitive - Learning </li>
+							<li>Cognitive - Memory </li>
+							<li>Cognitive - Mental Health </li>
+							<li>Cognitive &amp; Sensory Intersections </li>
+						</ul>
+					</details>
+					<details class="errors">
+						<summary>Critical errors for <q>Text alternative available</q></summary>	
+						<ul>
+							<li>Any image of text without an appropriate text alternative needed to complete a process.</li>
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating for <q>Text alternative available</q></summary>
+
+						<table class="rating-table" summary="Rating scale for &quot;Text alternative available&quot;">
+							
+						<thead><tr><th scope="col">Rating</th><th scope="col">Criteria</th></tr></thead>
+						<tbody><tr>
+							<th scope="row">Rating 0</th>
+							<td>Less than 60% of all images have appropriate text alternatives OR there is a <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-1" title="An accessibility problem that will stop a user from being able to complete a process.">critical error</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-1" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+						</tr>
+						<tr>
+							<th scope="row">Rating 1</th>
+							<td>60% - 69% of all images have appropriate text alternatives AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-2" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-2" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+						</tr>
+						<tr>
+							<th scope="row">Rating 2</th>
+							<td>70%-79% of all images have appropriate text alternatives AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-3" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-3" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+						</tr>
+						<tr>
+							<th scope="row">Rating 3</th>
+							<td>80%-94% of all images have appropriate text alternatives AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-4" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-4" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+						</tr>
+						<tr>
+							<th scope="row">Rating 4</th>
+							<td>95% to 100% of all images have appropriate text alternatives AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-5" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-5" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+						</tr>
+						</tbody></table>
+					</details>
+						<div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="5"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-3"></a></div><div class="">
+						 <p>We selected the Text Alternatives guideline to illustrate how WCAG 2.2 success criteria can be moved to WCAG 3.0 with minimal changes. Most of the material was directly copied from <abbr title="World Wide Web Consortium">W3C</abbr> sources such as WCAG 2.1, Web Accessibility Tutorials, and HTML 5.3 examples.</p>
+
+						 <p>There are subtleties to the scoring of the methods that should be noted in this guideline. We have included four different methods for different types of images in HTML:</p>
+								<ul>
+								<li>functional images;</li>
+								<li>informative images;</li> 
+								<li>images of text; and</li>
+								<li>decorative images. </li>
+								</ul>
+						  <p>The scoring is set up to work across all types of images to make it easier for automated tools. The automated tool does not need to know the type of image and can give you a score of the number of images and the number of images passed. The tester reviewing the path that a user would use to accomplish a task can identify whether the lack of a text alternative is a critical error that would stop a user from completing a task. This allows an automated tool to do the <q>heavy lifting</q> for identifying all the text alternatives while still allowing a knowledgeable tester to identify and evaluate the images that are necessary to complete a task. </p>
+
+						  <p>This guideline also illustrates an example of critical errors along a path. Organizations with large numbers of images often have a missing text alternative on an image as a bug. They need to know when that missing text alternative is critical to be fixed, and when it is a lower priority. This critical error example shows how an image without alternative text that is crucial for completing the task gives a rating of zero. An image without alternative text that is not crucial, such as an image in the footer, does not block the organization from receiving the score the rest of the images deserve. This makes it possible for very large web sites or apps to be able to conform even if they have a low number of bugs without losing the critical needs of people with disabilities. </p>
+
+						  <p>We are interested in your feedback on this approach to testing and scoring. Does this approach help large organizations conform even if their site is not 100% perfect? Do you think that organizations will interpret that they only need 95% of text alternatives for images and then stop adding alternative text?  Are the bands of numbers for the different ratings correct?  Do people with disabilities in particular feel that this approach will meet their needs? </p>  
+
+						 <p>For this First Public Working Draft, we included HTML methods. This will be expanded in future drafts. We have also included a method, Author Control of Text Alternatives (<abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr>),  that demonstrates how requirements from the Authoring Tool Accessibility Guidelines (<abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr>) 2.0 can be included as methods. </p>
+
+						</div></div>
+				</section>				
+			</section>
+			<section class="guideline" id="clear-words">
+				<h3 id="x3-2-clear-words"><bdi class="secno">3.2 </bdi>Clear words<a class="self-link" aria-label="§" href="#clear-words"></a></h3>
+				<p class="guideline-text"><span class="inserted">Guideline: </span>Use common clear words.<span> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/how-tos/clear-words/" class="howto-link">Clear words <span>how-to</span></a></span></p>
+				<p class="exception"><strong>Exception</strong>:</p>
+				<ul>
+					<li>Technical documents that provide a clear language summary</li>
+				</ul>
+				<section class="outcome notoc"><h4 id="common-clear-words">Common clear words<span class="inserted"> (outcome for <q>Clear words</q>)</span><a class="self-link" aria-label="§" href="#common-clear-words"></a></h4><p>Uses common words to reduce confusion and improve understanding.</p>
+					<p> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/common-clear-words" class="outcome-link"><span>Outcome, details, and methods for </span>Common clear words</a></p><details class="categories">
+						<summary>Functional categories for <q>Common clear words</q></summary>
+						<p>This outcome relates to the following functional categories:</p>
+						<ul>
+							<li>Speech </li>
+							<li>Cognitive - Attention </li>
+							<li>Cognitive - Language &amp; Literacy </li>
+							<li>Cognitive - Learning </li>
+							<li>Cognitive - Memory </li>
+							<li>Cognitive - Executive </li>
+							<li>Cognitive - Mental Health </li>
+							<li>Cognitive &amp; Sensory Intersections </li>
+							<li>Independence </li>
+						</ul>
+					</details>
+					<details class="errors">
+						<summary>Critical errors for <q>Common clear words</q></summary>	
+						<ul>
+							<li>None.</li>
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating for <q>Common clear words</q></summary>
+
+						<table class="rating-table" summary="Rating scale for &quot;Common clear words&quot;">
+							
+							<thead>
+								<tr>
+									<th scope="col">Rating</th>
+									<th scope="col">Criteria</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Not Applicable</th>
+									<td>If this outcome does not apply to the technology or content being scored, do not score it.</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 0</th>
+									<td>Average score below 1</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 1</th>
+									<td>Not used in this outcome</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 2</th>
+									<td>Average score of 1-1.6</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 3</th>
+									<td>Not used in this outcome</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 4</th>
+									<td>Average score of 1.7 or above</td>
+								</tr>
+							</tbody>
+						</table>
+					</details>
+					<div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="5"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-4"></a></div><div class="">
+					<p>We selected Use Clear Words to show that the new WCAG3 structure can include accessibility guidance that does not fit into the WCAG 2.x structure.  In the research phase of this project, we identified user needs from the Cognitive Accessibility Task Force and the Low Vision Accessibility Task Force that could not be addressed by a true/false success criterion in WCAG 2.1.  We wanted to select one of those user needs and include it in the first draft of WCAG3 to show that more complex user needs can be included and still be testable and scored.   </p>
+
+					<p>Use Clear Words is a new guideline proposed by the Cognitive Accessibility Task Force (COGA) and includes research, documents and comments from COGA. The selection of user needs and the outcomes necessary to address them is aligned with the new COGA publication, <a href="https://www.w3.org/TR/coga-usable/">Making content usable for people with cognitive and learning disabilities [coga-usable]</a>. </p>
+
+					<p>The clear words guideline was included to illustrate that the proposed WCAG 3.0 scoring and structure can be used in non-binary testing. Clear words guideline uses a rating scale with flexible units of measure. For example, testing could be done by a webpage, a paragraph, a section of instructions on an application, or other. A manual tester evaluates the paragraph, webpage, or section on a rating scale. While we do not know of any mainstream accessibility tool that measures common words, there are some working prototypes of tools developed outside the <abbr title="World Wide Web Consortium">W3C</abbr>. We are interested in feedback on testing this guideline and its scoring.</p>
+
+					<p>There are a number of exceptions to this guideline. We are interested in feedback where to put that information for ease of use.</p> 
+
+					<p>This category of new guideline needs further development. It is included to show that it could work, not necessarily that this is the shape of the final guideline.</p>
+					</div></div>
+	
+				</section>
+				
+			</section>
+			<section class="guideline" id="captions">
+				<h3 id="x3-3-captions"><bdi class="secno">3.3 </bdi>Captions<a class="self-link" aria-label="§" href="#captions"></a></h3>
+				<p class="guideline-text"><span class="inserted">Guideline: </span>Provide captions and associated metadata for audio content.<span> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/how-tos/captions/" class="howto-link">Captions <span>how-to</span></a></span></p>
+				<section class="outcome notoc">
+					<h4 id="translates-speech-and-non-speech-audio">Translates speech and non-speech audio<span class="inserted"> (outcome for <q>Captions</q>)</span><a class="self-link" aria-label="§" href="#translates-speech-and-non-speech-audio"></a></h4>
+					<p>Translates speech and non-speech audio into alternative formats (e.g. captions) so media can be understood when sound is unavailable or limited. User agents and APIs support the display and control of captions.</p>
+					<p> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/translates-speech-and-non-speech-audio" class="outcome-link"><span>Outcome, details, and methods for </span>Translates speech and non-speech audio</a></p><details class="categories">
+						<summary>Functional categories for <q>Translates speech and non-speech audio</q></summary>
+						<p>This outcome relates to the following functional categories:</p>
+						<ul>
+							<li>Sensory - Hearing &amp; Auditory </li>
+							<li>Sensory Intersections </li>
+							<li>Cognitive - Language &amp; Literacy </li>
+							<li>Cognitive &amp; Sensory Intersections </li>
+						</ul>
+					</details>
+					<details class="errors">
+						<summary>Critical errors for <q>Translates speech and non-speech audio</q></summary>	
+						<ul>
+							<li>Any video without captioning that is needed to complete a process.<br> For example, an education site with a video that a student will be tested on or a shopping experience of previewing movies. If they do not have captioning (closed or open captioning), they fail.</li>
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating for <q>Translates speech and non-speech audio</q></summary>
+					
+						<table class="rating-table" summary="Rating scale for &quot;Translates speech and non-speech audio&quot;">
+							
+							<thead>
+								<tr>
+									<th scope="col">Rating</th>
+									<th scope="col">Criteria</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Rating 0</th>
+									<td>Average score 0-.7 or a critical error</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 1</th>
+									<td>Not applicable</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 2</th>
+									<td>Average score .8-1.5 and no critical error</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 3</th>
+									<td>Not applicable</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 4</th>
+									<td>Average score 1.6 to 2 and no critical error</td>
+								</tr>
+							</tbody>
+						</table>
+					</details>
+				</section>
+				<section class="outcome notoc">
+					<h4 id="conveys-information-about-the-sound">Conveys information about the sound<span class="inserted"> (outcome for <q>Captions</q>)</span><a class="self-link" aria-label="§" href="#conveys-information-about-the-sound"></a></h4>
+					<p>Conveys information about the sound in addition to the text of the sound (for example, sound source, duration, and direction) so users know the necessary information about the context of the sound in relation to the environment it is situated in.</p>
+					<p> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/conveys-information-about-the-sound" class="outcome-link"><span>Outcome, details, and methods for </span>Conveys information about the sound</a></p><details class="categories">
+						<summary>Functional categories for <q>Conveys information about the sound</q></summary>
+						<p>This outcome relates to the following functional categories:</p>
+						<ul>
+							<li>Sensory - Hearing &amp; Auditory </li>
+							<li>Sensory Intersections </li>
+							<li>Cognitive - Language &amp; Literacy </li>
+							<li>Cognitive &amp; Sensory Intersections </li>
+						</ul>
+					</details>
+					<details class="errors">
+						<summary>Critical errors for <q>Conveys information about the sound</q></summary>	
+						<ul>
+							<li>None.</li>
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating for <q>Conveys information about the sound</q></summary>
+					<ul>
+						<li>Is meta-data directionality essential to this experience?</li>
+						<li>Can a user orientate themselves to the sound with/without any additional interface?</li>
+					</ul>
+						<table class="rating-table" summary="Rating scale for &quot;Conveys information about the sound&quot;">
+							
+							<thead>
+								<tr>
+									<th scope="col">Rating</th>
+									<th scope="col">Criteria</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Rating 0</th>
+									<td>No meta-data</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 1</th>
+									<td>Sound visually indicates the direction of origin in 2D space</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 2</th>
+									<td>Not applicable</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 3</th>
+									<td>Meta-data includes the location the sound originates in 3D space</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 4</th>
+									<td>Meta-data includes the location the sound originates, Meta-data includes the direction of the sound.</td>
+								</tr>
+							</tbody>
+						</table>
+					</details>
+					<div class="note" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="5"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-5"></a></div><div class="">
+						<p>This guideline demonstrates how the WCAG3 structure can be used with emerging technologies such as virtual reality, augmented reality and other immersive web technologies (XR). Research in this area is ongoing and we expect to complete more details in future drafts. </p>
+
+						<p>The Silver XR group has been working closely with other groups within the <abbr title="World Wide Web Consortium">W3C</abbr> as well as researchers in the area of captioning in immersive technologies. This is a rapidly developing field, and the recommendations listed are more exploratory. They are included as an example that WCAG3 can be used with emerging technologies. We hope that including this guideline will help inspire more research in this area.  </p>
+
+						<p>Because this guideline was included to demonstrate emerging technology, there is little guidance included on traditional captions. Future drafts will also include more traditional caption guidance. </p>
+
+						<p>We are looking for feedback on the scoring of captions. Media that is essential to accomplishing the task that does not have captions is a critical error and automatically fails (a 0 rating).  Examples include educational videos, entertainment site previews, or directions for installing a product.  Other videos without captions that are not essential to the task such as advertising and promotional videos that are not essential to shopping experience are not automatically failed, but the cumulative lack of captioning reduces the score.  We want feedback on this approach. </p>
+
+						<p>We want public feedback about whether Open Captions (burned in captions) should be considered as equivalent to Closed Captions.  Closed captions are text that can be customized to meet user needs, for example, a hard of hearing person with low vision (like a lot of aging people). Open captions are burned in and cannot be customized. They can't be adapted to other languages. If closed captions are added, then they are overlaid on the Open Captions and hard to read. If we receive sufficient feedback to leave captions as they are today (both closed or open are equally acceptable), then we will use a simple scoring rating. If we decide to not accept open captions as equivalent to closed captions, then we will give more points to closed captions than open. </p>
+
+						<p>Note that the advanced XR outcomes and metadata do not have critical errors.  This is a way that best practices can be included so that they are not punitive, but could give extra points that an organization who implements them could use to potentially raise their score.  We are interested in your feedback about this approach. </p>
+					</div></div>
+				</section>
+				
+
+				
+			</section>
+			<section class="guideline" id="structured-content">
+				<h3 id="x3-4-structured-content"><bdi class="secno">3.4 </bdi>Structured content<a class="self-link" aria-label="§" href="#structured-content"></a></h3>
+				<p class="guideline-text"><span class="inserted">Guideline: </span>Use sections, headings, and sub-headings to organize content.<span> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/how-tos/structured-content/" class="howto-link">Structured content <span>how-to</span></a></span></p>
+				<section class="outcome notoc">
+					<h4 id="headings-organize-content">Headings organize content<span class="inserted"> (outcome for <q>Structured content</q>)</span><a class="self-link" aria-label="§" href="#headings-organize-content"></a></h4>
+					<p>Organizes content into logical blocks with headings relevant to the subsequent content. This makes locating and navigating information easier and faster.</p>
+					<p> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/headings-organize-content" class="outcome-link"><span>Outcome, details, and methods for </span>Headings organize content</a></p><details class="categories">
+						<summary>Functional categories for <q>Headings organize content</q></summary>
+						<p>This outcome relates to the following functional categories:</p>
+						<ul>
+							<li>Sensory - Vision &amp; Visual </li>
+							<li>Sensory Intersections </li>
+							<li>Physical &amp; Sensory Intersections </li>
+							<li>Cognitive - Attention </li>
+							<li>Cognitive - Language &amp; Literacy </li>
+							<li>Cognitive - Memory </li>
+							<li>Cognitive - Executive </li>
+							<li>Cognitive &amp; Sensory Intersections </li>
+						</ul>
+					</details>
+					<details class="errors">
+						<summary>Critical errors for <q>Headings organize content</q></summary>	
+						<ul>
+							<li>One or more headings necessary to locate the content needed to complete a process are missing.</li>
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating for <q>Headings organize content</q></summary>
+						
+						<table class="rating-table" summary="Rating scale for &quot;Headings organize content&quot;">
+							
+							<thead>
+								<tr>
+									<th scope="col">Rating</th>
+									<th scope="col">Criteria</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Rating 0</th>
+									<td>25% or less of expected headings are present and describe the content contained in the section OR there is a <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-6" title="An accessibility problem that will stop a user from being able to complete a process.">critical error</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-6" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 1</th>
+									<td>26-50% or less of expected headings are present and describe the content contained in the section  AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-7" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-7" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 2</th>
+									<td>51-80% or less of expected headings are present and describe the content contained in the section  AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-8" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-8" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 3</th>
+									<td>81-95% or less of expected headings are present and describe the content contained in the section   AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-9" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-9" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 4</th>
+									<td>96-100% or less of expected headings are present and describe the content contained in the section  AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-10" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-10" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</details>
+				</section>
+				<section class="outcome notoc"><h4 id="uses-visually-distinct-headings">Uses visually distinct headings<span class="inserted"> (outcome for <q>Structured content</q>)</span><a class="self-link" aria-label="§" href="#uses-visually-distinct-headings"></a></h4>
+					<p>Uses visually distinct headings so sighted readers can determine the structure.</p>
+					<p> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/uses-visually-distinct-headings" class="outcome-link"><span>Outcome, details, and methods for </span>Uses visually distinct headings</a></p><details class="categories">
+						<summary>Functional categories for <q>Uses visually distinct headings</q></summary>
+						<p>This outcome relates to the following functional categories:</p>
+						<ul>
+							<li>Sensory - Vision &amp; Visual </li>
+							<li>Cognitive - Language &amp; Literacy </li>
+							<li>Cognitive - Learning</li>
+							<li>Cognitive - Memory </li>
+							<li>Cognitive - Executive </li>
+							<li>Cognitive &amp; Sensory Intersections </li>
+						</ul>
+					</details>
+					<details class="errors">
+						<summary>Critical errors for <q>Uses visually distinct headings</q></summary>	
+						<ul>
+							<li>One or more headings necessary to locate the content needed to complete a process are not visually distinct.</li>
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating for <q>Uses visually distinct headings</q></summary>
+						<table class="rating-table" summary="Rating scale for &quot;Uses visually distinct headings&quot;">
+							
+							<thead>
+								<tr>
+									<th scope="col">Rating</th>
+									<th scope="col">Criteria</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Rating 0</th>
+									<td>25% or less of headings are visually distinct OR there is a <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-11" title="An accessibility problem that will stop a user from being able to complete a process.">critical error</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-11" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 1</th>
+									<td>26-50% of headings are visually distinct  AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-12" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-12" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 2</th>
+									<td>51-75% of headings are visually distinct  AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-13" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-13" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 3</th>
+									<td>76-95% of headings are visually distinct  AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-14" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-14" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 4</th>
+									<td>96-100% of headings are visually distinct  AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-15" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-15" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</details>
+				</section>
+				<section class="outcome notoc">
+					<h4 id="conveys-hierarchy-with-semantic-structure">Conveys hierarchy with semantic structure<span class="inserted"> (outcome for <q>Structured content</q>)</span><a class="self-link" aria-label="§" href="#conveys-hierarchy-with-semantic-structure"></a></h4>
+					<p>Provides semantic structure that conveys the hierarchy to help explore and navigate the content.</p>
+					<p> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/conveys-hierarchy-with-semantic-structure" class="outcome-link"><span>Outcome, details, and methods for </span>Conveys hierarchy with semantic structure</a></p><details class="categories">
+						<summary>Functional categories for <q>Conveys hierarchy with semantic structure</q></summary>
+						<p>This outcome relates to the following functional categories:</p>
+						<ul>
+							<li>Sensory - Vision &amp; Visual </li>
+							<li>Sensory Intersections </li>
+							<li>Physical &amp; Sensory Intersections </li>
+							<li>Cognitive - Language &amp; Literacy </li>
+							<li>Cognitive &amp; Sensory Intersections </li>
+						</ul>
+					</details>
+					<details class="errors">
+						<summary>Critical errors for <q>Conveys hierarchy with semantic structure</q></summary>	
+						<ul>
+							<li>One or more headings necessary to locate the content needed to complete a process are not coded as headings.</li>
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating for <q>Conveys hierarchy with semantic structure</q></summary>
+						<table class="rating-table" summary="Rating scale for &quot;Conveys hierarchy with semantic structure&quot;">
+							
+							<thead>
+								<tr>
+									<th scope="col">Rating</th>
+									<th scope="col">Criteria</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Rating 0</th>
+									<td>25% or less are correctly semantically coded (including level) OR there is a <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-16" title="An accessibility problem that will stop a user from being able to complete a process.">critical error</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-16" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 1</th>
+									<td>26-50% or less of the visual headings are correctly semantically coded (including level) AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-17" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-17" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 2</th>
+									<td>51-80% or less of the visual headings are correctly semantically coded (including level) AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-18" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-18" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 3</th>
+									<td>81-95% or less of the visual headings are correctly semantically coded (including level) AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-19" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-19" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 4</th>
+									<td>96-100% or less of the visual headings are correctly semantically coded (including level) AND no <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-20" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> in the <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-20" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</details>
+				</section>
+				<div class="note" id="issue-container-generatedID-6"><div role="heading" class="ednote-title marker" id="h-ednote-6" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-6"></a></div><div class="">
+					<p>We included the structured content guideline as an example of an “easy” guideline that was well understood and addressed diverse disability needs. While WCAG2 addresses headings from the semantic needs of screenreader users, little has been done to directly address the needs of people with cognitive disabilities around headings.  This guideline shows how a well-known area of accessibility can address more user needs of different groups of people with disabilities.  The structured content guideline has multiple outcomes working together to cover the different aspects of accessibility needed for different categories of people with disabilities. </p>
+
+					<p>The structured content guideline began as a guideline on use of headings. Going through the content development process, we realized that it was a broader topic than simply headings, but there is little content developed beyond headings. Note that this guideline is used for prototyping, and is the most uneven in style of content.  Additional outcomes and content will be added in future drafts to make this guideline more complete.</p>
+
+					<p>Structured content guideline also shows how several WCAG 2.1 success criteria can be re-combined and include AAA level success criteria such as 2.4.10 Section Headings.  The scoring shows how the rating can be improved by including all headings, but does not fail the lack of section headings, unless that section heading is essential to accomplishing a task. We think this will allow organizations to continually improve their use of headings without failing them for what was formerly required by an AAA success criterion.</p>   
+
+					<p>We are looking for feedback on using scoring as a way to encourage adoption of AAA success criteria without failures.  Do you like the inclusion of broader needs for structured content than providing semantics for screenreader users? Do you think this should be a separate guideline, or do you like having multiple, testable outcomes supporting the guideline?  Do you like the approach of merging WCAG2 success criteria with related user needs?</p> 
+				</div></div>
+
+
+
+			</section>
+			<section class="guideline" id="visual-contrast-of-text">
+				<h3 id="x3-5-visual-contrast-of-text"><bdi class="secno">3.5 </bdi>Visual contrast of text<a class="self-link" aria-label="§" href="#visual-contrast-of-text"></a></h3>
+				<p class="guideline-text"><span class="inserted">Guideline: </span>Provide sufficient contrast between foreground text and its background.<span> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/how-tos/visual-contrast-of-text/" class="howto-link">Visual contrast of text <span>how-to</span></a></span></p>
+				<section class="outcome notoc">
+					<h4 id="luminance-contrast-between-background-and-text">Luminance contrast between background and text<span class="inserted"> (outcome for <q>Visual contrast of text</q>)</span><a class="self-link" aria-label="§" href="#luminance-contrast-between-background-and-text"></a></h4>
+					<p>Provides adequate luminance contrast between background and text colors to make the text easy to read.</p>
+					<p> <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/luminance-contrast-between-background-and-text" class="outcome-link"><span>Outcome, details, and methods for </span>Luminance contrast between background and text</a></p><details class="categories">
+						<summary>Functional categories for <q>Luminance contrast between background and text</q></summary>
+						<p>This outcome relates to the following functional categories:</p>
+						<ul>
+							<li>Sensory - Vision &amp; Visual </li>
+						</ul>
+					</details>
+					<details class="errors">
+						<summary>Critical errors for <q>Luminance contrast between background and text</q></summary>	
+						<ul>
+							<li>None.</li>
+		
+						</ul>
+					</details>
+					<details class="rating">
+						<summary>Rating for <q>Luminance contrast between background and text</q></summary>
+						<table class="rating-table" summary="Rating scale for &quot;Luminance contrast between background and text&quot;">
+							
+							<thead>
+								<tr>
+									<th scope="col">Rating</th>
+									<th scope="col">Criteria</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Rating 0</th>
+									<td>Any failures on the Advanced Perceptual Contrast Algorithm (APCA) lookup table or the lowest APCA value is more than 15% below the values on the APCA lookup table</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 1</th>
+									<td>The lowest APCA value is 10-15% below the values on the APCA lookup table</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 2</th>
+									<td>The lowest APCA value is 5-9% below the values on the APCA lookup table</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 3</th>
+									<td>The lowest APCA value is 1-4% below the values on the APCA lookup table</td>
+								</tr>
+								<tr>
+									<th scope="row">Rating 4</th>
+									<td>All reading text meets or exceeds the values on the APCA lookup table </td>
+								</tr>
+							</tbody>
+						</table>
+					</details>
+				<div class="note" id="issue-container-generatedID-7"><div role="heading" class="ednote-title marker" id="h-ednote-7" aria-level="5"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-7"></a></div><div class="">
+					<p>Visual Contrast is a migration from WCAG 2.1 with significant updates:</p>
+					<ul>
+						<li>New calculations of contrast based on more modern research on color perception.</li>
+						<li>Merging the 1.4.3 AA and 1.4.6 AAA levels into one guideline.</li>
+						<li>New test of text contrast.</li>
+						<li>At this time, it only includes textual visual contrast.</li>
+					</ul>
+				<p>We propose changing the names of <q>Contrast (Minimum)</q> and <q>Contrast (Enhanced)</q> to <q>Visual Contrast of Text</q> as a signal of a paradigm change from one about color to one about <q>perception of light intensity</q>. The reason for this change is that the understanding of contrast has matured and the available research and body of knowledge has made breakthroughs in advancing the understanding of <q>visual contrast</q>.</p>
+				<p>The proposed new guidance more accurately models current research in human visual perception of contrast and light intensity. The goal is to improve understanding of the functional needs of all users, and more effectively match the needs of those who face barriers accessing content. This new perception-based model is more context dependent than a strict light ratio measurement; results can, for example, vary with size of text and the darkness of the colors or background.</p>
+				<p>This model is more responsive to user needs and allows designers more choice in visual presentation. It does this by including multi-factor assessment tests which integrate contrast with inter-related elements of visual readability, such as font features. It includes tests to determine an upper limit of contrast, where elevated contrast may impact usability.</p>
+				<p>This outcome will eventually include a second rating approach based on the mean average APCA value for all text in a process and view based on a character count.</p>
+				</div></div>
+				</section>
+				
+			</section>
+		</section>
+		<section id="testing">
+			<h2 id="x4-testing"><bdi class="secno">4. </bdi>Testing<a class="self-link" aria-label="§" href="#testing"></a></h2><p class="normative-statement"><em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" title="Content whose instructions are required for conformance.">normative</a>.</em></p>
+			<details class="summary" role="region">
+				<summary>Plain language summary of <q>Testing</q> - What types of tests are used?</summary>
+				<p>WCAG 3.0 includes two types of tests:</p>
+					<ul><li><strong>Atomic tests:</strong> simple tests (usually of the code), like the way we test today. You use these tests to reach the bronze level.</li>
+					<li><strong>Holistic tests:</strong> usability tests and manual tests with hardware and software used by people with disabilities (assistive technologies). You use these tests to reach the silver or gold level.</li></ul>
+					<p>Some content will meet outcomes if it passes atomic tests, but that content still might not be usable by all people with disabilities. Holistic tests can help you fix that.</p>
+
+			<p class="summaryEnd">End of summary for <q>Testing</q></p></details>
+			
+			<div class="note" id="issue-container-generatedID-8"><div role="heading" class="ednote-title marker" id="h-ednote-8" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-8"></a></div><p class="">The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using holistic tests, sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p></div>
+			
+				<p>WCAG 3.0 tests and scores <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to objectively determine if the content they are evaluating satisfies the criteria.</p> 
+				<p>Testing outcomes uses both <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-1" title="All content visually and programmatically available without a substantive change.">views</a> and <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-21" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> to define what is being tested. Views include all content visually and programmatically available without a substantive change. Conceptually, it corresponds to the definition of a <q>web page</q> as used in WCAG 2.X, but is not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
+				</p>
+				<p>
+				Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-2" title="All content visually and programmatically available without a substantive change.">views</a> need to be included in the test. A process is a subset of a view or a group of views.  It includes only the sections of the view needed to accomplish the activity or task.</p>
+				<p>Examples of a process include:</p>
+					<ul>
+						<li>Logging into a site and being recognized as an authenticated user;</li>
+						<li>Ordering an item, in which case the process includes the entire set of tasks from searching for the item, adding it to the shopping cart, paying for it, and receiving confirmation;</li>
+						<li>Submitting tax information, from start to end of the process; and</li>
+						<li>Interacting with other users in a virtual reality environment.</li>
+					</ul>
+					<p>A process is comprised of one or more <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-3" title="All content visually and programmatically available without a substantive change.">views</a>.</p>
+				<section id="types-of-tests">
+				<h3 id="x4-1-types-of-tests"><bdi class="secno">4.1 </bdi>Types of tests<a class="self-link" aria-label="§" href="#types-of-tests"></a></h3>
+								
+				<p>WCAG 3.0 includes two types of tests: <a href="#atomic-tests">atomic tests</a> and <a href="#holistic-tests">holistic tests</a>. Testing the outcomes using the atomic tests might involve a combination of <a href="#dfn-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-automated-evaluation-1" title="Evaluation conducted using software tools, typically evaluating code-level features and applying heuristics for other tests.">automated evaluation</a>, <a href="#dfn-semi-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-semi-automated-evaluation-1" title="Evaluation conducted using machines to guide humans to areas that need inspection.">semi-automated evaluation</a>, and <a href="#dfn-human-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-human-evaluation-1" title="Evaluation conducted by a human, typically to apply human judgement to tests that cannot be fully automatically evaluated.">human evaluation</a>. </p>
+				
+				<p>Although content may satisfy all outcomes using the atomic tests, the content may not always be usable by people with a wide variety of disabilities. The holistic tests address this gap by evaluating more of the user experience than atomic testing.</p>
+				<div class="note" id="issue-container-generatedID-9"><div role="heading" class="ednote-title marker" id="h-ednote-9" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-9"></a></div><p class="">We are looking for more appropriate terms to distinguish between these two types of tests and welcome suggestions</p></div> 
+					<section id="atomic-tests">
+						<h4 id="x4-1-1-atomic-tests"><bdi class="secno">4.1.1 </bdi>Atomic tests<a class="self-link" aria-label="§" href="#atomic-tests"></a></h4>
+						<p>Atomic tests evaluate content, often at an <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-1" title="An item in the perceptual user experience.">object</a> level, for accessibility. Atomic tests include the existing tests that support A, AA, and AAA <a href="#dfn-success-criterion" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-success-criterion-1" title="Testable statements that compose the normative aspects of WCAG 2.">success criteria</a> in WCAG 2.X. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.X structure. In WCAG 3.0, atomic tests are used to test both processes and views. Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the atomic tests are used to reach a <a href="#bronze">Bronze</a> rating.</p>
+						<p>Atomic tests may be <a>automated</a> or <a>manual</a>. <a href="#dfn-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-automated-evaluation-2" title="Evaluation conducted using software tools, typically evaluating code-level features and applying heuristics for other tests.">Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
+					</section>
+					<section id="holistic-tests">
+						<h4 id="x4-1-2-holistic-tests"><bdi class="secno">4.1.2 </bdi>Holistic tests<a class="self-link" aria-label="§" href="#holistic-tests"></a></h4>
+						<p>Holistic tests include assistive technology testing, user-centered design methods, and both user and expert usability testing. Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected. Successful results of holistic tests are used to reach a <a href="#silver">silver</a> or <a href="#gold">gold</a> rating.</p>
+						<div class="note" id="issue-container-generatedID-10"><div role="heading" class="ednote-title marker" id="h-ednote-10" aria-level="5"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-10"></a></div><p class="">Future drafts will further explore holistic tests and provide examples as well as detail how to apply them.</p></div>
+					</section>
+
+				</section>
+				<section id="technology-specific-testing">
+				<h3 id="x4-2-technology-specific-testing"><bdi class="secno">4.2 </bdi>Technology specific testing<a class="self-link" aria-label="§" href="#technology-specific-testing"></a></h3>				
+				<p>Each outcome includes <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-2" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">methods</a> associated with different technologies. Each method contains <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-1" title="Mechanism to evaluate implementation of a method.">tests</a> and <a href="#dfn-technique" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technique-1" title="Technology-specific approach to follow a method.">techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
+				</section>
+				<div class="note" id="issue-container-generatedID-11"><div role="heading" class="ednote-title marker" id="h-ednote-11" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-11"></a></div><p class="">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.&nbsp; Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p></div>
+			</section>
+	
+			<section id="scoring">
+				<h2 id="x5-scoring"><bdi class="secno">5. </bdi>Scoring<a class="self-link" aria-label="§" href="#scoring"></a></h2><p class="normative-statement"><em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" title="Content whose instructions are required for conformance.">normative</a>.</em></p>
+
+				<details class="summary" role="region">
+					<summary>Plain language summary of <q>Scoring</q> - How are tests scored?</summary>
+					<p>Besides true/false scoring methods, we’ve included testing options for new guidance, such as rating scales.</p>
+					<p>Each outcome has a section that shows how it is scored.</p>
+				<p class="summaryEnd">End of summary for <q>Scoring</q></p></details>
+				
+				<div class="note" id="issue-container-generatedID-12"><div role="heading" class="ednote-title marker" id="h-ednote-12" aria-level="3"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-12"></a></div><p class="">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a href="#dfn-rubric" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-rubric-1" title="An approach to evaluation that defines a set of criteria for conformance and describes the result qualitatively.">rubrics</a> and <a href="#dfn-scale" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-scale-1" title="An way of reporting results of evaluation using quantitative values.">scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p></div>
+				<p>Each <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-2" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcome</a> has <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-3" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">methods</a> associated with different technologies. Each method contains <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-2" title="Mechanism to evaluate implementation of a method.">tests</a> and <a href="#dfn-technique" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technique-2" title="Technology-specific approach to follow a method.">techniques</a> for meeting that outcome.&nbsp;Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>	
+				<section id="scoring-atomic-tests">
+				<h3 id="x5-1-scoring-atomic-tests"><bdi class="secno">5.1 </bdi>Scoring atomic tests<a class="self-link" aria-label="§" href="#scoring-atomic-tests"></a></h3>
+				<p>In most cases, testing individual <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-2" title="An item in the perceptual user experience.">objects</a> will result in binary, pass / fail outcome for each element. This leads to either a pass / fail or a percentage rating depending on the test. A rating scale may be provided for some tests to allow the tester to assign a quality judgement of an element or block of content. Whether scoring is binary (pass/fail) or uses rating scales, will depend on the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. Each of these results can then be assigned a percentage or averaged to inform the overall score of an outcome.</p>
+					<p>Test results for views:</p>
+					<ul>
+						<li>Tests that results in a pass or fail condition will be assigned a 100% or 0%;</li>
+						<li>Tests at the element level that can be consistently counted will be assigned a percentage (number passed / total number of instances);</li>
+						<li>Tests that apply to content without clear boundaries will be scored using a <a>rating scale</a>. The rating scales may vary based on the test and may be presented as numeric scale, an <a href="#dfn-adjectival-rating" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-adjectival-rating-1" title="A system to report evaluation results as a set of human-understandable adjectives which represent groupings of scores.">adjectival rating</a> or a <a href="#dfn-rubric" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-rubric-2" title="An approach to evaluation that defines a set of criteria for conformance and describes the result qualitatively.">rubric</a>. Each of these can be converted into a percentage to make it easier to compare across tests.</li>
+					</ul>
+				<p>In addition, <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-21" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a> within selected processes will be identified and totaled. Any critical errors will result in score of very poor (0).</p>
+				</section>
+
+				<section id="scoring-outcomes">
+				<h3 id="x5-2-scoring-outcomes"><bdi class="secno">5.2 </bdi>Scoring outcomes<a class="self-link" aria-label="§" href="#scoring-outcomes"></a></h3>
+				<p>The results from the atomic tests are aggregated across views and used along with the number of critical errors to assign an <a href="#dfn-adjectival-rating" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-adjectival-rating-2" title="A system to report evaluation results as a set of human-understandable adjectives which represent groupings of scores.">adjectival rating</a> to the outcome. Testers will then use the guidance provided in the outcome along with reasonable judgement of the context that the errors occur in to assign an accessibility score of the outcome.</p>
+					<div class="example">
+						<p>Potential thresholds for adjectival ratings of test results:</p>
+					<dl>
+					<dt>Very Poor (0)</dt>
+					<dd>Any critical errors or less than 50% of related tests pass</dd>
+					<dt>Poor (1)</dt>
+					<dd>No critical errors, <abbr title="approximately">approx.</abbr> 50% to 79% of related tests pass</dd>
+					<dt>Fair (2)</dt>
+						<dd>No critical errors, approx. 80% to 89% of related tests pass</dd>
+					<dt>Good&nbsp;(3)</dt>
+						<dd>No critical errors, approx. 90% to 98% of related tests pass</dd>
+					<dt>Excellent (4)</dt>
+						<dd>No critical errors, approx. 99% to 100% of related tests pass</dd>
+				</dl>
+						<div class="note" role="note" id="issue-container-generatedID-13"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-13"></a></div><div class=""><p>The thresholds are different for different outcomes.</p>
+				<p>These thresholds are still being tested and adjusted. These are included as examples to gather feedback on this scoring approach.</p>
+			</div></div>
+					</div>
+				</section>
+				
+				<section id="overall-scores">
+				<h3 id="x5-3-overall-scores"><bdi class="secno">5.3 </bdi>Overall scores<a class="self-link" aria-label="§" href="#overall-scores"></a></h3>
+				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a>functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
+				
+				<div class="note" id="issue-container-generatedID-14"><div role="heading" class="ednote-title marker" id="h-ednote-13" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-14"></a></div><p class="">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number would likely shift as we continue testing.&nbsp; We invite comment on these options as well as suggestions for an alternative solution.</p></div>
+				</section>
+
+				<section id="scoring-holistic-tests">
+				<h3 id="x5-4-scoring-holistic-tests"><bdi class="secno">5.4 </bdi>Scoring holistic tests<a class="self-link" aria-label="§" href="#scoring-holistic-tests"></a></h3>			
+				<p>The points from <a href="#holistic-tests">holistic tests</a> do not affect the scores of <a href="#atomic-tests">atomic tests</a>. Rather a minimum number of holistic tests will need to be met in order to reach a <a href="#silver">silver</a> rating and additional holistic tests will be needed to reach a <a href="#gold">Gold</a> rating. Getting a silver or gold rating requires a Bronze rating.</p>
+				<div class="note" id="issue-container-generatedID-15"><div role="heading" class="ednote-title marker" id="h-ednote-14" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-15"></a></div><p class="">We continue to work on the scoring of holistic tests and will provide more details in a future iteration of this document.</p></div>
+				</section>
+		</section>
+		
+		<section id="conformance">
+			<h2 id="x6-conformance"><bdi class="secno">6. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p class="normative-statement"><em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" title="Content whose instructions are required for conformance.">normative</a>.</em></p>
+			<details class="summary" role="region">
+				<summary>Plain language summary of <q>Conformance</q></summary>
+				<p>You might want to make a claim that your content or product meets the WCAG 3.0 outcomes. If it does meet the outcomes, we call this “conformance.” To conform to WCAG 3.0, your test results must show that your project is accessible.</p>
+				<p>If you want to make a conformance claim, you must use the process described in this document. Your content can conform to WCAG 3.0, even if you don’t want to make a claim. You can still use this process to test your project’s accessibility.</p>	
+		<p class="summaryEnd">End of summary for <q>Conformance</q></p></details>
+			<section id="conformance-levels">
+				<h3 id="x6-1-conformance-levels"><bdi class="secno">6.1 </bdi>Conformance levels<a class="self-link" aria-label="§" href="#conformance-levels"></a></h3>
+				<div class="note" id="issue-container-generatedID-16"><div role="heading" class="ednote-title marker" id="h-ednote-15" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-16"></a></div><div class="">
+				<p>WCAG 3.0 includes a new conformance model in order to address a wider range of user needs, test a wider range of technologies and support new approaches to testing. There are several key goals for this new conformance model:</p>
+
+				<ol>
+					<li>Develop a scoring model that encourages websites to continue to do better and better (vs. stopping at the previous AA level);</li>
+					<li>Better reflect the lived experience of people with disabilities, who successfully use sites that have some content that does not meet WCAG 2.0 AA, or who encounter barriers with sites that meet WCAG 2.0 AA;</li>
+					<li>Allow for bugs and oversight by content authors, provided the impact of them is limited to users with disabilities.</li>
+				</ol>
+
+				<p>To do this, the conformance model prioritizes content needed to complete tasks while still testing the entire view for accessibility errors.  This priority is reflected in the scoring system, which does not allow for errors along the paths needed to complete processes but allow for some accessibility errors outside process completion.  This means that sites may conform at the lowest level (Bronze), while still containing a small amount of content that does not meet one or more guidelines, so long as that content doesn’t prevent people with disabilities from successfully using the site.</p>
+
+				<p>We seek feedback on whether this flexibility will be beneficial in encouraging content providers to meet conformance because it is more achievable or whether content providers are less likely to improve accessibility if they aren't required to. We also seek feedback on the conformance approach as a whole.</p>
+				</div></div>
+				<p>WCAG 3.0 defines three levels of conformance: <a href="#bronze">bronze</a>, <a href="#silver">silver</a>, and <a href="#gold">gold</a>.</p>
+
+				<section id="bronze">
+					<h4 id="x6-1-1-bronze"><bdi class="secno">6.1.1 </bdi>Bronze<a class="self-link" aria-label="§" href="#bronze"></a></h4>
+					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. The bronze level can be verified using <a href="#atomic-tests">atomic tests</a>. While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
+					<p>For content that conforms to the bronze level:</p>
+					<ul>
+						<li>The total score and score within each of the functional categories <em class="rfc2119">MUST</em> be at least 3.5; and</li>
+						<li><a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-4" title="All content visually and programmatically available without a substantive change.">Views</a> and <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-22" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> <em class="rfc2119">MUST NOT</em> have <a href="#dfn-critical-error" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-critical-error-22" title="An accessibility problem that will stop a user from being able to complete a process.">critical errors</a>.</li>
+					</ul>
+					<p>Conformance to this specification at the bronze level does not mean every requirement in every guideline is fully met. Bronze level means that the content in scope does have any critical errors and meets the minimum percentage of @@</p>
+				</section>
+				<section id="silver">
+					<h4 id="x6-1-2-silver"><bdi class="secno">6.1.2 </bdi>Silver<a class="self-link" aria-label="§" href="#silver"></a></h4>
+					<p>Silver is a higher conformance level that addresses additional outcomes. Some <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
+					<p>For content that conforms to the silver level:</p>
+					<ul>
+						<li>All <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-5" title="All content visually and programmatically available without a substantive change.">views</a> <em class="rfc2119">MUST</em> satisfy the <a href="#bronze">Bronze</a> criteria; and</li>
+						<li>Use of holistic tests to meet this level will be further explored in future drafts</li>
+					</ul>
+				</section>
+				<section id="gold">
+					<h4 id="x6-1-3-gold"><bdi class="secno">6.1.3 </bdi>Gold<a class="self-link" aria-label="§" href="#gold"></a></h4>
+					<p>Gold is the highest conformance level that addresses the remaining outcomes described in the guidelines. Additional <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
+					<p>For content that conforms to the gold level:</p>
+					<ul>
+						<li>All <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-6" title="All content visually and programmatically available without a substantive change.">views</a> <em class="rfc2119">MUST</em> satisfy the <a href="#silver">Silver</a> criteria; and</li>
+						<li>Use of holistic tests to meet this level will be further explored in future drafts</li>
+					</ul>
+				</section>
+			</section>
+			<section id="conforming-alternative-version">
+				<h3 id="x6-2-conforming-alternative-version"><bdi class="secno">6.2 </bdi>Conforming alternative version<a class="self-link" aria-label="§" href="#conforming-alternative-version"></a></h3>
+				<div class="note" id="issue-container-generatedID-17"><div role="heading" class="ednote-title marker" id="h-ednote-16" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-17"></a></div><p class="">For this first draft, the Accessibility Guidelines Working Group has focused on the basic conformance model. For a next draft, we will explore how <a href="https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version">conforming alternative versions</a> fit into the new conformance model.</p></div>
+			</section>
+			<section id="only-accessibility-supported-ways-of-using-technologies">
+				<h3 id="x6-3-only-accessibility-supported-ways-of-using-technologies"><bdi class="secno">6.3 </bdi>Only accessibility-supported ways of using technologies<a class="self-link" aria-label="§" href="#only-accessibility-supported-ways-of-using-technologies"></a></h3>
+				<div class="note" id="issue-container-generatedID-18"><div role="heading" class="ednote-title marker" id="h-ednote-17" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-18"></a></div><p class="">For this first draft, the Accessibility Guidelines Working Group has focused on the basic conformance model. For a next draft, we will explore how <a href="https://www.w3.org/TR/WCAG21/#cc4">accessibility-supported</a> fits into the new conformance model.</p></div>
+			</section>
+			<section id="defining-conformance-scope">
+				<h3 id="x6-4-defining-conformance-scope"><bdi class="secno">6.4 </bdi>Defining conformance scope<a class="self-link" aria-label="§" href="#defining-conformance-scope"></a></h3>
+				<p>When evaluating the accessibility of content, WCAG 3.0 requires the outcomes apply to a specific scope. While the scope can be an all content within a digital product, it is usually one or more sub-sets of the whole. Reasons for this include:</p>
+				<ul>
+					<li>Large amounts of content are impractical to evaluate comprehensively using anything beyond <a href="#dfn-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-automated-evaluation-3" title="Evaluation conducted using software tools, typically evaluating code-level features and applying heuristics for other tests.">automated evaluation</a> of <a href="#atomic-tests">atomic tests</a>;</li>
+					<li>In many cases, content changes frequently, causing evaluation to be accurate only for a specific moment in time;</li>
+					<li>Some content is more important to the majority of users than other content; and</li>
+					<li>Content that mostly meets the requirements but has problems can interfere with the user's ability to complete a process begun elsewhere.</li>
+				</ul>
+				<p>WCAG 3.0 therefore defines two inter-related ways to scope content: <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-7" title="All content visually and programmatically available without a substantive change.">views</a> and <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-23" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a>. Evaluation is done on one or more complete views or processes, and conformance is determined on the basis of one or more complete views or processes. </p>
+
+				<p>Conformance is defined only for <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-24" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> and <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-8" title="All content visually and programmatically available without a substantive change.">views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.&nbsp; All unique steps in a process <em class="rfc2119">MUST</em> be represented in the set of views. Views outside of the process <em class="rfc2119">MAY</em> also be included in the scope.</p>
+				<div class="note" id="issue-container-generatedID-19"><div role="heading" class="ednote-title marker" id="h-ednote-18" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-19"></a></div><p class="">The AG WG and Silver Task Force recognize that representative sampling is an important strategy that large and complex sites use to assess accessibility. While it is not addressed within this document at this time, our intent is to later address it within this document or in a separate document before the guidelines reach the Candidate Recommendation stage. We welcome your suggestions and feedback about the best way to incorporate representative sampling in WCAG 3.0.</p></div>
+			</section>
+			<section id="conformance-requirements">
+				<h3 id="x6-5-conformance-requirements"><bdi class="secno">6.5 </bdi>Conformance requirements<a class="self-link" aria-label="§" href="#conformance-requirements"></a></h3>
+				<p>In order for technology to <a>conform</a> to WCAG 3.0, the following conformance requirements apply:</p>
+				<ol>
+					<li><b>Conformance level</b> - Content <em class="rfc2119">MUST</em> meet the requirements of the selected <a href="#conformance-levels">conformance level</a>.</li>
+					<li><b>Processes and views</b> - Conformance (and conformance level) <em class="rfc2119">MUST</em> apply to complete <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-25" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">processes</a> and <a href="#dfn-view" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-view-9" title="All content visually and programmatically available without a substantive change.">views</a>, and <em class="rfc2119">MUST NOT</em> exclude any part of a process or view.</li>
+				</ol>
+			</section>
+			<section id="conformance-claims">
+				<h3 id="x6-6-conformance-claims"><bdi class="secno">6.6 </bdi>Conformance claims<a class="self-link" aria-label="§" href="#conformance-claims"></a></h3>
+				<p>Conformance claims are not required. Authors can conform to WCAG 3.0 without making a claim. The material below describes how to make a conformance claim if that option is chosen.</p>
+				<section id="required-components-of-a-conformance-claim"><h4 id="x6-6-1-required-components-of-a-conformance-claim"><bdi class="secno">6.6.1 </bdi>Required components of a conformance claim<a class="self-link" aria-label="§" href="#required-components-of-a-conformance-claim"></a></h4><p>A conformance claim <em class="rfc2119">MUST</em> include the following information:</p><ol>
+						<li><b>Date</b> of the claim;</li>
+						<li><b>Guidelines title, version and URI</b>
+							<q><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines 3.0 at ???</q></li>
+						<li><b>Conformance level</b> satisfied: (bronze, silver, or gold);</li>
+						<li><b>A concise description of the views and processes</b>, such as a list of URIs for which the claim is made, including any state changes which lead to a new view; and</li>
+						<li>The technology including the hardware, software, and assistive technology used to test the claim.</li>
+						</ol>
+				</section>
+				<section id="example-conformance-claim">
+					<h4 id="x6-6-2-example-conformance-claim"><bdi class="secno">6.6.2 </bdi>Example conformance claim<a class="self-link" aria-label="§" href="#example-conformance-claim"></a></h4>
+					<p>On 12 August 2020, the following 10 views and 2 processes conform to WCAG 3.0 at a bronze level. Processes were selected because they are the most common activities on the site and include 4 unique views. The other 6 views are the most commonly used.</p>
+					<ul>
+						<li>Process 1: Order Newsletter (<a href="http://www.example.com">www.example.com</a>, www.example.com/newsletter)</li>
+						<li>Process 2: Comment on Blog Post (<a href="http://www.example.com">www.example.com</a>, <a href="http://www.example.com/blog">www.example.com/blog</a>, <a href="http://www.example.com/blog">www.example.com/blog</a> (with comment model open)</li>
+						<li><a href="http://www.example.com/contact">www.example.com/contact</a></li>
+						<li><a href="http://www.example.com/search_results">www.example.com/search_results</a></li>
+						<li><a href="http://www.example.com/recent_news">www.example.com/recent_news</a></li>
+						<li><a href="http://www.example.com/about">www.example.com/about</a></li>
+						<li><a href="http://www.example.com/leadership">www.example.com/leadership</a></li>
+						<li><a href="http://www.example.com/learnmore">www.example.com/learn_more</a></li>
+					</ul>
+					<p>These were tested using Firefox and Chrome on a Windows platform. The assistive technology used included JAWS and Dragon.</p>
+				</section>
+			</section>
+		</section>
+		<section id="glossary">
+			<h2 id="x7-glossary"><bdi class="secno">7. </bdi>Glossary<a class="self-link" aria-label="§" href="#glossary"></a></h2><p class="normative-statement"><em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" title="Content whose instructions are required for conformance.">normative</a>.</em></p>
+			<div class="note" role="note" id="issue-container-generatedID-20"><div role="heading" class="note-title marker" id="h-note-0" aria-level="3"><span>Note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-20"></a></div><p class="">Many of the terms defined here have common meanings. When terms appear with a link to the definition, the meaning is as formally defined here. When terms appear without a link to the definition, their meaning is not explicitly related to the formal definition here. These definitions are in progress and may evolve as the document evolves. </p></div>
+			<dl>
+				<dt><dfn data-lt="Adjectival rating" id="dfn-adjectival-rating" tabindex="0" aria-haspopup="dialog">Adjectival rating</dfn></dt>
+				<dd><p>A system to report evaluation results as a set of human-understandable adjectives which represent
+						groupings of scores.</p></dd>
+				<dt><dfn data-lt="Automated
+						evaluation" id="dfn-automated-evaluation" tabindex="0" aria-haspopup="dialog">Automated
+						evaluation</dfn></dt>
+				<dd><p>Evaluation conducted using software tools, typically evaluating code-level features and applying
+						heuristics for other tests.</p>
+					<p>Automated testing is contrasted with other types of testing that involve human judgement or
+						experience. <a href="#dfn-semi-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-semi-automated-evaluation-2" title="Evaluation conducted using machines to guide humans to areas that need inspection.">Semi-automated evaluation</a> allows machines to guide humans
+						to areas that need inspection. The emerging field of testing conducted via
+						machine learning is not included in this definition.</p></dd>
+				<dt><dfn data-lt="Conformance" id="dfn-conformance" tabindex="0" aria-haspopup="dialog">Conformance</dfn></dt>
+				<dd><p>Satisfying all the requirements of the guidelines. Conformance is an important part of following
+						the guidelines even when not making a formal Conformance Claim.</p>
+					<p>See <a href="#conformance">Conformance</a>.</p></dd>
+				<dt><dfn data-lt="Critical error" data-plurals="critical errors" id="dfn-critical-error" tabindex="0" aria-haspopup="dialog">Critical error</dfn></dt>
+				<dd>
+					<p>An accessibility problem that will stop a user from being able to complete a
+						process.</p><p>Critical errors include:</p>
+					<ul>
+						<li>Items that will stop a user from being able to complete the task if it exists anywhere on
+							the view (examples: flashing, keyboard trap, audio with no pause);</li>
+						<li>Errors that when located within a process means the process cannot be completed (example:
+							submit button not in tab order);</li>
+						<li>Errors that when aggregated within a view or across a process cause failure (example: a
+							large amount of confusing, ambiguous language).</li>
+					</ul>
+					</dd>
+				<dt><dfn data-lt="Deprecate" id="dfn-deprecate" tabindex="0" aria-haspopup="dialog">Deprecate</dfn></dt>
+				<dd>
+					<p>To declare something outdated and in the process of being phased out, usually in favor of a specified replacement.</p>
+					<p>Deprecated documents are no longer recommended for use and may cease to exist in the future.</p>
+				</dd>
+				<dt><dfn data-lt="Evaluation" id="dfn-evaluation" tabindex="0" aria-haspopup="dialog">Evaluation</dfn></dt>
+				<dd>The process of examining content for <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-2" title="Satisfying all the requirements of the guidelines. Conformance is an important part of following the guidelines even when not making a formal Conformance Claim.">conformance</a> to these
+					guidelines.</dd>
+				<dd>Different approaches to evaluation include automated <a href="#dfn-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-evaluation-1" title="conformance">evaluation</a>,
+						<a href="#dfn-semi-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-semi-automated-evaluation-3" title="Evaluation conducted using machines to guide humans to areas that need inspection.">semi-automated evaluation</a>, <a href="#dfn-human-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-human-evaluation-2" title="Evaluation conducted by a human, typically to apply human judgement to tests that cannot be fully automatically evaluated.">human evaluation</a>, and <a href="#dfn-user-testing" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-testing-1" title="Evaluation of content by observation of how users with specific functional needs are able to complete a process and how the content meets the relevant outcomes.">user
+						testing</a>.</dd>
+				<dt><dfn data-lt="Functional category" id="dfn-functional-category" tabindex="0" aria-haspopup="dialog">Functional category</dfn></dt>
+				<dd><p>A conceptual grouping of <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-1" title="A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.">functional needs</a> that represent generalized sets of user
+						groups.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#functional-categories">Functional Categories</a>.</p></dd>
+				<dt><dfn data-lt="Functional need" data-plurals="functional needs" id="dfn-functional-need" tabindex="0" aria-haspopup="dialog">Functional need</dfn></dt>
+				<dd>
+					<p>A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p>
+				</dd>
+				<dt><dfn data-lt="Guideline" id="dfn-guideline" tabindex="0" aria-haspopup="dialog">Guideline</dfn></dt>
+				<dd>
+					<p>High-level, plain-language content used to organize <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-3" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcomes</a>.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#guidelines-structure">Guidelines</a> in the Explainer.</p>
+				</dd>
+				<dt><dfn data-lt="How-to" id="dfn-how-to" tabindex="0" aria-haspopup="dialog">How-to</dfn></dt>
+				<dd>
+					<p>Provides explanatory material for each guideline that applies across technologies.</p>
+					<p>This plain language resource includes information on getting started, who the guideline helps and how, as well as information for designers and developers.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#how-tos">How-tos</a> in the Explainer.</p>
+				</dd>
+				<dt><dfn data-lt="Human evaluation" id="dfn-human-evaluation" tabindex="0" aria-haspopup="dialog">Human evaluation</dfn></dt>
+				<dd>
+					<p>Evaluation conducted by a human, typically to apply human judgement to tests
+						that cannot be fully <a>automatically evaluated</a>.</p>
+					<p>Human evaluation is contrasted with <a href="#dfn-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-automated-evaluation-4" title="Evaluation conducted using software tools, typically evaluating code-level features and applying heuristics for other tests.">automated evaluation</a> which is done entirely by
+						machine, though it includes <a href="#dfn-semi-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-semi-automated-evaluation-4" title="Evaluation conducted using machines to guide humans to areas that need inspection.">semi-automated evaluation</a> which allows
+						machines to guide humans to areas that need inspection. Human evaluation
+						involves inspection of content features, by contrast with <a href="#dfn-user-testing" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-testing-2" title="Evaluation of content by observation of how users with specific functional needs are able to complete a process and how the content meets the relevant outcomes.">user
+							testing</a> which directly tests the experience of users with
+						content.</p></dd>
+				<dt><dfn data-lt="Informative" id="dfn-informative" tabindex="0" aria-haspopup="dialog">Informative</dfn></dt>
+				<dd>
+					<p>Content provided for information purposes and not required for <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-3" title="Satisfying all the requirements of the guidelines. Conformance is an important part of following the guidelines even when not making a formal Conformance Claim.">conformance</a>.</p>
+					<div class="note" role="note" id="issue-container-generatedID-21"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-21"></a></div><p class="">Content required for <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-4" title="Satisfying all the requirements of the guidelines. Conformance is an important part of following the guidelines even when not making a formal Conformance Claim.">conformance</a> is referred to as <q><a href="#dfn-normative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-normative-2" title="Content whose instructions are required for conformance.">normative</a></q>.</p></div>
+				</dd>
+				<dt><dfn data-lt="Method" data-plurals="methods" id="dfn-method" tabindex="0" aria-haspopup="dialog">Method</dfn></dt>
+				<dd>
+					<p>Detailed information, either technology-specific or technology-agnostic, on ways to meet the <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-4" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcome</a> as well as <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-3" title="Mechanism to evaluate implementation of a method.">tests</a> and scoring information.</p>
+					<p>See <a href="https://w3c.github.io/silver/explainer/#methods-structure">Methods</a> in the Explainer.</p>
+				</dd>
+				<dt><dfn data-lt="Normative" id="dfn-normative" tabindex="0" aria-haspopup="dialog">Normative</dfn></dt>
+				<dd>
+					<p>Content whose instructions are required for <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-5" title="Satisfying all the requirements of the guidelines. Conformance is an important part of following the guidelines even when not making a formal Conformance Claim.">conformance</a>.</p>
+					<div class="note" role="note" id="issue-container-generatedID-22"><div role="heading" class="note-title marker" id="h-note-2" aria-level="3"><span>Note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-22"></a></div><p class="">Content identified as <q><a href="#dfn-informative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-informative-2" title="Content provided for information purposes and not required for conformance.">informative</a></q> or <q>non-normative</q> is never required for conformance.</p></div>
+				</dd>
+				<dt><dfn data-lt="Object" data-plurals="objects" id="dfn-object" tabindex="0" aria-haspopup="dialog">Object</dfn></dt>
+				<dd><p>An item in the perceptual user experience.</p>
+					<p>Objects include user interface widgets and identifiable blocks of
+						content.</p></dd>
+				<dt><dfn data-lt="Outcome" data-plurals="outcomes" id="dfn-outcome" tabindex="0" aria-haspopup="dialog">Outcome</dfn></dt>
+				<dd>
+					<p>Result of practices that reduce or eliminate barriers that people with disabilities experience.</p>
+					<p>See <a href="#outcomes">Outcomes</a>.</p>
+				</dd>
+				<dt><dfn data-lt="Process" data-plurals="processes" id="dfn-process" tabindex="0" aria-haspopup="dialog">Process</dfn></dt>
+				<dd><p>A sequence of steps that need to be completed in order to accomplish an activity / task from
+						end-to-end.</p></dd>
+				<dt><dfn data-lt="Rubric" data-plurals="rubrics" id="dfn-rubric" tabindex="0" aria-haspopup="dialog">Rubric</dfn></dt>
+				<dd><p>An approach to <a href="#dfn-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-evaluation-2" title="conformance">evaluation</a> that defines a set of criteria for conformance and describes the
+						result qualitatively.</p></dd>
+				<dt><dfn data-lt="Scale" data-plurals="scales" id="dfn-scale" tabindex="0" aria-haspopup="dialog">Scale</dfn></dt>
+				<dd><p>An way of reporting results of <a href="#dfn-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-evaluation-3" title="conformance">evaluation</a> using quantitative values.</p></dd>
+				<dt><dfn data-lt="Semi-Automated Evaluation" id="dfn-semi-automated-evaluation" tabindex="0" aria-haspopup="dialog">Semi-Automated Evaluation</dfn></dt>
+				<dd>
+					<p>Evaluation conducted using machines to guide humans to areas that need
+						inspection.</p>
+					<p>Semi-automated evaluation involves components of <a href="#dfn-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-automated-evaluation-5" title="Evaluation conducted using software tools, typically evaluating code-level features and applying heuristics for other tests.">automated evaluation</a>
+						and <a href="#dfn-human-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-human-evaluation-3" title="Evaluation conducted by a human, typically to apply human judgement to tests that cannot be fully automatically evaluated.">human evaluation</a>.</p>
+				</dd>
+				<dt><dfn data-lt="Success criterion" data-plurals="success criteria" id="dfn-success-criterion" tabindex="0" aria-haspopup="dialog">Success criterion</dfn></dt>
+				<dd><p>Testable statements that compose the <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-normative-3" title="Content whose instructions are required for conformance.">normative</a> aspects of WCAG 2.</p>
+					<p>The closest counterpart to success criteria in WCAG 3 are <a href="#outcomes">outcomes</a>.</p></dd>
+				<dt><dfn data-lt="Test" data-plurals="tests" id="dfn-test" tabindex="0" aria-haspopup="dialog">Test</dfn></dt>
+				<dd>
+					<p>Mechanism to evaluate implementation of a <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-4" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">method</a>.</p>
+					<p>Tests can include true / false evaluation or various types of rating scales as appropriate for the <a href="#dfn-guideline" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-guideline-2" title="High-level, plain-language content used to organize outcomes.">guideline</a>, <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-5" title="Result of practices that reduce or eliminate barriers that people with disabilities experience.">outcome</a>, or technology.</p>
+				</dd>
+				<dt><dfn data-lt="Technique" data-plurals="techniques" id="dfn-technique" tabindex="0" aria-haspopup="dialog">Technique</dfn></dt>
+				<dd>
+					<p>Technology-specific approach to follow a <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-5" title="Detailed information, either technology-specific or technology-agnostic, on ways to meet the outcome as well as tests and scoring information.">method</a>.</p>
+				</dd>
+				<dt><dfn data-lt="Text alternative" id="dfn-text-alternative" tabindex="0" aria-haspopup="dialog">Text alternative</dfn></dt>
+				<dd>   
+					   <p>Text that is programmatically associated with non-text content or referred to from text that is programmatically associated with non-text content.
+					      Programmatically associated text is text whose location can be programmatically determined
+					      from the non-text content.
+					   </p>
+					   
+					   <p class="example">An image of a chart is described in text in the paragraph after the chart. The short
+					      text alternative for the chart indicates that a description follows.
+					   </p>
+					   
+					</dd>
+				<dt><dfn data-lt="User need" data-plurals="user needs" id="dfn-user-need" tabindex="0" aria-haspopup="dialog">User need</dfn></dt>
+				<dd><p>The end goal a user has when starting a process through digital means.</p></dd>
+				<dt><dfn data-lt="User testing" id="dfn-user-testing" tabindex="0" aria-haspopup="dialog">User testing</dfn></dt>
+				<dd>
+					<p>Evaluation of content by observation of how users with specific <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-2" title="A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.">functional needs</a> are able to complete a <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-26" title="A sequence of steps that need to be completed in order to accomplish an activity / task from end-to-end.">process</a> and how the content meets the relevant <a href="#outcomes">outcomes</a>.</p>
+				</dd>
+				<dt><dfn data-lt="View" data-plurals="views" id="dfn-view" tabindex="0" aria-haspopup="dialog">View</dfn></dt>
+				<dd><p>All content visually and programmatically available without a substantive change.</p>
+					<p>Views vary based on the technology being tested. While these guidelines provide guidance on scoping a view, the tester will determine what constitutes a view, and describe it. Views will often vary by technology.&nbsp;Views typically include state permutations that are based on that view such as dialogs and alerts, but some states may deserve to be treated as separate views.</p></dd>
+				<dt><dfn data-lt="Visual Contrast" id="dfn-visual-contrast" tabindex="0" aria-haspopup="dialog">Visual Contrast</dfn></dt>
+				<dd><p>The combination of foreground and background colors along with font weight and size that make text readable.</p>
+					</dd>
+			</dl>
+		</section>
+		<section class="appendix" id="guidelines-development-methodology">
+			<h2 id="a-guidelines-development-methodology"><bdi class="secno">A. </bdi>Guidelines development methodology<a class="self-link" aria-label="§" href="#guidelines-development-methodology"></a></h2>
+		</section>
+		<section class="appendix" id="differences-from-wcag-2">
+			<h2 id="b-differences-from-wcag-2"><bdi class="secno">B. </bdi>Differences from WCAG 2<a class="self-link" aria-label="§" href="#differences-from-wcag-2"></a></h2>
+			<section id="outcomes">
+				<h3 id="b-1-outcomes"><bdi class="secno">B.1 </bdi>Outcomes<a class="self-link" aria-label="§" href="#outcomes"></a></h3>
+				<p>Outcomes are different from WCAG 2.X success criteria. Compared to success criteria, outcomes are written to be:</p>
+				<ul>
+					<li>In plain language;&nbsp;</li>
+					<li>More understandable by people who are not experts in technology;</li>
+					<li>More user-need oriented instead of technology oriented;</li>
+					<li>More granular, so there will be more of them; and</li>
+					<li>More flexible to allow more tests than the true/false statements of WCAG 2.X.&nbsp;</li>
+				</ul>
+				<p>The design of outcomes allows more varied needs of people with disabilities than could have been included in WCAG 2.X.&nbsp;</p>
+				<p>Methods map approximately to WCAG 2.X Techniques documents.</p>
+			</section>
+			<section id="approximate-mapping-of-wcag-2-and-wcag-3-documentation">
+				<h3 id="b-2-approximate-mapping-of-wcag-2-and-wcag-3-documentation"><bdi class="secno">B.2 </bdi>Approximate mapping of WCAG 2 and WCAG 3 documentation<a class="self-link" aria-label="§" href="#approximate-mapping-of-wcag-2-and-wcag-3-documentation"></a></h3>
+
+				<table>
+					<tbody>
+						<tr>
+							<th scope="col"> WCAG 2</th>
+							<th scope="col"> WCAG 3</th>
+						</tr>
+						<tr>
+							<td>Success Criteria</td>
+							<td>Outcomes</td>
+						</tr>
+						<tr>
+							<td>Techniques</td>
+							<td>Methods</td>
+						</tr>
+						<tr>
+							<td>Understanding</td>
+							<td>How-to</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+		<section class="appendix" id="change-log">
+			<h2 id="c-change-log"><bdi class="secno">C. </bdi>Change log<a class="self-link" aria-label="§" href="#change-log"></a></h2>
+		</section>
+		<section class="appendix" id="acknowledgements">
+			<h2 id="d-acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2>
+			<section id="participants-who-made-notable-contributions-to-the-creation-of-this-document">
+<h3 id="d-1-participants-who-made-notable-contributions-to-the-creation-of-this-document"><bdi class="secno">D.1 </bdi>Participants who made notable contributions to the creation of this document<a class="self-link" aria-label="§" href="#participants-who-made-notable-contributions-to-the-creation-of-this-document"></a></h3>
+	<div class="note" id="issue-container-generatedID-23"><div role="heading" class="ednote-title marker" id="h-ednote-19" aria-level="4"><span>Editor's note</span><a class="self-link" aria-label="§" href="#issue-container-generatedID-23"></a></div><p class="">
+		This section is intended to document participants who made notable contributions. The method of identifying these individuals is in process and a list should be included in the next draft and updated for each subsequent draft.
+	</p></div>
+</section>
+			<section id="participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-this-document">
+	<h3 id="d-2-participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-this-document"><bdi class="secno">D.2 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to this document<a class="self-link" aria-label="§" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-this-document"></a></h3>
+	<ul>
+		<li>Jake Abma</li>
+		<li>Charles Adams</li>
+		<li>Jennison Asuncion</li>
+		<li>Bruce Bailey</li>
+		<li>Frederick Boland</li>
+		<li>Omar Bonilla</li>
+		<li>Alice Boxhall</li>
+		<li>Shari Butler</li>
+		<li>Sheri Byrne-Haber</li>
+		<li>Jennifer Chadwick</li>
+		<li>Wendy Chisholm</li>
+		<li>Victoria Clark</li>
+		<li>Kelsey Collister</li>
+		<li>Joshue O Connor</li>
+		<li>Michael Cooper</li>
+		<li>Michael Crabb</li>
+		<li>Joe Cronin</li>
+		<li>Kim Dirks</li>
+		<li>David Fazio</li>
+		<li>Wilco Fiers</li>
+		<li>Detlev Fischer</li>
+		<li>John Foliot</li>
+		<li>Luis Garcia</li>
+		<li>Lucy Greco</li>
+		<li>Charles Hall</li>
+		<li>Ryan Hemphill</li>
+		<li>Katharina Herzog</li>
+		<li>Scott Hollier</li>
+		<li>Angela Hooker</li>
+		<li>Sarah Horton</li>
+		<li>Matthew King</li>
+		<li>Andrew Kirkpatrick</li>
+		<li>John Kirkwood</li>
+		<li>Peter Korn</li>
+		<li>JaEun Ku</li>
+		<li>Shawn Lauriat</li>
+		<li>Michellanne Li</li>
+		<li>Todd Libby</li>
+		<li>Imelda Llanos</li>
+		<li>Thomas Logan</li>
+		<li>Eleanor Loiacono</li>
+		<li>Chris Loiselle</li>
+		<li>David MacDonald</li>
+		<li>John McNabb</li>
+		<li>Peter McNally</li>
+		<li>Jan McSorley</li>
+		<li>Rachael Montgomery</li>
+		<li>Mary Jo Mueller</li>
+		<li>Lyn Muldrow</li>
+		<li>Charles Nevile</li>
+		<li>Christy Owens</li>
+		<li>Kimberly Patch</li>
+		<li>Christian Perera</li>
+		<li>Melanie Philipp</li>
+		<li>Jill Power</li>
+		<li>Sarah Pulis</li>
+		<li>John Rochford</li>
+		<li>Abi Roper</li>
+		<li>Cybele Sack</li>
+		<li>Shrirang Sahasrabudhe</li>
+		<li>Janina Sajka</li>
+		<li>Karen Schriver</li>
+		<li>Stein Erik Skotkjerra</li>
+		<li>David Sloan</li>
+		<li>Andrew Somers</li>
+		<li>Jeanne Spellman</li>
+		<li>Ruth Spina</li>
+		<li>Francis Storr</li>
+		<li>David Swallow</li>
+		<li>Mark Tanner</li>
+		<li>Suzanne Taylor</li>
+		<li>Makoto Ueki</li>
+		<li>sweta wakodkar</li>
+		<li>Takayuki Watanabe</li>
+		<li>Léonie Watson</li>
+		<li>Thomas Westin</li>
+	</ul>
+</section>
+
+			<section id="participants-of-the-accessibility-guidelines-working-group-who-reviewed-this-document">
+	<h3 id="d-3-participants-of-the-accessibility-guidelines-working-group-who-reviewed-this-document"><bdi class="secno">D.3 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed this document<a class="self-link" aria-label="§" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-this-document"></a></h3>
+	<ul>
+		<li>Jake Abma</li>
+		<li>Shadi Abou-Zahra</li>
+		<li>Chuck Adams</li>
+		<li>Amani Ali</li>
+		<li>Jim Allan</li>
+		<li>Paul Adam</li>
+		<li>Jon Avila</li>
+		<li>Bruce Bailey</li>
+		<li>Garenne Bigby</li>
+		<li>Judy Brewer</li>
+		<li>Shari Butler</li>
+		<li>Alastair Campbell</li>
+		<li>Laura Carlson</li>
+		<li>Pietro Cirrincione</li>
+		<li>Michael Cooper</li>
+		<li>Jennifer Delisi</li>
+		<li>Wayne Dick</li>
+		<li>Kim Dirks</li>
+		<li>Shwetank Dixit</li>
+		<li>Nicaise Dogbo</li>
+		<li>E.A. Draffan</li>
+		<li>Michael Elledge</li>
+		<li>David Fazio</li>
+		<li>Wilco Fiers</li>
+		<li>Detlev Fischer</li>
+		<li>John Foliot</li>
+		<li>Betsy Furler</li>
+		<li>Matt Garrish</li>
+		<li>Alistair Garrison</li>
+		<li>Michael Gower</li>
+		<li>Charles Hall</li>
+		<li>Katie Haritos-Shea</li>
+		<li>Andy Heath</li>
+		<li>Shawn Henry</li>
+		<li>Sarah Horton</li>
+		<li>Abi James</li>
+		<li>Marc Johlic</li>
+		<li>Andrew Kirkpatrick</li>
+		<li>John Kirkwood</li>
+		<li>Peter Korn</li>
+		<li>JaEun Ku</li>
+		<li>Patrick Lauke</li>
+		<li>Shawn Lauriat</li>
+		<li>Steve Lee</li>
+		<li>Chris Loiselle</li>
+		<li>Greg Lowney</li>
+		<li>David MacDonald</li>
+		<li>Chris McMeeking</li>
+		<li>Jan McSorley</li>
+		<li>Melina Möhnle</li>
+		<li>Rachael Montgomery</li>
+		<li>Mary Jo Mueller</li>
+		<li>Gundula Niemann</li>
+		<li>Brooks Newton</li>
+		<li>Caryn Pagel</li>
+		<li>Justine Pascalides</li>
+		<li>Kim Patch</li>
+		<li>Melanie Philipp</li>
+		<li>Ruoxi Ran</li>
+		<li>Stephen Repsher</li>
+		<li>John Rochford</li>
+		<li>Cybele Sack</li>
+		<li>Janina Sajka</li>
+		<li>Lisa Seeman-Kestenbaum</li>
+		<li>Glenda Sims</li>
+		<li>Avneesh Singh</li>
+		<li>Andrew Somers</li>
+		<li>Jaeil Song</li>
+		<li>Jeanne Spellman</li>
+		<li>Makoto Ueki</li>
+		<li>Kathleen Wahlbin</li>
+		<li>Léonie Watson</li>
+	</ul>
+</section>
+
+			<section id="research-partners">
+	<h3 id="d-4-research-partners"><bdi class="secno">D.4 </bdi>Research Partners<a class="self-link" aria-label="§" href="#research-partners"></a></h3>
+	<p>These researchers selected a Silver research question, did the research, and graciously allowed us to use the results.</p>
+	<ul>
+		<li>David Sloan and Sarah Horton, The Paciello Group, <q>WCAG Success Criteria Usability Study</q></li>
+		<li>Scott Hollier et al, Curtin University, <q>Internet of Things (IoT) Education: Implications for Students with Disabilities</q></li>
+		<li>Peter McNally, Bentley University, <q>WCAG Use by UX Professionals</q></li>
+		<li>Dr. Michael Crabb, University of Dundee, Student research papers on Silver topics</li>
+		<li>Eleanor Loiacono, Worcester Polytechnic Institute <q>Web Accessibility Perceptions</q> (Student project from Worcester Polytechnic Institute)</li>
+	</ul>
+</section>
+
+			<section id="enabling-funders">
+	<h3 id="d-5-enabling-funders"><bdi class="secno">D.5 </bdi>Enabling funders<a class="self-link" aria-label="§" href="#enabling-funders"></a></h3>
+	<p>This publication has been funded in part with U.S. Federal funds from the Health and Human Services, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR), initially under contract number ED-OSE-10-C-0067 and now under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Health and Human Services or the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+</section>
+		</section>
+	
+
+<section id="references" class="appendix"><h2 id="e-references"><bdi class="secno">E. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
+    <h3 id="e-1-informative-references"><bdi class="secno">E.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <dl class="bibliography"><dt id="bib-atag20">[ATAG20]</dt><dd><a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a></dd><dt id="bib-coga-usable">[coga-usable]</dt><dd><a href="https://www.w3.org/TR/coga-usable/"><cite>Making Content Usable for People with Cognitive and Learning Disabilities</cite></a>. Lisa Seeman-Kestenbaum; Rachael Montgomery; Steve Lee; Ruoxi Ran.  W3C. 17 July 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-uaag20">[UAAG20]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al.  W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></dd><dt id="bib-wcag22">[WCAG22]</dt><dd><a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Charles Adams; Alastair Campbell; Rachael Montgomery; Michael Cooper; Andrew Kirkpatrick.  W3C. 11 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a></dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-adjectival-rating" aria-label="Links in this document to definition: Adjectival rating" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-adjectival-rating" aria-label="Permalink for definition: Adjectival rating. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-adjectival-rating-1" title="§ 5.1 Scoring atomic tests">§ 5.1 Scoring atomic tests</a> 
+  </li><li>
+    <a href="#ref-for-dfn-adjectival-rating-2" title="§ 5.2 Scoring outcomes">§ 5.2 Scoring outcomes</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-automated-evaluation" aria-label="Links in this document to definition: Automated evaluation" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-automated-evaluation" aria-label="Permalink for definition: Automated evaluation. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-automated-evaluation-1" title="§ 4.1 Types of tests">§ 4.1 Types of tests</a> 
+  </li><li>
+    <a href="#ref-for-dfn-automated-evaluation-2" title="§ 4.1.1 Atomic tests">§ 4.1.1 Atomic tests</a> 
+  </li><li>
+    <a href="#ref-for-dfn-automated-evaluation-3" title="§ 6.4 Defining conformance scope">§ 6.4 Defining conformance scope</a> 
+  </li><li>
+    <a href="#ref-for-dfn-automated-evaluation-4" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-automated-evaluation-5" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-conformance" aria-label="Links in this document to definition: Conformance" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-conformance" aria-label="Permalink for definition: Conformance. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-conformance-1" title="§ Abstract">§ Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-conformance-2" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-conformance-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-conformance-4" title="Reference 3">(3)</a> <a href="#ref-for-dfn-conformance-5" title="Reference 4">(4)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-critical-error" aria-label="Links in this document to definition: Critical error" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-critical-error" aria-label="Permalink for definition: Critical error. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-critical-error-1" title="§ Text alternative available">§ Text alternative available</a> <a href="#ref-for-dfn-critical-error-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-critical-error-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-critical-error-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-critical-error-5" title="Reference 5">(5)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-critical-error-6" title="§ Headings organize content">§ Headings organize content</a> <a href="#ref-for-dfn-critical-error-7" title="Reference 2">(2)</a> <a href="#ref-for-dfn-critical-error-8" title="Reference 3">(3)</a> <a href="#ref-for-dfn-critical-error-9" title="Reference 4">(4)</a> <a href="#ref-for-dfn-critical-error-10" title="Reference 5">(5)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-critical-error-11" title="§ Uses visually distinct headings">§ Uses visually distinct headings</a> <a href="#ref-for-dfn-critical-error-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-critical-error-13" title="Reference 3">(3)</a> <a href="#ref-for-dfn-critical-error-14" title="Reference 4">(4)</a> <a href="#ref-for-dfn-critical-error-15" title="Reference 5">(5)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-critical-error-16" title="§ Conveys hierarchy with semantic structure">§ Conveys hierarchy with semantic structure</a> <a href="#ref-for-dfn-critical-error-17" title="Reference 2">(2)</a> <a href="#ref-for-dfn-critical-error-18" title="Reference 3">(3)</a> <a href="#ref-for-dfn-critical-error-19" title="Reference 4">(4)</a> <a href="#ref-for-dfn-critical-error-20" title="Reference 5">(5)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-critical-error-21" title="§ 5.1 Scoring atomic tests">§ 5.1 Scoring atomic tests</a> 
+  </li><li>
+    <a href="#ref-for-dfn-critical-error-22" title="§ 6.1.1 Bronze">§ 6.1.1 Bronze</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-deprecate" aria-label="Links in this document to definition: Deprecate" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-deprecate" aria-label="Permalink for definition: Deprecate. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-deprecate-1" title="§ Abstract">§ Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-deprecate-2" title="§ 1.1 About WCAG 3.0">§ 1.1 About WCAG 3.0</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-evaluation" aria-label="Links in this document to definition: Evaluation" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-evaluation" aria-label="Permalink for definition: Evaluation. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-evaluation-1" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-evaluation-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-evaluation-3" title="Reference 3">(3)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-functional-category" aria-label="Links in this document to definition: Functional category" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-functional-category" aria-label="Permalink for definition: Functional category. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-functional-need" aria-label="Links in this document to definition: Functional need" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-functional-need" aria-label="Permalink for definition: Functional need. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-functional-need-1" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-functional-need-2" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-guideline" aria-label="Links in this document to definition: Guideline" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-guideline" aria-label="Permalink for definition: Guideline. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-guideline-1" title="§ Abstract">§ Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-guideline-2" title="§ 7. Glossary">§ 7. Glossary</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-how-to" aria-label="Links in this document to definition: How-to" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-how-to" aria-label="Permalink for definition: How-to. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-human-evaluation" aria-label="Links in this document to definition: Human evaluation" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-human-evaluation" aria-label="Permalink for definition: Human evaluation. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-human-evaluation-1" title="§ 4.1 Types of tests">§ 4.1 Types of tests</a> 
+  </li><li>
+    <a href="#ref-for-dfn-human-evaluation-2" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-human-evaluation-3" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-informative" aria-label="Links in this document to definition: Informative" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-informative" aria-label="Permalink for definition: Informative. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-informative-1" title="§ 2. Normative requirements">§ 2. Normative requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-informative-2" title="§ 7. Glossary">§ 7. Glossary</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-method" aria-label="Links in this document to definition: Method" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-method" aria-label="Permalink for definition: Method. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-method-1" title="§ Abstract">§ Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-method-2" title="§ 4.2 Technology specific testing">§ 4.2 Technology specific testing</a> 
+  </li><li>
+    <a href="#ref-for-dfn-method-3" title="§ 5. Scoring">§ 5. Scoring</a> 
+  </li><li>
+    <a href="#ref-for-dfn-method-4" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-method-5" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-normative" aria-label="Links in this document to definition: Normative" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-normative" aria-label="Permalink for definition: Normative. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-normative-1" title="§ 2. Normative requirements">§ 2. Normative requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-normative-2" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-normative-3" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-object" aria-label="Links in this document to definition: Object" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-object" aria-label="Permalink for definition: Object. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-object-1" title="§ 4.1.1 Atomic tests">§ 4.1.1 Atomic tests</a> 
+  </li><li>
+    <a href="#ref-for-dfn-object-2" title="§ 5.1 Scoring atomic tests">§ 5.1 Scoring atomic tests</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-outcome" aria-label="Links in this document to definition: Outcome" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-outcome" aria-label="Permalink for definition: Outcome. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-outcome-1" title="§ Abstract">§ Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-outcome-2" title="§ 5. Scoring">§ 5. Scoring</a> 
+  </li><li>
+    <a href="#ref-for-dfn-outcome-3" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-outcome-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-outcome-5" title="Reference 3">(3)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-process" aria-label="Links in this document to definition: Process" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-process" aria-label="Permalink for definition: Process. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-process-1" title="§ Text alternative available">§ Text alternative available</a> <a href="#ref-for-dfn-process-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-5" title="Reference 5">(5)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-process-6" title="§ Headings organize content">§ Headings organize content</a> <a href="#ref-for-dfn-process-7" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-8" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-9" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-10" title="Reference 5">(5)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-process-11" title="§ Uses visually distinct headings">§ Uses visually distinct headings</a> <a href="#ref-for-dfn-process-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-13" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-14" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-15" title="Reference 5">(5)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-process-16" title="§ Conveys hierarchy with semantic structure">§ Conveys hierarchy with semantic structure</a> <a href="#ref-for-dfn-process-17" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-18" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-19" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-20" title="Reference 5">(5)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-process-21" title="§ 4. Testing">§ 4. Testing</a> 
+  </li><li>
+    <a href="#ref-for-dfn-process-22" title="§ 6.1.1 Bronze">§ 6.1.1 Bronze</a> 
+  </li><li>
+    <a href="#ref-for-dfn-process-23" title="§ 6.4 Defining conformance scope">§ 6.4 Defining conformance scope</a> <a href="#ref-for-dfn-process-24" title="Reference 2">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-process-25" title="§ 6.5 Conformance requirements">§ 6.5 Conformance requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-process-26" title="§ 7. Glossary">§ 7. Glossary</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-rubric" aria-label="Links in this document to definition: Rubric" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-rubric" aria-label="Permalink for definition: Rubric. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-rubric-1" title="§ 5. Scoring">§ 5. Scoring</a> 
+  </li><li>
+    <a href="#ref-for-dfn-rubric-2" title="§ 5.1 Scoring atomic tests">§ 5.1 Scoring atomic tests</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-scale" aria-label="Links in this document to definition: Scale" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-scale" aria-label="Permalink for definition: Scale. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-scale-1" title="§ 5. Scoring">§ 5. Scoring</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-semi-automated-evaluation" aria-label="Links in this document to definition: Semi-Automated Evaluation" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-semi-automated-evaluation" aria-label="Permalink for definition: Semi-Automated Evaluation. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-semi-automated-evaluation-1" title="§ 4.1 Types of tests">§ 4.1 Types of tests</a> 
+  </li><li>
+    <a href="#ref-for-dfn-semi-automated-evaluation-2" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-semi-automated-evaluation-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-semi-automated-evaluation-4" title="Reference 3">(3)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-success-criterion" aria-label="Links in this document to definition: Success criterion" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-success-criterion" aria-label="Permalink for definition: Success criterion. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-success-criterion-1" title="§ 4.1.1 Atomic tests">§ 4.1.1 Atomic tests</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-test" aria-label="Links in this document to definition: Test" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-test" aria-label="Permalink for definition: Test. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-test-1" title="§ 4.2 Technology specific testing">§ 4.2 Technology specific testing</a> 
+  </li><li>
+    <a href="#ref-for-dfn-test-2" title="§ 5. Scoring">§ 5. Scoring</a> 
+  </li><li>
+    <a href="#ref-for-dfn-test-3" title="§ 7. Glossary">§ 7. Glossary</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-technique" aria-label="Links in this document to definition: Technique" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-technique" aria-label="Permalink for definition: Technique. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-technique-1" title="§ 4.2 Technology specific testing">§ 4.2 Technology specific testing</a> 
+  </li><li>
+    <a href="#ref-for-dfn-technique-2" title="§ 5. Scoring">§ 5. Scoring</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-text-alternative" aria-label="Links in this document to definition: Text alternative" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-text-alternative" aria-label="Permalink for definition: Text alternative. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-user-need" aria-label="Links in this document to definition: User need" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-user-need" aria-label="Permalink for definition: User need. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-user-need-1" title="§ Abstract">§ Abstract</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-user-testing" aria-label="Links in this document to definition: User testing" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-user-testing" aria-label="Permalink for definition: User testing. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-user-testing-1" title="§ 7. Glossary">§ 7. Glossary</a> <a href="#ref-for-dfn-user-testing-2" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-view" aria-label="Links in this document to definition: View" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-view" aria-label="Permalink for definition: View. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-view-1" title="§ 4. Testing">§ 4. Testing</a> <a href="#ref-for-dfn-view-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-view-3" title="Reference 3">(3)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-view-4" title="§ 6.1.1 Bronze">§ 6.1.1 Bronze</a> 
+  </li><li>
+    <a href="#ref-for-dfn-view-5" title="§ 6.1.2 Silver">§ 6.1.2 Silver</a> 
+  </li><li>
+    <a href="#ref-for-dfn-view-6" title="§ 6.1.3 Gold">§ 6.1.3 Gold</a> 
+  </li><li>
+    <a href="#ref-for-dfn-view-7" title="§ 6.4 Defining conformance scope">§ 6.4 Defining conformance scope</a> <a href="#ref-for-dfn-view-8" title="Reference 2">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-view-9" title="§ 6.5 Conformance requirements">§ 6.5 Conformance requirements</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-visual-contrast" aria-label="Links in this document to definition: Visual Contrast" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-visual-contrast" aria-label="Permalink for definition: Visual Contrast. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
