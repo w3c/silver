@@ -127,6 +127,15 @@ function addSummaryMarkers() {
 	})
 }
 
+function addNoteMarkers() {
+	document.querySelectorAll(".note").forEach(function(node){
+		var el = document.createElement("p");
+		el.className = "summaryEnd";
+		el.innerHTML = "End of note";
+		node.appendChild(el);
+	})
+}
+
 function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
@@ -284,6 +293,7 @@ function postRespec() {
 	termTitles();
 	removeDraftMethodLinks();
 	edNotePermalinks();
+	addNoteMarkers();
 	removeImgSize();
 	outputJson();
 }
