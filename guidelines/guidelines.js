@@ -105,8 +105,10 @@ function addRatingMarkers() {
 		sectionHeader.innerHTML = "Rating for <q>" + textNoDescendant(parentHeader) + "</q>";
 		
 		var table = node.querySelector('table');
-		table.setAttribute("summary", "Rating scale for \"" + textNoDescendant(parentHeader) + "\"");
 		table.querySelector("caption").remove();
+		var caption = document.createElement("caption");
+		caption.innerHTML = "Rating scale for \"" + textNoDescendant(parentHeader) + "\"";
+		table.insertBefore(caption, table.firstChild);
 	})
 }
 
@@ -122,8 +124,15 @@ function addSummaryMarkers() {
 		el.className = "summaryEnd";
 		el.innerHTML = "End of summary for <q>" + textNoDescendant(parentHeader) + "</q>";
 		node.appendChild(el);
-		
-		node.setAttribute("role", "region");
+	})
+}
+
+function addNoteMarkers() {
+	document.querySelectorAll(".note").forEach(function(node){
+		var el = document.createElement("p");
+		el.className = "summaryEnd";
+		el.innerHTML = "End of note";
+		node.appendChild(el);
 	})
 }
 
@@ -284,6 +293,7 @@ function postRespec() {
 	termTitles();
 	removeDraftMethodLinks();
 	edNotePermalinks();
+	addNoteMarkers();
 	removeImgSize();
 	outputJson();
 }

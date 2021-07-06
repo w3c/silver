@@ -2,5 +2,5 @@
     "group":      ["35422"]
 ,   "contacts":   ["michael-n-cooper"],
     "policy": "restricted",
-    "repo-type": ["rec-track", "note-track"]
+    "repo-type": ["rec-track", "note"]
 }
