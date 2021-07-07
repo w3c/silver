@@ -11,23 +11,41 @@
 			<section id="atomic">
 				<h2>Atomic Tests</h2>
 				<ul>
-					<li>{list of links to tests}</li>
+					<li>Test Units: Each input that is required.</li>
+					<li>Unit Score: For each test unit, complete each of the following tests and sum the test credits to get the unit score.</li>
 				</ul>
 				<section>
 					{Use copies of this section for WCAG 2-style tests}
 					<p><strong>Unit Tested:</strong>  </p>
 					<p><strong>Measurement:</strong> </p>
-					<h3>Test Name</h3>
+					<h3>Test that required inputs are visually identifiable</h3>
 					<section>
 						<h4>Test Procedure</h4>
 						<ol>
-							<li>Step 1</li>
-							<li>Step 2</li>
+							<li>Check that the required status is conveyed visually.</li>
+							<li>For non-text visual indicators:</li>
+							<ol>
+								<li>Check that instructions are provided that explain the non-text indicator.</li>
+								<li>Check that the non-text indicator has sufficient color contrast.</li>
+								<li>Check that the non-text indicator is identifiable without color.</li>
+							</ol>
 						</ol>
 					</section>
 					<section>
+						{Use copies of this section for WCAG 2-style tests}
+						<p><strong>Unit Tested:</strong>  </p>
+						<p><strong>Measurement:</strong> </p>
+						<h3>TTest that required inputs are programmatically defined</h3>
+						<section>
+							<h4>Test Procedure</h4>
+							<ol>
+								<li>Check that required inputs include the aria-required attribute.</li>
+								<li>Check that the value of the aria-required attribute is "true".</li>
+							</ol>
+						</section>
+					<section>
 						<h4>Expected Results</h4>
-						<p>Check #2 is true. </p>
+						<p>All checks are true. Credit: 1</p>
 					</section>
 				</section>
 			</section>
