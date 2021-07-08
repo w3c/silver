@@ -1,0 +1,18 @@
+// PRINT STYLESHEET COMPILER
+
+// STYLEGUIDE
+// Mixins to be shared across gov.uk sites. Anything set in these
+// files can be used in the view files.
+
+$is-print: true;
+@import "styleguide/print";
+@import "typography";
+
+// OUTPUT
+// The following files and inline CSS will form the output of print.css
+
+html {
+  font-size: 62.5%;
+}
+    
+@import "core-print";

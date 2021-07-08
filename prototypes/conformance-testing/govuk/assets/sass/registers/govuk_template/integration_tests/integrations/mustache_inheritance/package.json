@@ -1,0 +1,12 @@
+{
+  "name": "mustache_inheritance_integration_test_app",
+  "description": "govuk_template integration test app for Mustache with inheritance",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "hogan.js": "3.0.2"
+  }
+}
