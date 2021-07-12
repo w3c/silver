@@ -1,3 +1,6 @@
+caption {
+	visibility: hidden;
+}
 details {
 	margin: 3em;
 	padding: 1em;
