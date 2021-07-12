@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Method - Examples</title>
+	</head>
+	<body>
+		<header>
+			<h1>Examples</h1>
+		</header>
+		<main>
+			<section class="example">
+				<h3>Providing a text description in the input label</h3>	
+				<p>Text descriptions can appear in the form label of required inputs, for example, using “(required)” along with the input label, as in “Email (required)”.</p>
+				<pre>
+					<code>&lt;label for="email">Email (required)&lt;/label>
+					&lt;input type="text" id="email" required>
+					</code>
+				</pre>
+			</section>
+			<section class="example">
+				<h3>Providing instructions on the page</h3>
+				<p>Text descriptions can appear before the form, for example, including instructions that indicate that all inputs are required, as in “Note: All inputs required”, before the form on the page or view.</p>
+				<pre>
+				<code>
+					&lt;p>Note: All inputs are required&lt;/p>
+
+				&lt;label for="name">Name&lt;/label>
+				&lt;input type="text" id="name" aria-required="true">
+
+				&lt;label for="email">Email&lt;/label>
+				&lt;input type="text" id="email" aria-required="true">
+
+				</code>
+				</pre>
+			</section>
+			<section class="example">
+				<h3>Providing a non-text indicator and text instructions</h3>
+				
+				<p>Non-text descriptions can appear in the form as the indicator along with descriptive text, for example, an asterisk in the input label, as in “Email *” .</p>
+<pre>
+&lt; 
+</pre>
+			</section>
+			<section class="example">
+				<h3>Using a character non-text indicator</h3>
+				<pre>
+				    <code>
+					 &lt;p>Note: An asterisk (*) denotes a required field&lt;/p>
+
+					&lt;label for="email">Email *&lt;/label>
+					&lt;input type="text" id="email" aria-required="true">
+					
+					&lt;p>Note: &lt;img src="star.gif" alt="required"> denotes a required field&lt;/p> 
+					</code>
+				</pre>
+			</section>
+			<section class="example">
+				<h3>Using an image non-text indicator</h3>
+				<pre>
+				    <code>
+						&lt;label for="email">Email &lt;img src="star.gif" alt="required">&lt;/label>
+						&lt;input type="text" id="email" aria-required="true">						
+					</code>
+				</pre>
+			</section>
+		</main>
+	</body>
+</html>
