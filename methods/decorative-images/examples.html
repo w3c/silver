@@ -17,22 +17,22 @@
 			</ul>
 			<section class="example" id="example1">
 				<h3>HTML decorative bitmaps</h3>
-				<p>In HTML, decorative bitmap images need to have an alt attribute with no value (e.g. alt=”” or alt). For example:</p>
+				<p>In HTML, decorative bitmap images need to have an <code class="language-html">alt</code> attribute with no value (e.g. <code class="language-html">alt=""</code> or <code class="language-html">alt</code>). For example:</p>
 <pre>
-&lt;img alt=”” src=”clipart-of-business-people-looking-at-a-computer-screen.jpg”>
-&lt;img alt src=”clipart-of-someone-smiling-and-eating-a-salad.jpg”>
+&lt;img alt="" src="clipart-of-business-people-looking-at-a-computer-screen.jpg"&gt;
+&lt;img alt src="clipart-of-someone-smiling-and-eating-a-salad.jpg"&gt;
 </pre>
 			</section>
 			<section class="example" id="example2">
 				<h3>HTML decorative SVG</h3>
-				<p>In HTML, decorative SVGs need to use the aria-hidden attribute with a value of “true”. For example:</p>
+				<p>In HTML, decorative SVGs need to use the aria-hidden attribute with a value of "<code class="language-plaintext">true</code>". For example:</p>
 <pre>
-&lt;button type=”button”>
-  &lt;svg aria-hidden=”true” viewBox=”0 0 30 30”>
-    &lt;use href=”#help-icon” />
-  &lt;/svg>
-  &lt;span>Help&lt;/span>
-&lt;/button>
+&lt;button type="button"&gt;
+  &lt;svg aria-hidden="true" viewBox="0 0 30 30"&gt;
+    &lt;use href="#help-icon" /&gt;
+  &lt;/svg&gt;
+  &lt;span&gt;Help&lt;/span&gt;
+&lt;/button&gt;
 </pre>
 			</section>
 			<section class="example" id="example3">
@@ -54,13 +54,13 @@
 				<p>Adding the role attribute with a value of presentation will hide a decorative SVG in an ePub document: </p>
 <pre>
 &lt;svg lang="en" role="presentation" xml:lang="en" xmlns="http://www.w3.org/2000/svg">
-   …
+   ...
 &lt;/svg>
 </pre>
 			</section>
 			<section class="example" id="example5">
 				<h3>PDF</h3>
-				<p>Tagging PDFs for accessibility is covered in WCAG 2’s <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF4.html">PDF4 Hiding decorative images with the Artifact tag in PDF documents</a>.</p>
+				<p>Tagging PDFs for accessibility is covered in WCAG 2&#8217;s <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF4.html">PDF4 Hiding decorative images with the Artifact tag in PDF documents</a>.</p>
 			</section>
 		</main>
 	</body>
