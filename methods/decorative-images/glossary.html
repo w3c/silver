@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Method - Glossary</title>
+	</head>
+	<body>
+		<header>
+			<h1>Glossary</h1>
+		</header>
+		<main>
+      <section id="accessible-name">
+        <h2>Accessible Name</h2>
+        <p>The <em>accessible name</em> is the programmatically determined name of a user interface element that is <a href="#included-in-the-accessibility-tree">included in the accessibility tree</a>.</p>  
+        <p>The accessible name is calculated using the <a href="https://www.w3.org/TR/accname">accessible name and description computation</a>.</p>
+        <p>For native markup languages, such as <dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> and <dfn><abbr title="Scalable Vector Graphics">SVG</abbr></dfn>, additional information on how to calculate the accessible name can be found in <a href="https://www.w3.org/TR/html-aam/#accessible-name-and-description-computation">HTML Accessibility API Mappings 1.0, Accessible Name and Description Computation (working draft)</a> and <a href="https://www.w3.org/TR/svg-aam/#mapping_additional">SVG Accessibility API Mappings, Name and Description (working draft)</a>.</p>
+        <p>For more details, see <a href="https://act-rules.github.io/pages/examples/accessible-name/">ACT&#8217;s examples of accessible name</a>.</p>
+        <p><strong>Note:</strong> As per the <a href="https://www.w3.org/TR/accname">accessible name and description computation</a>, each element always has an accessible name. When no accessible name is provided, the element will nonetheless be assigned an empty (<code class="language-plaintext">""</code>) one.</p>
+        <p><strong>Note:</strong> As per the <a href="https://www.w3.org/TR/accname">accessible name and description computation</a>, accessible names are <a href="https://www.w3.org/TR/accname-1.1/#terminology">flat string</a> trimmed of leading and trailing whitespace. Notably, it is not possible for a non-empty accessible name to be composed only of whitespace since these must be trimmed.</p>
+      </section>        
+      
+      <section id="explicit-role">
+        <h2>Explicit Semantic Role</h2>
+        <p>The <em>explicit semantic role</em> of an element is determined by its <a href="https://www.w3.org/TR/role-attribute/">role attribute</a> (if any).</p>
+        <p>The <a href="https://www.w3.org/TR/role-attribute/">role attribute</a> takes a list of tokens. The explicit semantic role is the first valid role in this list. The valid roles are all non-abstract roles from <a href="#wai-aria-specifications">WAI-ARIA Specifications</a>. If the element has no <a href="https://www.w3.org/TR/role-attribute/">role attribute</a>, or if it has one with no valid role, then this element has no explicit semantic role.</p>
+        <p>Other roles may be added as they become available. Not all roles will be supported in all assistive technologies. Testers are encouraged to adjust which roles are allowed according to the <a href="https://www.w3.org/TR/WCAG-EM/#step1c">accessibility support base line</a>. For the purposes of executing test cases in all rules, it should be assumed that all roles are supported by assistive technologies so that none of the roles fail due to lack of accessibility support.</p>
+      </section>
+
+      <section id="focusable">
+        <h2>Focusable</h2>
+        <p>Elements that can become the target of keyboard input as described in the <a href="https://html.spec.whatwg.org/multipage/interaction.html#focusable-area">HTML specification of focusable</a> and <a href="https://html.spec.whatwg.org/multipage/interaction.html#focusable">HTML specification of can be focused</a>.</p>
+      </section>
+      
+      <section id="hidden-state">
+        <h2>Hidden State</h2>
+        <p>An HTML element&#8217;s <em>hidden state</em> is &#8220;true&#8221; if at least one of the following is true for itself or any of its <a href="https://dom.spec.whatwg.org/#concept-tree-ancestor">ancestors</a> in the <a href="https://drafts.csswg.org/css-scoping/#flat-tree">flat tree</a>:</p>
+        <ul>
+          <li>has a <code class="language-html">hidden</code> attribute; or</li>
+          <li>has a <a href="https://www.w3.org/TR/css-cascade/#computed-value">computed</a> <dfn><abbr title="Cascading Style Sheets">CSS</abbr></dfn> property <code class="language-css">display</code> of <code class="language-css">none</code>; or</li>
+          <li>has a <a href="https://www.w3.org/TR/css-cascade/#computed-value">computed</a> CSS property <code class="language-css">visibility</code> of <code class="language-css">hidden</code>; or</li>
+          <li>has an <code class="language-plaintext">aria-hidden</code> attribute set to <code class="language-plaintext">true</code></li>
+        </ul>
+        <p>In any other case, the element&#8217;s <em>hidden state</em> is &#8220;false&#8221;.</p>
+      </section>
+      
+      <section id="implicit-role">
+        <h2>Implicit Semantic Role</h2>
+        <p>The <em>implicit semantic role</em> of an element is a pre-defined value given by the host language which depends on the element and its ancestors.</p> 
+        <p>Implicit roles for HTML and SVG, are documented in the <a href="https://www.w3.org/TR/html-aam/#html-element-role-mappings">HTML accessibility API mappings (working draft)</a> and the <a href="https://www.w3.org/TR/svg-aam/#mapping_role_table">SVG accessibility API mappings (working draft)</a>.</p>
+      </section>
+      
+      <section id="included-in-the-accessibility-tree">
+        <h2>Included In The Accessibility Tree</h2>
+        <p>Elements included in the accessibility tree of platform specific accessibility <dfn><abbr title="Application Programming Interface">API</abbr></dfn>s. Elements in the accessibility tree are exposed to assistive technologies, allowing users to interact with the elements in a way that meet the requirements of the individual user.</p>
+        <p>The general rules for when elements are included in the accessibility tree are defined in the <a href="https://www.w3.org/TR/core-aam/">core accessibility API mappings</a>. For native markup languages, such as HTML and SVG, additional rules for when elements are included in the accessibility tree can be found in the <a href="https://www.w3.org/TR/html-aam/">HTML accessibility API mappings (working draft)</a> and the <a href="https://www.w3.org/TR/svg-aam/">SVG accessibility API mappings (working draft)</a>.</p>
+        <p>For more details, see <a href="https://act-rules.github.io/pages/examples/included-in-the-accessibility-tree/">ACT&#8217;s examples of included in the accessibility tree</a>.</p>
+        <p><strong>Note:</strong> Users of assistive technologies might still be able to interact with elements that are not included in the accessibility tree. An example of this is a <a href="#focusable">focusable</a> element with an <code class="language-plaintext">aria-hidden</code> attribute with a value of <code class="language-plaintext">true</code>. Such an element could still be interacted using sequential keyboard navigation regardless of the assistive technologies used, even though the element would not be included in the accessibility tree.</p>
+      </section>
+      
+      <section  id="marked-as-decorative">
+        <h2>Marked As Decorative</h2>
+        <p>An element is <em>marked as decorative</em> if one of the following conditions is true:</p>
+        <ul>
+          <li>it has an <a href="#explicit-role">explicit role</a> of <code class="language-plaintext">none</code> or <code class="language-plaintext">presentation</code>; or</li>
+          <li>it is an <code class="language-html">img</code> element with an <code class="language-html">alt</code> attribute whose value is the empty string (<code class="language-html">alt=""</code>), and with no <a href="#explicit-role">explicit role</a>.</li>
+        </ul>
+        <p>Elements are marked as decorative as a way to convey the intention of the author that they are <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">pure decoration</a>. It is different from the element actually being <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">pure decoration</a> as authors may make mistakes. It is different from the element being effectively ignored by assistive technologies as rules such as <a href="https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none">presentational roles conflict resolution</a> may overwrite this intention.</p>
+        <p>Elements can also be ignored by assistive technologies if their <a href="#hidden-state">hidden state</a> is true. This is different from marking the element as decorative and does not convey the same intention. Notably, the <a href="#hidden-state">hidden state</a> of an element may change as users interact with the page (showing and hiding elements) while being marked as decorative should stay the same through all states of the page.</p>
+      </section>
+
+      <section id="outcome">
+        <h2>Outcome</h2>
+        <p>An <em>outcome</em> is a conclusion that comes from evaluating an <dfn><abbr title="Accessibility Conformance Testing">ACT</abbr></dfn> Rule on a <a href="https://www.w3.org/TR/act-rules-format/#test-subject">test subject</a> or one of its constituent <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a>. An outcome can be one of the three following types:</p>
+        <dl>
+          <dt>Inapplicable:</dt>
+          <dd>No part of the test subject matches the applicability.</dd>
+          <dt>Passed:</dt>
+          <dd>A <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a> meets all expectations.</dd>
+          <dt>Failed:</dt>
+          <dd>A <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a> does not meet all expectations</dd>
+        </dl>
+        <p><strong>Note:</strong> A rule has one <code class="language-plaintext">passed</code> or <code class="language-plaintext">failed</code> outcome for every <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a>. When there are no test targets the rule has one <code class="language-plaintext">inapplicable</code> outcome. This means that each <a href="https://www.w3.org/TR/act-rules-format/#test-subject">test subject</a> will have one or more outcomes.</p>
+        <p><strong>Note:</strong> Implementations using the <a href="https://www.w3.org/TR/EARL10-Schema/">EARL 1.0 Schema</a> can express the outcome with the <a href="https://www.w3.org/TR/EARL10-Schema/#outcome">outcome property</a>. In addition to <code class="language-plaintext">passed</code>, <code class="language-plaintext">failed</code> and <code class="language-plaintext">inapplicable</code>, <dfn><abbr title="Evaluation And Report Language">EARL</abbr></dfn> 1.0 also defined an <code class="language-plaintext">incomplete</code> outcome. While this cannot be the outcome of an ACT Rule when applied in its entirety, it often happens that rules are only partially evaluated. For example, when applicability was automated, but the expectations have to be evaluated manually. Such &#8220;interim&#8221; results can be expressed with the <code class="language-plaintext">incomplete</code> outcome.</p>
+      </section>
+      
+      <section id="semantic-role">
+        <h2>Semantic Role</h2>
+        <p>The <em>semantic role</em> of an element is determined by the first of these cases that applies:</p>
+        <dl>
+          <dt>Conflict:</dt>
+          <dd>If the element is <a href="#marked-as-decorative">marked as decorative</a>, but the element is <a href="#included-in-the-accessibility-tree">included in the accessibility tree</a>; or would be <a href="#included-in-the-accessibility-tree">included in the accessibility tree</a> when its <a href="#hidden-state">hidden state</a> is false, then its <em>semantic role</em> is its <a href="#implicit-role">implicit role</a>.</dd>
+          <dt>Explicit:</dt>
+          <dd>If the element has an <a href="#explicit-role">explicit role</a>, then its <em>semantic role</em> is its <a href="#explicit-role">explicit role</a>.</dd>
+          <dt>Implicit:</dt>
+          <dd>The <em>semantic role</em> of the element is its <a href="#implicit-role">implicit role</a>.</dd>
+        </dl>
+      </section>
+      
+      <section id="visible">
+        <h2>Visible</h2>
+        <p>Content perceivable through sight.</p>
+        <p>Content is considered <em>visible</em> if making it fully transparent would result in a difference in the pixels rendered for any part of the document that is currently within the viewport or can be brought into the viewport via scrolling.</p>
+        <p><a href="https://www.w3.org/TR/WCAG21/#dfn-content">Content is defined in WCAG</a>.</p>
+        <p>For more details, see <a href="https://act-rules.github.io/pages/examples/visible/">ACT examples of visible</a>.</p>      
+      </section>
+
+      <section id="wai-aria-specifications">
+        <h2>WAI-ARIA Specifications</h2>
+        <p>The <em>WAI-ARIA Specifications</em> group both the WAI ARIA W3C Recommendation and ARIA modules, namely:</p>
+        <ul>
+          <li><a href="https://www.w3.org/TR/wai-aria-1.1/">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></li>
+          <li><a href="https://www.w3.org/TR/graphics-aria-1.0/">WAI-ARIA Graphics Module 1.0</a></li>
+          <li><a href="https://www.w3.org/TR/dpub-aria-1.0/">Digital Publishing WAI-ARIA Module 1.0</a></li>
+        </ul>
+        <p><strong>Note:</strong> depending on the type of content being evaluated, part of the specifications might be irrelevant and should be ignored.</p>
+      </section>
+		</main>
+	</body>
+</html>
