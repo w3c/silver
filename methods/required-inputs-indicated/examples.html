@@ -12,8 +12,8 @@
 				<h3>Providing a text description in the input label</h3>	
 				<p>Text descriptions can appear in the form label of required inputs, for example, using “(required)” along with the input label, as in “Email (required)”.</p>
 				<pre>
-					<code><label for="email">Email (required)</label>
-					<input type="text" id="email" required>
+					<code>&lt;label for="email">Email (required)&lt;/label>
+					&lt;input type="text" id="email" required>
 					</code>
 				</pre>
 			</section>
@@ -22,13 +22,13 @@
 				<p>Text descriptions can appear before the form, for example, including instructions that indicate that all inputs are required, as in “Note: All inputs required”, before the form on the page or view.</p>
 				<pre>
 				<code>
-					<p>Note: All inputs are required</p>
+					&lt;p>Note: All inputs are required&lt;/p>
 
-				<label for="name">Name</label>
-				<input type="text" id="name" aria-required="true">
+				&lt;label for="name">Name&lt;/label>
+				&lt;input type="text" id="name" aria-required="true">
 
-				<label for="email">Email</label>
-				<input type="text" id="email" aria-required="true">
+				&lt;label for="email">Email&lt;/label>
+				&lt;input type="text" id="email" aria-required="true">
 
 				</code>
 				</pre>
@@ -45,12 +45,17 @@
 				<h3>Using a character non-text indicator</h3>
 				<pre>
 				    <code>
-					 <p>Note: An asterisk (*) denotes a required field</p>
+					 &lt;p>Note: An asterisk (*) denotes a required field&lt;/p>
 
+<<<<<<< HEAD
 					<label for="email">Email *</label>
 					<input type="text" id="email" required>
+=======
+					&lt;label for="email">Email *&lt;/label>
+					&lt;input type="text" id="email" aria-required="true">
+>>>>>>> 3c33103c0b8dc86ca96ea812ecb0070e82ce85f3
 					
-					<p>Note: <img src="star.gif" alt="required"> denotes a required field</p> 
+					&lt;p>Note: &lt;img src="star.gif" alt="required"> denotes a required field&lt;/p> 
 					</code>
 				</pre>
 			</section>
@@ -58,8 +63,13 @@
 				<h3>Using an image non-text indicator</h3>
 				<pre>
 				    <code>
+<<<<<<< HEAD
 						<label for="email">Email <img src="star.gif" alt="required"></label>
 						<input type="text" id="email" required>						
+=======
+						&lt;label for="email">Email &lt;img src="star.gif" alt="required">&lt;/label>
+						&lt;input type="text" id="email" aria-required="true">						
+>>>>>>> 3c33103c0b8dc86ca96ea812ecb0070e82ce85f3
 					</code>
 				</pre>
 			</section>
