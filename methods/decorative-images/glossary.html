@@ -16,7 +16,36 @@
         <p>For more details, see <a href="https://act-rules.github.io/pages/examples/accessible-name/">ACT&#8217;s examples of accessible name</a>.</p>
         <p><strong>Note:</strong> As per the <a href="https://www.w3.org/TR/accname">accessible name and description computation</a>, each element always has an accessible name. When no accessible name is provided, the element will nonetheless be assigned an empty (<code class="language-plaintext">""</code>) one.</p>
         <p><strong>Note:</strong> As per the <a href="https://www.w3.org/TR/accname">accessible name and description computation</a>, accessible names are <a href="https://www.w3.org/TR/accname-1.1/#terminology">flat string</a> trimmed of leading and trailing whitespace. Notably, it is not possible for a non-empty accessible name to be composed only of whitespace since these must be trimmed.</p>
-      </section>        
+      </section>
+      
+      <section id="accessibility-support-for-accessible-name">
+        <h2>Accessibility Support For Accessible Name</h2>
+        <ul>
+          <li>Because the <a href="https://www.w3.org/TR/accname">accessible name and description computation</a> is not clear about which whitespace are considered, browsers behave differently when trimming and flattening the accessible name. For example, some browsers completely trim non-breaking spaces while some keep them in the accessible name.</li>
+          <li>There exists a popular browser which does not perform the same trimming and flattening depending whether the accessible name comes from content, an <code class="language-text">aria-label</code> attribute, or an <code class="language-html">alt</code> attribute.</li>
+          <li>There exists a popular browser which assign no accessible name (<code class="language-text">null</code>) when none is provided, instead of assigned an empty accessible name (<code class="language-text">""</code>).</li>
+          <li>The <a href="https://www.w3.org/TR/accname">accessible name and description computation</a> suggest that if an <code class="language-text">aria-labelledby</code> attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case.</li>
+          </ul>
+      </section>
+
+      <section id="accessibility-support-for-definition-of-semantic-role-for-semantic-role">
+        <h2>Accessibility Support For Definition Of Semantic Role For Semantic Role</h2>
+        <ul>
+          <li>There exist popular web browsers and assistive technologies which do not correctly implement <a href="https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none">Presentational Roles Conflict Resolution</a>. These technologies will not <a href="#included-in-the-accessibility-tree">include in the accessibility tree</a> elements that should be, according to Specifications. Thus, some elements that should have their <em>semantic role</em> fixed by case <strong>Conflict</strong> above are instead falling into case <strong>Explicit</strong> and are hidden for users of assistive technologies.</li>
+          <li>A similar conflict exists for <a href="#focusable">focusable</a> elements with a <code class="language-text">aria-hidden="true"</code> attribute. The WAI ARIA specification does not explain how to solve it. Some browsers give precedence to the element being focusable (and expose it in the accessibility tree) while some give precedence to the <code class="language-text">aria-hidden</code> attribute (and hide the element).</li>
+        </ul>
+
+      </section>
+
+      <section id="accessibility-support-for-explicit-semantic-role">
+        <h2>Accessibility Support For Explicit Semantic Role</h2>
+        <p>Some browsers and assistive technologies treat the tokens of the <code class="language-text">role</code> attribute as case-sensitive. Unless lowercase letters are used for the value of the <code class="language-text">role</code> attribute, not all user agents will be able to interpret the tokens correctly. <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML (working draft)</a> also specifies that <a href="https://www.w3.org/TR/html-aria/#case-sensitivity">authors must use lowercase letters for the <code class="language-text">role</code> and <code class="language-text">aria-*</code> attributes</a>.</p>
+      </section>
+
+      <section id="accessibility-support-for-implicit-semantic-role">
+        <h2>Accessibility Support For Implicit Semantic Role</h2>
+        <p>Images with an empty <code class="language-html">alt</code> attribute should have an implicit role of <code class="language-text">presentation</code>, according to the <a href="https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings">HTML Accessibility API Mapping (work in progress)</a>. However, there are several popular browsers that do not treat images with empty <code class="language-html">alt</code> attribute as having a role of <code class="language-text">presentation</code>. Instead, they add the <code class="language-html">img</code> element to the accessibility tree with a role of either <code class="language-html">img</code> or <code class="language-text">graphic</code>.</p>
+      </section>
       
       <section id="explicit-role">
         <h2>Explicit Semantic Role</h2>
@@ -56,7 +85,7 @@
         <p><strong>Note:</strong> Users of assistive technologies might still be able to interact with elements that are not included in the accessibility tree. An example of this is a <a href="#focusable">focusable</a> element with an <code class="language-plaintext">aria-hidden</code> attribute with a value of <code class="language-plaintext">true</code>. Such an element could still be interacted using sequential keyboard navigation regardless of the assistive technologies used, even though the element would not be included in the accessibility tree.</p>
       </section>
       
-      <section  id="marked-as-decorative">
+      <section id="marked-as-decorative">
         <h2>Marked As Decorative</h2>
         <p>An element is <em>marked as decorative</em> if one of the following conditions is true:</p>
         <ul>
