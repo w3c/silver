@@ -8,117 +8,246 @@
 			<h1>Tests</h1>
 		</header>
 		<main>
-			<section id="atomic">
-				<h2>Atomic Tests</h2>
-				<ul>
-					<li><a href="https://act-rules.github.io/rules/23a2a8">ACT Rules: Image has non-empty accessible name</a></li>
-					<li><a href="https://act-rules.github.io/rules/e88epe">ACT Rules: Image not in the accessibility tree is decorative</a></li>
-				</ul>
-					<section id="automated-test">
-					<h3>Automated test for all images</h3>
-					<p><strong>Unit Tested:</strong> All Images </p>
-					<p><strong>Measurement:</strong> Percentage (# passed/total # of img elements for all images)</p>
-					<ul>
-						<li>This test is measured by the number of img elements in the HTML document or the number of images in non-HTML content being tested. </li>
-						<li>The percentage test result is the number passed divided by the total number of img elements or images. </li>
-					</ul>
-					<section>
-						<h4>Procedure for HTML</h4>
-						<ol>
-							<li>Run an automated test that displays the text alternative (or accessible name) for images. </li> 
-							<li>Check that functional, informative, and images of text have alternative text that serves an equivalent purpose of the image
-							<ul>
-								<li>Functional images describe the function</li>
-								<li>Informative images describe the image </li>
-								<li>Images of text repeat the text or the equivalent purpose of the text.  </li>
-							</ul></li>
-							<li>Check that decorative images are appropriately coded (see “Decorative Images” method) so they are hidden to assistive technology. </li>
-						</ol>
-					</section>
-					<section>
-						<h4>Expected Results</h4>
-						<p>Check #2 and #3 are true.</p>
-					</section>
-					<section>
-						<h4>Procedure for Technology Agnostic</h4>
-						<ol>
-							<li>Examine each image in the content. </li>
-							<li>Check that each image that conveys meaning has its text alternative. </li>
-							<li>If the image contains text that is not purely decorative, the text alternative contains the same text. </li>
-							<li>If it is within a link together with text, check that it is implemented to be ignored by assistive technology or the text alternative describes the image and supplements the link text. </li>
-							<li>If it is a button, check that the text alternative indicates the button's function. </li>
-						</ol>
-					</section>
-					<section>
-						<h4>Expected Results</h4>
-						<p>Checks #2 and #3, or #2 and #4, or #2 and #5 are true.</p>
-					</section>
-				</section>
-				<section>
-					<h3>Manual test of a CSS background image</h3>
-					<ul>
-						<li><strong>Unit Tested:</strong> All CSS background images</li>
-						<li><strong>Measurement:</strong> Percentage (# passed/total # of elements for “CSS background images”)The percentage test result is the number passed divided by the total number of elements or images.</li>
-					</ul>
-					<section>
-						<h4>Test Procedure</h4>
-						<ol>
-							<li>Check for the presence of decorative images.</li>
-							<li>Check that they are included as CSS background images.</li>
-						</ol>
-					</section>
-					<section>
-						<h4>Expected Results</h4>
-						<p>If #1 is true then #2 is true.</p>
-					</section>
-				</section>
-				<section>
-					<h3>Manual test of CSS generated content</h3>
-					<ul>
-						<li><strong>Unit Tested:</strong> All CSS generated content</li>
-						<li><strong>Measurement:</strong> Percentage (# passed/total # of elements for “CSS generated content”)The percentage test result is the number passed divided by the total number of elements or images.</li>
-					</ul>
-					<section>
-						<h4>Test Procedure</h4>
-						<ol>
-							<li>Check for the presence of decorative images.</li>
-							<li>Check if decorative images are included using CSS generated content.</li>
-							<li>Check that the image has an empty alt value.</li>
-						</ol>
-					</section>
-					<section>
-						<h4>Expected Results</h4>
-						<p>If 1 is true then 2 and 3 are true.</p>
-					</section>
-				</section>
-				<section>
+			<section id="passed">
+				<h2>Passed</h2>
 
-					<h3>Manual test if an image uses null alt text and no title attribute for decorative images</h3>
-					<ul>
-						<li><strong>Unit Tested:</strong> All decorative HTML images</li>
-						<li><strong>Measurement:</strong> Percentage (# passed/total # of elements for “decorative HTML images”)The percentage test result is the number passed divided by the total number of elements or images.</li>
-					</ul>
-					<section>
-						<h4>Test Procedure</h4>
-						<ol>
-							<li>Check for the presence of decorative images</li>
-							<li>Check that the <code>title</code> attribute is either absent <strong>or</strong> has no value.</li>
-							<li>Check that the alt attribute is present <strong>and</strong> has no value. </li>
-						</ol>
-					</section>
-					<section>
-						<h4>Expected Results</h4>
-						<p>If 1 is true then 2 and 3 are true.</p>
-					</section>
-				</section>
-			</section>
-			<section id="holistic">
-				<h2>Holistic Tests</h2>
-				<ul>
-					<!--<li>{list of links to tests}</li> -->
-					<li>Still to be developed. We will include this in a future working draft. </li>
-				</ul>
-			</section>
+				<h3>Passed example 1</h3>
+				<p>This <code class="language-html">img</code> element with an empty <code class="language-html">alt</code> attribute which is not <a href="glossary.html#included-in-the-accessibility-tree">included in the accessibility tree</a> is <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;p&gt;</span>Happy new year!&lt;/p&gt;
+&lt;img src="/test-assets/shared/fireworks.jpg" alt="" /&gt;
+</code>
+</pre>
+
+<h3>Passed example 2</h3>
+<pre class="language-html"><code class="language-html">
+&lt;p&gt;Happy new year!&lt;/p&gt;
+&lt;img src="/test-assets/shared/fireworks.jpg" aria-hidden="true" role="img" alt="" /&gt;
+</code>
+</pre>
+
+<h3>Passed example 3</h3>
+<p>This <code class="language-html">img</code> element that is ignored by assistive technologies because it has an <a href="glossary.html#explicit-role">explicit semantic role</a> of <code class="language-text">none</code> is <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+<pre class="language-html">
+<code class="language-html">
+&lt;p&gt;Happy new year!&lt;/p&gt;
+&lt;img src="/test-assets/shared/fireworks.jpg" role="none" alt="ignore me" /&gt;
+</code>
+</pre>
+
+<h3>Passed example 4</h3>
+<p>This <code class="language-text">svg</code> element that is ignored by assistive technologies because it has no attribute that would give it an <a href="glossary.html#accessible-name">accessible name</a> is <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+<pre class="language-html">
+<code class="language-html">&lt;p&gt;Happy new year!&lt;/p&gt;
+&lt;svg height="200" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" /&gt;
+&lt;/svg&gt;
+</code>
+</pre>
+
+<h3>Passed example 5</h3>
+<p>This <code class="language-html">canvas</code> element that is ignored by assistive technologies because it has no attribute that would give it an <a href="glossary.html#accessible-name">accessible name</a> is <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+<pre class="language-html">
+<code class="language-html">
+&lt;p&gt;Happy new year!&lt;/p&gt;
+&lt;canvas id="newyear" width="200" height="200"&gt;&lt;/canvas&gt;
+  &lt;script&gt;
+    const ctx = document.querySelector('#newyear').getContext('2d')
+    ctx.fillStyle = 'yellow'
+    ctx.beginPath()
+    ctx.moveTo(100, 10)
+    ctx.lineTo(40, 180)
+    ctx.lineTo(190, 60)
+    ctx.lineTo(10, 60)
+    ctx.lineTo(160, 180)
+    ctx.fill()
+  &lt;/script&gt;
+</code>
+</pre>				
+</section>
+
+<section id="failed">
+	<h2>Failed</h2>
+
+	<h3>Failed example 1</h3>
+
+	<p>This <code class="language-html">img</code> element with an empty (<code class="language-html">""</code>) <code class="language-html">alt</code> is not <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;img src="/test-assets/shared/w3c-logo.png" alt="" /&gt;
+</code>
+</pre>
+	
+	<h3>Failed example 2</h3>
+
+	<p>This <code class="language-html">img</code> element which is not <a href="glossary.html#included-in-the-accessibility-tree">included in the accessibility tree</a> because it has an <a href="glossary.html#explicit-role">explicit semantic role</a> of <code class="language-text">none</code> is not <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;img src="/test-assets/shared/w3c-logo.png" aria-hidden="true" alt="W3C logo" /&gt;
+</code>
+</pre>
+
+<h3>Failed example 3</h3>
+<p>This <code class="language-html">img</code> element which is not <a href="glossary.html#included-in-the-accessibility-tree">included in the accessibility tree</a> because it has an <a href="glossary.html#explicit-role">explicit semantic role</a> of <code class="language-text">none</code> is not <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;img src="/test-assets/shared/w3c-logo.png" role="none" alt="W3C logo" /&gt;
+</code>
+</pre>
+
+<h3>Failed example 4</h3>
+<p>This <code class="language-text">svg</code> element which has a <a href="glossary.html#semantic-role">semantic role</a> of <code class="language-text">graphics-document</code> and an empty (<code class="language-text">""</code>) <a href="glossary.html#accessible-name">accessible name</a> is not <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">&lt;p&gt;Best W3C logo:&lt;/p&gt;
+&lt;svg viewBox="0 0 512 512"&gt;
+  &lt;path d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"/&gt;
+  &lt;path fill="#e44d26" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512" /&gt;
+  &lt;path fill="#f16529" d="M256 480.5V131H404.3L376 447" /&gt;
+  &lt;path fill="#ebebeb" d="M142 176.3h114v45.4h-64.2l4.2 46.5h60v45.3H154.4M156.4 336.3H202l3.2 36.3 50.8 13.6v47.4l-93.2-26" /&gt;
+  &lt;path fill="#fff" d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8" /&gt;
+&lt;/svg&gt;
+</code>
+</pre>
+
+<h3>Failed example 5</h3>
+<p>This <code class="language-html">canvas</code> element which has no <a href="glossary.html#semantic-role">semantic role</a> and an empty (<code class="language-text">""</code>) <a href="glossary.html#accessible-name">accessible name</a> is not <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>.</p>
+<pre class="language-html">
+<code class="language-html">
+&lt;canvas id="w3c" width="200" height="60"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  const ctx = document.querySelector('#w3c').getContext('2d')
+  ctx.font = '30px Arial'
+  ctx.fillText"('WCAG Rules!', 20, 40)
+&lt;/script&gt;
+</code>
+</pre>
+</section>
+
+<section id="inapplicable">
+
+	<h2>Inapplicable</h2>
+
+	<h3>Inapplicable example 1</h3>
+
+	<p>This <code class="language-html">img</code> element is <a href="glossary.html#included-in-the-accessibility-tree">included in the accessibility tree</a> because the <code class="language-html">alt</code> attribute is not empty (<code class="language-text">""</code>).</p>
+<pre class="language-html">
+<code class="language-html">
+  &lt;img src="/test-assets/shared/w3c-logo.png" alt>="W3C" /&gt;
+</code>
+</pre>
+
+<h3>Inapplicable example 2</h3>
+
+<p>This <code class="language-html">img</code> element is neither <a href="glossary.html#visible">visible</a> nor <a href="glossary.html#included-in-the-accessibility-tree">included in the accessibility tree</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">&lt;img src="/test-assets/shared/w3c-logo.png" style="display:none" alt="" /&gt;
+</code>
+</pre>
+
+<h3>Inapplicable example 3</h3>
+
+<p>This <code class="language-html">img</code> element is not <a href="glossary.html#visible">visible</a> because it is positioned off screen.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;style&gt;
+  img {
+    position: absolute;
+    top: -9999em;
+  }
+&lt;/style&gt;
+&lt;img src="/test-assets/shared/fireworks.jpg" alt="" /&gt;
+</code>
+</pre>
+
+<h3>Inapplicable example 4</h3>
+<p>This <code class="language-text">svg</code> element is ignored because it is a child of a link that provides its <a href="glossary.html#accessible-name">accessible name</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;a href="https://example.org" aria-label="SVG star"&gt;
+  &lt;svg height="200" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" /&gt;
+  &lt;/svg&gt;
+&lt;/a&gt;
+</code>
+</pre>
+
+<h3>Inapplicable example 5</h3>
+<p>This <code class="language-text">svg</code> element has a <a href="glossary.html#semantic-role">semantic role</a> of <code class="language-html">img</code> and an <a href="glossary.html#accessible-name">accessible name</a> from its <code class="language-html">aria-label</code> attribute.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;svg viewBox="0 0 512 512" role="img" aria-label="HTML 5 logo"&gt;
+  &lt;path d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6" /&gt;
+  &lt;path fill="#e44d26" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512" /&gt;
+  &lt;path fill="#f16529" d="M256 480.5V131H404.3L376 447" /&gt;
+  &lt;path fill="#ebebeb" d="M142 176.3h114v45.4h-64.2l4.2 46.5h60v45.3H154.4M156.4 336.3H202l3.2 36.3 50.8 13.6v47.4l-93.2-26" /&gt;
+  &lt;path fill="#fff" d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8" /&gt;
+&lt;/svg&gt;
+</code>
+</pre>
+
+<h3>Inapplicable example 6</h3>
+<p>This <code class="language-html">canvas</code> element is not <a href="glossary.html#visible">visible</a> because it is completely transparent.</p>
+
+<pre class="language-html"><code class="language-html">&lt;canvas width="200" height="200"&gt;&lt;/canvas&gt;</code></pre>
+
+<h3>Inapplicable example 7</h3>
+<p>This <code class="language-text">canvas</code> element has a <a href="glossary.html#semantic-role">semantic role</a> of <code class="language-html">img</code> and an <a href="glossary.html#accessible-name">accessible name</a> from its <code class="language-text">aria-label</code> attribute.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;canvas id="w3c" width="200" height="60" role="img" aria-label="WCAG Rules!"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  const ctx = document.querySelector('#w3c').getContext('2d')
+  ctx.font = '30px Arial'
+  ctx.fillText('WCAG Rules!', 20, 40)
+&lt;/script&gt;
+</code>
+</pre>
+
+<h3>Inapplicable example 8</h3>
+<p>This <code class="language-html">img</code> element is <a href="glossary.html#visible">visible</a> but <a href="glossary.html#included-in-the-accessibility-tree">included in the accessibility tree</a>.</p>
+
+<p><strong>Note</strong>: While it might be better for the <abbr title="Portable Document Format">PDF</abbr> icon to be ignored by assistive technologies, because assistive technologies will announce &#8220;PDF&#8221; twice, the image is not <a href="https://www.w3.org/TR/WCAG21/#dfn-pure-decoration">purely decorative</a>. Having assistive technologies ignore it is not required by <a href="https://www.w3.org/TR/WCAG21/#non-text-content">Success Criterion 1.1.1 Non-text content</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;img src="/test-assets/shared/pdf-icon.png" alt="PDF" /&gt; PDF document
+</code>
+</pre>
+
+<h3>Inapplicable example 9</h3>
+<p>This is a <code class="language-html">div</code> element with a background image. Background images must be tested separate from this rule.</p>
+
+<pre class="language-html"><code class="language-html">&lt;p&gt;Happy new year!&lt;/p&gt;
+&lt;div
+  style="
+  width: 260px;
+  height: 260px;
+  background:url(/test-assets/shared/fireworks.jpg) no-repeat;"
+&gt;&lt;/div&gt;
+</code>
+</pre>
+
+<h3>Inapplicable example 10</h3>
+<p>This <code class="language-text">img</code> element has an <code class="language-html">src</code> attribute which will cause the <a href="https://html.spec.whatwg.org/multipage/images.html#img-req-state">image request state</a> to be <a href="https://html.spec.whatwg.org/multipage/images.html#img-error">Broken</a>.</p>
+
+<pre class="language-html">
+<code class="language-html">
+&lt;img src="/test-assets/does-not-exist.png" alt="" /&gt;
+</code>
+</pre>
+
+</section>
 		</main>
 	</body>
 </html>
