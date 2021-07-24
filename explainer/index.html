@@ -78,21 +78,20 @@
 	  <li>Received <a href="https://www.w3.org/community/silver/2018/04/23/suggestions-of-silver-design-sprint/">input from industry leaders</a> for directions to proceed to address the problem statements; The full <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/">Final Report of the Silver Design Sprint</a> is incorrectly labeled as a draft. It contains all the information on the Design Sprint. </li>
 	  <li>Drafted <a href="https://www.w3.org/TR/wcag-3.0-requirements/">Requirements for WCAG3</a>; </li>
 	  <li>Created and tested prototypes for aspects of the project; and </li>
-	  <li>Created a First Public Working Draft of WCAG3 and quarterly updated <a href="https://www.w3.org/TR/wcag-3.0/">Working Drafts</a>.  </li>
+	  <li>Created a <a href="https://www.w3.org/TR/2021/WD-wcag-3.0-20210121/">First Public Working Draft of WCAG3</a> and quarterly updated <a href="https://www.w3.org/TR/wcag-3.0/">Working Drafts</a>.  </li>
 	  </ol>
 	</section>
 
 	<section id="goals">
 	<h2>Goals</h2>
 	<p>The goal of WCAG 3.0 is to provide information that can be used to improve the accessibility of products on a variety of platforms. WCAG 3.0 uses a model that allows it to address more disability needs than WCAG 2.X, as well as address publishing requirements and emerging technologies such as web XR (augmented, virtual and mixed reality) and voice input. It will also provide non-<a>normative</a> (informative) information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. The WCAG 3.0 model is designed to support better coverage across disabilities and be easier to maintain, so that the new model will be more enduring over time as technologies evolve.</p>
-	<p class="ednote">W3C strives to be as inclusive as possible, and has actively sought participation and input from a broad range of stakeholder groups. We recognize, however, that there is always room for improvement in practices to support inclusion and representation. As you evaluate this document, please consider whether there are ways the Working Group can better support your review, feedback, or inclusion within the process of creating this standard. We welcome feedback on this question as part of your comments.</p>
 		<section id="inclusionGoals">
 		<h3>Goals for Inclusion</h3>
-		<p>These goals come from the <a href="https://w3c.github.io/silver/requirements/index.html#design-principles">Silver Requirements Design Principles</a>. The creation process for the guidelines should:</p>
+		<p>The creation process for the guidelines should:</p>
 		<ul>
-			<li>Actively recruit a diverse range of people with disabilities in recognition of the importance of their contributions to accessibility standards and solutions. Review and monitor whether people are included. Continually evaluate inclusive features of available tooling and procedures. </li>
+			<li>Actively recruit a diverse range of people with disabilities. Review and monitor whether people are included. Periodically evaluate inclusive features of available tooling and procedures.</li>
 			<li>Facilitate global participation and feedback.</li>
-			<li>Set goals for Diversity, Equity, Inclusion.  Include a goal for more recruiting of younger accessibility experts. </li>
+			<li class="ednote">W3C strives to be as inclusive as possible, and has actively sought participation and input from a broad range of stakeholder groups. We recognize, however, that there is always room for improvement in practices to support inclusion and representation. As you evaluate this document, please consider whether there are ways the Working Group can better support your review, feedback, or inclusion within the process of creating this standard. We welcome feedback on this question as part of your comments.</li>	
 		</ul>
 		</section>
 		<section id="ContentGoals">
@@ -108,13 +107,13 @@
 		</section>
 		<section id="ConformanceGoals">
 		<h3>Goals for Conformance</h3>
-<p class="ednote">The goals are based on the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive" target=blank>Silver research</a>, the results from the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/" target=blank>Silver Design Sprint</a>, and input from the Silver Community Group and Task Force.</p>
+<p>The goals are based on the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Silver_Research_Archive" target=blank>Silver research</a>, the results from the <a href="https://www.w3.org/community/silver/draft-final-report-of-silver/" target=blank>Silver Design Sprint</a>, and input from the Accessibility Guidelines Working Group, the Silver Task Force and the Silver Community Group.</p>
 <ul>
 			<li>Better align conformance with the experiences of people with disabilities, and keep in mind that people with different disabilities have different experiences.</li>
 			<li>Treat the needs of all disabilities equitably. </li>
 			<li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes more attention to the needs of low vision and cognitive accessibility, whose needs may not fit the true/false statement success criteria of WCAG 2.x. </li>
 			<li>Consider the needs of more organizations.</li>
-			<li>Be user-oriented instead of page-oriented. Think about what is the person trying to do.</li>
+			<li>Be user-oriented instead of page-oriented. Think about what the person is trying to do.</li>
 			<li>Wherever possible, preserve the organization’s investment in training, tooling, and knowledge. </li>
 			<li>Support the ability for organizations to choose parts of their site or product for conformance (a logical subset of a site or product).</li>
 			<li>Create a more flexible conformance model that addresses the challenges in applying the 2.x conformance model to large, complex, or dynamic websites and web applications.
@@ -122,12 +121,10 @@
 				<li>Help organizations prioritize things that have a greater impact on improving the experience of people with disability.  </li>
 				<li>Develop a more flexible method of measuring conformance that is better suited to accommodate dynamic or more regularly updated content.</li>
 				</ul>
-			<li>Remove “accessibility supported” as an author responsibility, and help developers of authoring tools, browsers, and assistive technologies learn the behaviors that users expect of their products. <span class="ednote"> Note: This requires more detailed discussion in AGWG. It does not yet have consensus. </span></li>
+			<li>Reduce the burden of “accessibility supported” as an author responsibility, and help developers of authoring tools, browsers, and assistive technologies learn the behaviors that users expect of their products. <span class="ednote"> Note: This goal originated as a suggestion from the Silver Design Sprint. It requires more detailed discussion in AGWG. It does not yet have consensus. </span></li>
 			<li>Improve tests so that repeated tests get more consistent results.</li>
-			<li>Increase the ability to create more automated tests.</li>
-			<li>Lower the cost of accessibility testing.</li>
-			<li>Do not increase the testing burden. </li>
-			
+			<li>Increase the ability to create more automated tests so that the cost of accessibility test could potentially be reduced.</li>
+			<li>Where possible, do not increase the manual accessibility testing burden. </li>
 		</ul>
 	</section>
 	</section>
@@ -404,7 +401,7 @@
 	  <section id="DSconformance">
 		<h4>Conformance</h4>
 		<ol start="6">
-		<li>Design a conformance structure and style guides that shift emphasis from “testability” to “measureability” so that guidance can be included that is not conducive to a true/false test.  True/false tests can be included, but they are not the only way to measure conformance.
+		<li>Design a conformance structure and style guides that shift emphasis from “testability” to “measurability” so that guidance can be included that is not conducive to a true/false test.  True/false tests can be included, but they are not the only way to measure conformance.
 		<li>Develop scorecard or rubric measures for testing task accomplishment, instead of technical page conformance.
 		<li>Develop a point and ranking system that will allow more nuanced measurement of the content or product: for example: bronze, silver, gold, and platinum ratings where the bronze rating represents the minimal conformance (roughly equivalent to meeting WCAG 2.1 AA), and increasing ranks include inclusive design principles, task-based assessment, and usability testing.
 		<li>Include a definition and concept for “substantially meets” so people are not excessively penalized for bugs that may not have a large impact on the experience of people with disabilities.
