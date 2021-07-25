@@ -143,7 +143,7 @@
 <section>
 <h2>Explanation Behind Decisions</h2>
 <p>The following sections describe the decision process behind some of the more difficult or controversial topics.  </p>
-<section>
+	<section>
 			<h3>Structure of these guidelines</h3>
 			<details class="summary">
 				<summary>Summary</summary>
@@ -207,26 +207,6 @@
 			</section>
 			</section>
 			<section>
-			<h4>How the parts work together</h4>
-		
-			<details class="summary">
-				<summary>Summary</summary>
-				<ul>
-					<li><strong>How-to information:</strong> advice written in plain language, including information on how to get started with accessibility.</li>
-					<li><strong>Functional needs:</strong> the access problems that people face.</li>
-					<li><strong>Functional categories:</strong> groups of disability types.</li>
-					<li><strong>Conformance levels:</strong> scoring your project’s accessibility. There are three levels for your project’s final score: bronze, silver, or gold. Scoring is not required.</li>
-				</ul>
-				<p>Some of these sections are in this document. You can find others in links within the sections.</p>
-			</details>
-		<p>The core structure has inter-relationships with supporting documents and the scoring process. <span id="guidelines--full-structure-description"> Functional needs inform user needs (captured in the How-To), outcomes, and functional categories. The tests within methods are used to inform the scores for each outcome. Then outcome scores are aggregated to create scores by functional category and an overall score. These then result in a bronze rating.  Silver and gold ratings build on the bronze rating to demonstrate improved accessibility. General information about guidelines is available in How-To documents. </span></p>
-			<figure id="guidelines-full-structure-diagram" aria-labelledby="guidelines--full-structure-description" class="figure-full">
-				<img src="../guidelines/img/structure-scoring.svg" />
-				<figcaption>Documentation and Scoring Structure from First Public Working Draft</figcaption>
-			</figure>
-		<p class="ednote">The Scoring process is in the process of extensive revision.  </p>
-			</section>
-			<section>
 				<h3>Functional needs</h3>
 				<p>The development of WCAG 3 guidelines starts with <a>functional needs</a>. A functional need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional needs are applied to specific topics (for example: contrast, forms, readability, and more) to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a href="../guidelines/#outcomes">outcomes</a>, which state the conditions to test whether the functional needs have been met. Functional needs are documented in the how-tos, supplementary material accompanying the guidelines.</p>
 				<p class="example">Example: Use without vision.</p>
@@ -253,8 +233,26 @@
 					<li>Cognitive and Sensory Intersections</li>
 				</ul>
 				<p class="ednote">The list of functional categories is a draft.  Creating meaningful groupings is still a work in progress and currently evolving along with the work on cataloging functional needs. This work will continue after the First Public Working Draft.  Those interested can see more information in the document <a href="https://www.w3.org/WAI/GL/WCAG3/2020/functional-needs/">DRAFT Functional Needs</a>.</p>
+			</section>			<section>
+			<h4>How the parts work together</h4>
+		
+			<details class="summary">
+				<summary>Summary</summary>
+				<ul>
+					<li><strong>How-to information:</strong> advice written in plain language, including information on how to get started with accessibility.</li>
+					<li><strong>Functional needs:</strong> the access problems that people face.</li>
+					<li><strong>Functional categories:</strong> groups of disability types.</li>
+					<li><strong>Conformance levels:</strong> scoring your project’s accessibility. There are three levels for your project’s final score: bronze, silver, or gold. Scoring is not required.</li>
+				</ul>
+				<p>Some of these sections are in this document. You can find others in links within the sections.</p>
+			</details>
+		<p>The core structure has inter-relationships with supporting documents and the scoring process. <span id="guidelines--full-structure-description"> Functional needs inform user needs (captured in the How-To), outcomes, and functional categories. The tests within methods are used to inform the scores for each outcome. Then outcome scores are aggregated to create scores by functional category and an overall score. These then result in a bronze rating.  Silver and gold ratings build on the bronze rating to demonstrate improved accessibility. General information about guidelines is available in How-To documents. </span></p>
+			<figure id="guidelines-full-structure-diagram" aria-labelledby="guidelines--full-structure-description" class="figure-full">
+				<img src="../guidelines/img/structure-scoring.svg" />
+				<figcaption>Documentation and Scoring Structure from First Public Working Draft</figcaption>
+			</figure>
+		<p class="ednote">The Scoring process is in the process of extensive revision.  </p>
 			</section>
-
 			<section>
 				<h3>Conformance Levels</h3>
 				<p class="ednote">The Conformance Levels are being revised with the Scoring.  The following paragraph describes the proposal in the First Public Working Draft.  </p>
@@ -262,40 +260,8 @@
 				<!--<p class="ednote">This first draft focuses on bronze level. Future drafts will have more information on silver and gold levels. Bronze level will be similar to WCAG 2 AA, while silver and gold will include more usability-type testing. This is still under development. WCAG 2.X AAA success criteria are generally included in WCAG 3. The design of the scoring model awards more points for implementing the outcomes that come from WCAG 2.X AAA.</p> -->
 			</section>
 <section>
-<h3>How Conformance Fits into the Information Architecture</h3>
-<ul>
-<li><strong>Guidelines</strong> are general information and intent written in plain language. </li>
-<li><strong>Outcomes</strong> are testable statements in plain language. 
-<li><strong>Methods</strong> are specific examples, instructions, and tests with more technical information.</li>
-<li>Future enhancements include a <strong>tagging engine</strong> to make it easier for people to find information by tags.</li>
-<li>Many organizations need an API to copy the guideline data to use for their own purposes.</li>
-<li>Guidelines will include: 
-	<ul>
-		<li>updated WCAG 2.1 guidance (technology-specific success criteria will become Methods)
-		<li>new guidance written for WCAG 3.0
-		<li>new guidance for task completion testing 
-	</ul>
-	</li>
-<li>Methods are associated with Guidelines.  In general, Methods are technology specific.  
-	<ul>
-		<li>Methods include tests for each Method.</li>
-		<li>Each Guideline will have multiple Methods with existing WCAG Technique guidance or new Methods written for WCAG 3.0. 
-		<li>Methods can include tests for determining the percentage points to apply to the conformance score. See the <a href="../guidelines/#points-and-levels">Points and Levels</a> section following for details. </li>
-		<li>Methods can provide guidance for: 
-		<ul>
-			<li>User agents
-			<li>Authoring tools
-			<li>Assistive technology
-			<li>Emerging technologies
-		</ul>
-		</li>
-	</ul>
-	</li>
-</ul>
-</section>
-<section>
 <h3>Selecting a Representative Sample</h3>
-<p>This is the basics of the proposal from Q2 2020 that was approved to go into the FPWD.  There are still many details that need to be worked out and many objections to be resolved.  
+<p class="ednote">This is the basics of the proposal from Q2 2020 that was approved to go into the FPWD.  There are still many details that need to be worked out and many objections to be resolved.  
 <ul>
 <li>Essential functions vary by industry -- gaming will be different than e-commerce. We can't say what has to be tested, the organization needs to determine what is essential. 
 <li>The organization (or author) defines the workflows and components, then prioritizes the primary workflows and components  to test. See WCAG-EM Steps 2 and 3 to help determine what workflows and components are representative samples.  
