@@ -174,13 +174,12 @@
 				<ul>
 					<li>The need for testable statements that were stable. This allows testing companies and regulators to state that the testable statement is not subject to change with methods.  There was discussion of making the Methods normative to address this concern, but the consensus was that it was better to add a layer that was technology neutral so it could include emerging technologies. </li>
 					<li>A new layer gave us the ability to add precise definitions as well as plain language. </li>
-					<li>Allows guidelines to have multiple ways to address the problem that could all be required.  For example: For a headings guideline to pass it needs to have semantic text AND visual formating AND describe the text content following the heading.  Methods have an "or" relationship in that not all methods need to be used -- especially because they are platform specific.  
+					<li>Outcomes allow guidelines to multiple barriers to address more complex functional needs of people with disabilities.  All the Outcomes could then be required.  For example: For a headings guideline could have multiple outcomes that require all outcomes to pass:  it needs to have semantic text AND visual formating AND describe the text content following the heading.   
 				</ul>
 				<p><a href="https://lists.w3.org/Archives/Public/w3c-wai-gl/2021AprJun/0192.html">Meeting minutes of the joint meeting of 14 May 2020</a>.
-
-				<p class="example">Example: Convey hierarchy with semantic structure</p>
 				<section>
 					<h4>Critical errors</h4>
+					<p class="ednote">Critical errors section is being revised.  The following describes the proposal in the First Public Working Draft. This will probably change in future Working Drafts.  </p>
 						<p><a href="../guidelines/#outcomes">Outcomes</a> include the related <a>critical errors</a> that can occur and how to identify them. Not all outcomes have critical errors.  Any critical errors will result in the lowest score for the outcome.</p>
 					
 					<p>Evaluating <a>processes</a> requires counting critical errors that occur within the process and associated <a>views</a>. Critical errors are:</p>
@@ -192,53 +191,41 @@
 				</section>
 				<section>
 					<h4>Outcome rating</h4>
+					<p class="ednote">Outcome rating section is being revised.  The following describes the proposal in the First Public Working Draft. This will probably change in future Working Drafts.  </p>
 					<p>Each outcome is rated on a scale of 0 to 4. The rating model is designed to be flexible in order to allow more functional needs of people with disabilities to be included in the guidelines. </p>
 					<p>Each outcome defines the rating criteria used for that outcome.  The rating criteria are designed to be technology agnostic but tie to the available methods so that method level scoring can be rolled up when possible or the tester can make an informed judgment call about the outcome rating. </p>
 
 				</section> 
-			</section>
-				
-				<section>
+			</section>			
+			<section>
 					<h3>Methods structure</h3>
 					<!-- <figure id="method_screenshot" aria-labelledby="method_screenshot_description" class="figure-float screenshot">
 						<img src="../guidelines/img/method.png" />
 							<figcaption>Screenshot of a Method for Structured Content</figcaption>
 					</figure> -->
-					<p class="ednote">The Method structure is being revised. There is an example for Text Alternatives in the latest Working Draft. </p>
-					
-					
-				
-					</section>
-				</section>
+					<p class="ednote">The Method structure is being revised to merge more closely with ACT Rules and reduce ambiguity in testing. There is an example for Text Alternatives in the latest Working Draft. </p>
 			</section>
-					<section class="informative">
-			<h4>Additional Documentation and Scoring Information</h4>
+			</section>
+			<section>
+			<h4>How the parts work together</h4>
 		
 			<details class="summary">
 				<summary>Summary</summary>
 				<ul>
 					<li><strong>How-to information:</strong> advice written in plain language, including information on how to get started with accessibility.</li>
-					<li><strong>Functional needs:</strong> how to solve the access problems that people face.</li>
+					<li><strong>Functional needs:</strong> the access problems that people face.</li>
 					<li><strong>Functional categories:</strong> groups of disability types.</li>
 					<li><strong>Conformance levels:</strong> scoring your project’s accessibility. There are three levels for your project’s final score: bronze, silver, or gold. Scoring is not required.</li>
 				</ul>
 				<p>Some of these sections are in this document. You can find others in links within the sections.</p>
 			</details>
-
-		<p>The core structure has inter-relationships with supporting documents and the scoring process. <span id="guidelines--full-structure-description"> Functional needs inform both outcomes and functional categories. The tests within methods are used to inform the scores for each outcome. Then outcome scores are aggregated to create scores by functional category and an overall score. These then result in a bronze rating.  Silver and gold ratings build on the bronze rating to demonstrate improved accessibility. General information about guidelines is available in How-To documents. </span></p>
+		<p>The core structure has inter-relationships with supporting documents and the scoring process. <span id="guidelines--full-structure-description"> Functional needs inform user needs (captured in the How-To), outcomes, and functional categories. The tests within methods are used to inform the scores for each outcome. Then outcome scores are aggregated to create scores by functional category and an overall score. These then result in a bronze rating.  Silver and gold ratings build on the bronze rating to demonstrate improved accessibility. General information about guidelines is available in How-To documents. </span></p>
 			<figure id="guidelines-full-structure-diagram" aria-labelledby="guidelines--full-structure-description" class="figure-full">
 				<img src="../guidelines/img/structure-scoring.svg" />
-				<figcaption>Documentation and Scoring Structure</figcaption>
+				<figcaption>Documentation and Scoring Structure from First Public Working Draft</figcaption>
 			</figure>
-				<section>
-					<h3>How tos</h3>
-					<p>The <a>How-To</a> content provides explanatory material for each guideline that applies across technologies. This guidance explains how to apply the concepts presented in the guidelines for non-technical readers. This plain language resource includes information on getting started, who the guideline helps and how, as well information for project managers, designers and developers.  </p>
-					<figure id="howTo_screenshot" aria-labelledby="howTo_screenshot_description" class="figure-float screenshot">
-						<img src="../guidelines/img/how-to.png" />
-							<figcaption>Example screenshot of a How-To for Structured Content</figcaption>
-					</figure>
-					<p id="howTo_screenshot_description">The example of a How-To for Structured Content provides basic information organized by tabs to help people get started with accessibility for structured content, plan for implementing accessible structured content across a project, design accessible structured content, and basics for developers new to accessibility of structured content. It also includes information on examples, the outcomes for meeting the guideline, and resources.</p>
-				</section>
+		<p class="ednote">The Scoring process is in the process of extensive revision.  </p>
+			</section>
 			<section>
 				<h3>Functional needs</h3>
 				<p>The development of WCAG 3 guidelines starts with <a>functional needs</a>. A functional need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional needs are applied to specific topics (for example: contrast, forms, readability, and more) to identify the barriers experienced by people with disabilities. The barriers in these topics inform the <a href="../guidelines/#outcomes">outcomes</a>, which state the conditions to test whether the functional needs have been met. Functional needs are documented in the how-tos, supplementary material accompanying the guidelines.</p>
@@ -270,11 +257,10 @@
 
 			<section>
 				<h3>Conformance Levels</h3>
+				<p class="ednote">The Conformance Levels are being revised with the Scoring.  The following paragraph describes the proposal in the First Public Working Draft.  </p>
 				<p>WCAG 3 has an optional scoring system that can better inform organizations on the quality of their accessibility effort. The optional conformance levels provide a way for organizations to report their conformance in simple manner. The bronze level is based on the score in each functional category and the overall score. Silver and gold levels require conforming at the bronze level plus additional improved usability for people with disabilities.</p>
-				<p class="ednote">This first draft focuses on bronze level. Future drafts will have more information on silver and gold levels. Bronze level will be similar to WCAG 2 AA, while silver and gold will include more usability-type testing. This is still under development. WCAG 2.X AAA success criteria are generally included in WCAG 3. The design of the scoring model awards more points for implementing the outcomes that come from WCAG 2.X AAA.</p> 
+				<!--<p class="ednote">This first draft focuses on bronze level. Future drafts will have more information on silver and gold levels. Bronze level will be similar to WCAG 2 AA, while silver and gold will include more usability-type testing. This is still under development. WCAG 2.X AAA success criteria are generally included in WCAG 3. The design of the scoring model awards more points for implementing the outcomes that come from WCAG 2.X AAA.</p> -->
 			</section>
-
-		</section>
 <section>
 <h3>How Conformance Fits into the Information Architecture</h3>
 <ul>
@@ -319,6 +305,6 @@
 </ul>
 <p><a href="https://www.w3.org/2020/08/11-ag-minutes.html#item04">Minutes of Joint AGWG Silver "Deep Dive" meeting on Representive Sampling</a> where the group agreed to return to this discussion in a later draft. </p>
 </section>
-</section>	
-  </body>
+</section>
+</body>
 </html>
