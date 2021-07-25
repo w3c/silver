@@ -143,7 +143,7 @@
 <section>
 <h2>Explanation Behind Decisions</h2>
 <p>The following sections describe the decision process behind some of the more difficult or controversial topics.  </p>
-<section class="informative">
+<section>
 			<h3>Structure of these guidelines</h3>
 			<details class="summary">
 				<summary>Summary</summary>
@@ -161,14 +161,22 @@
 			<p><a href="#guidelines-structure-diagram">Figure 1</a> shows <span id="guidelines-structure-description">the core structure of WCAG 3.0. WCAG 3.0 has three levels of content with associated documentation. Guidelines form the top level. Each guideline contains multiple outcomes, with associated critical errors and outcomes scoring. Each outcome contains multiple methods, with an associated description and examples, tests, and test scoring.</span></p>
 			<section>
 				<h4>Guidelines structure</h4>
-				<p>Guidelines provide a high-level, plain-language version of the content for managers, policy makers, individuals who are new to accessibility, and other individuals who need to understand the concepts but not dive into the technical details. They provide an easy-to-understand way of organizing and presenting the outcomes so that non-experts can learn about and understand the concepts. Each guideline includes a unique, descriptive name along with a high-level plain-language summary. Guidelines address functional needs on specific topics, such as contrast, forms, readability, and more. Guidelines group related outcomes and are technology-independent.</p>				
-				<p class="example">Example: Use sections, headings, and sub-headings to organize your content.</p>			
+				<p>Guidelines provide a high-level, plain-language version of the content for managers, policy makers, individuals who are new to accessibility, and other individuals who need to understand the concepts but not dive into the technical details. They provide an easy-to-understand way of organizing and presenting the outcomes so that non-experts can learn about and understand the concepts. Each guideline includes a unique, descriptive name along with a high-level plain-language summary. Guidelines address functional needs on specific topics, such as contrast, forms, readability, and more. Guidelines group related outcomes and are technology-independent.</p>
+				<p>Guidelines are the essential part of W3C Accessibility Guidelines.  Structuring the guidelines to provide information for accessibility beginners and other non-technical stakeholders addresses some of the usability issues identified in the Silver research and suggestions from the Silver Design Sprint.  
+				<p class="example">Example of a Guideline: Use sections, headings, and sub-headings to organize your content.</p>			
 			</section>
 			<section>
 				<h4>Outcomes structure</h4>
 				<p>Each guideline contains multiple outcomes. Outcomes result from practices that reduce or eliminate barriers that people with disabilities experience. Outcomes form the basis of a flexible and expansive architecture for accessibility guidelines that closely relates to the needs of people with disabilities. Outcomes are designed for use by developers, testers, and other technical experts. 
 				</p>
 				<p> Outcomes are written as testable criteria and include information on how to score the outcome in an optional <a href="../guidelines/#conformance-claims">Conformance Claim</a>. Within a guideline, outcomes have an AND relationship. All relevant outcomes must be addressed but not all outcomes will apply to all technologies and situations. When an outcome does not apply, it is marked NA in the scoring.</p>
+				<p>Outcomes were not a result of the Design Sprint, but came from a joint meeting of AGWG to address scoring.  Adding a level devoted to normative scoring addressed a number of issues: 
+				<ul>
+					<li>The need for testable statements that were stable. This allows testing companies and regulators to state that the testable statement is not subject to change with methods.  There was discussion of making the Methods normative to address this concern, but the consensus was that it was better to add a layer that was technology neutral so it could include emerging technologies. </li>
+					<li>A new layer gave us the ability to add precise definitions as well as plain language. </li>
+					<li>Allows guidelines to have multiple ways to address the problem that could all be required.  For example: For a headings guideline to pass it needs to have semantic text AND visual formating AND describe the text content following the heading.  Methods have an "or" relationship in that not all methods need to be used -- especially because they are platform specific.  
+				</ul>
+				<p><a href="https://lists.w3.org/Archives/Public/w3c-wai-gl/2021AprJun/0192.html">Meeting minutes of the joint meeting of 14 May 2020</a>.
 
 				<p class="example">Example: Convey hierarchy with semantic structure</p>
 				<section>
@@ -328,6 +336,7 @@
 </section>
 <section>
 <h3>Selecting a Representative Sample</h3>
+<p>This is the basics of the proposal from Q2 2020 that was approved to go into the FPWD.  There are still many details that need to be worked out and many objections to be resolved.  
 <ul>
 <li>Essential functions vary by industry -- gaming will be different than e-commerce. We can't say what has to be tested, the organization needs to determine what is essential. 
 <li>The organization (or author) defines the workflows and components, then prioritizes the primary workflows and components  to test. See WCAG-EM Steps 2 and 3 to help determine what workflows and components are representative samples.  
@@ -335,6 +344,7 @@
 <li>There are going to be technical violations of success criteria that don’t impact accessibility (for example, missing alt text that are explained in the text or the same HTML id attribute that aren’t ever referenced) that shouldn’t negatively impact the score. <span class="ednote">NOTE: There will be further development and amplification of what shouldn’t negatively impact the score. The concept of pass or fail should no longer be binary, but accounts for a concept of sufficient</span>  
 <li>People still need to have access to material that still isn’t in the primary flow. Accessibility can be tested even if it doesn’t have a flow.  <span class="ednote">NOTE: There needs to be a way that important sections, like navigation and footer, don’t get overlooked because they aren’t part of the flow.  </span>
 </ul>
+<p><a href="https://www.w3.org/2020/08/11-ag-minutes.html#item04">Minutes of Joint AGWG Silver "Deep Dive" meeting on Representive Sampling</a> where the group agreed to return to this discussion in a later draft. </p>
 </section>
 </section>	
   </body>
