@@ -29,20 +29,31 @@
 				<h3>Providing a non-text indicator and text instructions</h3>
 				
 					<p>Non-text descriptions can appear in the form as the indicator along with descriptive text, for example, an asterisk in the input label, as in “Email *”.</p>
-					<h4>Using a character non-text indicator</h4>
+<pre>
+&lt; 
+</pre>
+			</section>
+			<section class="example">
+				<h3>Using a character non-text indicator</h3>
+				<pre>
+				    <code>
+					 &lt;p>Note: An asterisk (*) denotes a required field&lt;/p&gt;
 				
-						<pre><code>&lt;p&gt;Note: An asterisk (*) denotes a required field&lt;/p&gt;</code></pre>
+					 &lt;label for="email">Email *&lt;/label&gt;
+					 &lt;input type="text" id="email" required&gt;
 
-						<pre><code>&lt;label for="email"&gt;Email *&lt;/label&gt;</code></pre>
-						<pre><code>&lt;input type="text" id="email" required&gt;</code></pre>
-				
-					<h4>Using an image non-text indicator</h4>
-				
-						<pre><code>&lt;p&gt;Note: &lt;img src="star.gif" alt="required"&gt; denotes a required field&lt;/p&gt;</code></pre> 
-				
-						<pre><code>&lt;label for="email"&gt;Email &lt;img src="star.gif" alt="required"&gt;&lt;/label&gt;</code></pre>
-						<pre><code>&lt;input type="text" id="email" required&gt;</code></pre>
-				
+					&lt;p>Note: &lt;img src="star.gif" alt="required"> denotes a required field&lt;/p&gt; 
+					</code>
+				</pre>
+			</section>
+			<section class="example">
+				<h3>Using an image non-text indicator</h3>
+				<pre>
+				    <code>
+						&lt;label for="email">Email <img src="star.gif" alt="required">&lt;/label&gt;
+						&lt;input type="text" id="email" required&gt;						
+					</code>
+				</pre>
 			</section>
 		</main>
 	</body>
