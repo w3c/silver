@@ -9,20 +9,16 @@
 		</header>
 		<main>
 			<section class="example">
+				<p>The following examples illustrate some basic ways to provide data entry instructions at the source of input.</p>
+				
 				<h3>Example 1: Providing instructions within labels</h3>
-				<p>For simple use cases, providing instructions within labels will be sufficient. 
-					This approach is reliable across different web browsers and assistive technologies.
-				</p>
-				<p>In the example below, the required format for the "Date of Birth" is indicated by "MM/DD/YYYY"
-					within the same label:
-				</p>
+				<p>For simple use cases, providing instructions within labels will be sufficient. This approach is reliable across different web browsers and assistive technologies.</p>
+				<p>In the example below, the required format for the "Date of Birth" is indicated by "MM/DD/YYYY" within the same label:</p>
 					<pre><code>&lt;label for="dob"&gt;Date of Birth (MM/DD/YYYY)&lt;/label&gt;</code></pre>
 					<pre><code>&lt;input type="text" id="dob"&gt;</code></pre>
+				
 				<h3>Example 2: Providing instructions outside of labels</h3>
-				<p>Another approach to associate additional instructions with a form field is to use
-					aria-describedby. Information referenced by this attribute is made available to the 
-					users after the label and other information is announced.
-				</p>
+				<p>Another approach to associate additional instructions with a form field is to use aria-describedby. Information referenced by this attribute is made available to the users after the label and other information is announced.</p>
 					<pre><code>&lt;label for="date"&gt;Date&lt;/label&gt;&lt;span id="date-tip"&gt;MM-DD-YYYY&lt;/span&gt;</code></pre>
 					<pre><code>&lt;input type="text" id="date" aria-describedby="date-tip"&gt;</code></pre>
 			</section>
