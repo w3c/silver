@@ -674,8 +674,8 @@
 				<h3>Error prevention</h3>
 				<p class="guideline-text">Provide features that help users avoid errors.</p>
 				<section class="outcome">
-					<h4>Input instructions provided</h4>
-					<p>Provides instructions for inputs that have requirements (for example, required, date, password) so users know how to provide valid information.</p>
+					<h4>Outcome: Input instructions provided</h4>
+					<p>Provides instructions for inputs that have data entry requirements (for example, required, date, password) so users know how to provide valid information.</p>
 					<details class="categories">
 						<summary>Functional categories</summary>
 						<p>This outcome relates to the following functional categories:</p>
@@ -696,14 +696,14 @@
 					<details class="errors">
 						<summary>Critical errors</summary>	
 						<ul>
-							<li>Any input that has specific data requirements (e.g., date, password) that is provided without instructions.</li>
-							<li>Any input for collecting sensitive information (e.g., social security number) that fails “Input instructions provided” tests.</li>
+							<li>Any input that has specific data entry requirements (for example, date, password) that is provided without perceivable and understandable instructions describing the data entry requirements.</li>
+							<li>Any input for collecting personal and sensitive information (for example, national identification number, health information) that fails "Input instructions provided" tests.</li>
 						</ul>
 					</details>
 					<details class="rating">
 						<summary>Rating</summary>
 						<table class="rating-table">
-							<caption>Rating for "Input instructions provided</caption>
+							<caption>Rating for "Input instructions provided"</caption>
 							<thead>
 								<tr>
 									<th scope="col">Rating</th>
@@ -735,10 +735,45 @@
 						</table>
 					</details>
 				</section>
-				<!--
-				<section class="outcome"><h4>Font appropriate for luminance contrast</h4><p>Selects a font family, font weight, and x-height appropriate for the luminance contrast.</p><ol><li>@@</li></ol></section>
-				<section class="outcome"><h4>Select background and text colors</h4><p>Selects both the background and text colors OR uses the default color of both background and text. Selecting only one causes problems for people with low vision when they adapt the colors. (<span class="ednote">Note: @@ this needs work)</span></p><ol><li>@@</li></ol></section>
-				-->
+				
+				<section class="outcome">
+					<h4>Outcome: Moderated form completion</h4>
+					<p>Guides data entry, provides validation, and moderates form completion so users can avoid data entry errors.</p>
+					<details class="categories">
+						<summary>Functional categories</summary>
+						<p>Details will be posted when available.</p>
+					</details>
+					<details class="errors">
+						<summary>Critical errors</summary>	
+						<p>Details will be posted when available.</p>
+					</details>
+					<details class="rating">
+						<summary>Rating</summary>
+						<p>Details will be posted when available.</p>
+					</details>
+				</section>
+				
+				<div class="ednote">
+					<p>The Error Prevention guideline is a combination of WCAG 2.2 success criteria and additional requirements to address a broader range of functional needs.</p>
+
+					<p>For WCAG 2.2 success criteria, we focused on <a href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">Success Criterion 3.3.2: Labels or Instructions (Level A)</a>, which states, "Labels or instructions are provided when content requires user input." We are still working on outcomes and methods to address <a href="https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data">Success Criterion 3.3.4 Error Prevention (Legal, Financial, Data) (Level AA)</a> and <a href="https://www.w3.org/TR/WCAG21/#error-prevention-all">Success Criterion 3.3.6 Error Prevention (All) (Level AAA)</a>. We drew on WCAG 2.2 Techniques, Easy Checks, Web Accessibility Tutorials, and ACT Rules to create the outcomes, methods, examples, and tests, including (but not limited to):</p>
+					<ul>
+						<li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G184">Providing text instructions at the beginning of a form or set of fields that describes the necessary input (G184)</a></li>
+						<li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G162">Positioning labels to maximize predictability of relationships (G162)</a></li>
+						<li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G89">Providing expected data format and example (G89)</a></li>
+						<li><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H90">Indicating required form controls using label or legend (H90)</a></li>
+						<li><a href="https://www.w3.org/WAI/test-evaluate/preliminary/#forms">Required fields and other instructions (Easy Checks)</a></li>
+						<li><a href="https://www.w3.org/WAI/tutorials/forms/instructions/">Form Instructions (Web Accessibility Tutorials)</a></li>
+					</ul>
+
+					<p>To identify requirements beyond those specified in WCAG 2.2, we used user journeys to explore user needs related to different error-related scenarios, such as error on data entry and error on form submission (see <a href="https://docs.google.com/document/d/1siHMdNk96v2DVY6sarjZCDt5-nvqvQq13bXOOYymNlw/edit?usp=sharing">Error Flows Inventory (Google Doc)</a>). We then elaborated those scenarios to explore and define features that help prevent errors and help users recover from errors. We defined common user needs related to errors, such as "User needs instructions for inputs that have data entry requirements so they can enter data in the correct format." We used the <a href="https://www.w3.org/WAI/GL/WCAG3/2020/functional-needs/">DRAFT Functional Needs<a/> as a guide to define specific functional needs, such as "User needs instructions that display at the source of input so they can access the instructions while focused on the input" for functional needs related to limited vision, attention, and memory. We summarized functional needs in the <a href="https://docs.google.com/spreadsheets/d/1BEzSKUsoMQZAwLY5uM5T4Jk7vqKruQT8EaheijQJ7nk/edit#gid=1549778244">Error User Needs Worksheet (Google Sheet)</a> and used those as the basis for defining guidelines, outcomes, and methods.</p>   
+
+					<p>The guidelines, outcomes, and methods related to errors are not complete. However, we would like your feedback on the structure and approach to defining accessibility guidelines with this user-first approach. Does the user journey approach make sense as a way of defining accessibility features? Are the methods clear in how they help achieve the outcome? Are the tests understandable and straightforward?</p> 
+					
+					<p>For this 3rd Public Working Draft, we include three methods to support the outcome of Input instructions provided for the Error Prevention guideline, which focuses on preventing errors from occurring. We are still working on additional outcomes and methods. We are also working on a guideline for Error Notification that will address outcomes and methods related to helping users recover from errors. We hope to include the remaining Error Prevention content and the complete Error Guidelines guideline in the 4th Public Working Draft, due out in December 2021.</p>
+				
+				</div>
+
 			</section>
 		</section>
 		<section>
