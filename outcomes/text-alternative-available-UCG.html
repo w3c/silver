@@ -5,14 +5,14 @@
 	</head>
 	<body>
 		<main>
-			<h1>Outcome: Text alternative available for user generated content</h1>
-			<p class="outcome">If the content is <a href="https://www.w3.org/TR/wcag-3.0/#user-generated-content">user generated content</a>, then a text alternative mechanism for non-text content is available via user agents and assistive technologies. This mechanism allows users who are unable to perceive and / or understand the non-text content to determine its meaning. To support users in creating accessible content, the publisher of the user generated content:  </p>
+			<h1>Outcome: Supports the addition of text alternatives for user-generated content</h1>
+			<p class="ednote">How the specific details of this outcome will be managed and what is required vs what is recommended still needs discussion. This outcome is an example of how an outcome could be used with user generated images and graphics. In the current WCAG3 charter scope, we recommended not having normative outcomes for authoring tools and user agents. That makes this example outside the current scope of WCAG3.  We are including this example to get public feedback whether we should include normative requirements for authoring tools and user agents.</p>
+			<p class="outcome">If the content is <a href="https://www.w3.org/TR/wcag-3.0/#user-generated-content">user generated content</a>, then the site or product provides a mechanism for users to contribute or modify text alternatives for their user-generated non-text content. This mechanism allows users who are unable to perceive and / or understand the non-text content to determine its meaning. To support users in creating accessible content, the publisher of the user generated content:  </p>
 			<ul>
-				<li>Provides functionality for adding non-text content, then users are able to modify programmatically associated text alternatives for non-text content.</li>
-				<li>Provides functionality to check if Generic strings (e.g. "image") and irrelevant strings (e.g. the file name, file format) are not used as text alternatives </li>
-				<li>If the repair attempt occurs during an authoring session, provides users the opportunity to accept, modify, or reject the repair attempt prior to insertion of the text alternative into the content.</li>
-				<li>If the repair attempt occurs after an authoring session has ended, the repaired text alternatives are indicated during subsequent authoring sessions (if any) and users have the opportunity to accept, modify, or reject the repair strings prior to insertion in the content. </li>
-				<li>Provides the functionality for adding non-text content, when users enter programmatically associated text alternatives for non-text content AND the text alternatives are automatically saved and suggested by the authoring tool, if the same non-text content is reused. </li>
+				<li>Provides functionality to users for adding text alternatives for their non-text content</li>
+				<li>Provides functionality to users for modifying text alternatives for their non-text content</li>
+				<li>Provides functionality to check and flag if generic strings (e.g. "image") and irrelevant strings (e.g. the file name, file format) are being supplied as text alternatives</li>
+				<li>In the case when the same image is re-used, offers the user the previously provided text alternative for that image</li>
 				<li>Provides the functionality for adding non-text content, when users enter programmatically associated text alternatives for non-text content AND the author has the option to edit or delete the saved text alternatives.
 			</ul>
 			<p>The above references are adapted from the <a href="https://www.w3.org/TR/ATAG20/#gl_b23">Authoring Tool Accessibility Guidelines (ATAG) 2.0 B.2.3</a>  Assist authors with managing alternative content for non-text content. </p>
