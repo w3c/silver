@@ -9,26 +9,48 @@
 		</header>
 		<main>
 			<section id="outcome">
-				<h2>Outcome and Functional Categories</h2>
+				<h2>Outcome</h2>
 				<p>This method supports the outcome <a href="https://www.w3.org/WAI/GL/WCAG3/2020/outcomes/conveys-information-about-the-sound">Conveys information about the sound</a>.</p>
 				<p>Applies to immersive environments that support text equivalents (such as captions or transcripts) of audio track. </p>
 			</section>
-			<section id="details">
-				<h2>Detailed description</h2>
-				<section>
-				<h3>Maintaining reflow context in XR for Captions</h3>
+			<section id="platform">
+				<h2>Platform</h2>
+				<ul>
+					<li>Media players</li>
+					<li>Immersive technology engines</li>
+				</ul>
+			</section>
+			<section id="technology">
+				<h2>Technology</h2>
+				<ul>
+					<li>Media</li>
+					<li>XR</li>
+				</ul>
+			</section>
+			<section id="input_aspects">
+                <h2>Input aspects for testing</h2>
+                <ul>
+                    <li>To be completed. [technical sources for input, such as DOM tree, Accessibility tree and CSS styling]</li>
+                </ul>
+            </section>
+			<section id="summary">
+				<h2>Summary</h2>
+				<p>Users with vision impairments may need to resize or reflow captions, 
+					subtitling or other text. It is important that caption, subtitling or text can reflow (in context) 
+					within an XR environment without loss of information, context or functionality.
+					</p>
 				<p>Content should not lose its context. This means that when captioning is related to speech they maintain their relationship with the source. If captioned text within the environment needs to be moved there is a persistent parent / child relationship between the related source and the related caption that enables either to be moved or other transformations to take place.</p>
 				<p>See <a href="https://github.com/w3c/silver/issues/139">https://github.com/w3c/silver/issues/139</a> for example of traditional content in XR environment</p>
-				</section>
-				<section>
-				<h3>Anti-Aliasing or use of vector graphics of Captions</h3>
 				<p>Depending on the environment - Captions should be resized without loss of quality. This may mean anti-aliasing options need to be available in XR or requiring the use of vector style graphics for captions and other text, which means they will resize more easily without loss of quality.</p>
 				</section>
 			</section>
-			<section id="dependencies">
-				<h2>Dependencies</h2>
+			<section id="user-need">
+				<h2>How it solves user need</h2>
+				<p>People can choose a font format or size of their choice or use a mechanism with accessible affordances. This will allow them to resize and reflow text without either hiding or obscuring the content or substantial loss of context. The means of choice can be via (choose at least one): </p>
 				<ul>
-					<li><p>None.</p> </li>
+					<li>user preference</li>
+					<li>personalization</li>
+					<li>other customisation setting</li>
 				</ul>
 			</section>
 		</main>
