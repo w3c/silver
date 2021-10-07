@@ -932,6 +932,31 @@
 				</section>
 			</section>
 			<section>
+			<h3>User Generated Content</h3>
+			<p>Web content publishers may include content provided by the users of their digital products. We refer to such content as "<a href="#user-generated-content">User Generated Content</a>".</p>
+			<p>Examples of User Generated Content include:</p>
+				<ul>
+					<li>social media postings and comments,</li>
+					<li>uploaded photographs, or</li>
+					<li>uploaded videos or other multimedia.</li>
+				</ul>
+			<p>User Generated Content is provided for publication by visitors where the content platform specifically welcomes and encourages it. User-generated content is content that is submitted through a user interface designed specifically for members of the public and customers. Use of the same user interface as an authoring tool for publication of content by agents of the publisher (such as employees, contractors, or authorized volunteers) acting on behalf of the publisher does not make that content User Generated Content. The purpose of the User Generated Content Conformance is to allow WCAG 3 outcomes and methods to require additional or different steps to improve the accessibility of User Generated Content.</p>
+			<p>An important part of WCAG Conformance is the specific guidance that is associated with individual WCAG 3 guidelines and outcomes. Not all WCAG 3 guidelines will have unique outcomes and testing for User Generated Content. Unless User Generated Content requirements are specified in a particular guideline, that guideline applies as written whether or not the content is User Generated. </p>
+			
+			<p class="ednote">We plan for the Q4 Working Draft to include specific examples of guidelines with additional requirements for user generated content.  One example would be alternative text. The Authoring Tool Accessibility Guidelines (ATAG) has specific guidance for providing a mechanism for alternative text. The <a href="https://www.w3.org/TR/ATAG20/#gl_b23">ATAG  2.0 Guideline B.2.3</a> - "Assist authors with managing alternative content for non-text content" could be adapted to provide specific, guideline-related guidance for user generated alternative text. </p>
+			
+			<p>The web content publisher should identify all locations of User Generated Content (such as commentary on hosted content, product descriptions for consumer to consumer for sale listings, and restaurant reviews) and perform standard accessibility evaluation analysis for each. If there are no accessibility issues, the User Generated Content is fully conforming.</p>
+			<section>
+			<h4>Steps to Conform</h4>
+			<p>If accessibility issues are identified, or if the website author wants to proactively address potential accessibility issues that might arise from User Generated Content, then all of the following must be indicated alongside the User Generated Content or in an Accessibility Statement published on the site or product that is linked from the view or page in a consistent location:</p>
+			<ol>
+				<li>Clearly identify where User Generated Content can be found on the publisher's digital product (perhaps by id href);</li>
+				<li>Clearly identify the steps taken to encourage accessibility in User Generated Content such as prompting the user for ALT text for their uploaded images before they are accepted and the disallowal of text attributes except as they are part of semantic markup such as strong, headings, etc., as enumerated in Guideline Outcomes;</li>
+			</ol>
+			<p class="ednote">Editor's Note: Appropriate scoring is yet to be provided. Once provided, fully conforming content will score as fully conformant. It remains to be determined how to score User Generated Content that has accessibility issues; and to define what minimum threshold scores might be acceptable; and what critical errors might prevent a conformance assertion. We expect WCAG 3 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
+			</section>
+			</section>
+			<section>
 				<h3>Conforming alternative version</h3>
 				<p class="ednote">For this first draft, the Accessibility Guidelines Working Group has focused on the basic conformance model. For a next draft, we will explore how <a href="https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version">conforming alternative versions</a> fit into the new conformance model.</p>
 			</section>
@@ -1125,6 +1150,9 @@
 					   </p>
 					   
 					</dd>
+				<dt><dfn data-it="User generated content">User generated content</dfn></dt>
+				<dd><p>User Generated Content is provided for publication by visitors where the content platform specifically welcomes and encourages it. User-generated content is content that is submitted through a user interface designed specifically for members of the public and customers. Content created by agents of the publisher (such as employees, contractors, or authorized volunteers) is not considered User Generated Content, even if the agents use the same interface to publish.  The publisher in this definition is the owner of the website providing content, not the owner of a paid platform used for website creation.</p></dd>
+				<dd><p class="ednote">Future work on the glossary will better define terms such as publisher, content author, etc.</p></dd>
 				<dt><dfn data-lt="User needs">User need</dfn></dt>
 				<dd><p>The end goal a user has when starting a process through digital means.</p></dd>
 				<dt><dfn>User testing</dfn></dt>
