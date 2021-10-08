@@ -36,8 +36,8 @@ var respecConfig = {
 		w3cid: 42417
 	}, {
 		name: "Rachael Bradley Montgomery",
-		mailto: "rachael@accessiblecommunity.org",
-		company: "Invited Expert",
+		mailto: "rmontgomery@loc.gov",
+		company: "Library of Congress",
 		w3cid: 90310
 	}, {
 		name: "Shawn Lauriat",
@@ -52,6 +52,13 @@ var respecConfig = {
 		companyURI: "https://www.w3.org/",
 		w3cid: 34017
 	}],
+	project manager: [ {
+      name: "Wilco Fiers",
+      mailto: "wilco.fiers@deque.com",
+      company: "Deque Systems, Inc",
+      companyURI: "https://www.deque.com/",
+     // w3cid: 
+    }
 	
 	// authors, add as many as you like.
 	// This is optional, uncomment if you have authors as well as editors.
