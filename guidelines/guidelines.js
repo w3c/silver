@@ -273,6 +273,12 @@ function outputJson() {
 function loadDoc(path) {
 }
 
+function authorToPM() {
+	document.querySelectorAll("div.head dt").forEach(function(node){
+    if (node.textContent.trim() == "Authors:" || node.textContent.trim() == "Author:") node.textContent = "Project Manager:";
+  });
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
@@ -288,6 +294,7 @@ function preRespec() {
 
 // scripts after Respec has run
 function postRespec() {
+	authorToPM();
 	addOutcomeMarkers();
 	adjustNormativity();
 	termTitles();

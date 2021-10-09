@@ -51,13 +51,13 @@ var respecConfig = {
 		company: "W3C",
 		companyURI: "https://www.w3.org/",
 		w3cid: 34017
-	},
-	projectManager: [ {
+	}],
+	authors: [{
       name: "Wilco Fiers",
       mailto: "wilco.fiers@deque.com",
       company: "Deque Systems, Inc",
       companyURI: "https://www.deque.com/",
-     // w3cid: 
+      w3cid: 43334
     }],
 	
 	// authors, add as many as you like.
