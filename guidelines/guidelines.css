@@ -73,3 +73,6 @@ caption {
 	font-weight: bold;
 	font-size: 100% !important;
 }
+a[href].status-link {
+	color: var(--text);
+}
