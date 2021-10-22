@@ -10,6 +10,9 @@
 		<main>
 			<section id="atomic">
 				<h2>Atomic Tests</h2>
+				<p><strong>Unit Tested: </strong>Visual headings</p>
+
+				<p><strong>Method: </strong> Create a percentage of the visual headings within a view that have correctly coded as a heading, are coded at the correct level, and can be used as navigation. </p>
 				<ul>
 					<li><a href="#test1">Using h1-h6 to identify headings</a></li>
 					<li><a href="#test2">Using ARIA role=heading to identify headings</a></li>
@@ -43,10 +46,49 @@
 					<p>Checks #2 and #3 are true.</p>
 					</section>
 				</section>
+
+					<section id="test3">
+					<h3>Test for accuracy of heading levels</h3>
+					<ul>
+						<li>Don’t skip levels when going deeper into the hierarchy (i.e. don’t go from H2 to H4).</li>
+						<li>You may skip levels when going higher into the hierarchy if it is internally consistent with your header structure (i.e. you may go from H4 to H2).</li>
+					<li>Avoid having two headers immediately adjacent with no content in between them.</li>
+					</ul>
+				
+				<section>
+				<h4>Procedure [for each test]</h4>
+					<ol>
+						<li>Check that each heading is at the correct level.</li>
+					</ol>
+				</section>
+						<section>
+					<h4>Expected Results</h4>
+					<p>Check #1 is true</p>
+				</section>
+				
+				<section>
+					<h3>Test that each heading can be used for navigation purposes</h3>
+					<section>
+						<h4>Procedure</h4>
+					<ol>
+						<li>Check that each heading can be used for navigation purposes.
+						</li>
+					</ol>
+					</section>
+				</section>
+						<section>
+					<h4>Expected Results</h4>
+					<p>Check #1 is true.</p>
+				</section>
+
+
+				</section>
 			</section>
 			<section id="holistic">
 				<h2>Holistic Tests</h2>
-				{list of links to tests}
+				<ul>
+					<li>Still to be developed. We will include this in a future working draft. </li>
+				</ul>
 			</section>
 		</main>
 	</body>

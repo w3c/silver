@@ -14,13 +14,13 @@ var respecConfig = {
 	diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "silver-requirements",
+	shortName: "wcag-3.0-requirements",
 	
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
-	copyrightStart: "2018",
-	license: "document",
+	copyrightStart: "2021",
+	license: "w3c-software-doc",
 	
 	// if there a publicly available Editors Draft, this is the link
 	edDraftURI: "https://w3c.github.io/silver/requirements/",
@@ -69,21 +69,9 @@ var respecConfig = {
 	
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
-	// name of the WG
-	wg: "Web Content Accessibility Guidelines Working Group",
-	
-	// URI of the public WG page
-	wgURI: "https://www.w3.org/WAI/GL/",
-	
-	// name (with the @w3c.org) of the public mailing to which comments are due
-	wgPublicList: "public-silver",
-	
-	// URI of the patent status for this WG, for Rec-track documents
-	// !!!! IMPORTANT !!!!
-	// This is important for Rec-track documents, do not copy a patent URI from a random
-	// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
-	// Team Contact.
-	wgPatentURI: "https://www.w3.org/2004/01/pp-impl/35422/status",
+	group: "ag",
+	github: "w3c/silver",
+
 	maxTocLevel: 4,
 	
 	//localBiblio: biblio,

@@ -28,7 +28,7 @@
 				<p>In HTML, decorative SVGs need to use the aria-hidden attribute with a value of “true”. For example:</p>
 <pre>
 &lt;button type=”button”>
-  &lt;svg aria-hidden=”true” viewbox=”0 0 30 30”>
+  &lt;svg aria-hidden=”true” viewBox=”0 0 30 30”>
     &lt;use href=”#help-icon” />
   &lt;/svg>
   &lt;span>Help&lt;/span>
@@ -37,7 +37,7 @@
 			</section>
 			<section class="example" id="example3">
 				<h3>CSS</h3>
-				<p>The <a href="https://www.w3.org/TR/css-content-3/#alt">CSS Generated Content Module Level 3 Working Draft</a> includes support for alternative text for generated content. Alternative text with an empty value is specified as "". In the following example, if the pseudo-element is purely decorative and its function is covered elsewhere, setting alt to the empty string can avoid reading out the decorative element. Here the ARIA attribute will be spoken as "collapsed". Without the empty string alt value, the content would also be spoken as "Black right-pointing pointer".  </p>
+				<p>The <a href="https://www.w3.org/TR/css-content-3/#alt">CSS Generated Content Module Level 3 Working Draft</a> includes support for alternative text for generated content. Alternative text with an empty value is specified as "". In the following example, if the pseudo-element is purely decorative and its function is covered elsewhere, setting alt to the empty string can avoid reading out the decorative element. Here the ARIA attribute will be spoken as <q>collapsed</q>. Without the empty string alt value, the content would also be spoken as <q>Black right-pointing pointer</q>.  </p>
 <pre>
 .expandable::before {
  content: "\25BA" / "";

@@ -12,12 +12,12 @@ var respecConfig = {
 	//publishDate:          "2013-08-22",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "WCAG30",
+	shortName: "wcag-3.0",
 	
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
-	copyrightStart: "2020",
+	copyrightStart: "2021",
 	license: "document",
 	
 	// if there a publicly available Editors Draft, this is the link
@@ -35,7 +35,7 @@ var respecConfig = {
 		companyURI: "https://tetralogical.com/",
 		w3cid: 42417
 	}, {
-		name: "Rachael Montgomery",
+		name: "Rachael Bradley Montgomery",
 		mailto: "rachael@accessiblecommunity.org",
 		company: "Invited Expert",
 		w3cid: 90310
@@ -73,10 +73,25 @@ var respecConfig = {
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
 	group: "ag",
+	github: "w3c/silver",
 
 	maxTocLevel: 4,
 	
 	preProcess: [preRespec],
+	postProcess: [postRespec],
 	
-	//localBiblio: biblio,
+	localBiblio: {
+		"508-criteria": {
+			"title": "Section 508 Functional Performance Criteria",
+			"publisher": "United States Access Board",
+			"date": "8 December 2011",
+			"href": "https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria"
+		},
+		"en-301-549": {
+			"title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe",
+			"publisher": "European Telecommunications Standards Institute",
+			"date": "February 2014",
+			"href": "https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf"
+		}
+	}
 };
