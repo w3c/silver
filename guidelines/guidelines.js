@@ -168,7 +168,7 @@ function addStatusMarkers() {
 		var statusSections = document.querySelectorAll(statusBlock.className);
 		statusSections.forEach(function (section) {
 			var div = document.createElement('div');
-			div.setAttribute('class', 'addition');
+			div.setAttribute('class', 'addition sticky');
 			div.innerHTML = '<a href="https://www.w3.org/WAI/GL/wiki/AG_process'
 			+ statusBlock.urlHash
 			+ '" class="status-link">Section status: <strong>'
