@@ -13,9 +13,12 @@ You should totally buy his book on Inclusive Components.
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<p class="breadcrumb"><a href="../../guidelines/index.html">Silver</a> > <a href="../explainers/VisualContrast.html">Visual Contrast</a> > Select font characteristics and background colors to provide enough contrast </p>
-<div class="guidanceBox">
-	<h1>Select font characteristics and background colors to provide enough contrast for readability </h1>
+<p class="breadcrumb"><a href="../../guidelines/index.html">Silver</a> > <a href="../explainers/VisualContrast.html">Visual Contrast</a> > DEPRECIATED </p>
+<div class="guidanceBox" style="color: #a00;background-color: #fdd; border-width: 8px;">
+	<h1>THIS DOCUMENT IS DEPRECIATED AND HAS BEEN SUPERSEDED.</h1>
+	<h2>Please see the <a href="https://www.w3.org/TR/wcag-3.0/">current working draft</a></h2>
+	<hr>
+	<h3>Select font characteristics and background colors to provide enough contrast for readability </h3>
 	<p>Use tools to evaluate font size, font stroke width, background color, font color, and nearby colors and adjust the properties of those elements to achieve good visual contrast and readability. </p>
 </div>
 <div class="informBox"
@@ -70,7 +73,6 @@ You should totally buy his book on Inclusive Components.
 
 <section id="section2">
 	
-	
 <h2>Detailed Description</h2>
 <h3 id="understanding">Understanding Contrast Perception</h3>
 <dl id="">
@@ -90,8 +92,6 @@ You should totally buy his book on Inclusive Components.
 	  </ul>
 	<p>All of these interdependent factors affect the perception of contrast and ultimately readability. As we are concerned with readability on computer screens, we can made some assumptions about a range of brightness, and a typical viewing environment. This provides a baseline standard for all users for best readability of content, or a minimum level of legibility for non-content. Then, we can set how different impairments require different adjustments or user customization to accommodate the needs of each individual user.</p>
 	  <p>For instance, a user with poor "acuity", that is, poor sharpness where they cannot focus on small text, will need to be able to zoom the text larger. A user with poor contrast sensitivity may have good sharpness, but unable to perceive colors that are too similar in lightness. Yet another user with a glare problem may need lower contrast, and/or a reduction in blue, to reduce glare or halos interfering with readability. Those with a color vision problem (sometimes called 'color blind') may have difficulty detecting contrast or lightness for certain colors, such as deep red.
-
-	    
 	    </p>
   </dd>
 </dl>
@@ -99,20 +99,21 @@ You should totally buy his book on Inclusive Components.
   
 </div>
 <dl id="">
-  <h3>Predicted Contrast</h3>
+  <h3>Lightness Contrast</h3>
 
 </dl>
-<div><span></span>
-  <p>Predicted contrast is reported as a percentage using the methods in this guideline, based on the CSS color values in sRGB colorspace, and with device default antialiasing<sup>1</sup>. The <b>Tests</b> section has a lookup table for specific font and contrast combinations, but as a general guide:</p>
+<div><span>    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
+</span>
+  <p>Perceived contrast is reported as "Lightness Contrast (Lc)" using the methods in this guideline, based on the CSS color values in sRGB colorspace, and with device default antialiasing<sup>1</sup>. The <b>Tests</b> section has a lookup table for specific font and contrast combinations, but as a general guide:</p>
 	  
 	  <ul>
-	<li>25% is the point of invisibility (<em>i.e., no perceptible contrast</em>) for many people with contrast related impairments. Designers should assume that contrasts lower than this may be invisible to some users.
-	<li>40% for Large, Bold Headlines where the major stroke width is at least 8px (6pt), or Non-text elements that are at least a solid 8x8px square such as buttons.
-	<li>60% For Bold Text no less than 16px (12pt) or non-text elements no less than 3px in the thinnest dimension.
-	<li>80% Normal Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 2px.
-	<li>100% 300 Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 1px.
+	<li>15 is the point of invisibility (<em>i.e., no perceptible contrast</em>) for many people with contrast related impairments. Designers should assume that contrasts lower than this may be invisible to some users.
+	<li>30 Cut off for all text regardless of use case.
+	<li>45 for Large, Bold Headlines where the major stroke width is at least 8px (6pt), or Non-text elements that are at least a solid 8x8px square such as buttons.
+	<li>60 For Bold Text no less than 16px (12pt) or non-text elements no less than 3px in the thinnest dimension.
+	<li>75 Normal Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 2px.
+	<li>90 300 Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 1px.
 	</ul>	
-		
 		
   <p style="font-size: smaller;">Note: <sup>1</sup>These values require that antialiasing be at the device or user agent default, such that <em>added</em> antialiasing such as "Webkit-Font-Smoothing: Antialias;" is not enabled.</p>
 </div>
@@ -123,8 +124,6 @@ You should totally buy his book on Inclusive Components.
 	<p>It's useful to point out that the term “Visual Contrast” can also be used to describe the differences of other visual perceptions: Contrast of size difference, contrast of position, contrast of speed or motion, etc. but these are not covered in this guideline at this time.</p>
 
 </section>
-	    
-	    
 
 <section id="section3" >
 	
@@ -133,26 +132,35 @@ You should totally buy his book on Inclusive Components.
 <h3>Example Code for a Test Tool</h3>	
 <div style="overflow: scroll;  background-color: #FED;">	
 <pre><code>
-////////////////////////////////////////////////////////////////////////////////
-/////	Functions to parse color values and determine SAPC contrast
-/////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
-/////	SAPC tool version 0.97 by Andrew Somers
-/////	https://www.myndex.com/WEB/Perception
-/////	Color value input parsing based substantially on rgbcolor.js by
-/////	Stoyan Stefanov &lt;sstoo@gmail.com&gt;
-/////	His site: http://www.phpied.com/rgb-color-parser-in-javascript/
-/////	MIT license
-////////////////////////////////////////////////////////////////////////////////
+/////
+/////   NOTICE: THIS FILE IS NOT BEING MAINTAINED AT THIS LOCATION
+/////   FOR THE CURRENT FILE(S) PLEASE VISIT THE WCAG 3 WORKING DRAFT
+/////   AND THE APCA GITHUB REPO:
+/////   
+/////   https://www.w3.org/TR/wcag-3.0/
+/////
+/////   GITHUB: https://github.com/Myndex/SAPC-APCA
+/////   
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+//             \\\                                       ///
+//////////////////    THIS PAGE IS NOT MAINTAINED  !!!  ///////////////////////
+//            ///                                       \\\
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
 
 ////////////////////////////////////////////////////////////////////////////////
 /////
 /////	*****  SAPC BLOCK  *****
 /////
 /////	For Evaluations, this is referred to as: SAPC-7
-/////	sRGB Advanced Perceptual Contrast v0.97 beta JAVASCRIPT
-/////	Copyright Â© 2019 by Andrew Somers
+/////	sRGB Advanced Perceptual Contrast v0.97g beta JAVASCRIPT
+/////	Copyright © 2019-2020 by Andrew Somers
 /////	Licensed to the W3C Per Collaborator Agreement
-/////	SIMPLE VERSION â€” This Version Is Stripped Of Extensions:
+/////	SIMPLE VERSION  This Version Is Stripped Of Extensions:
 /////		* No Color Vision Module
 /////		* No Spatial Frequency Module
 /////		* No Light Adaptation Module
@@ -161,29 +169,42 @@ You should totally buy his book on Inclusive Components.
 /////
 ////////////////////////////////////////////////////////////////////////////////
 
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
+
+normBGExp = 0.56;	// Constants for Power Curve Exponents.
+normTXTExp = 0.57;	// One pair for normal text, and one for REVERSE
+revBGExp = 0.62;	// FUTURE: These will eventually be dynamic
+revTXTExp = 0.65;	// as a function of light adaptation and context
+
+blkThrs = 0.022;	// Level that triggers the soft black clamp
+blkClmp = 1.414;	// Exponent for the soft black clamp curve
 
 ///// CONSTANTS USED IN THIS VERSION ///////////////////////////////////////////
 
-	const sRGBtrc = 2.218;	// Gamma for sRGB linearization. 2.223 could be used instead
-							// 2.218 sets unity with the piecewise sRGB at #777
+	const sRGBtrc = 2.4;	// Gamma for sRGB linearization. 2.35 could be used instead
+							// 2.4 emulates common monitor perceived EOTF
 
 	const Rco = 0.2126;		// sRGB Red Coefficient
 	const Gco = 0.7156;		// sRGB Green Coefficient
 	const Bco = 0.0722;		// sRGB Blue Coefficient
 
-	const scaleBoW = 161.8;	// Scaling for dark text on light (phi * 100)
-	const scaleWoB = 161.8;	// Scaling for light text on dark â€” same as BoW, but
+	const scaleBoW = 114.0;	// Scaling for dark text on light (1.14 * 100)
+	const scaleWoB = 114.0;	// Scaling for light text on dark â€” same as BoW, but
 							// this is separate for possible future use.
 
-	const normBGExp = 0.38;		// Constants for Power Curve Exponents.
-	const normTXTExp = 0.43;	// One pair for normal text,and one for REVERSE
-	const revBGExp = 0.5;		// FUTURE: These will eventually be dynamic
-	const revTXTExp = 0.43;		// as a function of light adaptation and context
+	const normBGExp = 0.56;		// Constants for Power Curve Exponents.
+	const normTXTExp = 0.57;	// One pair for normal text,and one for REVERSE
+	const revBGExp = 0.62;		// FUTURE: These will eventually be dynamic
+	const revTXTExp = 0.65;		// as a function of light adaptation and context
 
-	const blkThrs = 0.02;	// Level that triggers the soft black clamp
-	const blkClmp = 1.75;	// Exponent for the soft black clamp curve
+	const blkThrs = 0.022;	// Level that triggers the soft black clamp
+	const blkClmp = 1.414;	// Exponent for the soft black clamp curve
+
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
 
 ///// Ultra Simple Basic Bare Bones SAPC Function //////////////////////////////
+
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
 
 	// This REQUIRES linearized R,G,B values of 0.0-1.0
 
@@ -197,7 +218,7 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 	var	Ybg = Rbg*Rco + Gbg*Gco + Bbg*Bco;
 	var	Ytxt = Rtxt*Rco + Gtxt*Gco + Btxt*Bco;
 
-		/////	INSERT COLOR MODULE HERE	/////
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
 
 	// Now, determine polarity, soft clamp black, and calculate contrast
 	// Finally scale for easy to remember percentages
@@ -210,25 +231,27 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 		Ytxt = (Ytxt &gt; blkThrs) ? Ytxt : Ytxt + Math.abs(Ytxt - blkThrs) ** blkClmp;
 		SAPC = ( Ybg ** normBGExp - Ytxt ** normTXTExp ) * scaleBoW;
 		
-		return (SAPC &lt; 15 ) ? "0%" : SAPC.toPrecision(3) + "%";
+		return (SAPC &lt; 15 ) ? "0" : SAPC.toPrecision(3) + "Lc";
 		
 	} else {			///// For reverse polarity, white text on black
 
 		Ybg = (Ybg &gt; blkThrs) ? Ybg : Ybg + Math.abs(Ybg - blkThrs) ** blkClmp;
 		SAPC = ( Ybg ** revBGExp - Ytxt ** revTXTExp ) * scaleWoB;
 
-		return (SAPC &gt; -15 ) ? "0%" : SAPC.toPrecision(3) + "%";
+		return (SAPC &gt; -15 ) ? "0" : SAPC.toPrecision(3) + "Lc";
 	}
 
-	// If SAPC's more than 15%, return that value, otherwise clamp to zero
+	// If SAPC's more than Lc 15, return that value, otherwise clamp to zero
 	// this is to remove noise and unusual behavior if the user inputs
 	// colors too close to each other.
 	// This will be more important with future modules. Nevertheless
 	// In order to simplify code, SAPC will not report accurate contrasts
-	// of less than approximately 15%, so those are clamped. 
-	// 25% is the "point of invisibility" for many people.
+	// of less than approximately 15, so those are clamped. 
+	// 20 is the "point of invisibility" for many people.
 
 }
+
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
 
 //////////////////////////////////////////////////////////////
 ///// END OF SAPC BLOCK             //////////////////////////
@@ -239,6 +262,8 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 //////////////////////////////////////////////////////////////
 ///// sRGB INPUT FORM BLOCK         //////////////////////////
 //////////////////////////////////////////////////////////////
+
+///  DEPRECIATED  ////
 
 
 function RGBColor(color_string) {
@@ -408,7 +433,7 @@ function RGBColor(color_string) {
 	}
 	// end of simple type-in colors
 
-
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
 
 	// array of color definition objects
 	var color_defs = [
@@ -515,6 +540,7 @@ function RGBColor(color_string) {
 		return 	Math.pow(this.r/255.0, sRGBtrc) * Rco + Math.pow(this.g/255.0, sRGBtrc) * Gco + Math.pow(this.b/255.0, sRGBtrc) * Bco;
 	}
 }
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
 
 //////////////////////////////////////////////////////////////
 ///// END sRGB INPUT FORM BLOCK 	//////////////////////
@@ -654,7 +680,7 @@ function RGBColor(color_string) {
 
 &lt;div style="font-size: 12px;"&gt;The page and code is Copyright © 2020 by Andrew Somers.
 &lt;br&gt;Licensed to the W3.org per their cooperative agreement. 
-&lt;br&gt;Otherwise under the MIT license. 
+&lt;br&gt;Otherwise under the AGPU v3 License. 
 &lt;br&gt;Repository: &lt;a href="https://github.com/Myndex/SAPC/tree/master/JS"&gt;https://github.com/Myndex/SAPC/tree/master/JS&lt;/a&gt;
 &lt;br&gt;Color value input parsing based substantially on rgbcolor.js by
 &lt;br&gt;Stoyan Stefanov &lt;sstoo@gmail.com&gt; used per MIT license.
@@ -688,14 +714,14 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 	<ul style="font-size: smaller">
 	<li>If an “eye dropper” type tool is used it must report values relative to the sRGB colorspace.
 	<li>The eye dropper sample should be a pixel in the middle of a major stroke of the font at the smallest size to be tested, with the content size set to default with no user scaling.
-	</ul>	
-<li>Using an automated tool like <a href="https://www.myndex.com/SAPC/">Advanced Perceptual Contrast Algorithm (APCA) Visual Contrast Demo</a> to calculate the predicted contrast between foreground text and background color.
+	</ul>
+<li>Using an automated tool like <a href="https://www.myndex.com/SAPC/">Advanced Perceptual Contrast Algorithm (APCA) Visual Contrast Demo</a> to calculate the lightness contrast between foreground text and background color.
 	<ul style="font-size: smaller">
 	<li>Important: do not swap the background or text colors in the tool entry fields.
 	<li>The APCA tool predicts contrast based in part on polarity, so it is important that the text color CSS value be entered into the text color field, and likewise for the background.	
 	</ul>	
 <li>Compare this calculated value against the lookup table "Accessible Contrast by Font Size and Weight".
-<li>Check that the absolute value of the predicted contrast percentage meets or exceeds the required value for the font weight and size.
+<li>Check that the absolute value of the lightness contrast percentage meets or exceeds the required value for the font weight and size.
 </ol>
 <h3>Accessible Contrast by Font Size and Weight</h3>
 <p>Directions:  
@@ -703,11 +729,13 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <li>Cross index nominal font size (in CSS px) to CSS weight.  
 <li>APCA Contrast Percentage must meet or exceed the value listed. 
 <li>For light text on a dark background the APCA tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58%, use 58%. 	
-<li>A <span class="do-not">&osol;</span> indicates that a larger font size (or heavier font weight) must be used. 
+<li>A <span class="underWeight">&osol;</span> indicates that a larger font size (or heavier font weight) must be used. 
 </ul>
 </p>
-	<style>
+    <style>
 	td, th { text-align: center; }
+	tr { border: 1px solid #004;}
+	.TFtable { border: 2px solid #004; border-collapse: collapse;}
 	th {background-color: #ABE;}
 	th.fsize {background-color: #BCF;}
 	td.do-not, .do-not {font-size: 1.4em; font-weight: bold; color: #B00;}
@@ -721,64 +749,48 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <th class="fsize">Size</th><th>100</th><th>200</th><th>300</th><th>400</br /><span style="font-size: smaller;">(Normal)</span></th><th>500</th><th>600</th><th>700</br /><span style="font-size: smaller;">(Bold)</span></th><th>800</th><th>900</th>
 </tr>
 <tr>
-<td>12px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td>100%</td><td>94%</td><td>87%</td><td>80%</td><td>80%</td><td>80%</td>
+<td>12px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td>                     <td>90</td><td>80</td><td>75</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td>
 </tr>
 <tr>
-<td>14px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td>90%</td><td>84%</td><td>77%</td><td>70%</td><td>70%</td><td>70%</td>
+<td>14px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td>
+                                         <td>90</td><td>80</td><td>75</td><td>70</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td>
 </tr>
 <tr>
-<td>16px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td>110%</td><td>80%</td><td>77%</td><td>72%</td><td>60%</td><td>60%</td><td>60%</td>
+<td>16px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td>90</td><td>75</td><td>70</td><td>65</td><td>60</td><td>x50</td><td class="do-not">&osol;</td> 
 </tr>
 <tr>
-<td>18px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td>100%</td><td>78%</td><td>74%</td><td>70%</td><td>59%</td><td>59%</td><td>59%</td>
+<td>18px</td><td class="do-not">&osol;</td><td class="do-not">&osol;</td><td>80</td><td>65</td><td>60</td><td>55</td><td>50</td><td>x45</td><td>x45</td>
 </tr>
 <tr>
-<td>20px</td><td class="do-not">&osol;</td><td>120%</td><td>94%</td><td>76%</td><td>72%</td><td>67%</td><td>58%</td><td>58%</td><td>58%</td>
+<td>24px</td><td class="do-not">&osol;</td>  
+                   <td>90</td><td>75</td><td>60</td><td>55</td><td>50</td><td>45</td><td>x40</td><td>x35</td>
 </tr>
 <tr>
-<td>22px</td><td class="do-not">&osol;</td><td>110%</td><td>87%</td><td>75%</td><td>70%</td><td>65%</td><td>57%</td><td>57%</td><td>57%</td>
+<td>36px</td><td class="do-not">&osol;</td>
+                   <td>80</td><td>60</td><td>55</td><td>50</td><td>45</td><td>40</td><td>x30</td><td>NT</td>
 </tr>
 <tr>
-<td>24px</td><td class="do-not">&osol;</td><td>100%</td><td>80%</td><td>74%</td><td>66%</td><td>60%</td><td>56%</td><td>56%</td><td>56%</td>
+<td>48px</td><td>90</td>
+                   <td>70</td><td>55</td><td>50</td><td>45</td><td>40</td><td>30</td><td>NT</td><td>NT</td>
 </tr>
 <tr>
-<td>26px</td><td class="do-not">&osol;</td><td>96%</td><td>78%</td><td>72%</td><td>65%</td><td>59%</td><td>55%</td><td>55%</td><td>55%</td>
+<td>60px</td><td>85</td>
+                   <td>60</td><td>50</td><td>45</td><td>40</td><td>30</td><td>NT</td><td>NT</td><td>NT</td>
 </tr>
 <tr>
-<td>28px</td><td class="do-not">&osol;</td><td>92%</td><td>76%</td><td>70%</td><td>64%</td><td>58%</td><td>54%</td><td>54%</td><td>52%</td>
+<td>72px</td><td>75</td>
+                   <td>55</td><td>45</td><td>40</td><td>30</td><td>NT</td><td>NT</td><td>NT</td><td>NT</td>
 </tr>
 <tr>
-<td>30px</td><td class="do-not">&osol;</td><td>88%</td><td>74%</td><td>68%</td><td>62%</td><td>57%</td><td>53%</td><td>52%</td><td>50%</td>
+<td>96px</td><td>70</td>
+                   <td>50</td><td>40</td><td>30</td><td>NT</td><td>NT</td><td>NT</td><td>NT</td><td>NT</td>
 </tr>
 <tr>
-<td>32px</td><td class="do-not">&osol;</td><td>84%</td><td>72%</td><td>66%</td><td>60%</td><td>56%</td><td>52%</td><td>50%</td><td>48%</td>
+<td>120px</td><td>60</td>
+                   <td>45</td><td>30</td><td>NT</td><td>NT</td><td>NT</td><td>NT</td><td>NT</td><td>NT</td>
 </tr>
-<tr>
-<td>36px</td><td>120%</td><td>80%</td><td>70%</td><td>64%</td><td>58%</td><td>54%</td><td>50%</td><td>48%</td><td>46%</td>
-</tr>
-<tr>
-<td>40px</td><td>114%</td><td>77%</td><td>68%</td><td>62%</td><td>57%</td><td>52%</td><td>48%</td><td>46%</td><td>44%</td>
-</tr>
-<tr>
-<td>44px</td><td>108%</td><td>74%</td><td>66%</td><td>60%</td><td>55%</td><td>50%</td><td>46%</td><td>44%</td><td>42%</td>
-</tr>
-<tr>
-<td>48px</td><td>100%</td><td>70%</td><td>65%</td><td>58%</td><td>53%</td><td>48%</td><td>44%</td><td>42%</td><td>40%</td>
-</tr>
-<tr>
-<td>56px</td><td>95%</td><td>67%</td><td>64%</td><td>56%</td><td>51%</td><td>46%</td><td>42%</td><td>40%</td><td>40%</td>
-</tr>
-<tr>
-<td>64px</td><td>90%</td><td>65%</td><td>62%</td><td>54%</td><td>49%</td><td>44%</td><td>40%</td><td>40%</td><td>40%</td>
-</tr>
-<tr>
-<td>72px</td><td>85%</td><td>63%</td><td>60%</td><td>52%</td><td>47%</td><td>42%</td><td>40%</td><td>40%</td><td>40%</td>
-</tr>
-<tr>
-<td>96px</td><td>80%</td><td>60%</td><td>55%</td><td>50%</td><td>45%</td><td>40%</td><td>40%</td><td>40%</td><td>40%</td>
-</tr>
-
 </table>
+</div>
 <ul>
 <li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
 <li>Serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier).
@@ -790,7 +802,6 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <ul>
     <li>#4 is true.
 </ul>
-
 </section>
 
 <section id="section5">
@@ -822,54 +833,59 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
   <p>In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. </p>
 	  	
 
-    <pre>	<strong>R<sub>linbg</sub></strong> = (sR<sub>bg</sub>/255.0) ^ 2.218
-	<strong>G<sub>linbg</sub></strong> = (sG<sub>bg</sub>/255.0) ^ 2.218
-	<strong>B<sub>linbg</sub></strong> = (sB<sub>bg</sub>/255.0) ^ 2.218</pre>
-    <pre>	<strong>R<sub>lintxt</sub></strong> = (sR<sub>txt</sub>/255.0) ^ 2.218
-	<strong>G<sub>lintxt</sub></strong> = (sG<sub>txt</sub>/255.0) ^ 2.218
-	<strong>B<sub>lintxt</sub></strong> = (sB<sub>txt</sub>/255.0) ^ 2.218</pre>	  
+    <pre>	<strong>R<sub>linbg</sub></strong> = (sR<sub>bg</sub>/255.0) ^ 2.4
+	<strong>G<sub>linbg</sub></strong> = (sG<sub>bg</sub>/255.0) ^ 2.4
+	<strong>B<sub>linbg</sub></strong> = (sB<sub>bg</sub>/255.0) ^ 2.4</pre>
+    <pre>	<strong>R<sub>lintxt</sub></strong> = (sR<sub>txt</sub>/255.0) ^ 2.4
+	<strong>G<sub>lintxt</sub></strong> = (sG<sub>txt</sub>/255.0) ^ 2.4
+	<strong>B<sub>lintxt</sub></strong> = (sB<sub>txt</sub>/255.0) ^ 2.4</pre>	  
  		
 	  
 <p>Then find the relative luminance (<var>Y</var>) of each color by applying the sRGB/Rec709 spectral coefficients and summing together.</p>
 			
 <pre>
-	<strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub>
-	<strong>Y<sub>txt</sub></strong> = 0.2126 * R<sub>lintxt</sub> + 0.7156 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub> </pre>
+	<strong>Y<sub>bg</sub></strong> = 0.2126 * R<sub>linbg</sub> + 0.7152 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub>
+	<strong>Y<sub>txt</sub></strong> = 0.2126 * R<sub>lintxt</sub> + 0.7152 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub> </pre>
 			
 </div>
 <dl id="dfn-relative-contrast">
-  <h3>Predicted Contrast</h3>
+  <h3>Lightness Contrast</h3>
   <dd>
-    <p>The Predicted Visual Contrast (<var>APCA</var>) between a foreground color and a background color is expressed as a percentage and is calculated by:</p>
-	 
+    <p>The Predicted Visual Contrast (<var>APCA</var>) between a foreground color and a background color is expressed as Lc (Lightness Contrast) and is calculated by:</p>
+
 <pre>
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
+
 //  Define Constants for Basic APCA Version:
 
-normBGExp = 0.38;	// Constants for Power Curve Exponents.
-normTXTExp = 0.43;	// One pair for normal text, and one for REVERSE
-revBGExp = 0.5;		// FUTURE: These will eventually be dynamic
-revTXTExp = 0.43;	// as a function of light adaptation and context
+normBGExp = 0.56;	// Constants for Power Curve Exponents.
+normTXTExp = 0.57;	// One pair for normal text, and one for REVERSE
+revBGExp = 0.62;	// FUTURE: These will eventually be dynamic
+revTXTExp = 0.65;	// as a function of light adaptation and context
 
-blkThrs = 0.02;		// Level that triggers the soft black clamp
-blkClmp = 1.75;		// Exponent for the soft black clamp curve
+blkThrs = 0.022;	// Level that triggers the soft black clamp
+blkClmp = 1.414;	// Exponent for the soft black clamp curve
 
-//  Calculate Predicted Contrast and return a string for the result
+//  Calculate lightness contrast and return a string for the result
 
 if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
     Y<sub>txt</sub> = (Y<sub>txt</sub> > blkThrs) ? Y<sub>txt</sub> : Y<sub>txt</sub> + abs(Y<sub>txt</sub> - blkThrs) ^ blkClmp;
-    APCA = ( Y<sub>bg</sub> ^ normBGExp - Y<sub>txt</sub> ^ normTXTExp ) * 161.8;
-    return (APCA < 15 ) ? "0%" : str(APCA) + "%";
+    APCA = ( Y<sub>bg</sub> ^ normBGExp - Y<sub>txt</sub> ^ normTXTExp ) * 114.0 - 2.7;
+    return (APCA < 15 ) ? "0" : str(APCA) + "Lc";
   } else {
     Y<sub>bg</sub>g = (Y<sub>bg</sub> > blkThrs) ? Y<sub>bg</sub> : Y<sub>bg</sub> + abs(Y<sub>bg</sub> - blkThrs) ^ blkClmp;
-    APCA = ( Y<sub>bg</sub> ^ revBGExp - Y<sub>txt</sub> ^ revTXTExp ) * 161.8;
-    return (APCA > -15 ) ? "0%" : str(APCA) + "%";
-}  
+    APCA = ( Y<sub>bg</sub> ^ revBGExp - Y<sub>txt</sub> ^ revTXTExp ) * 114.0 + 2.7;
+    return (APCA > -15 ) ? "0" : str(APCA) + "Lc";
+}
+    ///  DEPRECIATED  ///   ///  DEPRECIATED  ///   ///  DEPRECIATED  /// 
+
     </pre>
 
   </dd>
 </dl>
+
 <div><span><em>Notes:</em></span><smaller>
-  <p>Predicted contrast less than 15% is clamped to zero to simplify the math. </p>
+  <p>Predicted contrast less than 15 is clamped to zero to simplify the math. </p>
   <p><em>We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.</em> 
 </p><p>The &ldquo;^&rdquo; character is the exponentiation operator.</p>
 </smaller>	
@@ -921,7 +937,9 @@ if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
 <li>20 January 2020 New Method 
 <li>24 February 2020 First Working Draft Updates (corrected math, moved math and glossary to Resources tab, added description, added clarification to Tests tab). (AMS)
 <li>25 February 2020 Addl. First Working Draft Updates (updated lookup table, minor spelling errors, added paragraph in Description, fixed formatting for code samples). (AMS)
+<li>Nov 2021: Added depreciated notices as this document was superseded by the public working draft in 2021.(AMS)
 	</ul>
+	<h2 id="">	THIS DOCUMENT IS NOT MAINTAINED  </h2>
 </section>
 
 
