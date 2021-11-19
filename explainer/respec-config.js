@@ -35,11 +35,6 @@ var respecConfig = {
 		companyURI: "https://tetralogical.com/",
 		w3cid: 42417
 	}, {
-		name: "Rachael Bradley Montgomery",
-		mailto: "rachael@accessiblecommunity.org",
-		company: "Invited Expert",
-		w3cid: 90310
-	}, {
 		name: "Shawn Lauriat",
 		mailto: "lauriat@google.com",
 		company: "Google, Inc.",
