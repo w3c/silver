@@ -77,7 +77,7 @@ var respecConfig = {
 
 	maxTocLevel: 4,
 	
-	preProcess: [preRespec],
+	//preProcess: [preRespec],
 	
 	localBiblio: {
 		"508-criteria": {
