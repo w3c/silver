@@ -15,7 +15,7 @@ You should totally buy his book on Inclusive Components.
   <body>
 <p class="breadcrumb"><a href="../../guidelines/index.html">Silver</a> > <a href="../explainers/VisualContrast.html">Visual Contrast</a> > DEPRECIATED </p>
 <div class="guidanceBox" style="color: #a00;background-color: #fdd; border-width: 8px;">
-	<h1>THIS DOCUMENT IS DEPRECIATED AND HAS BEEN SUPERSEDED.</h1>
+	<h1>THIS DOCUMENT IS DEPRECATED AND HAS BEEN SUPERSEDED.</h1>
 	<h2>Please see the <a href="https://www.w3.org/TR/wcag-3.0/">current working draft</a></h2>
 	<hr>
 	<h3>Select font characteristics and background colors to provide enough contrast for readability </h3>
@@ -105,7 +105,7 @@ You should totally buy his book on Inclusive Components.
   <h3>Predicted Lightness Contrast</h3>
 
 </dl>
-<div><span>DEPRECIATED</span>
+<div><span>DEPRECATED or OBSOLETE</span>
   <p>Predicted contrast is reported as "Lightness Contrast (Lc)" using the methods in this guideline, based on the CSS color values in sRGB colorspace, and with device default antialiasing<sup>1</sup>. The <b>Tests</b> section has a lookup table for specific font and contrast combinations, but as a general guide:</p>
 	  
 	  <ul>
@@ -131,7 +131,10 @@ You should totally buy his book on Inclusive Components.
 
 <section id="section3" >
 	
-<h2>Code Samples</h2>
+<h2>DEPRECATED or OBSOLETE Code Samples</h2>
+Links to the current documents:<br>
+<a href="https://www.w3.org/TR/wcag-3.0/">Current WCAG 3 Draft</a><br>
+<a href="https://github.com/Myndex/SAPC-APCA">Current APCA Code Repository</a><br>
 
 <h3>Example Code for a Test Tool</h3>	
 <div style="overflow: scroll;  background-color: #FED;">	
@@ -187,11 +190,11 @@ You should totally buy his book on Inclusive Components.
 	const blkThrs = 0.022;	// Level that triggers the soft black clamp
 	const blkClmp = 1.414;	// Exponent for the soft black clamp curve
 
-/////      DEPRECIATED - DO NOT USE
+/////      DEPRECATED or OBSOLETE - DO NOT USE
 
 ///// Ultra Simple Basic Bare Bones SAPC Function //////////////////////////////
 
-/////      DEPRECIATED - DO NOT USE
+/////      DEPRECATED or OBSOLETE - DO NOT USE
 
 	// This REQUIRES linearized R,G,B values of 0.0-1.0
 
@@ -205,7 +208,7 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 	var	Ybg = Rbg*Rco + Gbg*Gco + Bbg*Bco;
 	var	Ytxt = Rtxt*Rco + Gtxt*Gco + Btxt*Bco;
 
-/////      DEPRECIATED - DO NOT USE  
+/////      DEPRECATED or OBSOLETE - DO NOT USE  
 
 	// Now, determine polarity, soft clamp black, and calculate contrast
 	// Finally scale for easy to remember percentages
@@ -238,7 +241,7 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 
 }
 
-/////      DEPRECIATED - DO NOT USE  
+/////      DEPRECATED or OBSOLETE - DO NOT USE  
 
 //////////////////////////////////////////////////////////////
 ///// END OF SAPC BLOCK             //////////////////////////
@@ -250,7 +253,7 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 ///// sRGB INPUT FORM BLOCK         //////////////////////////
 //////////////////////////////////////////////////////////////
 
-/////      DEPRECIATED - DO NOT USE  
+/////      DEPRECATED or OBSOLETE - DO NOT USE  
 
 
 function RGBColor(color_string) {
@@ -420,7 +423,7 @@ function RGBColor(color_string) {
 	}
 	// end of simple type-in colors
 
-/////      DEPRECIATED - DO NOT USE  
+/////      DEPRECATED or OBSOLETE - DO NOT USE  
 
 	// array of color definition objects
 	var color_defs = [
@@ -527,7 +530,7 @@ function RGBColor(color_string) {
 		return 	Math.pow(this.r/255.0, sRGBtrc) * Rco + Math.pow(this.g/255.0, sRGBtrc) * Gco + Math.pow(this.b/255.0, sRGBtrc) * Bco;
 	}
 }
-/////      DEPRECIATED - DO NOT USE  
+/////      DEPRECATED or OBSOLETE - DO NOT USE  
 
 //////////////////////////////////////////////////////////////
 ///// END sRGB INPUT FORM BLOCK 	//////////////////////
@@ -841,7 +844,7 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
     <p>The Predicted Visual Contrast (<var>APCA</var>) between a foreground color and a background color is expressed as Lc (Lightness Contrast) and is calculated by:</p>
 
 <pre>
-/////      DEPRECIATED - DO NOT USE  
+/////      DEPRECATED or OBSOLETE - DO NOT USE  
 
 //  Define Constants for Basic APCA Version:
 
@@ -864,7 +867,7 @@ if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
     APCA = ( Y<sub>bg</sub> ^ revBGExp - Y<sub>txt</sub> ^ revTXTExp ) * 114.0 + 2.7;
     return (APCA > -15 ) ? "0" : str(APCA) + "Lc";
 }
-/////      DEPRECIATED - DO NOT USE  
+/////      DEPRECATED or OBSOLETE - DO NOT USE  
 
     </pre>
 
