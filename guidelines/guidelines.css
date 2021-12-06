@@ -1,7 +1,7 @@
 caption {
 	visibility: hidden;
 }
-details {
+:not(.head) > details {
 	margin: 3em;
 	padding: 1em;
 	color: #404040;
@@ -17,7 +17,7 @@ summary::before {
 	float: left;
 	margin-right: -3.5em;
 }
-details:focus summary::before, details:hover summary::before, .guideline:focus h3::before, .guideline:hover h3::before, .outcome:focus h4::before, .outcome:hover h4::before {
+:not(.head) > details:focus summary::before, :not(.head) > details:hover summary::before, .guideline:focus h3::before, .guideline:hover h3::before, .outcome:focus h4::before, .outcome:hover h4::before {
 	background-color: #ffff99 ;
 	box-shadow: 0 0 1em .25em #ffff99;
 }
