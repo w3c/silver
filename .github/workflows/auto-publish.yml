@@ -22,7 +22,8 @@ jobs:
       - uses: w3c/spec-prod@v2
         with:
           TOOLCHAIN: respec
-          GH_PAGES_BUILD_OVERRIDE: lint: false
+          GH_PAGES_BUILD_OVERRIDE: |
+            lint: false
           SOURCE: ${{ matrix.source }}
           DESTINATION: ${{ matrix.destination }}
           GH_PAGES_BRANCH: gh-pages
