@@ -24,6 +24,7 @@ jobs:
           TOOLCHAIN: respec
           GH_PAGES_BUILD_OVERRIDE: |
             lint: false
+          BUILD_FAIL_ON: nothing
           SOURCE: ${{ matrix.source }}
           DESTINATION: ${{ matrix.destination }}
           GH_PAGES_BRANCH: gh-pages
