@@ -136,6 +136,52 @@ function addNoteMarkers() {
 	})
 }
 
+var statusBlocks = [{
+	className: '.status-placeholder',
+	label: 'Placeholder',
+	urlHash: '#placeholder',
+	text: 'We are exploring one or more possible directions for this content.'
+}, {
+	className: '.status-exploratory',
+	label: 'Exploratory',
+	urlHash: '#exploratory',
+	text: 'We are exploring one or more possible directions for this content.'
+}, {
+	className: '.status-maturing',
+	label: 'Maturing',
+	urlHash: '#maturing',
+	text: 'We have high confidence in the direction and some confidence in the details.'
+}, {
+	className: '.status-mature',
+	label: 'Mature',
+	urlHash: '#mature',
+	text: 'We have high confidence in the direction and moderate confidence in the details.'
+}, {
+	className: '.status-stable',
+	label: 'Stable',
+	urlHash: '#stable',
+	text: 'Content is believed to be ready to become a W3C Recommendation.'
+}]
+
+function addStatusMarkers() {
+	statusBlocks.forEach(function (statusBlock) {
+		var statusSections = document.querySelectorAll(statusBlock.className);
+		statusSections.forEach(function (section) {
+			var div = document.createElement('div');
+			div.setAttribute('class', 'addition sticky');
+			div.innerHTML = '<a href="https://www.w3.org/WAI/GL/wiki/AG_process'
+			+ statusBlock.urlHash
+			+ '" class="status-link">Section status: <strong>'
+			+ statusBlock.label
+			+ '</strong></a>.'
+			+ statusBlock.text;
+			// Insert div after the first heading:
+			var firstHeading = section.querySelector('h1,h2,h3,h4,h5,h6');
+			firstHeading.parentNode.insertBefore(div, firstHeading.nextSibling);
+		})
+	});
+}
+
 function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
@@ -289,6 +335,7 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
+    addStatusMarkers();
 	//alternateFloats();
 }
 
