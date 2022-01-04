@@ -140,27 +140,27 @@ var statusBlocks = [{
 	className: '.status-placeholder',
 	label: 'Placeholder',
 	urlHash: '#placeholder',
-	text: 'We are exploring one or more possible directions for this content.'
+	text: 'We will be addressing this topic. See the Editor&#39;s note for details.'
 }, {
 	className: '.status-exploratory',
 	label: 'Exploratory',
 	urlHash: '#exploratory',
-	text: 'We are exploring one or more possible directions for this content.'
+	text: 'We are exploring one or more possible directions for this content. See the Editor&#39;s note for details.'
 }, {
 	className: '.status-maturing',
 	label: 'Maturing',
 	urlHash: '#maturing',
-	text: 'We have high confidence in the direction and some confidence in the details.'
+	text: 'We have high confidence in the direction and some confidence in the details. See the Editor&#39;s note for details.'
 }, {
 	className: '.status-mature',
 	label: 'Mature',
 	urlHash: '#mature',
-	text: 'We have high confidence in the direction and moderate confidence in the details.'
+	text: 'We have high confidence in the direction and moderate confidence in the details. See the Editor&#39;s note for details.'
 }, {
 	className: '.status-stable',
 	label: 'Stable',
 	urlHash: '#stable',
-	text: 'Content is believed to be ready to become a W3C Recommendation.'
+	text: 'We believe the content is ready to become a W3C Recommendation. See the Editor&#39;s note for details.'
 }]
 
 function addStatusMarkers() {
