@@ -59,7 +59,21 @@
 				<p>WCAG 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> WCAG 2.X. It will also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/"> User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/"> Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. These earlier versions provided a flexible model that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities have led to the need for a new model to address content accessibility more comprehensively and flexibly.</p>
 				<p>There are many differences between WCAG 2.X and WCAG 3.0. Content that conforms to WCAG 2.2 A &amp; AA is expected to meet most of the minimum conformance level of this new standard but, since WCAG 3.0 includes additional tests and different scoring mechanics, additional work will be needed to reach full conformance. Since the new standard will use a different conformance model, the Accessibility Guidelines Working Group expects that some organizations may wish to continue using WCAG 2.X, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping and other approaches to facilitate migration.</p>
 			</section>
-			
+
+			<section>
+				<h3>Section status levels</h3>
+				<p>As part of the WCAG 3.0 drafting process each normative section of this document is given a status. This status is used to indicate how far along in the development this section is, how ready it is for experimental adoption, and what kind of feedback the Accessibility Guidelines Working Group is looking for.</p>
+				<ul>
+					<li><strong id="status-placeholder">Placeholder</strong>: This content is temporary, it showcases the type of content or section to expect here. All of this is expected to be replaced. No feedback is needed on placeholder content. It is <em>hidden by default</em>.</li>
+					<li><strong id="status-exploratory">Exploratory</strong>: The working group is exploring what direction to take with this section. This content is not refined, details and definitions may be missing. Feedback should be about the proposed direction. It is <em>hidden by default</em>.</li>
+					<li><strong id="status-developing">Developing</strong>: There is rough agreement on what is needed for this section, although not all high-level concerns have been settled. Details have been filled, but are yet to be worked out. Feedback should be focused on ensuring the sections are usable and reasonable in a broad  </li>
+					<li><strong id="status-refining">Refining</strong>: The working group has reach consensus on this section. It is ready for broad public review and experimental adoption. Feedback should be focused on the feasibility and implementability.</li>
+					<li><strong id="status-mature">Mature</strong>: Content is believed by the working group to be ready for recommendation. Feedback should be focused on edge case scenarios the working group may not have anticipated.</li>
+				</ul>
+				<p>For more details, see the <a href="https://www.w3.org/WAI/GL/wiki/AG_process">AG Process page</a>. By default, placeholder and exploratory sections is hidden and removed from the table of content. Toggle these sections with the following button:</p>
+				<p><button id="status-filter" data-status-filter="exploratory,placeholder">Reveal placeholder &amp; exploratory sections</button></p>
+			</section>
+
 			<section>
 				<h3>Relationship to other W3C guidelines</h3>
 				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [[WCAG20]] were designed to be technology neutral, and have stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [[ATAG20]] provide guidance for various types of software that assist people in writing accessible content. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [[UAAG20]] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis.</p>
@@ -127,7 +141,8 @@
 
 			<p>As more content is developed, this section will be a list of guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to WCAG 3.0, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit">WCAG to Silver Outline Map</a>.</p>
 			</div>
-			<section class="guideline status-exploratory">
+
+			<section class="guideline" data-status="exploratory" data-no-filter>
 				<h3>Text alternatives</h3>
 				<p class="guideline-text">Provide text alternative for non-text content.</p>
 				<section class="outcome"><h4>Text alternative available</h4>
@@ -200,7 +215,7 @@
 						</div>
 				</section>				
 			</section>
-			<section class="guideline status-exploratory">
+			<section class="guideline" data-status="exploratory">
 				<h3>Clear words</h3>
 				<p class="guideline-text">Use common clear words.</p>
 				<p class="exception"><strong>Exception</strong>:</p>
@@ -290,7 +305,7 @@
 				<section class="outcome"><h4>Diacritical marks</h4><p>Include symbols and letters necessary to decipher the words for languages that require diacriticals with letters to understand the meaning of the word — like French, Spanish, Arabic, and Hebrew</p><ol><li>@@</li></ol></section>
 				-->
 			</section>
-			<section class="guideline status-exploratory">
+			<section class="guideline" data-status="exploratory">
 				<h3>Captions</h3>
 				<p class="guideline-text">Provide captions and associated metadata for audio content.</p>
 				<section class="outcome">
@@ -428,7 +443,7 @@
 				<section class="outcome"><h4>Customize caption timing</h4><p>Provides customization of caption timing to support people with limited manipulation, strength, or cognition.</p><ol><li>@@</li></ol></section>
 				-->
 			</section>
-			<section class="guideline status-exploratory">
+			<section class="guideline" data-status="exploratory">
 				<h3>Structured content</h3>
 				<p class="guideline-text">Use sections, headings, and sub-headings to organize content.</p>
 				<section class="outcome">
@@ -613,7 +628,7 @@
 
 
 			</section>
-			<section class="guideline status-exploratory">
+			<section class="guideline" data-status="exploratory">
 				<h3>Visual contrast of text</h3>
 				<p class="guideline-text">Provide sufficient contrast between foreground text and its background.</p>
 				<section class="outcome">
@@ -686,7 +701,7 @@
 				<section class="outcome"><h4>Select background and text colors</h4><p>Selects both the background and text colors OR uses the default color of both background and text. Selecting only one causes problems for people with low vision when they adapt the colors. (<span class="ednote">Note: @@ this needs work)</span></p><ol><li>@@</li></ol></section>
 				-->
 			</section>
-			<section class="guideline status-exploratory">
+			<section class="guideline" data-status="exploratory">
 				<h3>Error prevention</h3>
 				<p class="guideline-text">Provide features that help users avoid errors.</p>
 				<section class="outcome">
@@ -756,8 +771,7 @@
 					<p>An additional outcome, Moderated form completion: Guides data entry, provides validation, and moderates form completion so users can avoid data entry errors, is under development. Details will be posted when available.</p>
 
 					<p>Critical errors and scoring for the Input instructions provided outcome are also under development. We are working to determine how to put the requirement into normative text. Details will be posted when available.</p>
-				
-	</div>
+				</div>
 				
 				<div class="ednote">
 					<p>The Error Prevention guideline is a combination of WCAG 2.2 success criteria and additional requirements to address a broader range of functional needs.</p>
@@ -782,7 +796,7 @@
 
 			</section>
 		</section>
-		<section class="status-exploratory">
+		<section data-status="exploratory">
 			<h2>Testing</h2>
 			<details class="summary">
 				<summary>What types of tests are used?</summary>
@@ -834,7 +848,7 @@
 				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 			</section>
 	
-			<section class="status-placeholder">
+			<section data-status="placeholder">
 				<h2>Scoring</h2>
 
 				<details class="summary">
@@ -894,7 +908,7 @@
 				</section>
 		</section>
 		
-		<section class="status-exploratory">
+		<section data-status="exploratory">
 			<h2>Conformance</h2>
 			<details class="summary">
 				<summary>Summary</summary>
@@ -1031,7 +1045,7 @@
 				</section>
 			</section>
 		</section>
-		<section class="status-maturing">
+		<section data-status="developing">
 			<h2>Glossary</h2>
 			<p class="note">Many of the terms defined here have common meanings. When terms appear with a link to the definition, the meaning is as formally defined here. When terms appear without a link to the definition, their meaning is not explicitly related to the formal definition here. These definitions are in progress and may evolve as the document evolves. </p>
 			<dl>

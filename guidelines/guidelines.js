@@ -136,50 +136,63 @@ function addNoteMarkers() {
 	})
 }
 
-var statusBlocks = [{
-	className: '.status-placeholder',
-	label: 'Placeholder',
-	urlHash: '#placeholder',
-	text: 'We will be addressing this topic. See the Editor&#39;s note for details.'
-}, {
-	className: '.status-exploratory',
-	label: 'Exploratory',
-	urlHash: '#exploratory',
-	text: 'We are exploring one or more possible directions for this content. See the Editor&#39;s note for details.'
-}, {
-	className: '.status-maturing',
-	label: 'Maturing',
-	urlHash: '#maturing',
-	text: 'We have high confidence in the direction and some confidence in the details. See the Editor&#39;s note for details.'
-}, {
-	className: '.status-mature',
-	label: 'Mature',
-	urlHash: '#mature',
-	text: 'We have high confidence in the direction and moderate confidence in the details. See the Editor&#39;s note for details.'
-}, {
-	className: '.status-stable',
-	label: 'Stable',
-	urlHash: '#stable',
-	text: 'We believe the content is ready to become a W3C Recommendation. See the Editor&#39;s note for details.'
-}]
+var statusLabels = {
+	placeholder: 'We will be addressing this topic.',
+	exploratory: 'We are exploring one or more possible directions for this content.',
+	developing: 'We have high confidence in the direction and some confidence in the details.',
+	refining: 'We have high confidence in the direction and moderate confidence in the details.',
+	mature: 'We believe the content is ready to become a W3C Recommendation.',
+}
 
 function addStatusMarkers() {
-	statusBlocks.forEach(function (statusBlock) {
-		var statusSections = document.querySelectorAll(statusBlock.className);
+	var statusKeys = Object.keys(statusLabels);
+	statusKeys.forEach(function (status) {
+		var selector = '[data-status="' + status + '"]';
+		var statusSections = document.querySelectorAll(selector);
 		statusSections.forEach(function (section) {
 			var div = document.createElement('div');
 			div.setAttribute('class', 'addition sticky');
-			div.innerHTML = '<a href="https://www.w3.org/WAI/GL/wiki/AG_process'
-			+ statusBlock.urlHash
-			+ '" class="status-link">Section status: <strong>'
-			+ statusBlock.label
-			+ '</strong></a>.'
-			+ statusBlock.text;
+			div.innerHTML = '<a href="#section-status-levels" class="status-link">Section status: <strong>'
+				+ sentenceCase(status)
+				+ '</strong></a>.'
+				+ statusLabels[status]
+				// + ' See the Editor&#39;s note for details.';
+
 			// Insert div after the first heading:
 			var firstHeading = section.querySelector('h1,h2,h3,h4,h5,h6');
 			firstHeading.parentNode.insertBefore(div, firstHeading.nextSibling);
 		})
 	});
+}
+
+function enableStatusFilter() {
+	var filterActive = false;
+	var button = document.querySelector('#status-filter');
+	var statusLabels = (button.getAttribute('data-status-filter') || '').split(',');
+	var statusSelector = statusLabels.map(function (status) {
+		return '[data-status="'+ status +'"]'
+	}).join(',')
+
+	function toggleStatus() {
+		filterActive = !filterActive; // Toggle
+		var sections = document.querySelectorAll(statusSelector);
+		sections.forEach(function (section) {
+			if (section.hasAttribute('data-no-filter')) {
+				return; // Use this to override the filter
+			}
+			var tocItem = document.querySelector('#toc a[href="#' + section.id + '"]').parentNode;
+			if (filterActive) {
+				section.setAttribute('hidden', '');
+				tocItem.setAttribute('hidden', '');
+			} else {
+				section.removeAttribute('hidden');
+				tocItem.removeAttribute('hidden');
+			}
+		});
+		button.textContent = (filterActive ? 'Reveal' : 'Hide') + ' placeholder & exploratory sections';
+	}
+	button.addEventListener('click', toggleStatus);
+	toggleStatus(); // Active by default
 }
 
 function termTitles() {
@@ -350,4 +363,5 @@ function postRespec() {
 	addNoteMarkers();
 	removeImgSize();
 	outputJson();
+	enableStatusFilter();
 }
