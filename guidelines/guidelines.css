@@ -154,9 +154,11 @@ caption {
 a[href].status-link {
 	color: var(--text);
 }
-.sticky {
-	position: sticky;
-	top: .6em;
-	z-index: 9001;
-	box-shadow: 0 3px 10px rgb(0 0 0 / .2);
+@media screen and (min-width: 860px) {
+	.sticky {
+		position: sticky;
+		top: .6em;
+		z-index: 9001;
+		box-shadow: 0 3px 10px rgb(0 0 0 / .2);
+	}
 }
