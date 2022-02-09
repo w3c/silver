@@ -221,7 +221,11 @@ function adjustNormativity() {
 			var el = document.createElement("p");
 			el.className = "normative-statement";
 			el.innerHTML = "<em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href=\"#dfn-normative\" class=\"internalDFN\" data-link-type=\"dfn\">normative</a>.</em>";
-			node.insertBefore(el, findHeading(node).nextSibling);
+			var heading = findHeading(node)
+			while (heading.parentNode !== node) {
+				heading = heading.parentNode;
+			}
+			node.insertBefore(el, heading.nextSibling);
 		}
 	});
 }
@@ -348,7 +352,7 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
-    addStatusMarkers();
+	addStatusMarkers();
 	//alternateFloats();
 }
 
