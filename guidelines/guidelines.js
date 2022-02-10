@@ -180,7 +180,7 @@ function enableStatusFilter() {
 			if (section.hasAttribute('data-no-filter')) {
 				return; // Use this to override the filter
 			}
-			var sectionId = findHeading(section).id;
+			var sectionId = section.id || findHeading(section).id;
 			var tocLink = document.querySelector('#toc a[href="#' + sectionId + '"]'); // this may be null due to TOC depth limit
 			var tocItem = tocLink == null ? null : tocLink.parentNode;
 			if (filterActive) {
