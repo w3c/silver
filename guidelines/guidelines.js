@@ -180,13 +180,15 @@ function enableStatusFilter() {
 			if (section.hasAttribute('data-no-filter')) {
 				return; // Use this to override the filter
 			}
-			var tocItem = document.querySelector('#toc a[href="#' + section.id + '"]').parentNode;
+			var sectionId = findHeading(section).id;
+			var tocLink = document.querySelector('#toc a[href="#' + sectionId + '"]'); // this may be null due to TOC depth limit
+			var tocItem = tocLink == null ? null : tocLink.parentNode;
 			if (filterActive) {
 				section.setAttribute('hidden', '');
-				tocItem.setAttribute('hidden', '');
+				if (tocItem != null) tocItem.setAttribute('hidden', '');
 			} else {
 				section.removeAttribute('hidden');
-				tocItem.removeAttribute('hidden');
+				if (tocItem != null) tocItem.removeAttribute('hidden');
 			}
 		});
 		button.textContent = (filterActive ? 'Reveal' : 'Hide') + ' placeholder & exploratory sections';
@@ -221,7 +223,7 @@ function adjustNormativity() {
 			var el = document.createElement("p");
 			el.className = "normative-statement";
 			el.innerHTML = "<em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href=\"#dfn-normative\" class=\"internalDFN\" data-link-type=\"dfn\">normative</a>.</em>";
-			var heading = findHeading(node)
+			var heading = findHeading(node);
 			while (heading.parentNode !== node) {
 				heading = heading.parentNode;
 			}
