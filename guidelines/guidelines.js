@@ -136,6 +136,67 @@ function addNoteMarkers() {
 	})
 }
 
+var statusLabels = {
+	placeholder: 'We will be addressing this topic.',
+	exploratory: 'We are exploring one or more possible directions for this content.',
+	developing: 'We have high confidence in the direction and some confidence in the details.',
+	refining: 'We have high confidence in the direction and moderate confidence in the details.',
+	mature: 'We believe the content is ready to become a W3C Recommendation.',
+}
+
+function addStatusMarkers() {
+	var statusKeys = Object.keys(statusLabels);
+	statusKeys.forEach(function (status) {
+		var selector = '[data-status="' + status + '"]';
+		var statusSections = document.querySelectorAll(selector);
+		statusSections.forEach(function (section) {
+			var div = document.createElement('div');
+			div.setAttribute('class', 'addition sticky');
+			div.innerHTML = '<a href="#section-status-levels" class="status-link">Section status: <strong>'
+				+ sentenceCase(status)
+				+ '</strong></a>.'
+				+ statusLabels[status]
+				// + ' See the Editor&#39;s note for details.';
+
+			// Insert div after the first heading:
+			var firstHeading = section.querySelector('h1,h2,h3,h4,h5,h6');
+			firstHeading.parentNode.insertBefore(div, firstHeading.nextSibling);
+		})
+	});
+}
+
+function enableStatusFilter() {
+	var filterActive = false;
+	var button = document.querySelector('#status-filter');
+	var statusLabels = (button.getAttribute('data-status-filter') || '').split(',');
+	var statusSelector = statusLabels.map(function (status) {
+		return '[data-status="'+ status +'"]'
+	}).join(',')
+
+	function toggleStatus() {
+		filterActive = !filterActive; // Toggle
+		var sections = document.querySelectorAll(statusSelector);
+		sections.forEach(function (section) {
+			if (section.hasAttribute('data-no-filter')) {
+				return; // Use this to override the filter
+			}
+			var sectionId = section.id || findHeading(section).id;
+			var tocLink = document.querySelector('#toc a[href="#' + sectionId + '"]'); // this may be null due to TOC depth limit
+			var tocItem = tocLink == null ? null : tocLink.parentNode;
+			if (filterActive) {
+				section.setAttribute('hidden', '');
+				if (tocItem != null) tocItem.setAttribute('hidden', '');
+			} else {
+				section.removeAttribute('hidden');
+				if (tocItem != null) tocItem.removeAttribute('hidden');
+			}
+		});
+		button.textContent = (filterActive ? 'Reveal' : 'Hide') + ' placeholder & exploratory sections';
+	}
+	button.addEventListener('click', toggleStatus);
+	toggleStatus(); // Active by default
+}
+
 function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
@@ -162,7 +223,11 @@ function adjustNormativity() {
 			var el = document.createElement("p");
 			el.className = "normative-statement";
 			el.innerHTML = "<em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href=\"#dfn-normative\" class=\"internalDFN\" data-link-type=\"dfn\">normative</a>.</em>";
-			node.insertBefore(el, findHeading(node).nextSibling);
+			var heading = findHeading(node);
+			while (heading.parentNode !== node) {
+				heading = heading.parentNode;
+			}
+			node.insertBefore(el, heading.nextSibling);
 		}
 	});
 }
@@ -289,6 +354,7 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
+	addStatusMarkers();
 	//alternateFloats();
 }
 
@@ -303,4 +369,5 @@ function postRespec() {
 	addNoteMarkers();
 	removeImgSize();
 	outputJson();
+	enableStatusFilter();
 }

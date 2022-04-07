@@ -151,3 +151,14 @@ caption {
 	content: "§";
 	display: block;
 }
+a[href].status-link {
+	color: var(--text);
+}
+@media screen and (min-width: 860px) {
+	.sticky {
+		position: sticky;
+		top: .6em;
+		z-index: 9001;
+		box-shadow: 0 3px 10px rgb(0 0 0 / .2);
+	}
+}
