@@ -30,6 +30,10 @@ function enableStatusFilter() {
 	toggleStatus(); // Active by default
 }
 
+function findHeading(el) {
+	return el.querySelector('h1, h2, h3, h4, h5, h6');
+}
+
 window.addEventListener('load', (event) => {
   enableStatusFilter();
 });
