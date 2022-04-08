@@ -312,6 +312,14 @@ function authorToPM() {
   });
 }
 
+function moveStatusFilterToToc() {
+	var button = document.querySelector('#status-filter');
+	var button_parent = button.parentNode;
+	var toc = document.querySelector('#toc');
+	var toc_list = toc.querySelector('ol');
+	toc.insertBefore(button_parent.removeChild(button), toc_list);
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
@@ -337,4 +345,5 @@ function postRespec() {
 	addNoteMarkers();
 	removeImgSize();
 	outputJson();
+	moveStatusFilterToToc();
 }
