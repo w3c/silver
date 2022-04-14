@@ -13,17 +13,51 @@
     </section>
 		<section id="sotd">
 			<p>The Use Cases for WCAG 3.0 is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20Use-Cases%20for%20Silver">email</a>. </p>
+			<p>This document is developed by the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Substantial_Conformance">Silver Conformance Options subgroup</a>. It has undergone several cycles of review and continues to be worked on by that group. The document has also been presented to the parent Silver Task Force and is undergoing further review there as well. </p>
 			
 		</section>
 		<section>
 			<h2 id="intro">Introduction</h2>
 			<p>The purpose of this document is to outline situations in which ensuring conformance of websites and applications might present a challenge for content providers, despite best intentions and efforts. The intent of this document is to help form a shared understanding of such situations, to contribute to the development of accessibility resources. These resources could include:
 			<ul>
-				<li>Technical standards for accessibility, such as <a href="">W3C Accessibility Guidelines (WCAG) 3.0</a> and [[[ATAG20]]].
-    			<li>Accompanying technical guidance, such as <a href="">Understanding WCAG 2</a> , <a href="">Techniques for WCAG 2</a> , and similar resources being considered for WCAG 3</li>
-    			<li>Advisory guidance from WAI, such as Developing Organizational Policies on Web Accessibility, Planning and Managing Web Accessibility, and Developing an Accessibility Statement</li>
-    			<li>Other potential resources, such as Maturity Model and Conformance Challenges</li>
+				<li>Technical standards for accessibility, such as <a href="https://www.w3.org/TR/wcag-3.0/">W3C Accessibility Guidelines (WCAG) 3.0</a> and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessiiblity Guidelines (ATAG) 2.0</a></li>
+    			<li>Accompanying technical guidance, such as <a href="https://www.w3.org/WAI/WCAG22/Understanding/">Understanding WCAG 2</a> , <a href="https://www.w3.org/WAI/WCAG22/Techniques/">Techniques for WCAG 2</a>, and similar resources being considered for WCAG 3</li> 
+    			<li>Advisory guidance from WAI, such as <a href="https://www.w3.org/WAI/planning/org-policies/">Developing Organizational Policies on Web Accessibility</a>, <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and Managing Web Accessibility</a>, and <a href="https://www.w3.org/WAI/planning/statements/">Developing an Accessibility Statement</a></li>
+    			<li>Other potential resources, such as <a href="https://w3c.github.io/maturity-model/">Maturity Model</a>
 			</ul>
 		</section>
+		<section>
+			<h2 id="problem">Problem Description</h2>
+			<p>Content providers encounter situations where trying to make content conform to accessibility requirements might present challenges for them, despite best intentions and efforts. For example, when they are publishing large volumes of content, managing third-party content, and when they are adopting new technologies such as natural language interfaces and immersive environments. They then need to decide if they need to pull or not publish the content, versus seek more pragmatic approaches to address the situations. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3</a> and other resources from WAI, such as <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and Managing Web Accessibility</a>, have the goal to support content providers in such situations. However, we lack a shared understanding and common description of these situations across the different WAI groups. This makes some discussions less effective. Moreover, not all challenges can be resolved alone through technical standards and resources from WAI. Some challenges need to be addressed through accessibility policies that are not developed by WAI. For example, most accessibility policies, such as the Americans with Disabilities Act (ADA) and European Accessibility Act (EAA), include concepts around <em>reasonable accommodation</em> and <em>undue burden</em>. That is, we need to understand the context around the situations. Some of them are more technical in nature, and others are more policy related. Understanding this helps us approach the parts that fall within the scope of WAI. </p>
+		</section>
+		<section>
+			<h2 id="approach">Approach and Structure</h2>
+			<p>This document provides a collection of situations where trying to make content accessible might present challenges for content providers. The intent is to identify common patterns across the different situations, and help form a shared understanding for them. This could contribute to the development of accessibility resources from WAI. This includes informing the development of the conformance model and provisions in WCAG 3. Another potential outcome could be WAI guidance with considerations for policy makers wanting to adopt WCAG.</p>
+
+			<p>Each situation in this document is illustrated with one or more brief example scenario. Each situation also includes a high-level outline of:</p>
+			<ul>
+				<li>How technical standards might contribute to addressing the situation</li>
+    			<li>How accompanying guidance might contribute to addressing the situation</li>
+    			<li>How accessibility policies might contribute to addressing the situation</li>
+			</ul>
+			<p>The situations and examples cover a broad range of sectors, including public, commercial, education, and more. However, they are not in any way exhaustive. The situations are also not mutually exclusive - multiple situations could be applicable to the same content at the same time.</p>
+
+			<p>The situations and examples are not intended to cover the all too frequent instances where content providers fail to consider accessibility requirements, whether out of ignorance or negligence. These are real concerns that need to be addressed. They are simply outside the scope of this particular document. In this document we intentionally presume that content providers are doing their best to consider accessibility to the extent they reasonably can. </p>
+		</section>
+		<section>
+			<h2 id="keyTerms">Key Terminology and Concepts</h2>
+			<p>Some of the key terms and concepts used in this document include the following:
+			<ul>
+    			<li><strong>Content Provider:</strong> person or entity providing content to others, for example through a website, mobile app, and other user interfaces. </li>
+    			<li><strong>Content Creator:</strong> person or entity creating the content. This includes content in different formats, such as text, code, audio, and video.</li>
+    			<li><strong>Content Owner:</strong> person or entity owning the content. This can be the commissioner of the content or another holder of the rights.</li>
+    			<li><strong>Conformance:</strong> adhering to technical standards. In this context accessibility standards, such as the W3C Accessibility Guidelines (WCAG).</li>
+    			<li><strong>Compliance:</strong> adhering to laws and other types of policies. In this context accessibility policies, such as the European Accessibility Act (EAA).</li>
+    			<li><strong>Relative priority for people with disabilities:</strong> in the context of this document refers to prioritizing certain content before other content, not to exclude any content as irrelevant for people with disabilities. For example, a restaurant owner might prioritize improving accessibility of the information on accessibility of the restaurant before improving accessibility of the picture gallery.</li>
+    			<li><strong>Reasonable efforts concepts:</strong> refers to concepts such as "reasonable accommodation" and "undue burden" that exist in many policies, such as Americans with Disabilities Act (ADA) and European Accessibility Act (EAA).</li>
+			</ul>
+			<p><strong>Note:</strong> This is not intended to be any glossary definition of the terms, just an introduction of these concepts in the context of this document. If accepted by the group, these terms used in the finalized documents may be considered for aligning with and adding to the corresponding glossary definitions. </p>
+		</section>
+		
 	</body>
 </html>
