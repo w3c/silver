@@ -431,19 +431,27 @@
 					<li><strong>Aggregate:</strong>Combination of all realted items, user processes, and views.</li>	
 					</ul>
 			</details>
+
+			<p class="ednote">This section is exploratory. Oustanding questions that need to be addressed include:
+				<ul><li>How to document process tests and how much of an evaluation of the results should be dictated,</li>
+					<li>How well this approach to testing supports additional requirements not addressed in 2.1,</li>
+					<li>How well this approach will support regulatory needs, and</li>
+					<li>Developing examples of each test type.</li>
+				</ul>
 			
-			<p class="ednote">The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using holistic tests, sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
+			<p class="ednote">
+			The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using holistic tests, sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
 			
 				<p>WCAG 3.0 tests <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to determine if the content they are evaluating satisfies the criteria. </p> 
 
 				<p>Testing outcomes use <a>items</a>, <a>views</a>, <a>user processes</a>, and <a>the aggregate</a> to define what is being tested. 
 
-				<p>Items are the smallest testable unit. It may be an interactive component such as a drop down menu, a link, or a media player. It may also be a unit of content such as a word, a phrase, an icon, or an image.</p>
+				<p>Items are the smallest testable unit. They may be interactive components such as a drop down menu, a link, or a media player. They may also be units of content such as a word, a phrase, an icon, or an image.</p>
 
-				<p>Views include all content visually and programmatically available without a substantive change. Conceptually, it corresponds to the definition of a <q>web page</q> as used in WCAG 2.X, but is not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
+				<p>Views include all content visually and programmatically available without a substantive change. Conceptually, views corresponds to the definition of a <q>web page</q> as used in WCAG 2.X, but are not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
 				</p>
 				<p>
-				User processes are a series of user actions, and the distinct interactive <a>views</a> that support the actions, where each action is required in order to complete an activity.A process may include a subset of a view or a group of views. </p>
+				User processes are a series of user actions, and the distinct interactive <a>views</a> that support the actions, where each action is required in order to complete an activity. A user process may include a subset of a view or a group of views. </p>
 				<p>Examples of a process include:</p>
 					<ul>
 						<li>Logging into a site and being recognized as an authenticated user;</li>
@@ -451,48 +459,54 @@
 						<li>Submitting tax information, from start to end of the process; and</li>
 						<li>Interacting with other users in a virtual reality environment.</li>
 					</ul>
-					<p>A process is comprised of one or more <a>views</a>.</p>
+					<p>A process is comprised of one or more <a>views</a> or subsets of views.</p>
 				<section>
 				<h3>Types of tests</h3>
 								
 				<p>WCAG 3.0 includes four types of tests that increase in subjectivity:
 				   <ol><li> <a href="#objective-tests">Objective tests</a>,</li> 
 				    <li><a href="#conditional-tests">Conditional tests</a>,</li>
-			      <li><a href="#conditional-tests">Convention tests</a>, and</li>				    
-			      <li><a href="#conditional-tests">Process tests</a>.</li>
+			      <li><a href="#convention-tests">Convention tests</a>, and</li>				    
+			      <li><a href="#process-tests">Process tests</a>.</li>
+			    </ol>
+			  </p>
+						<p>All tests are pass or fail but the criteria used to evaluate whether the test pass are different for each type of test. Meeting an outcome may include one or more of these types of test. </p>
 
-
-				    Testing the outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>. <!--The content should be tested by those who understand how people with different types of disabilities use the technology being tested.--></p>
+				    <p>Testing the outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>. <!--The content should be tested by those who understand how people with different types of disabilities use the technology being tested.--></p>
 				
 				<p>Although content may satisfy all outcomes using objective and conditional tests, the content may not always be usable by people with a wide variety of disabilities. The convention and process tests address this gap by evaluating more of the user experience.</p>
 				<p class="ednote">We are looking for more appropriate terms to distinguish between these two types of tests and welcome suggestions</p> 
-				
+
 					<section>
 						<h4>Objective tests</h4>
-						<p>Objective tests are tests where the results will not vary based on the tester or approach. Examples include testing whether something exists or against a constant value. Objective tests evaluate content, often against a <a>unit</a> or <a>view</a>, for accessibility. 
+						<p>Objective tests are tests where the results will not vary based on the tester or approach. Examples include testing whether something exists or against a constant value. Objective tests evaluate content, often against a <a>unit</a> or <a>view</a>, for accessibility. </p>
+						<p>Objective tests evaluate against a universal criteria that is true in all situations and requires no subjective evaluation.</p>
+						<p>Methods using objective tests include the critera being tested against.</p>
 						<p>Objective tests may be <a>automated</a> or <a>manual</a>. <a>Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
 					</section>
 					<section>
 						<h4>Conditional tests</h4>
-						<p>Conditional tests rely on a subjective evaluation based on existing critera. Test results may vary slightly between testers who understand the criteria. Examples include testing quality and applicability.
-
-
-
-						 include assistive technology testing, user-centered design methods, and both user and expert usability testing. Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected. Successful results of holistic tests are used to reach a <a href="#silver">silver</a> or <a href="#gold">gold</a> rating.</p>
-						<p class="ednote">Future drafts will further explore holistic tests and provide examples as well as detail how to apply them.</p>
+						<p>Conditional tests rely on a subjective evaluation based on a set of criteria where the test results may vary slightly between experienced testers. Examples include testing quality and applicability.</p>
+						<p>Methods using conditional tests include the criteria being testest and guidance on evaluating how well the content meets the test criteria.</p>
 					</section>
 										<section>
 						<h4>Convention tests</h4>
-						<p>Convetion tests test against a baseline that the creating organization sets, often by documenting design decisions and conventions used throughout the content. Convention tests include both objective and conditional tests but the results vary based on the content being tested. Examples include testing for consistency of design decisions and content choices.</p>
+						<p>Convention tests evaluate against a baseline that the creating organization sets, often by documenting design decisions and conventions used throughout the content. Convention tests include both objective and conditional tests but the criteria used to evaluate the results differ based on the aggregate being tested. Results within the same Examples include testing for consistency of design decisions and content choices.</p>
+						<p>Methods using convention tests include the guidance on how an organization would declare:
+						<ul><li> the criteria for objective and conditional tests, and</li>
+						<li>guidance on evaluating how well the content meets the test criteria for conditional test.</li></ul> 
 					</section>
 
 
 					<section>
 						<h4>Process tests</h4>
-						<p>Process tests evaluate whether a process was used to improve accessibility. Examples include usability and plain language testing.  Process tests include assistive technology testing, user-centered design methods, and both user and expert usability testing. Process testing often apply to the <a>aggregate</a> and often uses the declared processes to guide the tests selected. 
+						<p>Process tests evaluate whether a process was used to improve accessibility. Examples include usability and plain language testing.  Process tests include assistive technology testing, user-centered design methods, plain language testing, and both user and expert usability testing. Process testing often applies to the <a>aggregate</a> and tests declarations about the processes to guide the tests selected. </p>
+						<p class="ednote">The requirements for what would be included in WCAG 3 for process tests are still to be determined.</p>
 					</section>
 
 				</section>
+
+
 				<section>
 				<h3>Technology specific testing</h3>				
 				<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
@@ -512,10 +526,10 @@
 			<section data-status="exploratory">
 				<h3>Conformance levels</h3>
 				<div class="ednote">
-				<p>WCAG 3.0 includes a new conformance model in order to address a wider range of user needs, test a wider range of technologies and support new approaches to testing. There are several key goals for this new conformance model:</p>
+				<p>WCAG 3.0 will include a new conformance model in order to address a wider range of user needs, test a wider range of technologies and support new approaches to testing. There are several key goals for this new conformance model:</p>
 
 				<ol>
-					<li>Develop a scoring model that encourages websites to continue to do better and better (vs. stopping at the previous AA level);</li>
+					<li>Develop a model that encourages websites to continue to do better and better (vs. stopping at the previous AA level);</li>
 					<li>Better reflect the lived experience of people with disabilities, who successfully use sites that have some content that does not meet WCAG 2.0 AA, or who encounter barriers with sites that meet WCAG 2.0 AA;</li>
 					<li>Allow for bugs and oversight by content authors, provided the impact of them is limited to users with disabilities.</li>
 				</ol>
@@ -528,31 +542,15 @@
 
 				<section>
 					<h4>Bronze</h4>
-					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. The bronze level can be verified using <a href="#atomic-tests">atomic tests</a>. While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
-					<p>For content that conforms to the bronze level:</p>
-					<ul>
-						<li>The total score and score within each of the functional categories MUST be at least 3.5; and</li>
-						<li><a>Views</a> and <a>processes</a> MUST NOT have <a>critical errors</a>.</li>
-					</ul>
-					<p>Conformance to this specification at the bronze level does not mean every requirement in every guideline is fully met. Bronze level means that the content in scope does have any critical errors and meets the minimum percentage of @@</p>
+					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
 				</section>
 				<section>
 					<h4>Silver</h4>
-					<p>Silver is a higher conformance level that addresses additional outcomes. Some <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
-					<p>For content that conforms to the silver level:</p>
-					<ul>
-						<li>All <a>views</a> MUST satisfy the <a href="#bronze">Bronze</a> criteria; and</li>
-						<li>Use of holistic tests to meet this level will be further explored in future drafts</li>
-					</ul>
+					<p>Silver is a higher conformance level.</p>
 				</section>
 				<section>
 					<h4>Gold</h4>
-					<p>Gold is the highest conformance level that addresses the remaining outcomes described in the guidelines. Additional <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
-					<p>For content that conforms to the gold level:</p>
-					<ul>
-						<li>All <a>views</a> MUST satisfy the <a href="#silver">Silver</a> criteria; and</li>
-						<li>Use of holistic tests to meet this level will be further explored in future drafts</li>
-					</ul>
+					<p>Gold is the highest conformance level.</p>
 				</section>
 			</section>
 			<section data-status="exploratory">
@@ -567,7 +565,7 @@
 			<p>User Generated Content is provided for publication by visitors where the content platform specifically welcomes and encourages it. User-generated content is content that is submitted through a user interface designed specifically for members of the public and customers. Use of the same user interface as an authoring tool for publication of content by agents of the publisher (such as employees, contractors, or authorized volunteers) acting on behalf of the publisher does not make that content User Generated Content. The purpose of the User Generated Content Conformance is to allow WCAG 3 outcomes and methods to require additional or different steps to improve the accessibility of User Generated Content.</p>
 			<p>An important part of WCAG Conformance is the specific guidance that is associated with individual WCAG 3 guidelines and outcomes. Not all WCAG 3 guidelines will have unique outcomes and testing for User Generated Content. Unless User Generated Content requirements are specified in a particular guideline, that guideline applies as written whether or not the content is User Generated. </p>
 			
-			<p class="ednote">We plan for the Q4 Working Draft to include specific examples of guidelines with additional requirements for user generated content.  One example would be alternative text. The Authoring Tool Accessibility Guidelines (ATAG) has specific guidance for providing a mechanism for alternative text. The <a href="https://www.w3.org/TR/ATAG20/#gl_b23">ATAG  2.0 Guideline B.2.3</a> - "Assist authors with managing alternative content for non-text content" could be adapted to provide specific, guideline-related guidance for user generated alternative text. </p>
+			<p class="ednote">We plan for a future Working Draft to include specific examples of guidelines with additional requirements for user generated content.  One example would be alternative text. The Authoring Tool Accessibility Guidelines (ATAG) has specific guidance for providing a mechanism for alternative text. The <a href="https://www.w3.org/TR/ATAG20/#gl_b23">ATAG  2.0 Guideline B.2.3</a> - "Assist authors with managing alternative content for non-text content" could be adapted to provide specific, guideline-related guidance for user generated alternative text. </p>
 			
 			<p>The web content publisher should identify all locations of User Generated Content (such as commentary on hosted content, product descriptions for consumer to consumer for sale listings, and restaurant reviews) and perform standard accessibility evaluation analysis for each. If there are no accessibility issues, the User Generated Content is fully conforming.</p>
 			<section>
@@ -577,7 +575,7 @@
 				<li>Clearly identify where User Generated Content can be found on the publisher's digital product (perhaps by id href);</li>
 				<li>Clearly identify the steps taken to encourage accessibility in User Generated Content such as prompting the user for ALT text for their uploaded images before they are accepted and the disallowal of text attributes except as they are part of semantic markup such as strong, headings, etc., as enumerated in Guideline Outcomes;</li>
 			</ol>
-			<p class="ednote">Editor's Note: Appropriate scoring is yet to be provided. Once provided, fully conforming content will score as fully conformant. It remains to be determined how to score User Generated Content that has accessibility issues; and to define what minimum threshold scores might be acceptable; and what critical errors might prevent a conformance assertion. We expect WCAG 3 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
+			<p class="ednote">Editor's Note: Appropriate scoring is yet to be provided. Once provided, fully conforming content will be considered fully conformant. It remains to be determined how to address User Generated Content that has accessibility issues; and to define what minimum thresholds might be acceptable. We expect WCAG 3 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
 			</section>
 			</section>
 			<section data-status="placeholder">
@@ -658,19 +656,6 @@
 				<dd><p>Satisfying all the requirements of the guidelines. Conformance is an important part of following
 						the guidelines even when not making a formal Conformance Claim.</p>
 					<p>See <a href="#conformance">Conformance</a>.</p></dd>
-				<dt><dfn data-lt="Critical errors|Critical failure|Critical failures">Critical error</dfn></dt>
-				<dd>
-					<p>An accessibility problem that will stop a user from being able to complete a
-						process.</p><p>Critical errors include:</p>
-					<ul>
-						<li>Items that will stop a user from being able to complete the task if it exists anywhere on
-							the view (examples: flashing, keyboard trap, audio with no pause);</li>
-						<li>Errors that when located within a process means the process cannot be completed (example:
-							submit button not in tab order);</li>
-						<li>Errors that when aggregated within a view or across a process cause failure (example: a
-							large amount of confusing, ambiguous language).</li>
-					</ul>
-					</dd>
 				<dt><dfn data-lt="deprecated">Deprecate</dfn></dt>
 				<dd>
 					<p>To declare something outdated and in the process of being phased out, usually in favor of a specified replacement.</p>
