@@ -36,7 +36,7 @@
           <ul><li>First draft of the WCAG3 Explainer, which takes explanatory material out of WCAG3 to improve usability.</li>
               <li>New conformance section on user-generated content and the glossary definition of user-generated content.
               </li>
-              <li>A new proposal revising the Methods template to address comments from the First Publich Working Draft (FPWD). This proposal was done in partnership with the ACT task force. </li>
+              <li>A new proposal revising the Methods template to address comments from the First Public Working Draft (FPWD). This proposal was done in partnership with the ACT task force. </li>
           </ul>
       </div>
 			<details class="summary">
@@ -419,8 +419,8 @@
 			<details class="summary">
 				<summary>What types of tests and scopes are used?</summary>
 				<p>WCAG 3.0 includes four types of tests which are evaluated pass/fail:</p>
-					<ul><li><strong>Objective tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether something exists or against a constant value. </li>
-					<li><strong>Conditional tests:</strong> Tests that rely on a subjective evaluation based on existing critera. Test results may vary slightly between testers who understand the criteria. Examples include testing quality and applicability. </li>
+					<ul><li><strong>Objective tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether something exists or against a constant value specified by WCAG.  </li>
+					<li><strong>Conditional tests:</strong> Tests that rely on a qualitative evaluation based on existing critera. Test results may vary slightly between testers who understand the criteria. Examples include testing quality and applicability. </li>
 					<li><strong>Convention tests:</strong> Objective and conditional tests where the results rely on the content being tested. Examples include consistency and convention tests.</li>
 					<li><strong>Procedure tests:</strong>Tests that evaluate whether an accepted process was used to improve accessibility. Examples include usability and plain language testing</li>
 					</ul>
@@ -434,19 +434,21 @@
 
 			<div class="ednote">
 			<p>This section is exploratory. Outstanding questions that need to be addressed include:</p>
-				<ul><li>How to document procedure tests and whether the results of the procedure should be part of the evaluation,</li>
+				<ul>
+					<li>Developing detailed examples of each test type,</li>
+					<li>What to document for procedure tests,</li>
+					<li>Whether protocols is met by procedure tests or, if not, how it will be incorporated</li>
 					<li>How well this approach to testing supports additional requirements not addressed in 2.1,</li>
 					<li>Testing the accuracy, reliability, repeatabilty, etc. of this approach,</li>
 					<li>How well this approach will support regulatory needs, </li>
-					<li>Developing examples of each test type,</li>
 					<li>How a process defined and documented,</li>
-					<li>How these tests integrate into a conformance model</li>
-					<li>Get feedback from designers, developers and other communities on word choice</li>
+					<li>How these tests will be integrated into a conformance model (including levels or scores), and</li>
+					<li>Get feedback from designers, developers and other communities on word choice.</li>
 				</ul>
 			</div>
 			
 			<p class="ednote">
-			The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using holistic tests, sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
+			The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
 			
 				<p>WCAG 3.0 tests <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to determine if the content they are evaluating satisfies the criteria. </p> 
 
@@ -476,12 +478,12 @@
 			      <li><a href="#convention-tests">Convention tests</a>, and</li>				    
 			      <li><a href="#procedure-tests">Procedure tests</a>.</li>
 			    </ol>
-						<p>All tests are pass or fail but the criteria used to evaluate whether the test pass are different for each type of test. Meeting an outcome may include one or more of these types of test. </p>
+						<p>All tests are pass or fail but the criteria used to evaluate whether the test pass are different for each type of test. The inter-rater reliability of results decreases as the subjectivity of the test type increases. As a result, the requirements for test criteria change based on the test type to ensure each can be evaluated as pass or fail. Meeting an outcome may include one or more of these types of test.</p>
 
 				    <p>Testing the outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>. <!--The content should be tested by those who understand how people with different types of disabilities use the technology being tested.--></p>
 				
 				<p>Although content may satisfy all outcomes using objective and conditional tests, the content may not always be usable by people with a wide variety of disabilities. The convention and procedure tests address this gap by evaluating more of the user experience.</p>
-				<p class="ednote">We are looking for more appropriate terms to distinguish between these two types of tests and welcome suggestions</p> 
+				<p class="ednote">We are looking for more appropriate terms to distinguish between types of tests and scope and welcome suggestions.  Other terms being suggested for 'objective' are 'quantitative' or 'constant.' Another term being suggested for 'conditional' is 'qualitative.'</p> 
 
 					<section>
 						<h4>Objective tests</h4>
@@ -489,29 +491,68 @@
 						<p>Objective tests evaluate against a universal criteria that is true in all situations and requires no subjective evaluation.</p>
 						<p>Methods using objective tests include the critera being tested against.</p>
 						<p>Objective tests may be <a>automated</a> or <a>manual</a>. <a>Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
+
+						<aside class="example">
+							<p>Example objective test</p>
+								<p>These tests are already part of WCAG 2.x.</p>
+								<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/" target="_blank">Image has non-empty accessible name</a></p>
+								<p>Example for 1.4.3: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/afw4f7/proposed/" target="_blank">Text has minimum contrast</a></p>
+						</aside>
+
 					</section>
 					<section>
 						<h4>Conditional tests</h4>
-						<p>Conditional tests rely on a subjective evaluation based on a set of criteria where the test results may vary slightly between experienced testers. Examples include testing quality and applicability.</p>
-						<p>Methods using conditional tests include the criteria being testest and guidance on evaluating how well the content meets the test criteria.</p>
+						<p>Conditional tests rely on informed qualitative evaluations based on a set of criteria. The test results may vary slightly between experienced testers. Examples include testing quality and applicability.</p>
+						<p>Methods using conditional tests include the criteria being tested and guidance on evaluating how well the content meets the test criteria.</p> 
+
+						<aside class="example">
+							<p>Example conditional test</p>
+								<p>These tests are already part of WCAG 2.x.</p>
+								<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive</a></p>
+								<p>Example for 2.4.9: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/" target="_blank"> Link is descriptive</a></p>
+						</aside>
+
 					</section>
 										<section>
 						<h4>Convention tests</h4>
-						<p>Convention tests evaluate against a baseline that the creating organization sets, often by documenting design decisions and conventions used throughout the content. Convention tests include both objective and conditional tests but the criteria used to evaluate the results differ based on the aggregate being tested. Results within the same Examples include testing for consistency of design decisions and content choices.</p>
-						<p>Methods using convention tests include the guidance on how an organization would declare:</p>
-						<ul><li> the criteria for objective and conditional tests, and</li>
-						<li>guidance on evaluating how well the content meets the test criteria for conditional test.</li></ul> 
+						<p>Convention tests evaluate against a baseline that the creating organization sets using guidance from WCAG. This is often done by documenting design decisions and conventions used throughout the content. Convention tests include both objective and conditional tests but the criteria used to evaluate the results differ based on the aggregate being tested. 
+						WCAG will rely on convention tests when e a  solution will improve accessibility but where that implementation of the solution will vary based on situation, such as language, type of content, or other desing decisions. Examples include testing for consistency of design decisions and content choices.</p>
+						<p>Methods using convention tests include the test criteria the organization would need to evaluate, parameters for success and failure, and, if it is a conditional text, guidance on evaluating how well the content meets the test criteria for conditional test.</li></ul>
+
+					<aside class="example">
+						<p>Example convention test for clear language outcome (Draft)</p>
+
+						<p>Test: The content follows clear language rules appropriate to the language of the content.</p>
+
+						<p>If in English, the content will:
+								<ul><li>Not include double negatives</li>
+										<li>Spell out abbreviations and acronyms</li>
+										<li>Explain similies, metaphors, and other non-literal language</li>
+								</ul></p>
+
+						<p>In Hebrew, the content will:
+								<ul><li>Include all accents, characters, and diacritics that are necessary to phonetically read the words</li>
+								    <li>Explain similies, metaphors, and other non-literal language</li>
+								</ul></p>
+					</aside>
+
 					</section>
 
 
 					<section>
 						<h4>Procedure tests</h4>
-						<p>Procedure tests evaluate whether a process was used to improve accessibility. Examples include usability and plain language testing.  Procedure tests include assistive technology testing, user-centered design methods, plain language testing, and both user and expert usability testing. Procedure testing often applies to the <a>aggregate</a> and tests declarations about the processes to guide the tests selected. </p>
-						<p class="ednote">The requirements for what would be evaluated for procedure tests are still to be determined.</p>
-					</section>
+						<p>Procedure tests evaluate whether a process was used to improve accessibility. Examples include usability and plain language testing.  Procedure tests include assistive technology testing, user-centered design methods, plain language testing, and both user and expert usability testing. Procedure testing often applies to the <a>aggregate</a> or <a>user process</a>. Methods would provide guidance for different procedures that are proven to improve accessibility and would test declarations about the procedure used rather than the results. </p>
+						
 
-				</section>
- 
+						<aside class="example">
+
+							<p>Example procedure test for clear language outcome (Draft)</p>
+
+							<p>Test: A plain language review was conducted</p>
+						</aside>
+
+						<p class="ednote">The requirements for what would be evaluated for procedure tests are to be determined.</p>
+					</section>
 
 				<section>
 				<h3>Technology specific testing</h3>				
