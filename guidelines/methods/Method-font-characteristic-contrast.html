@@ -14,7 +14,8 @@ You should totally buy his book on Inclusive Components.
   </head>
   <body>
 <p class="breadcrumb"><a href="../../guidelines/index.html">Silver</a> > <a href="../explainers/VisualContrast.html">Visual Contrast</a> > Select font characteristics and background colors to provide enough contrast </p>
-<div class="guidanceBox">
+<div class="guidanceBox"   style="color:#944;background-color: #ddd;">
+<h2 style="color:#a00;background-color: #ee8;">DEPRECATED: please use the <a href="https://www.w3.org/TR/wcag-3.0/">current WCAG 3 draft</a></h2>
 	<h1>Select font characteristics and background colors to provide enough contrast for readability </h1>
 	<p>Use tools to evaluate font size, font stroke width, background color, font color, and nearby colors and adjust the properties of those elements to achieve good visual contrast and readability. </p>
 </div>
@@ -104,7 +105,9 @@ You should totally buy his book on Inclusive Components.
 </dl>
 <div><span></span>
   <p>Predicted contrast is reported as a percentage using the methods in this guideline, based on the CSS color values in sRGB colorspace, and with device default antialiasing<sup>1</sup>. The <b>Tests</b> section has a lookup table for specific font and contrast combinations, but as a general guide:</p>
-	  
+
+<h3  style="color:#a00;background-color: #FF7;">DEPRECATED LEVEL INFORMATION.</h3>
+	  <s>
 	  <ul>
 	<li>25% is the point of invisibility (<em>i.e., no perceptible contrast</em>) for many people with contrast related impairments. Designers should assume that contrasts lower than this may be invisible to some users.
 	<li>40% for Large, Bold Headlines where the major stroke width is at least 8px (6pt), or Non-text elements that are at least a solid 8x8px square such as buttons.
@@ -112,7 +115,7 @@ You should totally buy his book on Inclusive Components.
 	<li>80% Normal Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 2px.
 	<li>100% 300 Weight Text no less than 16px (12pt) or non-text with a minimum stroke of 1px.
 	</ul>	
-		
+		</s>
 		
   <p style="font-size: smaller;">Note: <sup>1</sup>These values require that antialiasing be at the device or user agent default, such that <em>added</em> antialiasing such as "Webkit-Font-Smoothing: Antialias;" is not enabled.</p>
 </div>
@@ -128,11 +131,12 @@ You should totally buy his book on Inclusive Components.
 
 <section id="section3" >
 	
-<h2>Code Samples</h2>
-
-<h3>Example Code for a Test Tool</h3>	
+<h2 style="color:#a00;background-color: #FF7;">DEPRECATED - DO NOT USE</h2>
+<h3 style="color:#030;background-color: #dfe;"><em>•• Please use the <a href="https://www.w3.org/TR/wcag-3.0/">current WCAG 3 draft</a> ••</em></h3>
+<h2><s>Code Samples</s></h2>
+<h3><s>Example Code for a Test Tool</s></h3>	
 <div style="overflow: scroll;  background-color: #FED;">	
-<pre><code>
+<pre><code><s>
 ////////////////////////////////////////////////////////////////////////////////
 /////	Functions to parse color values and determine SAPC contrast
 /////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
@@ -234,7 +238,7 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 ///// END OF SAPC BLOCK             //////////////////////////
 //////////////////////////////////////////////////////////////
 
-
+</s>
 
 //////////////////////////////////////////////////////////////
 ///// sRGB INPUT FORM BLOCK         //////////////////////////
@@ -707,12 +711,11 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 </ul>
 </p>
 	<style>
-	td, th { text-align: center; }
+ td, th { text-align: center; text-decoration: line-through; color:#b06;}
 	th {background-color: #ABE;}
 	th.fsize {background-color: #BCF;}
 	td.do-not, .do-not {font-size: 1.4em; font-weight: bold; color: #B00;}
 	</style>	
-	
 <table class="TFtable">
 <tr>
 <th class="fsize" >Font</th><th colspan="9" style="">Font Weight</th>
@@ -777,7 +780,6 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 <tr>
 <td>96px</td><td>80%</td><td>60%</td><td>55%</td><td>50%</td><td>45%</td><td>40%</td><td>40%</td><td>40%</td><td>40%</td>
 </tr>
-
 </table>
 <ul>
 <li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
@@ -795,7 +797,7 @@ This project is part of the &lt;a href="https://www.myndex.com/WEB/Perception"&g
 
 <section id="section5">
 <h2>Resources</h2>
-	
+	<s>
 <h3 id="math">APCA Math</h3>
 	
 <div>APCA is the <b>A</b>dvanced <b>P</b>erceptual <b>C</b>ontrast <b>A</b>lgorithm. The math assumes the use of the web standard sRGB colorspace.<BR><BR>
@@ -865,7 +867,7 @@ if Y<sub>bg</sub> &gt; Y<sub>txt</sub> then {
     return (APCA > -15 ) ? "0%" : str(APCA) + "%";
 }  
     </pre>
-
+</s>
   </dd>
 </dl>
 <div><span><em>Notes:</em></span><smaller>
