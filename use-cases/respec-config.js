@@ -45,7 +45,7 @@ var respecConfig = {
 		mailto: "janina@rednote.net",
 		company: "Red Note",
 		companyURI: "",
-		w3cid: 
+		w3cid: 33688
 	}, {
 		name: "Michael Cooper",
 		mailto: "cooper@w3.org",
@@ -62,7 +62,8 @@ var respecConfig = {
 		name: "Shadi Abou-Zahra", 
 		mailto: "sabouzah@amazon.at",
 		company: "Amazon", 
-		companyURI: "http://amazon.com/" 
+		companyURI: "http://amazon.com/",
+		w3cid: 34651
 	} ],
 	
 	/*
