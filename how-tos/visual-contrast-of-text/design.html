@@ -12,11 +12,11 @@
 				<h2>Design responsibilities</h2>
 				<ul>
 					<li>Smaller, lighter weight fonts require higher contrast colors.</li>
-					<li>The CSS property <q>Font-Smooth:</q> should be set to auto (default), and <em>not <q>antialiased</q>.</em>
+					<li>The CSS property <q>-webkit-font-smoothing:</q> should be set to auto (default), and <em>not <q>antialiased</q>.</em>
 						<ul>
 							<li>This is especially true for normal weight fonts less than 24px, and light fonts less than 48px. </li>
-							<li>The <q>antialiased</q> mode in font smoothing is actually a blending that reduces contrast by 30% or more.</li>
-							<li>If the faux <q>antialiasing</q> mode is to be used, take note that normal and thin fonts will need to have their CSS colors set to a 30% higher APCA contrast.</li>
+							<li>The <q>antialiased</q> mode in font smoothing is actually a blending that reduces perceived lightness contrast by Lc 30 or more.</li>
+							<li>If the faux <q>antialiasing</q> mode is to be used, take note that normal and thin fonts may need to have their CSS colors adjusted to increase contrast.</li>
 						</ul></li>
 					<li>Certain color combinations can be very problematic on a computer monitor or mobile device. <ul>
 							<li>Never rely on hue alone for differentiating details. Adequate luminance contrast is required.</li>
@@ -31,7 +31,12 @@
 									</li>
 									<li>For many people, reducing or avoiding details in the blue channel can prevent chromatic aberration or shimmer.</li>
 								</ul></li>
-							<li>Pure red (#F00) text on a pure black (#000) background is the bare minimum contrast for a 16px 400 weight (normal) standard font.</li>
+							<li>Pure red (#F00) text on a pure black (#000) background is not useful for readability. While standard vision may see it if the font is large enough, some types of color insensitive vision will not.</li>
+							<ul>
+							  <li>In the example below: Left, pure red (#F00) on black (#000). Right, a simulation of how a person with protanopia sees it.<br />
+										<div style="display: inline-block; margin: 0.25em 0; padding: 0.25em; color: #F00; background: #000; font-size: 32px; font-weight: bold; border-radius: 0.5em;">STANDARD VISION</div>
+										<div style="display: inline-block; margin: 0.25em 0; padding: 0.25em; color: #5d5d10; background: #000; font-size: 32px; font-weight: bold; border-radius: 0.5em;">PROTANOPIC VISION </div>
+									</li>
 						</ul></li>
 					<li>Different font designs affect perceived contrast and readability. <ul>
 							<li>While different font families use weights such as 400 or 700, those are not standardized in terms of contrast.</li>
@@ -41,7 +46,11 @@
 						</ul></li>
 					<li>When placing text in a container with a significantly different background color than the overall page, it is typically necessary to add padding around the text, so the eye can <q>locally adapt</q> to the text and container background.</li>
 					<li>Line spacing and letter spacing (leading and tracking), line length, and effects such as transparency and shadow all have an effect on perceived contrast and readability.</li>
-					<li>Generally speaking, blocks or columns of text should be set to the highest contrast colors, especially for thin fonts. Contrast can be reduced for big bold headlines to reduce glare. </li>
+					<ul>
+					  <li>Increasing letter spacing and line spacing can reduce crowding and improve readability contrast.</li>
+					  <li>Readability is improved by limiting the number of characters per line of text to no more than 80 characters, with an ideal line length being between 45 and 65 characters.</li>
+					<li>Generally speaking, blocks or columns of text should be set to the highest contrast colors, especially for thin fonts.</li>
+					  <li>Contrast can be reduced for big bold headlines to reduce glare. </li>
 				</ul>
 			</section>
 			<section id="tips">
