@@ -2,8 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Method - Resources</title>
+		<link rel="stylesheet" type="text/css" href="apca.css" /> 
 	</head>
 	<body>
+
 		<header>
 			<h1>Resources</h1>
 		</header>
@@ -11,16 +13,48 @@
 			<section id="w3c">
 				<h2>W3C Resources</h2>
 				<ul>
-					<li>None.</li>
+					<li><a href="https://www.w3.org/WAI/GL/WCAG3/2022/how-tos/visual-contrast-of-text/">WCAG 3 Visual Contrast How-To</a> Useful guidance for readability contrast</li>
+					<li><a href="https://www.w3.org/TR/css-color-4/">CSS Color Module Level 4</a> CSS color information, includes information regarding color spaces other than sRGB.</li>
+					<li><a href="https://www.w3.org/TR/css-color-4/#numeric-srgb">sRGB Colors</a> CSS specifications regarding the standard sRGB color space.</li>
+					<li><a href="https://www.w3.org/TR/compositing-1/#simplealphacompositing">Simple alpha compositing</a> W3 CSS guidance regarding calculating colors involving alpha channels.</li>
+					<li><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper">Visual Contrast White Paper (In-Progress Draft)</a> An overview of readability contrast, with infographics and a bibliography of the relevant peer reviewed science.</li>
 				</ul>	
 			</section>
+
 			<section id="external">
 				<h2>Non-W3C Resources</h2>
 				<ul>
-					<li><a href="https://www.myndex.com/APCA/">Advanced Perceptual Contrast Algorithm (APCA) Visual Contrast Calculator</a>. Takes a pair of CSS sRGB colors and predicts the perceived contrast, to be used with the APCA lookup table. </li>
-					<li><a href="https://github.com/Myndex/SAPC-APCA">APCA GitHub Repository</a>. Source code for the APCA calculator.</li>
+					<li><a href="https://github.com/Myndex/SAPC-APCA/">"Why APCA?"</a>. A plain language introduction to readability contrast.</li>
+					<li><a href="https://www.myndex.com/APCA/">Accessible Perceptual Contrast Algorithm (APCA) Visual Contrast Calculator</a>. Takes a pair of CSS sRGB colors and predicts the perceived contrast, suggests a minimum font size and weight for those colors. </li>
+					<li><a href="https://github.com/Myndex/SAPC-APCA">APCA on GitHub</a>. The main repository for the source code and documentation for the APCA contrast method.</li>
 					<li><a href="https://www.myndex.com/CVD/">Color Vision Deficiency Simulator</a>. Allows designers to preview how their designs may look like to individuals with color blindness. Includes an sRGB grayscale example, useful for visually assessing luminance contrast. </li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance">Web Accessibility: Understanding Colors and Luminance</a> Introduction to Color and Accessibility, a tutorial.</li>
+					<li><a href="https://www.ricciadams.com/articles/osx-color-conversions/">Mac Color Meters & Color Space Conversion</a> Regarding Digital Color Meters, i.e. "eye dropper tools" on Mac OS X.</li>
 				</ul>	
+			</section>
+
+			<section id="bibliography">
+				<h2>Bibliography</h2>
+
+				<h3>Reading with low vision:</h3>
+				<h4>the impact of research on clinical management (2011)</h4>
+				<p>Jan Lovie–Kitchin PhD, School of Optometry Queensland University of Technology </p>
+				<p><a href="https://doi.org/10.1111/j.1444-0938.2010.00565.x"> doi.org/10.1111/j.1444-0938.2010.00565.x</a></p>
+
+				<h3>Luminance Contrast</h3>
+				<h4>Using Color In Information Display Graphics</h4>
+				<p>Larry Arend, with contributions from Alex Logan and Galina Havin</p>
+				<p>NASA Website, NASA Ames Research Center, Human Systems Integration Division</p>
+				<p><a href="https://colorusage.arc.nasa.gov/luminance_cont.php">https://colorusage.arc.nasa.gov/luminance_cont.php</a></p>
+				
+				<h3>Human factors design standard (HFDS) (2003)</h3>
+				<p>Federal Aviation Administration (FAA)</p>
+				<p>HF-STD-001. Available for download at</p>
+				<p><a href="http://hf.tc.faa.gov/hfds">http://hf.tc.faa.gov/hfds</a>
+
+				<h3>Color Appearance Models</h3>
+				<p>M.D. Fairchild</p>
+				<p>John Wiley and Sons, 3 edition, 2013.</p>
 			</section>
 		</main>
 	</body>

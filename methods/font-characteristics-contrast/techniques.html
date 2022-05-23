@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Method - Test Techniques</title>
+		<link rel="stylesheet" type="text/css" href="apca.css" /> 
+	</head>
+	<body>
+		<header>
+			<h1>Test Techniques</h1>
+		</header>
+		<main>
+			<section id="techniques">
+				<h2>Visual Contrast Testing Techniques with Examples</h2>
+				<p>These are spcecific techniques and best practices to support the tests for visual contrast</p>
+
+			<section id="sampling">
+				<h3>Sampling Colors for Testing</h3>
+				<p>These testing techniques provide guidance on how to determine the RGB color values of the elements to be tested, such as the color of the text and the adjacent background.</p>
+				<h4>Color Sampling Techniques</h4>
+				<p>Use one of the following methods, or an equivalent method that provides an accurate sRGB value (or RGB value in the relevant color space as displayed.)</p>
+				
+				<ol>
+					<li><strong>CALCULATED:</strong> Read the calculated values as determined by a browser, user agent, or automated tool.</li>
+					<ul>
+						<li>For consistency and ease of use, this is the preferred method.</li>
+						<li>Ensure the values are for the sRGB color space. (Other spaces discussed separately).</li>
+						<li>Ensure that colors with alpha channels (transparency) are fully composited, i.e. that the actual final color is sampled, with no remaining transparency.</li>
+						<ul>
+							<li>If the user agent or tool does not present the final color, it must be calculated.</li>
+							<li>REFERENCE: <a href="https://www.w3.org/TR/compositing-1/#simplealphacompositing">Simple alpha compositing</a> W3 CSS guidance regarding calculating colors involving alpha channels.</li>
+						</ul>
+					</ul>
+
+
+					<li><strong>AUDIT CSS:</strong> Auditing the CSS styles in use on the page.</li>
+					<ul>
+						<li>It is important to confirm that a particular style property is actually the active value. </li>
+						<li>For complex style sheets, it is recommended to use the values as calculated by the browser, user agent, or automated tool.</li>
+						<li>For colors with an alpha channel or transparency, calculate the final composited color using the method as described in <a href="https://www.w3.org/TR/compositing-1/#simplealphacompositing">Simple alpha compositing.</a></li>
+					</ul>
+
+
+					<li><strong>EYEDROPPER:</strong> Sample the colors on the rendered page using a software based "digital color meter" eye-dropper type tool, which samples the rendered screen values.</li>
+					<ul>
+						<li>This method is required if testing content in an image, and also has the advantage of taking alpha blending into account without further calculations. Nevertheless, it is recommended to use the values as calculated by the browser, user agent, or automated tool as the preferred method for sampling colors.</li>
+						<li>The eye dropper tool must report the native CSS value for the color space (nominally sRGB). See <a href="#eyedropper">this guide</a> for setting up an eye-dropper color meter tool properly.</li>
+						<li>The eye dropper sample should be a pixel in the middle of a major stroke of the smallest size font to be tested, and with the content at the default size (no zoom or scaling). </li>
+						<li>For small and thin fonts, where the major stroke is inconsistent due to antialiasing, sample at least three to five different letters and average the result.<br>
+						<img width="45%" alt="example of sampling the main stroke of a thin letter" src="./img/Sampleapixelinthemiddleofamajorstrokeinaletter.png"></li>
+					</ul>
+				</ol>
+			</section>
+
+<hr>
+
+			<h2>Tool Setup</h2>
+			<section id="tools">
+				<h3 id="eyedropper">Setup for a Digital Color Meter (Eye Dropper)</h3>
+				<p>In order for a digital color meter or eye dropper tool to provide useful color data, the system color profile and the tool need to be configured correctly. This tutorial is using the standard digital color meter app in MacOS.</p>
+				<ul>
+					<li>The test system should use an sRGB monitor.</li>
+					<li>Set the system color profile to a standard sRGB profile when using the digital color meter.<br>
+						<img width="45%" alt="Set Display to an sRGB profile" src="./img/SetDisplaytoansRGBprofile.png"></li>
+
+					<li>Set the digital color meter to measure sRGB from the pop up menu.<br>
+						<img width="45%" alt="Set Digital Color Meter to display in sRGB" src="./img/SetDigitalColorMetertodisplayinsRGB.png"></li>
+						
+					<li>Under the view menu, set the digital color meter to report the color values as decimal, hex, or percentage, per your working preference, or the needs of the other tools in use.<br>
+						<img width="45%" alt="Choose the display value you are comfortable with" src="./img/Choosethedisplayvalueyouarecomfortablewith.png"></li>
+					<li>Set the size of the sample to one pixel.</li>
+
+			</section>
+
+<hr>
+
+			<section id="conformance">
+			<h2>Understanding Use Cases and Conformance Levels</h2>
+
+				<h3>Text Use Cases: body text, fluent text, Sub-fluent text, etc.</h3>
+
+				<ul>
+				<li id="fluent"><strong>FLUENT</strong></li>
+				<ul>
+					<li><strong>Fluent Readability, Block/Body Text</strong></li>
+					<ul>
+						<li><strong>Defined as:</strong> a block or column of <strong><em>more than two</em></strong> continuous lines of content text that uses a readable font with an x-height of ~19px or <em>less</em>.</li>
+					</ul>
+					
+					
+					<li><strong>Fluent Readability, <em>Primary</em> content</strong> that is <em>not</em> body text</li>
+					<ul>
+						<li><strong>Defined as:</strong> up to two and a half lines of continuous text.</li>
+						<ul>
+							<li>Includes headlines, captions, and images of text, if they <em>contribute to content</em></li>
+							<li><strong><em>primary</em></strong> navigation and primary menus</li>
+							<li>asides, tool-tips, spoilers, &quot;continued&quot; </li>
+							<li>user entered text in forms, fields, etc </li>
+							<li><em>does not include text the user controls or adjusts in size or color</em></li>
+						</ul>
+					</ul>
+
+					<li><strong>Large Fluent</strong> header/title content</li>
+					<ul>
+						<li><strong>Defined as: </strong> fluent subcategory of &quot;large content&quot; such as big, bold headlines, and generally referring to text larger than 36px.</li>
+					</ul>
+				</ul>
+				<li id="subfluent"><strong>SUB FLUENT</strong></li>
+					<ul>
+
+					<li><strong>Soft Readability,</strong> small sub-fluent secondary/ancillary content</li>
+					<ul>
+						<li><strong>Defined as:</strong> non-primary content with relaxed readability needs.</li>
+						<ul>
+							<li>Applies to certain aspects of dataviz (call-outs, de-enhanced aspects of visual hierarchy)</li>
+							<li>Category can include secondary/tertiary nav such as to TOS/EULA</li>
+							<li>May include byline, short duplicative captions, footer matter.</li>
+						</ul>
+					</ul>
+
+
+					<li><strong>Spot Readability,</strong> sub-fluent  &quot;<strong>non</strong>-content&quot;</li>
+					<ul>
+						<li><strong>Defined as:</strong> non-content text of an incidental nature.</li>
+						<ul>
+							<li>This category includes <em>non-informative placeholder text</em>, disabled controls, copyright/trademark/license bugs (but not actual license or legal text blocks)</li>
+						</ul>
+					</ul>
+
+
+					<li><strong>Logo or Branding,</strong> brand related logo, symbol, service mark.
+					<ul>
+						<li>This category relates to specific colors that are required as part of a brand or logotype.</li>
+					</ul>
+
+					<li><strong>Incidental Text in Images</strong> text in images not critical to the understanding, nor specifically contributing to the content.</li>
+				</ul>
+			</ul>
+
+
+				<h3>Conformance Levels: Bronze, Silver, and Gold</h3>
+				<ul>
+					<li>BRONZE: Covers primary content text only.</li>
+					<ul>
+						<li>There is no font lookup table, only a set of general conformance levels.</li>
+						<li>Use-cases for "body text" and "other content text".</li>
+						<li>Spot text: disabled, placeholder, ancillary, decorative text is not covered</li>
+						<li>Logos and incidental text in images are not covered</li>
+						<li>There is no specified minimum font size.</li>
+						<li>There is no requirement to match a reference font weight or size.</li>
+					</ul>
+					<li>SILVER: Covers all text content.</li>
+					<ul>
+						<li>Font weight and size per Lc contrast value and font lookup table.</li>
+						<li>Use-cases for "body text", "fluent text", "large fluent text", "sub-fluent text".</li>
+						<li>Logos are covered, with a contrast requirement reduced by Lc 15.</li>
+						<li>Spot text: disabled, placeholder, ancillary, decorative text are covered as a recommendation (should)</li>
+						<li>The minimum font size for content is 13px, based on an x-height ratio of 0.5 (minimum x-height of 7.5px)</li>
+						<li>Minimum font size for non-content text is 10px.</li>
+						<li>There is no requirement to compare to a reference font weight or size.</li>
+					</ul>
+					<li>GOLD: Covers all text content, enhanced.</li>
+					<ul>
+						<li>Font weight and size per Lc contrast value and font lookup tables per use cases. </li>
+						<li>Use-cases for "body text", "fluent text", "large fluent text", "sub-fluent text",  "spot text" (Disabled, placeholder) and Logos.</li>
+						<li>Ancillary, decorative text are covered with recommendations</li>
+						<li>The minimum font size for content text is 18px, based on an x-height ratio of 0.5 (minimum x-height of 9px).</li>
+						<li>Minimum font size for non-content text is 12px.</li>
+						<li>Fonts used for content text must be compared to a reference font's weight or size, and appropriate offset used for equivalency.</li>
+					</ul>
+
+<hr>
+
+			<h2>Testing Conditions and Environment</h2>
+			<section id="conditions">
+				<h3>Objective Test Baseline Setup</h3>
+				<ul>
+					<li>Color samples are taken using the sRGB color space, the default color space for web content.</li>
+					<li>The monitor used on the testing system is sRGB, and the system profile is set to sRGB</li>
+					<li>Content to be tested is at the initial or default zoom for the given view.</li>
+					<li>Content is using the embedded or page-provided CSS styles</li>
+					<li>No user styles nor user-preference appearance altering extensions active</li>
+					<li>For web based content, user agent shall be a commonly available browser capable of rendering the most recent recommended CSS and HTML standards, or an equivalent testing tool.</li>
+				</ul>
+				<h3>Color Spaces</h3>
+				<p>Because sRGB is the default standard color space for web content, primary tests for conformance should be conducted in sRGB. It is permissible to conduct tests in other color spaces, so long as the primary tests for conformance are conducted in sRGB.</p>
+
+				<h3>Modes</h3>
+				<p>If a site or content is normally only presented in one mode, such as light mode or dark mode, then all testing must be conducted in that default mode, regardless of if it is light or dark mode.</p>
+				<p>If a site or content is available in multiple modes, then testing can be conducted in either light mode or dark mode, so long as the choice of mode is consistent through the group of visual testing. It is preferred to test all modes made available to the user, however, only one mode is required for testing.</p>
+				
+				<h3>Devices</h3>
+				<p>If a site or content is optimized for one particularly type of device, then testing should be conducted with that target device. For instance a site designed for desktop should be tested using a desktop testing environment to test conformance.</p>
+				<p>If a site or content is responsive and therefore differs significantly between desktop and mobile, then the site should be tested in at least two scopes, ideally one of desktop, and one of small mobile. However, a site may specify testing in only one device scope for conformance purposes.</p>
+				
+				<h3>Conditional/Qualified Tests Standard Setup</h3>
+				<p>Because conditional or qualified tests involve a certain amount of subjectivity, it's important to have a standardized environment for conducting any such tests. This is facilitated with a defined standard testing environment, intended to provide a consistent foundation for evaluations that require any degree of subjectivity.</p>
+				<p><em><strong>The standard environmental model shall comprise</strong></em></p>
+				<ul>
+					<li>A desktop sRGB LCD screen that is
+						<ul>
+						<li>A non-retina display in the sRGB colorspace</li>
+						<li>IPS or equivelent technology such that off-axis viewing is not impacted. </li>
+					</ul></li>
+
+					<li>Monitor shall be calibrated using a hardware calibrator to:
+					<ul>
+						<li>Max White (#FFF) Luminance between 160cd/m^2 and 240cd/m^2 </li>
+						<li>Black level (#000) target of less than 0.5 cd/m^2 or less.</li>
+						<li>Preferred gamma target of 2.2.</li>
+						<li>HDR displays are not included in this specification.</li>
+					</ul></li>
+
+					<li>Monitor&#39;s surrounding environmental conditions
+					<ul>
+						<li>Background behind the monitor and within the users field of view should be neutral grey or white, at a luminance that is 20% of the monitor&#39;s maximum white.</li>
+						<li>Ambient light of approximately 200 lux.<ul>
+							<li>The light should not <em>directly</em> shine on the face of the monitor.</li>
+							<li>The light should not shine into the eyes of the user while viewing the monitor.</li>
+						</ul></li>
+					</ul></li>
+
+					<li>Position monitor toward user in a way that minimizes reflections.</li>
+
+					<li>Ambient evaluation proceedure:
+					<ul>
+						<li>Send the sRGB monitor full screen grey at sRGB value #7C7C7C.</li>
+						<li>The average luminance of the area in view around the monitor should be the same as the monitor grey at #7C7C7C.</li>
+						<li>The monitor at #FFFFFF should measure as a luminance five times higher than that measured at #7C7C7C.</li>
+					</ul></li>
+
+					<li>Standard observer positioning and desktop monitor resolution.
+					<ul>
+						<li>Monitor resolution in ppi defines the observers view position.</li>
+						<li>One CSS reference px is 1.278 minutes of arc or 0.0213°</li>
+						<li>To determine the critical reading x-height in px for a given acuity, multiply the lower Snellen number by 0.47.
+						<ul>
+							<li>For instance, for 20/40 vision, multiply 40 * 0.47 = 18.8px critical x-height.</li>
+							<li>For a font like Helvetica with a 0.52 x-height ratio, this is a 36px font.</li>
+						</ul></li>
+						<li>As a quick rule of thumb: <strong> the font Verdana at 16px is approximately the critical size for standard 20/20 vision.</strong></li>
+					</ul></li>
+
+						<li>Observer is positioned based on the monitor resolution.
+						<ul>
+							<li>For a mobile device, the observer is positioned such that the 1px = 1.278&#39; arc-min relationship is maintained.</li>
+							<li>For a 96ppi monitor, the observer shall be 28&quot; away.</li>
+						</ul></li>
+						<li>For desktop, the monitor should have a ppi between 72 and 112 to allow an observer distance between 24&quot; (60cm) and 37&quot; (90cm)</li>
+				</ul>
+
+	<div style="overflow: scroll;">
+		<table class="ppiTable">
+			<tr><th colspan="5">Screen Pitch vs Distance for 1.278 arc-min VA</th></tr>
+			<tr><th colspan="1">Distance<br>to Display</th><th colspan="3">Screen Pitch</th><th colspan="1">Distance<br>to Display</th></tr>
+			<tr><th>inches</th><th>ppi</th><th> </th><th>ppcm</th><th>cm</th></tr>
+			<tr><td>244"</td><td>11</td><td></td><td>4</td><td>621cm</td></tr>
+			<tr><td>122"</td><td>22</td><td></td><td>9</td><td>310cm</td></tr>
+			<tr class="keyValue"><td>96"</td><td>28</td><td>HDTV</td><td>11</td><td>244cm</td></tr>
+			<tr><td>37"</td><td>72</td><td></td><td>28</td><td>95cm</td></tr>
+			<tr class="keyValue"><td>28"</td><td>96</td><td>DESKTOP</td><td>38</td><td>71cm</td></tr>
+			<tr><td>24"</td><td>112</td><td></td><td>44</td><td>61cm</td></tr>
+			<tr class="keyValue"><td>21"</td><td>128</td><td>LAPTOP</td><td>50</td><td>54cm</td></tr>
+			<tr><td>18"</td><td>150</td><td></td><td>59</td><td>45.5cm</td></tr>
+			<tr><td>17"</td><td>160</td><td></td><td>64</td><td>42cm</td></tr>
+			<tr class="keyValue"><td>16"</td><td>170</td><td>TABLET</td><td>67</td><td>40cm</td></tr>
+			<tr><td>15"</td><td>180</td><td></td><td>71</td><td>38cm</td></tr>
+			<tr><td>14"</td><td>192</td><td></td><td>76</td><td>35.6cm</td></tr>
+			<tr><td>13"</td><td>204</td><td></td><td>80</td><td>33.5cm</td></tr>
+			<tr class="keyValue"><td>12"</td><td>224</td><td>PHONE</td><td>88</td><td>30cm</td></tr>
+			<tr><td>10"</td><td>268</td><td></td><td>106</td><td>25.5cm</td></tr>
+			<tr><td>8"</td><td>336</td><td></td><td>132</td><td>20.3cm</td></tr>
+			<tr><td colspan="5">Screen Pixel Density @ various distances</td></tr>
+			<tr><td colspan="5">1 pixel = 1 CSS ref px = 1.278 arc-min</td></tr>
+			<tr><td colspan="5">Some Values Rounded</td></tr>
+		</table>
+	</div>
+			</section>
+
+<hr>
+
+			</section>
+		</main>
+	</body>
+</html>
