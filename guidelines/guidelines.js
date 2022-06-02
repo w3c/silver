@@ -168,7 +168,9 @@ function addStatusMarkers() {
 function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
-		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
+		var dfn = document.querySelector(node.href.substring(node.href.indexOf('#')));
+		if (dfn.parentNode.name == "dt") node.title = dfn.parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
+		else if (dfn.title) node.title=dfn.title;
 	});	
 }
 
@@ -202,9 +204,9 @@ function adjustNormativity() {
 
 function adjustDfnData() {
 	document.querySelectorAll('dfn').forEach(function(node){
-		var datalt = node.getAttributeNode("data-lt");
 		var curVal = node.getAttribute("data-lt");
-		node.setAttribute("data-lt", node.textContent + (curVal == "" ? "|" : ""));
+		if (curVal == null) curVal = "";
+		node.setAttribute("data-lt", node.textContent + (curVal == "" ? "" : "|") + curVal);
 	});
 }
 
