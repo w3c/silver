@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 32.1.2">
+<meta name="generator" content="ReSpec 32.1.8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -16,7 +16,7 @@ input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
 </style>
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
 .dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
 .dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
@@ -167,15 +167,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "lint": false,
-  "publishISODate": "2022-04-08T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 08 April 2022"
+  "publishISODate": "2022-06-02T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 02 June 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
   <body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Explainer for W3C Accessibility Guidelines (WCAG) 3.0</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2022-04-08">08 April 2022</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2022-06-02">02 June 2022</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -321,7 +321,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 	<section id="goals"><div class="header-wrapper"><h2 id="x3-goals"><bdi class="secno">3. </bdi>Goals</h2><a class="self-link" href="#goals" aria-label="Permalink for Section 3."></a></div>
 	
-	<p>The goal of WCAG 3.0 is to provide information that can be used to improve the accessibility of products on a variety of platforms. WCAG 3.0 uses a model that allows it to address more disability needs than WCAG 2.X, as well as address publishing requirements and emerging technologies such as web XR (augmented, virtual and mixed reality) and voice input. It will also provide non-<a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-normative">normative</a> (informative) information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. The WCAG 3.0 model is designed to support better coverage across disabilities and be easier to maintain, so that the new model will be more enduring over time as technologies evolve.</p>
+	<p>The goal of WCAG 3.0 is to provide information that can be used to improve the accessibility of products on a variety of platforms. WCAG 3.0 uses a model that allows it to address more disability needs than WCAG 2.X, as well as address publishing requirements and emerging technologies such as web XR (augmented, virtual and mixed reality) and voice input. It will also provide non-<a class="respec-offending-element" title="No matching definition found." id="respec-offender-no-matching-definition-found">normative</a> (informative) information about the ways web technologies need to work with authoring tools, user agents, and assistive technologies. The WCAG 3.0 model is designed to support better coverage across disabilities and be easier to maintain, so that the new model will be more enduring over time as technologies evolve.</p>
 		<section id="inclusionGoals"><div class="header-wrapper"><h3 id="x3-1-goals-for-inclusion"><bdi class="secno">3.1 </bdi>Goals for Inclusion</h3><a class="self-link" href="#inclusionGoals" aria-label="Permalink for Section 3.1"></a></div>
 		
 		<p>The creation process for the guidelines should:</p>
@@ -408,9 +408,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</p><section id="critical-errors"><div class="header-wrapper"><h5 id="x5-1-2-1-critical-errors"><bdi class="secno">5.1.2.1 </bdi>Critical errors</h5><a class="self-link" href="#critical-errors" aria-label="Permalink for Section 5.1.2.1"></a></div>
 					
 					<div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="6"><span>Editor's note</span></div><p class="">Critical errors section is being revised.  The following describes the proposal in the First Public Working Draft. This will probably change in future Working Drafts.  </p></div>
-						<p><a href="../guidelines/#outcomes">Outcomes</a> include the related <a class="respec-offending-element" title="No matching definition found." id="respec-offender-no-matching-definition-found">critical errors</a> that can occur and how to identify them. Not all outcomes have critical errors.  Any critical errors will result in the lowest score for the outcome.</p>
+						<p><a href="../guidelines/#outcomes">Outcomes</a> include the related <a class="respec-offending-element" title="No matching definition found." id="respec-offender-no-matching-definition-found-0">critical errors</a> that can occur and how to identify them. Not all outcomes have critical errors.  Any critical errors will result in the lowest score for the outcome.</p>
 					
-					<p>Evaluating <a class="respec-offending-element" title="No matching definition found." id="respec-offender-no-matching-definition-found-0">processes</a> requires counting critical errors that occur within the process and associated <a data-type="element" href="https://www.w3.org/TR/SVG/linking.html#elementdef-view">views</a>. Critical errors are:</p>
+					<p>Evaluating <a class="respec-offending-element" title="No matching definition found." id="respec-offender-no-matching-definition-found-1">processes</a> requires counting critical errors that occur within the process and associated <a data-type="element" href="https://www.w3.org/TR/SVG/linking.html#elementdef-view">views</a>. Critical errors are:</p>
 					<ul>
 						<li>Errors located anywhere within the view that stop a user from being able to use that view (examples: flashing, keyboard trap, audio with no pause);</li>
 						<li>Errors that when located within a <a data-type="dfn" href="https://www.w3.org/TR/appmanifest/#dfn-processing-a-manifest">process</a> stop a user from completing a process (example: submit button not in tab order); and</li>
@@ -433,7 +433,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					</section>
 					<section id="functional-needs"><div class="header-wrapper"><h3 id="x5-2-functional-needs"><bdi class="secno">5.2 </bdi>Functional needs</h3><a class="self-link" href="#functional-needs" aria-label="Permalink for Section 5.2"></a></div>
 				
-				<p>The development of WCAG 3 guidelines starts with <a class="respec-offending-element" title="No matching definition found." id="respec-offender-no-matching-definition-found-1">functional needs</a>. A functional need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional needs are applied to specific topics (for example: contrast, forms, readability, and more) to identify the barriers experienced by people with disabilities.&nbsp;The barriers in these topics inform the <a href="../guidelines/#outcomes">outcomes</a>, which state the conditions to test whether the functional needs have been met. Functional needs are documented in the how-tos, supplementary material accompanying the guidelines.</p>
+				<p>The development of WCAG 3 guidelines starts with <a class="respec-offending-element" title="No matching definition found." id="respec-offender-no-matching-definition-found-2">functional needs</a>. A functional need is a statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context. Functional needs are applied to specific topics (for example: contrast, forms, readability, and more) to identify the barriers experienced by people with disabilities.&nbsp;The barriers in these topics inform the <a href="../guidelines/#outcomes">outcomes</a>, which state the conditions to test whether the functional needs have been met. Functional needs are documented in the how-tos, supplementary material accompanying the guidelines.</p>
 				<div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="4"><span>Editor's note</span></div><p class="">The work of cataloging functional needs is still in process and will continue after the First Public Working Draft.&nbsp; Those interested can see more information in the draft <a href="https://www.w3.org/WAI/GL/WCAG3/2020/functional-needs/">Functional Needs</a>.</p></div>
 			</section>
 			<section id="functional-categories"><div class="header-wrapper"><h3 id="x5-3-functional-categories"><bdi class="secno">5.3 </bdi>Functional categories</h3><a class="self-link" href="#functional-categories" aria-label="Permalink for Section 5.3"></a></div>
@@ -689,8 +689,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <a href="https://www.w3.org/TR/SVG/"><cite>Scalable Vector Graphics (SVG) 1.0 Specification</cite></a>. Jon Ferraiolo.  W3C. 4 September 2001. W3C Recommendation. URL: <a href="https://www.w3.org/TR/SVG/">https://www.w3.org/TR/SVG/</a>
     </dd><dt id="bib-uaag20">[UAAG20]</dt><dd>
       <a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a>
-    </dd><dt id="bib-wai-aria">[wai-aria]</dt><dd>
-      <a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al.  W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a>
     </dd><dt id="bib-wcag22">[WCAG22]</dt><dd>
       <a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Charles Adams; Alastair Campbell; Rachael Bradley Montgomery; Michael Cooper; Andrew Kirkpatrick.  W3C. 21 May 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a>
     </dd></dl>

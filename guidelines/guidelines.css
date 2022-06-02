@@ -58,7 +58,7 @@ summary::before {
 .method-link::before {
 	content: url(img/method.svg);
 }
-a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
+a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:focus {
 	cursor: help;
 }
 .outcome {
