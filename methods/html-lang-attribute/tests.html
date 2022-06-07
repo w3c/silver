@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Method - Tests</title>
+		<title>HTML lang attribute indicates the language of text Method - Tests</title>
 	</head>
 	<body>
 		<header>
@@ -10,23 +10,28 @@
 		<main>
 			<section id="get_started">
 				<h2>Get Started</h2>
-				<p>Tips or link to information for beginners in testing</p>
+				<p>To get started with testing language attributes in a web page, you'll need to inspect the code in your browser. Once the page has loaded, open up your browser's developer tools and look for the <code class="el">&lt;html&gt;</code> element near the top of code&#8212;it should be on the second line, just after the <code class="el">&lt;!doctype html&gt;</code> tag. Once you've found that, you need to check that it has a <code class="att">lang</code> attribute that correctly indicates the main language of the page. For example, if the main language of the page is French, you would look for <code class="el">&lt;html lang="fr"&gt;</code>.</p>
+
+				<p>Once you've checked that the page itself is marked up correctly, you need to read the page to look for blocks of text that are in a different language. If you find a block of content in another language, use your browser's developer tools to inspect the code to check that there is a <code class="att">lang</code> attribute that correctly indicates the language that the block of text is written in. Complete this check for each block of text that's in a different human language from that of the main page.</p>
 			</section>
 			<section id="summary">
 				<h2>Summary</h2>
-				<p>[overview of the test]</p>
+				<p>For each block of content that's in a different human language than that of its parent, ensure there is <code class="att">lang</code> attribute that correctly matches the content in the block.</p>
 			</section>
 			<section id="applicability">
 				<h2>Applicability</h2>
-				<p>This outcome applies to any [element names] element that is [condition] and for which one of the following is true:
-				<dl>
-					<dt>{excluded, ignored, exception}</dt>
-					<dd>[element]
-				</dl>
+				<p>This outcome applies to any <a href="#">block of text</a> that is <a href="#">included in the accessibility tree</a>.</p>
 			</section>
 			<section id="expectations">
 				<h2>Expectations</h2>
-				<p>[detail of the expectation]</p>
+				<dl>
+					<dt>Expectation 1:</dt>
+					<dd>For each test target, there is an <a href="#">ancestor</a> with a <code class="att">lang</code> attribute.</dd>
+					<dt>Expectation 2:</dt>
+					<dd>For each test target, the ancestor from expectation 1 has a <a href="#"><code class="att">lang</code> attribute value</a> that is a valid language tag.</dd>
+					<dt>Expectation 3:</dt>
+					<dd>For each test target, the language tag from expectation 2 matches that target's <a href="#">default language</a>.</dd>
+				</dl>
 			</section>
 		</main>
 	</body>

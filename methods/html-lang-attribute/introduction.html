@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Method - Introduction</title>
+		<title>HTML lang attribute indicates the language of text Method - Introduction</title>
 	</head>
 	<body>
 		<header>
@@ -10,37 +10,44 @@
 		<main>
 			<section id="outcome">
 				<h2>Outcome</h2>
-				<p>This method supports the outcome <a href="" class="outcome-link">{Outcome short name}</a>.</p>
+				<p>This method supports the outcome <a href="#" class="outcome-link">Changes Of Natural Language</a>.</p>
 			</section>
 			<section id="platform">
 				<h2>Platform</h2>
 				<ul>
-					<li>{list of platform(s)}</li>
+					<li>All platforms that support HTML.</li>
 				</ul>
 			</section>
 			<section id="technology">
 				<h2>Technology</h2>
 				<ul>
-					<li>{List of technology(ies)}</li>
+					<li>HTML</li>
 				</ul>
 			</section>
 			<section id="input_aspects">
 				<h2>Input aspects for testing</h2>
 				<ul>
-					<li>[technical sources for input, such as DOM tree, Accessibility tree and CSS styling]</li>
+					<li><abbr title="Cascading Style Sheets">CSS</abbr> styling</li>
+					<li><abbr title="Document Object Model">DOM</abbr> tree</li>
 				</ul>
 			</section>
 			<section id="summary">
 				<h2>Summary</h2>
-				<p>{Summary of how to apply this method}</p>
+				<p>When authors specify the correct natural language of content, user agents, including assistive technologies, can present text more accurately. Screen readers can load the correct pronunciation rules and braille tables for languages.</p>
 			</section>
 			<section id="user-need">
 				<h2>How it solves user need</h2>
-				<p>{Description of how method relates to the outcome}</p>
+				<p>Specifying both the natural language of the view's main content as well as any changes in language of blocks of content in that view can help:</p>
+				<ul>
+					<li>People who use screen readers or other technologies that convert text into synthetic speech;</li>
+					<li>People who use braille that need the correct tables to be applied to text; and</li>
+					<li>People with certain cognitive, language, and learning disabilities who use text-to-speech software.</li>
+				</ul>
+
 			</section>
 			<section id="when-to-use">
-				<h2>When to use</h2>
-				<p>{when the method should or should not be used}</p>
+				<h2>When to use and what to do</h2>
+				<p>Ensure that the HTML element has a <code class="att">lang</code> attribute. The <code class="att">lang</code> attribute value must use a valid language tag, for example <code class="att">lang="en"</code> indicates the language as English. The attribute value must match the natural language of the page <code class="el">title</code> element. Changes in language must be indicated using the <code class="att">lang</code> attribute on the closest parent element.</p>
 			</section>
 		</main>
 	</body>
