@@ -78,6 +78,9 @@ a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:foc
 	font-size: 100%;
 	color: #005A9C;
 }
+.guideline-text {
+	font-size: larger;
+}
 .guideline h3, .outcome h4 {
 	width: 100%;
 }

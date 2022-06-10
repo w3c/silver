@@ -42,9 +42,8 @@ function linkHowTo() {
 		//this is brittle, depends on how respec does the heading
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
-		var el = document.createElement("span");
-		el.innerHTML = " <a href=\"" + howtoBaseURI + pathFrag + "/\" class=\"howto-link\">" + heading + " <span>how-to</span></a>";
-		node.querySelector("p.guideline-text").append(el);
+		var htm = "<p><a href=\"" + howtoBaseURI + pathFrag + "/\" class=\"howto-link\">Learn how to meet guideline \"" + heading + "\"</a></p>";
+		node.querySelector("p.guideline-text").insertAdjacentHTML("afterend", htm);
 	})
 }
 
