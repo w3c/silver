@@ -1,5 +1,3 @@
-
-
 /* Styles for bibliography */
 
 #bibliography h3,
@@ -12,7 +10,7 @@
 	}
 
 
-/* Optional Styles for APCA Tables */
+/* Styles for APCA Tables */
 
 .APCAtable td:first-child {font-weight: bold;}
 
