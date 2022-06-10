@@ -75,6 +75,7 @@ function addOutcomeMarkers() {
 	document.querySelectorAll('.outcome').forEach(function(node){
 		var parentHeader = findHeading(node.parentElement);
 		var outcomeHeader = findHeading(node);
+		outcomeHeader.innerHTML = "<span class=\"inserted\">Outcome: </span>" + outcomeHeader.innerHTML; 
 		var insertion = document.createElement("span");
 		insertion.classList.add("inserted");
 		insertion.innerHTML = " (outcome for <q>" + textNoDescendant(parentHeader) + "</q>)";
