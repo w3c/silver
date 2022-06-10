@@ -160,7 +160,7 @@ function addStatusMarkers() {
 
 			// Insert div after the first heading:
 			var firstHeading = section.querySelector('h1,h2,h3,h4,h5,h6');
-			firstHeading.parentNode.insertBefore(div, firstHeading.nextSibling);
+			firstHeading.parentNode.parentNode.insertBefore(div, firstHeading.parentNode);
 		})
 	});
 }
@@ -332,7 +332,6 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
-	addStatusMarkers();
 	//alternateFloats();
 }
 
@@ -348,4 +347,5 @@ function postRespec() {
 	removeImgSize();
 	outputJson();
 	moveStatusFilterToToc();
+	addStatusMarkers();
 }
