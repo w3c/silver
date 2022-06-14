@@ -245,6 +245,14 @@ function removeImgSize() {
 	});
 }
 
+function removeGLNum() {
+	var tocEl = document.querySelector(".tocline > a[href=\"#guidelines\"]").parentNode.querySelector("ol");
+	tocEl.querySelectorAll("bdi.secno").forEach(function(node){node.remove();});
+
+	var sectionEl = document.querySelector("#guidelines");
+	sectionEl.querySelectorAll("bdi.secno").forEach(function(node){node.remove();});
+}
+
 function outputJson() {
 	params = new URLSearchParams(window.location.search);
 	if (params.get("json") != null) {
@@ -348,4 +356,5 @@ function postRespec() {
 	outputJson();
 	moveStatusFilterToToc();
 	addStatusMarkers();
+	removeGLNum();
 }
