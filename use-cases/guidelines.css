@@ -1,0 +1,150 @@
+details {
+	margin: 3em;
+	padding: 1em;
+	color: #404040;
+	border: medium solid #d9d9d9;
+	background-color: #F3F3F3;
+}
+summary::before {
+	display: inline-block;
+	margin-top: -1em;
+	width: 3em;
+	position: relative;
+	left: -4.5em;
+	float: left;
+	margin-right: -3.5em;
+}
+details:focus summary::before, details:hover summary::before, .guideline:focus h3::before, .guideline:hover h3::before, .outcome:focus h4::before, .outcome:hover h4::before {
+	background-color: #ffff99 ;
+	box-shadow: 0 0 1em .25em #ffff99;
+}
+.summary summary::before {
+	content: url(img/summary.svg);
+}
+.methods summary::before {
+	content: url(img/method.svg);
+}
+.rating summary::before {
+	content: url(img/rating.svg);
+}
+.errors summary::before {
+	content: url(img/error.svg);
+}
+.categories summary::before {
+	content: url(img/category.svg);
+}
+.summaryEnd {
+	text-align: center;
+	font-weight: bold;
+}
+.howto-link, .outcome-link {
+	font-style: italic;
+}
+.howto-link::before, .outcome-link::before, .method-link::before {
+	display: inline-block;
+	width: 2ex;
+	margin-right: .25em;
+	vertical-align: text-top;
+}
+.howto-link::before {
+	content: url(img/how-to.svg);
+}
+.outcome-link::before {
+	content: url(img/outcome.svg);
+}
+.method-link::before {
+	content: url(img/method.svg);
+}
+a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
+	cursor: help;
+}
+.outcome {
+	margin-left: 2rem;
+}
+.outcome h4 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	color: #005A9C;
+}
+.guideline h3::before, .outcome h4::before {
+	display: inline-block;
+	width: 2em;
+	margin-right: .5em;
+	vertical-align: text-top;
+}
+.guideline h3::before {
+	content: url(img/guideline.svg);
+}
+.outcome h4::before {
+	content: url(img/outcome.svg);
+}
+.outcome h4 {
+	margin-top: 1rem;
+	margin-left: -2rem;
+}
+.methods h5, .errors h5, .rating h5 {
+	font-size: 100%;
+	color: #005A9C;
+}
+.rating-table, .rating-table th, .rating-table td {
+	border: 1px solid black;
+	vertical-align: top;
+	border-collapse: collapse;
+	padding: 5px;
+}
+.rating-table th[scope=row] {
+	white-space: nowrap;
+}
+caption {
+	font-style: normal !important;
+	font-weight: bold;
+	font-size: 100% !important;
+}
+.figure-float {
+	float: right;
+	margin-left: 2em;
+	margin-right: 0;
+	margin-top: 0;
+}
+.figure-float-odd {
+	float: right;
+	margin-left: 2em;
+	margin-right: 0;
+}
+.figure-float-even {
+	float: left;
+	margin-right: 2em;
+	margin-left: 0;
+}
+.figure-full {
+	display: block;
+	margin: auto;
+}
+.screenshot {
+	width: 400px;
+}
+.note {
+	overflow: visible !important;
+}
+.marker {
+	position: relative;
+}
+.marker > a.self-link{
+	border: none;
+	color: inherit;
+	font-size: 83%;
+	height: 2em;
+	left: -3em;
+	opacity: .5;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	top: 0;
+	transition: opacity .2s;
+	width: 2em;
+}
+.marker > a.self-link::before {
+	content: "§";
+	display: block;
+}
