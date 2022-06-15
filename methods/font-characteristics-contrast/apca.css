@@ -1,22 +1,61 @@
-/* Optional Styles for APCA Lookup Table */
+/* Styles for bibliography */
+
+#bibliography h3,
+#bibliography h4,
+#bibliography p {
+	margin: 0.15em 1em;
+	}
+#bibliography p ~ h3 {
+	margin: 1em 1em 0.15em;
+	}
+
+
+/* Styles for APCA Tables */
 
 .APCAtable td:first-child {font-weight: bold;}
 
-.APCAtable {
-	text-align: center;
-}
+.APCAtable, .ppiTable {text-align: center; }
+
+.APCAtable .ptText {font-size: 0.85em; font-style: italic;}
+.APCAtable .ptText::after {content: 'pt'; font-size: 0.75em;}
+.APCAtable .pxText {font-size: 1.05em; font-weight: bold;}
+.APCAtable .pxText::after {content: 'px';font-size: 0.75em;}
+
+.APCAtable.sortContrast .pxText {font-size: 1em; font-weight: normal;}
+.APCAtable.sortContrast .pxText.fraction {font-size: 0.9em; font-weight: normal; font-style:italic;}
+
+.APCAtable .LcValue {
+  font-size: 1.2em;
+  text-align: left;
+  }
+  
 .APCAtable .underWeight {
-	font-size: 1.5em;
+	font-size: 1.35em;
 	line-height: 0.7;
 	color: #c0272d;
-	/* color: var(--faded-red); */
+	background-color: #fff4e8;
 }
-.underWeightSpan {
-	color: #c0272d;
-	/* color: var(--faded-red); */
+.APCAtable .spotWeight {
+	font-size: 0.85em;
+	line-height: 0.7;
+	letter-spacing: -0.2em;
+	color: #a000f0;
+	background-color: #f4eeff;
 }
-.APCAtable .keyValue {
+  .spotSpan {
+    color: #a000f0;
+  }
+  .underWeightSpan {
+    color: #c0272d;
+    /* color: var(--faded-red); */
+  }
+.APCAtable .keyValue, .ppiTable .keyValue {
 	font-weight: bold;
 	background-color: #d0e1f1;
+	/* background-color: var(--cloudy-subtle); */
+}
+.APCAtable .keyValue60 {
+	font-weight: bold;
+	background-color: #c0e1c1;
 	/* background-color: var(--cloudy-subtle); */
 }
