@@ -32,11 +32,11 @@
               <li>Methods</li>
               <li>Functional categories</li>
           </ul>
-        <p>These parts and sections are inter-related and are continually being refined and updated as more sections are developed.  Each publication of WCAG 3 will include updates to some, but not necessarily every part and section. This process will facilitate quarterly updates which provides opportunities for public review and comment throughout the evolution of the guidelines.  As a result, the document is a work-in-progress. Content will evolve and there may be changes to layout and style that are not yet reflected in all parts of the present release and will be reflected in future releases.  The parts and sections updated in this release are:</p>
-          <ul><li>First draft of the WCAG3 Explainer which takes explanatory material out of WCAG3 to improve usability.</li>
-              <li>New conformance section on user generated content and the glossary definition of user generated content.
+        <p>These parts and sections are inter-related and are continually being refined and updated as more sections are developed. Content is in various states of maturity. The status is marked at the top of each section (see 1.2 Section status levels). Each publication of WCAG 3 will include updates to some, but not necessarily every part and section. This process will facilitate quarterly updates, which provide opportunities for public review and comment throughout the evolution of the guidelines.  As a result, the document is a work in progress. Content will evolve and there may be changes to layout and style that are not yet reflected in all parts of the present release and will be reflected in future releases.  The parts and sections updated in this release are:</p>
+          <ul><li>First draft of the WCAG3 Explainer, which takes explanatory material out of WCAG3 to improve usability.</li>
+              <li>New conformance section on user-generated content and the glossary definition of user-generated content.
               </li>
-              <li>A new proposal revising the Methods template to address comments from the FPWD.  This proposal was done in partnership with the ACT task force. </li>
+              <li>A new proposal revising the Methods template to address comments from the First Public Working Draft (FPWD). This proposal was done in partnership with the ACT task force. </li>
           </ul>
       </div>
 			<details class="summary">
@@ -162,55 +162,8 @@
 							<li>Cognitive &amp; Sensory Intersections </li>
 						</ul>
 					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>Any image of text without an appropriate text alternative needed to complete a process.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-
-						<table class="rating-table">
-							<caption>Rating Scale</caption>
-						<thead><tr><th scope="col">Rating</th><th scope="col">Criteria</th></tr></thead>
-						<tbody><tr>
-							<th scope="row">Rating 0</th>
-							<td>Less than 60% of all images have appropriate text alternatives OR there is a <a>critical error</a> in the <a>process</a></td>
-						</tr>
-						<tr>
-							<th scope="row">Rating 1</th>
-							<td>60% - 69% of all images have appropriate text alternatives AND no <a>critical errors</a> in the <a>process</a></td>
-						</tr>
-						<tr>
-							<th scope="row">Rating 2</th>
-							<td>70%-79% of all images have appropriate text alternatives AND no <a>critical errors</a> in the <a>process</a></td>
-						</tr>
-						<tr>
-							<th scope="row">Rating 3</th>
-							<td>80%-94% of all images have appropriate text alternatives AND no <a>critical errors</a> in the <a>process</a></td>
-						</tr>
-						<tr>
-							<th scope="row">Rating 4</th>
-							<td>95% to 100% of all images have appropriate text alternatives AND no <a>critical errors</a> in the <a>process</a></td>
-						</tr>
-						</tbody></table>
-					</details>
 						<div class="ednote">
 						 <p>We selected the Text Alternatives guideline to illustrate how WCAG 2.2 success criteria can be moved to WCAG 3.0 with minimal changes. Most of the material was directly copied from W3C sources such as WCAG 2.1, Web Accessibility Tutorials, and HTML 5.3 examples.</p>
-
-						 <p>There are subtleties to the scoring of the methods that should be noted in this guideline. We have included four different methods for different types of images in HTML:</p>
-								<ul>
-								<li>functional images;</li>
-								<li>informative images;</li> 
-								<li>images of text; and</li>
-								<li>decorative images. </li>
-								</ul>
-						  <p>The scoring is set up to work across all types of images to make it easier for automated tools. The automated tool does not need to know the type of image and can give you a score of the number of images and the number of images passed. The tester reviewing the path that a user would use to accomplish a task can identify whether the lack of a text alternative is a critical error that would stop a user from completing a task. This allows an automated tool to do the <q>heavy lifting</q> for identifying all the text alternatives while still allowing a knowledgeable tester to identify and evaluate the images that are necessary to complete a task. </p>
-
-						  <p>This guideline also illustrates an example of critical errors along a path. Organizations with large numbers of images often have a missing text alternative on an image as a bug. They need to know when that missing text alternative is critical to be fixed, and when it is a lower priority. This critical error example shows how an image without alternative text that is crucial for completing the task gives a rating of zero. An image without alternative text that is not crucial, such as an image in the footer, does not block the organization from receiving the score the rest of the images deserve. This makes it possible for very large web sites or apps to be able to conform even if they have a low number of bugs without losing the critical needs of people with disabilities. </p>
-
-						  <p>We are interested in your feedback on this approach to testing and scoring. Does this approach help large organizations conform even if their site is not 100% perfect? Do you think that organizations will interpret that they only need 95% of text alternatives for images and then stop adding alternative text?  Are the bands of numbers for the different ratings correct?  Do people with disabilities in particular feel that this approach will meet their needs? </p>  
 
 						 <p>For this First Public Working Draft, we included HTML methods. This will be expanded in future drafts. We have also included a method, Author Control of Text Alternatives (ATAG),  that demonstrates how requirements from the Authoring Tool Accessibility Guidelines (ATAG) 2.0 can be included as methods. </p>
 
@@ -240,51 +193,6 @@
 							<li>Cognitive &amp; Sensory Intersections </li>
 							<li>Independence </li>
 						</ul>
-					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>None.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-
-						<table class="rating-table">
-							<caption>Rating Scale</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Not Applicable</th>
-									<td>If this outcome does not apply to the technology or content being scored, do not score it.</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>Average score below 1</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>Not used in this outcome</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>Average score of 1-1.6 rounded to one decimal place (significant figure)</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>Not used in this outcome</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>Average score of 1.7 or above rounded to one decimal place (significant figure)</td>
-								</tr>
-							</tbody>
-						</table>
 					</details>
 					<div class="ednote">
 					<p>We selected Use Clear Words to show that the new WCAG3 structure can include accessibility guidance that does not fit into the WCAG 2.x structure.  In the research phase of this project, we identified user needs from the Cognitive Accessibility Task Force and the Low Vision Accessibility Task Force that could not be addressed by a true/false success criterion in WCAG 2.1.  We wanted to select one of those user needs and include it in the first draft of WCAG3 to show that more complex user needs can be included and still be testable and scored.   </p>
@@ -324,47 +232,6 @@
 							<li>Cognitive &amp; Sensory Intersections </li>
 						</ul>
 					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>Any video without captioning that is needed to complete a process.<br /> For example, an education site with a video that a student will be tested on or a shopping experience of previewing movies. If they do not have captioning (closed or open captioning), they fail.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-					
-						<table class="rating-table">
-							<caption>Rating Scale</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>A critical error or an average score 0-0.7 rounded to one decimal place (significant figure)</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>Not applicable</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>A critical error or an average score 0.8-1.5 rounded to one decimal place (significant figure)</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>Not applicable</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>A critical error or an average score 1.6 - 2 rounded to one decimal place (significant figure)</td>
-								</tr>
-							</tbody>
-						</table>
-					</details>
 				</section>
 				<section class="outcome" data-status="exploratory">
 					<h4>Conveys information about the sound</h4>
@@ -379,50 +246,6 @@
 							<li>Cognitive &amp; Sensory Intersections </li>
 						</ul>
 					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>None.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-					<ul>
-						<li>Is meta-data directionality essential to this experience?</li>
-						<li>Can a user orientate themselves to the sound with/without any additional interface?</li>
-					</ul>
-						<table class="rating-table">
-							<caption>Rating Scale</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>No meta-data</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>Sound visually indicates the direction of origin in 2D space</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>Not applicable</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>Meta-data includes the location the sound originates in 3D space</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>Meta-data includes the location the sound originates, Meta-data includes the direction of the sound.</td>
-								</tr>
-							</tbody>
-						</table>
-					</details>
 					<div class="ednote">
 						<p>This guideline demonstrates how the WCAG3 structure can be used with emerging technologies such as virtual reality, augmented reality and other immersive web technologies (XR). Research in this area is ongoing and we expect to complete more details in future drafts. </p>
 
@@ -430,11 +253,7 @@
 
 						<p>Because this guideline was included to demonstrate emerging technology, there is little guidance included on traditional captions. Future drafts will also include more traditional caption guidance. </p>
 
-						<p>We are looking for feedback on the scoring of captions. Media that is essential to accomplishing the task that does not have captions is a critical error and automatically fails (a 0 rating).  Examples include educational videos, entertainment site previews, or directions for installing a product.  Other videos without captions that are not essential to the task such as advertising and promotional videos that are not essential to shopping experience are not automatically failed, but the cumulative lack of captioning reduces the score.  We want feedback on this approach. </p>
-
-						<p>We want public feedback about whether Open Captions (burned in captions) should be considered as equivalent to Closed Captions.  Closed captions are text that can be customized to meet user needs, for example, a hard of hearing person with low vision (like a lot of aging people). Open captions are burned in and cannot be customized. They can't be adapted to other languages. If closed captions are added, then they are overlaid on the Open Captions and hard to read. If we receive sufficient feedback to leave captions as they are today (both closed or open are equally acceptable), then we will use a simple scoring rating. If we decide to not accept open captions as equivalent to closed captions, then we will give more points to closed captions than open. </p>
-
-						<p>Note that the advanced XR outcomes and metadata do not have critical errors.  This is a way that best practices can be included so that they are not punitive, but could give extra points that an organization who implements them could use to potentially raise their score.  We are interested in your feedback about this approach. </p>
+						<p>We want public feedback about whether open captions (burned in captions) should be considered as equivalent to closed captions.  Closed captions are formed from text, which can be customized to meet user needs. For example, the text has the potential be repositioned, resized and presented in different color schemes. Open captions are burned in representations of text. As such, the text of open captions cannot be customized or adapted to other languages. Existing open captions can also conflict visually with any closed captions.</p>
 					</div>
 				</section>
 				
@@ -466,47 +285,6 @@
 							<li>Cognitive &amp; Sensory Intersections </li>
 						</ul>
 					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>One or more headings necessary to locate the content needed to complete a process are missing.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-						
-						<table class="rating-table">
-							<caption>Rating Scale</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>25% or less of expected headings are present and describe the content contained in the section OR there is a <a>critical error</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>26-50% or less of expected headings are present and describe the content contained in the section  AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>51-80% or less of expected headings are present and describe the content contained in the section  AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>81-95% or less of expected headings are present and describe the content contained in the section   AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>96-100% or less of expected headings are present and describe the content contained in the section  AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</details>
 				</section>
 				<section class="outcome" data-status="exploratory">
 					<h4>Uses visually distinct headings</h4>
@@ -523,46 +301,6 @@
 							<li>Cognitive &amp; Sensory Intersections </li>
 						</ul>
 					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>One or more headings necessary to locate the content needed to complete a process are not visually distinct.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-						<table class="rating-table">
-							<caption>Rating Scale</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>25% or less of headings are visually distinct OR there is a <a>critical error</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>26-50% of headings are visually distinct  AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>51-75% of headings are visually distinct  AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>76-95% of headings are visually distinct  AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>96-100% of headings are visually distinct  AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</details>
 				</section>
 				<section class="outcome" data-status="exploratory">
 					<h4>Conveys hierarchy with semantic structure</h4>
@@ -578,55 +316,15 @@
 							<li>Cognitive &amp; Sensory Intersections </li>
 						</ul>
 					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>One or more headings necessary to locate the content needed to complete a process are not coded as headings.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-						<table class="rating-table">
-							<caption>Rating Scale</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>25% or less are correctly semantically coded (including level) OR there is a <a>critical error</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>26-50% or less of the visual headings are correctly semantically coded (including level) AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>51-80% or less of the visual headings are correctly semantically coded (including level) AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>81-95% or less of the visual headings are correctly semantically coded (including level) AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>96-100% or less of the visual headings are correctly semantically coded (including level) AND no <a>critical errors</a> in the <a>process</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</details>
 				</section>
 				<div class="ednote">
 					<p>We included the structured content guideline as an example of an “easy” guideline that was well understood and addressed diverse disability needs. While WCAG2 addresses headings from the semantic needs of screenreader users, little has been done to directly address the needs of people with cognitive disabilities around headings.  This guideline shows how a well-known area of accessibility can address more user needs of different groups of people with disabilities.  The structured content guideline has multiple outcomes working together to cover the different aspects of accessibility needed for different categories of people with disabilities. </p>
 
 					<p>The structured content guideline began as a guideline on use of headings. Going through the content development process, we realized that it was a broader topic than simply headings, but there is little content developed beyond headings. Note that this guideline is used for prototyping, and is the most uneven in style of content.  Additional outcomes and content will be added in future drafts to make this guideline more complete.</p>
 
-					<p>Structured content guideline also shows how several WCAG 2.1 success criteria can be re-combined and include AAA level success criteria such as 2.4.10 Section Headings.  The scoring shows how the rating can be improved by including all headings, but does not fail the lack of section headings, unless that section heading is essential to accomplishing a task. We think this will allow organizations to continually improve their use of headings without failing them for what was formerly required by an AAA success criterion.</p>   
+					<p>Structured content guideline also shows how several WCAG 2.1 success criteria can be re-combined and include AAA level success criteria such as 2.4.10 Section Headings. </p>   
 
-					<p>We are looking for feedback on using scoring as a way to encourage adoption of AAA success criteria without failures.  Do you like the inclusion of broader needs for structured content than providing semantics for screenreader users? Do you think this should be a separate guideline, or do you like having multiple, testable outcomes supporting the guideline?  Do you like the approach of merging WCAG2 success criteria with related user needs?</p> 
+					<p>Do you like the inclusion of broader needs for structured content than providing semantics for screenreader users? Do you think this should be a separate guideline, or do you like having multiple, testable outcomes supporting the guideline?  Do you like the approach of merging WCAG2 success criteria with related user needs?</p> 
 				</div>
 
 
@@ -644,47 +342,6 @@
 						<ul>
 							<li>Sensory - Vision &amp; Visual </li>
 						</ul>
-					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>None.</li>
-		
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-						<table class="rating-table">
-							<caption>Rating Scale</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>Any failures on the Advanced Perceptual Contrast Algorithm (APCA) lookup table or the lowest APCA value is more than 15% below the values on the APCA lookup table</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>The lowest APCA value is 10-15% below the values on the APCA lookup table</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>The lowest APCA value is 5-9% below the values on the APCA lookup table</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>The lowest APCA value is 1-4% below the values on the APCA lookup table</td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>All reading text meets or exceeds the values on the APCA lookup table </td>
-								</tr>
-							</tbody>
-						</table>
 					</details>
 				<div class="ednote">
 					<p>Visual Contrast is a migration from WCAG 2.1 with significant updates:</p>
@@ -728,53 +385,10 @@
 							<li>Independence</li>
 						</ul>
 					</details>
-					<details class="errors">
-						<summary>Critical errors</summary>	
-						<ul>
-							<li>Any input that has specific data entry requirements (for example, date, password) that is provided without perceivable and understandable instructions describing the data entry requirements.</li>
-							<li>Any input for collecting personal and sensitive information (for example, national identification number, health information) that fails "Input instructions provided" tests.</li>
-						</ul>
-					</details>
-					<details class="rating">
-						<summary>Rating</summary>
-						<table class="rating-table">
-							<caption>Rating for "Input instructions provided"</caption>
-							<thead>
-								<tr>
-									<th scope="col">Rating</th>
-									<th scope="col">Criteria</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Rating 0</th>
-									<td>Score of 25% or less OR there is a <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical error</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 1</th>
-									<td>Score of 26-50% or less AND there are no <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical errors</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 2</th>
-									<td>Score of 51-80% or less AND there are no <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical errors</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 3</th>
-									<td>Score of 81-95% or less AND there are no <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical errors</a></td>
-								</tr>
-								<tr>
-									<th scope="row">Rating 4</th>
-									<td>Score of 96-100% or less AND there are no <a href="https://www.w3.org/TR/wcag-3.0-requirements/#dfn-critical-error">critical errors</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</details>
 				</section>
 				
 				<div class="ednote">
 					<p>An additional outcome, Moderated form completion: Guides data entry, provides validation, and moderates form completion so users can avoid data entry errors, is under development. Details will be posted when available.</p>
-
-					<p>Critical errors and scoring for the Input instructions provided outcome are also under development. We are working to determine how to put the requirement into normative text. Details will be posted when available.</p>
 				</div>
 				
 				<div class="ednote">
@@ -803,21 +417,54 @@
 		<section data-status="exploratory">
 			<h2>Testing</h2>
 			<details class="summary">
-				<summary>What types of tests are used?</summary>
-				<p>WCAG 3.0 includes two types of tests:</p>
-					<ul><li><strong>Atomic tests:</strong> simple tests (usually of the code), like the way we test today. You use these tests to reach the bronze level.</li>
-					<li><strong>Holistic tests:</strong> usability tests and manual tests with hardware and software used by people with disabilities (assistive technologies). You use these tests to reach the silver or gold level.</li></ul>
-					<p>Some content will meet outcomes if it passes atomic tests, but that content still might not be usable by all people with disabilities. Holistic tests can help you fix that.</p>
-
+				<summary>What types of tests and scopes are used?</summary>
+				<p>WCAG 3.0 includes four types of tests which are evaluated pass/fail:</p>
+					<ul><li><strong>Unconditional tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether something exists or against a constant value specified by WCAG.  </li>
+					<li><strong>Conditional tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary slightly between testers who understand the criteria. Examples include evaluating quality and applicability. </li>
+					<li><strong>Conventional tests:</strong> Tests where the results rely on the context in which content is being tested. The tests are still unconditional or conditional tests but the context dictates which unconditional or conditional tests are used. Examples include consistency and conditional tests.</li>
+					<li><strong>Procedural tests:</strong> Tests that evaluate whether an accepted process was used to improve accessibility. Examples include usability and plain language testing</li>
+					</ul>
+					<p>Tests can be applied to four different scopes:</p>
+					<ul><li><strong>Item:</strong> A component or unit of content. Examples include a drop down menu, a media player, a phrase, or an image.</li>
+					<li><strong>View:</strong> All content visually and programmatically available without a substantive change. </li>	
+					<li><strong>User Process:</strong> Series of user actions, and the distinct interactive views that support the actions, where each action is required in order to complete an activity. </li>	
+					<li><strong>Aggregate:</strong> Combination of all related items, user processes, and views.</li>	
+					</ul>
 			</details>
+
+			<div class="ednote">
+			<p>This section is exploratory. Outstanding questions that need to be addressed include:</p>
+				<ul>
+					<li>Developing detailed examples of each test type,</li>
+					<li>Finalizing names and descriptions of scope and test types,</li>
+					<li>If there are further test types that should be added,</li>
+					<li>Determining what to document for procedural tests,</li>
+					<li>How protocols will be incorporated,</li>
+					<li>How well this approach to testing supports additional requirements not addressed in 2.1,</li>
+					<li>Testing the accuracy, reliability, repeatability, etc. of this approach,</li>
+					<li>How well this approach will support regulatory needs, </li>
+					<li>How a process will be defined and documented,</li>
+					<li>How these tests will be integrated into a conformance model (including levels or scores), and</li>
+					<li>Get feedback from designers, developers and other communities on wording choice.</li>
+					<li>Rework plain language section</li>
+					<li>Determine how organisations can declare which convention they are following in a way that is transparent, both to their users and for the purpose of verification in audits</li>
+					<li>Address all github issues under <a href="https://github.com/w3c/silver/milestone/16" target="_blank">test types and terminology milestone</a>.</li>
+				</ul>
+			</div>
 			
-			<p class="ednote">The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using holistic tests, sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
+			<p class="ednote">
+			The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
 			
-				<p>WCAG 3.0 tests and scores <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to objectively determine if the content they are evaluating satisfies the criteria.</p> 
-				<p>Testing outcomes uses both <a>views</a> and <a>processes</a> to define what is being tested. Views include all content visually and programmatically available without a substantive change. Conceptually, it corresponds to the definition of a <q>web page</q> as used in WCAG 2.X, but is not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
+				<p>WCAG 3.0 tests <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to determine if the content they are evaluating satisfies the criteria. </p> 
+
+				<p>Testing outcomes use <a>items</a>, <a>views</a>, <a>user processes</a>, and the <a>aggregate</a> to define what is being tested.</p> 
+
+				<p><dfn data-lt="item|unit" title="Smallest testable unit">Items</dfn> are the smallest testable unit. They may be interactive components such as a drop down menu, a link, or a media player. They may also be units of content such as a word, a phrase, an icon, or an image.</p>
+
+			<p><dfn data-lt="views" title="All content visually and programmatically available without a substantive change.">Views</dfn> include all content visually and programmatically available without a substantive change. Conceptually, views correspond to the definition of a <q>web page</q> as used in WCAG 2.X, but are not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
 				</p>
 				<p>
-				Processes are a sequence of steps that need to be completed in order to accomplish an activity/task from end-to-end. When testing processes, the content used to complete the process as well as all of the associated <a>views</a> need to be included in the test. A process is a subset of a view or a group of views.  It includes only the sections of the view needed to accomplish the activity or task.</p>
+					<dfn data-lt="user process" title="Series of user actions required in order to complete an activity">User processes</dfn> are a series of user actions, and the distinct interactive <a>views</a> and <a>items</a> that support the actions, where each action is required in order to complete an activity. A user process may include a subset of items in a view or a group of views. </p>
 				<p>Examples of a process include:</p>
 					<ul>
 						<li>Logging into a site and being recognized as an authenticated user;</li>
@@ -825,94 +472,107 @@
 						<li>Submitting tax information, from start to end of the process; and</li>
 						<li>Interacting with other users in a virtual reality environment.</li>
 					</ul>
-					<p>A process is comprised of one or more <a>views</a>.</p>
+					<p>A process is comprised of one or more <a>views</a> or subsets of views. Only the part of the views that support the user process are included. in a test of user process.</p>
+			<p>The <dfn title="set of items, views, and user processes that comprise the site">aggregate</dfn> is the combination of items, views, and user processes that collectively comprise the site, set of web pages, web app, etc.</p>
 				<section>
 				<h3>Types of tests</h3>
 								
-				<p>WCAG 3.0 includes two types of tests: <a href="#atomic-tests">atomic tests</a> and <a href="#holistic-tests">holistic tests</a>. Testing the outcomes using the atomic tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>. <!--The content should be tested by those who understand how people with different types of disabilities use the technology being tested.--></p>
+				<p>WCAG 3.0 includes four types of tests:</p>
+				   <ol><li> <a href="#unconditional-tests">Unconditional tests</a>,</li> 
+				    <li><a href="#condition-tests">Conditional tests</a>,</li>
+			      <li><a href="#convention-tests">Conventional tests</a>, and</li>				    
+			      <li><a href="#procedural-tests">Procedural tests</a>.</li>
+			    </ol>
+						<p>All tests results will pass or fail. The criteria used to evaluate whether the test pass differ for each type of test. The inter-rater reliability for an unconditional test is higher than the inter-rater reliability of a conditional test which higher than that of a procedural test. A conditional test includes an additional checkpoint that determines which unconditional and conditional tests will be used. As a result of these differences, the information tested change based on the test type to ensure each can be evaluated as pass or fail. For example, unconditional and conditional tests evaluate the results as they do in WCAG 2. Procedural tests may only evaluate a statement that the procedural occurred, instead of the results. Meeting an outcome may include one or more of these types of test.</p>
+
+				    <p>Testing the outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>. <!--The content should be tested by those who understand how people with different types of disabilities use the technology being tested.--></p>
 				
-				<p>Although content may satisfy all outcomes using the atomic tests, the content may not always be usable by people with a wide variety of disabilities. The holistic tests address this gap by evaluating more of the user experience than atomic testing.</p>
-				<p class="ednote">We are looking for more appropriate terms to distinguish between these two types of tests and welcome suggestions</p> 
+				<p>Although content may satisfy all outcomes using unconditional and conditional tests, the content may not always be usable by people with a wide variety of disabilities. The conditional and procedural tests address this gap by evaluating more of the user experience.</p>
+				<p class="ednote">We are looking for more appropriate terms to distinguish between types of tests and scope and welcome suggestions.  Other terms suggested for 'unconditional' are 'quantitative', 'non-conditional', 'less-subjective', constant', 'definitive', 'pass/fail' or "fixed objective". Other terms suggested for 'conditional' are 'qualitative', 'qualified' and 'fixed subjective.' Other terms suggested for 'conventional' are 'convention based objective', 'use case', or 'contextual' Other terms suggested for 'procedural' are "process evaluation" and "process based subjective.'</p> 
+					<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
+					
 					<section>
-						<h4>Atomic tests</h4>
-						<p>Atomic tests evaluate content, often at an <a>object</a> level, for accessibility. Atomic tests include the existing tests that support A, AA, and AAA <a>success criteria</a> in WCAG 2.X. They also include tests that may require additional context or expertise beyond tests that fit within the WCAG 2.X structure. In WCAG 3.0, atomic tests are used to test both processes and views. Test results are then aggregated across the selected views. Critical errors within selected processes are also totaled. Successful results of the atomic tests are used to reach a <a href="#bronze">Bronze</a> rating.</p>
-						<p>Atomic tests may be <a>automated</a> or <a>manual</a>. <a>Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
+						<h4>Unconditional tests</h4>
+						<p>Unconditional tests are tests where the results will not vary based on the tester or approach. Examples include testing whether something exists or against an unconditional value. Unconditional tests evaluate content, often against a <a>unit</a> or <a>view</a>, for accessibility. </p>
+						<p>Unconditional tests evaluate against a universal criterion that is true in all situations and requires no subjective evaluation.</p>
+						<p>Methods using unconditional tests include the baseline to test against. Most often this baseline is whether or not something is present. In the case of color contrast, this baseline is a number. </p>
+						<p>Unconditional tests may be <a>automated</a> or <a>manual</a>. <a>Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
+
+						<aside class="example">
+							<p>Example unconditional test</p>
+								<p>These tests are already part of WCAG 2.x.</p>
+								<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/" target="_blank">Image has non-empty accessible name</a></p>
+								<p>Example for 1.4.3: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/afw4f7/proposed/" target="_blank">Text has minimum contrast</a></p>
+						</aside>
+
 					</section>
 					<section>
-						<h4>Holistic tests</h4>
-						<p>Holistic tests include assistive technology testing, user-centered design methods, and both user and expert usability testing. Holistic testing applies to the entire declared scope and often uses the declared processes to guide the tests selected. Successful results of holistic tests are used to reach a <a href="#silver">silver</a> or <a href="#gold">gold</a> rating.</p>
-						<p class="ednote">Future drafts will further explore holistic tests and provide examples as well as detail how to apply them.</p>
+						<h4>Conditional tests</h4>
+						<p>Conditional tests rely on informed qualitative evaluations based on a set of criteria. The test results may vary slightly between experienced testers. Examples include testing quality and applicability.</p>
+						<p>Methods using conditional tests include the criteria being tested and guidance on evaluating how well the content meets the criteria of the conditional test.</p> 
+
+						<aside class="example">
+							<p>Example conditional test</p>
+								<p>These tests are already part of WCAG 2.x.</p>
+								<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive</a></p>
+								<p>Example for 2.4.9: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/" target="_blank"> Link is descriptive</a></p>
+						</aside>
+
+					</section>
+										<section>
+						<h4>Conventional tests</h4>
+						<p>Conventional tests evaluate the results within a particular context.  The tests are still unconditional or conditional tests but the context dictates:
+						<ul><li>which unconditional or conditional tests are used, or</li>
+						<li>what the baseline is used to test against.
+						</li></ul>
+						WCAG will rely on conventional tests when a solution will improve accessibility but where that implementation of the solution will vary based on situation, such as language, type of content, or other design decisions. Examples include testing for consistency of design decisions and content choices.</p>
+						<p>Methods using conventional tests include the test criteria the organization would need to evaluate, parameters for success and failure, and, if it is a conditional test, guidance on evaluating how well the content meets the criteria of the conditional test.</p>
+
+					<aside class="example">
+						<p>Example conditional test for clear language outcome (Draft)</p>
+
+						<p>Test: The content follows clear language rules appropriate to the language of the content.</p>
+
+						<p>If in English, the content will:</p>
+								<ul><li>Not include double negatives</li>
+										<li>Spell out abbreviations and acronyms</li>
+										<li>Explain similes, metaphors, and other non-literal language</li>
+								</ul>
+
+						<p>In Hebrew, the content will:</p>
+								<ul><li>Include all accents, characters, and diacritics that are necessary to phonetically read the words</li>
+								    <li>Explain similes, metaphors, and other non-literal language</li>
+								</ul>
+					</aside>
+
 					</section>
 
-				</section>
+
+					<section>
+						<h4>Procedural tests</h4>
+						<p>Procedural tests evaluate whether a process was used to improve accessibility. Examples include usability and plain language testing.  Procedural tests could include assistive technology testing, user-centered design methods, plain language testing, and both user and expert usability testing. Procedural testing often applies to the <a>aggregate</a> or <a>user process</a>. Methods would provide guidance for different procedures that are proven to improve accessibility and would test declarations about the procedural used rather than the results. </p>
+						
+
+						<aside class="example">
+
+							<p>Example procedural test for clear language outcome (Draft)</p>
+
+							<p>Test: A plain language review was conducted</p>
+						</aside>
+
+						<p class="ednote">The requirements for what would be evaluated for procedural tests are to be determined.</p>
+					</section>
+
 				<section>
 				<h3>Technology specific testing</h3>				
 				<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
 				</section>
-				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 			</section>
-	
-			<section data-status="placeholder">
-				<h2>Scoring</h2>
-
-				<details class="summary">
-					<summary>How are tests scored?</summary>
-					<p>Besides true/false scoring methods, we’ve included testing options for new guidance, such as rating scales.</p>
-					<p>Each outcome has a section that shows how it is scored.</p>
-				</details>
-				
-				<p class="ednote">One of the goals of WCAG 3.0 is to expand scoring tests of methods beyond a binary true/false choice at the page level. We have included tests within the sample outcomes that demonstrate alternatives such as <a>rubrics</a> and <a>scales</a>. We are also exploring integrating these options into <a href="https://www.w3.org/WAI/standards-guidelines/act/">Accessibility Conformance Testing</a> format. We will include example tests in a future draft. Our intent is to include detailed <a href="https://w3c.github.io/silver/requirements/#multiple-ways-to-measure">tests for methods</a> to support each outcome within the WCAG 3.0 model.</p>
-				<p>Each <a>outcome</a> has <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting that outcome. Testers can test the accessibility of new and emerging technologies that do not have related methods based on the outcome.</p>	
-				<section>
-				<h3>Scoring atomic tests</h3>
-				<p>In most cases, testing individual <a>objects</a> will result in binary, pass / fail outcome for each element. This leads to either a pass / fail or a percentage rating depending on the test. A rating scale may be provided for some tests to allow the tester to assign a quality judgement of an element or block of content. Whether scoring is binary (pass/fail) or uses rating scales, will depend on the method, outcome, and technology. Binary scoring works well when the unit being tested has clear boundaries and pass/fail conditions.  Rating scales work better when the unit being tested does not have clear boundaries, when evaluating success requires a quality judgement, or when the test includes gradations of quality. Each of these results can then be assigned a percentage or averaged to inform the overall score of an outcome.</p>
-					<p>Test results for views:</p>
-					<ul>
-						<li>Tests that results in a pass or fail condition will be assigned a 100% or 0%;</li>
-						<li>Tests at the element level that can be consistently counted will be assigned a percentage (number passed / total number of instances);</li>
-						<li>Tests that apply to content without clear boundaries will be scored using a <a>rating scale</a>. The rating scales may vary based on the test and may be presented as numeric scale, an <a>adjectival rating</a> or a <a>rubric</a>. Each of these can be converted into a percentage to make it easier to compare across tests.</li>
-					</ul>
-				<p>In addition, <a>critical errors</a> within selected processes will be identified and totaled. Any critical errors will result in score of very poor (0).</p>
-				</section>
-
-				<section>
-				<h3>Scoring outcomes</h3>
-				<p>The results from the atomic tests are aggregated across views and used along with the number of critical errors to assign an <a>adjectival rating</a> to the outcome. Testers will then use the guidance provided in the outcome along with reasonable judgement of the context that the errors occur in to assign an accessibility score of the outcome.</p>
-					<div class="example">
-						<p>Potential thresholds for adjectival ratings of test results:</p>
-					<dl>
-					<dt>Very Poor (0)</dt>
-					<dd>Any critical errors or less than 50% of related tests pass</dd>
-					<dt>Poor (1)</dt>
-					<dd>No critical errors, <abbr title="approximately">approx.</abbr> 50% to 79% of related tests pass</dd>
-					<dt>Fair (2)</dt>
-						<dd>No critical errors, approx. 80% to 89% of related tests pass</dd>
-					<dt>Good (3)</dt>
-						<dd>No critical errors, approx. 90% to 98% of related tests pass</dd>
-					<dt>Excellent (4)</dt>
-						<dd>No critical errors, approx. 99% to 100% of related tests pass</dd>
-				</dl>
-						<div class="note"><p>The thresholds are different for different outcomes.</p>
-				<p>These thresholds are still being tested and adjusted. These are included as examples to gather feedback on this scoring approach.</p>
-			</div>
-					</div>
-				</section>
-				
-				<section>
-				<h3>Overall scores</h3>
-				<p>After all outcomes have been scored, the ratings are averaged for a total score and a score by the <a>functional category(ies)</a> they support. Conformance at the <a href="#bronze">bronze</a> level requires no critical errors and at least 3.5 total score and at least a 3.5 score within each functional category.</p>
-				
-				<p class="ednote">This approach, which allows the tester some flexibility in assigning scores, has the advantage of simplicity and allowing a tester to take the context into account beyond the simple percentages. The second option we are exploring is to carry percentages from tests through to a final score. In this case a bronze rating would require a total score of at least 90% and at least 90% within each functional need category. This number would likely shift as we continue testing.  We invite comment on these options as well as suggestions for an alternative solution.</p>
-				</section>
-
-				<section>
-				<h3>Scoring holistic tests</h3>			
-				<p>The points from <a href="#holistic-tests">holistic tests</a> do not affect the scores of <a href="#atomic-tests">atomic tests</a>. Rather a minimum number of holistic tests will need to be met in order to reach a <a href="#silver">silver</a> rating and additional holistic tests will be needed to reach a <a href="#gold">Gold</a> rating. Getting a silver or gold rating requires a Bronze rating.</p>
-				<p class="ednote">We continue to work on the scoring of holistic tests and will provide more details in a future iteration of this document.</p>
-				</section>
 		</section>
+	
+
 		
-		<section>
+		<section id="conformance">
 			<h2>Conformance</h2>
 			<details class="summary">
 				<summary>Summary</summary>
@@ -922,10 +582,10 @@
 			<section data-status="exploratory">
 				<h3>Conformance levels</h3>
 				<div class="ednote">
-				<p>WCAG 3.0 includes a new conformance model in order to address a wider range of user needs, test a wider range of technologies and support new approaches to testing. There are several key goals for this new conformance model:</p>
+				<p>WCAG 3.0 will include a new conformance model in order to address a wider range of user needs, test a wider range of technologies and support new approaches to testing. There are several key goals for this new conformance model:</p>
 
 				<ol>
-					<li>Develop a scoring model that encourages websites to continue to do better and better (vs. stopping at the previous AA level);</li>
+					<li>Develop a model that encourages websites to continue to do better and better (vs. stopping at the previous AA level);</li>
 					<li>Better reflect the lived experience of people with disabilities, who successfully use sites that have some content that does not meet WCAG 2.0 AA, or who encounter barriers with sites that meet WCAG 2.0 AA;</li>
 					<li>Allow for bugs and oversight by content authors, provided the impact of them is limited to users with disabilities.</li>
 				</ol>
@@ -938,31 +598,15 @@
 
 				<section>
 					<h4>Bronze</h4>
-					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. The bronze level can be verified using <a href="#atomic-tests">atomic tests</a>. While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
-					<p>For content that conforms to the bronze level:</p>
-					<ul>
-						<li>The total score and score within each of the functional categories MUST be at least 3.5; and</li>
-						<li><a>Views</a> and <a>processes</a> MUST NOT have <a>critical errors</a>.</li>
-					</ul>
-					<p>Conformance to this specification at the bronze level does not mean every requirement in every guideline is fully met. Bronze level means that the content in scope does have any critical errors and meets the minimum percentage of @@</p>
+					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
 				</section>
 				<section>
 					<h4>Silver</h4>
-					<p>Silver is a higher conformance level that addresses additional outcomes. Some <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
-					<p>For content that conforms to the silver level:</p>
-					<ul>
-						<li>All <a>views</a> MUST satisfy the <a href="#bronze">Bronze</a> criteria; and</li>
-						<li>Use of holistic tests to meet this level will be further explored in future drafts</li>
-					</ul>
+					<p>Silver is a higher conformance level.</p>
 				</section>
 				<section>
 					<h4>Gold</h4>
-					<p>Gold is the highest conformance level that addresses the remaining outcomes described in the guidelines. Additional <a href="#holistic-tests">holistic testing</a> is necessary to verify conformance to this level.</p>
-					<p>For content that conforms to the gold level:</p>
-					<ul>
-						<li>All <a>views</a> MUST satisfy the <a href="#silver">Silver</a> criteria; and</li>
-						<li>Use of holistic tests to meet this level will be further explored in future drafts</li>
-					</ul>
+					<p>Gold is the highest conformance level.</p>
 				</section>
 			</section>
 			<section data-status="exploratory">
@@ -977,7 +621,7 @@
 			<p>User Generated Content is provided for publication by visitors where the content platform specifically welcomes and encourages it. User-generated content is content that is submitted through a user interface designed specifically for members of the public and customers. Use of the same user interface as an authoring tool for publication of content by agents of the publisher (such as employees, contractors, or authorized volunteers) acting on behalf of the publisher does not make that content User Generated Content. The purpose of the User Generated Content Conformance is to allow WCAG 3 outcomes and methods to require additional or different steps to improve the accessibility of User Generated Content.</p>
 			<p>An important part of WCAG Conformance is the specific guidance that is associated with individual WCAG 3 guidelines and outcomes. Not all WCAG 3 guidelines will have unique outcomes and testing for User Generated Content. Unless User Generated Content requirements are specified in a particular guideline, that guideline applies as written whether or not the content is User Generated. </p>
 			
-			<p class="ednote">We plan for the Q4 Working Draft to include specific examples of guidelines with additional requirements for user generated content.  One example would be alternative text. The Authoring Tool Accessibility Guidelines (ATAG) has specific guidance for providing a mechanism for alternative text. The <a href="https://www.w3.org/TR/ATAG20/#gl_b23">ATAG  2.0 Guideline B.2.3</a> - "Assist authors with managing alternative content for non-text content" could be adapted to provide specific, guideline-related guidance for user generated alternative text. </p>
+			<p class="ednote">We plan for a future Working Draft to include specific examples of guidelines with additional requirements for user generated content.  One example would be 'alternative text'. The Authoring Tool Accessibility Guidelines (ATAG) has specific guidance for providing a mechanism for alternative text. The <a href="https://www.w3.org/TR/ATAG20/#gl_b23">ATAG  2.0 Guideline B.2.3</a> - "Assist authors with managing alternative content for non-text content" could be adapted to provide specific, guideline-related guidance for user generated alternative text. </p>
 			
 			<p>The web content publisher should identify all locations of User Generated Content (such as commentary on hosted content, product descriptions for consumer to consumer for sale listings, and restaurant reviews) and perform standard accessibility evaluation analysis for each. If there are no accessibility issues, the User Generated Content is fully conforming.</p>
 			<section>
@@ -987,7 +631,7 @@
 				<li>Clearly identify where User Generated Content can be found on the publisher's digital product (perhaps by id href);</li>
 				<li>Clearly identify the steps taken to encourage accessibility in User Generated Content such as prompting the user for ALT text for their uploaded images before they are accepted and the disallowal of text attributes except as they are part of semantic markup such as strong, headings, etc., as enumerated in Guideline Outcomes;</li>
 			</ol>
-			<p class="ednote">Editor's Note: Appropriate scoring is yet to be provided. Once provided, fully conforming content will score as fully conformant. It remains to be determined how to score User Generated Content that has accessibility issues; and to define what minimum threshold scores might be acceptable; and what critical errors might prevent a conformance assertion. We expect WCAG 3 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
+			<p class="ednote">Editor's Note: Once the conformance approach is included, content that passes all tests will be considered fully conformant. It remains to be determined how to address User Generated Content that has accessibility issues; and to define what minimum thresholds might be acceptable. We expect WCAG 3 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
 			</section>
 			</section>
 			<section data-status="placeholder">
@@ -1002,7 +646,7 @@
 				<h3>Defining conformance scope</h3>
 				<p>When evaluating the accessibility of content, WCAG 3.0 requires the outcomes apply to a specific scope. While the scope can be an all content within a digital product, it is usually one or more sub-sets of the whole. Reasons for this include:</p>
 				<ul>
-					<li>Large amounts of content are impractical to evaluate comprehensively using anything beyond <a>automated evaluation</a> of <a href="#atomic-tests">atomic tests</a>;</li>
+					<li>Large amounts of content are impractical to evaluate comprehensively using anything beyond <a>automated evaluation</a> of atomic tests;</li>
 					<li>In many cases, content changes frequently, causing evaluation to be accurate only for a specific moment in time;</li>
 					<li>Some content is more important to the majority of users than other content; and</li>
 					<li>Content that mostly meets the requirements but has problems can interfere with the user's ability to complete a process begun elsewhere.</li>
@@ -1017,7 +661,6 @@
 				<p>In order for technology to <a>conform</a> to WCAG 3.0, the following conformance requirements apply:</p>
 				<ol>
 					<li><b>Conformance level</b> - Content MUST meet the requirements of the selected <a href="#conformance-levels">conformance level</a>.</li>
-					<li><b>Processes and views</b> - Conformance (and conformance level) MUST apply to complete <a>processes</a> and <a>views</a>, and MUST NOT exclude any part of a process or view.</li>
 				</ol>
 			</section>
 			<section data-status="exploratory">
@@ -1053,9 +696,6 @@
 			<h2>Glossary</h2>
 			<p class="note">Many of the terms defined here have common meanings. When terms appear with a link to the definition, the meaning is as formally defined here. When terms appear without a link to the definition, their meaning is not explicitly related to the formal definition here. These definitions are in progress and may evolve as the document evolves. </p>
 			<dl>
-				<dt><dfn data-lt="Adjective-based|Adjectival|Adjectival rating">Adjectival rating</dfn></dt>
-				<dd><p>A system to report evaluation results as a set of human-understandable adjectives which represent
-						groupings of scores.</p></dd>
 				<dt><dfn data-lt="Automated|Automatically evaluated|Automated testing|Automatically tested">Automated
 						evaluation</dfn></dt>
 				<dd><p>Evaluation conducted using software tools, typically evaluating code-level features and applying
@@ -1068,19 +708,6 @@
 				<dd><p>Satisfying all the requirements of the guidelines. Conformance is an important part of following
 						the guidelines even when not making a formal Conformance Claim.</p>
 					<p>See <a href="#conformance">Conformance</a>.</p></dd>
-				<dt><dfn data-lt="Critical errors|Critical failure|Critical failures">Critical error</dfn></dt>
-				<dd>
-					<p>An accessibility problem that will stop a user from being able to complete a
-						process.</p><p>Critical errors include:</p>
-					<ul>
-						<li>Items that will stop a user from being able to complete the task if it exists anywhere on
-							the view (examples: flashing, keyboard trap, audio with no pause);</li>
-						<li>Errors that when located within a process means the process cannot be completed (example:
-							submit button not in tab order);</li>
-						<li>Errors that when aggregated within a view or across a process cause failure (example: a
-							large amount of confusing, ambiguous language).</li>
-					</ul>
-					</dd>
 				<dt><dfn data-lt="deprecated">Deprecate</dfn></dt>
 				<dd>
 					<p>To declare something outdated and in the process of being phased out, usually in favor of a specified replacement.</p>
@@ -1092,10 +719,6 @@
 				<dd>Different approaches to evaluation include automated <a>evaluation</a>,
 						<a>semi-automated evaluation</a>, <a>human evaluation</a>, and <a>user
 						testing</a>.</dd>
-				<dt><dfn data-lt="Functional categories|Functional category(ies)">Functional category</dfn></dt>
-				<dd><p>A conceptual grouping of <a>functional needs</a> that represent generalized sets of user
-						groups.</p>
-					<p>See <a href="https://w3c.github.io/silver/explainer/#functional-categories">Functional Categories</a>.</p></dd>
 				<dt><dfn data-lt="Functional needs">Functional need</dfn></dt>
 				<dd>
 					<p>A statement that describes a specific gap in one’s ability, or a specific mismatch between ability and the designed environment or context.</p>
@@ -1104,12 +727,6 @@
 				<dd>
 					<p>High-level, plain-language content used to organize <a>outcomes</a>.</p>
 					<p>See <a href="https://w3c.github.io/silver/explainer/#guidelines-structure">Guidelines</a> in the Explainer.</p>
-				</dd>
-				<dt><dfn data-lt="How-tos">How-to</dfn></dt>
-				<dd>
-					<p>Provides explanatory material for each guideline that applies across technologies.</p>
-					<p>This plain language resource includes information on getting started, who the guideline helps and how, as well as information for designers and developers.</p>
-					<p>See <a href="https://w3c.github.io/silver/explainer/#how-tos">How-tos</a> in the Explainer.</p>
 				</dd>
 				<dt><dfn data-lt="Human testing|Human evaluated|Human tested|Manual|Manual evaluation|Manual testing|Manually tested">Human evaluation</dfn></dt>
 				<dd>
@@ -1136,10 +753,6 @@
 					<p>Content whose instructions are required for <a>conformance</a>.</p>
 					<p class="note">Content identified as <q><a>informative</a></q> or <q>non-normative</q> is never required for conformance.</p>
 				</dd>
-				<dt><dfn data-lt="Objects">Object</dfn></dt>
-				<dd><p>An item in the perceptual user experience.</p>
-					<p>Objects include user interface widgets and identifiable blocks of
-						content.</p></dd>
 				<dt><dfn data-lt="Outcomes">Outcome</dfn></dt>
 				<dd>
 					<p>Result of practices that reduce or eliminate barriers that people with disabilities experience.</p>
@@ -1148,11 +761,6 @@
 				<dt><dfn data-lt="Processes">Process</dfn></dt>
 				<dd><p>A sequence of steps that need to be completed in order to accomplish an activity / task from
 						end-to-end.</p></dd>
-				<dt><dfn data-lt="Rubrics">Rubric</dfn></dt>
-				<dd><p>An approach to <a>evaluation</a> that defines a set of criteria for conformance and describes the
-						result qualitatively.</p></dd>
-				<dt><dfn data-lt="Rating scale|Rating scales|Scales">Scale</dfn></dt>
-				<dd><p>An way of reporting results of <a>evaluation</a> using quantitative values.</p></dd>
 				<dt><dfn>Semi-Automated Evaluation</dfn></dt>
 				<dd>
 					<p>Evaluation conducted using machines to guide humans to areas that need
@@ -1160,9 +768,6 @@
 					<p>Semi-automated evaluation involves components of <a>automated evaluation</a>
 						and <a>human evaluation</a>.</p>
 				</dd>
-				<dt><dfn data-lt="Success criteria">Success criterion</dfn></dt>
-				<dd><p>Testable statements that compose the <a>normative</a> aspects of WCAG 2.</p>
-					<p>The closest counterpart to success criteria in WCAG 3 are <a href="#outcomes">outcomes</a>.</p></dd>
 				<dt><dfn data-lt="Tests">Test</dfn></dt>
 				<dd>
 					<p>Mechanism to evaluate implementation of a <a>method</a>.</p>
@@ -1172,20 +777,6 @@
 				<dd>
 					<p>Technology-specific approach to follow a <a>method</a>.</p>
 				</dd>
-				<dt><dfn data-lt="Text alternatives">Text alternative</dfn></dt>
-				<dd>   
-					   <p>Text that is programmatically associated with non-text content or referred to from text that is programmatically associated with non-text content.
-					      Programmatically associated text is text whose location can be programmatically determined
-					      from the non-text content.
-					   </p>
-					   
-					   <p class="example">An image of a chart is described in text in the paragraph after the chart. The short
-					      text alternative for the chart indicates that a description follows.
-					   </p>
-					   
-					</dd>
-				<dt><dfn data-it="User generated content">User generated content</dfn></dt>
-				<dd><p>User Generated Content is provided for publication by visitors where the content platform specifically welcomes and encourages it. User-generated content is content that is submitted through a user interface designed specifically for members of the public and customers. Content created by agents of the publisher (such as employees, contractors, or authorized volunteers) is not considered User Generated Content, even if the agents use the same interface to publish.  The publisher in this definition is the owner of the website providing content, not the owner of a paid platform used for website creation.</p></dd>
 				<dd><p class="ednote">Future work on the glossary will better define terms such as publisher, content author, etc.</p></dd>
 				<dt><dfn data-lt="User needs">User need</dfn></dt>
 				<dd><p>The end goal a user has when starting a process through digital means.</p></dd>
@@ -1193,12 +784,6 @@
 				<dd>
 					<p>Evaluation of content by observation of how users with specific <a>functional needs</a> are able to complete a <a>process</a> and how the content meets the relevant <a href="#outcomes">outcomes</a>.</p>
 				</dd>
-				<dt><dfn data-lt="Views">View</dfn></dt>
-				<dd><p>All content visually and programmatically available without a substantive change.</p>
-					<p>Views vary based on the technology being tested. While these guidelines provide guidance on scoping a view, the tester will determine what constitutes a view, and describe it. Views will often vary by technology. Views typically include state permutations that are based on that view such as dialogs and alerts, but some states may deserve to be treated as separate views.</p></dd>
-				<dt><dfn>Visual Contrast</dfn></dt>
-				<dd><p>The combination of foreground and background colors along with font weight and size that make text readable.</p>
-					</dd>
 			</dl>
 		</section>
 		<section class="appendix">
