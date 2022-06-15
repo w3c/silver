@@ -136,10 +136,41 @@ function addNoteMarkers() {
 	})
 }
 
+var statusLabels = {
+	placeholder: 'We will be addressing this topic.',
+	exploratory: 'We are exploring one or more possible directions for this content.',
+	developing: 'We have high confidence in the direction and some confidence in the details.',
+	refining: 'We have high confidence in the direction and moderate confidence in the details.',
+	mature: 'We believe the content is ready to become a W3C Recommendation.',
+}
+
+function addStatusMarkers() {
+	var statusKeys = Object.keys(statusLabels);
+	statusKeys.forEach(function (status) {
+		var selector = '[data-status="' + status + '"]';
+		var statusSections = document.querySelectorAll(selector);
+		statusSections.forEach(function (section) {
+			var div = document.createElement('div');
+			div.setAttribute('class', 'addition sticky');
+			div.innerHTML = '<a href="#section-status-levels" class="status-link">Section status: <strong>'
+				+ sentenceCase(status)
+				+ '</strong></a>.'
+				+ statusLabels[status]
+				// + ' See the Editor&#39;s note for details.';
+
+			// Insert div after the first heading:
+			var firstHeading = section.querySelector('h1,h2,h3,h4,h5,h6');
+			firstHeading.parentNode.insertBefore(div, firstHeading.nextSibling);
+		})
+	});
+}
+
 function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
-		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
+		var dfn = document.querySelector(node.href.substring(node.href.indexOf('#')));
+		if (dfn.parentNode.name == "dt") node.title = dfn.parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
+		else if (dfn.title) node.title=dfn.title;
 	});	
 }
 
@@ -162,16 +193,20 @@ function adjustNormativity() {
 			var el = document.createElement("p");
 			el.className = "normative-statement";
 			el.innerHTML = "<em>This section (with its subsections) provides requirements which must be followed to <a>conform</a> to the specification, meaning it is <a href=\"#dfn-normative\" class=\"internalDFN\" data-link-type=\"dfn\">normative</a>.</em>";
-			node.insertBefore(el, findHeading(node).nextSibling);
+			var heading = findHeading(node);
+			while (heading.parentNode !== node) {
+				heading = heading.parentNode;
+			}
+			node.insertBefore(el, heading.nextSibling);
 		}
 	});
 }
 
 function adjustDfnData() {
 	document.querySelectorAll('dfn').forEach(function(node){
-		var datalt = node.getAttributeNode("data-lt");
 		var curVal = node.getAttribute("data-lt");
-		node.setAttribute("data-lt", node.textContent + (curVal == "" ? "|" : ""));
+		if (curVal == null) curVal = "";
+		node.setAttribute("data-lt", node.textContent + (curVal == "" ? "" : "|") + curVal);
 	});
 }
 
@@ -273,6 +308,20 @@ function outputJson() {
 function loadDoc(path) {
 }
 
+function authorToPM() {
+	document.querySelectorAll("div.head dt").forEach(function(node){
+    if (node.textContent.trim() == "Authors:" || node.textContent.trim() == "Author:") node.textContent = "Project Manager:";
+  });
+}
+
+function moveStatusFilterToToc() {
+	var button = document.querySelector('#status-filter');
+	var button_parent = button.parentNode;
+	var toc = document.querySelector('#toc');
+	var toc_list = toc.querySelector('ol');
+	toc.insertBefore(button_parent.removeChild(button), toc_list);
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
@@ -283,11 +332,13 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
+	addStatusMarkers();
 	//alternateFloats();
 }
 
 // scripts after Respec has run
 function postRespec() {
+	authorToPM();
 	addOutcomeMarkers();
 	adjustNormativity();
 	termTitles();
@@ -296,4 +347,5 @@ function postRespec() {
 	addNoteMarkers();
 	removeImgSize();
 	outputJson();
+	moveStatusFilterToToc();
 }

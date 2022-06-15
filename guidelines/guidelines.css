@@ -1,7 +1,7 @@
 caption {
 	visibility: hidden;
 }
-details {
+:not(.head) > details {
 	margin: 3em;
 	padding: 1em;
 	color: #404040;
@@ -17,7 +17,7 @@ summary::before {
 	float: left;
 	margin-right: -3.5em;
 }
-details:focus summary::before, details:hover summary::before, .guideline:focus h3::before, .guideline:hover h3::before, .outcome:focus h4::before, .outcome:hover h4::before {
+:not(.head) > details:focus summary::before, :not(.head) > details:hover summary::before, .guideline:focus h3::before, .guideline:hover h3::before, .outcome:focus h4::before, .outcome:hover h4::before {
 	background-color: #ffff99 ;
 	box-shadow: 0 0 1em .25em #ffff99;
 }
@@ -58,7 +58,7 @@ details:focus summary::before, details:hover summary::before, .guideline:focus h
 .method-link::before {
 	content: url(img/method.svg);
 }
-a.internalDFN:hover, .internalDFN:active, a.internalDFN:focus {
+a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:focus {
 	cursor: help;
 }
 .outcome {
@@ -150,4 +150,15 @@ caption {
 .marker > a.self-link::before {
 	content: "§";
 	display: block;
+}
+a[href].status-link {
+	color: var(--text);
+}
+@media screen and (min-width: 860px) {
+	.sticky {
+		position: sticky;
+		top: .6em;
+		z-index: 9001;
+		box-shadow: 0 3px 10px rgb(0 0 0 / .2);
+	}
 }
