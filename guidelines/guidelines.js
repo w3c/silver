@@ -56,7 +56,7 @@ function linkOutcome() {
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
 		var el = document.createElement("p");
-		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome, details, and methods for </span>" + heading + "</a>";
+		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome, details, and methods for </span>\"" + heading + "\"</a>";
 		node.insertBefore(el, node.querySelector("details"));
 		
 		node.classList.add("notoc");
@@ -75,10 +75,12 @@ function addOutcomeMarkers() {
 		var parentHeader = findHeading(node.parentElement);
 		var outcomeHeader = findHeading(node);
 		outcomeHeader.innerHTML = "<span class=\"inserted\">Outcome: </span>" + outcomeHeader.innerHTML; 
-		var insertion = document.createElement("span");
+		/* 
+		var insertion = document.createElement("p");
 		insertion.classList.add("inserted");
 		insertion.innerHTML = " (outcome for <q>" + textNoDescendant(parentHeader) + "</q>)";
-		outcomeHeader.insertBefore(insertion, outcomeHeader.querySelector(".self-link"));
+		outcomeHeader.insertAdjacentElement("afterend", insertion);
+		 */
 	})
 }
 
@@ -151,7 +153,7 @@ function addStatusMarkers() {
 		var statusSections = document.querySelectorAll(selector);
 		statusSections.forEach(function (section) {
 			var div = document.createElement('div');
-			div.setAttribute('class', 'addition sticky');
+			div.setAttribute('class', 'addition status-filter sticky');
 			div.innerHTML = '<a href="#section-status-levels" class="status-link">Section status: <strong>'
 				+ sentenceCase(status)
 				+ '</strong></a>.'

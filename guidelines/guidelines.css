@@ -40,7 +40,7 @@ a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:foc
 	font-size: 100%;
 	color: #005A9C;
 }
-.guideline-text {
+.guideline-text, .outcome-text {
 	font-size: larger;
 }
 .guideline h3, .outcome h4 {
@@ -113,6 +113,10 @@ caption {
 }
 a[href].status-link {
 	color: var(--text);
+}
+.status-filter {
+	margin-top: -1em !important;
+	margin-bottom: 2em !important;
 }
 @media screen and (min-width: 860px) {
 	.sticky {
