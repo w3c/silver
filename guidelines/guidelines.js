@@ -56,7 +56,7 @@ function linkOutcome() {
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
 		var el = document.createElement("p");
-		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome, details, and methods for </span>\"" + heading + "\"</a>";
+		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome details and methods for </span>\"" + heading + "\"</a>";
 		node.insertBefore(el, node.querySelector("details"));
 		
 		node.classList.add("notoc");
@@ -156,7 +156,7 @@ function addStatusMarkers() {
 			div.setAttribute('class', 'addition status-filter sticky');
 			div.innerHTML = '<a href="#section-status-levels" class="status-link">Section status: <strong>'
 				+ sentenceCase(status)
-				+ '</strong></a>.'
+				+ '</strong></a>. '
 				+ statusLabels[status]
 				// + ' See the Editor&#39;s note for details.';
 
