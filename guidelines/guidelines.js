@@ -151,9 +151,12 @@ function addStatusMarkers() {
 		var selector = '[data-status="' + status + '"]';
 		var statusSections = document.querySelectorAll(selector);
 		statusSections.forEach(function (section) {
+			var statusLabel = "Section";
+			if (section.classList.contains("guideline")) statusLabel = "Guideline";
+			if (section.classList.contains("outcome")) statusLabel = "Outcome";
 			var div = document.createElement('div');
 			div.setAttribute('class', 'addition status-filter sticky');
-			div.innerHTML = '<a href="#section-status-levels" class="status-link">Section status: <strong>'
+			div.innerHTML = '<a href="#section-status-levels" class="status-link">' + statusLabel + ' status: <strong>'
 				+ sentenceCase(status)
 				+ '</strong></a>. '
 				+ statusLabels[status]
