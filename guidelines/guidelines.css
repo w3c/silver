@@ -45,6 +45,7 @@ a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:foc
 }
 .guideline h3, .outcome h4 {
 	width: 100%;
+	margin-bottom: 0;
 }
 .methods h5, .errors h5, .rating h5 {
 	font-size: 100%;
@@ -113,10 +114,6 @@ caption {
 }
 a[href].status-link {
 	color: var(--text);
-}
-.status-filter {
-	margin-top: -1em !important;
-	margin-bottom: 2em !important;
 }
 @media screen and (min-width: 860px) {
 	.sticky {
