@@ -12,7 +12,7 @@
 				<h2>Design responsibilities</h2>
 				<ul>
 					<li>Smaller, lighter weight fonts require higher contrast colors.</li>
-					<li>The CSS property <q>-webkit-font-smoothing:</q> should be set to auto (default), and <em>not <q>antialiased</q>.</em>
+					<li>The CSS properties <q>-webkit-font-smoothing:</q> or <q>-moz-osx-font-smoothing</q> should be set to auto (default), and <em>not <q>antialiased</q></em>(webkit), and <em>not <q>greyscale</q></em>(moz).
 						<ul>
 							<li>This is especially true for normal weight fonts less than 24px, and light fonts less than 48px. </li>
 							<li>The <q>antialiased</q> mode in font smoothing is actually a blending that reduces perceived lightness contrast by Lc 30 or more.</li>
