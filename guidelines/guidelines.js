@@ -72,9 +72,8 @@ function addGuidelineMarkers() {
 
 function addOutcomeMarkers() {
 	document.querySelectorAll('.outcome').forEach(function(node){
-		var parentHeader = findHeading(node.parentElement);
-		var outcomeHeader = findHeading(node);
-		outcomeHeader.innerHTML = "<span class=\"inserted\">Outcome: </span>" + outcomeHeader.innerHTML; 
+		var outcomeText = node.querySelector("p");
+		outcomeText.innerHTML = "<span class=\"inserted\">Outcome: </span>" + outcomeText.innerHTML; 
 		/* 
 		var insertion = document.createElement("p");
 		insertion.classList.add("inserted");
