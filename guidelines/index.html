@@ -65,14 +65,18 @@
 				<h3>Section status levels</h3>
 				<p>As part of the WCAG 3.0 drafting process each normative section of this document is given a status. This status is used to indicate how far along in the development this section is, how ready it is for experimental adoption, and what kind of feedback the Accessibility Guidelines Working Group is looking for.</p>
 				<ul>
-					<li><strong id="status-placeholder">Placeholder</strong>: This content is temporary, it showcases the type of content or section to expect here. All of this is expected to be replaced. No feedback is needed on placeholder content. It is <em>hidden by default</em>.</li>
-					<li><strong id="status-exploratory">Exploratory</strong>: The working group is exploring what direction to take with this section. This content is not refined, details and definitions may be missing. Feedback should be about the proposed direction. It is <em>hidden by default</em>.</li>
-					<li><strong id="status-developing">Developing</strong>: There is rough agreement on what is needed for this section, although not all high-level concerns have been settled. Details have been filled, but are yet to be worked out. Feedback should be focused on ensuring the sections are usable and reasonable in a broad  </li>
+					<li><strong id="status-placeholder">Placeholder</strong>: This content is temporary, it showcases the type of content or section to expect here. All of this is expected to be replaced. No feedback is needed on placeholder content.</li>
+					<li><strong id="status-exploratory">Exploratory</strong>: The working group is exploring what direction to take with this section. This content is not refined, details and definitions may be missing. Feedback should be about the proposed direction.</li>
+					<li><strong id="status-developing">Developing</strong>: There is rough agreement on what is needed for this section, although not all high-level concerns have been settled. Details have been filled, but are yet to be worked out. Feedback should be focused on ensuring the sections are usable and reasonable in a broad sense.</li>
 					<li><strong id="status-refining">Refining</strong>: The working group has reach consensus on this section. It is ready for broad public review and experimental adoption. Feedback should be focused on the feasibility and implementability.</li>
 					<li><strong id="status-mature">Mature</strong>: Content is believed by the working group to be ready for recommendation. Feedback should be focused on edge case scenarios the working group may not have anticipated.</li>
 				</ul>
-				<p>For more details, see the <a href="https://www.w3.org/WAI/GL/wiki/AG_process">AG Process page</a>. By default, placeholder and exploratory sections is hidden and removed from the table of content. Toggle these sections with the following button:</p>
-				<p><button id="status-filter" data-status-filter="exploratory,placeholder">Reveal placeholder &amp; exploratory sections</button></p>
+				<p>For more details, see the <a href="https://www.w3.org/WAI/GL/wiki/AG_process">AG Process page</a>. </p>
+				<section>
+					<h3>Filtering less mature content</h3>
+					<p>Placeholder and exploratory sections may be distracting to reviewers who want to focus on more vetted cotent. These sections can be hidden with the following button:</p>
+					<p><button id="status-filter" data-status-filter="exploratory,placeholder">Hide placeholder &amp; exploratory sections</button></p>
+				</section>
 			</section>
 
 			<section>
@@ -509,10 +513,10 @@
 										<section>
 						<h4>Conventional tests</h4>
 						<p>Conventional tests evaluate the results within a particular context.  The tests are still unconditional or conditional tests but the context dictates:
-						<ul><li>which unconditional or conditional tests are used, or</li>
+						</p><ul><li>which unconditional or conditional tests are used, or</li>
 						<li>what the baseline is used to test against.
 						</li></ul>
-						WCAG will rely on conventional tests when a solution will improve accessibility but where that implementation of the solution will vary based on situation, such as language, type of content, or other design decisions. Examples include testing for consistency of design decisions and content choices.</p>
+						WCAG will rely on conventional tests when a solution will improve accessibility but where that implementation of the solution will vary based on situation, such as language, type of content, or other design decisions. Examples include testing for consistency of design decisions and content choices.
 						<p>Methods using conventional tests include the test criteria the organization would need to evaluate, parameters for success and failure, and, if it is a conditional test, guidance on evaluating how well the content meets the criteria of the conditional test.</p>
 
 					<aside class="example">

@@ -359,6 +359,6 @@ function postRespec() {
 	addNoteMarkers();
 	removeImgSize();
 	outputJson();
-	moveStatusFilterToToc();
+	//moveStatusFilterToToc();
 	removeGLNum();
 }
