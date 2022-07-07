@@ -17,6 +17,8 @@ jobs:
             destination: guidelines/index.html
           - source: requirements/index.html
             destination: requirements/index.html
+          - source: use-cases/index.html
+            destination: use-cases/index.html
     steps:
       - uses: actions/checkout@v2
       - uses: w3c/spec-prod@v2
