@@ -1,0 +1,726 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
+<meta charset="UTF-8">
+<meta name="generator" content="ReSpec 32.1.10">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+		
+<title>Use Cases for WCAG 3.0 Conformance</title>
+		
+		
+		
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+        
+	
+<meta name="description" content="The Use Cases for WCAG 3.0 document is a collection of example scenarios that illustrate complex problems in conforming to accessibility guidelines.">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "specStatus": "ED",
+  "shortName": "wcag-3.0-use-cases",
+  "copyrightStart": "2022",
+  "license": "w3c-software-doc",
+  "edDraftURI": "https://w3c.github.io/silver/use-cases/",
+  "editors": [
+    {
+      "name": "Jeanne Spellman",
+      "mailto": "jspellman@spellmanconsulting.com",
+      "company": "TetraLogical",
+      "companyURI": "https://tetralogical.com/",
+      "w3cid": 42417,
+      "url": "mailto:jspellman@spellmanconsulting.com"
+    },
+    {
+      "name": "Shawn Lauriat",
+      "mailto": "lauriat@google.com",
+      "company": "Google, Inc.",
+      "companyURI": "https://www.google.com/",
+      "w3cid": 90646,
+      "url": "mailto:lauriat@google.com"
+    },
+    {
+      "name": "Janina Sajka",
+      "mailto": "janina@rednote.net",
+      "company": "Red Note",
+      "companyURI": "",
+      "w3cid": 33688,
+      "url": "mailto:janina@rednote.net"
+    },
+    {
+      "name": "Michael Cooper",
+      "mailto": "cooper@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org/",
+      "w3cid": 34017,
+      "url": "mailto:cooper@w3.org"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Shadi Abou-Zahra",
+      "mailto": "sabouzah@amazon.at",
+      "company": "Amazon",
+      "companyURI": "http://amazon.com/",
+      "w3cid": 34651,
+      "url": "mailto:sabouzah@amazon.at"
+    }
+  ],
+  "group": "ag",
+  "github": "w3c/silver",
+  "maxTocLevel": 4,
+  "localBiblio": {
+    "508-criteria": {
+      "title": "Section 508 Functional Performance Criteria",
+      "publisher": "United States Access Board",
+      "date": "8 December 2011",
+      "href": "https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria"
+    },
+    "en-301-549": {
+      "title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe",
+      "publisher": "European Telecommunications Standards Institute",
+      "date": "February 2014",
+      "href": "https://www.etsi.org/deliver/etsi_tr/101500_101599/101550/01.01.01_60/tr_101550v010101p.pdf"
+    }
+  },
+  "lint": false,
+  "publishISODate": "2022-07-07T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 07 July 2022"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
+	<body class="h-entry informative"><div class="head">
+    <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+  </a></p>
+    <h1 id="title" class="title">Use Cases for WCAG 3.0 Conformance</h1> 
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2022-07-07">07 July 2022</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://w3c.github.io/silver/use-cases/">https://w3c.github.io/silver/use-cases/</a>
+              </dd>
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/wcag-3.0-use-cases/">https://www.w3.org/TR/wcag-3.0-use-cases/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/use-cases/">https://w3c.github.io/silver/use-cases/</a></dd>
+        <dt>History:</dt><dd>
+                    <a href="https://github.com/w3c/silver/commits/">Commit history</a>
+                  </dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt><dd class="editor p-author h-card vcard" data-editor-id="42417">
+    <a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (<span class="p-org org h-org">TetraLogical</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="90646">
+    <a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (<span class="p-org org h-org">Google, Inc.</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="33688">
+    <a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a> (<span class="p-org org h-org">Red Note</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="34017">
+    <a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<span class="p-org org h-org">W3C</span>)
+  </dd>
+        
+        <dt>Author:</dt><dd class="editor p-author h-card vcard" data-editor-id="34651">
+    <a class="ed_mailto u-email email p-name" href="mailto:sabouzah@amazon.at">Shadi Abou-Zahra</a> (<span class="p-org org h-org">Amazon</span>)
+  </dd>
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/silver/">GitHub w3c/silver</a>
+        (<a href="https://github.com/w3c/silver/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/silver/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/silver/issues/">open issues</a>)
+      </dd>
+        
+        
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2022
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
+			<p>The Use Cases for WCAG 3.0 document is a collection of example scenarios that illustrate complex problems in conforming to accessibility guidelines. </p>
+    </section>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+			<p>The Use Cases for WCAG 3.0 is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/"><abbr title="World Wide Web Consortium">W3C</abbr> Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20Use-Cases%20for%20Silver">email</a>. </p>
+			<p>This document is developed by the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Substantial_Conformance">Silver Conformance Options subgroup</a>. It has undergone several cycles of review and continues to be worked on by that group. The document has also been presented to the parent Silver Task Force and is undergoing further review there as well. </p>
+			
+		<p>
+    This document was published by the <a href="https://www.w3.org/groups/wg/ag">Accessibility Guidelines Working Group</a> as
+    an Editor's Draft. 
+  </p><p>Publication as an Editor's Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
+    
+  </p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/">1 August 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+      
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/groups/wg/ag/ipr">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#problem"><bdi class="secno">2. </bdi>Problem Description</a></li><li class="tocline"><a class="tocxref" href="#approach"><bdi class="secno">3. </bdi>Approach and Structure</a></li><li class="tocline"><a class="tocxref" href="#keyTerms"><bdi class="secno">4. </bdi>Key Terminology and Concepts</a></li><li class="tocline"><a class="tocxref" href="#situations"><bdi class="secno">5. </bdi>Situations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#situation-1"><bdi class="secno">5.1 </bdi>Situation 1: Bugs and other issues of oversight occur in content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-1-1"><bdi class="secno">5.1.1 </bdi>Example 1.1 - website with many content authors</a></li><li class="tocline"><a class="tocxref" href="#example-1-2"><bdi class="secno">5.1.2 </bdi>Example 1.2 - application with high degree of complexity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-2"><bdi class="secno">5.2 </bdi>Situation 2: When large volumes of content are accumulating too rapidly to make fully conforming </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-2-1"><bdi class="secno">5.2.1 </bdi>Example 2.1 - content being generated by users:</a></li><li class="tocline"><a class="tocxref" href="#example-2-2"><bdi class="secno">5.2.2 </bdi>Example 2.2 - content being generated automatically</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-3"><bdi class="secno">5.3 </bdi>Situation 3: When making large volumes of content fully conform is not achievable immediately </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-3-1"><bdi class="secno">5.3.1 </bdi>Example 3.1 - making content conform after acquisition: </a></li><li class="tocline"><a class="tocxref" href="#example-3-2"><bdi class="secno">5.3.2 </bdi>Example 3.2 - adapting content to changed requirements: </a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-4"><bdi class="secno">5.4 </bdi>Situation 4: Content provider does not own or directly control the content </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-4-1"><bdi class="secno">5.4.1 </bdi>Example  4.1: website that allows users to create their own websites </a></li><li class="tocline"><a class="tocxref" href="#example-4-2"><bdi class="secno">5.4.2 </bdi>Example 4.2 - portal that aggregates content from different sources</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-5"><bdi class="secno">5.5 </bdi>Situation 5: When content providers have dependencies on other services </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-5-1"><bdi class="secno">5.5.1 </bdi>Example 5.1 - service using a payment service</a></li><li class="tocline"><a class="tocxref" href="#example-5-2"><bdi class="secno">5.5.2 </bdi>Example 5.2 - embedding social media channels</a></li><li class="tocline"><a class="tocxref" href="#example-5-3"><bdi class="secno">5.5.3 </bdi>Example 5.3 - relying on content management systems (CMS)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-6"><bdi class="secno">5.6 </bdi> Current limitations in providing the same level of conformance for live content </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-6.1"><bdi class="secno">5.6.1 </bdi>Example 6.1 - reduced quality of captions in live content</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-7"><bdi class="secno">5.7 </bdi>Current limitations in making some types of content fully conform </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-7-1"><bdi class="secno">5.7.1 </bdi>Example 7.1 - technology with limited support for accessibility</a></li><li class="tocline"><a class="tocxref" href="#example-7-2"><bdi class="secno">5.7.2 </bdi>Example 7.2 - sensory experiences cannot be easily translated</a></li><li class="tocline"><a class="tocxref" href="#example-7-3"><bdi class="secno">5.7.3 </bdi>Example 7.3 - lack of support by assistive technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-8"><bdi class="secno">5.8 </bdi>Situation 8: When content is rarely used, if ever </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-8-1"><bdi class="secno">5.8.1 </bdi>Example 8.1 - outdated content that is rarely used</a></li><li class="tocline"><a class="tocxref" href="#example-8-2"><bdi class="secno">5.8.2 </bdi>Example 8.2 - current content that is rarely used</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-9"><bdi class="secno">5.9 </bdi>Situation 9: Content is experimental for all users, including people with disabilities </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-9-1"><bdi class="secno">5.9.1 </bdi>Example 9.1 - on-going research and development of accessibility features</a></li><li class="tocline"><a class="tocxref" href="#example-9-2"><bdi class="secno">5.9.2 </bdi>Example 9.2 - prioritizing speed-to-market over product stability</a></li><li class="tocline"><a class="tocxref" href="#example-9-3"><bdi class="secno">5.9.3 </bdi>Example 9.3 - product demo with limited functionality and accessibility</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-10"><bdi class="secno">5.10 </bdi>Situation 10: Not all accessibility requirements are always applicable to all content </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-10-1"><bdi class="secno">5.10.1 </bdi>Example 10.1 - content provided to a limited group of users only</a></li><li class="tocline"><a class="tocxref" href="#example-10-2"><bdi class="secno">5.10.2 </bdi>Example 10.2 - content accessed by known set of user technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#situation-11"><bdi class="secno">5.11 </bdi>Situation 11: Small businesses face unique challenges</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-11-1"><bdi class="secno">5.11.1 </bdi>Example 11.1 - business has limited expertise</a></li><li class="tocline"><a class="tocxref" href="#example-11-2"><bdi class="secno">5.11.2 </bdi>Example 11.2 - business has limited resources</a></li></ol></li></ol></li></ol></nav>
+		<section id="introduction"><div class="header-wrapper"><h2 id="intro"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#intro" aria-label="Permalink for Section 1."></a></div>
+			
+			<p>The purpose of this document is to outline situations in which ensuring conformance of websites and applications might present a challenge for content providers, despite best intentions and efforts. The intent of this document is to help form a shared understanding of such situations, to contribute to the development of accessibility resources. These resources could include:</p>
+			<ul>
+				<li>Technical standards for accessibility, such as <a href="https://www.w3.org/TR/wcag-3.0/"><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0</a> and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessiiblity Guidelines (ATAG) 2.0</a></li>
+    			<li>Accompanying technical guidance, such as <a href="https://www.w3.org/WAI/WCAG22/Understanding/">Understanding WCAG 2</a> , <a href="https://www.w3.org/WAI/WCAG22/Techniques/">Techniques for WCAG 2</a>, and similar resources being considered for WCAG 3</li> 
+    			<li>Advisory guidance from WAI, such as <a href="https://www.w3.org/WAI/planning/org-policies/">Developing Organizational Policies on Web Accessibility</a>, <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and Managing Web Accessibility</a>, and <a href="https://www.w3.org/WAI/planning/statements/">Developing an Accessibility Statement</a></li>
+    			<li>Other potential resources, such as <a href="https://w3c.github.io/maturity-model/">Maturity Model</a></li>
+			</ul>
+		</section>
+		<section id="problem-description"><div class="header-wrapper"><h2 id="problem"><bdi class="secno">2. </bdi>Problem Description</h2><a class="self-link" href="#problem" aria-label="Permalink for Section 2."></a></div>
+			
+			<p>Content providers encounter situations where trying to make content conform to accessibility requirements might present challenges for them, despite best intentions and efforts. For example, when they are publishing large volumes of content, managing third-party content, and when they are adopting new technologies such as natural language interfaces and immersive environments. They then need to decide if they need to pull or not publish the content, versus seek more pragmatic approaches to address the situations. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3</a> and other resources from WAI, such as <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and Managing Web Accessibility</a>, have the goal to support content providers in such situations. However, we lack a shared understanding and common description of these situations across the different WAI groups. This makes some discussions less effective. Moreover, not all challenges can be resolved alone through technical standards and resources from WAI. Some challenges need to be addressed through accessibility policies that are not developed by WAI. For example, most accessibility policies, such as the Americans with Disabilities Act (ADA) and European Accessibility Act (EAA), include concepts around <em>reasonable accommodation</em>, <em>undue burden</em>, <em>equivalent facilitation</em>, and <em>limitations on application</em>. That is, we need to understand the context around the situations and that some of them are more technical and should be addressed in WCAG, while others are more policy related and need to be addressed in policy or regulation. Understanding this helps us approach the parts that fall within the scope of WAI. </p>
+			<p>Content providers encounter situations where trying to make content conform to accessibility requirements might present challenges for them, despite best intentions and efforts. For example, when they are publishing large volumes of content, managing third-party content, and when they are adopting new technologies such as natural language interfaces and immersive environments. They then need to decide if they need to pull or not publish the content, versus seek more pragmatic approaches to address the situations. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3</a> and other resources from WAI, such as <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and Managing Web Accessibility</a>, have the goal to support content providers in such situations. However, we lack a shared understanding and common description of these situations across the different WAI groups. This makes some discussions less effective. Moreover, not all challenges can be resolved alone through technical standards and resources from WAI. Some challenges need to be addressed through accessibility policies that are not developed by WAI. For example, most accessibility policies, such as the Americans with Disabilities Act (ADA) and European Accessibility Act (EAA), include concepts around <em>reasonable accommodation</em>, <em>undue burden</em>, <em>equivalent facilitation</em>, and <em>limitations on application</em>. That is, we need to understand the context around the situations. Some of them are more technical in nature, and others are more policy related. Understanding this helps us approach the parts that fall within the scope of WAI. </p>
+		</section>
+		<section id="approach-and-structure"><div class="header-wrapper"><h2 id="approach"><bdi class="secno">3. </bdi>Approach and Structure</h2><a class="self-link" href="#approach" aria-label="Permalink for Section 3."></a></div>
+			
+			<p>This document provides a collection of situations where trying to make content accessible might present challenges for content providers. The intent is to identify common patterns across the different situations, and help form a shared understanding for them. This could contribute to the development of accessibility resources from WAI. This includes but is not limited to informing the development of the conformance model and provisions in WCAG 3. Another potential outcome could be WAI guidance with considerations for policy makers wanting to adopt WCAG.</p>
+
+			<p>Each situation in this document is illustrated with one or more brief example scenario. Each situation also includes a high-level outline of:</p>
+			<ul>
+				<li>How technical standards might contribute to addressing the situation</li>
+    			<li>How guidance documents and tools that accompnay technical standards might contribute to addressing the situation (including advice to policy setting bodies)</li>
+    			<li>How accessibility policies might contribute to addressing the situation</li>
+			</ul>
+			<p>The situations and examples cover a broad range of sectors, including public, commercial, education, and more. However, they are not in any way exhaustive. The situations are also not mutually exclusive - multiple situations could be applicable to the same content at the same time.</p>
+
+			<p>The situations and examples are not intended to cover the all too frequent instances where content providers fail to consider accessibility requirements, whether out of ignorance or negligence. These are real concerns that need to be addressed. They are simply outside the scope of this particular document. In this document we intentionally presume that content providers are doing their best to consider accessibility to the extent they reasonably can. </p>
+		</section>
+		<section id="key-terminology-and-concepts"><div class="header-wrapper"><h2 id="keyTerms"><bdi class="secno">4. </bdi>Key Terminology and Concepts</h2><a class="self-link" href="#keyTerms" aria-label="Permalink for Section 4."></a></div>
+			
+			<p>Some of the key terms and concepts used in this document include the following:</p>
+			<ul>
+    			<li><strong>Content Provider:</strong> person or entity providing content to others, for example through a website, mobile app, and other user interfaces. </li>
+    			<li><strong>Content Creator:</strong> person or entity creating the content. This includes content in different formats, such as text, code, audio, and video.</li>
+    			<li><strong>Content Owner:</strong> person or entity owning the content. This can be the commissioner of the content or another holder of the rights.</li>
+    			<li><strong>Conformance:</strong> adhering to technical standards. In this context accessibility standards, such as the <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG).</li>
+    			<li><strong>Compliance:</strong> adhering to laws and other types of policies. In this context accessibility policies, such as the European Accessibility Act (EAA).</li>
+    			<li><strong>Relative priority for people with disabilities:</strong> in the context of this document refers to prioritizing certain content before other content, not to exclude any content as irrelevant for people with disabilities. For example, a restaurant owner might prioritize improving accessibility of the information on accessibility of the restaurant before improving accessibility of the picture gallery.</li>
+    			<li><strong>Reasonable efforts concepts:</strong> refers to concepts such as "reasonable accommodation" and "undue burden" that exist in many policies, such as Americans with Disabilities Act (ADA) and European Accessibility Act (EAA).</li>
+			</ul>
+			<p><strong>Note:</strong> This is not intended to be any glossary definition of the terms, just an introduction of these concepts in the context of this document. If accepted by the group, these terms used in the finalized documents may be considered for aligning with and adding to the corresponding glossary definitions. </p>
+		</section>
+		<section id="situations-0"><div class="header-wrapper"><h2 id="situations"><bdi class="secno">5. </bdi>Situations</h2><a class="self-link" href="#situations" aria-label="Permalink for Section 5."></a></div>
+			
+			<section id="situation-1-bugs-and-other-issues-of-oversight-occur-in-content"><div class="header-wrapper"><h3 id="situation-1"><bdi class="secno">5.1 </bdi>Situation 1: Bugs and other issues of oversight occur in content</h3><a class="self-link" href="#situation-1" aria-label="Permalink for Section 5.1"></a></div>
+				
+				<p>In this situation the content provider is committed to accessibility but, despite all efforts, virtually all software has bugs and other issues of oversight. 
+				</p>
+					<section id="example-1-1-website-with-many-content-authors"><div class="header-wrapper"><h4 id="example-1-1"><bdi class="secno">5.1.1 </bdi>Example 1.1 - website with many content authors</h4><a class="self-link" href="#example-1-1" aria-label="Permalink for Section 5.1.1"></a></div>
+						 
+						<p>A news service takes accessibility very seriously. All functionality, including navigation, search, and subscribing to the news feeds conform to the technical standard. All staff who publish content are required to complete regular training on accessibility, along with the other training they receive on writing. The service provides accessibility checkers and tutorials for its staff, and runs regular scans and spot-checks for accessibility. Anyone can also report issues they find, which are quickly addressed. Despite all that, here and there conformance issues occur. The issues are filed as bugs in the central bug tracking system and are processed according to their severity level, together with other content issues.</p>
+					</section>
+					<section id="example-1-2-application-with-high-degree-of-complexity"><div class="header-wrapper"><h4 id="example-1-2"><bdi class="secno">5.1.2 </bdi>Example 1.2 - application with high degree of complexity</h4><a class="self-link" href="#example-1-2" aria-label="Permalink for Section 5.1.2"></a></div>
+						
+						<p>A service provider creates a tool that allows users to create complex forms and questionnaires. It has ready-made components like checkboxes, radio buttons, drop-down menus, sliders, and other form controls that users can combine to create their own online forms. Each component conforms to the technical standard on its own as well as in combination with most other components. However, with the growing number of components and possible ways of combining them, it is no longer possible to exhaustively test every possible permutation. Despite all efforts of the service provider to avoid conflicting combinations, they do occur in some situations. This is not limited to accessibility, and also other issues can occur. When such issues are reported, they are filed as bugs and treated based on their severity level in a consistent way.</p>
+					</section>
+			</section>
+			<section id="situation-2-when-large-volumes-of-content-are-accumulating-too-rapidly-to-make-fully-conforming"><div class="header-wrapper"><h3 id="situation-2"><bdi class="secno">5.2 </bdi>Situation 2: When large volumes of content are accumulating too rapidly to make fully conforming </h3><a class="self-link" href="#situation-2" aria-label="Permalink for Section 5.2"></a></div>
+				
+				<p>In this situation the continually compounding content makes it prohibitive for the content provider to ensure full conformance of the entire content. 
+				</p>
+					<section id="example-2-1-content-being-generated-by-users"><div class="header-wrapper"><h4 id="example-2-1"><bdi class="secno">5.2.1 </bdi>Example 2.1 - content being generated by users:</h4><a class="self-link" href="#example-2-1" aria-label="Permalink for Section 5.2.1"></a></div>
+						 
+						<p>An online shop provides functionality for users to provide product reviews. The online shop receives thousands of reviews each day, each of which can include formatted (rich) text, images, and video content. The online shop provides help pages with information on accessibility good practice, with specific suggestions for users. The online shop is programmed in such a way that accessibility issues in the content generated by users does not interfere with the accessibility of other content. For example, audio uploaded by users cannot be set to play automatically. It also allows users to provide textual descriptions for images, and captions and audio/visual descriptions for videos that are uploaded by users. For several languages, the online shop provides captions that are automatically generated for the user to correct before publishing the reviews. Despite these measures, the shop operator cannot guarantee conformance of all the reviews it continually receives. It indicates the potential accessibility issues in an accessibility statement. 
+						</p>
+					</section>
+					<section id="example-2-2-content-being-generated-automatically"><div class="header-wrapper"><h4 id="example-2-2"><bdi class="secno">5.2.2 </bdi>Example 2.2 - content being generated automatically</h4><a class="self-link" href="#example-2-2" aria-label="Permalink for Section 5.2.2"></a></div>
+						 
+						<p>A weather station continually publishes satellite and radar images. This includes X images from different cameras every minute. Each image has complex visual information, including cloud formations, atmospheric pressure zones, and wind speeds at different geographic locations. The weather station provides short text alternatives with brief descriptions to identify each image it publishes, including the date, time, and name of the satellite or radar that took the image. For the few images it uses in weather forecasts, it also provides long text alternatives with more detailed descriptions of the image content (to convey the equivalent purpose of the image). These descriptions include the names of the most pertinent cloud formations, atmospheric pressure changes, and wind speeds for selected cities; it does not exhaustively describe all aspects of the images. The weather station indicates to the users which images have and do not yet have detailed descriptions, and describes the limited support for accessibility resulting from images that do not yet have detailed descriptions in an accessibility statement. It notes the rationale for this limitation, and provides a mechanism for users to request a confirming versions of past forecasts, for example for research purposes. 
+						</p>
+					</section>
+			</section>
+			<section id="situation-3-when-making-large-volumes-of-content-fully-conform-is-not-achievable-immediately"><div class="header-wrapper"><h3 id="situation-3"><bdi class="secno">5.3 </bdi>Situation 3: When making large volumes of content fully conform is not achievable immediately </h3><a class="self-link" href="#situation-3" aria-label="Permalink for Section 5.3"></a></div>
+				
+				<p>In this situation the content provider is committed to make specific content conform to the technical standard but has substantial challenges doing so immediately, for example for large volumes of content. 
+				</p>
+					<section id="example-3-1-making-content-conform-after-acquisition"><div class="header-wrapper"><h4 id="example-3-1"><bdi class="secno">5.3.1 </bdi>Example 3.1 - making content conform after acquisition: </h4><a class="self-link" href="#example-3-1" aria-label="Permalink for Section 5.3.1"></a></div>
+						 
+						<p>A company acquired another company with a website/app product that does not fully conform to the technical standard. The acquiring company is now training the relevant content creators, to ensure that all newly created content will conform to the technical standard. Other existing content areas will be revised to conform to the technical standard, usually with the scheduled update of the content. Some content areas will soon be phased out entirely, possibly before they can be made to conform. The acquiring company prioritizes core functionality of the website/app, to make them conform to the technical standard. For example, so that users can browse through all content areas and carry out essential functionality. The company also turned off automatic playback for all videos, also in content areas that were not yet prioritized to make them conform, because audio from the automatically playing video disrupts use of the entire content for some users. The company indicates to the users the accessibility status of the different content areas. The company also provides an accessibility statement with details regarding the plan to revise the courses to meet the applicable accessibility requirements.
+						</p>
+					</section>
+					<section id="example-3-2-adapting-content-to-changed-requirements"><div class="header-wrapper"><h4 id="example-3-2"><bdi class="secno">5.3.2 </bdi>Example 3.2 - adapting content to changed requirements: </h4><a class="self-link" href="#example-3-2" aria-label="Permalink for Section 5.3.2"></a></div>
+						 
+						<p>The website and app of an organization conforms to a certain version of a technical standard, such as WCAG. A new version of that technical standard changes some of the accessibility requirements. For example, some of the requirements were modified, others removed, and yet others added to the technical standard. The organization wants to continue conforming to the technical standard but cannot update all its content and applications to conform to the new version of the technical standard immediately. For example, some of the tables and forms are generated by a content management system (CMS) that does not yet support the latest technical standard that the organization wants to meet. The organization prioritizes requirements that it can address more quickly. For example, it changes the visual design to address a new calculation for color luminosity that is introduced in the new technical standard. The organization also has a plan for addressing the remaining accessibility requirements. It indicates to the users the accessibility status of the different content areas and provides an accessibility statement with details regarding the plan to transition the content to the new technical standard.
+						</p>
+					</section>
+			</section>
+			<section id="situation-4-content-provider-does-not-own-or-directly-control-the-content"><div class="header-wrapper"><h3 id="situation-4"><bdi class="secno">5.4 </bdi>Situation 4: Content provider does not own or directly control the content </h3><a class="self-link" href="#situation-4" aria-label="Permalink for Section 5.4"></a></div>
+				
+				<p>In this situation the content provider does not own or directly control the content being published by others, and cannot ensure the same level of conformance for that content. 
+				</p>
+				<section id="example-4-1-website-that-allows-users-to-create-their-own-websites"><div class="header-wrapper"><h4 id="example-4-1"><bdi class="secno">5.4.1 </bdi>Example  4.1: website that allows users to create their own websites </h4><a class="self-link" href="#example-4-1" aria-label="Permalink for Section 5.4.1"></a></div>
+					 
+					<p> A service provider creates a tool that allows others to create their own online presences. The tool itself conforms to the technical standard, and helps users to create conforming content. For example, the tool allows users to indicate headings, to provide text alternatives for images, and it generates accessible markup. The tool also provides accessibility guidance and accessibility checker tools. The provider offers additional consulting services including for privacy, security, internationalization, and accessibility. It also encourages non-professional and non-business users to implement accessibility requirements, and explains the many benefits of this including for improving search-engine optimization (SEO). In some counties, professionals and businesses are required to meet accessibility requirements, also when they use such tools. Despite all this, the tool provider cannot ensure conformance of the content created by non-business and business users of the tool because it does not own or directly control the content. (Note: this example is the opposite of example 5.3; it is about shortcomings in the content generated by an authoring tool that principally supports accessibility.)
+					</p>
+					</section>
+					<section id="example-4-2-portal-that-aggregates-content-from-different-sources"><div class="header-wrapper"><h4 id="example-4-2"><bdi class="secno">5.4.2 </bdi>Example 4.2 - portal that aggregates content from different sources</h4><a class="self-link" href="#example-4-2" aria-label="Permalink for Section 5.4.2"></a></div>
+						 
+						<p>A portal aggregates different types of scientific articles from different sources. The portal itself conforms to the technical standard, and the operator contractually requires the content owners providing content through the portal to ensure their content conforms to the technical standard. The portal provides guidance on the accessibility requirements, including for images, tables, math formulas, and other types of content. It also provides accessibility checker tools, to help the content owners meet the accessibility requirements. It also runs regular scans and spot-checks for accessibility, and informs the content owners about potential issues it identifies or that get reported by users, so that they can fix them. The content owners are responsible for assessing the confirmed issues, and addressing them within a reasonable time-frame depending on their severity and complexity. They are also responsible for ensure continued conformance when they update the content published through the portal.
+						</p>
+				</section>				
+		</section>
+		<section id="situation-5-when-content-providers-have-dependencies-on-other-services"><div class="header-wrapper"><h3 id="situation-5"><bdi class="secno">5.5 </bdi>Situation 5: When content providers have dependencies on other services </h3><a class="self-link" href="#situation-5" aria-label="Permalink for Section 5.5"></a></div>
+				
+				<p>In this situation the content provider depends on the support provided by other services, to ensure conformance of the content. 
+				</p>
+				<section id="example-5-1-service-using-a-payment-service"><div class="header-wrapper"><h4 id="example-5-1"><bdi class="secno">5.5.1 </bdi>Example 5.1 - service using a payment service</h4><a class="self-link" href="#example-5-1" aria-label="Permalink for Section 5.5.1"></a></div>
+					 
+					<p>A theater wants to sell tickets online. It ensures that accessibility is one of the key criteria during the procurement of an online payment service. Unfortunately, none of the payment service providers that are compatible with its existing reservations and accounting systems support the desired level of conformance. The theater selects a payment service provider that commits to implement all the missing accessibility requirements within X months. Until then, the theater provides an option for users who are observing accessibility barriers to contact them by phone/TTY or email, to work out other payment modalities. The theater makes this information available to users during the booking process, and ensures that other functionality conforms to the technical standard. It also indicates this accessibility limitation, as well as contact hours for phone and email booking, in an accessibility statement.
+					</p>
+				</section>
+				<section id="example-5-2-embedding-social-media-channels"><div class="header-wrapper"><h4 id="example-5-2"><bdi class="secno">5.5.2 </bdi>Example 5.2 - embedding social media channels</h4><a class="self-link" href="#example-5-2" aria-label="Permalink for Section 5.5.2"></a></div>
+					 
+					<p>A start-up wants to create an online presence. It is aware of the accessibility requirements that are applicable, and so it selects a tool for creating its online presence that supports accessibility. It follows the guidance and uses the accessibility checkers provided by the tool, to ensure that the content it creates conforms to the technical standard. However, the start-up also needs to integrate social media channels in its online presence, so that it can promote itself. Unfortunately, some of these social media tools do not support the same level of conformance. The start-up makes sure that important information, such as product updates and news, are also provided directly through its online presence that conforms to the technical standard. The online presence is also programmed in such a way that accessibility issues in the social media feeds do not impact accessibility of the other content.
+					</p>
+				</section>
+				<section id="example-5-3-relying-on-content-management-systems-cms"><div class="header-wrapper"><h4 id="example-5-3"><bdi class="secno">5.5.3 </bdi>Example 5.3 - relying on content management systems (CMS)</h4><a class="self-link" href="#example-5-3" aria-label="Permalink for Section 5.5.3"></a></div>
+					 
+					<p>A company uses a website that allows it to create its own website. The tool provides several accessibility features, such as allowing users to indicate headings, to provide text alternatives for images, and it generates accessible markup. This was initially sufficient for the company. However, as the company website grew, the tool does not anymore provide an adequate level of accessibility support. For example, creating complex forms with the tool has conformance limitations. The company regularly files issues it finds with the tool provider, which are partially addressed at a slower pace than the company needs to ensure conformance. The company is considering to switch tools but that would be an insurmountable investment for the company at this time. The company describes the accessibility limitations in an accessibility statements and provides users with other options to complete the forms, for example through email. (Note: this example is the opposite of example 4.1; it is about shortcomings in the authoring tool that a website owner depends on.) 
+					</p>
+				</section>
+			</section>
+			<section id="current-limitations-in-providing-the-same-level-of-conformance-for-live-content"><div class="header-wrapper"><h3 id="situation-6"><bdi class="secno">5.6 </bdi> Current limitations in providing the same level of conformance for live content </h3><a class="self-link" href="#situation-6" aria-label="Permalink for Section 5.6"></a></div>
+				
+				<p>
+				</p>
+				<section id="example-6-1-reduced-quality-of-captions-in-live-content"><div class="header-wrapper"><h4 id="example-6.1"><bdi class="secno">5.6.1 </bdi>Example 6.1 - reduced quality of captions in live content</h4><a class="self-link" href="#example-6.1" aria-label="Permalink for Section 5.6.1"></a></div>
+					 
+					<p>An organization is hosting webinars. It provides real-time captioning through a professional service provider (CART). The captioning service provides a high degree of accuracy, customary for the field. Here and there words are missed and misspelled, in particular some technical terms and the names of people are not always properly captioned during the live cast of webinars. In some webinars the moderators have sufficient time to pay attention to such mistakes, and to provide corrections in real time. At other times the discussions are too fast for real time corrections, for example during Q&amp;A sessions. The live captions are also created by humans listening to the audio and typing the captions, so they are not synchronized with the audio. When the organization publishes recorded webinars, it corrects the captions and the transcripts, and synchronizes the captions with the audio to improve accessibility. 
+					</p>
+				</section>
+			</section>
+			<section id="current-limitations-in-making-some-types-of-content-fully-conform"><div class="header-wrapper"><h3 id="situation-7"><bdi class="secno">5.7 </bdi>Current limitations in making some types of content fully conform </h3><a class="self-link" href="#situation-7" aria-label="Permalink for Section 5.7"></a></div>
+				
+				<p>In this situation the content provider is encountering substantial technical challenges in making content fully conform, especially with new technologies where accessibility techniques are not yet available. 
+				</p>
+				<section id="example-7-1-technology-with-limited-support-for-accessibility"><div class="header-wrapper"><h4 id="example-7-1"><bdi class="secno">5.7.1 </bdi>Example 7.1 - technology with limited support for accessibility</h4><a class="self-link" href="#example-7-1" aria-label="Permalink for Section 5.7.1"></a></div>
+					 
+					<p>A company developed a virtual reality platform, including hardware and software. Users enter this immersive environment using goggles. The goggles present video, audio, and tactile information through vibrating in different patterns. Users interact with this immersive environment through the goggles and controllers they hold in their hands. The company supports accessibility to the extent it reasonably can. For example, information can be presented in multiple formats, such as using audio signals to communicate visually nearing objects. It also supports the standard mouse and keyboard interfaces of the operating system and provides a documented API to support other developers in creating custom-made controllers, including assistive technologies. Yet the company cannot conform to all accessibility requirements because there are currently no widely recognized techniques for immersive environments. 
+					</p>
+				</section>
+				<section id="example-7-2-sensory-experiences-cannot-be-easily-translated"><div class="header-wrapper"><h4 id="example-7-2"><bdi class="secno">5.7.2 </bdi>Example 7.2 - sensory experiences cannot be easily translated</h4><a class="self-link" href="#example-7-2" aria-label="Permalink for Section 5.7.2"></a></div>
+					 
+					<p>A tourism agency wants to promote the cultural heritage of its country through an online presence. It provides high quality videos and images of nature, monuments, buildings, art works, and other artifacts. It also provides sound bites featuring local singers, musicians, and composers. It provides alternatives for all this content, including text alternatives for images and other non-text content, captions for audio content, and audio/text descriptions for video content. For example, for the image of a popular monument, the tourism agency provides short text alternatives to identify the monument. It also provides a longer text alternative to describe its shape, color, and other noticeable characteristics, as well as specific details visible to most users, such as corrosion and shadows. In addition to this, the tourism agency voluntarily provides an optional audio track for that particular image, to help convey the mood portrayed by the image. Yet despite all these efforts, it is not possible to fully convey the visual experiences from the image to other senses. 
+					</p>
+				</section>
+				<section id="example-7-3-lack-of-support-by-assistive-technologies"><div class="header-wrapper"><h4 id="example-7-3"><bdi class="secno">5.7.3 </bdi>Example 7.3 - lack of support by assistive technologies</h4><a class="self-link" href="#example-7-3" aria-label="Permalink for Section 5.7.3"></a></div>
+					 
+					<p>Screen-readers are not able to render a 3D Model. A company offers highly engaging 3D models of the human heart via WebGL, complete with a type of label to denote a sub feature exploration or information panel. The company took care to provide a list style alternative navigation for these "free floating" labels that connects to the same associated data, and provides a descriptive text for each sub feature explored. The company has also offered a 3D Printable alternative model that may optionally present a tactile or braille identifier to connect to the associated data-set. While all of these steps shows in good faith an attempt to build accessible content, there is no prescribed method to bring this type of content forward in an accessible way. 
+					</p>
+				</section>
+			</section>
+			<section id="situation-8-when-content-is-rarely-used-if-ever"><div class="header-wrapper"><h3 id="situation-8"><bdi class="secno">5.8 </bdi>Situation 8: When content is rarely used, if ever </h3><a class="self-link" href="#situation-8" aria-label="Permalink for Section 5.8"></a></div>
+				
+				<p>In this situation the content provider prioritizes effort on actively used content rather than on content that is not used by the majority of users, including people with disabilities. 
+				</p>
+				<section id="example-8-1-outdated-content-that-is-rarely-used"><div class="header-wrapper"><h4 id="example-8-1"><bdi class="secno">5.8.1 </bdi>Example 8.1 - outdated content that is rarely used</h4><a class="self-link" href="#example-8-1" aria-label="Permalink for Section 5.8.1"></a></div>
+					 
+					<p>An organization that publishes weather forecast reports decided to take up accessibility. It changed its internal tooling and workflows to ensure that all new weather forecasts conform to the technical standard when they are published. The logs show that hardly anyone views past weather forecast reports, and so the organization considers all forecasts older than X weeks to be legacy. Such outdated forecasts are marked to all users as legacy, for example in a banner that conforms to the technical standard. The organization decides not to prioritize retrofitting legacy forecasts published before the date in which it adopted its new approach to accessibility. The organization indicates in an accessibility statement that forecasts from before that date may have accessibility issues, and describes the types of issues that tend to occur in these forecasts. The organization also provides a mechanism for users to request conforming versions of past forecasts, for example for research purposes. 
+					</p>
+				</section>
+				<section id="example-8-2-current-content-that-is-rarely-used"><div class="header-wrapper"><h4 id="example-8-2"><bdi class="secno">5.8.2 </bdi>Example 8.2 - current content that is rarely used</h4><a class="self-link" href="#example-8-2" aria-label="Permalink for Section 5.8.2"></a></div>
+					 
+					<p>An organization is continuously archiving thousands of electronic titles, including of digital books, video and audio recordings, scanned documents, and more. It ensure that those presented to the general public, for example displayed in an exhibition, conform to the technical standard. However, the majority of titles are archived and very rarely used. Occasionally, researchers, collectors, and others may be interested in the one or other title for particular reasons. These rarely accessed titles are marked to all users as archived, for example in a banner that conforms to the technical standard. The organization decides not to prioritize retrofitting archived titles, to make them conform to the technical standard. The organization indicates in an accessibility statement that archived titles may have accessibility issues, and describes the types of issues that tend to occur in these titles. The organization also provides a mechanism for users to request conforming versions of archived titles, for example for research purposes. 
+					</p>
+				</section>
+			</section>
+			<section id="situation-9-content-is-experimental-for-all-users-including-people-with-disabilities"><div class="header-wrapper"><h3 id="situation-9"><bdi class="secno">5.9 </bdi>Situation 9: Content is experimental for all users, including people with disabilities </h3><a class="self-link" href="#situation-9" aria-label="Permalink for Section 5.9"></a></div>
+				
+				<p>In this situation the content provider is experimenting with new content that is expected to have bugs for all users, including conformance bugs. 
+				</p>
+				<section id="example-9-1-on-going-research-and-development-of-accessibility-features"><div class="header-wrapper"><h4 id="example-9-1"><bdi class="secno">5.9.1 </bdi>Example 9.1 - on-going research and development of accessibility features</h4><a class="self-link" href="#example-9-1" aria-label="Permalink for Section 5.9.1"></a></div>
+					 
+					<p>A research and development lab introduced a new type of gadget on the market, which it clearly identifies as experimental. This gadget uses a natural language interface (NLI) for interaction through voice and typing. Users can also interact with the gadget through body movements that it detects via a camera and through physical interaction with the gadget, such as positioning and pushing it in different directions. The lab considered all accessibility requirements it was aware of, for example ensuring alternative modes of interaction. The gadget also supports numerous APIs, for example to allow users to interact with the gadget through desktop and mobile apps. Yet several accessibility issues may emerge when the gadget is deployed and more widely used, and that the lab is not yet aware of. For example, the first release showed that particular accessibility settings result in too many visual and audio signals. This was improved in the second release but the research and development efforts still continue, including on accessibility features.
+					</p>
+				</section>
+				<section id="example-9-2-prioritizing-speed-to-market-over-product-stability"><div class="header-wrapper"><h4 id="example-9-2"><bdi class="secno">5.9.2 </bdi>Example 9.2 - prioritizing speed-to-market over product stability</h4><a class="self-link" href="#example-9-2" aria-label="Permalink for Section 5.9.2"></a></div>
+					 
+					<p>A developer released a prototype that is clearly marked to all users as Beta. The developer addressed basic accessibility requirements along with other basics in security, privacy, and internationalization. The developer did not do full review of all these aspects, including accessibility, and is aware of the potential risks in terms of user experience. The developer is also aware that accessibility issues can impact specific groups of people disproportionately more than others. They prioritize accessibility issues when they are found, depending on their severity. The developer indicates their commitment to ensure accessibility in the final product in an accessibility statement, describes the current issues that it is aware of to occur or to potentially occur, and provides a mechanism for users to report any accessibility issues they encounter. The developer continually improves accessibility along with the many other aspects, and regularly updates the accessibility statement to communicate this. 
+					</p>
+				</section>
+				<section id="example-9-3-product-demo-with-limited-functionality-and-accessibility"><div class="header-wrapper"><h4 id="example-9-3"><bdi class="secno">5.9.3 </bdi>Example 9.3 - product demo with limited functionality and accessibility</h4><a class="self-link" href="#example-9-3" aria-label="Permalink for Section 5.9.3"></a></div>
+					 
+					<p>A company is developing a product iteratively, starting with a series of non-functional designs followed by a series of product demos with limited functionality. Throughout this process the company considers accessibility to the extent possible because the demos may be shared with project team members and external stakeholders with disabilities. For example, the company ensures that buttons that are essential for the purpose of the demo are properly labelled. However, since some buttons do not yet provide the intended functionality, the demo can be confusing for some users. Also, other parts of the demo might not provide the same level of accessibility. For example, the demo intended to show the "product selection" function might have accessibility issues in the "purchase" function, which is not yet ready for demo. For each demo release, the company describes the accessibility considerations and the scope of these considerations. For example, that it provides labelled buttons in the "product selection" function. It also describes the intent of the demo and known accessibility limitations, for example in an accessibility statement. 
+					</p>
+				</section>
+			</section>
+			<section id="situation-10-not-all-accessibility-requirements-are-always-applicable-to-all-content"><div class="header-wrapper"><h3 id="situation-10"><bdi class="secno">5.10 </bdi>Situation 10: Not all accessibility requirements are always applicable to all content </h3><a class="self-link" href="#situation-10" aria-label="Permalink for Section 5.10"></a></div>
+				
+				<p>In this situation the content provider does not need to meet all accessibility requirements, or can meet them in different ways, depending on the audience. 
+				</p>
+				<section id="example-10-1-content-provided-to-a-limited-group-of-users-only"><div class="header-wrapper"><h4 id="example-10-1"><bdi class="secno">5.10.1 </bdi>Example 10.1 - content provided to a limited group of users only</h4><a class="self-link" href="#example-10-1" aria-label="Permalink for Section 5.10.1"></a></div>
+					 
+					<p>A coach provides online training for small groups of trainees. The content for each training is different, depending on the requested training and audience. For example, handouts are provided as electronic documents and have different diagrams, tables, and information depending on the particular training. The handouts and other documents as well as video recordings from the trainings are made available online to the small group of trainees only. The coach is aware of the accessibility considerations that may be applicable. The coach collects accessibility accommodation requests ahead of each training and adapts the trainings accordingly. For example, the coach adapts exercises for people with physical disabilities, provides real-time captioning and sign-language for people with hearing disabilities, describes visual information more clearly for people with visual disabilities, and extends breaks for people with fatigue, when such accessibility accommodations are requested. The electronic documents and video recordings are also made accessible according to these requests. For example, captions, audio/text descriptions, and text alternatives for images are only provided when needed. All content made available to the public, such as the website with promotional excerpts from some of the trainings, meet the broader set of accessibility requirements. 
+					</p>
+				</section>
+				<section id="example-10-2-content-accessed-by-known-set-of-user-technologies"><div class="header-wrapper"><h4 id="example-10-2"><bdi class="secno">5.10.2 </bdi>Example 10.2 - content accessed by known set of user technologies</h4><a class="self-link" href="#example-10-2" aria-label="Permalink for Section 5.10.2"></a></div>
+					 
+					<p>An employer provides an intranet website that is only available to its employees who are all using computers provided by the employer. For this reason, the employer knows the exact technologies being used to access the website. This includes the combinations of operating system, browser, plug-ins, and assistive technologies. The employer strives to meet all applicable accessibility requirements. However, since the employer knows the technologies being used it can optimize the code used to provide accessibility features. For example, the employer knows which HTML5 elements and WAI-ARIA attributes are or are not supported by the browsers and assistive technologies used by the employees. The employer also knows which web technologies it uses to provide the content; for example, the CSS functionality and versions of SVG that the website relies on. The website does not work well with some browsers and assistive technologies used that are used outside the intranet but it works well for the intended audience, the employees. 
+					</p>
+				</section>
+			</section>
+			<section id="situation-11-small-businesses-face-unique-challenges"><div class="header-wrapper"><h3 id="situation-11"><bdi class="secno">5.11 </bdi>Situation 11: Small businesses face unique challenges</h3><a class="self-link" href="#situation-11" aria-label="Permalink for Section 5.11"></a></div>
+				
+				<p>In this situation the content provider is small business that may not have the necessary capacity and capability to make the content fully conform. 
+				</p>
+				<section id="example-11-1-business-has-limited-expertise"><div class="header-wrapper"><h4 id="example-11-1"><bdi class="secno">5.11.1 </bdi>Example 11.1 - business has limited expertise</h4><a class="self-link" href="#example-11-1" aria-label="Permalink for Section 5.11.1"></a></div>
+					 
+					<p>A small business created an online shop using a website hosting/creating service. The business owner took good care in following the accessibility requirements that they are aware of. For example, they selected good color combinations, added text alternatives to the products they are selling, and use appropriate heading levels on the information pages. The business owner also created some forms using the forms generator provided by the website hosting/creating service. The website hosting/creating service says that the forms generator supports accessibility but the business owner is not sure if they used the correct settings to make the forms conform to the technical standard. At this time, the business owner does not have sufficient budget to get a professional front-end developer with accessibility expertise to improve the shop. 
+					</p>
+				</section>
+				<section id="example-11-2-business-has-limited-resources"><div class="header-wrapper"><h4 id="example-11-2"><bdi class="secno">5.11.2 </bdi>Example 11.2 - business has limited resources</h4><a class="self-link" href="#example-11-2" aria-label="Permalink for Section 5.11.2"></a></div>
+					 
+					<p>A small business created a website for their physical store using a website used to create other websites. On this website they post pictures and videos from the promotional events they regularly hold in the store. For example, a few days ago they hosted a book signing event and took over 500 pictures and over 3 hours worth of video materials. They have permission from the attendees to post this material but they do not have the resources to provide detailed text alternatives, captions, and audio/text descriptions for all this material. Instead of not posting the material at all, they use a photo gallery tool that is said to support accessibility. It numbers each picture and video so that they can be identified. Each event is also identified by a heading and brief description of the event. 
+					</p>
+				</section>
+			</section>
+		</section>
+	
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
