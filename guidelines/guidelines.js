@@ -42,9 +42,8 @@ function linkHowTo() {
 		//this is brittle, depends on how respec does the heading
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
-		var el = document.createElement("span");
-		el.innerHTML = " <a href=\"" + howtoBaseURI + pathFrag + "/\" class=\"howto-link\">" + heading + " <span>how-to</span></a>";
-		node.querySelector("p.guideline-text").append(el);
+		var htm = "<p><a href=\"" + howtoBaseURI + pathFrag + "/\" class=\"howto-link\">Learn how to meet guideline \"" + heading + "\"</a></p>";
+		node.querySelector("p.guideline-text").insertAdjacentHTML("afterend", htm);
 	})
 }
 
@@ -57,7 +56,7 @@ function linkOutcome() {
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
 		var el = document.createElement("p");
-		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome, details, and methods for </span>" + heading + "</a>";
+		el.innerHTML = " <a href=\"" + outcomeBaseURI + pathFrag + "\" class=\"outcome-link\"><span>Outcome details and methods for </span>\"" + heading + "\"</a>";
 		node.insertBefore(el, node.querySelector("details"));
 		
 		node.classList.add("notoc");
@@ -73,12 +72,14 @@ function addGuidelineMarkers() {
 
 function addOutcomeMarkers() {
 	document.querySelectorAll('.outcome').forEach(function(node){
-		var parentHeader = findHeading(node.parentElement);
-		var outcomeHeader = findHeading(node);
-		var insertion = document.createElement("span");
+		var outcomeText = node.querySelector("p");
+		outcomeText.innerHTML = "<span class=\"inserted\">Outcome: </span>" + outcomeText.innerHTML; 
+		/* 
+		var insertion = document.createElement("p");
 		insertion.classList.add("inserted");
 		insertion.innerHTML = " (outcome for <q>" + textNoDescendant(parentHeader) + "</q>)";
-		outcomeHeader.insertBefore(insertion, outcomeHeader.querySelector(".self-link"));
+		outcomeHeader.insertAdjacentElement("afterend", insertion);
+		 */
 	})
 }
 
@@ -150,11 +151,14 @@ function addStatusMarkers() {
 		var selector = '[data-status="' + status + '"]';
 		var statusSections = document.querySelectorAll(selector);
 		statusSections.forEach(function (section) {
+			var statusLabel = "Section";
+			if (section.classList.contains("guideline")) statusLabel = "Guideline";
+			if (section.classList.contains("outcome")) statusLabel = "Outcome";
 			var div = document.createElement('div');
-			div.setAttribute('class', 'addition sticky');
-			div.innerHTML = '<a href="#section-status-levels" class="status-link">Section status: <strong>'
+			div.setAttribute('class', 'addition status-filter sticky');
+			div.innerHTML = '<a href="#section-status-levels" class="status-link">' + statusLabel + ' status: <strong>'
 				+ sentenceCase(status)
-				+ '</strong></a>.'
+				+ '</strong></a>. '
 				+ statusLabels[status]
 				// + ' See the Editor&#39;s note for details.';
 
@@ -243,6 +247,14 @@ function removeImgSize() {
 			node.removeAttribute("height");
 		}
 	});
+}
+
+function removeGLNum() {
+	var tocEl = document.querySelector(".tocline > a[href=\"#guidelines\"]").parentNode.querySelector("ol");
+	tocEl.querySelectorAll("bdi.secno").forEach(function(node){node.remove();});
+
+	var sectionEl = document.querySelector("#guidelines");
+	sectionEl.querySelectorAll("bdi.secno").forEach(function(node){node.remove();});
 }
 
 function outputJson() {
@@ -347,5 +359,6 @@ function postRespec() {
 	addNoteMarkers();
 	removeImgSize();
 	outputJson();
-	moveStatusFilterToToc();
+	//moveStatusFilterToToc();
+	removeGLNum();
 }

@@ -27,7 +27,7 @@ function enableStatusFilter() {
 		button.textContent = (filterActive ? 'Reveal' : 'Hide') + ' placeholder & exploratory sections';
 	}
 	button.addEventListener('click', toggleStatus);
-	toggleStatus(); // Active by default
+	//toggleStatus(); // Active by default
 }
 
 window.addEventListener('load', (event) => {
