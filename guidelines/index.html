@@ -292,31 +292,44 @@
 
 			</section>
 		</section>
+
+
 		<section data-status="exploratory">
 			<h2>Testing</h2>
 			<details class="summary">
 				<summary>What types of tests and scopes are used?</summary>
-				<p>WCAG 3.0 includes four types of tests which are evaluated pass/fail:</p>
-					<ul><li><strong>Unconditional tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether something exists or against a constant value specified by WCAG.  </li>
-					<li><strong>Conditional tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary slightly between testers who understand the criteria. Examples include evaluating quality and applicability. </li>
-					<li><strong>Conventional tests:</strong> Tests where the results rely on the context in which content is being tested. The tests are still unconditional or conditional tests but the context dictates which unconditional or conditional tests are used. Examples include consistency and conditional tests.</li>
-					<li><strong>Procedural tests:</strong> Tests that evaluate whether an accepted process was used to improve accessibility. Examples include usability and plain language testing</li>
-					</ul>
-					<p>Tests can be applied to four different scopes:</p>
-					<ul><li><strong>Item:</strong> A component or unit of content. Examples include a drop down menu, a media player, a phrase, or an image.</li>
-					<li><strong>View:</strong> All content visually and programmatically available without a substantive change. </li>	
-					<li><strong>User Process:</strong> Series of user actions, and the distinct interactive views that support the actions, where each action is required in order to complete an activity. </li>	
-					<li><strong>Aggregate:</strong> Combination of all related items, user processes, and views.</li>	
-					</ul>
+				<p>WCAG 3.0 includes two (2) types of tests which are evaluated pass/fail:</p>
+				<ul>
+					<li><strong>Computational tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether certain properties  exist in the content or if they match a value specified by the requirement.</li>
+					<li><strong>Qualitative tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary between testers who understand the criteria. Examples include evaluating the quality and applicability of certain properties of the content.</li>
+				</ul>
+
+				<p>WCAG 3.0 includes four (4) types of requirement by which the evaluations are made:</p>
+				<ul>
+					<li><strong>Prescriptive requirement:</strong> How to conform, and how to test for conformance is predetermined. If there is more than one option, all options are defined by the standard.</li>
+					<li><strong>Adaptive requirement:</strong> The testing process includes variations where the results rely on the external and/or user-specific context in which content is being tested. The tests are still computational or qualitative tests but the context dictates what results are expected, and which tests are relevant.</li>
+					<li><strong>Extensible requirement:</strong> Requirements that rely on selecting from multiple valid ways to measure the outcome (for example, there are multiple accepted specifications for measuring luminance, and the testers will need to determine which is most valid for their use case).</li>
+					<li><strong>Protocol-based requirement:</strong> Using accepted industry protocols that meet defined quality criteria (examples include Usability and Plain Language protocols) to improve accessibility.</li>
+				</ul>
+
+				<p>Tests can be applied to four (4) different scopes:</p>
+				<ul>
+					<li><strong>Item:</strong> A component or unit of content. Examples include a drop down menu, a media player, a phrase, or an image.</li>
+					<li><strong>View:</strong> All content visually and programmatically available without a substantive change.</li>
+					<li><strong>User process:</strong> Series of user actions, and the distinct interactive views that support the actions, where each action is required in order to complete an activity.</li>
+					<li><strong>Aggregate:</strong> Combination of all related items, user processes, and views.</li>
+				</ul>
 			</details>
 
+			<p>WCAG 3.0 tests <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to determine if the content they are evaluating satisfies the criteria. </p> 
+			<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
+
 			<div class="ednote">
-			<p>This section is exploratory. Outstanding questions that need to be addressed include:</p>
+				<p>This section is exploratory. Outstanding questions that need to be addressed include:</p>
 				<ul>
 					<li>Developing detailed examples of each test type,</li>
-					<li>Finalizing names and descriptions of scope and test types,</li>
-					<li>If there are further test types that should be added,</li>
-					<li>Determining what to document for procedural tests,</li>
+					<li>Finalizing names and descriptions of scope and test types and measures,</li>
+					<li>Determining what to document for protocol-based tests,</li>
 					<li>How protocols will be incorporated,</li>
 					<li>How well this approach to testing supports additional requirements not addressed in 2.1,</li>
 					<li>Testing the accuracy, reliability, repeatability, etc. of this approach,</li>
@@ -324,132 +337,139 @@
 					<li>How a process will be defined and documented,</li>
 					<li>How these tests will be integrated into a conformance model (including levels or scores), and</li>
 					<li>Get feedback from designers, developers and other communities on wording choice.</li>
-					<li>Rework plain language section</li>
-					<li>Determine how organisations can declare which convention they are following in a way that is transparent, both to their users and for the purpose of verification in audits</li>
+					<li>Determine how organizations can declare which convention they are following in a way that is transparent, both to their users and for the purpose of verification in audits</li>
 					<li>Address all github issues under <a href="https://github.com/w3c/silver/milestone/16" target="_blank">test types and terminology milestone</a>.</li>
 				</ul>
 			</div>
-			
-			<p class="ednote">
-			The model presented provides a structure for testing that can be built upon to better accommodate dynamic or very frequently updated content than WCAG 2.X.  We are exploring additional approaches to testing using sampling and/or other alternatives for reaching conformance in situations where testing all content is not possible. We also plan to include a definition and concept for substantially conforming in order to address the potential difficulties presented when testing all content in large digital products and 3rd party content.  </p>
-			
-				<p>WCAG 3.0 tests <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to determine if the content they are evaluating satisfies the criteria. </p> 
 
+			<section>
+				<h3>Test scopes</h3>
 				<p>Testing outcomes use <a>items</a>, <a>views</a>, <a>user processes</a>, and the <a>aggregate</a> to define what is being tested.</p> 
-
-				<p><dfn data-lt="item|unit" title="Smallest testable unit">Items</dfn> are the smallest testable unit. They may be interactive components such as a drop down menu, a link, or a media player. They may also be units of content such as a word, a phrase, an icon, or an image.</p>
-
-			<p><dfn data-lt="views" title="All content visually and programmatically available without a substantive change.">Views</dfn> include all content visually and programmatically available without a substantive change. Conceptually, views correspond to the definition of a <q>web page</q> as used in WCAG 2.X, but are not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app.  
-				</p>
-				<p>
-					<dfn data-lt="user process" title="Series of user actions required in order to complete an activity">User processes</dfn> are a series of user actions, and the distinct interactive <a>views</a> and <a>items</a> that support the actions, where each action is required in order to complete an activity. A user process may include a subset of items in a view or a group of views. </p>
+	
+				<p><dfn data-lt="item|unit" title="Smallest testable unit">Items</dfn> are the smallest testable unit. They may be interactive components such as a drop down menu, a link, or a media player. They may also be units of content such as a word, a phrase, a label or error message, an icon, or an image.</p>
+	
+				<p><dfn data-lt="views" title="All content visually and programmatically available without a substantive change.">Views</dfn> include all content visually and programmatically available without a substantive change. Conceptually, views correspond to the definition of a web page as used in WCAG 2.X, but are not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app or a layer of web content – such as a modal.  </p>
+	
+				<p><dfn data-lt="user process" title="Series of user actions required in order to complete an activity">User processes</dfn> are a series of user actions, and the distinct interactive <a>views</a> and <a>items</a> that support the actions, where each action is required in order to complete an activity. A user process may include a subset of items in a view or a group of views.</p>
 				<p>Examples of a process include:</p>
-					<ul>
-						<li>Logging into a site and being recognized as an authenticated user;</li>
-						<li>Ordering an item, in which case the process includes the entire set of tasks from searching for the item, adding it to the shopping cart, paying for it, and receiving confirmation;</li>
-						<li>Submitting tax information, from start to end of the process; and</li>
-						<li>Interacting with other users in a virtual reality environment.</li>
-					</ul>
-					<p>A process is comprised of one or more <a>views</a> or subsets of views. Only the part of the views that support the user process are included. in a test of user process.</p>
-			<p>The <dfn title="set of items, views, and user processes that comprise the site">aggregate</dfn> is the combination of items, views, and user processes that collectively comprise the site, set of web pages, web app, etc.</p>
-				<section>
+				<ul>
+					<li>Logging into a site and being recognized as an authenticated user;</li>
+					<li>Ordering an item, in which case the process includes the entire set of tasks from searching for the item, adding it to the shopping cart, paying for it, and receiving confirmation;</li>
+					<li>Submitting tax information, from start to end of the process; and</li>
+					<li>Interacting with other users in a virtual reality environment.</li>
+				</ul>
+				<p>A process is comprised of one or more <a>views</a> or subsets of views. Only the part of the views that support the user process are included. in a test of user process.</p>
+	
+				<p>The <dfn title="set of items, views, and user processes that comprise the site">aggregate</dfn> is the combination of items, views, and user processes that collectively comprise the site, set of web pages, web app, etc.</p>
+			</section>
+
+			<section>
 				<h3>Types of tests</h3>
-								
-				<p>WCAG 3.0 includes four types of tests:</p>
-				   <ol><li> <a href="#unconditional-tests">Unconditional tests</a>,</li> 
-				    <li><a href="#condition-tests">Conditional tests</a>,</li>
-			      <li><a href="#convention-tests">Conventional tests</a>, and</li>				    
-			      <li><a href="#procedural-tests">Procedural tests</a>.</li>
-			    </ol>
-						<p>All tests results will pass or fail. The criteria used to evaluate whether the test pass differ for each type of test. The inter-rater reliability for an unconditional test is higher than the inter-rater reliability of a conditional test which higher than that of a procedural test. A conditional test includes an additional checkpoint that determines which unconditional and conditional tests will be used. As a result of these differences, the information tested change based on the test type to ensure each can be evaluated as pass or fail. For example, unconditional and conditional tests evaluate the results as they do in WCAG 2. Procedural tests may only evaluate a statement that the procedural occurred, instead of the results. Meeting an outcome may include one or more of these types of test.</p>
+				<p>WCAG 3.0 includes two types of tests: computational tests and qualitative tests. Testing the outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>.</p>
+				<p>Although content may satisfy all outcomes using computational and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. The four testing processes  address this gap by providing a range of ways to evaluate more of the user experience.</p>
 
-				    <p>Testing the outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>. <!--The content should be tested by those who understand how people with different types of disabilities use the technology being tested.--></p>
-				
-				<p>Although content may satisfy all outcomes using unconditional and conditional tests, the content may not always be usable by people with a wide variety of disabilities. The conditional and procedural tests address this gap by evaluating more of the user experience.</p>
-				<p class="ednote">We are looking for more appropriate terms to distinguish between types of tests and scope and welcome suggestions.  Other terms suggested for 'unconditional' are 'quantitative', 'non-conditional', 'less-subjective', constant', 'definitive', 'pass/fail' or "fixed objective". Other terms suggested for 'conditional' are 'qualitative', 'qualified' and 'fixed subjective.' Other terms suggested for 'conventional' are 'convention based objective', 'use case', or 'contextual' Other terms suggested for 'procedural' are "process evaluation" and "process based subjective.'</p> 
-					<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
-					
-					<section>
-						<h4>Unconditional tests</h4>
-						<p>Unconditional tests are tests where the results will not vary based on the tester or approach. Examples include testing whether something exists or against an unconditional value. Unconditional tests evaluate content, often against a <a>unit</a> or <a>view</a>, for accessibility. </p>
-						<p>Unconditional tests evaluate against a universal criterion that is true in all situations and requires no subjective evaluation.</p>
-						<p>Methods using unconditional tests include the baseline to test against. Most often this baseline is whether or not something is present. In the case of color contrast, this baseline is a number. </p>
-						<p>Unconditional tests may be <a>automated</a> or <a>manual</a>. <a>Automated evaluation</a> can be completed without human assistance. These tests allow for a larger scope to be tested but automated evaluation alone cannot determine accessibility. Over time, the number of accessibility tests that can be automated is increasing, but manual testing is still required to evaluate most methods at this time.</p> 
+				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 
-						<aside class="example">
-							<p>Example unconditional test</p>
-								<p>These tests are already part of WCAG 2.x.</p>
-								<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/" target="_blank">Image has non-empty accessible name</a></p>
-								<p>Example for 1.4.3: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/afw4f7/proposed/" target="_blank">Text has minimum contrast</a></p>
-						</aside>
-
-					</section>
-					<section>
-						<h4>Conditional tests</h4>
-						<p>Conditional tests rely on informed qualitative evaluations based on a set of criteria. The test results may vary slightly between experienced testers. Examples include testing quality and applicability.</p>
-						<p>Methods using conditional tests include the criteria being tested and guidance on evaluating how well the content meets the criteria of the conditional test.</p> 
-
-						<aside class="example">
-							<p>Example conditional test</p>
-								<p>These tests are already part of WCAG 2.x.</p>
-								<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive</a></p>
-								<p>Example for 2.4.9: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/" target="_blank"> Link is descriptive</a></p>
-						</aside>
-
-					</section>
-										<section>
-						<h4>Conventional tests</h4>
-						<p>Conventional tests evaluate the results within a particular context.  The tests are still unconditional or conditional tests but the context dictates:
-						</p><ul><li>which unconditional or conditional tests are used, or</li>
-						<li>what the baseline is used to test against.
-						</li></ul>
-						WCAG will rely on conventional tests when a solution will improve accessibility but where that implementation of the solution will vary based on situation, such as language, type of content, or other design decisions. Examples include testing for consistency of design decisions and content choices.
-						<p>Methods using conventional tests include the test criteria the organization would need to evaluate, parameters for success and failure, and, if it is a conditional test, guidance on evaluating how well the content meets the criteria of the conditional test.</p>
+				<section>
+					<h4>Computational tests</h4>
+					<p>Computational tests rely on measuring properties of the content based on nominal values. The test results are objectively verifiable, to avoid variation of test results between different testers. Values are quantitative, and could be boolean, for example to check the presence of titles, text alternatives, and accessible names. Other values could include numerical thresholds; for example, to check color luminosity ratios.</p>
+					<p>Each method using computational tests includes:</p>
+					<ul>
+						<li>the nominal values being tested; and</li>
+						<li>an algorithm to measure the properties of the content based on the nominal values.</li>
+					</ul>
 
 					<aside class="example">
-						<p>Example conditional test for clear language outcome (Draft)</p>
-
-						<p>Test: The content follows clear language rules appropriate to the language of the content.</p>
-
-						<p>If in English, the content will:</p>
-								<ul><li>Not include double negatives</li>
-										<li>Spell out abbreviations and acronyms</li>
-										<li>Explain similes, metaphors, and other non-literal language</li>
-								</ul>
-
-						<p>In Hebrew, the content will:</p>
-								<ul><li>Include all accents, characters, and diacritics that are necessary to phonetically read the words</li>
-								    <li>Explain similes, metaphors, and other non-literal language</li>
-								</ul>
+						<p>Example computational test</p>
+						<p>These tests are already part of WCAG 2.x.</p>
+						<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/" target="_blank">Image has non-empty accessible name</a></p>
+						<p>Example for 1.4.3: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/afw4f7/proposed/" target="_blank">Text has minimum contrast</a></p>
 					</aside>
-
-					</section>
-
-
-					<section>
-						<h4>Procedural tests</h4>
-						<p>Procedural tests evaluate whether a process was used to improve accessibility. Examples include usability and plain language testing.  Procedural tests could include assistive technology testing, user-centered design methods, plain language testing, and both user and expert usability testing. Procedural testing often applies to the <a>aggregate</a> or <a>user process</a>. Methods would provide guidance for different procedures that are proven to improve accessibility and would test declarations about the procedural used rather than the results. </p>
-						
-
-						<aside class="example">
-
-							<p>Example procedural test for clear language outcome (Draft)</p>
-
-							<p>Test: A plain language review was conducted</p>
-						</aside>
-
-						<p class="ednote">The requirements for what would be evaluated for procedural tests are to be determined.</p>
-					</section>
+				</section>
 
 				<section>
-				<h3>Technology specific testing</h3>				
-				<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies that do not have related methods based solely on the outcome.</p>
+					<h4>Qualitative tests</h4>
+					<p>Qualitative tests rely on evaluating content based on a set of defined expectations and exceptions. The set of expectations and exceptions limit the scope of decisions, to minimize variation of test results arrived at by different testers. Still, some level of qualitative assessment is required, therefore the accuracy of the test results also depends on the knowledge and context of the testers to some degree.</p>
+					<p>Each method using qualitative tests includes:</p> 
+					<ul>
+						<li>the defined expectations being tested; and</li>
+						<li>guidance on evaluating how well the content meets the defined expectations.</li>
+					</ul>
+
+					<aside class="example">
+						<p>Example conditional test</p>
+						<p>These tests are already part of WCAG 2.x.</p>
+						<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive</a></p>
+						<p>Example for 2.4.9: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/" target="_blank"> Link is descriptive</a></p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<h3>Types of requirements</h3>
+				<p>There are four types of requirements that can be tested: prescriptive, adaptive, extensible, and protocol-based.</p>
+				<ul>
+					<li><strong>Prescriptive requirements</strong> include a predetermined set of options for determining how to conform, and how to measure conformance. These requirements are universal, meaning that how to meet them does not vary based on context.</li>
+					<li><strong>Adaptive requirements</strong> includes an additional checkpoint to determine user-specific context that may require varying which computational and qualitative tests will be used, and potential variations in the desired outcome.This means that the same computational and qualitative tests may need to be applied multiple times in different ways, and some variations may pass or fail while others have a different result.</li>
+					<li><strong>Extensible requirements</strong> allow for computational and qualitative tests to be applied using an appropriately selected specification out of many when multiple specifications or standards are available for the same test (for example, luminance). The testers are responsible for documenting which specification is applied and why.</li>
+					<li><strong>Protocol-based requirements</strong> may have a variety of outcomes and may not be recognizable as pass or fail. Instead, the results of this testing approach include documentation on which protocol was used, why, and what the outcomes were. The quality of the implementation and outcome can also be assessed to ensure adhering to the protocol created a more accessible outcome.</li>
+				</ul>
+
+				<section>
+					<h4>Prescriptive requirements</h4>
+					<p>Prescriptive requirements apply computational and qualitative tests directly to the content. The content is the only input which determines which test to use, and what the result of the test will be.</p>
+					<p>Examples of prescriptive requirements include the computational tests listed in Example 1 and the qualitative tests listed in Example 2.</p>
+				</section>
+
+				<section>
+					<h4>Adaptive requirements</h4>
+					<p>Adaptive testing evaluates the results within a particular user-specific context. The tests are still computational or qualitative, but the context dictates:</p>
+					<ul>
+						<li>which computational or qualitative tests are used, </li>
+						<li>variations in expected outcomes for those tests depending on the context applied, and</li>
+						<li>what the baseline is used to test against.</li>
+					</ul>
+
+					<aside class="example">
+						<p>Examples of user-specific context that may require adaptive measures in order to effectively evaluate accessibility</p>
+						<ul>
+							<li>Individuals may require different types of contrast, including both high and low contrast. When testing for these variations in users, the expected computational numbers of each experience will vary based on the adaptive requirements.</li>
+							<li>If the same interface is translated into more than one language with different grammatical rules, and some tests may have different conformance requirements for each language</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h4>Extensible Requirements</h4>
+					<p>Testing may occasionally require determining and referencing which specifications are being tested against. These variances can be due to regional laws or different means for measuring. For example, luminance may be measured based on APCA or IEC-4WD. In these cases, an extensible method of testing is being used, in which the selected specification used for evaluation is documented, along with why that specification was chosen.</p>
+
+					<aside class="example">
+						<p>Example extensible requirements include:</p>
+						<ul>
+							<li>Luminance may be measured based on APCA or IEC-4WD</li>
+							<li>Language reading level may be measured based on Test X or Test Y (to be defined)</li>
+							<li>Minimum target size may be A for situation α and B for situation β (to be defined)</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h4>Protocol-based Requirements</h4>
+					<p>Industry accepted protocols are used to evaluate whether a process was used to improve accessibility. Examples include evaluation through user-centered design methods, plain language testing, and both user and expert usability testing. Protocol-based  testing often applies to the <a>aggregate</a> or <a>user process</a>. Methods would provide guidance for different procedures that are proven to improve accessibility and would test declarations about the protocols used and their outcomes, rather than strict pass/fail results.</p>					
+
+					<aside class="example">
+						<p>Example procedural test for clear language outcome (Draft)</p>
+						<p>Test: A plain language review was conducted</p>
+						<p><a href="https://docs.google.com/document/d/1jWD5XU7iBVv-XKbyZ15GYauncqdiBYTN0X0TjLZltmg/edit#">User Test Example: Plain Language</a></p>
+					</aside>
+					<div class="ednote">
+						<p>The requirements for what would be evaluated for procedural tests are to be determined.</p>
+					</div>
 				</section>
 			</section>
 		</section>
-	
 
-		
+
 		<section id="conformance">
 			<h2>Conformance</h2>
 			<details class="summary">
