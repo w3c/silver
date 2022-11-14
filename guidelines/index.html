@@ -399,6 +399,29 @@
 						<li>guidance on evaluating how well the content meets the defined expectations.</li>
 					</ul>
 
+					</section>
+					<section>
+						<h4>Conditional tests</h4>
+						<p>Conditional tests rely on informed qualitative evaluations based on a set of criteria. The test results may vary slightly between experienced testers. Examples include testing quality and applicability.</p>
+						<p>Methods using conditional tests include the criteria being tested and guidance on evaluating how well the content meets the criteria of the conditional test.</p> 
+
+						<aside class="example">
+							<p>Example conditional test</p>
+								<p>These tests are already part of WCAG 2.x.</p>
+								<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive</a></p>
+								<p>Example for 2.4.9: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/" target="_blank"> Link is descriptive</a></p>
+						</aside>
+
+					</section>
+					<section>
+						<h4>Conventional tests</h4>
+						<p>Conventional tests evaluate the results within a particular context.  The tests are still unconditional or conditional tests but the context dictates:
+						</p><ul><li>which unconditional or conditional tests are used, or</li>
+						<li>what the baseline is used to test against.
+						</li></ul>
+						WCAG will rely on conventional tests when a solution will improve accessibility but where that implementation of the solution will vary based on situation, such as language, type of content, or other design decisions. Examples include testing for consistency of design decisions and content choices.
+						<p>Methods using conventional tests include the test criteria the organization would need to evaluate, parameters for success and failure, and, if it is a conditional test, guidance on evaluating how well the content meets the criteria of the conditional test.</p>
+
 					<aside class="example">
 						<p>Example conditional test</p>
 						<p>These tests are already part of WCAG 2.x.</p>
@@ -469,7 +492,34 @@
 						<p>The requirements for what would be evaluated for procedural tests are to be determined.</p>
 					</div>
 				</section>
-			</section>
+
+			<section>
+					<h3>Critical Issues</h3>
+
+					<div class="ednote">
+						<p>This section is exploratory. 
+						<p>Severity rating could contribute towards scoring and prioritization. This is a potential way to replace how A/AA/AAA levels represented severity by incorporating a mechanism to evaluate severity as a part of testing.</p> 
+						<p>Outstanding questions that need to be addressed include:</p>
+						<ol>
+							<li>What to do with non-critical issues?</li>
+							<li>How best to assign severity, particularly if testers have different ideas on what is critical?</li>
+							<li>How do we incorporate context/process/task? Is that part of scoping, or issue severity? Both are important to the end result.</li>
+							<li>If included, how will situations where issue severity depends on context be handled?</li>
+							<li>Can the matrix inform designation of functional categories? For example, the <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/text-alternative-available">Text Alternative Available outcome</a>.</li>
+							<li>How will issue severity fit into levels? For example:<ul>
+									<li>"Bronze" could be an absence of any critical or high issues;</li>
+									<li>"Silver" could be an absence of any critical, high, or medium issues.</li>
+								</ul>
+							</li>
+							<li>How to account for cumulative issues becoming critical?</li>
+							<li>Would another approach be more effective, for example assigning critical issues after testing is complete based on task or type of task rather than by test.</li>
+						</ol>
+					</div>
+
+					<p>Tests will include critical issues. Each test will have a category of severity, so some tests will be flagged as causing a critical issue.  Examples of critical issues in tests are at <a href="https://www.w3.org/WAI/GL/WCAG3/2022/methods/functional-images/#tests-button">Text Alternative Available</a> and <a href="https://www.w3.org/WAI/GL/WCAG3/2022/methods/text-equiv/#tests-button">Translates Speech And Non-Speech Audio</a>.</p>
+				</section>
+	</section>
+
 		</section>
 
 
