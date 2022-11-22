@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>How-To - Develop</title>
+	</head>
+	<body>
+		<header>
+			<h1>Develop</h1>
+		</header>
+			<main>
+			<section id="responsibilities">
+				<h2>Technical responsibilities</h2>
+				<p>Developers can ensure the language used in content sections are available programmatically. In HTML, this is done using the <code>lang</code> attribute. The <code>lang</code> attribute value must contain a language code that indicates the language used.</p>
+				<p>The language code, also called a language tag, is made up of one or more subtags. The first tag of which is called the primary language subtag. For example, in a language code “<code>EN-US</code>”, meaning English, US spelling, “EN” is the primary language subtag. In almost all cases, providing a primary language subtag is sufficient to ensure sections can be correctly pronounced by assistive technologies. All primary languages are listed in the <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">IANA primary language subtag registry</a>.</p>
+				<p>Most assistive technologies are tolerant to minor validation issues in language tags. The primary language subtag is determined by taking all characters before the first hyphen (-). An invalid language tag such as “EN-British” can still be recognized as having a primary language subtag of “EN”, which is English.</p>
+				<p>Use of completely invalid language tags can cause inconsistent behavior in assistive technologies. For example, using lang=”French” in a web page can cause some assistive technologies to switch to the default language of the page, and others to continue with whatever language it was already using.</p>
+				<h3>Automatic Language Detection</h3>
+				<p>Not all technologies support identifying the language at a block- or word-level. In these scenarios user agents or assistive technologies can help by performing automatic language detection. Automatic language detection by assistive technologies is often not available for technologies for which element-level language indication is possible. A screen reader that does automatic language detection on Android or iOS apps cannot be relied on to do so for HTML.</p>
+				<p>Content management systems and other authoring tools can support content authors by adding automatic language detection as well. These can either automatically add programmatic language codes to the content, or prompt the content author to add them.</p>
+				<h3>Technical Responsibilities</h3>
+				<ol>
+					<li>You must ensure that all web pages and other views have the primary language indicated.</li>
+					<li>You must ensure that the language is indicated for sections, paragraphs, menus, links, etc. that have a language different from the primary language of the page.</li>
+				</ol>
+			</section>
+			
+			<section id="demo">
+				<h2>Examples & Demo</h2>
+				<p>The following example shows how lang=”nl” is used to indicate the primary language of the page, including the page title is Dutch. The English paragraph is given lang=”en” to ensure the English text is pronounced correctly.</p>
+				<pre><code>&lt;html lang="nl"&gt;
+&lt;head&gt;
+	&lt;title&gt;Met de kippen op stok&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;blockquote&gt;
+		&lt;p&gt;"Hij ging met de kippen op stok"&lt;/p&gt;
+	&lt;/blockquote&gt;
+	&lt;p lang="en"&gt;
+		This Dutch phrase literally translates into "He went to roost with the chickens", but it means that he went to bed
+		early.
+	&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</section>
+
+			<section id="technical">
+				<h2>Technical tips</h2>
+				<ul>
+					<li>In HTML use the <code>lang</code> attribute to indicate the language. This needs to be on the html element, so that the page title can be pronounced correctly.</li>
+					<li>Not every element needs a <code>lang</code> attribute. Instead the language is inherited from the closest parent element with a <code>lang</code> attribute. For example by setting the <code>lang</code> attribute on a <code>section</code> element, all content in that section will now inherit the language of the section, rather than the language of the <code>html</code> element.</li>
+					<li>Not all technologies support setting the language of sections or individual words. Instead the language is set as metadata in the document. This is often configurable along with the title and author of a document.</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>
