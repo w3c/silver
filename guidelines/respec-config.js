@@ -10,22 +10,22 @@ var respecConfig = {
 	//crEnd:                "2012-04-30",
 	//perEnd:               "2013-07-23",
 	//publishDate:          "2013-08-22",
-	
+
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
 	shortName: "wcag-3.0",
-	
-	
+
+
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
 	copyrightStart: "2021",
 	license: "document",
-	
+
 	// if there a publicly available Editors Draft, this is the link
 	edDraftURI: "https://w3c.github.io/silver/guidelines/",
-	
+
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
-	
+
 	// editors, add as many as you like
 	// only "name" is required
 	editors:[ {
@@ -45,13 +45,38 @@ var respecConfig = {
 		company: "Google, Inc.",
 		companyURI: "https://www.google.com/",
 		w3cid: 90646
-	}, {
+	},
+	{
+		name: "Chuck Adams",
+		mailto: "charles.adams@oracle.com",
+		company: "Oracle",
+		companyURI: "https://www.oracle.com",
+		w3cid: 104852
+	}
+	{
+		name: "Alastair Campbell",
+		mailto: "acampbell@nomensa.com",
+		company: "Nomensa",
+		companyURI: "https://www.nomensa.com",
+		w3cid: 44689
+	}
+	{
 		name: "Michael Cooper",
 		mailto: "cooper@w3.org",
 		company: "W3C",
 		companyURI: "https://www.w3.org/",
 		w3cid: 34017
-	}],
+	}
+
+	{
+		name: "Michael Cooper",
+		mailto: "cooper@w3.org",
+		company: "W3C",
+		companyURI: "https://www.w3.org/",
+		w3cid: 34017
+	}
+
+],
 	authors: [{
       name: "Wilco Fiers",
       mailto: "wilco.fiers@deque.com",
@@ -59,16 +84,16 @@ var respecConfig = {
       companyURI: "https://www.deque.com/",
       w3cid: 43334
     }],
-	
+
 	// authors, add as many as you like.
 	// This is optional, uncomment if you have authors as well as editors.
 	// only "name" is required. Same format as editors.
-	
+
 	//authors:  [
 	//    { name: "Your Name", url: "http://example.org/",
 	//      company: "Your Company", companyURI: "http://example.com/" },
 	//],
-	
+
 	/*
 	alternateFormats: [
 	{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
@@ -76,17 +101,17 @@ var respecConfig = {
 	{ uri: 'aria.pdf', label: "PDF version" }
 	],
 	 */
-	
+
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
-	
+
 	group: "ag",
 	github: "w3c/silver",
 
 	maxTocLevel: 4,
-	
+
 	preProcess: [preRespec],
 	postProcess: [postRespec],
-	
+
 	localBiblio: {
 		"508-criteria": {
 			"title": "Section 508 Functional Performance Criteria",
