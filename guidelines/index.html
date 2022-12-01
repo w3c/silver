@@ -55,7 +55,7 @@
 			<section>
 				<h3>About WCAG 3.0</h3>
 				<p>This introduction provides a <em>brief</em> background to WCAG 3.0. Detailed information about the structure of the guidelines and inputs into their development is available in the <a href="https://w3c.github.io/silver/explainer/">Explainer for W3C Accessibility Guidelines (WCAG) 3.0</a>. That document is recommended reading for anyone new to WCAG 3.</p>
-				<p>This specification presents a new model and guidelines to make web content and applications accessible to people with disabilities. The W3C Accessibility Guidelines (WCAG) 3.0 support a wide set of user needs, use new approaches to testing, and allow frequent maintenance of guidelines and related content to keep pace with accelerating technology change. WCAG 3.0 supports this evolution by focusing on users’ functional needs. These needs are then supported by outcomes and technology-specific methods to meet those needs. </p>
+				<p>This specification presents a new model and guidelines to make web content and applications accessible to people with disabilities. The W3C Accessibility Guidelines (WCAG) 3.0 support a wide set of user needs, use new approaches to testing, and allow frequent maintenance of guidelines and related content to keep pace with accelerating technology change. WCAG 3.0 supports this evolution by focusing on users’ functional needs. These needs are then supported by outcomes and technology-specific methods to meet those needs.</p>
 				<p>Following these guidelines will make content more accessible to people with a wide range of disabilities, including accommodations for blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. Following these guidelines will also often make content more usable to users in general as well as accessible to people with disabilities.</p>
 				<p>WCAG 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> WCAG 2.X. It will also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/"> User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/"> Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. These earlier versions provided a flexible model that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities have led to the need for a new model to address content accessibility more comprehensively and flexibly.</p>
 				<p>There are many differences between WCAG 2.X and WCAG 3.0. Content that conforms to WCAG 2.2 A &amp; AA is expected to meet most of the minimum conformance level of this new standard but, since WCAG 3.0 includes additional tests and different scoring mechanics, additional work will be needed to reach full conformance. Since the new standard will use a different conformance model, the Accessibility Guidelines Working Group expects that some organizations may wish to continue using WCAG 2.X, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping and other approaches to facilitate migration.</p>
@@ -142,7 +142,7 @@
 			</ul>
 			
 			<div class="ednote">
-			<p>These are <strong>early drafts of guidelines included to serve as initial examples</strong>. They are used to illustrate what WCAG 3.0 could look like and to test the process of writing content. These guideline drafts should not be considered as final content of WCAG 3.0. They are included to show how the structure would work. As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. WCAG 2.x success criteria will be migrated to this new structure before WCAG 3.0 moves to candidate recommendation.</p>
+			<p>These are <strong>early drafts of guidelines included to serve as initial examples</strong>. They are used to illustrate what WCAG 3.0 could look like and to test the process of writing content. These guideline drafts should not be considered as final content of WCAG 3.0. They are included to show how the structure would work. As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. WCAG 2.x success criteria will be migrated to this new structure before WCAG 3.0 moves to candidate recommendation.</p>
 
 			<p>As more content is developed, this section will be a list of guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to WCAG 3.0, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit">WCAG to Silver Outline Map</a>.</p>
 			</div>
@@ -371,7 +371,7 @@
 				<p>WCAG 3.0 includes two types of tests: computational tests and qualitative tests. Testing the outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>.</p>
 				<p>Although content may satisfy all outcomes using computational and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. The four testing processes  address this gap by providing a range of ways to evaluate more of the user experience.</p>
 
-				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
+				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity. Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 
 				<section>
 					<h4>Computational tests</h4>
@@ -488,6 +488,37 @@
 		</section>
 
 		<section data-status="exploratory">
+			<h2>Issue Severity</h2>
+
+			<p>Severity rating could contribute towards scoring and prioritization. This is a potential way to replace how A/AA/AAA levels represented severity by incorporating a mechanism to evaluate severity as a part of testing.</p>
+			<p>Outstanding questions that need to be addressed include:</p>
+			
+			<ol>
+				<li>What to do with non-critical issues? Before non-critical issues can be worked on, it will be essential to understand scope and the conformance model.</li>
+				<li>How best to assign severity, particularly if testers have different ideas on what is critical?
+					<ul>
+						<li>The aim is to have the tests determine the severity, not the tester.</li>
+						<li>A next step would be to examine the tests to see if they can reliably predict the severity of impact on different functional needs.</li>
+						<li>Can critical tests be paired with a conformance model that uses <a href="#prescriptive-requirements">prescriptive requirements</a> to make severity rating more straightforward.</li>
+					</ul>
+				</li>
+				<li>How do we incorporate context/process/task? Is that part of scoping, or issue severity? Both are important to the end result.</li>
+				<li>If included, how will situations where issue severity depends on context be handled?</li>
+				<li>How can the <a href="https://w3c.github.io/fast/">Framework for Accessible Specification of Technologies</a> (FAST) be integrated and used to further this work, for example, to inform the designation of functional categories associated with outcomes?</li>
+				<li>How will issue severity fit into levels? For example:
+					<ul>
+						<li>"Bronze" could be an absence of any critical issues;</li>
+						<li>"Silver" could be an absence of any critical or high issues.</li>
+					</ul>
+				</li>
+				<li>How to account for cumulative issues becoming critical?</li>
+				<li>Would another approach be more effective, for example assigning critical issues after testing is complete based on task or type of task rather than by test.</li>
+			</ol>
+		
+			<p>Tests will include critical issues. Each test will have a category of severity, so some tests will be flagged as causing a critical issue. Examples of critical issues in tests are at Text Alternative Available and Translates Speech And Non-Speech Audio.</p>
+		</section>
+
+		<section data-status="exploratory">
 			<h2>Outcome implementation procedures</h2>
 			<details class="summary">
 				<summary>Summary</summary>
@@ -502,7 +533,7 @@
               currently reliably tested, or instead should they be limited to requirements that
               cannot be tested with high inter-rater reliability?</li>
 						<li>How do we ensure an outcome implementation procedure solves real
-            problems? </li>
+            problems?</li>
 						<li>Can outcome implementation procedures be used to record accessibility work that is
               not required in the guidelines? This could include advance work on guidance not yet
               added to the guidelines.</li>
@@ -512,7 +543,7 @@
 						<li>Should outcome implementation procedures be dated, expire and/or be reviewed on a
               regular basis?</li>
 						<li>Can evaluation steps in an outcome implementation procedure duplicate tests in other
-              parts of the guidelines? If so, how should those be handled? </li>
+              parts of the guidelines? If so, how should those be handled?</li>
 					</ul></li>
 					<li>Do outcome implementation procedures exist outside of conformance? For example, can
             they be used as an internal benchmark rather than for a claim of
@@ -531,9 +562,9 @@
 			</div>
 			<p class="ednote">In development, outcome implementation procedures were called “protocols”, but that does not seem applicable to the substance of the proposal. “Outcome implementation procedures” may be only a placeholder name.</p>
 			<p class="ednote">Definitions are needed to separate outcomes (which are measurable) and protocols (which are also measurable as assertions).</p>
-			<p>An outcome implementation procedure is a document that provides a detailed approach to meet a WCAG 3 Outcome. Outcome implementation procedures describe inputs to the process such as documentation of steps, actions taken, date completed, conformance claims, etc. The outcome implementation procedure defines a way to evaluate the quality of its implementation, which is expected to correlate to conformance with an accessibility outcome. In this way, conformance can be indirectly measured for situations where the output of the process - the accessibility outcome - is not directly measured.</p>
+			<p>An outcome implementation procedure is a document that provides a detailed approach to meet a WCAG 3 Outcome. Outcome implementation procedures describe inputs to the process such as documentation of steps, actions taken, date completed, conformance claims, etc. The outcome implementation procedure defines a way to evaluate the quality of its implementation, which is expected to correlate to conformance with an accessibility outcome. In this way, conformance can be indirectly measured for situations where the output of the process - the accessibility outcome - is not directly measured.</p>
 			<p>The outcome implementation procedure must address specific requirements from WCAG 3 for each outcome that allows use of outcome implementation procedures. </p>
-			<p class="ednote">(To be decided: We expect that not all outcomes will allow use of outcome implementation procedures.) </p>
+			<p class="ednote">(To be decided: We expect that not all outcomes will allow use of outcome implementation procedures.)</p>
 			<section>
 				<h3>Structure of outcome implementation procedures</h3>
 				<p>Outcome implementation procedures MUST include the following information.</p>
@@ -595,7 +626,7 @@
 					<li>Outcome implementation procedures must provide actionable steps in service of an accessibility outcome.</li>
 					<li>Outcome implementation procedures must reference or include accessibility Guidelines or Outcomes that the outcome implementation procedure supports, with evidence that the steps would meaningfully support that guidance.</li>
 					<li>Describe requirements to follow outcome implementation procedure at minimal conformance level.</li>
-					<li>Outcome implementation procedures supporting higher levels of conformance must provide evaluation procedures, which evaluate how well the steps of the outcome implementation procedure were followed.    </li>
+					<li>Outcome implementation procedures supporting higher levels of conformance must provide evaluation procedures, which evaluate how well the steps of the outcome implementation procedure were followed.</li>
 					<li>Outcome implementation procedures used to support conformance claims must be publicly documented.</li>
 				</ul>
 			</section>
@@ -643,7 +674,7 @@
 
 				<section>
 					<h4>Bronze</h4>
-					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
+					<p>Bronze is the minimum conformance level and requires that there are no critical issues. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
 				</section>
 				<section>
 					<h4>Silver</h4>
@@ -698,7 +729,7 @@
 				</ul>
 				<p>WCAG 3.0 therefore defines two inter-related ways to scope content: <a>views</a> and <a>processes</a>. Evaluation is done on one or more complete views or processes, and conformance is determined on the basis of one or more complete views or processes. </p>
 
-				<p>Conformance is defined only for <a>processes</a> and <a>views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views.  All unique steps in a process MUST be represented in the set of views. Views outside of the process MAY also be included in the scope.</p>
+				<p>Conformance is defined only for <a>processes</a> and <a>views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views. All unique steps in a process MUST be represented in the set of views. Views outside of the process MAY also be included in the scope.</p>
 				<p class="ednote">The AG WG and Silver Task Force recognize that representative sampling is an important strategy that large and complex sites use to assess accessibility. While it is not addressed within this document at this time, our intent is to later address it within this document or in a separate document before the guidelines reach the Candidate Recommendation stage. We welcome your suggestions and feedback about the best way to incorporate representative sampling in WCAG 3.0.</p>
 			</section>
 			<section data-status="exploratory">
@@ -840,13 +871,13 @@
 				<h3>Outcomes</h3>
 				<p>Outcomes are different from WCAG 2.X success criteria. Compared to success criteria, outcomes are written to be:</p>
 				<ul>
-					<li>In plain language; </li>
+					<li>In plain language;</li>
 					<li>More understandable by people who are not experts in technology;</li>
 					<li>More user-need oriented instead of technology oriented;</li>
 					<li>More granular, so there will be more of them; and</li>
-					<li>More flexible to allow more tests than the true/false statements of WCAG 2.X. </li>
+					<li>More flexible to allow more tests than the true/false statements of WCAG 2.X.</li>
 				</ul>
-				<p>The design of outcomes allows more varied needs of people with disabilities than could have been included in WCAG 2.X. </p>
+				<p>The design of outcomes allows more varied needs of people with disabilities than could have been included in WCAG 2.X.</p>
 				<p>Methods map approximately to WCAG 2.X Techniques documents.</p>
 			</section>
 			<section>
@@ -855,8 +886,8 @@
 				<table>
 					<tbody>
 						<tr>
-							<th scope="col"> WCAG 2</th>
-							<th scope="col"> WCAG 3</th>
+							<th scope="col">WCAG 2</th>
+							<th scope="col">WCAG 3</th>
 						</tr>
 						<tr>
 							<td>Success Criteria</td>
