@@ -51,7 +51,7 @@
 					<li>identify who benefits</li>
 				</ol>
 				<p>WCAG 3.0 does not want to advance the WCAG 2.0 requirement: &quot;Ensure that the revision is 'backwards and forward compatible'&quot; . The intention is to include WCAG 2.x content, but migrate it to a different structure and conformance model. </p>
-				<p>The <a href="https://w3c.github.io/wcag/wcag21/requirements/">WCAG 2.1 Requirements</a> are very specific to WCAG 2.1 and will <em>not</em> be advanced by WCAG 3.0. WCAG 3.0 plans to migrate the content of WCAG 2.1 to WCAG 3.0, but the WCAG 2.1 Requirements document referred to structural requirements which are specific to WCAG 2.x. </p>
+				<p>The <a href="https://w3c.github.io/wcag/wcag21/requirements/">WCAG 2.1 Requirements</a> are very specific to WCAG 2.1 and will <em>not</em> be advanced by WCAG 3.0. WCAG 3.0 plans to migrate the content of WCAG 2.1 to WCAG 3.0, but the WCAG 2.1 Requirements document referred to structural requirements which are specific to WCAG 2.x.</p>
 				<p>The WCAG 2.1 Requirements are: </p>
 				<ol>
 					<li>Define a clear conformance model for WCAG 2.1/dot.x releases</li>
@@ -91,23 +91,24 @@
 				<p>This document has two sections: a Design Principles section and a Requirements section. Requirements need to be measured or clearly demonstrated. They are used at the W3C phase of Candidate Recommendation, where the Candidate Recommendation Transition Request reports that the requirements were met. Design Principles are important statements that are less measurable, but are used to guide, shape and steer decision-making during the development process of WCAG 3.0. Both are essential in guiding the development of the WCAG 3.0 project. </p>
 			</section>
 		</section>
-			<section>
-				<h3 id="problem_statements">Opportunities for WCAG 3.0 </h3>
-				<p>The <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read">Problem Statements</a> describe areas identified during the WCAG 3.0 research in 2017-2018 that can be addressed in the new guidelines. Each problem statement also has an opportunity section that is the basis for the WCAG 3.0 Requirements. </p>
-				<section id="oppotunities_usability">
-					<h4>Usability</h4>
-					<ul>
-						<li><strong>Readable</strong>: When guidelines are easier to read and understand, users – especially people in the development cycle who are less technical – are more likely to implement accessibility. When all audiences are considered in the language and terminology used in the guidelines, the likelihood increases that they will: <ul>
-								<li>reach a larger audience</li>
-								<li>be better understood</li>
-								<li>be easier to translate</li>
-								<li>be interpreted as easier to implement</li>
-							</ul>
-						</li>
-						<li><strong>On-ramp for Beginners</strong>: When beginning users can develop understanding and mastery of the accessibility guidance, this leads to faster and greater acceptance of accessibility. This also creates the opportunity to convince developers and project managers to include accessibility at the beginning of a project instead of the end. </li>
-						<li><strong> Current and Future Technology Oriented</strong>: Eliminating underlying assumptions and structure that are oriented toward the historic static web and improving guidance for modern web applications can increase acceptance by developers and provide greater accessibility of web and native applications. </li>
-						<li><strong>Advocacy Tool</strong>: Usability oriented toward a broad audience for WCAG 3.0 can help improve the general advocacy of digital accessibility. Improving the reach of WCAG 3.0 can help improve the awareness of accessibility considerations. Compelling information that is contextually relevant to the standards may also aid in convincing audiences of any type. </li>
-					</ul>
+		<section>
+			<h3 id="problem_statements">Opportunities for WCAG 3.0 </h3>
+			<p>The <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Problem_Statements#Too_Difficult_to_Read">Problem Statements</a> describe areas identified during the WCAG 3.0 research in 2017-2018 that can be addressed in the new guidelines. Each problem statement also has an opportunity section that is the basis for the WCAG 3.0 Requirements. </p>
+			<section id="oppotunities_usability">
+				<h4>Usability</h4>
+				<ul>
+					<li><strong>Readable</strong>: When guidelines are easier to read and understand, users - especially people in the development cycle who are less technical - are more likely to implement accessibility. When all audiences are considered in the language and terminology used in the guidelines, the likelihood increases that they will:
+						<ul>
+							<li>reach a larger audience</li>
+							<li>be better understood</li>
+							<li>be easier to translate</li>
+							<li>be interpreted as easier to implement</li>
+						</ul>
+					</li>
+					<li><strong>On-ramp for Beginners</strong>: When beginning users can develop understanding and mastery of the accessibility guidance, this leads to faster and greater acceptance of accessibility. This also creates the opportunity to convince developers and project managers to include accessibility at the beginning of a project instead of the end. </li>
+					<li><strong> Current and Future Technology Oriented</strong>: Eliminating underlying assumptions and structure that are oriented toward the historic static web and improving guidance for modern web applications can increase acceptance by developers and provide greater accessibility of web and native applications. </li>
+					<li><strong>Advocacy Tool</strong>: Usability oriented toward a broad audience for WCAG 3.0 can help improve the general advocacy of digital accessibility. Improving the reach of WCAG 3.0 can help improve the awareness of accessibility considerations. Compelling information that is contextually relevant to the standards may also aid in convincing audiences of any type. </li>
+				</ul>
 				</section>
 				<section id="opportunities_conformance">
 					<h4>Conformance Model</h4>
@@ -136,11 +137,29 @@
 					<div class="ednote">
 						<p>This section is exploratory. Outstanding questions that need to be addressed include:</p>
 						<ol>
-							<li>What to do with non-critical issues?</li>
-							<li>How to deal with people having have different ideas on what is critical?</li>
+							<li>What to do with non-critical issues? Before non-critical issues can be worked on, it will be essential to understand scope and the conformance model.</li>
+							<li>How to deal with people having have different ideas on what is critical?
+								<ul>
+									<li>The aim is to have the tests determine the severity, not the tester.</li>
+									<li>A next step would be to examine the tests to see if they can reliably predict the severity of impact on different functional needs.</li>
+									<li>Can critical tests be paired with a conformance model that uses <a href="#prescriptive-requirements">prescriptive requirements</a> to make severity rating more straightforward.</li>
+								</ul>
+							</li>
 							<li>How do we incorporate context/process/task? Is that part of scoping, or issue severity? Both are important to the end result.</li>
-							<li>Can the matrix inform designation of functional categories? For example, the <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/text-alternative-available">Text Alternative Available outcome</a>.</li>
+							<li>If included, how will situations where issue severity depends on context be handled?</li>
+							<li>How can the <a href="https://w3c.github.io/fast/">Framework for Accessible Specification of Technologies</a> (FAST) be integrated and used to further this work, for example, to inform the designation of functional categories associated with outcomes?</li>
+							<li>How will issue severity fit into levels? For example:
+								<ul>
+									<li>"Bronze" could be an absence of any critical issues;</li>
+									<li>"Silver" could be an absence of any critical or high issues.</li>
+								</ul>
+							</li>
+							<li>How to account for cumulative issues becoming critical?</li>
+							<li>Would another approach be more effective, for example assigning critical issues after testing is complete based on task or type of task rather than by test.</li>							
 						</ol>
+
+						<p>Tests will include critical issues. Each test will have a category of severity, so some tests will be flagged as causing a critical issue. Examples of critical issues in tests are at Text Alternative Available and Translates Speech And Non-Speech Audio.</p>
+
 					</div>
 
 					<p>The Issue Severity Subgroup:</p>
@@ -157,13 +176,12 @@
 
 					<div class="note">
 						<h5>Proposed updates</h5>
-
 						<ul>
 							<li>For the process of creating this: focus on critical issues. Don't try to rate high / medium / low.</li>
 							<li>Use the critical severity matrix to categorize tests. (At least set up that process to define each test by functional need and impact).</li>
 							<li>We could use Critical / High for a level of conformance. For example:
 								<ul>
-									<li>"Bronze" could be an absence of any critical or high issues;</li>
+									<li>Bronze is the minimum conformance level and requires that there are no critical issues;</li>
 									<li>"Silver" could be an absence of any critical, high, or medium issues.</li>
 								</ul>
 							</li>
@@ -174,75 +192,72 @@
 			</section>
 		<section>
 		  <h2 id="design_principles">Design Principles</h2>
-          <p>The WCAG 3.0 Design Principles are based on the requirements of WCAG 2.0 and build on those requirements to meet needs identified in the WCAG 3.0 research. </p>
-          <p>Accessibility guidelines should:</p>
-          <ol>
-            <li>Support the needs of a wide range of people with disabilities and recognize that people have individual and multiple needs.</li>
-            <li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.</li>
-            <li>Be flexible enough to support the needs of people with disabilities and keep up with emerging technologies. The information structure allows guidance to be added or removed.</li>
-            <li>Be accessible and conform to the Guidelines. <span class="ednote">Note: This design principle will move to the Requirements section once the Conformance section is completed and we determine a specific measurement of compliance. </span></li>
-            <li>Be written in plain language, as easy as possible to understand. <span class="ednote"> We need a definition of plain language that includes the ease of translation. Ideally, it will be a broadly accepted definition internationally. </span></li>
-			<li>Improve the ability to support automated testing where appropriate and provide a procedure for repeatable tests when manual testing is appropriate.</li>
-						<li>Provide requirements to address functional needs, while avoiding or minimizing negative impacts on other functional needs. </li>
-          </ol>
-          <p>The creation process for the guidelines should:</p>
-          <ol start="7">
-            <li>Actively recruit a diverse range of people with disabilities in recognition of the importance of their contributions to accessibility standards and solutions. Review and monitor whether people are included. Continually evaluate inclusive features of available tooling and procedures. </li>
-            <li>Facilitate global participation and feedback.</li>
-            <li>Be data-informed and evidence-based where possible.  We recognize that research and evidence are influenced by the number of people with a particular disability, by the size of the body of research, and by the difficulty in capturing data regarding some disabilities or combination of disabilities.  The intent is to make informed decisions wherever possible to ensure that the needs of all people with disabilities are prioritized, including needs that differ from the majority. In situations where there is no evidence or research, valid data-gathering methods should be used to obtain and evaluate information from advocacy groups, people with lived experience and other subject matter experts.</li>
-			<li>Be written so the Guideline content is usable in adaptable and customizable ways. For example, WCAG 3.0 content is available to be extracted by users to adapt to their needs. </li>
-			
-          </ol>
-</section>
+      <p>The WCAG 3.0 Design Principles are based on the requirements of WCAG 2.0 and build on those requirements to meet needs identified in the WCAG 3.0 research. </p>
+      <p>Accessibility guidelines should:</p>
+			<ol>
+				<li>Support the needs of a wide range of people with disabilities and recognize that people have individual and multiple needs.</li>
+				<li>Support a measurement and conformance structure that includes guidance for a broad range of disabilities. This includes particular attention to the needs of low vision and cognitive accessibility, whose needs don't tend to fit the true/false statement success criteria of WCAG 2.x.</li>
+				<li>Be flexible enough to support the needs of people with disabilities and keep up with emerging technologies. The information structure allows guidance to be added or removed.</li>
+				<li>Be accessible and conform to the Guidelines. <span class="ednote">Note: This design principle will move to the Requirements section once the Conformance section is completed and we determine a specific measurement of compliance. </span></li>
+				<li>Be written in plain language, as easy as possible to understand. <span class="ednote"> We need a definition of plain language that includes the ease of translation. Ideally, it will be a broadly accepted definition internationally. </span></li>
+				<li>Improve the ability to support automated testing where appropriate and provide a procedure for repeatable tests when manual testing is appropriate.</li>
+				<li>Provide requirements to address functional needs, while avoiding or minimizing negative impacts on other functional needs. </li>
+			</ol>
+      <p>The creation process for the guidelines should:</p>
+			<ol start="7">
+				<li>Actively recruit a diverse range of people with disabilities in recognition of the importance of their contributions to accessibility standards and solutions. Review and monitor whether people are included. Continually evaluate inclusive features of available tooling and procedures. </li>
+				<li>Facilitate global participation and feedback.</li>
+				<li>Be data-informed and evidence-based where possible.  We recognize that research and evidence are influenced by the number of people with a particular disability, by the size of the body of research, and by the difficulty in capturing data regarding some disabilities or combination of disabilities.  The intent is to make informed decisions wherever possible to ensure that the needs of all people with disabilities are prioritized, including needs that differ from the majority. In situations where there is no evidence or research, valid data-gathering methods should be used to obtain and evaluate information from advocacy groups, people with lived experience and other subject matter experts.</li>
+				<li>Be written so the Guideline content is usable in adaptable and customizable ways. For example, WCAG 3.0 content is available to be extracted by users to adapt to their needs. </li>
+			</ol>
+		</section>
 		<section>
 		  <h2 id="requirements">Requirements</h2>
-          <p>Previous W3C Accessibility Guidelines described how to make web    pages accessible to people with disabilities. These guidelines provided a     flexible framework that has kept the guidelines relevant for   10 years. Changing technology and changing needs of people with   disabilities   has shown areas where they could be improved. The   requirements are   drawn from the research performed by WCAG 3.0 to   improve the guidelines,   and the suggestions from the Silver Design  Sprint. </p>
-          <p>The WCAG 3.0 Requirements are high level and will be expanded and refined as Silver members move through the prototyping process.</p>
-          <section>
-          <h3>Broad disability support</h3>
-          <p>Silver guidance includes tests and other evaluation methods. Some guidance may use true/false verification but other guidance will use other ways of measuring and/or evaluating where appropriate so that more needs of people with disabilities may be included (for example: rubrics, sliding scale, task-completion, user research with people with disabilities, and more). This approach includes particular attention to people whose needs may better be met with a broad testing strategy, such as people with low vision, limited vision, or cognitive and learning disabilities. </p>
-          </section>
-          <section>
-          <h3>Flexible maintenance and extensibility</h3>
-            <p>Create a maintenance and extensibility model for guidelines that can better meet the needs of people with disabilities using emerging technologies and interactions. The process of developing the guidance includes experts in the technology.</p>
-            </section>
-          <section>
-            <h3>Multiple ways to display</h3>
-            <p>Make the guidelines available in different accessible and usable ways or formats so the guidance can be customized by and for different audiences.</p>
-          </section>
-          <section>
-            <h3>Technology Neutral</h3>
-	    <p>Guidance should be expressed in generic terms so that they may apply to more than one platform or technology. The intent of technology-neutral wording is to provide the opportunity to apply the core guidelines to current and emerging technology, even if specific technical advice doesn't yet exist.</p>
-	 </section>
-          <section>
-            <h3>Readability</h3>
-	    <p>The core guidelines are understandable by a non-technical audience. Text and presentation are usable and understandable through the use of plain language, structure, and design. They link to instruction videos, illustrations, and how-to where available.  Creation of new videos and illustrations are outside the scope of this project at this time. 
-</p>
-	 </section>
-          <section>
-            <h3>Regulatory Environment</h3>
-	    <p>The Guidelines provide broad support, including</p>
-	    <ul>
-	      <li>Structure, methodology, and content that facilitates adoption into law, regulation, or policy, and</li>
-	      <li>clear intent and transparency as to purpose and goals, to assist when there are questions or controversy.</li>
-	    </ul>
-	  </section>
-          <section>
-            <h3>Motivation</h3>
-	    <p>The Guidelines motivate organizations to go beyond minimal accessibility requirements by providing a scoring system that rewards organizations which demonstrate a greater effort to improve accessibility.</p>
-	 </section>
-          <section>
-            <h3>Scope</h3>
-	    <p>The guidelines provide guidance for people and organizations that produce digital assets and technology of varying size and complexity. This includes large, dynamic, and complex websites.  Our intent is to provide guidance for a diverse group of stakeholders including content creators, browsers, authoring tools, assistive technologies, and more.</p>
-
-	</section>
-		</section>
-		<section class="appendix" id="changelog">
-	    <h2>Change Log</h2>
+			<p>Previous W3C Accessibility Guidelines described how to make web    pages accessible to people with disabilities. These guidelines provided a     flexible framework that has kept the guidelines relevant for   10 years. Changing technology and changing needs of people with   disabilities   has shown areas where they could be improved. The   requirements are   drawn from the research performed by WCAG 3.0 to   improve the guidelines,   and the suggestions from the Silver Design  Sprint. </p>
+			<p>The WCAG 3.0 Requirements are high level and will be expanded and refined as Silver members move through the prototyping process.</p>
+      <section>
+				<h3>Broad disability support</h3>
+				<p>Silver guidance includes tests and other evaluation methods. Some guidance may use true/false verification but other guidance will use other ways of measuring and/or evaluating where appropriate so that more needs of people with disabilities may be included (for example: rubrics, sliding scale, task-completion, user research with people with disabilities, and more). This approach includes particular attention to people whose needs may better be met with a broad testing strategy, such as people with low vision, limited vision, or cognitive and learning disabilities. </p>
+				</section>
+				<section>
+					<h3>Flexible maintenance and extensibility</h3>
+					<p>Create a maintenance and extensibility model for guidelines that can better meet the needs of people with disabilities using emerging technologies and interactions. The process of developing the guidance includes experts in the technology.</p>
+				</section>
+				<section>
+					<h3>Multiple ways to display</h3>
+					<p>Make the guidelines available in different accessible and usable ways or formats so the guidance can be customized by and for different audiences.</p>
+				</section>
+        <section>
+					<h3>Technology Neutral</h3>
+	    		<p>Guidance should be expressed in generic terms so that they may apply to more than one platform or technology. The intent of technology-neutral wording is to provide the opportunity to apply the core guidelines to current and emerging technology, even if specific technical advice doesn't yet exist.</p>
+	 			</section>
+        <section>
+          <h3>Readability</h3>
+	    		<p>The core guidelines are understandable by a non-technical audience. Text and presentation are usable and understandable through the use of plain language, structure, and design. They link to instruction videos, illustrations, and how-to where available.  Creation of new videos and illustrations are outside the scope of this project at this time.</p>
+	 			</section>
+        <section>
+          <h3>Regulatory Environment</h3>
+	    		<p>The Guidelines provide broad support, including</p>
+	    		<ul>
+	      		<li>Structure, methodology, and content that facilitates adoption into law, regulation, or policy, and</li>
+	      		<li>clear intent and transparency as to purpose and goals, to assist when there are questions or controversy.</li>
+	    		</ul>
+	  		</section>
+        <section>
+          <h3>Motivation</h3>
+	    		<p>The Guidelines motivate organizations to go beyond minimal accessibility requirements by providing a scoring system that rewards organizations which demonstrate a greater effort to improve accessibility.</p>
+	 			</section>
+        <section>
+          <h3>Scope</h3>
+	    		<p>The guidelines provide guidance for people and organizations that produce digital assets and technology of varying size and complexity. This includes large, dynamic, and complex websites.  Our intent is to provide guidance for a diverse group of stakeholders including content creators, browsers, authoring tools, assistive technologies, and more.</p>
+				</section>
+			</section>
+			<section class="appendix" id="changelog">
+	    	<h2>Change Log</h2>
           <section>
             <h3 id="changes-before-the-first-public-working-draft">Changes Prior to First Public Working Draft</h3>
             <ul>
-			  <li>Moved the Opportunity for Evolving Technologies to Maintenance; added new opportunity       for Flexibility in the Conformance section; and  minor grammar corrections. (9 July 2018) </li>
+			  			<li>Moved the Opportunity for Evolving Technologies to Maintenance; added new opportunity       for Flexibility in the Conformance section; and  minor grammar corrections. (9 July 2018) </li>
               <li>Added headings to individual requirements (25 June 2018)</li>
               <li>Added section on Comparison to WCAG 2.x (25 June 2018)</li>
               <li>Changed Problem Statements to Opportunities based on AGWG feedback and group discussion (25 June 2018)</li>
@@ -258,23 +273,23 @@
               <li>Change "future" to "unanticipated" in Requirements #2 and add subsequent sentence. </li>
               <li>Change the Requirements Intro paragraph to remove the specific     sentence on conformance and pass/fail tests and give greater context on     the source of the Requirements.        </li>
             </ul>
-			<h3 id="changes-before-the-second-requirements-draft">Changes Prior to Second Version of Requirements</h3>
-			<ul>
-			<li>New requirements for Readability, Regulatory Environment, Motivation, and Scope.  </li>
-			  <li>Added paragraph explaining the differences between Design Principles and Requirements as a result of requests from the AGWG face-to-face meeting of 11 and 12 March 2019. </li>
-			  <li>Added new Design Principles and Requirements and changed wording of existing Design Principles and Requirements based on feedback from AGWG in Q1 and Q2 2019 </li>
-			  <li>Added a new Scope section to the Introduction that clarifies that WCAG 3.0 plans to address Authoring  Tools, User agents and Apps. (26 April 2019)</li>
-			  <li>Reworded Technology Neutral to bring it more in line with the original WCAG 2.0 Requirements wording. (26 April 2019)</li>
-			  <li>changed Design Principle 9 to more clearly show that there will not be a hierarchy of disabilities and that when there is no research, how we will address that. </li>
-			</ul>
-            </section>
-		</section>
-		<section class="appendix">
-			<h2>Acknowledgements</h2>
-			<div data-include="../acknowledgements/silver-active.html" data-include-replace="true"></div>
-			<div data-include="../acknowledgements/ag-wg-active.html" data-include-replace="true"></div>
-			<div data-include="../acknowledgements/research-partners.html" data-include-replace="true"></div>
-			<div data-include="../acknowledgements/funders.html" data-include-replace="true"></div>
-		</section>
-	</body>
+						<h3 id="changes-before-the-second-requirements-draft">Changes Prior to Second Version of Requirements</h3>
+						<ul>
+							<li>New requirements for Readability, Regulatory Environment, Motivation, and Scope.  </li>
+							<li>Added paragraph explaining the differences between Design Principles and Requirements as a result of requests from the AGWG face-to-face meeting of 11 and 12 March 2019. </li>
+							<li>Added new Design Principles and Requirements and changed wording of existing Design Principles and Requirements based on feedback from AGWG in Q1 and Q2 2019 </li>
+							<li>Added a new Scope section to the Introduction that clarifies that WCAG 3.0 plans to address Authoring  Tools, User agents and Apps. (26 April 2019)</li>
+							<li>Reworded Technology Neutral to bring it more in line with the original WCAG 2.0 Requirements wording. (26 April 2019)</li>
+							<li>changed Design Principle 9 to more clearly show that there will not be a hierarchy of disabilities and that when there is no research, how we will address that. </li>
+						</ul>
+          </section>
+				</section>
+			<section class="appendix">
+				<h2>Acknowledgements</h2>
+					<div data-include="../acknowledgements/silver-active.html" data-include-replace="true"></div>
+					<div data-include="../acknowledgements/ag-wg-active.html" data-include-replace="true"></div>
+					<div data-include="../acknowledgements/research-partners.html" data-include-replace="true"></div>
+					<div data-include="../acknowledgements/funders.html" data-include-replace="true"></div>
+			</section>
+		</body>
 </html>
