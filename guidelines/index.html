@@ -14,7 +14,7 @@
 			<p>The W3C Accessibility Guidelines (WCAG) 3.0 provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
 			<p>Each <a>guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a>outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a>methods</a> to meet each outcome. </p>
 			<p>This specification is expected to be updated regularly to keep pace with changing technology by updating and adding methods, outcomes, and guidelines to address new needs as technologies evolve. For entities that make formal claims of <a>conformance</a> to these guidelines, several levels of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
-			<p>W3C Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> these versions. WCAG 3.0 will  incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. 
+			<p>W3C Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> these versions. WCAG 3.0 will  incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]].
 			While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3.0 includes additional tests and different scoring mechanisms. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative set of guidelines. Once these guidelines become a W3C Recommendation, the W3C will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts. However, content that conforms to earlier versions of WCAG continue to conform to those versions.</p>
 			<p>See <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3 Introduction</a> for an introduction and links to WCAG technical and educational material.</p>
 		</section>
@@ -43,7 +43,7 @@
 				<summary>Summary</summary>
 				<p>The W3C Accessibility Guidelines (WCAG) 3.0 show ways to make web content accessible to people with disabilities. WCAG 3.0 is a newer standard than the Web Content Accessibility Guidelines (WCAG) 2.2. You may use WCAG 2.2 or the new standard.</p>
 				<p>What’s new in WCAG 3.0?</p>
-				 
+
 				<ul>
 				<li>WCAG 3.0 includes the needs of people with more types of disabilities.</li>
 				<li>It includes mobile and desktop applications, along with web content.</li>
@@ -98,7 +98,7 @@
 			</section>
 			<p class="ednote"> While the majority of guidelines are still to be written and we continue to explore additional ways of validating conformance, we seek wider public review on the approach presented here. </p>
 		</section>
-		
+
 
 		<section>
 			<h2>Normative requirements</h2>
@@ -114,8 +114,8 @@
 			<p>The key words <em class="rfc2119" title="MAY">MAY</em>, <em class="rfc2119" title="MUST">MUST</em>, <em class="rfc2119" title="MUST NOT">MUST NOT</em>, <em class="rfc2119" title="NOT RECOMMENDED">NOT RECOMMENDED</em>, <em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em>, <em class="rfc2119" title="SHOULD">SHOULD</em>, and <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> are to be interpreted as described in [[RFC2119]].</p>
 			<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, critical errors, and outcome ratings.</p>
 		</section>
-		
-		
+
+
 		<section>
 			<h2>Guidelines</h2>
 				<details class="summary">
@@ -130,7 +130,7 @@
 					</ul>
 			</details>
 			<p>The individuals and organizations that use WCAG vary widely and include web designers and developers, policy makers, purchasing agents, teachers, and students. In order to meet the varying needs of this audience, several layers of guidance are provided including functional categories of disabilities, general guidelines, outcomes that can be tested, a rich collection of methods, resource links, and code samples.</p>
-			
+
 			<p>The guidelines included in this draft have been selected to show different types of content:</p>
 			<ul>
 				<li><a href="#text-alternatives">Text alternatives</a> - a direct migration from WCAG 2.X success criterion</li>
@@ -140,7 +140,7 @@
 				<li><a href="#visual-contrast-of-text">Visual contrast of text</a> - a migration of WCAG 2.X with substantial changes</li>
 				<li><a href="#error-prevention">Error Prevention</a> - a migration of WCAG 2.X with substantial changes</li>
 			</ul>
-			
+
 			<div class="ednote">
 			<p>These are <strong>early drafts of guidelines included to serve as initial examples</strong>. They are used to illustrate what WCAG 3.0 could look like and to test the process of writing content. These guideline drafts should not be considered as final content of WCAG 3.0. They are included to show how the structure would work. As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. WCAG 2.x success criteria will be migrated to this new structure before WCAG 3.0 moves to candidate recommendation.</p>
 
@@ -159,7 +159,7 @@
 						 <p>For this First Public Working Draft, we included HTML methods. This will be expanded in future drafts. We have also included a method, Author Control of Text Alternatives (ATAG),  that demonstrates how requirements from the Authoring Tool Accessibility Guidelines (ATAG) 2.0 can be included as methods. </p>
 
 						</div>
-				</section>				
+				</section>
 			</section>
 			<section class="guideline">
 				<h3>Clear words</h3>
@@ -177,11 +177,11 @@
 
 					<p>The clear words guideline was included to illustrate that the proposed WCAG 3.0 scoring and structure can be used in non-binary testing. Clear words guideline uses a rating scale with flexible units of measure. For example, testing could be done by a webpage, a paragraph, a section of instructions on an application, or other. A manual tester evaluates the paragraph, webpage, or section on a rating scale. While we do not know of any mainstream accessibility tool that measures common words, there are some working prototypes of tools developed outside the W3C. We are interested in feedback on testing this guideline and its scoring.</p>
 
-					<p>There are a number of exceptions to this guideline. We are interested in feedback where to put that information for ease of use.</p> 
+					<p>There are a number of exceptions to this guideline. We are interested in feedback where to put that information for ease of use.</p>
 
 					<p>This category of new guideline needs further development. It is included to show that it could work, not necessarily that this is the shape of the final guideline.</p>
 					</div>
-	
+
 				</section>
 			</section>
 			<section class="guideline">
@@ -226,9 +226,9 @@
 
 					<p>The structured content guideline began as a guideline on use of headings. Going through the content development process, we realized that it was a broader topic than simply headings, but there is little content developed beyond headings. Note that this guideline is used for prototyping, and is the most uneven in style of content.  Additional outcomes and content will be added in future drafts to make this guideline more complete.</p>
 
-					<p>Structured content guideline also shows how several WCAG 2.1 success criteria can be re-combined and include AAA level success criteria such as 2.4.10 Section Headings. </p>   
+					<p>Structured content guideline also shows how several WCAG 2.1 success criteria can be re-combined and include AAA level success criteria such as 2.4.10 Section Headings. </p>
 
-					<p>Do you like the inclusion of broader needs for structured content than providing semantics for screenreader users? Do you think this should be a separate guideline, or do you like having multiple, testable outcomes supporting the guideline?  Do you like the approach of merging WCAG2 success criteria with related user needs?</p> 
+					<p>Do you like the inclusion of broader needs for structured content than providing semantics for screenreader users? Do you think this should be a separate guideline, or do you like having multiple, testable outcomes supporting the guideline?  Do you like the approach of merging WCAG2 success criteria with related user needs?</p>
 				</div>
 
 
@@ -240,7 +240,7 @@
 				<section class="outcome" data-status="exploratory">
 					<h4>Luminance contrast between background and text</h4>
 					<p>Provides adequate luminance contrast between background and text colors to make the text easy to read.</p>
-					
+
 				<div class="ednote">
 					<p>Visual Contrast is a migration from WCAG 2.1 with significant updates:</p>
 					<ul>
@@ -262,13 +262,13 @@
 				<section class="outcome" data-status="exploratory">
 					<h4>Input instructions provided</h4>
 					<p>Provides instructions for inputs that have data entry requirements (for example, required, date, password) so users know how to provide valid information.</p>
-					
+
 				</section>
-				
+
 				<div class="ednote">
 					<p>An additional outcome, Moderated form completion: Guides data entry, provides validation, and moderates form completion so users can avoid data entry errors, is under development. Details will be posted when available.</p>
 				</div>
-				
+
 				<div class="ednote">
 					<p>The Error Prevention guideline is a combination of WCAG 2.2 success criteria and additional requirements to address a broader range of functional needs.</p>
 
@@ -282,12 +282,12 @@
 						<li><a href="https://www.w3.org/WAI/tutorials/forms/instructions/">Form Instructions (Web Accessibility Tutorials)</a></li>
 					</ul>
 
-					<p>To identify requirements beyond those specified in WCAG 2.2, we used user journeys to explore user needs related to different error-related scenarios, such as error on data entry and error on form submission (see <a href="https://docs.google.com/document/d/1siHMdNk96v2DVY6sarjZCDt5-nvqvQq13bXOOYymNlw/edit?usp=sharing">Error Flows Inventory (Google Doc)</a>). We then elaborated those scenarios to explore and define features that help prevent errors and help users recover from errors. We defined common user needs related to errors, such as "User needs instructions for inputs that have data entry requirements so they can enter data in the correct format." We used the <a href="https://www.w3.org/WAI/GL/WCAG3/2020/functional-needs/">DRAFT Functional Needs</a> as a guide to define specific functional needs, such as "User needs instructions that display at the source of input so they can access the instructions while focused on the input" for functional needs related to limited vision, attention, and memory. We summarized functional needs in the <a href="https://docs.google.com/spreadsheets/d/1BEzSKUsoMQZAwLY5uM5T4Jk7vqKruQT8EaheijQJ7nk/edit#gid=1549778244">Error User Needs Worksheet (Google Sheet)</a> and used those as the basis for defining guidelines, outcomes, and methods.</p>   
+					<p>To identify requirements beyond those specified in WCAG 2.2, we used user journeys to explore user needs related to different error-related scenarios, such as error on data entry and error on form submission (see <a href="https://docs.google.com/document/d/1siHMdNk96v2DVY6sarjZCDt5-nvqvQq13bXOOYymNlw/edit?usp=sharing">Error Flows Inventory (Google Doc)</a>). We then elaborated those scenarios to explore and define features that help prevent errors and help users recover from errors. We defined common user needs related to errors, such as "User needs instructions for inputs that have data entry requirements so they can enter data in the correct format." We used the <a href="https://www.w3.org/WAI/GL/WCAG3/2020/functional-needs/">DRAFT Functional Needs</a> as a guide to define specific functional needs, such as "User needs instructions that display at the source of input so they can access the instructions while focused on the input" for functional needs related to limited vision, attention, and memory. We summarized functional needs in the <a href="https://docs.google.com/spreadsheets/d/1BEzSKUsoMQZAwLY5uM5T4Jk7vqKruQT8EaheijQJ7nk/edit#gid=1549778244">Error User Needs Worksheet (Google Sheet)</a> and used those as the basis for defining guidelines, outcomes, and methods.</p>
 
-					<p>The guidelines, outcomes, and methods related to errors are not complete. However, we would like your feedback on the structure and approach to defining accessibility guidelines with this user-first approach. Does the user journey approach make sense as a way of defining accessibility features? Are the methods clear in how they help achieve the outcome? Are the tests understandable and straightforward?</p> 
-					
+					<p>The guidelines, outcomes, and methods related to errors are not complete. However, we would like your feedback on the structure and approach to defining accessibility guidelines with this user-first approach. Does the user journey approach make sense as a way of defining accessibility features? Are the methods clear in how they help achieve the outcome? Are the tests understandable and straightforward?</p>
+
 					<p>For this 3rd Public Working Draft, we include three methods to support the outcome of Input instructions provided for the Error Prevention guideline, which focuses on preventing errors from occurring. We are still working on additional outcomes and methods. We are also working on a guideline for Error Notification that will address outcomes and methods related to helping users recover from errors. We hope to include the remaining Error Prevention content and the complete Error Notification guideline in the 4th Public Working Draft, due out in December 2021.</p>
-				
+
 				</div>
 
 			</section>
@@ -321,7 +321,7 @@
 				</ul>
 			</details>
 
-			<p>WCAG 3.0 tests <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to determine if the content they are evaluating satisfies the criteria. </p> 
+			<p>WCAG 3.0 tests <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to determine if the content they are evaluating satisfies the criteria. </p>
 			<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies based solely on the outcome, even when methods do not yet exist for those technologies.</p>
 
 			<div class="ednote">
@@ -341,18 +341,19 @@
 					<li>How these tests will be integrated into a conformance model (including levels or scores), and</li>
 					<li>Get feedback from designers, developers and other communities on wording choice.</li>
 					<li>Determine how organizations can declare which convention they are following in a way that is transparent, both to their users and for the purpose of verification in audits</li>
+					<li>Finalize the definition of view and gain consensus on that approach.
 					<li>Address all github issues under <a href="https://github.com/w3c/silver/milestone/16" target="_blank">test types and terminology milestone</a>.</li>
 				</ul>
 			</div>
 
 			<section>
 				<h3>Test scopes</h3>
-				<p>Testing outcomes use <a>items</a>, <a>views</a>, <a>user processes</a>, and the <a>aggregate</a> to define what is being tested.</p> 
-	
+				<p>Testing outcomes use <a>items</a>, <a>views</a>, <a>user processes</a>, and the <a>aggregate</a> to define what is being tested.</p>
+
 				<p><dfn data-lt="item|unit" title="Smallest testable unit">Items</dfn> are the smallest testable unit. They may be interactive components such as a drop down menu, a link, or a media player. They may also be units of content such as a word, a phrase, a label or error message, an icon, or an image.</p>
-	
+
 				<p><dfn data-lt="views" title="All content visually and programmatically available without a substantive change.">Views</dfn> include all content visually and programmatically available without a substantive change. Conceptually, views correspond to the definition of a web page as used in WCAG 2.X, but are not restricted to content meeting that definition. For example, a view could be considered a "screen" in a mobile app or a layer of web content – such as a modal.  </p>
-	
+
 				<p><dfn data-lt="user process" title="Series of user actions required in order to complete an activity">User processes</dfn> are a series of user actions, and the distinct interactive <a>views</a> and <a>items</a> that support the actions, where each action is required in order to complete an activity. A user process may include a subset of items in a view or a group of views.</p>
 				<p>Examples of a process include:</p>
 				<ul>
@@ -362,14 +363,14 @@
 					<li>Interacting with other users in a virtual reality environment.</li>
 				</ul>
 				<p>A process is comprised of one or more <a>views</a> or subsets of views. Only the part of the views that support the user process are included. in a test of user process.</p>
-	
+
 				<p>The <dfn title="set of items, views, and user processes that comprise the site">aggregate</dfn> is the combination of items, views, and user processes that collectively comprise the site, set of web pages, web app, etc.</p>
 			</section>
 
 			<section>
-				<h3>Types of tests</h3>
-				<p>WCAG 3.0 includes two types of tests: computational tests and qualitative tests. Testing the outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>.</p>
-				<p>Although content may satisfy all outcomes using computational and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. The four testing processes  address this gap by providing a range of ways to evaluate more of the user experience.</p>
+				<h3>Tests</h3>
+				<p>All tests are computational or qualitative; however, WCAG 3 supports more user needs by allowing different tests and ways to measure based on specified conditions. Testing outcomes using these tests might involve a combination of <a>automated evaluation</a>, <a>semi-automated evaluation</a>, and <a>human evaluation</a>.</p>
+				<p>Although content may satisfy all outcomes using computational and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. </p>
 
 				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 
@@ -393,102 +394,47 @@
 				<section>
 					<h4>Qualitative tests</h4>
 					<p>Qualitative tests rely on evaluating content based on a set of defined expectations and exceptions. The set of expectations and exceptions limit the scope of decisions, to minimize variation of test results arrived at by different testers. Still, some level of qualitative assessment is required, therefore the accuracy of the test results also depends on the knowledge and context of the testers to some degree.</p>
-					<p>Each method using qualitative tests includes:</p> 
+					<p>Each method using qualitative tests includes:</p>
 					<ul>
 						<li>the defined expectations being tested; and</li>
 						<li>guidance on evaluating how well the content meets the defined expectations.</li>
 					</ul>
-
 					</section>
+
 					<section>
-						<h4>Conditional tests</h4>
-						<p>Conditional tests rely on informed qualitative evaluations based on a set of criteria. The test results may vary slightly between experienced testers. Examples include testing quality and applicability.</p>
-						<p>Methods using conditional tests include the criteria being tested and guidance on evaluating how well the content meets the criteria of the conditional test.</p> 
+						<h4>Conditions</h4>
+						<p>Some outcomes are best tested using different tests and ways of measuring based on the context (for example different languages).  The context may dictate:</p>
+						<ul>
+							<li>which tests are used, </li>
+							<li>variations in expected outcomes for those tests depending on the context applied/li>
+							<li>what the baseline is used to test against, and<</li>
+							<li>different acceptable measurement systems.</li>
+						</ul>
 
 						<aside class="example">
-							<p>Example conditional test</p>
-								<p>These tests are already part of WCAG 2.x.</p>
-								<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive</a></p>
-								<p>Example for 2.4.9: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/" target="_blank"> Link is descriptive</a></p>
+							<p>Examples of user-specific context that may require adaptive measures in order to effectively evaluate accessibility</p>
+							<ul>
+								<li>Individuals may require different types of contrast, including both high and low contrast. When testing for these variations in users, the expected computational numbers of each experience will vary based on the adaptive requirements.</li>
+								<li>If the same interface is translated into more than one language with different grammatical rules, and some tests may have different conformance requirements for each language</li>
+								<li>Luminance may be measured based on APCA or IEC-4WD</li>
+							</ul>
 						</aside>
-
 					</section>
-					<section>
-						<h4>Conventional tests</h4>
-						<p>Conventional tests evaluate the results within a particular context.  The tests are still unconditional or conditional tests but the context dictates:
-						</p><ul><li>which unconditional or conditional tests are used, or</li>
-						<li>what the baseline is used to test against.
-						</li></ul>
-						WCAG will rely on conventional tests when a solution will improve accessibility but where that implementation of the solution will vary based on situation, such as language, type of content, or other design decisions. Examples include testing for consistency of design decisions and content choices.
-						<p>Methods using conventional tests include the test criteria the organization would need to evaluate, parameters for success and failure, and, if it is a conditional test, guidance on evaluating how well the content meets the criteria of the conditional test.</p>
 
-					<aside class="example">
-						<p>Example conditional test</p>
-						<p>These tests are already part of WCAG 2.x.</p>
-						<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive</a></p>
-						<p>Example for 2.4.9: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/" target="_blank"> Link is descriptive</a></p>
-					</aside>
-				</section>
 			</section>
 
-			<section>
-				<h3>Types of requirements</h3>
-				<p>There are four types of requirements that can be tested: prescriptive, adaptive, extensible, and protocol-based.</p>
-				<ul>
-					<li><strong>Prescriptive requirements</strong> include a predetermined set of options for determining how to conform, and how to measure conformance. These requirements are universal, meaning that how to meet them does not vary based on context.</li>
-					<li><strong>Adaptive requirements</strong> includes an additional checkpoint to determine user-specific context that may require varying which computational and qualitative tests will be used, and potential variations in the desired outcome.This means that the same computational and qualitative tests may need to be applied multiple times in different ways, and some variations may pass or fail while others have a different result.</li>
-					<li><strong>Extensible requirements</strong> allow for computational and qualitative tests to be applied using an appropriately selected specification out of many when multiple specifications or standards are available for the same test (for example, luminance). The testers are responsible for documenting which specification is applied and why.</li>
-					<li><strong>Protocol-based requirements</strong> may have a variety of outcomes and may not be recognizable as pass or fail. Instead, the results of this testing approach include documentation on which protocol was used, why, and what the outcomes were. The quality of the implementation and outcome can also be assessed to ensure adhering to the protocol created a more accessible outcome.</li>
-				</ul>
+
+
 
 				<section>
-					<h4>Prescriptive requirements</h4>
-					<p>Prescriptive requirements apply computational and qualitative tests directly to the content. The content is the only input which determines which test to use, and what the result of the test will be.</p>
-					<p>Examples of prescriptive requirements include the computational tests listed in Example 1 and the qualitative tests listed in Example 2.</p>
-				</section>
 
-				<section>
-					<h4>Adaptive requirements</h4>
-					<p>Adaptive testing evaluates the results within a particular user-specific context. The tests are still computational or qualitative, but the context dictates:</p>
-					<ul>
-						<li>which computational or qualitative tests are used, </li>
-						<li>variations in expected outcomes for those tests depending on the context applied, and</li>
-						<li>what the baseline is used to test against.</li>
-					</ul>
 
-					<aside class="example">
-						<p>Examples of user-specific context that may require adaptive measures in order to effectively evaluate accessibility</p>
-						<ul>
-							<li>Individuals may require different types of contrast, including both high and low contrast. When testing for these variations in users, the expected computational numbers of each experience will vary based on the adaptive requirements.</li>
-							<li>If the same interface is translated into more than one language with different grammatical rules, and some tests may have different conformance requirements for each language</li>
-						</ul>
-					</aside>
-				</section>
 
-				<section>
-					<h4>Extensible Requirements</h4>
-					<p>Testing may occasionally require determining and referencing which specifications are being tested against. These variances can be due to regional laws or different means for measuring. For example, luminance may be measured based on APCA or IEC-4WD. In these cases, an extensible method of testing is being used, in which the selected specification used for evaluation is documented, along with why that specification was chosen.</p>
-
-					<aside class="example">
-						<p>Example extensible requirements include:</p>
-						<ul>
-							<li>Luminance may be measured based on APCA or IEC-4WD</li>
-							<li>Language reading level may be measured based on Test X or Test Y (to be defined)</li>
-							<li>Minimum target size may be A for situation α and B for situation β (to be defined)</li>
-						</ul>
-					</aside>
-				</section>
-
-					<section>
-						<h4>Procedural tests</h4>
-						<p>Procedural tests evaluate whether a process was used to improve accessibility. Examples include usability and plain language testing. Procedural tests could include assistive technology testing, user-centered design methods, plain language testing, and both user and expert usability testing. Procedural testing often applies to the <a>aggregate</a> or <a>user process</a>. </p>
-					<p>Procedural tests are defined by <a href="#outcome-implementation-procedures">outcome implementation procedures</a> that describe steps for an organization to follow in support of accessibility outcomes, and ways to evaluate how well the steps have been followed. </p>
-					</section>
-
+</section>
 		</section>
 
 		<section data-status="exploratory">
-			<h2>Outcome implementation procedures</h2>
+			<h2>Rrocedure-based Assertions</h2>
 			<details class="summary">
 				<summary>Summary</summary>
 				<p>@@</p>
@@ -622,7 +568,7 @@
 			<details class="summary">
 				<summary>Summary</summary>
 				<p>You might want to make a claim that your content or product meets the WCAG 3.0 outcomes. If it does meet the outcomes, we call this “conformance.” To conform to WCAG 3.0, your test results must show that your project is accessible.</p>
-				<p>If you want to make a conformance claim, you must use the process described in this document. Your content can conform to WCAG 3.0, even if you don’t want to make a claim. You can still use this process to test your project’s accessibility.</p>	
+				<p>If you want to make a conformance claim, you must use the process described in this document. Your content can conform to WCAG 3.0, even if you don’t want to make a claim. You can still use this process to test your project’s accessibility.</p>
 			</details>
 			<section data-status="exploratory">
 				<h3>Conformance levels</h3>
@@ -665,9 +611,9 @@
 				</ul>
 			<p>User Generated Content is provided for publication by visitors where the content platform specifically welcomes and encourages it. User-generated content is content that is submitted through a user interface designed specifically for members of the public and customers. Use of the same user interface as an authoring tool for publication of content by agents of the publisher (such as employees, contractors, or authorized volunteers) acting on behalf of the publisher does not make that content User Generated Content. The purpose of the User Generated Content Conformance is to allow WCAG 3 outcomes and methods to require additional or different steps to improve the accessibility of User Generated Content.</p>
 			<p>An important part of WCAG Conformance is the specific guidance that is associated with individual WCAG 3 guidelines and outcomes. Not all WCAG 3 guidelines will have unique outcomes and testing for User Generated Content. Unless User Generated Content requirements are specified in a particular guideline, that guideline applies as written whether or not the content is User Generated. </p>
-			
+
 			<p class="ednote">We plan for a future Working Draft to include specific examples of guidelines with additional requirements for user generated content.  One example would be 'alternative text'. The Authoring Tool Accessibility Guidelines (ATAG) has specific guidance for providing a mechanism for alternative text. The <a href="https://www.w3.org/TR/ATAG20/#gl_b23">ATAG  2.0 Guideline B.2.3</a> - "Assist authors with managing alternative content for non-text content" could be adapted to provide specific, guideline-related guidance for user generated alternative text. </p>
-			
+
 			<p>The web content publisher should identify all locations of User Generated Content (such as commentary on hosted content, product descriptions for consumer to consumer for sale listings, and restaurant reviews) and perform standard accessibility evaluation analysis for each. If there are no accessibility issues, the User Generated Content is fully conforming.</p>
 			<section>
 			<h4>Steps to Conform</h4>
