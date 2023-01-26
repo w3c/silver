@@ -298,43 +298,34 @@
 			<h2>Testing</h2>
 			<details class="summary">
 				<summary>What types of tests and scopes are used?</summary>
-				<p>WCAG 3.0 includes two (2) types of tests which are evaluated pass/fail:</p>
+				<p>WCAG 3.0 includes two (2) types of tests which are evaluated:</p>
 				<ul>
-					<li><strong>Computational tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether certain properties  exist in the content or if they match a value specified by the requirement.</li>
+					<li><strong>Computational tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether certain properties exist in the content or if they match a value specified by the requirement.</li>
 					<li><strong>Qualitative tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary between testers who understand the criteria. Examples include evaluating the quality and applicability of certain properties of the content.</li>
 				</ul>
 
-				<p>WCAG 3.0 includes four (4) types of requirement by which the evaluations are made:</p>
-				<ul>
-					<li><strong>Prescriptive requirement:</strong> How to conform, and how to test for conformance is predetermined. If there is more than one option, all options are defined by the standard.</li>
-					<li><strong>Adaptive requirement:</strong> The testing process includes variations where the results rely on the external and/or user-specific context in which content is being tested. The tests are still computational or qualitative tests but the context dictates what results are expected, and which tests are relevant.</li>
-					<li><strong>Extensible requirement:</strong> Requirements that rely on selecting from multiple valid ways to measure the outcome (for example, there are multiple accepted specifications for measuring luminance, and the testers will need to determine which is most valid for their use case).</li>
-					<li><strong>Protocol-based requirement:</strong> Using accepted industry protocols that meet defined quality criteria (examples include Usability and Plain Language protocols) to improve accessibility.</li>
-				</ul>
-
+				<p>Most tests have prescribed ways to meet the test. In some cases, the ways to meet the test will change based on a specific condition being met (example: the language the content is written in).</p>
+	
 				<p>Tests can be applied to four (4) different scopes:</p>
 				<ul>
 					<li><strong>Item:</strong> A component or unit of content. Examples include a drop down menu, a media player, a phrase, or an image.</li>
-					<li><strong>View:</strong> All content visually and programmatically available without a substantive change.</li>
+					<li><strong>View:</strong> All content visually and programmatically available without a user-initiated substantive change.</li>
 					<li><strong>User process:</strong> Series of user actions, and the distinct interactive views that support the actions, where each action is required in order to complete an activity.</li>
 					<li><strong>Aggregate:</strong> Combination of all related items, user processes, and views.</li>
 				</ul>
 			</details>
 
-			<p>WCAG 3.0 tests <a href="#outcomes">outcomes</a>. Outcomes are written as testable criteria that allow testers to determine if the content they are evaluating satisfies the criteria. </p> 
-			<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for satisfying the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies based solely on the outcome, even when methods do not yet exist for those technologies.</p>
+			<p>WCAG 3.0 defines <a href="#outcomes">outcomes</a> and provides ways to test and meet them. Outcomes are written as testable statements that allow testers to determine if the content being evaluated satisfies the criteria. </p> 
+			<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains <a>tests</a> and <a>techniques</a> for meeting the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies based solely on the outcome, even when methods do not yet exist for those technologies.</p>
 
 			<div class="ednote">
 				<p>This section is exploratory. Outstanding questions that need to be addressed include:</p>
 				<ul>
-					<li>What the relationship between types of requirements, and methods and outcomes are is to be determined. For example, these requirement types could be different types of outcomes.</li>
-					<li>Test types will be used within outcomes or methods. How exactly these will be used needs more work.</li>
-					<li>Developing detailed examples of each test type,</li>
-					<li>Finalizing names and descriptions of scope and test types and measures,</li>
+					<li>Developing detailed examples of each test,</li>
+					<li>Finalizing names and descriptions of scope and tests,</li>
 					<li>Determining what to document for protocol-based tests,</li>
 					<li>How protocols will be incorporated,</li>
-					<li>Are there further test types which need to be added,</li>
-					<li>How well this approach to testing supports additional requirements not addressed in 2.1,</li>
+					<li>How well the testing approach defined here supports additional requirements not addressed in 2.1,</li>
 					<li>Testing the accuracy, reliability, repeatability, etc. of this approach,</li>
 					<li>How well this approach will support regulatory needs, </li>
 					<li>How a process will be defined and documented,</li>
