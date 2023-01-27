@@ -116,7 +116,7 @@
 		</section>
 		
 		
-		<section>
+		<section data-status="exploratory">
 			<h2>Guidelines</h2>
 				<details class="summary">
 				<summary>Summary</summary>
@@ -129,22 +129,31 @@
 					<li>Error prevention.</li>
 					</ul>
 			</details>
+		
+			
+			<div class="ednote">
 			<p>The individuals and organizations that use WCAG vary widely and include web designers and developers, policy makers, purchasing agents, teachers, and students. In order to meet the varying needs of this audience, several layers of guidance are provided including functional categories of disabilities, general guidelines, outcomes that can be tested, a rich collection of methods, resource links, and code samples.</p>
+
+			<p>The <strong>early drafts of guidelines included here serve as initial examples</strong>. They are used to illustrate what WCAG 3.0 could look like, demonstrate the structure, and test the process of writing content. <strong>These guideline drafts should not be considered as final content of WCAG 3.0</strong>.</p>
+
+			<p>As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. WCAG 2.x success criteria will be migrated to this new structure before WCAG 3.0 moves to candidate recommendation.</p>
+
+			<p>As more content is developed, this section will be a list of guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to WCAG 3.0, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit">WCAG to Silver Outline Map</a>.</p>
+
 			
 			<p>The guidelines included in this draft have been selected to show different types of content:</p>
 			<ul>
 				<li><a href="#text-alternatives">Text alternatives</a> - a direct migration from WCAG 2.X success criterion</li>
-				<li><a href="#clear-words">Clear words</a> - new guidance that could not previously be included in WCAG 2.X. It is directly based on <a href="https://www.w3.org/TR/coga-usable/"> Making content usable for people with cognitive and learning disabilities</a> [[coga-usable]].</li>
+				<li><a href="#clear-words">Clear words</a> - new guidance that could not previously be included in WCAG 2.X. It is  based on <a href="https://www.w3.org/TR/coga-usable/"> Making content usable for people with cognitive and learning disabilities</a> [[coga-usable]].</li>
 				<li><a href="#captions">Captions</a> - an example of adapting WCAG 2.X guidance to emerging technologies, such as web virtual reality</li>
-				<li><a href="#structured-content">Structured content</a> - migration and merging of several previously unrelated WCAG 2.X success criteria</li>
-				<li><a href="#visual-contrast-of-text">Visual contrast of text</a> - a migration of WCAG 2.X with substantial changes</li>
-				<li><a href="#error-prevention">Error Prevention</a> - a migration of WCAG 2.X with substantial changes</li>
+				<li><a href="#structured-content">Structured content</a> - migration and merging of several previously unrelated WCAG 2.X success criteria. This revision addresses more diverse disability needs than WCAG 2.X.</li>
+				<li><a href="#visual-contrast-of-text">Visual contrast of text</a> - a migration of WCAG 2.X with substantial changes including:
+					<ul><li>New calculations of contrast based on more modern research on color perception.</li>
+							<li>Merging the 1.4.3 AA and 1.4.6 AAA levels into one guideline.</li>
+							<li>New test of text contrast.</li>
+							<li>At this time, it only includes textual visual contrast.</li></ul></li>
+				<li><a href="#error-prevention">Error Prevention</a> - a migration of WCAG 2.X with substantial changes, including three methods to support the outcome of Input instructions provided for the Error Prevention guideline, which focuses on preventing errors from occurring.</li>
 			</ul>
-			
-			<div class="ednote">
-			<p>These are <strong>early drafts of guidelines included to serve as initial examples</strong>. They are used to illustrate what WCAG 3.0 could look like and to test the process of writing content. These guideline drafts should not be considered as final content of WCAG 3.0. They are included to show how the structure would work. As this draft matures, numbering of individual guidelines will be removed to improve overall usability of the guidelines in response to public requests. WCAG 2.x success criteria will be migrated to this new structure before WCAG 3.0 moves to candidate recommendation.</p>
-
-			<p>As more content is developed, this section will be a list of guidelines with a unique short name, and the text of the requirement written in plain language. To see the overall plan for migrating content from WCAG 2.1 to WCAG 3.0, see the <a href="https://docs.google.com/document/d/1aCRXrtmnSSTso-6S_IO9GQ3AKTB4FYt9k92eT_1PWX4/edit">WCAG to Silver Outline Map</a>.</p>
 			</div>
 
 			<section class="guideline">
@@ -164,8 +173,6 @@
 				</ul>
 				<section class="outcome" data-status="exploratory">
 					<h4>Common clear words</h4><p>Uses common words to reduce confusion and improve understanding.</p>
-
-	
 				</section>
 			</section>
 			<section class="guideline">
@@ -196,15 +203,7 @@
 					<h4>Conveys hierarchy with semantic structure</h4>
 					<p>Provides semantic structure that conveys the hierarchy to help explore and navigate the content.</p>
 				</section>
-				<div class="ednote">
-					<p>We included the structured content guideline as an example of an “easy” guideline that was well understood and addressed diverse disability needs. While WCAG2 addresses headings from the semantic needs of screenreader users, little has been done to directly address the needs of people with cognitive disabilities around headings.  This guideline shows how a well-known area of accessibility can address more user needs of different groups of people with disabilities.  The structured content guideline has multiple outcomes working together to cover the different aspects of accessibility needed for different categories of people with disabilities. </p>
 
-					<p>The structured content guideline began as a guideline on use of headings. Going through the content development process, we realized that it was a broader topic than simply headings, but there is little content developed beyond headings. Note that this guideline is used for prototyping, and is the most uneven in style of content.  Additional outcomes and content will be added in future drafts to make this guideline more complete.</p>
-
-					<p>Structured content guideline also shows how several WCAG 2.1 success criteria can be re-combined and include AAA level success criteria such as 2.4.10 Section Headings. </p>   
-
-					<p>Do you like the inclusion of broader needs for structured content than providing semantics for screenreader users? Do you think this should be a separate guideline, or do you like having multiple, testable outcomes supporting the guideline?  Do you like the approach of merging WCAG2 success criteria with related user needs?</p> 
-				</div>
 
 
 
@@ -253,19 +252,19 @@
 			</details>
 
 			<div class="ednote">
-				<p>This section is exploratory. Outstanding questions that need to be addressed include:</p>
+				<p>As we continue developing this content, we seek input on the following:</p>
 				<ul>
-					<li>Developing detailed examples of each test,</li>
-					<li>Finalizing names and descriptions of scope and tests,</li>
-					<li>Determining what to document for protocol-based tests,</li>
-					<li>How protocols will be incorporated,</li>
-					<li>How well the testing approach defined here supports additional requirements not addressed in 2.1,</li>
-					<li>Testing the accuracy, reliability, repeatability, etc. of this approach,</li>
-					<li>How well this approach will support regulatory needs, </li>
-					<li>How a process will be defined and documented,</li>
-					<li>How these tests will be integrated into a conformance model (including levels or scores), and</li>
+					<li>How well does the testing approach defined here supports additional requirements not addressed in 2.1?</li>
+					<li>How well does the testing approach defined here support regulatory needs?</li>
+					<li>How wil these tests be integrated into a conformance model (including levels or scores)?</li>
+					<li>For multiple ways to measure, how will organizations declare which specification they are following in a way that is transparent, both to their users and for the purpose of verification in audits?</li>
+				</ul>
+				<p>Next steps include:</p>
+				<ul>	
 					<li>Get feedback from designers, developers and other communities on wording choice.</li>
-					<li>Determine how organizations can declare which convention they are following in a way that is transparent, both to their users and for the purpose of verification in audits</li>
+					<li>Finalize names and descriptions of scope and tests,</li>				
+					<li>Develop detailed examples of methods and test,</li>
+					<li>Test the accuracy, reliability, repeatability, etc. of this approach,</li>
 					<li>Address all github issues under <a href="https://github.com/w3c/silver/milestone/16" target="_blank">test types and terminology milestone</a>.</li>
 				</ul>
 			</div>
@@ -295,7 +294,7 @@
 
 			<section>
 				<h3>Types of tests</h3>
-								<p>WCAG 3.0 includes two (2) types of tests which are evaluated:</p>
+					<p>WCAG 3.0 includes two (2) types of tests which are evaluated:</p>
 				<ul>
 					<li><strong>Quantitative tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether certain properties exist in the content or if they match a value specified by the requirement.</li>
 					<li><strong>Qualitative tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary between testers who understand the criteria. Examples include evaluating the quality of a requirement such as alternative text.</li>
@@ -304,8 +303,6 @@
 				<p>Most tests have prescribed ways to meet the test. In some cases, the ways to meet the test will change based on a specific condition being met (example: the language the content is written in).</p>
 
 				<p>Although content may satisfy all outcomes using quantitative and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. The four testing processes  address this gap by providing a range of ways to evaluate more of the user experience.</p>
-
-				<p class="ednote">We continue to test this approach and others for validity, reliability, sensitivity, adequacy, and complexity.  Alternatives that we are exploring are noted as separate editor’s notes where applicable. We welcome suggestions on ways to improve the scoring to better meet these criteria.</p>
 
 				<section>
 					<h4>Quantitative tests</h4>
@@ -368,6 +365,32 @@
 						</ul>
 					</aside>
 				</section>
+						<section>
+					<h3>Critical Issues</h3>
+
+					<div class="ednote">
+						<p>This section is exploratory. 
+						<p>Severity rating could contribute towards scoring and prioritization. This is a potential way to replace how A/AA/AAA levels represented severity by incorporating a mechanism to evaluate severity as a part of testing.</p> 
+						<p>Outstanding questions that need to be addressed include:</p>
+						<ol>
+							<li>What to do with non-critical issues?</li>
+							<li>How best to assign severity, particularly if testers have different ideas on what is critical?</li>
+							<li>How do we incorporate context/process/task? Is that part of scoping, or issue severity? Both are important to the end result.</li>
+							<li>If included, how will situations where issue severity depends on context be handled?</li>
+							<li>Can the matrix inform designation of functional categories? For example, the <a href="https://www.w3.org/WAI/GL/WCAG3/2021/outcomes/text-alternative-available">Text Alternative Available outcome</a>.</li>
+							<li>How will issue severity fit into levels? For example:<ul>
+									<li>"Bronze" could be an absence of any critical or high issues;</li>
+									<li>"Silver" could be an absence of any critical, high, or medium issues.</li>
+								</ul>
+							</li>
+							<li>How to account for cumulative issues becoming critical?</li>
+							<li>Would another approach be more effective, for example assigning critical issues after testing is complete based on task or type of task rather than by test.</li>
+						</ol>
+					</div>
+
+					<p>Tests will include critical issues. Each test will have a category of severity, so some tests will be flagged as causing a critical issue.  Examples of critical issues in tests are at <a href="https://www.w3.org/WAI/GL/WCAG3/2022/methods/functional-images/#tests-button">Text Alternative Available</a> and <a href="https://www.w3.org/WAI/GL/WCAG3/2022/methods/text-equiv/#tests-button">Translates Speech And Non-Speech Audio</a>.</p>
+				</section>
+	</section>
 		</section>
 	</section>
 
@@ -382,14 +405,20 @@
 					<li>Can assertions be used to record accessibility work that is
               not required in the guidelines? This could include advance work on guidance not yet
               added to the guidelines.</li>
-					<li>What optional supplemental information should orgaizations be 
+					<li>What optional supplemental information should orgaizations be asked to document? 
 						<li>Should assertions be dated, expire and/or be reviewed on a regular basis?</li>
-						<li>Can  steps in a procedure duplicate tests in other parts of the guidelines? If so, how should those be handled?</li>
+						<li>How well the assertions support additional requirements not addressed in 2.1</li>
+						<li>Can steps in a procedure duplicate tests in other parts of the guidelines? If so, how should those be handled?</li>
 					<li>Can assertions exist outside of conformance? For example, can they be used as an internal benchmark rather than for a claim of conformance?</li>
 					<li>Can assertions be used at the most basic level of conformance? If so, how?</li>
 					<li>How can small organizations use assertions without unrealistic burden?</li>
 				</ul>
+				<p>Next steps include:</p>
+				<ul><li>Better define procedure,</li>
+						<li>Develop detailed examples of methods and test,</li>
+						<li>Test the accuracy, reliability, repeatability, etc. of this approach</li>
 			</div>
+
 			<section data-status="exploratory">
 				<h3>Assertions</h3>
 				<p>An Assertion is a formal claim of fact, attributed to a person or organization. In WCAG 3, an assertion is an attributable and documented statement of fact regarding procedures practiced in the development and maintenance of the content or product to improve accessibility. Assertions are only testable in that one can test that the assertion has been made correctly - not that any desired result has occurred. The results are always true/false.</p>
@@ -453,7 +482,7 @@
 		</section>
 
 	</section>
-		<section id="conformance">
+		<section id="conformance" data-status="exploratory">
 			<h2>Conformance</h2>
 			<details class="summary">
 				<summary>Summary</summary>
@@ -475,11 +504,12 @@
 
 				<p>We seek feedback on whether this flexibility will be beneficial in encouraging content providers to meet conformance because it is more achievable or whether content providers are less likely to improve accessibility if they aren't required to. We also seek feedback on the conformance approach as a whole.</p>
 				</div>
+
 				<p>WCAG 3.0 defines three levels of conformance: <a href="#bronze">bronze</a>, <a href="#silver">silver</a>, and <a href="#gold">gold</a>.</p>
 
 				<section>
 					<h4>Bronze</h4>
-					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
+					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. While there is a lot of overlap between WCAG 2 and WCAG 3, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
 				</section>
 				<section>
 					<h4>Silver</h4>
@@ -491,7 +521,18 @@
 				</section>
 			</section>
 			<section data-status="exploratory">
-			<h3>User Generated Content</h3>
+			<h3>Conformance Option 1</h3>
+				<p class="ednote">We are exploring two different approaches to conformance. We continue to test these approaches and others for validity, reliability, sensitivity, adequacy, and complexity.   We welcome suggestions on ways to improve them to better meet these criteria.
+			</p>
+		</section>
+			<section data-status="exploratory">
+			<h3>Conformance Option 2 </h3>
+				<p class="ednote">We are exploring two different approaches to conformance. We continue to test these approaches and others for validity, reliability, sensitivity, adequacy, and complexity.   We welcome suggestions on ways to improve them to better meet these criteria.
+			</p>
+		</section>
+
+			<section data-status="exploratory">
+			<h3>User generated content</h3>
 			<p>Web content publishers may include content provided by the users of their digital products. We refer to such content as "<a href="#user-generated-content">User Generated Content</a>".</p>
 			<p>Examples of User Generated Content include:</p>
 				<ul>
