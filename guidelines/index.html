@@ -295,20 +295,20 @@
 					<p>WCAG 3.0 includes two (2) types of tests which are evaluated:</p>
 				<ul>
 					<li><strong>Quantitative tests:</strong> Tests where results will not vary based on the tester or approach. Examples include testing whether certain properties exist in the content or if they match a value specified by the requirement.</li>
-					<li><strong>Qualitative tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary between testers who understand the criteria. Examples include evaluating the quality of a requirement such as alternative text.</li>
+					<li><strong>Qualitative tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary between testers who understand the criteria. One example is evaluating the quality of a requirement such as alternative text.</li>
 				</ul>
 
 				<p>Most tests have prescribed ways to meet the test. In some cases, the ways to meet the test will change based on a specific condition being met (example: the language the content is written in).</p>
 
-				<p>Although content may satisfy all outcomes using quantitative and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. The four testing processes  address this gap by providing a range of ways to evaluate more of the user experience.</p>
+				<p>Although content may satisfy all outcomes using quantitative and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. The assertions section below attempts to address this problem. </p>
 
 				<section>
 					<h4>Quantitative tests</h4>
 					<p>Quantitative tests rely on measuring properties of the content based on nominal values. The test results are objectively verifiable, to avoid variation of test results between different testers. Values are quantitative, and could be boolean, for example to check the presence of titles, text alternatives, and accessible names. Other values could include numerical thresholds; for example, to check color luminosity ratios.</p>
 					<p>Each method using quantitative tests includes:</p>
 					<ul>
-						<li>the nominal values being tested; and</li>
-						<li>an algorithm to measure the properties of the content based on the nominal values.</li>
+						<li>the values being tested; and</li>
+						<li>an algorithm to measure the properties of the content based on the values.</li>
 					</ul>
 
 					<aside class="example">
@@ -338,31 +338,19 @@
 					</section>
 					<section>
 						<h4>Conditions</h4>
-						<p>Some tests only apply in certain situations. Methods will note whether a test always applies or under what conditions a test applies.  </p>
+						<p>Some tests only apply in certain situations. Testing may occasionally require determining and referencing which specifications are being tested against.  Methods will note whether a test always applies or under what conditions a test applies.  </p>
 
 						<aside class="example">
 							<p>Example conditions include:</p>
 							<ul>
 							<li>If the same interface is translated into more than one language with different grammatical rules, and some tests may have different conformance requirements for each language</li>
 							<li>An interface with multiple contrast modes will have different contrast requirements than an interface with only a default contrast mode.</li>
+							<li>Luminance may be measured based on APCA or IEC-4WD</li>
 						</ul>
 						</aside>
 
 					</section>
-			</section>
-				<section>
-					<h4>Multiple Ways to Measure</h4>
-					<p>Testing may occasionally require determining and referencing which specifications are being tested against. These variances can be due to regional laws or different means for measuring. For example, luminance may be measured based on APCA or IEC-4WD. In these cases, the method will note specification options available for testing.</p>
 
-					<aside class="example">
-						<p>Example extensible requirements include:</p>
-						<ul>
-							<li>Luminance may be measured based on APCA or IEC-4WD</li>
-							<li>Language reading level may be measured based on Test X or Test Y (to be defined)</li>
-							<li>Minimum target size may be A for situation α and B for situation β (to be defined)</li>
-						</ul>
-					</aside>
-				</section>
 						<section>
 					<h3>Critical Issues</h3>
 
@@ -616,12 +604,14 @@
 			<h2>Glossary</h2>
 			<p class="note">Many of the terms defined here have common meanings. When terms appear with a link to the definition, the meaning is as formally defined here. When terms appear without a link to the definition, their meaning is not explicitly related to the formal definition here. These definitions are in progress and may evolve as the document evolves. </p>
 			<dl>
+				<dt><dfn data-lt="Assertion|/Assertions">Assertion</dfn></dt>
+				<dd><p>A formal claim of fact, attributed to a person or organization. An attributable and documented statement of fact regarding procedures practiced in the development and maintenance of the content or product to improve accessibility.</p></dd>
 				<dt><dfn data-lt="Automated|Automatically evaluated|Automated testing|Automatically tested">Automated
 						evaluation</dfn></dt>
 				<dd><p>Evaluation conducted using software tools, typically evaluating code-level features and applying
 						heuristics for other tests.</p>
 					<p>Automated testing is contrasted with other types of testing that involve human judgement or
-						experience. <a>Semi-automated evaluation</a> allows machines to guide humans
+						experience. <a href="#dfn-semi-automated-evaluation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-semi-automated-evaluation-2" title="Evaluation conducted using machines to guide humans to areas that need inspection.">Semi-automated evaluation</a> allows machines to guide humans
 						to areas that need inspection. The emerging field of testing conducted via
 						machine learning is not included in this definition.</p></dd>
 				<dt><dfn data-lt="Conform">Conformance</dfn></dt>
@@ -688,10 +678,13 @@
 					<p>Semi-automated evaluation involves components of <a>automated evaluation</a>
 						and <a>human evaluation</a>.</p>
 				</dd>
+				<dt><dfn data-lt="sets of tests|set of tests">Set of Tests</dfn></dt>
+				<dd>
+					<p>A group of <a>tests</a> that supports a <a>method</a>.</p>
+				</dd>				
 				<dt><dfn data-lt="Tests">Test</dfn></dt>
 				<dd>
 					<p>Mechanism to evaluate implementation of a <a>method</a>.</p>
-					<p>Tests can include true / false evaluation or various types of rating scales as appropriate for the <a>guideline</a>, <a>outcome</a>, or technology.</p>
 				</dd>
 				<dt><dfn data-lt="Techniques">Technique</dfn></dt>
 				<dd>
