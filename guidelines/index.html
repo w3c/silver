@@ -222,7 +222,27 @@
 
 
 		<section data-status="exploratory">
-			<h2>Testing</h2>
+			<h2>Conformance</h2>
+			<details class="summary">
+				<summary>Summary</summary>
+				<p>You might want to make a claim that your content or product meets the WCAG 3.0 outcomes. If it does meet the outcomes, we call this “conformance.” To conform to WCAG 3.0, your test results must show that your project is accessible.</p>
+				<p>If you want to make a conformance claim, you must use the process described in this document. Your content can conform to WCAG 3.0, even if you don’t want to make a claim. You can still use this process to test your project’s accessibility.</p>	
+			</details>
+				<div class="ednote">
+				<p>WCAG 3.0 will include a new conformance model in order to address a wider range of user needs, test a wider range of technologies and support new approaches to testing. There are several key goals for this new conformance model:</p>
+
+				<ol>
+					<li>Develop a model that encourages websites to continue to do better and better (vs. stopping at the previous AA level);</li>
+					<li>Better reflect the lived experience of people with disabilities, who successfully use sites that have some content that does not meet WCAG 2.0 AA, or who encounter barriers with sites that meet WCAG 2.0 AA;</li>
+					<li>Allow for bugs and oversight by content authors, provided the impact of them is limited to users with disabilities.</li>
+				</ol>
+
+				<p>We are exploring two options and encourage feedback about which aspects and approaches will be beneficial and which will not. We also seek feedback on the conformance approach as a whole.</p>
+				</div>
+
+			<p>WCAG 3.0 defines <a href="#outcomes">outcomes</a> and  <a>assertions</a>.  Outcomes are written as testable statements that allow testers to reliably determine if the content being evaluated satisfies the criteria. Only outcomes can be tested. Assertions are addressed in  Section 5.</p> 
+			<section data-status="exploratory">
+			<h3>Testing Outcomes</h2>
 			<details class="summary">
 				<summary>What types of tests and scopes are used?</summary>
 				<p>WCAG 3.0 includes two (2) types of tests which are evaluated:</p>
@@ -260,10 +280,9 @@
 				</ul>
 			</div>
 
-			<p>WCAG 3.0 defines <a href="#outcomes">outcomes</a> and  <a>assertions</a>.  Outcomes are written as testable statements that allow testers to reliably determine if the content being evaluated satisfies the criteria. Only outcomes can be tested. Assertions are addressed in  Section 5.</p> 
-			<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains  <a>techniques</a> and <a>sets of tests</a>  for meeting the outcome. The outcome is written so that testers can test the accessibility of new and emerging technologies based solely on the outcome, even when methods do not yet exist for those technologies.</p>
+			<p>Each outcome includes <a>methods</a> associated with different technologies. Each method contains  <a>techniques</a> and <a>sets of tests</a>  for meeting the outcome. Outcomes are written so that testers can test the accessibility of new and emerging technologies based solely on the outcome, even when methods do not yet exist for those technologies.</p>
 			<section>
-				<h3>Test scopes</h3>
+				<h4>Test scopes</h4>
 				<p>Testing outcomes use <a>items</a>, <a>views</a>, <a>user processes</a>, and the <a>aggregate</a> to define what is being tested.</p> 
 	
 				<p><dfn data-lt="item|unit" title="Smallest testable unit">Items</dfn> are the smallest testable unit. They may be interactive components such as a drop down menu, a link, or a media player. They may also be units of content such as a word, a phrase, a label or error message, an icon, or an image.</p>
@@ -284,7 +303,7 @@
 			</section>
 
 			<section>
-				<h3>Types of tests</h3>
+				<h4>Types of tests</h4>
 
 					<p>WCAG 3.0 includes two (2) types of tests which are evaluated:</p>
 				<ul>
@@ -297,7 +316,7 @@
 				<p>Although content may satisfy all outcomes using quantitative and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. The assertions section below attempts to address this problem. </p>
 
 				<section>
-					<h4>Quantitative tests</h4>
+					<h5>Quantitative tests</h5>
 					<p>Quantitative tests rely on measuring properties of the content based on nominal values. The test results are objectively verifiable, to avoid variation of test results between different testers. Values are quantitative, and could be boolean, for example to check the presence of titles, text alternatives, and accessible names. Other values could include numerical thresholds; for example, to check color luminosity ratios.</p>
 					<p>Each method using quantitative tests includes:</p>
 					<ul>
@@ -314,7 +333,7 @@
 				</section>
 
 				<section>
-					<h4>Qualitative tests</h4>
+					<h5>Qualitative tests</h5>
 					<p>Qualitative tests rely on evaluating content based on a set of defined expectations and exceptions. The set of expectations and exceptions limit the scope of decisions, to minimize variation of test results arrived at by different testers. Still, some level of qualitative assessment is required, therefore the accuracy of the test results also depends on the knowledge and context of the testers to some degree.</p>
 					<p>Each method using qualitative tests includes:</p> 
 					<ul>
@@ -328,8 +347,8 @@
 						<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive </a></p>
 						<p>Example for 2.4.6: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/cc0f0a/proposed/" target="_blank">Form Field Label is Descriptive</a></p>
 					</aside>
-
 					</section>
+				</section>
 					<section>
 						<h4>Conditions</h4>
 						<p>Some tests only apply in certain situations. Testing may occasionally require determining and referencing which specifications are being tested against.  Methods will note whether a test always applies or under what conditions a test applies.  </p>
@@ -346,7 +365,7 @@
 					</section>
 
 						<section>
-					<h3>Critical Issues</h3>
+					<h4>Critical Issues</h4>
 
 					<div class="ednote">
 						<p>This section is exploratory. 
@@ -370,10 +389,22 @@
 
 					<p>Tests will include critical issues. Each test will have a category of severity, so some tests will be flagged as causing a critical issue.  Examples of critical issues in tests are at <a href="https://raw.githubusercontent.com/w3c/silver/Editor-draft-cleanup/methods/functional-images/tests.html">Text Alternative Available</a> and <a href="https://raw.githubusercontent.com/w3c/silver/Editor-draft-cleanup/methods/text-equiv/tests.html">Translates Speech And Non-Speech Audio</a>.</p>
 				</section>
+				
+				<section>
+					<h4>Scoring </h4>
+					<section>
+						<h5>Option 1: Pass/Fail</h5>
+						<p>Outcomes will be scored as Pass or Fail.</p>
+					</section>
+					<section>
+						<h5>Option 2: Pass/Fail/Exemplary</h5>
+						<p>Outcomes will be scored as Pass or Exemplary. Exemplary. ‘Exemplary’ meets a higher requirement than that needed to Pass.</p>
+					</section>
+				</section>
 	</section>
 
 		<section id="assertions_procedures" data-status="exploratory">
-			<h2>Assertions and Procedures</h2>
+			<h3>Assertions and Procedures</h3>
 			<details class="summary">
 				<summary>Summary</summary>
 				<p>@@</p>
@@ -399,13 +430,13 @@
 			</div>
 
 			<section data-status="exploratory">
-				<h3>Assertions</h3>
+				<h4>Assertions</h4>
 				<p>An Assertion is a formal claim of fact, attributed to a person or organization. In WCAG 3, an assertion is an attributable and documented statement of fact regarding procedures practiced in the development and maintenance of the content or product to improve accessibility. Assertions are only testable in that one can test that the assertion has been made correctly - not that any desired result has occurred. The results are always true/false.</p>
 
 				<p>WCAG 3 recommends supporting documentation that an organization can use to improve or validate procedures and assertions. Conforming does not require this supporting documentation be made public.</p>
 				</section>
 			<section data-status="exploratory">				
-				<h3>Using Assertions</h3>
+				<h4>Using Assertions</h4>
 				<p>Assertions may supplement methods in one or more outcomes. Assertions should only be used on outcomes and guidelines that allow assertions. Organizations can make an assertion that they followed a procedure to claim conformance at the Silver or Gold level.</p>
 
 
@@ -435,7 +466,7 @@
 			</section>
 
 			<section data-status="exploratory">			
-				<h3>Documenting Assertions</h3>
+				<h4>Documenting Assertions</h4>
 
 					<p>Assertions must be documented as part of the conformance claim process.  The required information may also be made available through the web site.</p> 
 
@@ -451,45 +482,28 @@
 			</section>
 
 			<section data-status="exploratory">			
-				<h3>Supporting Documentation</h3>
+				<h4>Supporting Documentation</h4>
 				<p>WCAG recommends additional information that can support procedures. It will not require organizations to provide supporting documentation to conform.</p>
 
 				<p class="ednote">The AGWG will add to this section as other areas are confirmed.</p>
 			</section>
 
 			<section data-status="exploratory">			
-				<h3>Testing Assertions</h3>
+				<h4>Testing Assertions</h4>
 				<p>The quality of an assertion can be tested based on how well the assertion meets the documentation requirements for assertions (See Documenting Assertions). Conforming to WCAG does not require testing supporting documentation; however, organizations may decide to adopt additional documentation requirements based on the procedure being asserted. </p>
 			</section>
 		</section>
 
-	</section>
-		<section id="conformance" data-status="exploratory">
-
-			<h2>Conformance</h2>
-			<details class="summary">
-				<summary>Summary</summary>
-				<p>You might want to make a claim that your content or product meets the WCAG 3.0 outcomes. If it does meet the outcomes, we call this “conformance.” To conform to WCAG 3.0, your test results must show that your project is accessible.</p>
-				<p>If you want to make a conformance claim, you must use the process described in this document. Your content can conform to WCAG 3.0, even if you don’t want to make a claim. You can still use this process to test your project’s accessibility.</p>	
-			</details>
 			<section data-status="exploratory">
 				<h3>Conformance levels</h3>
 				<div class="ednote">
-				<p>WCAG 3.0 will include a new conformance model in order to address a wider range of user needs, test a wider range of technologies and support new approaches to testing. There are several key goals for this new conformance model:</p>
-
-				<ol>
-					<li>Develop a model that encourages websites to continue to do better and better (vs. stopping at the previous AA level);</li>
-					<li>Better reflect the lived experience of people with disabilities, who successfully use sites that have some content that does not meet WCAG 2.0 AA, or who encounter barriers with sites that meet WCAG 2.0 AA;</li>
-					<li>Allow for bugs and oversight by content authors, provided the impact of them is limited to users with disabilities.</li>
-				</ol>
-
-				<p>To do this, the conformance model prioritizes content needed to complete tasks while still testing the entire view for accessibility errors.  This priority is reflected in the scoring system, which does not allow for errors along the paths needed to complete processes but allow for some accessibility errors outside process completion.  This means that sites may conform at the lowest level (Bronze), while still containing a small amount of content that does not meet one or more guidelines, so long as that content doesn’t prevent people with disabilities from successfully using the site.</p>
-
-				<p>We seek feedback on whether this flexibility will be beneficial in encouraging content providers to meet conformance because it is more achievable or whether content providers are less likely to improve accessibility if they aren't required to. We also seek feedback on the conformance approach as a whole.</p>
-				</div>
-
+					<p>This section is exploratory. The percentages used are placeholders and will need to be determined through testing. As we continue developing this content, we seek input on the following:
+						<ul><li>Which option has the best chance of adoption and why?</li>
+						</ul>
+						<p>Next steps include</p>
+						<ul><li>Test the accuracy, reliability, repeatability, etc. of each option</li>
+						</ul>
 				<p>WCAG 3.0 defines three levels of conformance: <a href="#bronze">bronze</a>, <a href="#silver">silver</a>, and <a href="#gold">gold</a>.</p>
-
 				<section>
 					<h4>Bronze</h4>
 					<p>Bronze is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3.0. While there is a lot of overlap between WCAG 2 and WCAG 3, WCAG 3 includes additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
@@ -497,22 +511,36 @@
 				<section>
 					<h4>Silver</h4>
 					<p>Silver is a higher conformance level.</p>
+					<section>
+						<h5>Option 1: Pass/Fail</h5>
+								<ul><li>Passes Bronze and</li>
+								<li>50% of best practices pass. </li></ul>
+					</section>
+					<section>
+						<h5>Option 2: Pass/Fail/Exemplary</h5>
+								<ul><li>Passes Bronze and</li>
+								<li>50% of requirements and best practices score Exemplary. </li></ul>
+					</section>					
 				</section>
 				<section>
 					<h4>Gold</h4>
 					<p>Gold is the highest conformance level.</p>
+					<section>
+						<h5>Option 1: Pass/Fail</h5>
+								<ul><li>Passes Bronze and</li>
+								<li>75% of best practices pass (25% more than Silver). </li></ul>
+							<p class="ednote">A way to integrate assertions would be needed</p>
+					</section>
+					<section>
+						<h5>Option 2: Pass/Fail/Exemplary</h5>
+								<ul><li>Passes Bronze and</li>
+								<li>75% of best practices pass score Exemplary. </li>
+								<li>50% of assertions pass</li>
+							</ul>
+					</section>					
+				</section>					
 				</section>
 			</section>
-			<section data-status="exploratory">
-			<h3>Conformance Option 1</h3>
-				<p class="ednote">We are exploring two different approaches to conformance. We continue to test these approaches and others for validity, reliability, sensitivity, adequacy, and complexity.   We welcome suggestions on ways to improve them to better meet these criteria.
-			</p>
-		</section>
-			<section data-status="exploratory">
-			<h3>Conformance Option 2 </h3>
-				<p class="ednote">We are exploring two different approaches to conformance. We continue to test these approaches and others for validity, reliability, sensitivity, adequacy, and complexity.   We welcome suggestions on ways to improve them to better meet these criteria.
-			</p>
-		</section>
 
 			<section data-status="exploratory">
 			<h3>User generated content</h3>
@@ -530,7 +558,7 @@
 			
 			<p>The web content publisher should identify all locations of User Generated Content (such as commentary on hosted content, product descriptions for consumer to consumer for sale listings, and restaurant reviews) and perform standard accessibility evaluation analysis for each. If there are no accessibility issues, the User Generated Content is fully conforming.</p>
 			<section>
-			<h4>Steps to Conform</h4>
+			<h4>Steps to conform</h4>
 			<p>If accessibility issues are identified, or if the website author wants to proactively address potential accessibility issues that might arise from User Generated Content, then all of the following must be indicated alongside the User Generated Content or in an Accessibility Statement published on the site or product that is linked from the view or page in a consistent location:</p>
 			<ol>
 				<li>Clearly identify where User Generated Content can be found on the publisher's digital product (perhaps by id href);</li>
