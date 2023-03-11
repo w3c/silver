@@ -14,8 +14,6 @@
 			<p>The W3C Accessibility Guidelines (WCAG) 3.0 provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. They address various types of web content including static content, interactive content, visual and auditory media, and virtual and augmented reality. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
 			<p>Each <a>guideline</a> in this standard provides information on accessibility practices that address documented <a>user needs</a> of people with disabilities. Guidelines are supported by multiple <a>outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a>methods</a> to meet each outcome. </p>
 			<p>This specification is expected to be updated regularly to keep pace with changing technology by updating and adding methods, outcomes, and guidelines to address new needs as technologies evolve. For entities that make formal claims of <a>conformance</a> to these guidelines, several levels of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
-			<p>W3C Accessibility Guidelines 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> these versions. WCAG 3.0 will  incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. 
-			While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3.0 includes additional tests and different scoring mechanisms. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X. WCAG 3.0 does not supersede WCAG 2.2 and previous versions; rather, it is an alternative set of guidelines. Once these guidelines become a W3C Recommendation, the W3C will advise developers, content creators and policy makers to use WCAG 3.0 in order to maximize future applicability of accessibility efforts. However, content that conforms to earlier versions of WCAG continue to conform to those versions.</p>
 			<p>See <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3 Introduction</a> for an introduction and links to WCAG technical and educational material.</p>
 		</section>
 		<section id="sotd">
@@ -25,38 +23,28 @@
 			<h2>Introduction</h2>
 			<div class="ednote">
         <p>The current proposal for WCAG 3 is made up of different parts and sections, including:</p>
-          <ul><li>WCAG3</li>
-              <li>WCAG3 Explainer</li>
-              <li>Guideline How-tos</li>
-              <li>Outcomes</li>
-              <li>Methods</li>
-              <li>Functional categories</li>
-          </ul>
-        <p>These parts and sections are inter-related and are continually being refined and updated as more sections are developed. Content is in various states of maturity. The status is marked at the top of each section (see 1.2 Section status levels). Each publication of WCAG 3 will include updates to some, but not necessarily every part and section. This process will facilitate quarterly updates, which provide opportunities for public review and comment throughout the evolution of the guidelines.  As a result, the document is a work in progress. Content will evolve and there may be changes to layout and style that are not yet reflected in all parts of the present release and will be reflected in future releases.  The parts and sections updated in this release are:</p>
-          <ul><li>First draft of the WCAG3 Explainer, which takes explanatory material out of WCAG3 to improve usability.</li>
-              <li>New conformance section on user-generated content and the glossary definition of user-generated content.
-              </li>
-              <li>A new proposal revising the Methods template to address comments from the First Public Working Draft (FPWD). This proposal was done in partnership with the ACT task force. </li>
-          </ul>
+          <ul><li>Two different directions for determining WCAG3 conformance. The feedback from our first few drafts was extensive.  We have changed our approach to what is required to meet WCAG3.</li>
+			  <li>We removed old material that was not consistent with the new approach.  It does not mean we will not include it eventually, but to eliminate confusion, we have removed material that is no longer consistent with our current proposals. </li>
+              <li>WCAG3 Guideline placeholders which are short summaries of what we envision for the migration of the WCAG 2.x success criteria. </li>
+           
+        <p>Content is in various states of maturity. The status is marked at the top of each section (see 1.2 Section status levels). </p>
       </div>
 			<details class="summary">
 				<summary>Summary</summary>
 				<p>The W3C Accessibility Guidelines (WCAG) 3.0 show ways to make web content accessible to people with disabilities. WCAG 3.0 is a newer standard than the Web Content Accessibility Guidelines (WCAG) 2.2. You may use WCAG 2.2 or the new standard.</p>
-				<p>What’s new in WCAG 3.0?</p>
-				 
+				<p>What’s new in WCAG 3.0?</p>	 
 				<ul>
 				<li>WCAG 3.0 includes the needs of people with more types of disabilities.</li>
-				<li>It includes mobile and desktop applications, along with web content.</li>
-				<li>It has new guidelines and new tests.</li>
-				<li>It has new scoring. Your site or product no longer has to pass 100% of the guidelines, as long as people with disabilities can use it.</li>
+				<li>We received a lot of feedback from our first drafts.  We changed our approach to what is required to meet WCAG3.</li>
+				<li>We removed old material that was not consistent with the new approach.  It does not mean we will not include it eventually, but to eliminate confusion, we have removed material that is no longer consistent with our current proposals. </li> 
+				<li>We are not publishing an updated WCAG3 Explainer. </li>
+				<li>There are high level summaries of what we think the guidelines will be.</li>
 				</ul>
 			</details>
 
 			<section>
 				<h3>About WCAG 3.0</h3>
-				<p>This introduction provides a <em>brief</em> background to WCAG 3.0. Detailed information about the structure of the guidelines and inputs into their development is available in the <a href="https://w3c.github.io/silver/explainer/">Explainer for W3C Accessibility Guidelines (WCAG) 3.0</a>. That document is recommended reading for anyone new to WCAG 3.</p>
 				<p>This specification presents a new model and guidelines to make web content and applications accessible to people with disabilities. The W3C Accessibility Guidelines (WCAG) 3.0 support a wide set of user needs, use new approaches to testing, and allow frequent maintenance of guidelines and related content to keep pace with accelerating technology change. WCAG 3.0 supports this evolution by focusing on users’ functional needs. These needs are then supported by outcomes and technology-specific methods to meet those needs. </p>
-				<p>Following these guidelines will make content more accessible to people with a wide range of disabilities, including accommodations for blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. Following these guidelines will also often make content more usable to users in general as well as accessible to people with disabilities.</p>
 				<p>WCAG 3.0 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [[WCAG22]] and previous versions, but does not <a>deprecate</a> WCAG 2.X. It will also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/"> User Agent Accessibility Guidelines 2.0</a> [[UAAG20]] and <a href="https://www.w3.org/TR/ATAG20/"> Authoring Tool Accessibility Guidelines 2.0</a> [[ATAG20]]. These earlier versions provided a flexible model that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities have led to the need for a new model to address content accessibility more comprehensively and flexibly.</p>
 				<p>There are many differences between WCAG 2.X and WCAG 3.0. Content that conforms to WCAG 2.2 A &amp; AA is expected to meet most of the minimum conformance level of this new standard but, since WCAG 3.0 includes additional tests and different scoring mechanics, additional work will be needed to reach full conformance. Since the new standard will use a different conformance model, the Accessibility Guidelines Working Group expects that some organizations may wish to continue using WCAG 2.X, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping and other approaches to facilitate migration.</p>
 			</section>
@@ -88,7 +76,6 @@
 					<li>WCAG 3.0 is not backward compatible with WCAG 2.0, ATAG 2.0, and UAAG 2.0.</li>
 				</ul>
 				<p>For more details about differences from previous guidelines, see <a href="#differences-from-wcag-2">Appendix: Differences From WCAG 2</a>.</p>
-				<p class="ednote">This version of the guidelines includes an example method for <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> (<a href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/text-alternative-editable/">Author control of text alternatives</a>) and <abbr title="User Agent Accessibility Guidelines">UAAG</abbr> (<a href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/caption-reflow/"> Reflow of captions and other text in context</a>). Future drafts of the guidelines will include additional examples of ATAG- and UAAG-related content.</p>
 			</section>
 			<section>
 				<h3>Goals and Requirements</h3>
@@ -111,8 +98,7 @@
 				</ul>
 			</details>
 			<p>In addition to this section, the <a href="#guidelines">Guidelines</a>, <a href="#testing">Testing</a>, and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a>normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
-			<p>The key words <em class="rfc2119" title="MAY">MAY</em>, <em class="rfc2119" title="MUST">MUST</em>, <em class="rfc2119" title="MUST NOT">MUST NOT</em>, <em class="rfc2119" title="NOT RECOMMENDED">NOT RECOMMENDED</em>, <em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em>, <em class="rfc2119" title="SHOULD">SHOULD</em>, and <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> are to be interpreted as described in [[RFC2119]].</p>
-			<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, critical errors, and outcome ratings.</p>
+			<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines and methods.</p>
 		</section>
 		
 		
@@ -120,11 +106,9 @@
 			<h2>Guidelines</h2>
 				<details class="summary">
 				<summary>Summary</summary>
-				<p>The following six guideline examples show different features of WCAG 3.0: </p>
+				<p>The following guideline examples show different features of WCAG 3.0: </p>
 					<ul><li>Text alternatives; </li>
 					<li>Clear words;</li>
-					<li>Captions;</li>
-					<li>Structured content (headings); and</li>
 					<li>Error prevention.</li>
 					</ul>
 			</details>
@@ -144,8 +128,6 @@
 			<ul>
 				<li><a href="#text-alternatives">Text alternatives</a> - a direct migration from WCAG 2.X success criterion</li>
 				<li><a href="#clear-words">Clear words</a> - new guidance that could not previously be included in WCAG 2.X. It is  based on <a href="https://www.w3.org/TR/coga-usable/"> Making content usable for people with cognitive and learning disabilities</a> [[coga-usable]].</li>
-				<li><a href="#captions">Captions</a> - an example of adapting WCAG 2.X guidance to emerging technologies, such as web virtual reality</li>
-				<li><a href="#structured-content">Structured content</a> - migration and merging of several previously unrelated WCAG 2.X success criteria. This revision addresses more diverse disability needs than WCAG 2.X.</li>
 				<li><a href="#error-prevention">Error Prevention</a> - a migration of WCAG 2.X with substantial changes, including three methods to support the outcome of Input instructions provided for the Error Prevention guideline, which focuses on preventing errors from occurring.</li>
 			</ul>
 			</div>
