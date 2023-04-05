@@ -227,7 +227,7 @@
 					<li>Allow for bugs and oversight by content authors, provided the impact of them upon users with disabilities is not substantial. </li>
 				</ol>
 				<p>We are exploring several approaches to conformance. After studying the comments on the previous draft, these are the concepts that showed promise.  We are giving an overview in this draft, but we continue to test the combination of the concepts.  </p>
-				<p>These approaches can fit together in a variety of ways. We will be testing these approaches and others for validity, reliability, sensitivity, adequacy, complexity and equity. We welcome suggestions on ways to improve these approaches to better meet these criteria and concerns about how they might affect accessibility. The working group plans to select from or even replace these options in late 2023 based on feedback, prototyping, and testing. </p>
+				<p>These approaches can fit together in a variety of ways. We will be testing these approaches and others for <a>validity</a>, <a>reliability</a>, <a>sensitivity</a>, <a>adequacy</a>, <a>complexity</a> and <a>equity</a>. We welcome suggestions on ways to improve these approaches to better meet these criteria and concerns about how they might affect accessibility. The working group plans to select from or even replace these options in late 2023 based on feedback, prototyping, and testing. </p>
 				<p>There are two main approaches to evaluating conformance that are promising.  There are also detailed ideas that support the main approaches. The two main approaches are: </p>
 				<ul>
 					<li><strong>Outcomes and Tests</strong>:  Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. Outcomes are addressed in Section 4.1. Tests are addressed in Section 4.2. </li>
@@ -657,7 +657,11 @@
 			<h2>Glossary</h2>
 			<p class="note">Many of the terms defined here have common meanings. When terms appear with a link to the definition, the meaning is as formally defined here. When terms appear without a link to the definition, their meaning is not explicitly related to the formal definition here. These definitions are in progress and may evolve as the document evolves. </p>
 			<dl>
-				<dt><dfn data-lt="Adjectival Rating|Adjectival Ratings|Rubric|Rating Scale">Adjectival Ratings</dfn></dt>
+				<dt><dfn data-lt="Adequete">Adequacy</dfn></dt>
+				<dd>
+					<p>Adequacy is subtle metric, but important to WCAG3 proposals.  Adequacy describes if the formulas being used to process and score the accessibility testing results are using such a small interval that small changes in accessibility do not cause large changes in scoring. <a href="https://www.w3.org/WAI/RD/wiki/index.php?title=Benchmarking_Web_Accessibility_Metrics">Benchmarking Web Accessibility Metrics</a>, Vigo, Lopes, O Connor, Brajnik, Yesilada 2011. </p>
+				</dd>
+				<dt><dfn data-lt="Adjectival Rating|Rubric|Rating Scale">Adjectival Ratings</dfn></dt>
 				<dd><p>A system to report evaluation results as a set of human-understandable adjectives. </p></dd>
 				<dt><dfn data-lt="Assertion|Assertions">Assertion</dfn></dt>
 				<dd><p>A formal claim of fact, attributed to a person or organization. An attributable and documented statement of fact regarding procedures practiced in the development and maintenance of the content or product to improve accessibility.</p></dd>
@@ -671,6 +675,10 @@
 						machine learning is not included in this definition.</p></dd>
 				<dt><dfn data-lt="Best Practice|Best Practices">Best Practice</dfn></dt>
 				<dd><p>Methods which are not required and meet a higher requirement than methods required to conform to Bronze. </p></dd>
+				<dt><dfn data-lt="Complex">Complexity</dfn></dt>
+				<dd>
+					<p>Complexity refers to the resources required to accomplish the conformance testing.  These could be crawler time, or time for human judgment testing.  This would be a useful metric to have to answer the question of how much time WCAG3 takes to test as compared to WCAG 2.x. <a href="https://www.w3.org/WAI/RD/wiki/index.php?title=Benchmarking_Web_Accessibility_Metrics">Benchmarking Web Accessibility Metrics</a>, Vigo, Lopes, O Connor, Brajnik, Yesilada 2011. </p>
+				</dd>
 				<dt><dfn data-lt="Conform">Conformance</dfn></dt>
 				<dd><p>Satisfying all the requirements of the guidelines. Conformance is an important part of following
 						the guidelines even when not making a formal Conformance Claim.</p>
@@ -679,6 +687,10 @@
 				<dd>
 					<p>To declare something outdated and in the process of being phased out, usually in favor of a specified replacement.</p>
 					<p>Deprecated documents are no longer recommended for use and may cease to exist in the future.</p>
+				</dd>
+				<dt><dfn data-lt="equity">Equity</dfn></dt>
+				<dd>
+					<p>Equity is the outcome of processes and actions that ensure the spectrum of human reality obtains what is needed to participate, not solely access. As equity relates to WCAG it is about the impact the standards/guidelines have on people with disabilities, along with actually including PWD in the work. (This definition needs updating as the Equity group does more work. This definition came from the Equity subgroup of AGWG in Q2 2022)</p>
 				</dd>
 				<dt><dfn>Evaluation</dfn></dt>
 				<dd>The process of examining content for <a>conformance</a> to these
@@ -728,12 +740,21 @@
 				<dt><dfn data-lt="Processes">Process</dfn></dt>
 				<dd><p>A sequence of steps that need to be completed in order to accomplish an activity / task from
 						end-to-end.</p></dd>
+				<dt><dfn data-lt="Reliable">Reliability</dfn></dt>
+				<dd>
+					<p>The reproducibility and consistency of scores i.e. the extent to which they are the same when evaluations of the same resources are carried out in different contexts (different tools, different people, different goals, different time). This would be particularly useful to ensure that similar results are achieved by different testers. It would also be useful to see if different testers would select the same path or off-path decisions. Representative sampling tests also fit in this category.
+					<a href="https://www.w3.org/WAI/RD/wiki/index.php?title=Benchmarking_Web_Accessibility_Metrics">Benchmarking Web Accessibility Metrics</a>, Vigo, Lopes, O Connor, Brajnik, Yesilada 2011. </p>
+				</dd>
 				<dt><dfn>Semi-Automated Evaluation</dfn></dt>
 				<dd>
 					<p>Evaluation conducted using machines to guide humans to areas that need
 						inspection.</p>
 					<p>Semi-automated evaluation involves components of <a>automated evaluation</a>
 						and <a>human evaluation</a>.</p>
+				</dd>
+				<dt><dfn data-lt="Sensitive">Sensitivity</dfn></dt>
+				<dd>
+					<p>Sensitivity of a metric is related to the extent that changes in the output of the metric are quantitatively related to changes of the accessibility of the site being analyzed.  This metric is useful for determining if the conformance proposal captures the impact of the severity of accessibility barriers on the final score and if different disabilities are treated equally by the proposal.  <a href="https://www.w3.org/WAI/RD/wiki/index.php?title=Benchmarking_Web_Accessibility_Metrics">Benchmarking Web Accessibility Metrics</a>, Vigo, Lopes, O Connor, Brajnik, Yesilada 2011. </p>
 				</dd>
 				<dt><dfn data-lt="sets of tests|set of tests">Set of Tests</dfn></dt>
 				<dd>
@@ -753,6 +774,10 @@
 				<dt><dfn>User testing</dfn></dt>
 				<dd>
 					<p>Evaluation of content by observation of how users with specific <a>functional needs</a> are able to complete a <a>process</a> and how the content meets the relevant <a href="#outcomes">outcomes</a>.</p>
+				</dd>
+				<dt><dfn data-lt="Valid">Validity</dfn></dt>
+				<dd>
+					<p>The extent to which the measurements obtained by a metric reflect the accessibility of the website to which it is applied. Does the rating that a web site or digital product achieve in any conformance proposal actually reflect the rating that it should get? <a href="https://www.w3.org/WAI/RD/wiki/index.php?title=Benchmarking_Web_Accessibility_Metrics">Benchmarking Web Accessibility Metrics</a>, Vigo, Lopes, O Connor, Brajnik, Yesilada 2011. Accessed on 29 July 2020</p>
 				</dd>
 			</dl>
 		</section>
