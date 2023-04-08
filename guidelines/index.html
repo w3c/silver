@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+		<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 	<head>
 		<title>W3C Accessibility Guidelines (WCAG) 3.0</title>
@@ -227,11 +227,11 @@
 					<li>Allow for bugs and oversight by content authors, provided the impact of them upon users with disabilities is not substantial. </li>
 				</ol>
 				<p>We are exploring several approaches to conformance. After studying the comments on the previous draft, these are the concepts that showed promise.  We are giving an overview in this draft, but we continue to test the combination of the concepts.  </p>
-				<p>These approaches can fit together in a variety of ways. We will be testing these approaches and others for <a>validity</a>, <a>reliability</a>, <a>sensitivity</a>, <a>adequacy</a>, <a>complexity</a> and <a>equity</a>. We welcome suggestions on ways to improve these approaches to better meet these criteria and concerns about how they might affect accessibility. The working group plans to select from or even replace these optionsbased on feedback, prototyping, and testing. </p>
-				<p>There are two main approaches to evaluating conformance that are promising.  There are also detailed ideas that support the main approaches. The two main approaches are: </p>
+				<p>These approaches can fit together in a variety of ways. We will be testing these approaches and others for <a>validity</a>, <a>reliability</a>, <a>sensitivity</a>, <a>adequacy</a>, <a>complexity</a> and <a>equity</a>. We welcome suggestions on ways to improve these approaches to better meet these criteria and concerns about how they might affect accessibility. The working group plans to select from or even replace these options based on feedback, prototyping, and testing. </p>
+				<p>There are two main approaches to evaluating accessibility that are promising.  There are also detailed ideas that support these approaches. The two main approaches are: </p>
 				<ul>
-					<li><strong>Outcomes and Tests</strong>:  Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. Outcomes are addressed in Section 4.1. Tests are addressed in Section 4.2. </li>
-					<li><strong>Assertions and Procedures:</strong> <em>Assertions</em> are attributable statements by a person or organization that they followed a <em>procedure</em> to improve accessibility. Assertions are addressed in Section 4.3. 
+					<li><strong>Outcomes with Tests</strong>:  Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. Outcomes are addressed in Section 4.1. Tests are addressed in Section 4.1.1. </li>
+					<li><strong>Assertions and Procedures:</strong> <em>Assertions</em> are attributable statements by a person or organization that they followed a <em>procedure</em> to improve accessibility. Assertions are addressed in Section 4.2. 
 				</ul>
 				<p>There are additional ideas that support these two approaches and can be used or combined in many different ways. </p>
 				<ul>
@@ -242,8 +242,27 @@
 				</ul>
 				<p>The details of these approaches change as we assemble them into a coherent whole.  This draft gives a high level overview of these approaches so we can give an update and receive feedback on the individual approaches we are considering.  </p> 
 
+			<div class="ednote">
+				<p>As we continue developing this content, we seek input on the following:</p>
+				<ul>
+					<li>How well does the approach to outcomes, assertions and tests defined here support additional requirements not addressed in 2.2?</li>
+					<li>How well does this approach support regulatory needs?</li>
+					<li>How will these approaches be integrated into a conformance model (including levels or scores)?</li>
+					<li>As written, outcomes and assertions are at the same level. Would moving assertions to the test level be more effective?</li>
+				</ul>
+				<p>Next steps include:</p>
+				<ul>	
+					<li>Get feedback from designers, developers, and other communities on wording choice.</li>
+					<li>Finalize names and descriptions of scope and tests,</li>				
+					<li>Develop detailed examples of methods and test,</li>
+					<li>Test the accuracy, reliability, repeatability, etc. of this various models using these approaches,</li>
+					<li>Address all github issues under <a href="https://github.com/w3c/silver/milestone/16" target="_blank">test types and terminology milestone</a>.</li>
+				</ul>
+			</div>
+
+
 			<section data-status="developmental">
-			<h3>Outcomes</h2>
+			<h3>Outcomes</h3>
 			<details class="summary">
 				<summary>Summary</summary>
 				<p>To be written once content is agreed on. </p>
@@ -252,13 +271,12 @@
 			<p>To be written when we sort out the Outcome questions. </p>
 			</div>
 			<p>Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. All Outcomes and Assertions that relate to a Guideline will be listed together to encourage adoption of higher levels of accessibility. </p>
-			<p>Each outcome is associated with at least one <a>method</a>. Each method contains techniques for meeting the outcome, examples, resources, and <a>sets of tests</a>  for evaluating the outcome. Methods can apply to a specific technology, such as HTML, or can be more generic where the advice applies no matter what technology, such as the methods supporting the Clear Language guideline. </p>
+			<p>Each outcome is associated with at least one <a>method</a>. Methods are informative and kept in how to documents. Each method contains techniques for meeting the outcome, examples, resources, and <a>sets of tests</a>  for evaluating the outcome. Methods can apply to a specific technology, such as HTML, or can be more generic where the advice applies no matter what technology, such as the methods supporting the Clear Language guideline. </p>
 
 			<p>Outcomes are written so that testers can determine the accessibility of technologies based solely on the outcome, even when methods do not yet exist for those technologies.</p>
-			</section>
 			
 			<section data-status="developmental">
-			<h3>Tests</h3>
+			<h4>Testing Outcomes</h4>
 			<details class="summary">
 				<summary>What types of tests and scopes are used?</summary>
 				<p>WCAG 3.0 includes two (2) types of tests which are evaluated:</p>
@@ -277,28 +295,8 @@
 				</ul>
 			</details>
 
-			<div class="ednote">
-				<p><strong>This editor note needs to be rewritten to reflect the new proposals.</strong></p>
-				<p>As we continue developing this content, we seek input on the following:</p>
-				<ul>
-
-					<li>How well does the testing approach defined here support additional requirements not addressed in 2.2?</li>
-					<li>How well does the testing approach defined here support regulatory needs?</li>
-					<li>How will these tests be integrated into a conformance model (including levels or scores)?</li>
-					<li>For multiple ways to measure, how will organizations declare which specification they are following in a way that is transparent, both to their users and for the purpose of verification in audits?</li>
-					<li>As written, outcomes and assertions are at the same level. Would moving assertions to the test level be more effective?</li>
-				</ul>
-				<p>Next steps include:</p>
-				<ul>	
-					<li>Get feedback from designers, developers, and other communities on wording choice.</li>
-					<li>Finalize names and descriptions of scope and tests,</li>				
-					<li>Develop detailed examples of methods and test,</li>
-					<li>Test the accuracy, reliability, repeatability, etc. of this approach,</li>
-					<li>Address all github issues under <a href="https://github.com/w3c/silver/milestone/16" target="_blank">test types and terminology milestone</a>.</li>
-				</ul>
-			</div>
 			<section>
-				<h4>Types of tests</h4>
+				<h5>Types of tests</h5>
 					<p>WCAG 3.0 includes two (2) types of tests which are evaluated:</p>
 				<ul>
 					<li><strong>Quantifiable tests:</strong> Tests where there is a high degree of consistency between test results from different testers. Examples include testing whether certain properties exist in the content or if they match a value specified by the requirement.</li>
@@ -311,7 +309,7 @@
 				<p>Although content may satisfy all outcomes using quantifiable and qualitative tests, the content may not always be usable by people with a wide variety of disabilities. The assertions (see section 4.3 below) are designed to address this problem. </p>
 
 				<section>
-					<h5>Quantifiable tests</h5>
+					<h6>Quantifiable tests</h6>
 					<p>Quantifiable tests rely on measuring properties of the content based on nominal values. The test results are objectively verifiable, to avoid variation of test results between different testers. Values are quantifiable, and could be boolean (true/false), for example to check the presence of titles, text alternatives, and accessible names. Other values could include numerical thresholds; for example, to check color luminosity ratios.</p>
 					<p>Each method using quantifiable tests includes:</p>
 					<ul>
@@ -320,7 +318,7 @@
 					</ul>
 
 					<aside class="example">
-						<h6>Example quantifiable test</h6>
+						<strong>Example quantifiable test</strong>
 						<p>These tests are already part of WCAG 2.x.</p>
 						<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/" target="_blank">Image has non-empty accessible name</a></p>
 						<p>Example for 1.4.3: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/afw4f7/proposed/" target="_blank">Text has minimum contrast</a></p>
@@ -328,7 +326,7 @@
 				</section>
 
 				<section>
-					<h5>Qualitative tests</h5>
+					<h6>Qualitative tests</h6>
 					<p>Qualitative tests rely on evaluating content based on a set of defined qualities and exceptions. The set of qualities and exceptions limit the scope of decisions, to minimize variation of test results arrived at by different testers. Still, some level of qualitative assessment is required, therefore the accuracy of the test results also depends on the knowledge and context of the testers to some degree.</p>
 					<p>Each method using qualitative tests includes:</p> 
 					<ul>
@@ -337,7 +335,7 @@
 					</ul>
 
 					<aside class="example">
-						<p=h6>Example qualitative test</h6>
+						<strong>Example qualitative test</strong>
 						<p>These tests are already part of WCAG 2.x.</p>
 						<p>Example for 1.1.1: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/" target="_blank">Image accessible name is descriptive </a></p>
 						<p>Example for 2.4.6: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/cc0f0a/proposed/" target="_blank">Form Field Label is Descriptive</a></p>
@@ -345,7 +343,7 @@
 				</section>
 			</section>
 			<section>
-				<h4>Test scopes</h4>
+				<h5>Test scopes</h5>
 				<p>Testing outcomes use <a>items</a>, <a>views</a>, <a>user processes</a>, and the <a>aggregate</a> to define what is being tested.</p> 
 	
 				<p><dfn data-lt="item|unit" title="Smallest testable unit">Items</dfn> are the smallest testable unit. They may be interactive components such as a drop down menu, a link, or a media player. They may also be units of content such as a word, a phrase, a label or error message, an icon, or an image.</p>
@@ -365,7 +363,7 @@
 				<p>The <dfn title="set of items, views, and user processes that comprise the site">aggregate</dfn> is the combination of items, views, and user processes that collectively comprise the site, set of web pages, web app, etc.</p>
 			</section>
 			<section>
-				<h4>Conditions</h4>
+				<h5>Conditions</h5>
 				<p>Some tests only apply in certain situations. Testing may occasionally require determining and referencing which specifications are being tested against.  Methods will note whether a test always applies or under what conditions a test applies. Both Quantitative and Qualitative tests can be conditional. </p>
 
 				<p class="ednote">As we develop example outcomes and methods, we want to explore conditions overall and how multiple measurements fit in. We welcome comments on allowing alternative measurements to meet an outcome.</p>
@@ -383,6 +381,7 @@
 
 			</section>
 		</section>
+	</section>
 		<section id="assertions_procedures" data-status="developmental">
 			<h2>Assertions and Procedures</h2>
 			<details class="summary">
