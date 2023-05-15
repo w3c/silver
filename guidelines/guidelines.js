@@ -151,6 +151,7 @@ function addStatusMarkers() {
 		var selector = '[data-status="' + status + '"]';
 		var statusSections = document.querySelectorAll(selector);
 		statusSections.forEach(function (section) {
+		    /* 
 			var statusLabel = "Section";
 			if (section.classList.contains("guideline")) statusLabel = "Guideline";
 			if (section.classList.contains("outcome")) statusLabel = "Outcome";
@@ -163,8 +164,16 @@ function addStatusMarkers() {
 				// + ' See the Editor&#39;s note for details.';
 
 			// Insert div after the first heading:
+	           */
+	           var link = document.createElement("a");
+	           link.setAttribute('class', 'addition status-filter sticky');
+	           link.setAttribute("href", "#" + status);
+	           link.innerHTML = sentenceCase(status);
+	           var p = document.createElement("p");
+	           p.appendChild(link);
+	           
 			var firstHeading = section.querySelector('h1,h2,h3,h4,h5,h6');
-			firstHeading.parentNode.insertBefore(div, firstHeading.nextSibling);
+			firstHeading.parentNode.insertBefore(p, firstHeading.nextSibling);
 		})
 	});
 }
