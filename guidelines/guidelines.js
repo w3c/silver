@@ -165,15 +165,13 @@ function addStatusMarkers() {
 
 			// Insert div after the first heading:
 	           */
-	           var link = document.createElement("a");
-	           link.setAttribute('class', 'addition status-filter sticky');
-	           link.setAttribute("href", "#" + status);
-	           link.innerHTML = sentenceCase(status);
 	           var p = document.createElement("p");
-	           p.appendChild(link);
+	           p.setAttribute('class', 'addition status-filter sticky');
+	           p.setAttribute("title", statusLabels[status]);
+	           p.innerHTML = sentenceCase(status);
 	           
-			var firstHeading = section.querySelector('h1,h2,h3,h4,h5,h6');
-			firstHeading.parentNode.insertBefore(p, firstHeading.nextSibling);
+			var wrapper = section.querySelector('.header-wrapper');
+			wrapper.appendChild(p);
 		})
 	});
 }
@@ -353,7 +351,6 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
-	addStatusMarkers();
 	//alternateFloats();
 }
 
@@ -366,6 +363,7 @@ function postRespec() {
 	removeDraftMethodLinks();
 	edNotePermalinks();
 	addNoteMarkers();
+	addStatusMarkers();
 	removeImgSize();
 	outputJson();
 	//moveStatusFilterToToc();
