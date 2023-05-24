@@ -9,10 +9,118 @@
 		</header>
 		<main>
 		<section id="outcome1">
-		<h2>{Outcome Name}</h2>
+		<h2><strong class="outcomeName">Notifications provided</strong> - Provides notification of an error so users know that an error has occurred.</h2>
+			<section id="method1-1">
+			<h3>Method: What errors should be notified? </h3>
+			<ul>
+				<li>Notes: 
+				<ul>
+					<li>Some errors do not require user intervention and correction of error. Users should not be interrupted for repetitive levels that don't require user action, such as a quick network connection drop. See the examples from <a href="https://docs.google.com/document/d/1jtZaUzLi-jgmGdAypRUeJPzVz_ZUpMO0wdOrORiuO7w/edit#heading=h.8sxd4rwnfmg2">What to do with repetitive errors of low severity?</a> </li>
+					<li>If the system cannot move forward without user intervention, they should be notified. </li>
+					<li>If the system fails even if the user can’t fix it.  If the app can’t do something, the user needs to be notified that something has gone wrong.  If they can fix it, the user should be told how, and if they can’t, they should be told whatever is appropriate, even “try again in 30 minutes” </li>
+				</ul></li>
+				<li>Tests:
+				<ol>
+					<li>Identify when an error is made to make the judgement call of whether an error notification should exist (system errors as well as user errors) (see the <a href="https://docs.google.com/document/d/1siHMdNk96v2DVY6sarjZCDt5-nvqvQq13bXOOYymNlw/edit#">list of user flows</a>) </li>
+					<li>If an error is made, does an error notification exist?</li>
+				</ol></li>
+			</ul>
+			</section>
+			<section id="method1-2">
+			<h3>Method: Error messages need to be discernible, consistent, and accessible. </h3>
+			<ul>
+				<li>Tests:
+				<ol>
+					<li>Can the user discern or detect the error notification?  
+					<ul>
+						<li>Should not be off-screen or be a sound-only.</li>
+						<li>Is the notification semantic and meets other sections of WCAG3? </li>
+						<li>The notification should be consistent relative to the view, process or trigger so it is easier for a user to identify the source of the error and locate what location, window, or tab is producing the error.  </li>
+					</ul></li>
+				</ol></li>
+			</ul>
+			</section>
+			<section id="method1-3">
+			<h3>Method (Authoring Tool):UI frameworks produce discernible, consistent, and accessible error messages</h3>
+			</section>
+			<section id="method1-4">
+			<h3>Method: The technology stack supports notifications   </h3>
+			<ul>
+				<li>User Agents: 
+				<ul>
+					<li>When the page load fails, the browser handles server created errors through the headers. The server can provide a page to react or the browser react.  The browser-provided-page needs to be understandable.  </li>
+					<li>Browsers support <code>&lt;dialog&gt;</code> element so authors can style it appropriately.  </li>
+					<li>Browsers can re-direct URL typos (or attacks) to common correct URLs (and inform the user when they do so.) </li>
+				</ul></li>
+				<li>Assistive Technologies:
+				<ul>
+					<li>Assistive Technologies need to inform users that an error notification such as a modal window is opening.</li>
+					<li>Assistive Technologies need to support the <code>&lt;dialog&gt;</code> element</li>
+				</ul></li>
+				<li>APIs. The spec is supported and implemented correctly.  The API has to fire an event to notify the assistive technology that the event has occured.  We need to enforce that all parts of the stack cooperate.  </li>
+				<li>Note: These should not be separate methods but should be part of ARIA or Core Accessibility API, OR we have a built out example of how all the different parts fit together coherently to realize these outcomes</li>
+			</ul>
+			</section>
+		</section>
+		<section id="outcome2">
+		<h2><strong class="outcomeName">Notifications describe errors</strong> &mdash; Provides a clear message describing the error so users understand the cause of the error.</h2>
+			<section id="method2-1">
+			<h3>Method (all technologies): Explain the error in clear language</h3>
+			<ul>
+				<li>Notes: 
+				<ul>
+					<li>Discussion of how to handle a situation where there is only one Method. We agreed that if there are multiple methods, we can articulate which combinations of methods are satisfactory to meet the outcome, or it can be one outcome, one method. </li>
+					<li>When creating outcomes, there is an ongoing question about when to break apart outcomes and when to combine related requirements.  The advantage of breaking outcomes apart is that separate outcomes raise awareness of needs and ensure critical parts are not hidden at lower levels of documentation. The disadvantage of creating separate outcomes is the sheer number of resulting outcomes which may feel overwhelming.  Groups should remain aware of this tension and document the rationale for breaking outcomes apart. Conversely, combining outcomes as “outcome A and outcome B” may result in outcome B being overlooked</li>
+				</ul></li>
+				<li>Tests:
+				<ol>
+					<li>Identify the type of error that has occurred</li>
+					<li>Identify where the error has occurred</li>
+					<li>The error message is written in clear language or has a link to a clear language explanation.  “Error 10752” is a fail. </li>
+				</ol></li>
+			</ul>
+			</section>
+		</section>
+		<section id="outcome3">
+		<h2><strong class="outcomeName">Instructions provided to remedy errors</strong> &mdash;  Provides instructions in response to an error so users know what steps to take to remedy the error. </h2>
+		<p>If it is known there is nothing the user can do, say so. (We should get input from ePub and XR.)</p>
+		<p>Methods:</p>
 			<ol>
-				<li>{Method Name - Description} </li>
+				<li>A technology agnostic method of how to provide instructions (including from Http for server errors and Html for form submission errors). It is language and user flow driven rather than technology driven. Have illustrative examples for the different types, because making an exhaustive list would be extremely difficult to maintain. A heuristic tree (needs expert UX input):  
+				<ul>
+					<li>An error occurred</li>
+					<li>Does this error require user action</li>
+					<li>(Zip code example) tell the user what they need to do</li>
+				</ul></li>	
+				<li>(user agent) use something like http error codes to prompt the user agent to give the appropriate instructions. </li>		
 			</ol>
+		<p>Notes: </p>
+			<ul>
+				<li>Discussion on whether the instruction could be “server down” or “find someone sighted to help you with the form”.  There was an idea of a rating from “Best available help” to “there is no human required to fix it” </li>
+				<li>It was brought up that the second part of the outcome “there is nothing the user can do” would ever apply, since the user might be able to do things like “try again tomorrow” or “contact customer support” </li>
+				<li>It was brought up that issues can range in “rating” from something simple like things that the user can fix themselves to things that would require contacting support and possibly escalation to someone with access/authorization to resolve the issue.</li>
+			</ul>
+		</section>
+		<section id="outcome4">
+		<h2><strong class="outcomeName">Timely and targeted guidance</strong>  &mdash;  Provides notification when the error occurs and identifies the source of error so users can readily refocus and remedy the error.</h2>
+			<section id="method4-1">
+			<h3>Methods:</h3>
+			<ul>
+				<li>Technology neutral - it’s in relation to what the user is trying to do or read.  When the error is detected needs to be balanced with interruptions. Timing is not essential success criteria also applies. There are a lot of things that can affect timing.  It’s important that AT users actually get notified because if the page is not coded correctly, they may not receive the notification. The overall goal is to let the user know that an error occurred within an appropriate timeframe that makes sense and supports the user as best as possible.  </li> 
+				<li>Method for onblur client-side validation to give the user enough time to complete the input. </li>
+				<li>(Advanced?) method that gives a user the option to control the verbosity of the interruptions. Some users want to only be notified when they finish the form and not be interrupted while they are completed. Note that we don’t want to force a user to address the error which interrupts them from actually completing the task.  </li>
+				</ul>
+			<h3>Notes: </h3>
+				<ul>
+					<li>What is timely for the type of error?  E.g spelling error, vs. an error that requires a server verification like that a credit card number is authentic.  </li>
+					<li>Is the user returned to the specific location of the error to correct it?   </li>
+					<li>Is the inline error notification immediate (onblur) no later than when leaving the field?  </li>
+					<li>Does “on submit” error notification walk the user through correcting the error?   </li>
+					<li>Is the error notification removed when the error is corrected or the user is notified that the error has been corrected successfully?   </li>
+					<li>Do we need a specific “keep the error notification visible until it is corrected?”  </li>
+					<li>Development work should consider creating a decision tree of when in-line is the correct approach and when on-submit is the correct approach. There can be inline verification that goes to the server. How do we walk people through the process of deciding how to approach an error to give a consistent way to approach it. There are groupings that would help decide it.  </li>
+				</ul>
+			</section>
 		</section>
 		</main>
 	</body>
