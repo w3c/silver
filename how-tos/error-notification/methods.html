@@ -8,8 +8,34 @@
 			<h1>Methods</h1>
 		</header>
 		<main>
+		<section id="toc">
+		<p>Contents of this page: </p>
+		<ul>
+			<li>Outcome: Notifications provided
+			<ul type="none">
+				<li>Method: <a href="#method1-1">What errors should be notified?</a> </li>
+				<li>Method: <a href="#method1-2">Error messages need to be discernible, consistent, and accessible.</a></li>
+				<li>Method (Authoring Tool): <a href="#method1-3">UI frameworks produce discernible, consistent, and accessible error messages.</a> </li>
+				<li>Method: <a href="#method1-4">The technology stack supports notifications.</a></li>	
+			</ul></li>
+			<li>Outcome: Notifications describe errors
+			<ul>
+				<li>Method (all technologies): <a href="#method2-1">Explain the error in clear language</a></li>
+			</ul></li>
+			<li>Outcome: Instructions provided to remedy errors
+			<ul>
+				<li>Method: <a href="#method3-1">A technology agnostic method of how to provide instructions</a></li>
+				<li>Method (user agent): <a href="#method3-2">Use something like http error codes to prompt the user agent to give the appropriate instructions.</a></li>
+			</ul></li>
+			<li>Outcome: Timely and targeted guidance
+			<ul>
+				<li>Method (all technologies): <a href="#method4-1">Relation to what the user is trying to do or read</a></li>
+				<li>Method: <a href="#method4-2">onblur client-side validation </a></li>
+				<li>Method (advanced?): <a href="#method4-3">Give the user the option to control the verbosity of the interruptions</a></li>
+			</ul></li>
+		</ul>
 		<section id="outcome1">
-		<h2><strong class="outcomeName">Notifications provided</strong> - Provides notification of an error so users know that an error has occurred.</h2>
+		<h2><strong class="outcomeName">Outcome: Notifications provided</strong> - Provides notification of an error so users know that an error has occurred.</h2>
 			<section id="method1-1">
 			<h3>Method: What errors should be notified? </h3>
 			<ul>
@@ -63,7 +89,7 @@
 			</section>
 		</section>
 		<section id="outcome2">
-		<h2><strong class="outcomeName">Notifications describe errors</strong> &mdash; Provides a clear message describing the error so users understand the cause of the error.</h2>
+		<h2><strong class="outcomeName">Outcome: Notifications describe errors</strong> &mdash; Provides a clear message describing the error so users understand the cause of the error.</h2>
 			<section id="method2-1">
 			<h3>Method (all technologies): Explain the error in clear language</h3>
 			<ul>
@@ -82,7 +108,7 @@
 			</section>
 		</section>
 		<section id="outcome3">
-		<h2><strong class="outcomeName">Instructions provided to remedy errors</strong> &mdash;  Provides instructions in response to an error so users know what steps to take to remedy the error. </h2>
+		<h2><strong class="outcomeName">Outcome: Instructions provided to remedy errors</strong> &mdash;  Provides instructions in response to an error so users know what steps to take to remedy the error. </h2>
 		<p>If it is known there is nothing the user can do, say so. (We should get input from ePub and XR.)</p>
 		<p>Methods:</p>
 			<ol>
@@ -102,7 +128,7 @@
 			</ul>
 		</section>
 		<section id="outcome4">
-		<h2><strong class="outcomeName">Timely and targeted guidance</strong>  &mdash;  Provides notification when the error occurs and identifies the source of error so users can readily refocus and remedy the error.</h2>
+		<h2><strong class="outcomeName">Outcome: Timely and targeted guidance</strong>  &mdash;  Provides notification when the error occurs and identifies the source of error so users can readily refocus and remedy the error.</h2>
 			<section id="method4-1">
 			<h3>Methods:</h3>
 			<ul>
