@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>How-To - Get Started</title>
+	</head>
+	<body>
+		<header>
+			<h1>Get Started</h1>
+		</header>
+		<main>
+			<section id="summary">
+				<h2>Summary</h2>
+				<p>Good articulation aids with comprehension, and is essential for text-to-speech assistive technology to be as useful as possible. Speech synthesis using pronunciation rules for the wrong language (even one using a similar alphabet) cannot easily be understood.</p>
+			</section>
+			
+			<section id="reason">
+				<h2>Why</h2>
+				<p>Assistive technology used to help people understand text content needs to know when that content changes from one human language. If that technology has been set up to process different languages, it can provide the user with correctly pronounced content. If content hasn’t been created in a way that tells assistive technology that the human language has changed, it will inaccurately present information to the user, making it harder to understand. </p>
+				<p>On the other hand, too many language changes slow down the assistive technology and make it harder for people using assistive technology.  Generally, single words or short phrases don’t need a language change. </p>
+			</section>
+			
+			<section id="benefits">
+				<h2>Who it helps</h2>
+				<p>People who use assistive technology such as screen readers or refreshable braille displays benefit because content in other languages can be presented to them accurately. For example, a screen reader could pronounce French text using a French speech synthesizer.</p>
+				<p>Specifying both the natural language of the view's main content as well as any changes in language of blocks of content in that view can help:</p>
+				<ul>
+					<li>People who use screen readers or other technologies that convert text into synthetic speech;</li>
+					<li>People who use braille that need the correct tables to be applied to text; and</li>
+					<li>People with certain cognitive, language, and learning disabilities who use text-to-speech software</li>
+				</ul>
+			</section>
+			
+			<section id="how">
+				<h2>How</h2>
+				<p>Every page needs to have a small piece of code at the top of it to tell the browser what language the page is in. This piece of code is called the lang attribute (lang is short for “language”). The lang attribute needs a value, usually two letters, to say what the language is. For example, a page written in English would be lang=”en” and a page written in German would be lang=”de”. If a page has blocks of content in more than one language, the content that’s in a different language to that of the page’s language, that also needs a lang attribute, this time to tell the browser what the new language is.</p>
+			</section>
+
+			<section id="exceptions">
+				<h2>Exceptions</h2>
+				<p>Frequent language switching, such as when multiple language switches occur within a sentence can make it more difficult to understand the text than if a word is pronounced with the wrong speech. Where this matters varies from case to case. It is good practice to consider whether language switching for individual words is helpful and where it may cause more problems than it solves.</p>
+				<p>Not all languages have an accessibility supported speech synthesizer. In such cases it is best to let assistive technologies pronounce text in its default language, which will be a language the user of that assistive technology will be familiar with.</p>
+			</section>
+		</main>
+	</body>
+</html>

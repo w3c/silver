@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>How-To - Plan</title>
+	</head>
+	<body>
+		<header>
+			<h1>Plan</h1>
+		</header>
+		<main>
+			<section id="responsibilities">
+				<h2>Planning responsibilities</h2>
+				<ul>
+					<li>Blocks of text that change (human) language are coded so that the language change is communicated to screen readers and other assistive technologies. You must ensure that the author or editor passes the information on a language change to the developers so that the developers code it correctly.</li>
+					<li>If you are building a feature where users can input paragraphs of text that will later be published (like a comment feature or social media post),  then you must ensure that the specifications of the project include the ability for users to indicate a change of language. You must then ensure that the teams are working together to implement this feature.</li>
+				</ul>
+			</section>
+			
+			<section id="collaboration">
+				<h2>Tips for collaboration</h2>
+				<p>Communication is important with designers, developers, testers in these ways:</p>
+				<ol>
+					<li>If the author or editor is producing content where blocks of human language change (for example, from English to French and back), then they communicate those language changes to the developers so the language change can be coded with the correct language.</li>
+					<li>Don’t assume that the developer can identify the correct language by reading it.</li>
+					<li>Ensure that your developer team knows how to code the change of language correctly and that they are referencing the correct <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">IANA language sub-codes</a>. The W3C has a tool for searching <a href="https://r12a.github.io/app-subtags/">Language Subtag Lookup</a>.</li>
+					<li>
+						<p>If this is a project that includes the ability for users to enter text that is then published (like comments or social media posts), then users need the ability to indicate a change of language. Ensure that:</p>
+						<ol>
+							<li>the designer is involved in developing the user interface for the feature; and </li>
+							<li>the developer is coding the interface for changing the language in an accessible way that conforms to WCAG. </li>
+						</ol>
+						<p>Be aware that allowing users to embed code can have security implications. </p>
+					</li>
+					<li>A site or product with extensive Internationalization, for example, the ability to translate the entire site or product into a selectable language, will need a thorough ability to code the language change everywhere it occurs whenever it occurs. It will need to be as persistent as the words themselves. For example, the code identifying the language as French identifies the French translation. If a page refresh preserves the selected language (French in this example) then the code identifying the French language is also preserved. In this case, you will want to ensure there are no instances where the language change is hard coded and doesn’t flex with the default language.</li>
+				</ol>
+			</section>
+			
+			<section id="stages">
+				<h2>Planning for each stage</h2>
+				
+				<section id="early">
+					<h3>How to get started early</h3>
+					<p>For content that may include language changes, contact the editor or editing team and work out a mechanism for how any change of language needs to be communicated to the development team. This is a communication issue, not a technology issue.  The developer needs to know</p>
+					<ol>
+						<li>Where the change of language starts</li>
+						<li>Where the language change ends, or reverts to the default language</li>
+						<li>What the languages are.  If the language has a specific dialect, then the dialect subcode should be used.  For example, Chinese could be Mandarin Chinese (cmn) or Jinyu Chinese (cjy).  Historic languages have their own subcodes.  For example, quotations from Chaucer’s Canterbury Tales use the subcode for Middle English (enm)</li>
+					</ol>
+					<p>If you are building a new feature that allows users to enter text that will be then published, then you need to start early to determine the features that will be needed to ensure that the text that users enter will be accessible.  Language change is a small part of what will be needed.</p>
+				</section>
+				
+				<section id="remediate">
+					<h3>How to remediate</h3>
+					<p>For an existing feature that allows users to enter text that will then be published, there are a number of considerations. Language change is one of them. Consider using an accessible in-line text editor that can be embedded in your product. If security or functionality limitations require you to build your own text editor with a language change, ensure:</p>
+					<ul>
+						<li>The feature can be found by people entering text</li>
+						<li>People can operate the feature with no training or help documentation</li>
+						<li>The feature meets WCAG 3</li>
+					</ul>
+				</section>
+			</section>
+		</main>
+	</body>
+</html>
