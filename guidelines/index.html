@@ -67,22 +67,6 @@
 				</section>
 			</section>
 
-			<section>
-				<h3>Relationship to other W3C guidelines</h3>
-				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [[WCAG20]] were designed to be technology neutral, and have stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [[ATAG20]] provide guidance for various types of software that assist people in writing accessible content. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [[UAAG20]] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis.</p>
-				<p>These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents, and assistive technologies.</p>
-				<ul>
-					<li>WCAG 3.0 incorporates but may not be all encompassing of WCAG 2.X, ATAG, and UAAG.</li>
-					<li>WCAG 3.0 is not backward compatible with WCAG 2.0, ATAG 2.0, and UAAG 2.0.</li>
-				</ul>
-				<p>For more details about differences from previous guidelines, see <a href="#differences-from-wcag-2">Appendix: Differences From WCAG 2</a>.</p>
-			</section>
-			<section>
-				<h3>Goals and Requirements</h3>
-				<p>The goal of WCAG 3.0 and supporting documents is to make digital products including web, ePub, PDF, applications, mobile apps, and other emerging technologies more accessible and usable to people with disabilities. It is the intention for WCAG 3.0 to meet this goal by supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. The hope is that WCAG 3.0 will make it significantly easier for both beginners and experts to create accessible digital products that support the needs of people with disabilities.</p>
-
-				<p>Research and design work performed by the Silver Task Force identified key requirements needed to improve upon the existing WCAG 2.X structure. These requirements, presented in the <a href="https://www.w3.org/TR/wcag-3.0-requirements/">Requirements for WCAG 3.0</a> document, shaped the guidelines that follow and should be taken into account when evaluating and updating the guidelines.</p>
-			</section>
 			<p class="ednote"> While the majority of guidelines are still to be written and we continue to explore additional ways of validating conformance, we seek wider public review on the approach presented here. </p>
 		</section>
 		
@@ -619,6 +603,10 @@
 					<p>These were tested using Firefox and Chrome on a Windows platform. The assistive technology used included JAWS and Dragon.</p>
 				</section>
 			</section>
+			<section data-status="placeholder">
+				<h3>Conforming alternative version</h3>
+				<p class="ednote">For this first draft, the Accessibility Guidelines Working Group has focused on the basic conformance model. For a next draft, we will explore how <a href="https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version">conforming alternative versions</a> fit into the new conformance model.</p>
+			</section>
 		</section>					
 		<section data-status="exploratory">
 			<h3>User generated content</h3>
@@ -643,10 +631,6 @@
 					<li>Clearly identify the steps taken to encourage accessibility in User Generated Content such as prompting the user for ALT text for their uploaded images before they are accepted and the disallowal of text attributes except as they are part of semantic markup such as strong, headings, etc., as enumerated in Guideline Outcomes;</li>
 				</ol>
 				<p class="ednote">Editor's Note: Once the conformance approach is included, content that passes all tests will be considered fully conformant. It remains to be determined how to address User Generated Content that has accessibility issues; and to define what minimum thresholds might be acceptable. We expect WCAG 3.0 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
-			</section>
-			<section data-status="placeholder">
-				<h3>Conforming alternative version</h3>
-				<p class="ednote">For this first draft, the Accessibility Guidelines Working Group has focused on the basic conformance model. For a next draft, we will explore how <a href="https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version">conforming alternative versions</a> fit into the new conformance model.</p>
 			</section>
 					</section>
 			
@@ -780,6 +764,22 @@
 		</section>
 		<section class="appendix">
 			<h2>Guidelines development methodology</h2>
+			<section>
+				<h3>Relationship to other W3C guidelines</h3>
+				<p>The <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> [[WCAG20]] were designed to be technology neutral, and have stayed relevant for over 10 years. The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [[ATAG20]] provide guidance for various types of software that assist people in writing accessible content. <a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [[UAAG20]] offers useful guidance to user agent developers and has been implemented on an individual success criterion basis.</p>
+				<p>These guidelines have normative guidance for content and helpful implementation advice for authoring tools, user agents, and assistive technologies.</p>
+				<ul>
+					<li>WCAG 3.0 incorporates but may not be all encompassing of WCAG 2.X, ATAG, and UAAG.</li>
+					<li>WCAG 3.0 is not backward compatible with WCAG 2.0, ATAG 2.0, and UAAG 2.0.</li>
+				</ul>
+				<p>For more details about differences from previous guidelines, see <a href="#differences-from-wcag-2">Appendix: Differences From WCAG 2</a>.</p>
+			</section>
+			<section>
+				<h3>Goals and Requirements</h3>
+				<p>The goal of WCAG 3.0 and supporting documents is to make digital products including web, ePub, PDF, applications, mobile apps, and other emerging technologies more accessible and usable to people with disabilities. It is the intention for WCAG 3.0 to meet this goal by supporting a wider set of user needs, using new approaches to testing, and allowing more frequent maintenance of guidelines to keep pace with accelerating technology change. The hope is that WCAG 3.0 will make it significantly easier for both beginners and experts to create accessible digital products that support the needs of people with disabilities.</p>
+				
+				<p>Research and design work performed by the Silver Task Force identified key requirements needed to improve upon the existing WCAG 2.X structure. These requirements, presented in the <a href="https://www.w3.org/TR/wcag-3.0-requirements/">Requirements for WCAG 3.0</a> document, shaped the guidelines that follow and should be taken into account when evaluating and updating the guidelines.</p>
+			</section>
 		</section>
 		<section class="appendix">
 			<h2>Differences from WCAG 2</h2>
