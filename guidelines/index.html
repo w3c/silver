@@ -26,7 +26,7 @@
           <ul><li>Two different directions for determining WCAG 3.0 conformance. The feedback from our first few drafts was extensive.  We have changed our approach to what is required to meet WCAG 3.0.</li>
 			  <li>We removed old material that was not consistent with the new approach.  It does not mean we will not include it eventually, but to eliminate confusion, we have removed material that is no longer consistent with our current proposals. </li>
               <li>WCAG 3.0 Guideline placeholders which are short summaries of what we envision for the migration of the WCAG 2.x success criteria. </li>
-           
+          </ul>
         <p>Content is in various states of maturity. The status is marked at the top of each section (see 1.2 Section status levels). </p>
       </div>
 			<details class="summary">
@@ -96,6 +96,7 @@
 				</ul>
 			</details>
 			<p>In addition to this section, the <a href="#guidelines">Guidelines</a> and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a>normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
+		<p> The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">NOT RECOMMENDED</em>, <em class="rfc2119">RECOMMENDED</em>, <em class="rfc2119">SHOULD</em>, and <em class="rfc2119">SHOULD NOT</em> in this document are to be interpreted as described in <a href="https://datatracker.ietf.org/doc/html/bcp14">BCP 14</a> [[RFC2119]] [[RFC8174]] when, and only when, they appear in all capitals, as shown here. </p>
 			<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, and tests.</p>
 
 		
@@ -228,7 +229,7 @@
 				<p>There are two main approaches to evaluating accessibility that are promising.  There are also detailed ideas that support these approaches. The two main approaches are: </p>
 				<ul>
 					<li><strong>Outcomes with Tests</strong>:  Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. Outcomes are addressed in Section 4.1. Tests are addressed in Section 4.1.1. </li>
-					<li><strong>Assertions and Procedures:</strong> <em>Assertions</em> are attributable statements by a person or organization that they followed a <em>procedure</em> to improve accessibility. Assertions are addressed in Section 4.2. 
+					<li><strong>Assertions and Procedures:</strong> <em>Assertions</em> are attributable statements by a person or organization that they followed a <em>procedure</em> to improve accessibility. Assertions are addressed in Section 4.2. </li>
 				</ul>
 				<p>There are additional ideas that support these two approaches and can be used or combined in many different ways. </p>
 				<ul>
@@ -408,7 +409,7 @@
 
 			<section data-status="developmental">
 				<h3>Assertions</h3>
-				<p>An Assertion is a formal claim of fact, attributed to a person or organization. In WCAG 3.0, an assertion is an attributable and documented statement of fact regarding procedures practiced in the development and maintenance of the content or product to improve accessibility. Testing of an assertion is always true/false &mdash; did they make an assertion and provide the required documentation?</p>
+				<p>An Assertion is a formal claim of fact, attributed to a person or organization. In WCAG 3.0, an assertion is an attributable and documented statement of fact regarding procedures practiced in the development and maintenance of the content or product to improve accessibility. Testing of an assertion is always true/false — did they make an assertion and provide the required documentation?</p>
 				</section>
 
 			<section data-status="developmental">				
@@ -429,11 +430,11 @@
 					<li>Heuristic evaluation</li>
 					<li>Assistive technology testing</li></ul>
 				<div class="ednote">
-					<p>The AGWG is considering what will qualify as a procedure in WCAG 3.0. A procedure may be limited to guidance:
+					<p>The AGWG is considering what will qualify as a procedure in WCAG 3.0. A procedure may be limited to guidance:</p>
 						<ul><li>approved by AGWG and listed in WCAG,</li>
 						<li>that references publicly published guidance, or</li>
 						<li>that meets criteria specified in WCAG</li></ul>
-					or it may be any process that an organization uses to improve accessibility. Comments or criticism of these alternatives is welcome. </p>
+					<p>or it may be any process that an organization uses to improve accessibility. Comments or criticism of these alternatives is welcome. </p>
 				</div>
 			</section>
 
@@ -472,7 +473,7 @@
 					<p>While there is a lot of overlap between WCAG 2.X and WCAG 3.0, WCAG 3.0 will include additional tests and different scoring mechanics. As a result, WCAG 3.0 is not backwards compatible with WCAG 2.X.</p>
 
 
-					<p>The percentages used are placeholders and will need to be determined through testing. As we continue developing this content, we seek input on the following:
+					<p>The percentages used are placeholders and will need to be determined through testing. As we continue developing this content, we seek input on the following:</p>
 						<ul><li>Which option has the best chance of adoption and why?</li>
 						</ul>
 						<p>Next steps include</p>
@@ -480,7 +481,7 @@
 							<li>Further refine options</li>
 							<li>Test the accuracy, reliability, repeatability, etc. of each option</li>
 							<li>Write sample guidelines to test out each option</li>
-						</ul></p>
+						</ul>
 				</div>
 
 				<p>WCAG 3.0 defines three levels of conformance: bronze, silver, and gold. While it is easy to replicate the WCAG2 A, AA, AAA by renaming the levels, there is an opportunity to improve accessibility for people with disabilities by using a more advanced approach.  </p>
@@ -561,6 +562,7 @@
 				<ul>
 					<li>The video player used has the ability to display captions and support multiple audio tracks</li>
 					<li>All non-text elements on a page have an accessible name</li>
+				</ul>
 				</section>				
 			</section>					
 
@@ -587,7 +589,6 @@
 				<li>Clearly identify the steps taken to encourage accessibility in User Generated Content such as prompting the user for ALT text for their uploaded images before they are accepted and the disallowal of text attributes except as they are part of semantic markup such as strong, headings, etc., as enumerated in Guideline Outcomes;</li>
 			</ol>
 			<p class="ednote">Editor's Note: Once the conformance approach is included, content that passes all tests will be considered fully conformant. It remains to be determined how to address User Generated Content that has accessibility issues; and to define what minimum thresholds might be acceptable. We expect WCAG 3.0 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
-			</section>
 			</section>
 			<section data-status="placeholder">
 				<h3>Conforming alternative version</h3>
