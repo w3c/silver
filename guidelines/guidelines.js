@@ -151,6 +151,7 @@ function addStatusMarkers() {
 		var selector = '[data-status="' + status + '"]';
 		var statusSections = document.querySelectorAll(selector);
 		statusSections.forEach(function (section) {
+		    /* 
 			var statusLabel = "Section";
 			if (section.classList.contains("guideline")) statusLabel = "Guideline";
 			if (section.classList.contains("outcome")) statusLabel = "Outcome";
@@ -163,8 +164,14 @@ function addStatusMarkers() {
 				// + ' See the Editor&#39;s note for details.';
 
 			// Insert div after the first heading:
-			var firstHeading = section.querySelector('h1,h2,h3,h4,h5,h6');
-			firstHeading.parentNode.insertBefore(div, firstHeading.nextSibling);
+	           */
+	           var p = document.createElement("p");
+	           p.setAttribute('class', 'addition status-filter sticky');
+	           p.setAttribute("title", statusLabels[status]);
+	           p.innerHTML = sentenceCase(status);
+	           
+			var wrapper = section.querySelector('.header-wrapper');
+			wrapper.appendChild(p);
 		})
 	});
 }
@@ -344,7 +351,6 @@ function preRespec() {
 	addErrorMarkers();
 	addRatingMarkers();
 	addSummaryMarkers();
-	addStatusMarkers();
 	//alternateFloats();
 }
 
@@ -357,6 +363,7 @@ function postRespec() {
 	removeDraftMethodLinks();
 	edNotePermalinks();
 	addNoteMarkers();
+	addStatusMarkers();
 	removeImgSize();
 	outputJson();
 	//moveStatusFilterToToc();
