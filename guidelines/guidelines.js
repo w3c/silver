@@ -65,7 +65,7 @@ function linkOutcome() {
 
 function addGuidelineMarkers() {
 	document.querySelectorAll('.guideline').forEach(function(node){
-		var guidelineText = findHeading(node);
+		var guidelineText = node.querySelector("p");
 		guidelineText.innerHTML = "<span class=\"inserted\">Guideline: </span>" + guidelineText.innerHTML;
 	})
 }
