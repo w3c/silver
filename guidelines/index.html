@@ -86,19 +86,6 @@
 			<p class="ednote"> While the majority of guidelines are still to be written and we continue to explore additional ways of validating conformance, we seek wider public review on the approach presented here. </p>
 		</section>
 		
-			<h2>Normative requirements</h2>
-			<details class="summary">
-				<summary>Summary</summary>
-				<p>There are two types of content in this document:</p>
-				<ul>
-				<li><strong>Normative:</strong> what you must do to meet the guidelines.</li>
-				<li><strong>Non-normative:</strong> advice to help you meet the guidelines. This is also called <q>Informative</q>.</li>
-				</ul>
-			</details>
-			<p>In addition to this section, the <a href="#guidelines">Guidelines</a> and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a>normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
-		<p> The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">NOT RECOMMENDED</em>, <em class="rfc2119">RECOMMENDED</em>, <em class="rfc2119">SHOULD</em>, and <em class="rfc2119">SHOULD NOT</em> in this document are to be interpreted as described in <a href="https://datatracker.ietf.org/doc/html/bcp14">BCP 14</a> [[RFC2119]] [[RFC8174]] when, and only when, they appear in all capitals, as shown here. </p>
-			<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, and tests.</p>
-
 		
 		
 		<section data-status="placeholder">
@@ -218,6 +205,22 @@
 				<p>You might want to make a claim that your content or product meets the WCAG 3.0 outcomes. If it does meet the outcomes, we call this “conformance.” To conform to WCAG 3.0, your test results must show that your project is accessible.</p>
 				<p>If you want to make a conformance claim, you must use the process described in this document. However, conformance claims are not required and your content can conform to WCAG 3.0, even if you don’t want to make a claim. You can still use this process to test your project’s accessibility.</p>	
 			</details>
+			<section>
+				<h2>Normative requirements</h2>
+				<details class="summary">
+					<summary>Summary</summary>
+					<p>There are two types of content in this document:</p>
+					<ul>
+						<li><strong>Normative:</strong> what you must do to meet the guidelines.</li>
+						<li><strong>Non-normative:</strong> advice to help you meet the guidelines. This is also called <q>Informative</q>.</li>
+					</ul>
+				</details>
+				<p>In addition to this section, the <a href="#guidelines">Guidelines</a> and <a href="#conformance">Conformance</a> sections in WCAG 3.0 provide <a>normative</a> content and define requirements that impact conformance claims. Introductory material, appendices, sections marked as <q>non-normative</q>, diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
+				<p> The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">NOT RECOMMENDED</em>, <em class="rfc2119">RECOMMENDED</em>, <em class="rfc2119">SHOULD</em>, and <em class="rfc2119">SHOULD NOT</em> in this document are to be interpreted as described in <a href="https://datatracker.ietf.org/doc/html/bcp14">BCP 14</a> [[RFC2119]] [[RFC8174]] when, and only when, they appear in all capitals, as shown here. </p>
+				<p class="ednote">Outcomes are normative. The working group is looking for feedback on whether the following should be normative or informative: guidelines, methods, and tests.</p>
+			</section>
+			<section>
+				<h2>@@</h2>
 				<p>WCAG 3.0 will include a new conformance model to address a wider range of user needs, test a wider range of technologies and support new approaches to testing. We are exploring several approaches to conformance. After studying the comments on the previous draft, these are the concepts that showed promise.  We are giving an overview in this draft, but we continue to test the combination of the concepts.  </p>
 				<p>There are several goals for this new conformance model:</p>
 				<ol>
@@ -257,8 +260,7 @@
 					<li>Address all github issues under <a href="https://github.com/w3c/silver/milestone/16" target="_blank">test types and terminology milestone</a>.</li>
 				</ul>
 			</div>
-
-
+</section>
 			<section data-status="developmental">
 			<h3>Outcomes</h3>
 			<details class="summary">
@@ -565,16 +567,15 @@
 				</ul>
 				</section>				
 			</section>					
-
-			<section data-status="exploratory">
+		<section data-status="exploratory">
 			<h3>User generated content</h3>
 			<p>Web content publishers may include content provided by the users of their digital products. We refer to such content as "<a href="#user-generated-content">User Generated Content</a>".</p>
 			<p>Examples of User Generated Content include:</p>
-				<ul>
-					<li>social media postings and comments,</li>
-					<li>uploaded photographs, or</li>
-					<li>uploaded videos or other multimedia.</li>
-				</ul>
+			<ul>
+				<li>social media postings and comments,</li>
+				<li>uploaded photographs, or</li>
+				<li>uploaded videos or other multimedia.</li>
+			</ul>
 			<p>User Generated Content is provided for publication by visitors where the content platform specifically welcomes and encourages it. User-generated content is content that is submitted through a user interface designed specifically for members of the public and customers. Use of the same user interface as an authoring tool for publication of content by agents of the publisher (such as employees, contractors, or authorized volunteers) acting on behalf of the publisher does not make that content User Generated Content. The purpose of the User Generated Content Conformance is to allow WCAG 3.0 outcomes and methods to require additional or different steps to improve the accessibility of User Generated Content.</p>
 			<p>An important part of WCAG Conformance is the specific guidance that is associated with individual WCAG 3.0 guidelines and outcomes. Not all WCAG 3.0 guidelines will have unique outcomes and testing for User Generated Content. Unless User Generated Content requirements are specified in a particular guideline, that guideline applies as written whether or not the content is User Generated. </p>
 			
@@ -582,13 +583,13 @@
 			
 			<p>The web content publisher should identify all locations of User Generated Content (such as commentary on hosted content, product descriptions for consumer to consumer for sale listings, and restaurant reviews) and perform standard accessibility evaluation analysis for each. If there are no accessibility issues, the User Generated Content is fully conforming.</p>
 			<section>
-			<h4>Steps to conform</h4>
-			<p>If accessibility issues are identified, or if the website author wants to proactively address potential accessibility issues that might arise from User Generated Content, then all of the following must be indicated alongside the User Generated Content or in an Accessibility Statement published on the website or product that is linked from the view or page in a consistent location:</p>
-			<ol>
-				<li>Clearly identify where User Generated Content can be found on the publisher's digital product (perhaps by id href);</li>
-				<li>Clearly identify the steps taken to encourage accessibility in User Generated Content such as prompting the user for ALT text for their uploaded images before they are accepted and the disallowal of text attributes except as they are part of semantic markup such as strong, headings, etc., as enumerated in Guideline Outcomes;</li>
-			</ol>
-			<p class="ednote">Editor's Note: Once the conformance approach is included, content that passes all tests will be considered fully conformant. It remains to be determined how to address User Generated Content that has accessibility issues; and to define what minimum thresholds might be acceptable. We expect WCAG 3.0 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
+				<h4>Steps to conform</h4>
+				<p>If accessibility issues are identified, or if the website author wants to proactively address potential accessibility issues that might arise from User Generated Content, then all of the following must be indicated alongside the User Generated Content or in an Accessibility Statement published on the website or product that is linked from the view or page in a consistent location:</p>
+				<ol>
+					<li>Clearly identify where User Generated Content can be found on the publisher's digital product (perhaps by id href);</li>
+					<li>Clearly identify the steps taken to encourage accessibility in User Generated Content such as prompting the user for ALT text for their uploaded images before they are accepted and the disallowal of text attributes except as they are part of semantic markup such as strong, headings, etc., as enumerated in Guideline Outcomes;</li>
+				</ol>
+				<p class="ednote">Editor's Note: Once the conformance approach is included, content that passes all tests will be considered fully conformant. It remains to be determined how to address User Generated Content that has accessibility issues; and to define what minimum thresholds might be acceptable. We expect WCAG 3.0 to provide this guidance within individual guidelines and outcomes and to support testing for conformance. The working group is looking at alternative requirements to apply to User Generated Content guideline by guideline, and is seeking feedback on what would serve as reasonable requirements on how to best support accessibility in User Generated Content with known (or anticipated) accessibility issues. The working group intends to more thoroughly address the contents and the location of an accessibility statement in a future draft.</p>
 			</section>
 			<section data-status="placeholder">
 				<h3>Conforming alternative version</h3>
@@ -608,7 +609,7 @@
 					<li>Content that mostly meets the requirements but has problems can interfere with the user's ability to complete a process.</li>
 				</ul>
 				<p>WCAG 3.0 therefore defines two ways to scope content: <a>views</a> and <a>processes</a>. Evaluation is done on one or more complete views or processes, and conformance is determined on the basis of one or more complete views or processes. </p>
-
+				
 				<p>Conformance is defined only for <a>processes</a> and <a>views</a>. However, a conformance claim may be made to cover one process and view, a series of processes and views, or multiple related processes and views. All unique steps in a process MUST be represented in the set of views. Views outside of the process MAY also be included in the scope.</p>
 				<p class="ednote">The AG WG and Silver Task Force recognize that representative sampling is an important strategy that large and complex sites use to assess accessibility. While it is not addressed within this document at this time, our intent is to later address it within this document or in a separate document before the guidelines reach the Candidate Recommendation stage. We welcome your suggestions and feedback about the best way to incorporate representative sampling in WCAG 3.0.</p>
 			</section>
@@ -623,13 +624,13 @@
 				<h3>Conformance claims</h3>
 				<p>Conformance claims are not required. Authors can conform to WCAG 3.0 without making a claim. The material below describes how to make a conformance claim if that option is chosen.</p>
 				<section><h4>Required components of a conformance claim</h4><p>A conformance claim MUST include the following information:</p><ol>
-						<li><b>Date</b> of the claim;</li>
-						<li><b>Guidelines title, version and URI</b>
-							<q>W3C Accessibility Guidelines 3.0 at ???</q></li>
-						<li><b>Conformance level</b> satisfied: (bronze, silver, or gold);</li>
-						<li><b>A concise description of the views and processes</b>, such as a list of URIs for which the claim is made, including any state changes which lead to a new view; and</li>
-						<li>The technology including the hardware, software, and assistive technology used to test the claim.</li>
-						</ol>
+					<li><b>Date</b> of the claim;</li>
+					<li><b>Guidelines title, version and URI</b>
+						<q>W3C Accessibility Guidelines 3.0 at ???</q></li>
+					<li><b>Conformance level</b> satisfied: (bronze, silver, or gold);</li>
+					<li><b>A concise description of the views and processes</b>, such as a list of URIs for which the claim is made, including any state changes which lead to a new view; and</li>
+					<li>The technology including the hardware, software, and assistive technology used to test the claim.</li>
+				</ol>
 				</section>
 				<section>
 					<h4>Example conformance claim</h4>
@@ -648,6 +649,7 @@
 				</section>
 			</section>
 		</section>
+			
 		<section data-status="exploratory">
 			<h2>Glossary</h2>
 			<p class="note">Many of the terms defined here have common meanings. When terms appear with a link to the definition, the meaning is as formally defined here. When terms appear without a link to the definition, their meaning is not explicitly related to the formal definition here. These definitions are in progress and may evolve as the document evolves. </p>
