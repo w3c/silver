@@ -115,6 +115,14 @@ caption {
 a[href].status-link {
 	color: var(--text);
 }
+p.status-filter 
+{
+	display: inline-block;
+	float: right;
+	border: thin solid #005A9C;
+	border-radius: 1ex;
+	cursor: help;
+}
 @media screen and (min-width: 860px) {
 	.sticky {
 		position: sticky;
