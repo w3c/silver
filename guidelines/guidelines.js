@@ -165,13 +165,14 @@ function addStatusMarkers() {
 
 			// Insert div after the first heading:
 	           */
-	           var p = document.createElement("p");
-	           p.setAttribute('class', 'addition status-filter sticky');
-	           p.setAttribute("title", statusLabels[status]);
-	           p.innerHTML = sentenceCase(status);
+	           var button = document.createElement("button");
+	           button.setAttribute('class', 'addition status-filter sticky');
+	           button.setAttribute("title", statusLabels[status]);
+	           button.setAttribute("type", "button");
+	           button.innerHTML = sentenceCase(status);
 	           
 			var wrapper = section.querySelector('.header-wrapper');
-			wrapper.appendChild(p);
+			wrapper.appendChild(button);
 		})
 	});
 }
