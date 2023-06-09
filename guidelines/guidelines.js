@@ -346,7 +346,7 @@ function moveStatusFilterToToc() {
 function preRespec() {
 	adjustDfnData();
 	addGuidelineMarkers();
-	linkHowTo();
+	//linkHowTo();
 	linkOutcome();
 	addCategoryMarkers();
 	addErrorMarkers();
