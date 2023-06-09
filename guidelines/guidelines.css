@@ -28,9 +28,16 @@ summary::after {
 	text-align: center;
 	font-weight: bold;
 }
+
+/* removing for readability
 .howto-link, .outcome-link {
 	font-style: italic;
+} */
+
+.howto-link {
+	margin-top: 0;
 }
+
 a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:focus {
 	cursor: help;
 }
@@ -41,12 +48,30 @@ a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:foc
 	color: #005A9C;
 }
 .guideline-text, .outcome-text {
-	font-size: larger;
+	font-size: 120%;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-indent: 50px;
 }
 .guideline h3, .outcome h4 {
 	width: 100%;
 	margin-bottom: 0;
+	margin-top: .4em;
 }
+.guideline h3 {
+font-size: 140%;
+color: black;
+}
+
+.guideline p {
+	margin-top: 0;
+	text-indent: 50px;
+}
+
+h2, h3 {
+	width: 100%;
+}
+
 .methods h5, .errors h5, .rating h5 {
 	font-size: 100%;
 	color: #005A9C;
@@ -122,6 +147,9 @@ p.status-filter
 	border: thin solid #005A9C;
 	border-radius: 1ex;
 	cursor: help;
+	text-indent: 0px;
+	font-weight: bolder;
+	font-size: .75em;
 }
 @media screen and (min-width: 860px) {
 	.sticky {
