@@ -14,7 +14,8 @@ summary::after {
 	position: relative;
 }
 summary::after {
-	right: -4.5em;
+	right: 0em;
+	top: .25em;
 	float: right;
 }
 :not(.head) > details:focus summary::after, :not(.head) > details:hover summary::after {
@@ -48,7 +49,7 @@ a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:foc
 	color: #005A9C;
 }
 .guideline-text, .outcome-text {
-	font-size: 120%;
+	font-size: 11 0%;
 	margin-top: 0;
 	margin-bottom: 0;
 	text-indent: 50px;
@@ -59,7 +60,7 @@ a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:foc
 	margin-top: .4em;
 }
 .guideline h3 {
-font-size: 140%;
+font-size: 120%;
 color: black;
 }
 
@@ -70,7 +71,8 @@ color: black;
 
 h2, h3, h4 {
 	width: 100%;
-	margin-bottom: 0;
+	margin-bottom: .3em;
+	margin-top: .75em;
 }
 
 h4 {font-size: 110%}
