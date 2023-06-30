@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 34.1.3">
+<meta name="generator" content="ReSpec 34.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -113,7 +113,7 @@ dd{margin-left:0}
 		
 <link rel="stylesheet" type="text/css" href="guidelines.css">
 	
-<meta name="description" content="W3C Accessibility Guidelines (WCAG) 3.0 provides a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. The guidelines apply to various types of web content including static, dynamic, interactive, and streaming content; visual and auditory media; virtual and augmented reality; and alternative access presentation and control. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.">
+<meta name="description" content="W3C Accessibility Guidelines (WCAG) 3.0 will provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. The guidelines apply to various types of web content including static, dynamic, interactive, and streaming content; visual and auditory media; virtual and augmented reality; and alternative access presentation and control. These  guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.">
 <style>
 var{position:relative;cursor:pointer}
 var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
@@ -145,8 +145,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "name": "Rachael Bradley Montgomery",
       "mailto": "rmontgomery@loc.gov",
       "company": "Library of Congress",
+      "companyURI": "loc.gov/",
       "w3cid": 90310,
       "url": "mailto:rmontgomery@loc.gov"
+    },
+    {
+      "name": "Michael Cooper",
+      "mailto": "cooper@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org/",
+      "w3cid": 34017,
+      "url": "mailto:cooper@w3.org"
     },
     {
       "name": "Shawn Lauriat",
@@ -157,12 +166,20 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "url": "mailto:lauriat@google.com"
     },
     {
-      "name": "Michael Cooper",
-      "mailto": "cooper@w3.org",
-      "company": "W3C",
-      "companyURI": "https://www.w3.org/",
+      "name": "Chuck Adams",
+      "mailto": "charles.adams@oracle.com",
+      "company": "Oracle",
+      "companyURI": "https://www.oracle.com/",
       "w3cid": 34017,
-      "url": "mailto:cooper@w3.org"
+      "url": "mailto:charles.adams@oracle.com"
+    },
+    {
+      "name": "Alastair Campbell",
+      "mailto": "acampbell@nomensa.com",
+      "company": "Nomensa",
+      "companyURI": "https://www.nomensa.com/",
+      "w3cid": 34017,
+      "url": "mailto:acampbell@nomensa.com"
     }
   ],
   "authors": [
@@ -199,15 +216,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "lint": false,
-  "publishISODate": "2023-06-21T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 21 June 2023"
+  "publishISODate": "2023-06-30T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 30 June 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">W3C Accessibility Guidelines (WCAG) 3.0</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-06-21">21 June 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-06-30">30 June 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -219,6 +236,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/silver/guidelines/">https://w3c.github.io/silver/guidelines/</a></dd>
         <dt>History:</dt><dd>
+                    <a href="https://www.w3.org/standards/history/wcag-3.0/">https://www.w3.org/standards/history/wcag-3.0/</a>
+                  </dd><dd>
                     <a href="https://github.com/w3c/silver/commits/">Commit history</a>
                   </dd>
         
@@ -230,10 +249,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <a class="ed_mailto u-email email p-name" href="mailto:jspellman@spellmanconsulting.com">Jeanne Spellman</a> (<span class="p-org org h-org">TetraLogical</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="90310">
     <a class="ed_mailto u-email email p-name" href="mailto:rmontgomery@loc.gov">Rachael Bradley Montgomery</a> (<span class="p-org org h-org">Library of Congress</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="34017">
+    <a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<span class="p-org org h-org">W3C</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="90646">
     <a class="ed_mailto u-email email p-name" href="mailto:lauriat@google.com">Shawn Lauriat</a> (<span class="p-org org h-org">Google, Inc.</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="34017">
-    <a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<span class="p-org org h-org">W3C</span>)
+    <a class="ed_mailto u-email email p-name" href="mailto:charles.adams@oracle.com">Chuck Adams</a> (<span class="p-org org h-org">Oracle</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="34017">
+    <a class="ed_mailto u-email email p-name" href="mailto:acampbell@nomensa.com">Alastair Campbell</a> (<span class="p-org org h-org">Nomensa</span>)
   </dd>
         
         <dt>Project Manager:</dt><dd class="editor p-author h-card vcard" data-editor-id="43334">
@@ -265,7 +288,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <hr title="Separator for header">
   </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
-			<p><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 provides a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. The guidelines apply to various types of web content including static, dynamic, interactive, and streaming content; visual and auditory media; virtual and augmented reality; and alternative access presentation and control. The guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
+			<p><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 will provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. The guidelines apply to various types of web content including static, dynamic, interactive, and streaming content; visual and auditory media; virtual and augmented reality; and alternative access presentation and control. These  guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.</p>
 			<p>Each <a href="#dfn-guideline" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-guideline-1">guideline</a> in this standard provides information on accessibility practices that address documented <a href="#dfn-user-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-need-1">user needs</a> of people with disabilities. Guidelines are supported by multiple <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-1">outcomes</a> to determine whether the need has been met. Guidelines are also supported by technology-specific <a href="#dfn-method" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-method-1">methods</a> to meet each outcome. </p>
 			<p>This specification is expected to be updated regularly to keep pace with changing technology by updating and adding methods, outcomes, and guidelines to address new needs as technologies evolve. For entities that make formal claims of <a href="#dfn-conformance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-conformance-1">conformance</a> to these guidelines, several levels of conformance are available to address the diverse nature of digital content and the type of testing that is performed.</p>
 			<p>See <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3 Introduction</a> for an introduction and links to WCAG technical and educational material.</p>
@@ -337,7 +360,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<section id="about-wcag-3"><div class="header-wrapper"><h3 id="x1-1-about-wcag-3"><bdi class="secno">1.1 </bdi>About WCAG 3</h3><a class="self-link" href="#about-wcag-3" aria-label="Permalink for Section 1.1"></a></div>
 				
-				<p>This specification presents a new model and guidelines to make web content and applications accessible to people with disabilities. The <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 support a wide set of user needs, use new approaches to testing, and allow frequent maintenance of guidelines and related content to keep pace with accelerating technology change. WCAG 3 supports this evolution by focusing on users’ functional needs. These needs are then supported by outcomes and technology-specific methods to meet those needs.&nbsp;</p>
+				<p>This specification presents a new model and guidelines to make web content and applications accessible to people with disabilities. The <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Guidelines (WCAG) 3.0 support a wide set of user needs, use new approaches to testing, and allow frequent maintenance of guidelines and related content to keep pace with accelerating technology change. WCAG 3 supports this evolution by focusing on users’ <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-1">functional needs</a>. These needs are then supported by outcomes and technology-specific methods to meet those needs.&nbsp;</p>
 				<p>WCAG 3 is a successor to <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines 2.2</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag22" title="Web Content Accessibility Guidelines (WCAG) 2.2">WCAG22</a></cite>] and previous versions, but does not <a href="#dfn-deprecate" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-deprecate-1">deprecate</a> WCAG 2. It will also incorporate content from and partially extend <a href="https://www.w3.org/TR/UAAG20/"> User Agent Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">UAAG20</a></cite>] and <a href="https://www.w3.org/TR/ATAG20/"> Authoring Tool Accessibility Guidelines 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">ATAG20</a></cite>]. These earlier versions provided a flexible model that kept them relevant for over 10 years. However, changing technology and changing needs of people with disabilities have led to the need for a new model to address content accessibility more comprehensively and flexibly.</p>
 				<p>There are many differences between WCAG 2 and WCAG 3. Content that conforms to WCAG 2.2 A &amp; AA is expected to meet most of the minimum conformance level of this new standard but, since WCAG 3 includes additional tests and different scoring mechanics, additional work will be needed to reach full conformance. Since the new standard will use a different conformance model, the Accessibility Guidelines Working Group expects that some organizations may wish to continue using WCAG 2, while others may wish to migrate to the new standard. For those that wish to migrate to the new standard, the Working Group will provide transition support materials, which may use mapping and other approaches to facilitate migration.</p>
 			</section>
@@ -473,7 +496,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			
 			<details class="summary">
 				<summary>Plain language summary of <q>Conformance</q></summary>
-				<p>You might want to make a claim that your content or product meets the WCAG 3 outcomes. If it does meet the outcomes, we call this “conformance.” To conform to WCAG 3, your test results must show that your project is accessible.</p>
+				<p>You might want to make a claim that your content or product meets the WCAG 3 guidelines. If it does meet the guidelines, we call this “conformance.” To conform to WCAG 3, your test results must show that your project is accessible.</p>
 				<p>If you want to make a conformance claim, you must use the process described in this document. However, conformance claims are not required and your content can conform to WCAG 3, even if you don’t want to make a claim. You can still use this process to test your project’s accessibility.</p>	
 				<p>There are two types of content in this document:</p>
 				<ul>
@@ -518,8 +541,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<p>The proposed approaches can fit together in a variety of ways. We will be testing these approaches and others for <a href="#dfn-validity" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-validity-1">validity</a>, <a href="#dfn-reliability" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-reliability-1">reliability</a>, <a href="#dfn-sensitivity" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-sensitivity-1">sensitivity</a>, <a href="#dfn-adequacy" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-adequacy-1">adequacy</a>, <a href="#dfn-complexity" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-complexity-1">complexity</a> and <a href="#dfn-equity" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-equity-1">equity</a>. We welcome suggestions on ways to improve these approaches to better meet these criteria and concerns about how they might affect accessibility. The working group plans to select from or even replace these options based on feedback, prototyping, and testing. </p>
 				<p>There are two main approaches to evaluating accessibility that are promising.  There are also detailed ideas that support these approaches. The two main approaches are: </p>
 				<ul>
-					<li><strong>Outcomes with tests</strong>:  Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. Outcomes are addressed in Section 4.1. Tests are addressed in Section 4.1.1. </li>
-					<li><strong>Assertions and procedures:</strong> <em>Assertions</em> are attributable statements by a person or organization that they followed a <em>procedure</em> to improve accessibility. Assertions are addressed in Section 4.2. </li>
+					<li><strong>Outcomes with tests</strong>:  Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. Outcomes are addressed in Section 3.3.1. Tests are addressed in Section 3.3.2. </li>
+					<li><strong>Assertions and procedures:</strong> <em>Assertions</em> are attributable statements by a person or organization that they followed a <em>procedure</em> to improve accessibility. Assertions are addressed in Section 3.4.1. </li>
 				</ul>
 				<p>There are additional ideas that support these two approaches and can be used or combined in many different ways. </p>
 				<ul>
@@ -550,7 +573,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			<section data-status="developing" id="outcomes-and-methods"><div class="header-wrapper"><h3 id="x3-3-outcomes-and-methods"><bdi class="secno">3.3 </bdi>Outcomes and methods</h3><a class="self-link" href="#outcomes-and-methods" aria-label="Permalink for Section 3.3"></a><p class="addition status-filter sticky" title="We have high confidence in the direction and some confidence in the details.">Developing</p></div>
 			
 				<details class="summary">
-					<summary>Plain language summary of <q>Outcomes and methods</q> - What types of tests and scopes are used?</summary>
+					<summary>Plain language summary of <q>Outcomes and methods</q></summary>
 					<p>WCAG 3 includes two (2) types of tests which are evaluated:</p>
 					<ul>
 						<li><strong>Quantifiable tests:</strong> Tests where there is a high degree of consistency between test results from different testers. Examples include testing whether certain properties exist in the content or if they match a value specified by the requirement.</li>
@@ -666,7 +689,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			</section>
 			<section id="conditions"><div class="header-wrapper"><h5 id="x3-3-2-3-conditions"><bdi class="secno">3.3.2.3 </bdi>Conditions</h5><a class="self-link" href="#conditions" aria-label="Permalink for Section 3.3.2.3"></a></div>
 				
-				<p>Some tests only apply in certain situations. Testing may occasionally require determining and referencing which specifications are being tested.  Methods will note whether a test always applies or under what conditions a test applies. Both Quantitative and Qualitative tests can be conditional. </p>
+				<p>Some tests only apply in certain situations. Testing may occasionally require determining and referencing which specifications are being tested.  Methods will note whether a test always applies or under what conditions a test applies. Both quantitative and qualitative tests can be conditional. </p>
 
 
 
@@ -721,12 +744,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<section id="assertions"><div class="header-wrapper"><h4 id="x3-4-1-assertions"><bdi class="secno">3.4.1 </bdi>Assertions</h4><a class="self-link" href="#assertions" aria-label="Permalink for Section 3.4.1"></a></div>
 				
-				<p>An Assertion is a formal claim of fact, attributed to a person or organization. In WCAG 3, an assertion is an attributable and documented statement of fact regarding procedures practiced in the development and maintenance of the content or product to improve accessibility. Testing of an assertion is always true/false — did they make an assertion and provide the required documentation?</p>
+				<p>An Assertion is a formal claim of fact, attributed to a person or organization. In WCAG 3, an assertion is an attributable and documented statement of fact regarding procedures practiced in the development and maintenance of the content or product to improve accessibility. </p>
 				</section>
 
 			<section id="using-assertions"><div class="header-wrapper"><h4 id="x3-4-2-using-assertions"><bdi class="secno">3.4.2 </bdi>Using assertions</h4><a class="self-link" href="#using-assertions" aria-label="Permalink for Section 3.4.2"></a></div>				
 				
-				<p>Assertions may supplement methods in one or more outcomes. Assertions should only be used on outcomes and guidelines that allow assertions. Organizations can make an assertion that they followed a procedure to claim conformance.</p>
+				<p>Assertions may supplement methods in one or more outcomes. Assertions should only be used on outcomes and guidelines that allow assertions. Organizations can make an assertion that they followed a procedure to claim conformance. Results when testing assertions are true/false - the organization making the assertion either provided the reqeuired documentation or it did not.</p>
 
 				<p>Procedures used in assertions may be implemented at the organization level, during design and development, or during testing.</p>
 
@@ -774,7 +797,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				
 
 				<p>WCAG 3 defines three levels of conformance: bronze, silver, and gold. While it is easy to replicate the WCAG 2 A, AA, AAA by renaming the levels, there is an opportunity to improve accessibility for people with disabilities by using a more advanced approach.  </p>
-				<p><strong>Bronze</strong> is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3. To reach Bronze level, the scope claimed in the conformance statement must pass a subset of Outcomes and Assertions. The subset will require enough Outcomes and Assertions to improve equity across functional needs.</p>
+				<p><strong>Bronze</strong> is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3. To reach Bronze level, the scope claimed in the conformance statement must pass a subset of Outcomes and Assertions. The subset will require enough Outcomes and Assertions to improve equity across <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-2">functional needs</a>.</p>
 
 				<p><strong>Silver</strong> level incentivizes organizations to go further to improve accessibility. One possibility that we are examining is that Silver level points can accumulate even prior to completing bronze but are not usable until Bronze is achieved. The goal is to encourage organizations to go beyond the minimum, especially where organizations want to be recognized for their efforts to go beyond minimum accessibility. </p>
 				
@@ -988,7 +1011,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<dt><dfn data-lt="Guideline|Guidelines" id="dfn-guideline" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Guideline</dfn></dt>
 				<dd>
 					<p>High-level, plain-language content used to organize <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-2">outcomes</a>.</p>
-					<p>See <a href="https://w3c.github.io/silver/explainer/#guidelines-structure">Guidelines</a> in the Explainer.</p>
+					<p>Guidelines provide a high-level, plain-language version of the content for managers, policy makers, individuals who are new to accessibility, and other individuals who need to understand the concepts but not dive into the technical details. They provide an easy-to-understand way of organizing and presenting the outcomes so that non-experts can learn about and understand the concepts. Each guideline includes a unique, descriptive name along with a high-level plain-language summary. Guidelines address functional needs on specific topics, such as contrast, forms, readability, and more. Guidelines group related outcomes and are technology-independent.</p>
 				</dd>
 				<dt><dfn data-lt="Human evaluation|Human testing|Human evaluated|Human tested|Manual|Manual evaluation|Manual testing|Manually tested" id="dfn-human-evaluation" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Human evaluation</dfn></dt>
 				<dd>
@@ -1007,7 +1030,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<dt><dfn data-lt="Method|Methods" data-plurals="methods" id="dfn-method" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Method</dfn></dt>
 				<dd>
 					<p>Detailed information, either technology-specific or technology-agnostic, on ways to meet the <a href="#dfn-outcome" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-outcome-3">outcome</a> as well as <a href="#dfn-test" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-test-1">tests</a> and scoring information.</p>
-					<p>See <a href="https://w3c.github.io/silver/explainer/#methods-structure">Methods</a> in the Explainer.</p>
 				</dd>
 				<dt><dfn data-lt="Normative" id="dfn-normative" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Normative</dfn></dt>
 				<dd>
@@ -1053,7 +1075,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<dd><p>The end goal a user has when starting a process through digital means.</p></dd>
 				<dt><dfn data-lt="User testing" id="dfn-user-testing" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">User testing</dfn></dt>
 				<dd>
-					<p>Evaluation of content by observation of how users with specific <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-1">functional needs</a> are able to complete a <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-3">process</a> and how the content meets the relevant <a href="#outcomes">outcomes</a>.</p>
+					<p>Evaluation of content by observation of how users with specific <a href="#dfn-functional-need" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-functional-need-3">functional needs</a> are able to complete a <a href="#dfn-process" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-process-3">process</a> and how the content meets the relevant <a href="#outcomes">outcomes</a>.</p>
 				</dd>
 				<dt><dfn data-lt="Validity|Valid" id="dfn-validity" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Validity</dfn></dt>
 				<dd>
@@ -1513,7 +1535,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-functional-need-1" title="§ 5. Glossary">§ 5. Glossary</a> 
+    <a href="#ref-for-dfn-functional-need-1" title="§ 1.1 About WCAG 3">§ 1.1 About WCAG 3</a> 
+  </li><li>
+    <a href="#ref-for-dfn-functional-need-2" title="§ 3.5 Conformance levels">§ 3.5 Conformance levels</a> 
+  </li><li>
+    <a href="#ref-for-dfn-functional-need-3" title="§ 5. Glossary">§ 5. Glossary</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-guideline" aria-label="Links in this document to definition: Guideline">
