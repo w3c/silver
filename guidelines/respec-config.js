@@ -38,7 +38,7 @@ var respecConfig = {
 		name: "Rachael Bradley Montgomery",
 		mailto: "rmontgomery@loc.gov",
 		company: "Library of Congress",
-		companyURI: "loc.gov/"
+		companyURI: "loc.gov/",
 		w3cid: 90310
 	}, {
 		name: "Michael Cooper",
@@ -46,7 +46,6 @@ var respecConfig = {
 		company: "W3C",
 		companyURI: "https://www.w3.org/",
 		w3cid: 34017
-	}],		
 	}, {
 		name: "Shawn Lauriat",
 		mailto: "lauriat@google.com",
@@ -59,7 +58,6 @@ var respecConfig = {
 		company: "Oracle",
 		companyURI: "https://www.oracle.com/",
 		w3cid: 34017
-	}],
 	}, {
 		name: "Alastair Campbell",
 		mailto: "acampbell@nomensa.com",
