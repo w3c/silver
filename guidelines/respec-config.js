@@ -38,7 +38,14 @@ var respecConfig = {
 		name: "Rachael Bradley Montgomery",
 		mailto: "rmontgomery@loc.gov",
 		company: "Library of Congress",
+		companyURI: "loc.gov/",
 		w3cid: 90310
+	}, {
+		name: "Michael Cooper",
+		mailto: "cooper@w3.org",
+		company: "W3C",
+		companyURI: "https://www.w3.org/",
+		w3cid: 34017
 	}, {
 		name: "Shawn Lauriat",
 		mailto: "lauriat@google.com",
@@ -46,10 +53,16 @@ var respecConfig = {
 		companyURI: "https://www.google.com/",
 		w3cid: 90646
 	}, {
-		name: "Michael Cooper",
-		mailto: "cooper@w3.org",
-		company: "W3C",
-		companyURI: "https://www.w3.org/",
+		name: "Chuck Adams",
+		mailto: "charles.adams@oracle.com",
+		company: "Oracle",
+		companyURI: "https://www.oracle.com/",
+		w3cid: 34017
+	}, {
+		name: "Alastair Campbell",
+		mailto: "acampbell@nomensa.com",
+		company: "Nomensa",
+		companyURI: "https://www.nomensa.com/",
 		w3cid: 34017
 	}],
 	authors: [{
