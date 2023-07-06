@@ -166,7 +166,7 @@ function addStatusMarkers() {
 			// Insert div after the first heading:
 	           */
 	           var button = document.createElement("button");
-	           button.setAttribute('class', 'addition status-filter sticky');
+	           button.setAttribute('class', 'status-filter sticky');
 	           button.setAttribute("title", statusLabels[status]);
 	           button.setAttribute("type", "button");
 	           button.innerHTML = sentenceCase(status);
