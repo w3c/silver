@@ -153,12 +153,12 @@ caption {
 a[href].status-link {
 	color: var(--text);
 }
-p.status-filter 
+.status-filter 
 {
-	display: inline-block;
 	float: right;
 	border: thin solid #005A9C;
 	border-radius: 1ex;
+	padding: 1ex;
 	cursor: help;
 	text-indent: 0px;
 	font-weight: bolder;
