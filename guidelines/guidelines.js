@@ -165,27 +165,14 @@ function addStatusMarkers() {
 
 			// Insert div after the first heading:
 	           */
-	           var sectionId = section.id;
-	           
-	           var container = document.createElement("div");
-	           container.setAttribute("class", "tooltip-container");
-	           
 	           var button = document.createElement("button");
 	           button.setAttribute('class', 'addition status-filter sticky');
+	           button.setAttribute("title", statusLabels[status]);
 	           button.setAttribute("type", "button");
-	           button.setAttribute("aria-describedby", sectionId + "-status-tooltip");
 	           button.innerHTML = sentenceCase(status);
-	           container.appendChild(button);
-	           
-	           var p = document.createElement("p");
-	           p.setAttribute("id", sectionId + "-status-tooltip");
-	           p.setAttribute("role", "tooltip");
-	           p.setAttribute("class", "hidden");
-	           p.innerHTML = statusLabels[status];
-	           container.appendChild(p);
 	           
 			var wrapper = section.querySelector('.header-wrapper');
-			wrapper.appendChild(container);
+			wrapper.appendChild(button);
 		})
 	});
 }
