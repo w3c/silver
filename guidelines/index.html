@@ -200,9 +200,22 @@
 				</ul>
 				<p>There are a variety of ways to say what is required in WCAG 3. We are experimenting with different approaches. Once we have developed enough guidelines, we will test how well each works. Here are some of the ideas for WCAG 3 requirements:</p>
 				<ul>
-					<li>Two ways of testing accessibility 
+					<li>Two ways of evaluating accessibility: 
 					<ul><li>Outcomes are statements that can be tested.</li>
 						<li>Assertions and procedures are statements that you used an accessible way to create the content that is hard to test.  Assertions are new and we are trying different rules for how they can work. </li>
+					</ul></li>
+					<li>Outcomes have two (2) types of tests:
+					<ul>
+						<li><strong>Quantifiable tests:</strong> Tests where there is a high degree of consistency between test results from different testers. Examples include testing whether certain properties exist in the content or if they match a value specified by the requirement.</li>
+						
+						<li><strong>Qualitative tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary between testers who understand the criteria. An example is evaluating the quality of a requirement such as alternative text.</li>
+					</ul></li>
+					<li>Tests can be applied to four (4) different scopes:
+					<ul>
+						<li><strong>Item:</strong> A component or unit of content. Examples include a drop down menu, a media player, a phrase, or an image.</li>
+						<li><strong>View:</strong> All content visually and programmatically available without a user-initiated substantive change.</li>
+						<li><strong>User process:</strong> Series of user actions, and the distinct items and interactive views that support the actions, where each action is required to complete an activity.</li>
+						<li><strong>Aggregate:</strong> Combination of all related items, user processes, and views.</li>
 					</ul></li>
 					<li>Three different levels show how accessible the content is: bronze, silver, or gold level.</li>
 					<li>Issue severity allows different rules for accessibility problems. Rules for problems that block people from using the content are stronger than rules for minor problems. </li>
@@ -218,6 +231,7 @@
 					<li>Conformance requirements - what someone has to do to meet WCAG 3. </li>
 					<li>Conformance claims – how to make a statement that you meet WCAG 3. </li>
 				</ul>
+
 			</details>
 			<section>
 				<h2>Normative requirements</h2>
@@ -230,7 +244,7 @@
 				<p>There are several goals for this new conformance model:</p>
 				<ol>
 					<li>Develop a model that encourages web sites to continue to improve accessibility (vs. stopping at the previous AA level);</li>
-					<li>Better reflect the lived experience of people with disabilities, who successfully use sites that have some content that does not meet WCAG 2.0 AA, or who encounter barriers with sites that meet WCAG 2.0 AA;</li>
+					<li>Better reflect the lived experience of people with disabilities, who successfully use sites that have some content that does not meet WCAG 2.0 AA, or who encounter barriers with sites that meet WCAG 2.0 AA; and</li>
 					<li>Allow for bugs and oversight by content authors, provided the impact of them upon users with disabilities is not substantial. </li>
 				</ol>
 				<p>The proposed approaches can fit together in a variety of ways. We will be testing these approaches and others for <a>validity</a>, <a>reliability</a>, <a>sensitivity</a>, <a>adequacy</a>, <a>complexity</a> and <a>equity</a>. We welcome suggestions on ways to improve these approaches to better meet these criteria and concerns about how they might affect accessibility. The working group plans to select from or even replace these options based on feedback, prototyping, and testing. </p>
@@ -260,7 +274,7 @@
 				<p>Next steps include:</p>
 				<ul>
 					<li>Further refine options,</li>
-					<li>Test the validity, reliability, sensitivity, adequacy, complexity and equity of the various models using these approaches,</li>
+					<li>Test the validity, reliability, sensitivity, adequacy, complexity and equity of the various models using these approaches, and</li>
 					<li>Write sample guidelines to test out each option.</li>
 				</ul>
 				</div>
@@ -268,24 +282,6 @@
 
 			<section data-status="developing">
 			<h3>Outcomes and methods</h3>
-				<details class="summary">
-					<summary>Summary</summary>
-					<p>WCAG 3 includes two (2) types of tests which are evaluated:</p>
-					<ul>
-						<li><strong>Quantifiable tests:</strong> Tests where there is a high degree of consistency between test results from different testers. Examples include testing whether certain properties exist in the content or if they match a value specified by the requirement.</li>
-						
-						<li><strong>Qualitative tests:</strong> Tests that rely on a qualitative evaluation based on existing criteria. Test results may vary between testers who understand the criteria. An example is evaluating the quality of a requirement such as alternative text.</li>
-					</ul>
-					
-					<p>Tests can be applied to four (4) different scopes:</p>
-					<ul>
-						<li><strong>Item:</strong> A component or unit of content. Examples include a drop down menu, a media player, a phrase, or an image.</li>
-						<li><strong>View:</strong> All content visually and programmatically available without a user-initiated substantive change.</li>
-						<li><strong>User process:</strong> Series of user actions, and the distinct items and interactive views that support the actions, where each action is required to complete an activity.</li>
-						<li><strong>Aggregate:</strong> Combination of all related items, user processes, and views.</li>
-					</ul>
-				</details>
-
 			<div class="ednote">
 				<p>As we continue developing outcomes and methods, we seek input on how well the approach to outcomes, assertions and tests defined here supports additional requirements not addressed in 2.2.</p>
 	
@@ -299,11 +295,9 @@
 				</ul>
 			</div>
 
-
-
 			<section>
 			<h3>Outcomes</h3>
-			<p>Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. All Outcomes and Assertions that relate to a Guideline will be listed together to encourage adoption of higher levels of accessibility. </p>
+			<p>Outcomes are verifiable statements that allow testers to reliably determine if the content being evaluated satisfies the user needs identified in the Guideline. All outcomes and assertions that relate to a Guideline will be listed together to encourage adoption of higher levels of accessibility. </p>
 			<p>Each outcome is associated with at least one <a>method</a>. Methods are informative and kept in how to documents. Each method contains techniques for meeting the outcome, examples, resources, and <a>sets of tests</a>  for evaluating the outcome. Methods can apply to a specific technology, such as HTML, or can be more generic where the advice applies no matter what technology, such as the methods supporting the Clear Language guideline. </p>
 
 			<p>Outcomes are written so that testers can determine the accessibility of technologies based solely on the outcome, even when methods do not yet exist for those technologies.</p>
@@ -400,10 +394,6 @@
 	</section>
 		<section id="assertions_procedures" data-status="developing">
 			<h2>Assertions and procedures</h2>
-			<details class="summary">
-				<summary>Summary</summary>
-				<p>To be written once we agree on what goes in this section. </p>
-			</details>
 			<div class="ednote">
 				<p>As we continue developing this content, we seek input on the following:</p>
 				<ul>
@@ -452,7 +442,7 @@
 
 				<p>Examples of procedures that may be used to evaluate accessibility might include:</p>
 					<ul><li>Usability testing,</li>
-					<li>Heuristic evaluation,</li>
+					<li>Heuristic evaluation, or</li>
 					<li>Assistive technology testing.</li></ul>
 
 			</section>
@@ -467,7 +457,7 @@
 						<li>The date of the assertion,</li>
 						<li>The date or date range the procedure was completed,</li>
 						<li>The scope of the assertion,</li>
-						<li>Contact information for the person or group making the assertion,</li>
+						<li>Contact information for the person or group making the assertion, and</li>
 						<li>The outcome(s) or guideline(s) supported by the assertion.</li></ul>
 
 				<p class="ednote">An alternative to specifying assertions at the outcome or guideline level might be to require the assertion apply to the scope of the conformance claim.</p>
@@ -487,7 +477,7 @@
 				<h3>Conformance levels</h3>
 
 				<p>WCAG 3 defines three levels of conformance: bronze, silver, and gold. While it is easy to replicate the WCAG 2 A, AA, AAA by renaming the levels, there is an opportunity to improve accessibility for people with disabilities by using a more advanced approach.  </p>
-				<p><strong>Bronze</strong> is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3. To reach Bronze level, the scope claimed in the conformance statement must pass a subset of Outcomes and Assertions. The subset will require enough Outcomes and Assertions to improve equity across <a>functional needs</a>.</p>
+				<p><strong>Bronze</strong> is the minimum conformance level. Content that does not meet the requirements of the bronze level does not conform to WCAG 3. To reach Bronze level, the scope claimed in the conformance statement must pass a subset of outcomes and assertions. The subset will require enough outcomes and assertions to improve equity across <a>functional needs</a>.</p>
 
 				<p><strong>Silver</strong> level incentivizes organizations to go further to improve accessibility. One possibility that we are examining is that Silver level points can accumulate even prior to completing bronze but are not usable until Bronze is achieved. The goal is to encourage organizations to go beyond the minimum, especially where organizations want to be recognized for their efforts to go beyond minimum accessibility. </p>
 				
@@ -530,7 +520,7 @@
 					<li>Fail, Pass, Exceptional; or</li>
 					<li>Fail, Progress, Pass, Better, Exceptional.</li>
 				</ul>
-				<p>Outcomes or Guidelines could be evaluated using adjectival ratings on both directly <a href="#quantifiable-tests">quantifiable</a> outcomes and <a href="#qualitative-tests">qualitative</a> measures that are asserted. Outcomes might be assigned an adjectival rating based on methods used to meet the outcome and issue severity. Guidelines might be assigned an adjectival rating based on the outcomes and assertions completed under the guideline. </p>
+				<p>Outcomes or guidelines could be evaluated using adjectival ratings on both directly <a href="#quantifiable-tests">quantifiable</a> outcomes and <a href="#qualitative-tests">qualitative</a> measures that are asserted. Outcomes might be assigned an adjectival rating based on methods used to meet the outcome and issue severity. Guidelines might be assigned an adjectival rating based on the outcomes and assertions completed under the guideline. </p>
 				</section>
 				
 				<section data-status="exploratory">
@@ -542,7 +532,7 @@
 					<li>How can percentages be used in a way that is equitable across disabilities? </li>
 				</ul>
 				</div>
-				<p>In this approach, percentage of Outcomes and Assertions passed or percentage passed at a certain adjectival rating might be used to conform to Silver and Gold levels. </p>
+				<p>In this approach, percentage of outcomes and assertions passed or percentage passed at a certain adjectival rating might be used to conform to Silver and Gold levels. </p>
 				</section>
 				
 				<section data-status="exploratory">
