@@ -6,7 +6,7 @@ var respecConfig = {
 	permalinkEdge: true,
 	permalinkHide: false,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-	specStatus: "ED",
+	specStatus: "WD",
 	//crEnd:                "2012-04-30",
 	//perEnd:               "2013-07-23",
 	//publishDate:          "2013-08-22",
@@ -16,7 +16,8 @@ var respecConfig = {
 	
 	
 	// if you wish the publication date to be other than today, set this
-	// publishDate:  "2009-08-06",
+	publishDate:  "2023-07-19",
+	prevPublishDate: "2021-12-07",
 	copyrightStart: "2021",
 	license: "document",
 	
