@@ -69,7 +69,7 @@ var respecConfig = {
 	authors: [{
       name: "Wilco Fiers",
       mailto: "wilco.fiers@deque.com",
-      company: "Deque Systems, Inc",
+      company: "Deque Systems, Inc.",
       companyURI: "https://www.deque.com/",
       w3cid: 43334
     }],
