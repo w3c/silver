@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 34.1.4">
+<meta name="generator" content="ReSpec 34.1.5">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -186,7 +186,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     {
       "name": "Wilco Fiers",
       "mailto": "wilco.fiers@deque.com",
-      "company": "Deque Systems, Inc",
+      "company": "Deque Systems, Inc.",
       "companyURI": "https://www.deque.com/",
       "w3cid": 43334,
       "url": "mailto:wilco.fiers@deque.com"
@@ -216,15 +216,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "lint": false,
-  "publishISODate": "2023-07-06T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 06 July 2023"
+  "publishISODate": "2023-07-20T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 20 July 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">W3C Accessibility Guidelines (WCAG) 3.0</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-07-06">06 July 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-07-20">20 July 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -260,7 +260,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </dd>
         
         <dt>Project Manager:</dt><dd class="editor p-author h-card vcard" data-editor-id="43334">
-    <a class="ed_mailto u-email email p-name" href="mailto:wilco.fiers@deque.com">Wilco Fiers</a> (<span class="p-org org h-org">Deque Systems, Inc</span>)
+    <a class="ed_mailto u-email email p-name" href="mailto:wilco.fiers@deque.com">Wilco Fiers</a> (<span class="p-org org h-org">Deque Systems, Inc.</span>)
   </dd>
         <dt>Feedback:</dt><dd>
         <a href="https://github.com/w3c/silver/">GitHub w3c/silver</a>
@@ -328,8 +328,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#about-wcag-3"><bdi class="secno">1.1 </bdi>About WCAG 3</a></li><li class="tocline"><a class="tocxref" href="#section-status-levels"><bdi class="secno">1.2 </bdi>Section status levels</a></li></ol></li><li class="tocline"><a class="tocxref" href="#guidelines"><bdi class="secno">2. </bdi>Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aid-navigation">Aid navigation</a></li><li class="tocline"><a class="tocxref" href="#audio-and-video-alternatives">Audio and video alternatives</a></li><li class="tocline"><a class="tocxref" href="#clear-language">Clear language</a></li><li class="tocline"><a class="tocxref" href="#clear-purpose">Clear purpose	</a></li><li class="tocline"><a class="tocxref" href="#color-and-contrast">Color and contrast</a></li><li class="tocline"><a class="tocxref" href="#consistent-design">Consistent design	</a></li><li class="tocline"><a class="tocxref" href="#content-order">Content order</a></li><li class="tocline"><a class="tocxref" href="#control-and-focus-appearance">Control and focus appearance</a></li><li class="tocline"><a class="tocxref" href="#control-semantics">Control semantics</a></li><li class="tocline"><a class="tocxref" href="#error-notification">Error notification</a></li><li class="tocline"><a class="tocxref" href="#error-prevention">Error prevention</a></li><li class="tocline"><a class="tocxref" href="#flexible-views">Flexible views</a></li><li class="tocline"><a class="tocxref" href="#harm-from-motion">Harm from motion</a></li><li class="tocline"><a class="tocxref" href="#keyboard-support">Keyboard support</a></li><li class="tocline"><a class="tocxref" href="#mobile-and-pointer-support">Mobile and pointer support</a></li><li class="tocline"><a class="tocxref" href="#non-visual-alternatives">Non-visual alternatives</a></li><li class="tocline"><a class="tocxref" href="#prevent-harm">Prevent harm</a></li><li class="tocline"><a class="tocxref" href="#process-cognitive-load">Process cognitive load</a></li><li class="tocline"><a class="tocxref" href="#provide-help">Provide help</a></li><li class="tocline"><a class="tocxref" href="#structured-content">Structured content</a></li><li class="tocline"><a class="tocxref" href="#text-appearance-and-semantics">Text appearance and semantics</a></li><li class="tocline"><a class="tocxref" href="#timing-and-interruptions">Timing and interruptions</a></li><li class="tocline"><a class="tocxref" href="#user-control">User control</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-requirements"><bdi class="secno">3.1 </bdi>Normative requirements</a></li><li class="tocline"><a class="tocxref" href="#approaches-to-conformance"><bdi class="secno">3.2 </bdi>Approaches to conformance</a></li><li class="tocline"><a class="tocxref" href="#outcomes-and-methods"><bdi class="secno">3.3 </bdi>Outcomes and methods</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#outcomes"><bdi class="secno">3.3.1 </bdi>Outcomes</a></li><li class="tocline"><a class="tocxref" href="#testing-outcomes"><bdi class="secno">3.3.2 </bdi>Testing outcomes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#types-of-tests"><bdi class="secno">3.3.2.1 </bdi>Types of tests</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#test-scopes"><bdi class="secno">3.3.2.2 </bdi>Test scopes</a></li><li class="tocline"><a class="tocxref" href="#conditions"><bdi class="secno">3.3.2.3 </bdi>Conditions</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#assertions_procedures"><bdi class="secno">3.4 </bdi>Assertions and procedures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#assertions"><bdi class="secno">3.4.1 </bdi>Assertions</a></li><li class="tocline"><a class="tocxref" href="#using-assertions"><bdi class="secno">3.4.2 </bdi>Using assertions</a></li><li class="tocline"><a class="tocxref" href="#documenting-assertions"><bdi class="secno">3.4.3 </bdi>Documenting assertions</a></li><li class="tocline"><a class="tocxref" href="#supporting-documentation-for-assertions"><bdi class="secno">3.4.4 </bdi>Supporting documentation for assertions</a></li><li class="tocline"><a class="tocxref" href="#testing-assertions"><bdi class="secno">3.4.5 </bdi>Testing assertions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance-levels"><bdi class="secno">3.5 </bdi>Conformance levels</a></li><li class="tocline"><a class="tocxref" href="#issue-severity"><bdi class="secno">3.6 </bdi>Issue severity</a></li><li class="tocline"><a class="tocxref" href="#adjectival-ratings"><bdi class="secno">3.7 </bdi>Adjectival ratings</a></li><li class="tocline"><a class="tocxref" href="#percentages"><bdi class="secno">3.8 </bdi>Percentages</a></li><li class="tocline"><a class="tocxref" href="#pre-assessment-checks"><bdi class="secno">3.9 </bdi>Pre-assessment checks</a></li><li class="tocline"><a class="tocxref" href="#only-accessibility-supported-ways-of-using-technologies"><bdi class="secno">3.10 </bdi>Only accessibility-supported ways of using technologies</a></li><li class="tocline"><a class="tocxref" href="#defining-conformance-scope"><bdi class="secno">3.11 </bdi>Defining conformance scope</a></li><li class="tocline"><a class="tocxref" href="#conformance-requirements"><bdi class="secno">3.12 </bdi>Conformance requirements</a></li><li class="tocline"><a class="tocxref" href="#conformance-claims"><bdi class="secno">3.13 </bdi>Conformance claims</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#required-components-of-a-conformance-claim"><bdi class="secno">3.13.1 </bdi>Required components of a conformance claim</a></li><li class="tocline"><a class="tocxref" href="#example-conformance-claim"><bdi class="secno">3.13.2 </bdi>Example conformance claim</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conforming-alternative-version"><bdi class="secno">3.14 </bdi>Conforming alternative version</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-generated-content"><bdi class="secno">4. </bdi>User-generated content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#steps-to-conform"><bdi class="secno">4.1 </bdi>Steps to conform</a></li></ol></li><li class="tocline"><a class="tocxref" href="#glossary"><bdi class="secno">5. </bdi>Glossary</a></li><li class="tocline"><a class="tocxref" href="#guidelines-development-methodology"><bdi class="secno">A. </bdi>Guidelines development methodology</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#relationship-to-other-w3c-guidelines"><bdi class="secno">A.1 </bdi>Relationship to other <abbr title="World Wide Web Consortium">W3C</abbr> guidelines</a></li><li class="tocline"><a class="tocxref" href="#goals-and-requirements"><bdi class="secno">A.2 </bdi>Goals and requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#differences-from-wcag-2"><bdi class="secno">B. </bdi>Differences from WCAG 2</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#outcomes-0"><bdi class="secno">B.1 </bdi>Outcomes</a></li><li class="tocline"><a class="tocxref" href="#approximate-mapping-of-wcag-2-and-wcag-3-documentation"><bdi class="secno">B.2 </bdi>Approximate mapping of WCAG 2 and WCAG 3 documentation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#change-log"><bdi class="secno">C. </bdi>Change log</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-who-made-notable-contributions-to-the-creation-of-this-document"><bdi class="secno">D.1 </bdi>Participants who made notable contributions to the creation of this document</a></li><li class="tocline"><a class="tocxref" href="#prior-contributers"><bdi class="secno">D.2 </bdi>Prior Contributers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">D.2.1 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-the-2021-and-2020-versions-of-this-document"><bdi class="secno">D.2.2 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">D.2.3 </bdi>Research Partners</a></li></ol></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">D.3 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+                  <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20230612/">12 June 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#about-wcag-3"><bdi class="secno">1.1 </bdi>About WCAG 3</a></li><li class="tocline"><a class="tocxref" href="#section-status-levels"><bdi class="secno">1.2 </bdi>Section status levels</a></li></ol></li><li class="tocline"><a class="tocxref" href="#guidelines"><bdi class="secno">2. </bdi>Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aid-navigation">Aid navigation</a></li><li class="tocline"><a class="tocxref" href="#audio-and-video-alternatives">Audio and video alternatives</a></li><li class="tocline"><a class="tocxref" href="#clear-language">Clear language</a></li><li class="tocline"><a class="tocxref" href="#clear-purpose">Clear purpose	</a></li><li class="tocline"><a class="tocxref" href="#color-and-contrast">Color and contrast</a></li><li class="tocline"><a class="tocxref" href="#consistent-design">Consistent design	</a></li><li class="tocline"><a class="tocxref" href="#content-order">Content order</a></li><li class="tocline"><a class="tocxref" href="#control-and-focus-appearance">Control and focus appearance</a></li><li class="tocline"><a class="tocxref" href="#control-semantics">Control semantics</a></li><li class="tocline"><a class="tocxref" href="#error-notification">Error notification</a></li><li class="tocline"><a class="tocxref" href="#error-prevention">Error prevention</a></li><li class="tocline"><a class="tocxref" href="#flexible-views">Flexible views</a></li><li class="tocline"><a class="tocxref" href="#harm-from-motion">Harm from motion</a></li><li class="tocline"><a class="tocxref" href="#keyboard-support">Keyboard support</a></li><li class="tocline"><a class="tocxref" href="#mobile-and-pointer-support">Mobile and pointer support</a></li><li class="tocline"><a class="tocxref" href="#non-visual-alternatives">Non-visual alternatives</a></li><li class="tocline"><a class="tocxref" href="#prevent-harm">Prevent harm</a></li><li class="tocline"><a class="tocxref" href="#process-cognitive-load">Process cognitive load</a></li><li class="tocline"><a class="tocxref" href="#provide-help">Provide help</a></li><li class="tocline"><a class="tocxref" href="#structured-content">Structured content</a></li><li class="tocline"><a class="tocxref" href="#text-appearance-and-semantics">Text appearance and semantics</a></li><li class="tocline"><a class="tocxref" href="#timing-and-interruptions">Timing and interruptions</a></li><li class="tocline"><a class="tocxref" href="#user-control">User control</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-requirements"><bdi class="secno">3.1 </bdi>Normative requirements</a></li><li class="tocline"><a class="tocxref" href="#approaches-to-conformance"><bdi class="secno">3.2 </bdi>Approaches to conformance</a></li><li class="tocline"><a class="tocxref" href="#outcomes-and-methods"><bdi class="secno">3.3 </bdi>Outcomes and methods</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#outcomes"><bdi class="secno">3.3.1 </bdi>Outcomes</a></li><li class="tocline"><a class="tocxref" href="#testing-outcomes"><bdi class="secno">3.3.2 </bdi>Testing outcomes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#types-of-tests"><bdi class="secno">3.3.2.1 </bdi>Types of tests</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#test-scopes"><bdi class="secno">3.3.2.2 </bdi>Test scopes</a></li><li class="tocline"><a class="tocxref" href="#conditions"><bdi class="secno">3.3.2.3 </bdi>Conditions</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#assertions_procedures"><bdi class="secno">3.4 </bdi>Assertions and procedures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#assertions"><bdi class="secno">3.4.1 </bdi>Assertions</a></li><li class="tocline"><a class="tocxref" href="#using-assertions"><bdi class="secno">3.4.2 </bdi>Using assertions</a></li><li class="tocline"><a class="tocxref" href="#documenting-assertions"><bdi class="secno">3.4.3 </bdi>Documenting assertions</a></li><li class="tocline"><a class="tocxref" href="#supporting-documentation-for-assertions"><bdi class="secno">3.4.4 </bdi>Supporting documentation for assertions</a></li><li class="tocline"><a class="tocxref" href="#testing-assertions"><bdi class="secno">3.4.5 </bdi>Testing assertions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance-levels"><bdi class="secno">3.5 </bdi>Conformance levels</a></li><li class="tocline"><a class="tocxref" href="#issue-severity"><bdi class="secno">3.6 </bdi>Issue severity</a></li><li class="tocline"><a class="tocxref" href="#adjectival-ratings"><bdi class="secno">3.7 </bdi>Adjectival ratings</a></li><li class="tocline"><a class="tocxref" href="#percentages"><bdi class="secno">3.8 </bdi>Percentages</a></li><li class="tocline"><a class="tocxref" href="#pre-assessment-checks"><bdi class="secno">3.9 </bdi>Pre-assessment checks</a></li><li class="tocline"><a class="tocxref" href="#only-accessibility-supported-ways-of-using-technologies"><bdi class="secno">3.10 </bdi>Only accessibility-supported ways of using technologies</a></li><li class="tocline"><a class="tocxref" href="#defining-conformance-scope"><bdi class="secno">3.11 </bdi>Defining conformance scope</a></li><li class="tocline"><a class="tocxref" href="#conformance-requirements"><bdi class="secno">3.12 </bdi>Conformance requirements</a></li><li class="tocline"><a class="tocxref" href="#conformance-claims"><bdi class="secno">3.13 </bdi>Conformance claims</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#required-components-of-a-conformance-claim"><bdi class="secno">3.13.1 </bdi>Required components of a conformance claim</a></li><li class="tocline"><a class="tocxref" href="#example-conformance-claim"><bdi class="secno">3.13.2 </bdi>Example conformance claim</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conforming-alternative-version"><bdi class="secno">3.14 </bdi>Conforming alternative version</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-generated-content"><bdi class="secno">4. </bdi>User-generated content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#steps-to-conform"><bdi class="secno">4.1 </bdi>Steps to conform</a></li></ol></li><li class="tocline"><a class="tocxref" href="#glossary"><bdi class="secno">5. </bdi>Glossary</a></li><li class="tocline"><a class="tocxref" href="#guidelines-development-methodology"><bdi class="secno">A. </bdi>Guidelines development methodology</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#relationship-to-other-w3c-guidelines"><bdi class="secno">A.1 </bdi>Relationship to other <abbr title="World Wide Web Consortium">W3C</abbr> guidelines</a></li><li class="tocline"><a class="tocxref" href="#goals-and-requirements"><bdi class="secno">A.2 </bdi>Goals and requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#differences-from-wcag-2"><bdi class="secno">B. </bdi>Differences from WCAG 2</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#outcomes-0"><bdi class="secno">B.1 </bdi>Outcomes</a></li><li class="tocline"><a class="tocxref" href="#approximate-mapping-of-wcag-2-and-wcag-3-documentation"><bdi class="secno">B.2 </bdi>Approximate mapping of WCAG 2 and WCAG 3 documentation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#change-log"><bdi class="secno">C. </bdi>Change log</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-who-made-notable-contributions-to-the-creation-of-this-document"><bdi class="secno">D.1 </bdi>Participants who made notable contributions to the creation of this document</a></li><li class="tocline"><a class="tocxref" href="#prior-contributors"><bdi class="secno">D.2 </bdi>Prior Contributors</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">D.2.1 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-the-2021-and-2020-versions-of-this-document"><bdi class="secno">D.2.2 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">D.2.3 </bdi>Research Partners</a></li></ol></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">D.3 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p class="informative-statement"><em>This section (with its subsections) provides advice only and does not specify guidelines, meaning it is <a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a> or non-normative.</em></p>
 			
 			<details class="summary">
@@ -740,7 +740,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<section id="using-assertions"><div class="header-wrapper"><h4 id="x3-4-2-using-assertions"><bdi class="secno">3.4.2 </bdi>Using assertions</h4><a class="self-link" href="#using-assertions" aria-label="Permalink for Section 3.4.2"></a></div>				
 				
-				<p>Assertions may supplement <a data-link-type="dfn|abstract-op" href="#dfn-method" class="internalDFN" id="ref-for-dfn-method-3">methods</a> in one or more outcomes. Assertions should only be used on outcomes and guidelines that allow assertions. Organizations can make an assertion that they followed a procedure to claim conformance. Results when testing assertions are true/false - the organization making the assertion either provided the reqeuired documentation or it did not.</p>
+				<p>Assertions may supplement <a data-link-type="dfn|abstract-op" href="#dfn-method" class="internalDFN" id="ref-for-dfn-method-3">methods</a> in one or more outcomes. Assertions should only be used on outcomes and guidelines that allow assertions. Organizations can make an assertion that they followed a procedure to claim conformance. Results when testing assertions are true/false - the organization making the assertion either provided the required documentation or it did not.</p>
 
 				<p>Procedures used in assertions may be implemented at the organization level, during design and development, or during testing.</p>
 
@@ -1174,6 +1174,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li>Shawn Lauriat	</li>
 <li>Darryl Lehmann	</li>
 <li>Todd Libby	</li>
+<li>Chris Loiselle </li>
 <li>Jan	McSorley	</li>
 <li>Laura Miller	</li>
 <li>Melina Maria Möhnle	</li>
@@ -1186,6 +1187,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li>John Rochford	</li>
 <li>Cybele Sack	</li>
 <li>Janina Sajka	</li>
+<li>Andrew Somers</li>
 <li>Jeanne Spellman	</li>
 <li>Francis	Storr	</li>
 <li>Jennifer Strickland	</li>
@@ -1204,7 +1206,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		<li><a href="https://www.w3.org/community/silver/participants">Silver Community Group participant list</a></li>
 	</ul>
 </section>
-			<section class="appendix" id="prior-contributers"><div class="header-wrapper"><h3 id="d-2-prior-contributers"><bdi class="secno">D.2 </bdi>Prior Contributers</h3><a class="self-link" href="#prior-contributers" aria-label="Permalink for Appendix D.2"></a></div>
+			<section class="appendix" id="prior-contributors"><div class="header-wrapper"><h3 id="d-2-prior-contributors"><bdi class="secno">D.2 </bdi>Prior Contributors</h3><a class="self-link" href="#prior-contributors" aria-label="Permalink for Appendix D.2"></a></div>
 					
 			<section id="participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><div class="header-wrapper"><h4 id="d-2-1-participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">D.2.1 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</h4><a class="self-link" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document" aria-label="Permalink for Appendix D.2.1"></a></div>
 	
@@ -1399,7 +1401,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd><dt id="bib-wcag20">[WCAG20]</dt><dd>
       <a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al.  W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a>
     </dd><dt id="bib-wcag22">[WCAG22]</dt><dd>
-      <a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Charles Adams; Alastair Campbell; Rachael Bradley Montgomery; Michael Cooper; Andrew Kirkpatrick.  W3C. 17 May 2023. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a>
+      <a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Michael Cooper; Andrew Kirkpatrick; Alastair Campbell; Rachael Bradley Montgomery; Charles Adams.  W3C. 20 July 2023. W3C Proposed Recommendation. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
@@ -1412,8 +1414,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-items-1" title="§ 3.3.2.2 Test scopes">§ 3.3.2.2 Test scopes</a> <a href="#ref-for-dfn-items-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-items-1" title="§ 3.3.2.2 Test scopes">§ 3.3.2.2 Test scopes</a> <a href="#ref-for-dfn-items-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-views" aria-label="Links in this document to definition: Views">
       <span class="caret"></span>
@@ -1424,10 +1426,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-views-1" title="§ 3.3.2.2 Test scopes">§ 3.3.2.2 Test scopes</a> <a href="#ref-for-dfn-views-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-views-3" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-views-4" title="§ 3.11 Defining conformance scope">§ 3.11 Defining conformance scope</a> <a href="#ref-for-dfn-views-5" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-views-1" title="§ 3.3.2.2 Test scopes">§ 3.3.2.2 Test scopes</a> <a href="#ref-for-dfn-views-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-views-3" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-views-4" title="§ 3.11 Defining conformance scope">§ 3.11 Defining conformance scope</a> <a href="#ref-for-dfn-views-5" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-user-processes" aria-label="Links in this document to definition: User processes">
       <span class="caret"></span>
@@ -1438,8 +1440,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-user-processes-1" title="§ 3.3.2.2 Test scopes">§ 3.3.2.2 Test scopes</a> 
-  </li>
+      <a href="#ref-for-dfn-user-processes-1" title="§ 3.3.2.2 Test scopes">§ 3.3.2.2 Test scopes</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aggregate" aria-label="Links in this document to definition: aggregate">
       <span class="caret"></span>
@@ -1450,8 +1452,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-aggregate-1" title="§ 3.3.2.2 Test scopes">§ 3.3.2.2 Test scopes</a> 
-  </li>
+      <a href="#ref-for-dfn-aggregate-1" title="§ 3.3.2.2 Test scopes">§ 3.3.2.2 Test scopes</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-adequacy" aria-label="Links in this document to definition: Adequacy">
       <span class="caret"></span>
@@ -1462,8 +1464,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-adequacy-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
-  </li>
+      <a href="#ref-for-dfn-adequacy-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-adjectival-ratings" aria-label="Links in this document to definition: Adjectival Ratings">
       <span class="caret"></span>
@@ -1474,8 +1476,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-adjectival-ratings-1" title="§ 3.7 Adjectival ratings">§ 3.7 Adjectival ratings</a> 
-  </li>
+      <a href="#ref-for-dfn-adjectival-ratings-1" title="§ 3.7 Adjectival ratings">§ 3.7 Adjectival ratings</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-assertion" aria-label="Links in this document to definition: Assertion">
       <span class="caret"></span>
@@ -1486,8 +1488,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-assertion-1" title="§ 3.4.1 Assertions">§ 3.4.1 Assertions</a> 
-  </li>
+      <a href="#ref-for-dfn-assertion-1" title="§ 3.4.1 Assertions">§ 3.4.1 Assertions</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-automated-evaluation" aria-label="Links in this document to definition: Automated evaluation">
       <span class="caret"></span>
@@ -1498,10 +1500,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-automated-evaluation-1" title="§ 3.11 Defining conformance scope">§ 3.11 Defining conformance scope</a> 
-  </li><li>
-    <a href="#ref-for-dfn-automated-evaluation-2" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-automated-evaluation-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-automated-evaluation-4" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-automated-evaluation-1" title="§ 3.11 Defining conformance scope">§ 3.11 Defining conformance scope</a> 
+    </li><li>
+      <a href="#ref-for-dfn-automated-evaluation-2" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-automated-evaluation-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-automated-evaluation-4" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-best-practice" aria-label="Links in this document to definition: Best Practice">
       <span class="caret"></span>
@@ -1522,8 +1524,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-complexity-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
-  </li>
+      <a href="#ref-for-dfn-complexity-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-conformance" aria-label="Links in this document to definition: Conformance">
       <span class="caret"></span>
@@ -1534,12 +1536,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-conformance-1" title="§ Abstract">§ Abstract</a> 
-  </li><li>
-    <a href="#ref-for-dfn-conformance-2" title="§ 3.12 Conformance requirements">§ 3.12 Conformance requirements</a> 
-  </li><li>
-    <a href="#ref-for-dfn-conformance-3" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-conformance-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-conformance-5" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-conformance-1" title="§ Abstract">§ Abstract</a> 
+    </li><li>
+      <a href="#ref-for-dfn-conformance-2" title="§ 3.12 Conformance requirements">§ 3.12 Conformance requirements</a> 
+    </li><li>
+      <a href="#ref-for-dfn-conformance-3" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-conformance-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-conformance-5" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-deprecate" aria-label="Links in this document to definition: Deprecate">
       <span class="caret"></span>
@@ -1550,8 +1552,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-deprecate-1" title="§ 1.1 About WCAG 3">§ 1.1 About WCAG 3</a> 
-  </li>
+      <a href="#ref-for-dfn-deprecate-1" title="§ 1.1 About WCAG 3">§ 1.1 About WCAG 3</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-equity" aria-label="Links in this document to definition: Equity">
       <span class="caret"></span>
@@ -1562,8 +1564,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-equity-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
-  </li>
+      <a href="#ref-for-dfn-equity-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-evaluation" aria-label="Links in this document to definition: Evaluation">
       <span class="caret"></span>
@@ -1574,8 +1576,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-evaluation-1" title="§ 5. Glossary">§ 5. Glossary</a> 
-  </li>
+      <a href="#ref-for-dfn-evaluation-1" title="§ 5. Glossary">§ 5. Glossary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-functional-need" aria-label="Links in this document to definition: Functional need">
       <span class="caret"></span>
@@ -1586,12 +1588,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-functional-need-1" title="§ 1.1 About WCAG 3">§ 1.1 About WCAG 3</a> 
-  </li><li>
-    <a href="#ref-for-dfn-functional-need-2" title="§ 3.5 Conformance levels">§ 3.5 Conformance levels</a> 
-  </li><li>
-    <a href="#ref-for-dfn-functional-need-3" title="§ 5. Glossary">§ 5. Glossary</a> 
-  </li>
+      <a href="#ref-for-dfn-functional-need-1" title="§ 1.1 About WCAG 3">§ 1.1 About WCAG 3</a> 
+    </li><li>
+      <a href="#ref-for-dfn-functional-need-2" title="§ 3.5 Conformance levels">§ 3.5 Conformance levels</a> 
+    </li><li>
+      <a href="#ref-for-dfn-functional-need-3" title="§ 5. Glossary">§ 5. Glossary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-guideline" aria-label="Links in this document to definition: Guideline">
       <span class="caret"></span>
@@ -1602,8 +1604,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-guideline-1" title="§ Abstract">§ Abstract</a> 
-  </li>
+      <a href="#ref-for-dfn-guideline-1" title="§ Abstract">§ Abstract</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-human-evaluation" aria-label="Links in this document to definition: Human evaluation">
       <span class="caret"></span>
@@ -1614,8 +1616,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-human-evaluation-1" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-human-evaluation-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-human-evaluation-1" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-human-evaluation-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-informative" aria-label="Links in this document to definition: Informative">
       <span class="caret"></span>
@@ -1626,8 +1628,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-informative-1" title="§ 3.1 Normative requirements">§ 3.1 Normative requirements</a> 
-  </li>
+      <a href="#ref-for-dfn-informative-1" title="§ 3.1 Normative requirements">§ 3.1 Normative requirements</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-method" aria-label="Links in this document to definition: Method">
       <span class="caret"></span>
@@ -1638,14 +1640,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-method-1" title="§ Abstract">§ Abstract</a> 
-  </li><li>
-    <a href="#ref-for-dfn-method-2" title="§ 3.3.1 Outcomes">§ 3.3.1 Outcomes</a> 
-  </li><li>
-    <a href="#ref-for-dfn-method-3" title="§ 3.4.2 Using assertions">§ 3.4.2 Using assertions</a> 
-  </li><li>
-    <a href="#ref-for-dfn-method-4" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-method-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-method-6" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-method-1" title="§ Abstract">§ Abstract</a> 
+    </li><li>
+      <a href="#ref-for-dfn-method-2" title="§ 3.3.1 Outcomes">§ 3.3.1 Outcomes</a> 
+    </li><li>
+      <a href="#ref-for-dfn-method-3" title="§ 3.4.2 Using assertions">§ 3.4.2 Using assertions</a> 
+    </li><li>
+      <a href="#ref-for-dfn-method-4" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-method-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-method-6" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-normative" aria-label="Links in this document to definition: Normative">
       <span class="caret"></span>
@@ -1656,8 +1658,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-normative-1" title="§ 3.1 Normative requirements">§ 3.1 Normative requirements</a> 
-  </li>
+      <a href="#ref-for-dfn-normative-1" title="§ 3.1 Normative requirements">§ 3.1 Normative requirements</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-outcome" aria-label="Links in this document to definition: Outcome">
       <span class="caret"></span>
@@ -1668,10 +1670,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-outcome-1" title="§ Abstract">§ Abstract</a> 
-  </li><li>
-    <a href="#ref-for-dfn-outcome-2" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-outcome-3" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-outcome-1" title="§ Abstract">§ Abstract</a> 
+    </li><li>
+      <a href="#ref-for-dfn-outcome-2" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-outcome-3" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-process" aria-label="Links in this document to definition: Process">
       <span class="caret"></span>
@@ -1682,10 +1684,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-process-1" title="§ 3.11 Defining conformance scope">§ 3.11 Defining conformance scope</a> <a href="#ref-for-dfn-process-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-3" title="§ 5. Glossary">§ 5. Glossary</a> 
-  </li>
+      <a href="#ref-for-dfn-process-1" title="§ 3.11 Defining conformance scope">§ 3.11 Defining conformance scope</a> <a href="#ref-for-dfn-process-2" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-3" title="§ 5. Glossary">§ 5. Glossary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-reliability" aria-label="Links in this document to definition: Reliability">
       <span class="caret"></span>
@@ -1696,8 +1698,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-reliability-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
-  </li>
+      <a href="#ref-for-dfn-reliability-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-semi-automated-evaluation" aria-label="Links in this document to definition: Semi-Automated Evaluation">
       <span class="caret"></span>
@@ -1708,8 +1710,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-semi-automated-evaluation-1" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-semi-automated-evaluation-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-semi-automated-evaluation-3" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-semi-automated-evaluation-1" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-semi-automated-evaluation-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-semi-automated-evaluation-3" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-sensitivity" aria-label="Links in this document to definition: Sensitivity">
       <span class="caret"></span>
@@ -1720,8 +1722,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-sensitivity-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
-  </li>
+      <a href="#ref-for-dfn-sensitivity-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-set-of-tests" aria-label="Links in this document to definition: Set of Tests">
       <span class="caret"></span>
@@ -1732,8 +1734,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-set-of-tests-1" title="§ 3.3.1 Outcomes">§ 3.3.1 Outcomes</a> 
-  </li>
+      <a href="#ref-for-dfn-set-of-tests-1" title="§ 3.3.1 Outcomes">§ 3.3.1 Outcomes</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-test" aria-label="Links in this document to definition: Test">
       <span class="caret"></span>
@@ -1744,8 +1746,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-test-1" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-test-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-test-1" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-test-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-technique" aria-label="Links in this document to definition: Technique">
       <span class="caret"></span>
@@ -1766,8 +1768,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-user-need-1" title="§ Abstract">§ Abstract</a> 
-  </li>
+      <a href="#ref-for-dfn-user-need-1" title="§ Abstract">§ Abstract</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-user-testing" aria-label="Links in this document to definition: User testing">
       <span class="caret"></span>
@@ -1778,8 +1780,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-user-testing-1" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-user-testing-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-user-testing-1" title="§ 5. Glossary">§ 5. Glossary</a> <a href="#ref-for-dfn-user-testing-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-validity" aria-label="Links in this document to definition: Validity">
       <span class="caret"></span>
@@ -1790,8 +1792,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-validity-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
-  </li>
+      <a href="#ref-for-dfn-validity-1" title="§ 3.2 Approaches to conformance">§ 3.2 Approaches to conformance</a> 
+    </li>
   </ul>
     </div><script id="respec-dfn-panel">(() => {
 // @ts-check
