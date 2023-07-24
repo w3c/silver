@@ -94,7 +94,7 @@ var respecConfig = {
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
 	group: "ag",
-	github: "w3c/silver",
+	github: "w3c/wcag3",
 
 	maxTocLevel: 4,
 	
