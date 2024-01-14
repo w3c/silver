@@ -1,0 +1,14 @@
+---
+# If you make changes here, be sure to make corresponding changes in lib/govuk_template/engine.rb
+stylesheets:
+- govuk-template
+- govuk-template-ie8
+- govuk-template-ie7
+- govuk-template-ie6
+- govuk-template-print
+- fonts
+- fonts-ie8
+javascripts:
+- govuk-template
+- ie
+- vendor/goog/webfont-debug.js

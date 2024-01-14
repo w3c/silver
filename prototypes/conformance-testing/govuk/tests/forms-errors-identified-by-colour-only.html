@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessibility tools audit test - Errors identified by colour only - GDS accessibility team</title>
+  <script src="../assets/javascript/jquery-1.12.0.min.js"></script>
+  <script src="../assets/javascript/main.js"></script>
+  <script src="../assets/javascript/main2.js"></script>
+  <link rel="stylesheet" href="../assets/stylesheets/tests.css" />
+</head>
+<body>
+  <h1>Errors identified by colour only</h1>
+  <main>
+    <form class="errors-badly-identified errors-colour-only">
+<div class="validation-summary" role="alert">
+                You need to fix the errors on this page before continuing.
+            </div>
+<label>
+                Passport number
+                <input class="has-errors" name="name" type="text"/>
+</label>
+<label>
+                Name on passport
+                <input name="surname" type="text"/>
+</label>
+<label>
+                Date of expiry
+                <input class="has-errors" name="date-of-birth" type="text"/>
+</label>
+</form>
+  </main>
+</body>
+</html>

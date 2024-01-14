@@ -1,0 +1,137 @@
+<%= yield :top_of_page %>
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="<%= content_for?(:html_lang) ? yield(:html_lang) : "en" %>"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="<%= content_for?(:html_lang) ? yield(:html_lang) : "en" %>"><!--<![endif]-->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <title><%= content_for?(:page_title) ? yield(:page_title) : "GOV.UK - The best place to find government services and information" %></title>
+
+    <script type="text/javascript">
+      (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+    </script>
+
+    <!--[if gt IE 8]><!--><link href="<%= asset_path "govuk-template.css" %>" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+    <!--[if IE 6]><link href="<%= asset_path "govuk-template-ie6.css" %>" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="<%= asset_path "govuk-template-ie7.css" %>" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link href="<%= asset_path "govuk-template-ie8.css" %>" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <link href="<%= asset_path "govuk-template-print.css" %>" media="print" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 8]>
+    <script type="text/javascript">
+      (function(){if(window.opera){return;}
+       setTimeout(function(){var a=document,g,b={families:(g=
+       ["nta"]),urls:["<%= asset_path "fonts-ie8.css" %>"]},
+       c="<%= asset_path "vendor/goog/webfont-debug.js" %>",d="script",
+       e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+       ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+       .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+      })()
+    </script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <link href="<%= asset_path "fonts.css" %>" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+
+
+    <!--[if lt IE 9]>
+      <script src="<%= asset_path "ie.js" %>" type="text/javascript"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="<%= asset_path 'favicon.ico' %>" type="image/x-icon" />
+
+    <!-- Size for iPad and iPad mini (high resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<%= asset_path "apple-touch-icon-152x152.png" %>">
+    <!-- Size for iPhone and iPod touch (high resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<%= asset_path "apple-touch-icon-120x120.png" %>">
+    <!-- Size for iPad 2 and iPad mini (standard resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<%= asset_path "apple-touch-icon-76x76.png" %>">
+    <!-- Default non-defined size, also used for Android 2.1+ devices -->
+    <link rel="apple-touch-icon-precomposed" href="<%= asset_path "apple-touch-icon-60x60.png" %>">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="<%= asset_path "opengraph-image.png" %>">
+
+    <%= yield :head %>
+  </head>
+
+  <body<%= content_for?(:body_classes) ? raw(" class=\"#{yield(:body_classes)}\"") : '' %>>
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <%= yield :body_start %>
+
+    <div id="skiplink-container">
+      <div>
+        <a href="#content" class="skiplink"><%= content_for?(:skip_link_message) ? yield(:skip_link_message) : "Skip to main content" %></a>
+      </div>
+    </div>
+
+    <div id="global-cookie-message">
+      <% if content_for?(:cookie_message) %>
+        <%= yield :cookie_message %>
+      <% else %>
+        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+      <% end %>
+    </div>
+    <!--end global-cookie-message-->
+
+    <% unless @omit_header %>
+    <header role="banner" id="global-header" class="<%= yield(:header_class) %>">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="<%= content_for?(:homepage_url) ? yield(:homepage_url) : "https://www.gov.uk/" %>" title="<%= content_for?(:logo_link_title) ? yield(:logo_link_title) : "Go to the GOV.UK homepage" %>" id="logo" class="content">
+              <img src="<%= asset_path 'gov.uk_logotype_crown_invert_trans.png' %>" width="35" height="31" alt=""> <%= content_for?(:global_header_text) ? yield(:global_header_text) : "GOV.UK" %>
+            </a>
+          </div>
+          <%= yield :inside_header %>
+        </div>
+        <%= yield :proposition_header %>
+      </div>
+    </header>
+    <!--end header-->
+    <% end %>
+
+    <%= yield :after_header %>
+
+    <div id="global-header-bar"></div>
+    <!--end global-header-bar-->
+
+    <%= content_for?(:content) ? yield(:content) : yield %>
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+
+      <div class="footer-wrapper">
+        <%= yield :footer_top %>
+
+        <div class="footer-meta">
+          <div class="footer-meta-inner">
+            <%= yield :footer_support_links %>
+
+            <div class="open-government-licence">
+              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+              <% if content_for?(:licence_message) %>
+                <%= yield :licence_message %>
+              <% else %>
+                <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/"><%= content_for?(:crown_copyright_message) ? yield(:crown_copyright_message) : "© Crown copyright" %></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--end footer-->
+
+    <div id="global-app-error" class="app-error hidden"></div>
+
+    <script src="<%= asset_path "govuk-template.js" %>" type="text/javascript"></script>
+
+    <%= yield :body_end %>
+  </body>
+</html>
