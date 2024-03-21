@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.1.5">
+<meta name="generator" content="ReSpec 34.5.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -9,7 +9,7 @@
 span.warning{padding:.1em .5em .15em}
 .issue.closed span.issue-number{text-decoration:line-through}
 .issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
-.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
 .warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
 li.task-list-item{list-style:none}
 input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
@@ -17,13 +17,13 @@ input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
 </style>
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
 .dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;margin-top:.25em}
-.dfn-panel ul a[href]{color:#333}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
 .dfn-panel>div{display:flex}
 .dfn-panel a.self-link{font-weight:700;margin-right:auto}
 .dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
@@ -62,7 +62,6 @@ cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
 .toc a,.tof a{text-decoration:none}
-a .figno,a .secno{color:#000}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
 table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
@@ -101,12 +100,13 @@ dd{margin-left:0}
 	
 <link rel="stylesheet" type="text/css" href="guidelines.css">
   
+<meta name="revision" content="9585af4b819e360ab261391ce4ea5f2861c21ab7">
 <meta name="description" content="This Explainer accompanies the drafts of the W3C Accessibility Guidelines (WCAG) 3.0.">
 <style>
 var{position:relative;cursor:pointer}
 var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
-var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
-var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#222;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
 var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </style>
 <script id="initialUserConfig" type="application/json">{
@@ -166,15 +166,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "lint": false,
-  "publishISODate": "2023-07-24T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 24 July 2023"
+  "gitRevision": "9585af4b819e360ab261391ce4ea5f2861c21ab7",
+  "publishISODate": "2024-03-21T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 21 March 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
   <body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Explainer for W3C Accessibility Guidelines (WCAG) 3.0</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-07-24">24 July 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-03-21">21 March 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -217,15 +218,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     
     <p class="copyright">
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    <a href="https://www.w3.org/policies/#copyright">Copyright</a>
     ©
-    2021-2023
+    2021-2024
     
     <a href="https://www.w3.org/">World Wide Web Consortium</a>.
     <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
-    <a rel="license" href="https://www.w3.org/Consortium/Legal/2023/software-license" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
+    <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/copyright/software-license-2023/" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
   </p>
     <hr title="Separator for header">
   </div>
@@ -255,7 +256,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
         This document was produced by a group
         operating under the
-        <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/">1 August 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
       
     
@@ -265,14 +266,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           the group; that page also includes
           instructions for disclosing a patent. An individual who has actual
           knowledge of a patent which the individual believes contains
-          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#def-essential">Essential Claim(s)</a>
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
           must disclose the information in accordance with
-          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
   </p><p>
-                  This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20230612/">12 June 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#background"><bdi class="secno">2. </bdi>Background and development history</a></li><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3. </bdi>Goals</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inclusionGoals"><bdi class="secno">3.1 </bdi>Goals for Inclusion</a></li><li class="tocline"><a class="tocxref" href="#ContentGoals"><bdi class="secno">3.2 </bdi>Goals for Content</a></li><li class="tocline"><a class="tocxref" href="#ConformanceGoals"><bdi class="secno">3.3 </bdi>Goals for Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nonGoals"><bdi class="secno">4. </bdi>Non-Goals or Out-of-Scope</a></li><li class="tocline"><a class="tocxref" href="#explanation-behind-decisions"><bdi class="secno">5. </bdi>Explanation Behind Decisions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#structure-of-these-guidelines"><bdi class="secno">5.1 </bdi>Structure of these guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guidelines-structure"><bdi class="secno">5.1.1 </bdi>Guidelines structure</a></li><li class="tocline"><a class="tocxref" href="#outcomes-structure"><bdi class="secno">5.1.2 </bdi>Outcomes structure</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#critical-errors"><bdi class="secno">5.1.2.1 </bdi>Critical errors</a></li><li class="tocline"><a class="tocxref" href="#outcome-rating"><bdi class="secno">5.1.2.2 </bdi>Outcome rating</a></li></ol></li><li class="tocline"><a class="tocxref" href="#methods-structure"><bdi class="secno">5.1.3 </bdi>Methods structure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#functional-needs"><bdi class="secno">5.2 </bdi>Functional needs</a></li><li class="tocline"><a class="tocxref" href="#functional-categories"><bdi class="secno">5.3 </bdi>Functional categories</a></li><li class="tocline"><a class="tocxref" href="#how-the-parts-work-together"><bdi class="secno">5.4 </bdi>How the parts work together</a></li><li class="tocline"><a class="tocxref" href="#conformance-levels"><bdi class="secno">5.5 </bdi>Conformance Levels</a></li><li class="tocline"><a class="tocxref" href="#selecting-a-representative-sample"><bdi class="secno">5.6 </bdi>Selecting a Representative Sample</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-who-made-notable-contributions-to-the-creation-of-this-document"><bdi class="secno">A.1 </bdi>Participants who made notable contributions to the creation of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">A.2 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-the-2021-and-2020-versions-of-this-document"><bdi class="secno">A.3 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">A.4 </bdi>Research Partners</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">A.5 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#background"><bdi class="secno">2. </bdi>Background and development history</a></li><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3. </bdi>Goals</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inclusionGoals"><bdi class="secno">3.1 </bdi>Goals for Inclusion</a></li><li class="tocline"><a class="tocxref" href="#ContentGoals"><bdi class="secno">3.2 </bdi>Goals for Content</a></li><li class="tocline"><a class="tocxref" href="#ConformanceGoals"><bdi class="secno">3.3 </bdi>Goals for Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nonGoals"><bdi class="secno">4. </bdi>Non-Goals or Out-of-Scope</a></li><li class="tocline"><a class="tocxref" href="#explanation-behind-decisions"><bdi class="secno">5. </bdi>Explanation Behind Decisions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#structure-of-these-guidelines"><bdi class="secno">5.1 </bdi>Structure of these guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guidelines-structure"><bdi class="secno">5.1.1 </bdi>Guidelines structure</a></li><li class="tocline"><a class="tocxref" href="#outcomes-structure"><bdi class="secno">5.1.2 </bdi>Outcomes structure</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#critical-errors"><bdi class="secno">5.1.2.1 </bdi>Critical errors</a></li><li class="tocline"><a class="tocxref" href="#outcome-rating"><bdi class="secno">5.1.2.2 </bdi>Outcome rating</a></li></ol></li><li class="tocline"><a class="tocxref" href="#methods-structure"><bdi class="secno">5.1.3 </bdi>Methods structure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#functional-needs"><bdi class="secno">5.2 </bdi>Functional needs</a></li><li class="tocline"><a class="tocxref" href="#functional-categories"><bdi class="secno">5.3 </bdi>Functional categories</a></li><li class="tocline"><a class="tocxref" href="#how-the-parts-work-together"><bdi class="secno">5.4 </bdi>How the parts work together</a></li><li class="tocline"><a class="tocxref" href="#conformance-levels"><bdi class="secno">5.5 </bdi>Conformance Levels</a></li><li class="tocline"><a class="tocxref" href="#selecting-a-representative-sample"><bdi class="secno">5.6 </bdi>Selecting a Representative Sample</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-who-made-notable-contributions-to-the-creation-of-this-document"><bdi class="secno">A.1 </bdi>Participants who made notable contributions to the creation of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">A.2 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-the-2021-and-2020-versions-of-this-document"><bdi class="secno">A.3 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">A.4 </bdi>Research Partners</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">A.5 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
     <section id="intro"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#intro" aria-label="Permalink for Section 1."></a></div>
       
 
@@ -740,7 +741,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <dl class="bibliography"><dt id="bib-508-criteria">[508-criteria]</dt><dd>
       <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria"><cite>Section 508 Functional Performance Criteria</cite></a>.  United States Access Board. 8 December 2011. URL: <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria">https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria</a>
     </dd><dt id="bib-appmanifest">[appmanifest]</dt><dd>
-      <a href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>. Marcos Caceres; Kenneth Christiansen; Matt Giuca; Aaron Gustafson; Daniel Murphy; Anssi Kostiainen.  W3C. 2 May 2023. W3C Working Draft. URL: <a href="https://www.w3.org/TR/appmanifest/">https://www.w3.org/TR/appmanifest/</a>
+      <a href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>. Marcos Caceres; Kenneth Christiansen; Matt Giuca; Aaron Gustafson; Daniel Murphy; Anssi Kostiainen.  W3C. 29 November 2023. W3C Working Draft. URL: <a href="https://www.w3.org/TR/appmanifest/">https://www.w3.org/TR/appmanifest/</a>
     </dd><dt id="bib-atag20">[ATAG20]</dt><dd>
       <a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a>
     </dd><dt id="bib-en-301-549">[en-301-549]</dt><dd>
@@ -750,7 +751,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd><dt id="bib-uaag20">[UAAG20]</dt><dd>
       <a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a>
     </dd><dt id="bib-wcag22">[WCAG22]</dt><dd>
-      <a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Michael Cooper; Andrew Kirkpatrick; Alastair Campbell; Rachael Bradley Montgomery; Charles Adams.  W3C. 20 July 2023. W3C Proposed Recommendation. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a>
+      <a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a>. Michael Cooper; Andrew Kirkpatrick; Alastair Campbell; Rachael Bradley Montgomery; Charles Adams.  W3C. 5 October 2023. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
