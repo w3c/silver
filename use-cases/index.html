@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 	<head>
-		<title>Use Cases for WCAG 3.0 Conformance</title>
+		<title>Use Cases for WCAG 3</title>
 		<meta charset="UTF-8" />
 		<script src="respec-config.js" class="remove"></script>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
@@ -9,10 +9,10 @@
 	</head>
 	<body>
 		<section id="abstract">
-			<p>The Use Cases for WCAG 3.0 document is a collection of example scenarios that illustrate complex problems in conforming to accessibility guidelines. </p>
+			<p>The Use Cases for WCAG 3 document is a collection of example scenarios that illustrate complex problems in conforming to accessibility guidelines. </p>
     </section>
 		<section id="sotd">
-			<p>The Use Cases for WCAG 3.0 is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20Use-Cases%20for%20Silver">email</a>. </p>
+			<p>The Use Cases for WCAG 3 is published as a joint effort of the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page">Silver Task Force</a> of the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> and of the <a href="https://www.w3.org/community/silver/">W3C Silver Community Group</a>. It is a work in progress, and comments are welcome as <a href="https://github.com/w3c/silver/issues">Github Issues</a> or by <a href="mailto:public-silver@w3.org?subject=Comment%20Use-Cases%20for%20Silver">email</a>. </p>
 			<p>This document is developed by the <a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Substantial_Conformance">Silver Conformance Options subgroup</a>. It has undergone several cycles of review and continues to be worked on by that group. The document has also been presented to the parent Silver Task Force and is undergoing further review there as well. </p>
 			
 		</section>
@@ -20,7 +20,7 @@
 			<h2 id="intro">Introduction</h2>
 			<p>The purpose of this document is to outline situations in which ensuring conformance of websites and applications might present a challenge for content providers, despite best intentions and efforts. The intent of this document is to help form a shared understanding of such situations, to contribute to the development of accessibility resources. These resources could include:</p>
 			<ul>
-				<li>Technical standards for accessibility, such as <a href="https://www.w3.org/TR/wcag-3.0/">W3C Accessibility Guidelines (WCAG) 3.0</a> and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessiiblity Guidelines (ATAG) 2.0</a></li>
+				<li>Technical standards for accessibility, such as <a href="https://www.w3.org/TR/wcag-3.0/">W3C Accessibility Guidelines (WCAG) 3.0</a> and <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a></li>
     			<li>Accompanying technical guidance, such as <a href="https://www.w3.org/WAI/WCAG22/Understanding/">Understanding WCAG 2</a> , <a href="https://www.w3.org/WAI/WCAG22/Techniques/">Techniques for WCAG 2</a>, and similar resources being considered for WCAG 3</li> 
     			<li>Advisory guidance from WAI, such as <a href="https://www.w3.org/WAI/planning/org-policies/">Developing Organizational Policies on Web Accessibility</a>, <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and Managing Web Accessibility</a>, and <a href="https://www.w3.org/WAI/planning/statements/">Developing an Accessibility Statement</a></li>
     			<li>Other potential resources, such as <a href="https://w3c.github.io/maturity-model/">Maturity Model</a></li>
@@ -28,22 +28,18 @@
 		</section>
 		<section>
 			<h2 id="problem">Problem Description</h2>
-			<p>Content providers encounter situations where trying to make content conform to accessibility requirements might present challenges for them, despite best intentions and efforts. For example, when they are publishing large volumes of content, managing third-party content, and when they are adopting new technologies such as natural language interfaces and immersive environments. They then need to decide if they need to pull or not publish the content, versus seek more pragmatic approaches to address the situations. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3</a> and other resources from WAI, such as <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and Managing Web Accessibility</a>, have the goal to support content providers in such situations. However, we lack a shared understanding and common description of these situations across the different WAI groups. This makes some discussions less effective. Moreover, not all challenges can be resolved alone through technical standards and resources from WAI. Some challenges need to be addressed through accessibility policies that are not developed by WAI. For example, most accessibility policies, such as the Americans with Disabilities Act (ADA) and European Accessibility Act (EAA), include concepts around <em>reasonable accommodation</em>, <em>undue burden</em>, <em>equivalent facilitation</em>, and <em>limitations on application</em>. That is, we need to understand the context around the situations and that some of them are more technical and should be addressed in WCAG, while others are more policy related and need to be addressed in policy or regulation. Understanding this helps us approach the parts that fall within the scope of WAI. </p>
 			<p>Content providers encounter situations where trying to make content conform to accessibility requirements might present challenges for them, despite best intentions and efforts. For example, when they are publishing large volumes of content, managing third-party content, and when they are adopting new technologies such as natural language interfaces and immersive environments. They then need to decide if they need to pull or not publish the content, versus seek more pragmatic approaches to address the situations. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">WCAG 3</a> and other resources from WAI, such as <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and Managing Web Accessibility</a>, have the goal to support content providers in such situations. However, we lack a shared understanding and common description of these situations across the different WAI groups. This makes some discussions less effective. Moreover, not all challenges can be resolved alone through technical standards and resources from WAI. Some challenges need to be addressed through accessibility policies that are not developed by WAI. For example, most accessibility policies, such as the Americans with Disabilities Act (ADA) and European Accessibility Act (EAA), include concepts around <em>reasonable accommodation</em>, <em>undue burden</em>, <em>equivalent facilitation</em>, and <em>limitations on application</em>. That is, we need to understand the context around the situations. Some of them are more technical in nature, and others are more policy related. Understanding this helps us approach the parts that fall within the scope of WAI. </p>
 		</section>
 		<section>
 			<h2 id="approach">Approach and Structure</h2>
 			<p>This document provides a collection of situations where trying to make content accessible might present challenges for content providers. The intent is to identify common patterns across the different situations, and help form a shared understanding for them. This could contribute to the development of accessibility resources from WAI. This includes but is not limited to informing the development of the conformance model and provisions in WCAG 3. Another potential outcome could be WAI guidance with considerations for policy makers wanting to adopt WCAG.</p>
 
-			<p>Each situation in this document is illustrated with one or more brief example scenario. Each situation also includes a high-level outline of:</p>
-			<ul>
-				<li>How technical standards might contribute to addressing the situation</li>
-    			<li>How guidance documents and tools that accompnay technical standards might contribute to addressing the situation (including advice to policy setting bodies)</li>
-    			<li>How accessibility policies might contribute to addressing the situation</li>
-			</ul>
+			<p>Each situation in this document is illustrated with one or more brief example scenario. </p>
+	
 			<p>The situations and examples cover a broad range of sectors, including public, commercial, education, and more. However, they are not in any way exhaustive. The situations are also not mutually exclusive - multiple situations could be applicable to the same content at the same time.</p>
 
-			<p>The situations and examples are not intended to cover the all too frequent instances where content providers fail to consider accessibility requirements, whether out of ignorance or negligence. These are real concerns that need to be addressed. They are simply outside the scope of this particular document. In this document we intentionally presume that content providers are doing their best to consider accessibility to the extent they reasonably can. </p>
+			<p>The situations and examples are not intended to cover the all too frequent instances where content providers fail to consider accessibility requirements, whether out of ignorance or negligence. These are also real concerns that need to be addressed. But they are not within the scope and purpose of this particular document. In this document we intentionally presume that content providers are doing their best to consider accessibility to the extent they reasonably can. </p>
+			<p class="note">The group does agree (there is consensus) that all of these are real issues that cannot just be ignored.  Some solution has to be found to address them. We just aren't sure how to address them. </p>
 		</section>
 		<section>
 			<h2 id="keyTerms">Key Terminology and Concepts</h2>
@@ -52,12 +48,16 @@
     			<li><strong>Content Provider:</strong> person or entity providing content to others, for example through a website, mobile app, and other user interfaces. </li>
     			<li><strong>Content Creator:</strong> person or entity creating the content. This includes content in different formats, such as text, code, audio, and video.</li>
     			<li><strong>Content Owner:</strong> person or entity owning the content. This can be the commissioner of the content or another holder of the rights.</li>
-    			<li><strong>Conformance:</strong> adhering to technical standards. In this context accessibility standards, such as the W3C Accessibility Guidelines (WCAG).</li>
-    			<li><strong>Compliance:</strong> adhering to laws and other types of policies. In this context accessibility policies, such as the European Accessibility Act (EAA).</li>
+    			<li><strong>Conformance:</strong> adhering to technical standards. In this context accessibility standards, such as the W3C Accessibility Guidelines (WCAG).
+				<ul>
+				<li>NOTE: Conformance to a standard is in contrast to compliance with a law or other policy.   One conforms to standards but complies with laws, regulations, or policies. </li>
+				</ul></li>
+    			<!-- <li><strong>Compliance:</strong> adhering to laws and other types of policies. In this context accessibility policies, such as the European Accessibility Act (EAA).</li>
     			<li><strong>Relative priority for people with disabilities:</strong> in the context of this document refers to prioritizing certain content before other content, not to exclude any content as irrelevant for people with disabilities. For example, a restaurant owner might prioritize improving accessibility of the information on accessibility of the restaurant before improving accessibility of the picture gallery.</li>
     			<li><strong>Reasonable efforts concepts:</strong> refers to concepts such as "reasonable accommodation" and "undue burden" that exist in many policies, such as Americans with Disabilities Act (ADA) and European Accessibility Act (EAA).</li>
 			</ul>
-			<p><strong>Note:</strong> This is not intended to be any glossary definition of the terms, just an introduction of these concepts in the context of this document. If accepted by the group, these terms used in the finalized documents may be considered for aligning with and adding to the corresponding glossary definitions. </p>
+			<p><strong>Note:</strong> This is not intended to be any glossary definition of the terms, just an introduction of these concepts in the context of this document. If accepted by the group, these terms used in the finalized documents may be considered for aligning with and adding to the corresponding glossary definitions. </p>  
+			-->
 		</section>
 		<section>
 			<h2 id="situations">Situations</h2>
@@ -75,8 +75,8 @@
 					</section>
 			</section>
 			<section>
-				<h3 id="situation-2">Situation 2: When large volumes of content are accumulating too rapidly to make fully conforming </h3>
-				<p>In this situation the continually compounding content makes it prohibitive for the content provider to ensure full conformance of the entire content. 
+				<h3 id="situation-2">Situation 2: Large volumes of content accumulating rapidly</h3>
+				<p>In this situation the continually compounding content creates a technical change for providing full conformance. 
 				</p>
 					<section>
 						<h4 id="example-2-1">Example 2.1 - content being generated by users:</h4> 
@@ -90,12 +90,12 @@
 					</section>
 			</section>
 			<section>
-				<h3 id="situation-3">Situation 3: When making large volumes of content fully conform is not achievable immediately </h3>
-				<p>In this situation the content provider is committed to make specific content conform to the technical standard but has substantial challenges doing so immediately, for example for large volumes of content. 
+				<h3 id="situation-3">Situation 3: Large volumes of content needing time, prioritization, and a good plan</h3>
+				<p>In this situation the content provider is committed to make specific content conform to the technical standard but has substantial challenges doing so immediately. 
 				</p>
 					<section>
-						<h4 id="example-3-1">Example 3.1 - making content conform after acquisition: </h4> 
-						<p>A company acquired another company with a website/app product that does not fully conform to the technical standard. The acquiring company is now training the relevant content creators, to ensure that all newly created content will conform to the technical standard. Other existing content areas will be revised to conform to the technical standard, usually with the scheduled update of the content. Some content areas will soon be phased out entirely, possibly before they can be made to conform. The acquiring company prioritizes core functionality of the website/app, to make them conform to the technical standard. For example, so that users can browse through all content areas and carry out essential functionality. The company also turned off automatic playback for all videos, also in content areas that were not yet prioritized to make them conform, because audio from the automatically playing video disrupts use of the entire content for some users. The company indicates to the users the accessibility status of the different content areas. The company also provides an accessibility statement with details regarding the plan to revise the courses to meet the applicable accessibility requirements.
+						<h4 id="example-3-1">Example 3.1 - making content accessible after acquisition: </h4> 
+						<p>A company acquired another company with a website/app product that does not fully conform to the technical standard. The acquiring company is now training the relevant content creators, to ensure that all newly created content will conform to the technical standard. Other existing content areas will be revised to conform to the technical standard, usually with the scheduled update of the content. Some content areas will soon be phased out entirely, possibly before they can be made to conform. The acquiring company prioritizes core functionality of the website/app, to make them conform to the technical standard. For example, users can browse through all content areas and carry out essential functionality. The company also turned off automatic playback for all videos, also in content areas that were not yet prioritized to make them conform, because audio from the automatically playing video disrupts use of the entire content for some users. The company indicates to the users the accessibility status of the different content areas. The company also provides an accessibility statement with details regarding the plan to revise the courses to meet the applicable accessibility requirements.
 						</p>
 					</section>
 					<section>
@@ -110,17 +110,17 @@
 				</p>
 				<section>
 					<h4 id="example-4-1">Example  4.1: website that allows users to create their own websites </h4> 
-					<p> A service provider creates a tool that allows others to create their own online presences. The tool itself conforms to the technical standard, and helps users to create conforming content. For example, the tool allows users to indicate headings, to provide text alternatives for images, and it generates accessible markup. The tool also provides accessibility guidance and accessibility checker tools. The provider offers additional consulting services including for privacy, security, internationalization, and accessibility. It also encourages non-professional and non-business users to implement accessibility requirements, and explains the many benefits of this including for improving search-engine optimization (SEO). In some counties, professionals and businesses are required to meet accessibility requirements, also when they use such tools. Despite all this, the tool provider cannot ensure conformance of the content created by non-business and business users of the tool because it does not own or directly control the content. (Note: this example is the opposite of example 5.3; it is about shortcomings in the content generated by an authoring tool that principally supports accessibility.)
+					<p> A service provider creates a tool that allows others to create their own online presences. The tool itself conforms to the technical standard, and helps users to create conforming content. For example, the tool allows users to indicate headings, to provide text alternatives for images, and it generates accessible markup. The tool also provides accessibility guidance and accessibility checker tools. The provider offers additional consulting services including for privacy, security, internationalization, and accessibility. It also encourages non-professional and non-business users to implement accessibility requirements, and explains the many benefits of this including for improving search-engine optimization (SEO). In some countries, professionals and businesses are required to meet accessibility requirements, including when they use such tools. Despite all this, the tool provider cannot ensure conformance of the content created by non-business and business users of the tool because it does not own or directly control the content. (Note: this example is different from example 5.3; it is about shortcomings in the content generated by an authoring tool that principally supports accessibility.)
 					</p>
 					</section>
 					<section>
 						<h4 id="example-4-2">Example 4.2 - portal that aggregates content from different sources</h4> 
-						<p>A portal aggregates different types of scientific articles from different sources. The portal itself conforms to the technical standard, and the operator contractually requires the content owners providing content through the portal to ensure their content conforms to the technical standard. The portal provides guidance on the accessibility requirements, including for images, tables, math formulas, and other types of content. It also provides accessibility checker tools, to help the content owners meet the accessibility requirements. It also runs regular scans and spot-checks for accessibility, and informs the content owners about potential issues it identifies or that get reported by users, so that they can fix them. The content owners are responsible for assessing the confirmed issues, and addressing them within a reasonable time-frame depending on their severity and complexity. They are also responsible for ensure continued conformance when they update the content published through the portal.
+						<p>A portal aggregates different types of scientific articles from different sources. The portal itself conforms to the technical standard, and the operator contractually requires the content owners providing content through the portal to ensure their content conforms to the technical standard. The portal provides guidance on the accessibility requirements, including for images, tables, math formulas, and other types of content. It also provides accessibility checker tools, to help the content owners meet the accessibility requirements. It also runs regular scans and spot-checks for accessibility, and informs the content owners about potential issues it identifies or that get reported by users, so that they can fix them. The content owners are responsible for assessing the confirmed issues, and addressing them within a reasonable time-frame depending on their severity and complexity. They are also responsible for ensuring continued conformance when they update the content published through the portal.
 						</p>
 				</section>				
 		</section>
 		<section>
-				<h3 id="situation-5">Situation 5: When content providers have dependencies on other services </h3>
+				<h3 id="situation-5">Situation 5: Content providers have dependencies on other services </h3>
 				<p>In this situation the content provider depends on the support provided by other services, to ensure conformance of the content. 
 				</p>
 				<section>
@@ -129,28 +129,28 @@
 					</p>
 				</section>
 				<section>
-					<h4 id="example-5-2">Example 5.2 - embedding social media channels</h4> 
+					<h4 id="example-5-2">Example 5.2 - embedding social media channels used to promote the site</h4> 
 					<p>A start-up wants to create an online presence. It is aware of the accessibility requirements that are applicable, and so it selects a tool for creating its online presence that supports accessibility. It follows the guidance and uses the accessibility checkers provided by the tool, to ensure that the content it creates conforms to the technical standard. However, the start-up also needs to integrate social media channels in its online presence, so that it can promote itself. Unfortunately, some of these social media tools do not support the same level of conformance. The start-up makes sure that important information, such as product updates and news, are also provided directly through its online presence that conforms to the technical standard. The online presence is also programmed in such a way that accessibility issues in the social media feeds do not impact accessibility of the other content.
 					</p>
 				</section>
 				<section>
 					<h4 id="example-5-3">Example 5.3 - relying on content management systems (CMS)</h4> 
-					<p>A company uses a website that allows it to create its own website. The tool provides several accessibility features, such as allowing users to indicate headings, to provide text alternatives for images, and it generates accessible markup. This was initially sufficient for the company. However, as the company website grew, the tool does not anymore provide an adequate level of accessibility support. For example, creating complex forms with the tool has conformance limitations. The company regularly files issues it finds with the tool provider, which are partially addressed at a slower pace than the company needs to ensure conformance. The company is considering to switch tools but that would be an insurmountable investment for the company at this time. The company describes the accessibility limitations in an accessibility statements and provides users with other options to complete the forms, for example through email. (Note: this example is the opposite of example 4.1; it is about shortcomings in the authoring tool that a website owner depends on.) 
+					<p>A company uses a website that allows it to create its own website. The tool provides several accessibility features, such as allowing users to indicate headings, to provide text alternatives for images, and it generates accessible markup. This was initially sufficient for the company. However, as the company website grew, the tool does not anymore provide an adequate level of accessibility support. For example, creating complex forms with the tool has conformance limitations. The company regularly files issues it finds with the tool provider, which are partially addressed at a slower pace than the company needs to ensure conformance. The company is considering switching tools but that would be an insurmountable investment for the company at this time. The company describes the accessibility limitations in an accessibility statement and provides users with other options to complete the forms, for example through email. (Note: this example is different from example 4.1; it is about shortcomings in the authoring tool that a website owner depends on.) 
 					</p>
 				</section>
 			</section>
 			<section>
-				<h3 id="situation-6"> Current limitations in providing the same level of conformance for live content </h3>
+				<h3 id="situation-6">Situation 6: Current limitations in providing the same level of accessibility for live content </h3>
 				<p>
 				</p>
 				<section>
 					<h4 id="example-6.1">Example 6.1 - reduced quality of captions in live content</h4> 
-					<p>An organization is hosting webinars. It provides real-time captioning through a professional service provider (CART). The captioning service provides a high degree of accuracy, customary for the field. Here and there words are missed and misspelled, in particular some technical terms and the names of people are not always properly captioned during the live cast of webinars. In some webinars the moderators have sufficient time to pay attention to such mistakes, and to provide corrections in real time. At other times the discussions are too fast for real time corrections, for example during Q&amp;A sessions. The live captions are also created by humans listening to the audio and typing the captions, so they are not synchronized with the audio. When the organization publishes recorded webinars, it corrects the captions and the transcripts, and synchronizes the captions with the audio to improve accessibility. 
+					<p>An organization is hosting webinars. It provides real-time captioning through a professional service provider (CART). The captioning service provides a high degree of accuracy, customary for the field. Here and there words are missed and misspelled, in particular some technical terms and the names of people are not always properly captioned during the live cast of webinars since they are not known to the captioners and not provided in advance by the speakers. In some webinars the moderators have sufficient time to pay attention to such mistakes, and to provide corrections in real time. At other times the discussions are too fast for real time corrections, for example during Q&amp;A sessions. The live captions are also created by humans listening to the audio and typing the captions, so they are not synchronized with the audio. When the organization publishes recorded webinars, it corrects the captions and the transcripts, and synchronizes the captions with the audio to improve accessibility. 
 					</p>
 				</section>
 			</section>
 			<section>
-				<h3 id="situation-7">Current limitations in making some types of content fully conform </h3>
+				<h3 id="situation-7">Situation 7: Current technical limitations in accessibility </h3>
 				<p>In this situation the content provider is encountering substantial technical challenges in making content fully conform, especially with new technologies where accessibility techniques are not yet available. 
 				</p>
 				<section>
@@ -160,12 +160,12 @@
 				</section>
 				<section>
 					<h4 id="example-7-2">Example 7.2 - sensory experiences cannot be easily translated</h4> 
-					<p>A tourism agency wants to promote the cultural heritage of its country through an online presence. It provides high quality videos and images of nature, monuments, buildings, art works, and other artifacts. It also provides sound bites featuring local singers, musicians, and composers. It provides alternatives for all this content, including text alternatives for images and other non-text content, captions for audio content, and audio/text descriptions for video content. For example, for the image of a popular monument, the tourism agency provides short text alternatives to identify the monument. It also provides a longer text alternative to describe its shape, color, and other noticeable characteristics, as well as specific details visible to most users, such as corrosion and shadows. In addition to this, the tourism agency voluntarily provides an optional audio track for that particular image, to help convey the mood portrayed by the image. Yet despite all these efforts, it is not possible to fully convey the visual experiences from the image to other senses. 
+					<p>A tourism agency wants to promote the cultural heritage of its country through an online presence. It provides high quality videos and images of nature, monuments, buildings, art works, and other artifacts. It also provides sound bites featuring local singers, musicians, and composers. It provides alternatives for all this content, including text alternatives for images and other non-text content, captions for audio content, and audio/text descriptions for video content. For example, for the image of a popular monument, the tourism agency provides short text alternatives to identify the monument. It also provides a longer text alternative to describe its shape, color, and other noticeable characteristics, as well as general details visible to most users, such as corrosion. In addition to this, the tourism agency voluntarily provides an optional audio track for that particular image, to help convey the mood portrayed by the image. Yet despite all these efforts, it is not possible to fully convey the visual experiences from the image to other senses. 
 					</p>
 				</section>
 				<section>
 					<h4 id="example-7-3">Example 7.3 - lack of support by assistive technologies</h4> 
-					<p>Screen-readers are not able to render a 3D Model. A company offers highly engaging 3D models of the human heart via WebGL, complete with a type of label to denote a sub feature exploration or information panel. The company took care to provide a list style alternative navigation for these "free floating" labels that connects to the same associated data, and provides a descriptive text for each sub feature explored. The company has also offered a 3D Printable alternative model that may optionally present a tactile or braille identifier to connect to the associated data-set. While all of these steps shows in good faith an attempt to build accessible content, there is no prescribed method to bring this type of content forward in an accessible way. 
+					<p>Screen-readers are not able to render a 3D Model. A company offers highly engaging 3D models of the human heart via WebGL, complete with a type of label to denote a sub feature exploration or information panel. The company took care to provide a list type of alternative navigation for these "free floating" labels that connects to the same associated data, and provides a descriptive text for each sub feature explored. The company has also offered a 3D Printable alternative model that may optionally present a tactile or braille identifier to connect to the associated data-set. While all of these steps show a good faith attempt to build accessible content, there is no prescribed method to bring this type of content forward in an accessible way. 
 					</p>
 				</section>
 			</section>
@@ -175,12 +175,12 @@
 				</p>
 				<section>
 					<h4 id="example-8-1">Example 8.1 - outdated content that is rarely used</h4> 
-					<p>An organization that publishes weather forecast reports decided to take up accessibility. It changed its internal tooling and workflows to ensure that all new weather forecasts conform to the technical standard when they are published. The logs show that hardly anyone views past weather forecast reports, and so the organization considers all forecasts older than X weeks to be legacy. Such outdated forecasts are marked to all users as legacy, for example in a banner that conforms to the technical standard. The organization decides not to prioritize retrofitting legacy forecasts published before the date in which it adopted its new approach to accessibility. The organization indicates in an accessibility statement that forecasts from before that date may have accessibility issues, and describes the types of issues that tend to occur in these forecasts. The organization also provides a mechanism for users to request conforming versions of past forecasts, for example for research purposes. 
+					<p>An organization that publishes weather forecast reports decided to take up accessibility. It changed its internal tooling and workflows to ensure that all new weather forecasts conform to the technical standard when the forecases are published. The logs show that hardly anyone views past weather forecast reports, and so the organization considers all forecasts older than X weeks to be legacy. Such outdated forecasts are marked to all users as legacy, for example in a banner that conforms to the technical standard. The organization decides not to prioritize retrofitting legacy forecasts published before the date in which it adopted its new approach to accessibility. The organization indicates in an accessibility statement that forecasts from before that date may have accessibility issues, and describes the types of issues that tend to occur in these forecasts. The organization also provides a mechanism for users to request conforming versions of past forecasts if they need them, for example for research purposes. 
 					</p>
 				</section>
 				<section>
 					<h4 id="example-8-2">Example 8.2 - current content that is rarely used</h4> 
-					<p>An organization is continuously archiving thousands of electronic titles, including of digital books, video and audio recordings, scanned documents, and more. It ensure that those presented to the general public, for example displayed in an exhibition, conform to the technical standard. However, the majority of titles are archived and very rarely used. Occasionally, researchers, collectors, and others may be interested in the one or other title for particular reasons. These rarely accessed titles are marked to all users as archived, for example in a banner that conforms to the technical standard. The organization decides not to prioritize retrofitting archived titles, to make them conform to the technical standard. The organization indicates in an accessibility statement that archived titles may have accessibility issues, and describes the types of issues that tend to occur in these titles. The organization also provides a mechanism for users to request conforming versions of archived titles, for example for research purposes. 
+					<p>An organization is continuously archiving thousands of electronic titles, including of digital books, video and audio recordings, scanned documents, and more. It ensures that those presented to the general public, for example displayed in an exhibition, conform to the technical standard. However, the majority of titles are archived and very rarely used. Occasionally, researchers, collectors, and others may be interested in the one or other title for particular reasons. These rarely accessed titles are marked to all users as archived, for example in a banner that conforms to the technical standard. The organization decides not to prioritize retrofitting archived titles, to make them conform to the technical standard. The organization indicates in an accessibility statement that archived titles may have accessibility issues, and describes the types of issues that tend to occur in these titles. The organization also provides a mechanism for users to request conforming versions of archived titles, for example for research purposes. 
 					</p>
 				</section>
 			</section>
