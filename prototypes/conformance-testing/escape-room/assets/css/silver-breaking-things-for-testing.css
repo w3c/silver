@@ -1,0 +1,56 @@
+:root{
+  /* color contrast tool: https://www.myndex.com/SAPC/ */
+  --sapc-apca-667-grey-on-white: #929292;
+  --sapc-apca-636-green-on-white: #42ad08;
+}
+
+.no-padding{
+  padding:0 !important;
+}
+
+.no-border{
+  border:none !important;
+}
+
+h2, h3, h4, h5, h6{
+  color:var(--sapc-apca-636-green-on-white);
+  font-weight:300;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  clear: both;
+  line-height: 1.25;
+  margin: 0 0 0.75em;
+  padding: 0.75em 0 0 0
+}
+
+.looks-like-body-copy{
+  font-size:1rem;
+  font-weight: 400;
+  margin:0;
+}
+
+h1.entry-title.looks-like-body-copy{
+  margin:0
+}
+
+.front-page-content-area .entry-title.h1:first-child{
+  padding:0;
+}
+
+:is(h2, h3, h4, h5, h6) a[rel=bookmark]{
+  color:inherit;
+}
+
+.form-subscribe-button{
+  height:42px;
+  width:121px;
+}
+
+/* 
+if we want to change the vtt caption's appearance
+video::cue {
+color: yellow;
+font-family: system-ui, "Segoe UI", Roboto, Helvetica;
+font-size: 2rem;
+} */
