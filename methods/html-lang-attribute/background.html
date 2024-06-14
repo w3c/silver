@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Method - Background</title>
+	</head>
+	<body>
+		<header>
+			<h1>Background</h1>
+		</header>
+		<main>
+			<section id="w3c">
+				<h2>W3C Resources</h2>
+				<ul>
+					<li><a href="https://www.w3.org/TR/i18n-html-tech-lang/">Internationalization Best Practices: Specifying Language in XHTML & HTML Content</a></li>
+					<li><a href="https://w3c.github.io/pronunciation/explainer/">Explainer: Improving Spoken Presentation on the Web</a></li>
+					<li><a href="https://act-rules.github.io/rules/b5c3f8">HTML page has lang attribute</a> - WCAG2 ACT Rule</li>
+					<li><a href="https://act-rules.github.io/rules/off6ek">HTML element language subtag matches language</a> - WCAG2 ACT Rule</li>
+					<li><a href="https://act-rules.github.io/rules/de46e4">Element with lang attribute has valid language tag</a> - WCAG2 ACT Rule</li>
+				</ul>	
+			</section>
+			<section id="external">
+				<h2>Non-W3C Resources</h2>
+				<ul>
+					<li><a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">Language codes</a> - IANA assignments language subtag registry</li>
+					<li><a href="https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes">The lang and xml:lang attributes</a></li>
+					<li><a href="https://www.rfc-editor.org/rfc/rfc5646.html">RFC 5646: Tags for Identifying Languages</a></li>
+				</ul>	
+			</section>
+			<section id="accsupport">
+				<h2>Accessibility Support</h2>
+				<p>There are differences in how assistive technologies handle unknown and invalid language tags. Some will default to the language of the page, whereas others will default to the closest ancestor with a valid lang attribute. Languages with no known pronunciation such as Latin are exempt from this method and outcome. A page written in Haryanvi can not correctly be pronounced by major screen readers. Haryanvi is not considered an accessibility supported language. </p>
+
+				<p>Since most assistive technologies will consistently use lang over xml:lang when both are used, violation of this method may not necessarily be a violation of the outcome. Only when there are inconsistencies between assistive technologies as to which attribute is used to determine the language does this lead to a violation of the <a href="#">Changes to Natural Language</a> outcome. </p>				
+			</section>
+			<section id="assumptions">
+				<h2>Assumptions</h2>
+				<ul>
+					<li>The language of the page can be set by other methods than the lang attribute, for example using HTTP headers or the meta element. These methods are not supported by all assistive technologies. This method assumes that these other methods are insufficient to satisfy the outcome. </li>
+				</ul>	
+			</section>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Method - Glossary</title>
+	</head>
+	<body>
+		<header>
+			<h1>Glossary</h1>
+		</header>
+		<main>
+		<p>This section does not use plain language for non-technical users. The technical descriptions are precise language primarily for test tool developers. </p>
+			<section id="ascii-whitespace-def">
+				<h2>ASCII Whitespace</h2>
+				<p>ASCII whitespace is U+0009 TAB, U+000A LF, U+000C FF, U+000D CR, or U+0020 SPACE</p>
+			</section>
+			<section id="assistive-technology-def">
+				<h2>Assistive Technology</h2>
+				<p>Hardware and/or software that acts as a user agent, or along with a mainstream user agent, to provide functionality to meet the requirements of users with disabilities that go beyond those offered by mainstream user agents.</p>
+			</section>
+			<section id="attribute-value-def">
+				<h2>Attribute Value</h2>
+				<p>The attribute value of a content attribute set on an HTML element is the value that the attribute gets after being parsed and computed according to specifications. It may differ from the value that is actually written in the HTML code due to trimming whitespace or non-digits characters, default values, or case-insensitivity. </p>
+				<p>Some notable case of attribute value, among others:</p>
+				<ul>
+					<li>For enumerated attributes, the attribute value is either the state of the attribute, or the keyword that maps to it; even for the default states. Thus <input type="image" /> has an attribute value of either Image Button (the state) or image (the keyword mapping to it), both formulations having the same meaning; similarly, "an input element with a type attribute value of Text" can be either <input type="text" />, <input /> (missing value default), or <input type="invalid" /> (invalid value default).</li>
+					<li>For boolean attributes, the attribute value is true when the attribute is present and false otherwise. Thus <button disabled>, <button disabled="disabled"> and <button disabled=""> all have a disabled attribute value of true.</li>
+					<li>For attributes whose value is used in a case-insensitive context, the attribute value is the lowercase version of the value written in the HTML code.</li>
+					<li>For attributes that accept numbers, the attribute value is the result of parsing the value written in the HTML code according to the rules for parsing this kind of number.</li>
+					<li>For attributes that accept sets of tokens, whether space separated or comma separated, the attribute value is the set of tokens obtained after parsing the set and, depending on the case, converting its items to lowercase (if the set is used in a case-insensitive context).</li>
+					<li>For aria-* attributes, the attribute value is computed as indicated in the WAI-ARIA specification and the HTML Accessibility API Mappings.</li>
+				</ul>
+				<p>This list is not exhaustive, and only serves as an illustration for some of the most common cases.</p>
+				<p>The attribute value of an IDL attribute is the value returned on getting it. Note that when an IDL attribute reflects a content attribute, they have the same attribute value.</p>
+			</section>
+			<section id="block-of-text-def">
+				<h2>Block of Text</h2>
+				<p>Any <a href="#natural-language-def">natural language</a> text, including alternative text, that starts on a new line and ends with a hard line break is a block of text. Each of the following are examples of a Block of Text: a paragraph, each item in a multi-line list, lines in a block of code, each cell in a table.</p>
+				<p>Any <a href="#natural-language-def">natural language</a> text, including alternative text, that isn’t part of a larger sentence. A block of text starts on a new line and ends with the line break. Examples include paragraphs, large quotations, lists, buttons, table cells. Quotations inside a paragraph or links inside sentences are not blocks of text.  A paragraph broken by a line break (<br>) would be two blocks of text. A poem would be a block of text for every line. A definition list could be on one line on a wide screen could be one block of text and one the narrow screen it would be two blocks of text. </p> 
+			</section>
+			<section id="content-type-def">
+				<h2>Content Type</h2>
+				<p>Each document has an associated encoding (an encoding), content type (a string), URL (a URL), origin (an origin), type ("xml" or "html"), and mode ("no-quirks", "quirks", or "limited-quirks"). [ENCODING] [URL] [HTML]</p>
+				<p>Unless stated otherwise, a document’s encoding is the utf-8 encoding, content type is "application/xml", document URL is "about:blank", document origin is an opaque origin, type is "xml", and its document mode is "no-quirks". </p>
+				<p>A document is said to be an XML document if its document type is "xml"; otherwise an HTML document. Whether a document is an HTML document or an XML document affects the behavior of certain APIs. </p>
+				<p>A document is said to be in no-quirks mode if its mode is "no-quirks", quirks mode if its document mode is "quirks", and limited-quirks mode if its document mode is "limited-quirks". </p>
+			</section>
+			<section id="default-page-language-def">
+				<h2>Default Page Language</h2>
+				<p>The default language of a web page is the most common language of its top-level browsing context document, if it is unique. If this document has either no or several most common languages, then it has no default language.</p>
+			</section>
+			<section id="document-element-def">
+				<h2>Document Element</h2>
+				<p>The <a href="https://dom.spec.whatwg.org/#concept-document">document</a> <a href="https://dom.spec.whatwg.org/#concept-element">element</a> of a document is the element whose <a href="https://dom.spec.whatwg.org/#concept-tree-parent">parent</a> is that document, if it exists; otherwise null.</p>
+			</section>
+			<section id="flat-tree-def">
+				<h2>Flat Tree</h2>
+				<p>While Selectors operate on the DOM tree as the host language presents it, with separate trees that are unreachable via the standard parent/child relationship, the rest of CSS needs a single unified tree structure to work with. This is called the flattened element tree (or flat tree).</p>
+			</section>
+			<section id="inclusive-descendent-def">
+				<h2>Inclusive Descendent</h2>
+				<p>An inclusive descendant is an object or one of its <a href="https://dom.spec.whatwg.org/#concept-tree-descendant">descendants</a>.</p>
+			</section>
+			<section id="natural-language-def">
+				<h2>Natural Language</h2>
+				<p>Natural Language (sometimes just <em>language</em>) refers to the spoken, written, or signed communications used by human beings. From <a href="https://www.w3.org/TR/i18n-glossary/#def_natural_language">Internationalization Glossary</a> </p>
+			</section>
+			<section id="node-document-def">
+				<h2>Node Document</h2>
+				<p>Each <a href="https://dom.spec.whatwg.org/#concept-node">node</a> has an associated node document, set upon creation, that is a document.</p>
+			</section>
+			<section id="text-def">
+				<h2>Text</h2>
+				<p>A sequence of characters that can be <a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-programmatically-determined">programmatically determined</a>, where the sequence is expressing something in <a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language">natural language</a>.</p>
+			</section>
+			<section id="text-inheriting-its-def">
+				<h2>Text Inheriting its Programmatic Language from an Element</h2>
+				<p>The text inheriting its programmatic language from an element E is composed of all the following texts:
+				<ul>
+					<li>text nodes: the value of any <a href="https://dom.spec.whatwg.org/#text">text nodes</a> that are <a href="https://act-rules.github.io/glossary/#visible">visible</a> or <a href="https://act-rules.github.io/glossary/#included-in-the-accessibility-tree">included in the accessibility tree</a> and children of an element inheriting its programmatic language from E;</li>
+					<li>accessible text: the <a href="https://act-rules.github.io/glossary/#accessible-name">accessible name</a> and <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-description">accessible description</a> of any element inheriting its programmatic language from E, and included in the accessibility tree;</li>
+					<li>page title: the value of the <a href="https://html.spec.whatwg.org/multipage/dom.html#document.title">document title</a>, only if E is a <a href="https://dom.spec.whatwg.org/#document-element">document</a> in a <a href="https://html.spec.whatwg.org/#top-level-browsing-context">top-level browsing context</a>.
+				</ul>
+				<p>An element F is an element inheriting its programmatic language from an element E if at least one of the following conditions is true (recursively):</p>
+				<ul>
+					<li>F is E itself (an element always inherits its programmatic language from itself); or</li>
+					<li>F does not have a non-empty lang attribute, and is the child in the <a href="https://drafts.csswg.org/css-scoping/#flat-tree">flat tree</a> of an element inheriting its programmatic language from E; or</li>
+					<li>F is a <a href="https://html.spec.whatwg.org/#fully-active">fully active document</a> element, has no non-empty lang attribute, and its <a href="https://html.spec.whatwg.org/#browsing-context-container">browsing context container</a> is an element inheriting its programmatic language from E.</li>
+				</ul>
+			</section>
+			<section id="top-level-browsing-context-def">
+				<h2>Top Level Browsing Context</h2>
+				<p>​A <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">browsing context that has no <a href="https://html.spec.whatwg.org/multipage/browsers.html#parent-browsing-context">parent browsing context is the top-level browsing context for itself and all of the browsing contexts for which it is an <a href="https://html.spec.whatwg.org/multipage/browsers.html#ancestor-browsing-context">ancestor browsing context.</p>
+				<p>A <a href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context">top-level browsing context</a> has an associated group (null or a <a href="">browsing context group</a>). It is initially null.</p>
+				<p>It is possible to create new browsing contexts that are related to a <a href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context">top-level browsing context</a> while their <a href="https://html.spec.whatwg.org/multipage/browsers.html#bc-container">container</a> is null. Such browsing contexts are called auxiliary browsing contexts. Auxiliary browsing contexts are always <a href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context">top-level browsing contexts</a>.</p>
+			</section>
+			<section id="valid-language-def">
+				<h2>Valid Language Tag</h2>
+				<p>A language tag is valid if its primary language subtag exists in the language subtag registry with a Type field whose field-body value is language. </p>
+				<p>A "language tag" is here to be understood as in the first paragraph of the RFC 5646 language tag syntax, i.e. a sequence of subtags separated by hyphens, where a subtag is any sequence of alphanumerical characters. Thus, this definition intentionally differs from the strict RFC 5646 syntax (and ABNF grammar) as user agents and assistive technologies are more lenient in what they accept. The definition is however consistent with the behavior of the :lang() pseudo-selector as defined by Selectors Level 3. For example, de-hello would be an accepted way to indicate German in current user agents and assistive technologies, despite not being valid according to RFC 5646 grammar. As a consequence of this definition, however, grandfathered tags are not correctly recognized as valid language subtags.
+				</p>
+				<p>Subtags, notably the primary language subtag, are case insensitive. Hence comparison with the language subtag registry must be done in a case insensitive way.</p>
+			</section>
+		</main>
+	</body>
+</html>
