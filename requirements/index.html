@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 34.5.0">
+<meta name="generator" content="ReSpec 35.1.2">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -46,8 +46,6 @@ dfn{cursor:pointer}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -61,19 +59,8 @@ a.bibref{text-decoration:none}
 cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -99,7 +86,8 @@ dd{margin-left:0}
 </style>
         
 	
-<meta name="revision" content="570db026d5f5f01befb7fc9089bce9dfa86b9515">
+<meta name="color-scheme" content="light">
+<meta name="revision" content="5c9987de4b14b3c41cc7e48b4684decbb7b01529">
 <meta name="description" content="The Requirements for W3C Accessibility Guidelines (WCAG) 3.0 documentation is the next phase of development of the next major upgrade to accessibility guidelines. WCAG 3.0 will be the successor to the Web Content Accessibility Guidelines (WCAG) 2 series. The Silver Task Force of the Accessibility Guidelines Working Group and the W3C Silver Community group have partnered to incubate the needs, requirements, and structure for the new accessibility guidance. To date, the group  has:">
 <style>
 var{position:relative;cursor:pointer}
@@ -151,16 +139,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "github": "w3c/silver",
   "maxTocLevel": 4,
   "lint": false,
-  "gitRevision": "570db026d5f5f01befb7fc9089bce9dfa86b9515",
-  "publishISODate": "2024-04-02T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 02 April 2024"
+  "gitRevision": "5c9987de4b14b3c41cc7e48b4684decbb7b01529",
+  "publishISODate": "2024-09-11T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 11 September 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Requirements for WCAG 3.0</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-04-02">02 April 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-09-11">11 September 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -244,7 +232,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
         This document was produced by a group
         operating under the
-        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+        <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
       
     
@@ -254,14 +242,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           the group; that page also includes
           instructions for disclosing a patent. An individual who has actual
           knowledge of a patent which the individual believes contains
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          <a href="https://www.w3.org/policies/patent-policy/#def-essential">Essential Claim(s)</a>
           must disclose the information in accordance with
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
   </p><p>
                       This document is governed by the
-                      <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><bdi class="secno">1.1 </bdi>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#wcag-3-0-scope"><bdi class="secno">1.2 </bdi>WCAG 3.0 Scope</a></li><li class="tocline"><a class="tocxref" href="#silver-task-force-research"><bdi class="secno">1.3 </bdi>Silver Task Force Research</a></li><li class="tocline"><a class="tocxref" href="#large-and-dynamic-sites"><bdi class="secno">1.4 </bdi>Large and Dynamic Sites</a></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><bdi class="secno">1.5 </bdi>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#problem_statements"><bdi class="secno">2. </bdi>Opportunities for WCAG 3.0 </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><bdi class="secno">2.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#opportunities_conformance"><bdi class="secno">2.2 </bdi>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#opportunities_maintenance"><bdi class="secno">2.3 </bdi>Maintenance</a></li><li class="tocline"><a class="tocxref" href="#opportunities_issue-severity"><bdi class="secno">2.4 </bdi>Issue Severity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design_principles"><bdi class="secno">3. </bdi>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">4. </bdi>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#broad-disability-support"><bdi class="secno">4.1 </bdi>Broad disability support</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><bdi class="secno">4.2 </bdi>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><bdi class="secno">4.3 </bdi>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><bdi class="secno">4.4 </bdi>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability"><bdi class="secno">4.5 </bdi>Readability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><bdi class="secno">4.6 </bdi>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">4.7 </bdi>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">4.8 </bdi>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-before-the-second-requirements-draft"><bdi class="secno">A.1.1 </bdi>Changes Prior to Second Version of Requirements</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">B.1 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-the-2021-and-2020-versions-of-this-document"><bdi class="secno">B.2 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">B.3 </bdi>Research Partners</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">B.4 </bdi>Enabling funders</a></li></ol></li></ol></nav>
+                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#comparison-to-wcag-2-x-requirements"><bdi class="secno">1.1 </bdi>Comparison to WCAG 2.x Requirements</a></li><li class="tocline"><a class="tocxref" href="#wcag-3-0-scope"><bdi class="secno">1.2 </bdi>WCAG 3.0 Scope</a></li><li class="tocline"><a class="tocxref" href="#silver-task-force-research"><bdi class="secno">1.3 </bdi>Silver Task Force Research</a></li><li class="tocline"><a class="tocxref" href="#large-and-dynamic-sites"><bdi class="secno">1.4 </bdi>Large and Dynamic Sites</a></li><li class="tocline"><a class="tocxref" href="#design-principles-and-requirements"><bdi class="secno">1.5 </bdi>Design Principles and Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#problem_statements"><bdi class="secno">2. </bdi>Opportunities for WCAG 3.0 </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#oppotunities_usability"><bdi class="secno">2.1 </bdi>Usability</a></li><li class="tocline"><a class="tocxref" href="#opportunities_conformance"><bdi class="secno">2.2 </bdi>Conformance Model</a></li><li class="tocline"><a class="tocxref" href="#opportunities_maintenance"><bdi class="secno">2.3 </bdi>Maintenance</a></li><li class="tocline"><a class="tocxref" href="#opportunities_issue-severity"><bdi class="secno">2.4 </bdi>Issue Severity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design_principles"><bdi class="secno">3. </bdi>Design Principles</a></li><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">4. </bdi>Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#broad-disability-support"><bdi class="secno">4.1 </bdi>Broad disability support</a></li><li class="tocline"><a class="tocxref" href="#flexible-maintenance-and-extensibility"><bdi class="secno">4.2 </bdi>Flexible maintenance and extensibility</a></li><li class="tocline"><a class="tocxref" href="#multiple-ways-to-display"><bdi class="secno">4.3 </bdi>Multiple ways to display</a></li><li class="tocline"><a class="tocxref" href="#technology-neutral"><bdi class="secno">4.4 </bdi>Technology Neutral</a></li><li class="tocline"><a class="tocxref" href="#readability"><bdi class="secno">4.5 </bdi>Readability</a></li><li class="tocline"><a class="tocxref" href="#regulatory-environment"><bdi class="secno">4.6 </bdi>Regulatory Environment</a></li><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">4.7 </bdi>Motivation</a></li><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">4.8 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#self-validation"><bdi class="secno">4.9 </bdi>Self validation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-before-the-second-requirements-draft"><bdi class="secno">A.1.1 </bdi>Changes Prior to Second Version of Requirements</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">B.1 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-the-2021-and-2020-versions-of-this-document"><bdi class="secno">B.2 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">B.3 </bdi>Research Partners</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">B.4 </bdi>Enabling funders</a></li></ol></li></ol></nav>
 		<section id="introduction"><div class="header-wrapper"><h2 id="intro"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#intro" aria-label="Permalink for Section 1."></a></div>
 			
 			<p>People with disabilities can face problems using online content and applications. Disabilities can be permanent, temporary, or recurring limitations. </p>
@@ -354,7 +342,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					
 					<p>There are several areas for exploration in how conformance can work. These opportunities may or may not be incorporated. They need to work together, and that interplay will be governed by the design principles</p>
 					<ul>
-						<li><strong>Measurable Guidance</strong>: Certain accessibility guidance is best expressed as a true/false statement. Others far less so. There are needs of people with disabilities, especially cognitive and low vision disabilities, that are better captured by a different type of measurement. WCAG 3.0 can include multiple means of measurement, in addition to true/false statements, allowing inclusion of more accessibility guidance.</li>
+						<li><strong>Measurable Guidance</strong>: Certain accessibility guidance is best expressed as a true/false statement. Others far less so. There are needs of people with disabilities, especially cognitive and low vision disabilities, that are better captured by a different type of measurement. WCAG 3.0 can include guidance (provisions) that use different means of evaluation beyond just true/false performance or outcome statements, allowing for the inclusion of more accessibility guidance.</li>
 						<li><strong>Scope Options</strong>: WCAG 3.0 conformance could include web pages, web sites, page sections, individual components, and conformance based on a set of tasks as defined by the author of the site or application. A task-based assessment would allow flexibility for conformance of complex applications that go beyond component/tag assessment or full-page assessment.</li>
 						<li><strong>Accessibility Supported</strong>: As the technologies advance, the lines between content, user agents, and assistive technology will continue to shift and blur. Interoperability may be affected by any number of factors outside of the control of the author and publisher of digital content. WCAG 3.0 can include advice to user agents and assistive technology developers. WCAG 3 does not intend to make authors responsible for interoperability problems beyond a reasonable effort.</li>
 					</ul>
@@ -429,6 +417,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			<li>Improve the ability to support automated testing where appropriate and provide a procedure for repeatable tests when manual testing is appropriate.</li>
 			<li>Provide requirements to address functional needs, while avoiding or minimizing negative impacts on other functional needs. </li>
 			<li>Include accompanying documents that provide clear, concise, and findable technical information quickly in one place.</li>
+			<li>Include, where possible and appropriate, links to instruction videos, illustrations, and how-to guides. Creation of new videos and illustrations are outside the scope of the working group at this time.</li>
 			<li>Normative requirements should be unambiguous so there is only one possible meaning for each requirement.</li>
           </ol>
           <p>The creation process for the guidelines should:</p>
@@ -445,42 +434,47 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <p>The WCAG 3.0 Requirements are high level and will be expanded and refined as Silver members move through the prototyping process.</p>
           <section id="broad-disability-support"><div class="header-wrapper"><h3 id="x4-1-broad-disability-support"><bdi class="secno">4.1 </bdi>Broad disability support</h3><a class="self-link" href="#broad-disability-support" aria-label="Permalink for Section 4.1"></a></div>
           
-          <p>Silver guidance includes tests and other evaluation methods. Some guidance may use true/false verification but other guidance will use other ways of measuring and/or evaluating where appropriate so that more needs of people with disabilities may be included (for example: rubrics, sliding scale, task-completion, user research with people with disabilities, and more). This approach includes particular attention to people whose needs may better be met with a broad testing strategy, such as people with low vision, limited vision, or cognitive and learning disabilities. </p>
+          <p>The guidance includes requirements that are not available in WCAG 2.x. Some guidance may use true/false verification but other guidance will use other ways of measuring and/or evaluating where appropriate so that more needs of people with disabilities may be included (for example: rubrics, sliding scale, task-completion, user research with people with disabilities, and more). This approach includes particular attention to people whose needs may better be met with a broad testing strategy, such as people with low vision, limited vision, or cognitive and learning disabilities.</p>
           </section>
           <section id="flexible-maintenance-and-extensibility"><div class="header-wrapper"><h3 id="x4-2-flexible-maintenance-and-extensibility"><bdi class="secno">4.2 </bdi>Flexible maintenance and extensibility</h3><a class="self-link" href="#flexible-maintenance-and-extensibility" aria-label="Permalink for Section 4.2"></a></div>
           
-            <p>Create a maintenance and extensibility model for guidelines that can better meet the needs of people with disabilities using emerging technologies and interactions. The process of developing the guidance includes experts in the technology.</p>
+            <p>The informative documentation uses a process that is easy to update and maintain.
+			The process of developing the guidance includes experts who review the guidelines to check they will work for emerging technologies and interactions.</p>
             </section>
           <section id="multiple-ways-to-display"><div class="header-wrapper"><h3 id="x4-3-multiple-ways-to-display"><bdi class="secno">4.3 </bdi>Multiple ways to display</h3><a class="self-link" href="#multiple-ways-to-display" aria-label="Permalink for Section 4.3"></a></div>
             
-            <p>Design the guidelines so that they can be presented in different accessible and usable ways or formats, to address the needs of different audiences.</p>
+            <p>The Guidelines can be presented in different accessible and usable ways or formats, to address the needs of different audiences.</p>
           </section>
           <section id="technology-neutral"><div class="header-wrapper"><h3 id="x4-4-technology-neutral"><bdi class="secno">4.4 </bdi>Technology Neutral</h3><a class="self-link" href="#technology-neutral" aria-label="Permalink for Section 4.4"></a></div>
             
-	    <p>Guidance should be expressed in generic terms so that they may apply to more than one platform or technology. The intent of technology-neutral wording is to provide the opportunity to apply the core guidelines to current and emerging technology, even if specific technical advice doesn't yet exist.</p>
+	    <p>Guidance is expressed in technology-neutral terms so that it can be met using different platforms or technologies. The intent of technology-neutral wording is to provide the opportunity to apply the core guidelines to current and emerging technology, even if specific technical advice doesn't yet exist.</p>
 	 </section>
           <section id="readability"><div class="header-wrapper"><h3 id="x4-5-readability"><bdi class="secno">4.5 </bdi>Readability</h3><a class="self-link" href="#readability" aria-label="Permalink for Section 4.5"></a></div>
             
-            <p>The core guidelines are understandable by a non-technical audience. Where technical guidance is necessary, a plain language alternative or summary will be provided. Text and presentation are usable and understandable through the use of plain language, structure, and design. They link to instruction videos, illustrations, and how-to where available.  Creation of new videos and illustrations are outside the scope of this project at this time.</p>
+            <p>Requirements in WCAG 3 for plain language shall be applied to WCAG 3. It is desirable for the guidelines to be understandable by the widest possible audience.</p>
           </section>
           <section id="regulatory-environment"><div class="header-wrapper"><h3 id="x4-6-regulatory-environment"><bdi class="secno">4.6 </bdi>Regulatory Environment</h3><a class="self-link" href="#regulatory-environment" aria-label="Permalink for Section 4.6"></a></div>
             
-	    <p>The Guidelines provide broad support, including</p>
+	    <p>Requirements are written to facilitate adoption into law, regulation, or policy, since this has been shown to have major impact on practice. This includes:</p>
 	    <ul>
-	      <li>Structure, methodology, and content that facilitates adoption into law, regulation, or policy, and</li>
-	      <li>clear intent and transparency as to purpose and goals, to assist when there are questions or controversy.</li>
+	      <li>making the need and purpose for the requirement clear, and</li>
+	      <li>a clear definition of when requirements are met.</li>
 	    </ul>
 	  </section>
           <section id="motivation"><div class="header-wrapper"><h3 id="x4-7-motivation"><bdi class="secno">4.7 </bdi>Motivation</h3><a class="self-link" href="#motivation" aria-label="Permalink for Section 4.7"></a></div>
             
-	    <p>The Guidelines motivate organizations to go beyond minimal accessibility requirements by structuring WCAG 3 to provide encouragement to organizations which demonstrate a greater effort to improve accessibility.</p>
+	    <p>The Guidelines motivate organizations to go beyond minimal accessibility requirements with a conformance model that shows which organizations demonstrate a greater effort to improve accessibility</p>
 	 </section>
-          <section id="scope"><div class="header-wrapper"><h3 id="x4-8-scope"><bdi class="secno">4.8 </bdi>Scope</h3><a class="self-link" href="#scope" aria-label="Permalink for Section 4.8"></a></div>
+        <section id="scope"><div class="header-wrapper"><h3 id="x4-8-scope"><bdi class="secno">4.8 </bdi>Scope</h3><a class="self-link" href="#scope" aria-label="Permalink for Section 4.8"></a></div>
             
-	    <p>The guidelines provide guidance and a conformance model for people and organizations that produce digital assets and technology of varying size and complexity. This includes large, dynamic, and complex websites. The associated informative materials will include guidance for a diverse group of stakeholders including content creators, browsers, authoring tools, assistive technologies, and more.</p>
+	    <p>WCAG 3 will provide guidance and a conformance model suitable for people and organizations that produce digital assets and technology of varying size and complexity. This includes large, dynamic, and complex websites. The scope of the associated informative materials will include guidance for a diverse group of stakeholders including content creators, browsers, authoring tools, assistive technologies, and more.</p>
 
-	</section>
 		</section>
+		<section id="self-validation"><div class="header-wrapper"><h3 id="x4-9-self-validation"><bdi class="secno">4.9 </bdi>Self validation</h3><a class="self-link" href="#self-validation" aria-label="Permalink for Section 4.9"></a></div>
+			
+			<p>The WCAG 3 guidelines document shall meet its own requirements where relevant. (Some requirements may apply to organisations or scenarios not relevent to the development of a standard.)</p>
+		</section>
+	</section>
 		<section class="appendix" id="changelog"><div class="header-wrapper"><h2 id="a-change-log"><bdi class="secno">A. </bdi>Change Log</h2><a class="self-link" href="#changelog" aria-label="Permalink for Appendix A."></a></div>
 	    
           <section id="changes-prior-to-first-public-working-draft"><div class="header-wrapper"><h3 id="changes-before-the-first-public-working-draft"><bdi class="secno">A.1 </bdi>Changes Prior to First Public Working Draft</h3><a class="self-link" href="#changes-before-the-first-public-working-draft" aria-label="Permalink for Appendix A.1"></a></div>
