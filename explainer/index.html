@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.5.0">
+<meta name="generator" content="ReSpec 35.1.2">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -46,8 +46,6 @@ dfn{cursor:pointer}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -61,19 +59,8 @@ a.bibref{text-decoration:none}
 cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -100,7 +87,8 @@ dd{margin-left:0}
 	
 <link rel="stylesheet" type="text/css" href="guidelines.css">
   
-<meta name="revision" content="570db026d5f5f01befb7fc9089bce9dfa86b9515">
+<meta name="color-scheme" content="light">
+<meta name="revision" content="5c9987de4b14b3c41cc7e48b4684decbb7b01529">
 <meta name="description" content="This Explainer accompanies the drafts of the W3C Accessibility Guidelines (WCAG) 3.0.">
 <style>
 var{position:relative;cursor:pointer}
@@ -166,16 +154,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "lint": false,
-  "gitRevision": "570db026d5f5f01befb7fc9089bce9dfa86b9515",
-  "publishISODate": "2024-04-02T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 02 April 2024"
+  "gitRevision": "5c9987de4b14b3c41cc7e48b4684decbb7b01529",
+  "publishISODate": "2024-09-11T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 11 September 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
   <body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Explainer for W3C Accessibility Guidelines (WCAG) 3.0</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-04-02">02 April 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-09-11">11 September 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -256,7 +244,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
         This document was produced by a group
         operating under the
-        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+        <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
       
     
@@ -266,13 +254,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           the group; that page also includes
           instructions for disclosing a patent. An individual who has actual
           knowledge of a patent which the individual believes contains
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          <a href="https://www.w3.org/policies/patent-policy/#def-essential">Essential Claim(s)</a>
           must disclose the information in accordance with
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
   </p><p>
                       This document is governed by the
-                      <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                     </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#background"><bdi class="secno">2. </bdi>Background and development history</a></li><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">3. </bdi>Goals</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inclusionGoals"><bdi class="secno">3.1 </bdi>Goals for Inclusion</a></li><li class="tocline"><a class="tocxref" href="#ContentGoals"><bdi class="secno">3.2 </bdi>Goals for Content</a></li><li class="tocline"><a class="tocxref" href="#ConformanceGoals"><bdi class="secno">3.3 </bdi>Goals for Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nonGoals"><bdi class="secno">4. </bdi>Non-Goals or Out-of-Scope</a></li><li class="tocline"><a class="tocxref" href="#explanation-behind-decisions"><bdi class="secno">5. </bdi>Explanation Behind Decisions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#structure-of-these-guidelines"><bdi class="secno">5.1 </bdi>Structure of these guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guidelines-structure"><bdi class="secno">5.1.1 </bdi>Guidelines structure</a></li><li class="tocline"><a class="tocxref" href="#outcomes-structure"><bdi class="secno">5.1.2 </bdi>Outcomes structure</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#critical-errors"><bdi class="secno">5.1.2.1 </bdi>Critical errors</a></li><li class="tocline"><a class="tocxref" href="#outcome-rating"><bdi class="secno">5.1.2.2 </bdi>Outcome rating</a></li></ol></li><li class="tocline"><a class="tocxref" href="#methods-structure"><bdi class="secno">5.1.3 </bdi>Methods structure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#functional-needs"><bdi class="secno">5.2 </bdi>Functional needs</a></li><li class="tocline"><a class="tocxref" href="#functional-categories"><bdi class="secno">5.3 </bdi>Functional categories</a></li><li class="tocline"><a class="tocxref" href="#how-the-parts-work-together"><bdi class="secno">5.4 </bdi>How the parts work together</a></li><li class="tocline"><a class="tocxref" href="#conformance-levels"><bdi class="secno">5.5 </bdi>Conformance Levels</a></li><li class="tocline"><a class="tocxref" href="#selecting-a-representative-sample"><bdi class="secno">5.6 </bdi>Selecting a Representative Sample</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-who-made-notable-contributions-to-the-creation-of-this-document"><bdi class="secno">A.1 </bdi>Participants who made notable contributions to the creation of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">A.2 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-the-2021-and-2020-versions-of-this-document"><bdi class="secno">A.3 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">A.4 </bdi>Research Partners</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">A.5 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
     <section id="intro"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#intro" aria-label="Permalink for Section 1."></a></div>
       
@@ -741,7 +729,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <dl class="bibliography"><dt id="bib-508-criteria">[508-criteria]</dt><dd>
       <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria"><cite>Section 508 Functional Performance Criteria</cite></a>.  United States Access Board. 8 December 2011. URL: <a href="https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria">https://www.access-board.gov/ict/#chapter-3-functional-performance-criteria</a>
     </dd><dt id="bib-appmanifest">[appmanifest]</dt><dd>
-      <a href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>. Marcos Caceres; Kenneth Christiansen; Matt Giuca; Aaron Gustafson; Daniel Murphy; Anssi Kostiainen.  W3C. 29 November 2023. W3C Working Draft. URL: <a href="https://www.w3.org/TR/appmanifest/">https://www.w3.org/TR/appmanifest/</a>
+      <a href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>. Marcos Caceres; Kenneth Christiansen; Matt Giuca; Diego Gonzalez-Zuniga; Daniel Murphy; Christian Liebel.  W3C. 5 September 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/appmanifest/">https://www.w3.org/TR/appmanifest/</a>
     </dd><dt id="bib-atag20">[ATAG20]</dt><dd>
       <a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a>
     </dd><dt id="bib-en-301-549">[en-301-549]</dt><dd>
