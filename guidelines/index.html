@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 34.5.0">
+<meta name="generator" content="ReSpec 35.1.2">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -54,8 +54,6 @@ dfn{cursor:pointer}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -69,19 +67,8 @@ a.bibref{text-decoration:none}
 cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -110,7 +97,8 @@ dd{margin-left:0}
 		
 <link rel="stylesheet" type="text/css" href="guidelines.css">
 	
-<meta name="revision" content="570db026d5f5f01befb7fc9089bce9dfa86b9515">
+<meta name="color-scheme" content="light">
+<meta name="revision" content="5c9987de4b14b3c41cc7e48b4684decbb7b01529">
 <meta name="description" content="W3C Accessibility Guidelines (WCAG) 3.0 will provide a wide range of recommendations for making web content more accessible to users with disabilities. Following these guidelines will address many of the needs of users with blindness, low vision and other vision impairments; deafness and hearing loss; limited movement and dexterity; speech disabilities; sensory disorders; cognitive and learning disabilities; and combinations of these. These guidelines address accessibility of web content on desktops, laptops, tablets, mobile devices, wearable devices, and other web of things devices. The guidelines apply to various types of web content including static, dynamic, interactive, and streaming content; visual and auditory media; virtual and augmented reality; and alternative access presentation and control. These  guidelines also address related web tools such as user agents (browsers and assistive technologies), content management systems, authoring tools, and testing tools.">
 <style>
 var{position:relative;cursor:pointer}
@@ -214,16 +202,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "lint": false,
-  "gitRevision": "570db026d5f5f01befb7fc9089bce9dfa86b9515",
-  "publishISODate": "2024-04-02T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 02 April 2024"
+  "gitRevision": "5c9987de4b14b3c41cc7e48b4684decbb7b01529",
+  "publishISODate": "2024-09-11T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 11 September 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">W3C Accessibility Guidelines (WCAG) 3.0</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-04-02">02 April 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-09-11">11 September 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -311,7 +299,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
         This document was produced by a group
         operating under the
-        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+        <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
       
     
@@ -321,13 +309,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           the group; that page also includes
           instructions for disclosing a patent. An individual who has actual
           knowledge of a patent which the individual believes contains
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          <a href="https://www.w3.org/policies/patent-policy/#def-essential">Essential Claim(s)</a>
           must disclose the information in accordance with
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
   </p><p>
                       This document is governed by the
-                      <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                     </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#about-wcag-3"><bdi class="secno">1.1 </bdi>About WCAG 3</a></li><li class="tocline"><a class="tocxref" href="#section-status-levels"><bdi class="secno">1.2 </bdi>Section status levels</a></li></ol></li><li class="tocline"><a class="tocxref" href="#guidelines"><bdi class="secno">2. </bdi>Guidelines</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aid-navigation">Aid navigation</a></li><li class="tocline"><a class="tocxref" href="#audio-and-video-alternatives">Audio and video alternatives</a></li><li class="tocline"><a class="tocxref" href="#clear-language">Clear language</a></li><li class="tocline"><a class="tocxref" href="#clear-purpose">Clear purpose	</a></li><li class="tocline"><a class="tocxref" href="#color-and-contrast">Color and contrast</a></li><li class="tocline"><a class="tocxref" href="#consistent-design">Consistent design	</a></li><li class="tocline"><a class="tocxref" href="#content-order">Content order</a></li><li class="tocline"><a class="tocxref" href="#control-and-focus-appearance">Control and focus appearance</a></li><li class="tocline"><a class="tocxref" href="#control-semantics">Control semantics</a></li><li class="tocline"><a class="tocxref" href="#error-notification">Error notification</a></li><li class="tocline"><a class="tocxref" href="#error-prevention">Error prevention</a></li><li class="tocline"><a class="tocxref" href="#flexible-views">Flexible views</a></li><li class="tocline"><a class="tocxref" href="#harm-from-motion">Harm from motion</a></li><li class="tocline"><a class="tocxref" href="#keyboard-support">Keyboard support</a></li><li class="tocline"><a class="tocxref" href="#mobile-and-pointer-support">Mobile and pointer support</a></li><li class="tocline"><a class="tocxref" href="#non-visual-alternatives">Non-visual alternatives</a></li><li class="tocline"><a class="tocxref" href="#prevent-harm">Prevent harm</a></li><li class="tocline"><a class="tocxref" href="#process-cognitive-load">Process cognitive load</a></li><li class="tocline"><a class="tocxref" href="#provide-help">Provide help</a></li><li class="tocline"><a class="tocxref" href="#structured-content">Structured content</a></li><li class="tocline"><a class="tocxref" href="#text-appearance-and-semantics">Text appearance and semantics</a></li><li class="tocline"><a class="tocxref" href="#timing-and-interruptions">Timing and interruptions</a></li><li class="tocline"><a class="tocxref" href="#user-control">User control</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-requirements"><bdi class="secno">3.1 </bdi>Normative requirements</a></li><li class="tocline"><a class="tocxref" href="#approaches-to-conformance"><bdi class="secno">3.2 </bdi>Approaches to conformance</a></li><li class="tocline"><a class="tocxref" href="#outcomes-and-methods"><bdi class="secno">3.3 </bdi>Outcomes and methods</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#outcomes"><bdi class="secno">3.3.1 </bdi>Outcomes</a></li><li class="tocline"><a class="tocxref" href="#testing-outcomes"><bdi class="secno">3.3.2 </bdi>Testing outcomes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#types-of-tests"><bdi class="secno">3.3.2.1 </bdi>Types of tests</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#test-scopes"><bdi class="secno">3.3.2.2 </bdi>Test scopes</a></li><li class="tocline"><a class="tocxref" href="#conditions"><bdi class="secno">3.3.2.3 </bdi>Conditions</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#assertions_procedures"><bdi class="secno">3.4 </bdi>Assertions and procedures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#assertions"><bdi class="secno">3.4.1 </bdi>Assertions</a></li><li class="tocline"><a class="tocxref" href="#using-assertions"><bdi class="secno">3.4.2 </bdi>Using assertions</a></li><li class="tocline"><a class="tocxref" href="#documenting-assertions"><bdi class="secno">3.4.3 </bdi>Documenting assertions</a></li><li class="tocline"><a class="tocxref" href="#supporting-documentation-for-assertions"><bdi class="secno">3.4.4 </bdi>Supporting documentation for assertions</a></li><li class="tocline"><a class="tocxref" href="#testing-assertions"><bdi class="secno">3.4.5 </bdi>Testing assertions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance-levels"><bdi class="secno">3.5 </bdi>Conformance levels</a></li><li class="tocline"><a class="tocxref" href="#issue-severity"><bdi class="secno">3.6 </bdi>Issue severity</a></li><li class="tocline"><a class="tocxref" href="#adjectival-ratings"><bdi class="secno">3.7 </bdi>Adjectival ratings</a></li><li class="tocline"><a class="tocxref" href="#percentages"><bdi class="secno">3.8 </bdi>Percentages</a></li><li class="tocline"><a class="tocxref" href="#pre-assessment-checks"><bdi class="secno">3.9 </bdi>Pre-assessment checks</a></li><li class="tocline"><a class="tocxref" href="#only-accessibility-supported-ways-of-using-technologies"><bdi class="secno">3.10 </bdi>Only accessibility-supported ways of using technologies</a></li><li class="tocline"><a class="tocxref" href="#defining-conformance-scope"><bdi class="secno">3.11 </bdi>Defining conformance scope</a></li><li class="tocline"><a class="tocxref" href="#conformance-requirements"><bdi class="secno">3.12 </bdi>Conformance requirements</a></li><li class="tocline"><a class="tocxref" href="#conformance-claims"><bdi class="secno">3.13 </bdi>Conformance claims</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#required-components-of-a-conformance-claim"><bdi class="secno">3.13.1 </bdi>Required components of a conformance claim</a></li><li class="tocline"><a class="tocxref" href="#example-conformance-claim"><bdi class="secno">3.13.2 </bdi>Example conformance claim</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conforming-alternative-version"><bdi class="secno">3.14 </bdi>Conforming alternative version</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-generated-content"><bdi class="secno">4. </bdi>User-generated content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#steps-to-conform"><bdi class="secno">4.1 </bdi>Steps to conform</a></li></ol></li><li class="tocline"><a class="tocxref" href="#glossary"><bdi class="secno">5. </bdi>Glossary</a></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">A. </bdi>Privacy Considerations</a></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">B. </bdi>Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#guidelines-development-methodology"><bdi class="secno">C. </bdi>Guidelines development methodology</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#relationship-to-other-w3c-guidelines"><bdi class="secno">C.1 </bdi>Relationship to other <abbr title="World Wide Web Consortium">W3C</abbr> guidelines</a></li><li class="tocline"><a class="tocxref" href="#goals-and-requirements"><bdi class="secno">C.2 </bdi>Goals and requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#differences-from-wcag-2"><bdi class="secno">D. </bdi>Differences from WCAG 2</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#outcomes-0"><bdi class="secno">D.1 </bdi>Outcomes</a></li><li class="tocline"><a class="tocxref" href="#approximate-mapping-of-wcag-2-and-wcag-3-documentation"><bdi class="secno">D.2 </bdi>Approximate mapping of WCAG 2 and WCAG 3 documentation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#change-log"><bdi class="secno">E. </bdi>Change log</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">F. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-who-made-notable-contributions-to-the-creation-of-this-document"><bdi class="secno">F.1 </bdi>Participants who made notable contributions to the creation of this document</a></li><li class="tocline"><a class="tocxref" href="#prior-contributors"><bdi class="secno">F.2 </bdi>Prior Contributors</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-silver-task-force-and-silver-community-group-who-contributed-to-the-2021-and-2020-versions-of-this-document"><bdi class="secno">F.2.1 </bdi>Participants of the Silver Task Force and Silver Community Group who contributed to the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#participants-of-the-accessibility-guidelines-working-group-who-reviewed-the-2021-and-2020-versions-of-this-document"><bdi class="secno">F.2.2 </bdi>Participants of the Accessibility Guidelines Working Group who reviewed the 2021 and 2020 versions of this document</a></li><li class="tocline"><a class="tocxref" href="#research-partners"><bdi class="secno">F.2.3 </bdi>Research Partners</a></li></ol></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">F.3 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">G. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">G.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p class="informative-statement"><em>This section (with its subsections) provides advice only and does not specify guidelines, meaning it is <a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a> or non-normative.</em></p>
 			
