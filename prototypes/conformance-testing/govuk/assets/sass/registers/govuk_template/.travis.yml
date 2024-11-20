@@ -1,0 +1,11 @@
+language: ruby
+install:
+  # Ensure that Travis install is a no-op because `jenkins.sh`
+  # installs dependencies.
+  - echo "Not running Travis installation"
+script:
+  - ./jenkins.sh
+notifications:
+  email:
+    on_success: never
+    on_failure: always

@@ -1,0 +1,14 @@
+{
+  "name": "govuk_template_ejs",
+  "version": "<%= GovukTemplate::VERSION %>",
+  "description": "Embedded JavaScript packaged version of the GOV.UK template",
+  "keywords": ["alphagov", "govuk", "ejs", "template"],
+  "bugs": "https://github.com/alphagov/govuk_template_ejs/issues",
+  "license": "MIT",
+  "author": "Government Digital Service developers (https://gds.blog.gov.uk/)",
+  "main": "views/layouts/govuk_template.html",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/alphagov/govuk_template_ejs.git"
+  }
+}

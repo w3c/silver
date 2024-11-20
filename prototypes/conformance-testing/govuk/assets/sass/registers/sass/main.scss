@@ -1,0 +1,185 @@
+/* libSass doesn’t implement image-url that govuk_template uses so polyfill that */
+
+$image-url-path: '../../assets/' !default;
+@function image-url($url) {
+  @return url("#{$image-url-path}#{$url}");
+}
+
+/* Import from govuk_frontend_toolkit */
+
+@import "colours";
+@import "conditionals";
+@import "css3";
+@import "device-pixels";
+@import "font_stack";
+@import "grid_layout";
+@import "measurements";
+@import "shims";
+@import "typography";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+/* Import from govuk_template */
+
+@import "styleguide/colours";
+@import "styleguide/conditionals2";
+
+@import "basic";
+@import "accessibility";
+@import "header";
+@import "footer";
+
+
+/* Register styles */
+
+$pale-grey: #f5f5f5;
+$dark-grey: #BFC1C3;
+$register: #2372b5;
+$NTA-Light: $Helvetica-Regular;
+
+@import "details";
+@import "fingerprint";
+@import "home";
+@import "organisations";
+@import "page-navigation";
+
+body {
+  font-family: $Helvetica-Regular;
+}
+
+#global-header {
+  background-color: $register;
+  .header-wrapper {
+    background-color: $register;
+    .header-global .header-logo {
+      width: auto;
+      float: none;
+    }
+  }
+  #logo {
+    background: none;
+  }
+}
+
+main {
+  @extend %site-width-container;
+}
+
+.phase-banner-alpha {
+  @include phase-banner($state: alpha);
+  margin-bottom: $gutter;
+}
+
+.phase-banner-beta {
+  @include phase-banner($state: beta);
+  margin-bottom: $gutter;
+}
+
+#footer .footer-meta .footer-meta-inner {
+  .custom-government-licence {
+    @extend .open-government-licence;
+
+    @include media(tablet) {
+      padding-left: 0px;
+    }
+  }
+}
+
+.registry-copyright {
+  white-space: pre; /* fallback for IE 6-7 */
+  white-space: pre-line;
+}
+
+// attribution in top-right of many pages
+.provided-by {
+  display: block;
+  margin-bottom: $gutter/2;
+}
+
+.field-column {
+  width: 33%;
+}
+.value-column {
+  width: 67%;
+}
+
+//grids
+
+.grid-row {
+  @extend %grid-row;
+
+  .column-third {
+    @include grid-column( 1/3 );
+  }
+  .column-two-thirds {
+    @include grid-column( 2/3 );
+  }
+}
+.hero-image {
+  @extend %outdent-to-full-width;
+}
+
+// comma-separated lists
+
+.field-list ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.field-list li {
+  font-family: monospace;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.field-list li:after {
+  content: ",\a0";
+}
+
+.field-list li:last-child:after {
+  content: "";
+}
+
+.field-list-in-table li {
+  font-size: 14px;
+  padding-right: 0px;
+}
+
+// tables
+
+$table-header: #f5f5f5;
+$table-row: #f9f9f9;
+
+table {
+  @include core-14;
+  border-collapse: collapse;
+  border: 1px solid $border-colour;
+  width: 100%;
+
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+
+  td, th {
+    vertical-align: top;
+    text-align: left;
+    font-family: monospace;
+    padding: $gutter-one-third;
+  }
+
+  th {
+    background-color: $table-header;
+  }
+
+  tr:nth-child(2n) {
+    background-color: $table-row;
+  }
+
+  &.entry {
+    tr {
+      background-color: $table-header;
+    }
+    th, td {
+      border-bottom: 1px solid $border-colour;
+    }
+  }
+}

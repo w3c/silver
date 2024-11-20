@@ -1,0 +1,35 @@
+<% content_for(:html_lang, 'rb') %>
+
+<% content_for(:page_title, "This is a custom page title") %>
+
+<% content_for(:head) do %><inserted-into-head></inserted-into-head><% end %>
+
+<% content_for(:body_classes, "custom_body_class") %>
+
+<% content_for(:body_start) do %><inserted-into-body-start></inserted-into-body-start><% end %>
+
+<% content_for(:cookie_message, "Custom cookie message") %>
+
+<% content_for(:header_class, "custom_header_class") %>
+
+<% content_for(:inside_header) do %><inside-header></inside-header><% end %>
+
+<% content_for(:proposition_header) do %><proposition-header></proposition-header><% end %>
+
+<% content_for(:after_header) do %><after-header></after-header><% end %>
+
+The page content
+
+<% content_for(:footer_top) do %><footer-top></footer-top><% end %>
+
+<% content_for(:footer_support_links) do %><footer-support-links></footer-support-links><% end %>
+
+<% content_for(:body_end) do %><body-end></body-end><% end %>
+
+<% content_for(:skip_link_message, "Custom skip link text") %>
+
+<% content_for(:logo_link_title, "Custom logo link title text") %>
+
+<% content_for(:licence_message, "Custom license message text") %>
+
+<% content_for(:crown_copyright_message, "Custom crown copyright message text") %>

@@ -1,0 +1,98 @@
+// Based on govuk-component's pagination code
+// http://govuk-component-guide.herokuapp.com/components/previous_and_next_navigation
+// Code pulled from https://github.com/alphagov/static
+.previous-and-next-navigation {
+  display: block;
+
+  @include media-down(mobile) {
+    margin: 2em 0 0 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    @include core-16($line-height: (20 / 16));
+    float: left;
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    width: 49%;
+
+    a {
+      display: block;
+      color: $link-colour;
+      text-decoration: none;
+
+      @include ie-lte(7) {
+        height: 4.5em;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $canvas-colour;
+      }
+
+      .pagination-part-title {
+        @include core-27($line-height: (33.75 / 27));
+        margin-bottom: 0.1em;
+        display: block;
+      }
+
+    }
+
+    &.next-page {
+      float: right;
+      text-align: right;
+    }
+
+    &.next-page a:before {
+      background: transparent image-url("images/arrow-sprite.png") no-repeat -102px -11px;
+      margin: -4px -32px 0 0;
+      display: block;
+      float: right;
+      width: 30px;
+      height: 38px;
+      content: " ";
+    }
+
+    &.previous-page a:before {
+      background: transparent image-url("images/arrow-sprite.png") no-repeat -20px -11px;
+      margin: -4px 0 0 -32px;
+      display: block;
+      float: left;
+      width: 30px;
+      height: 38px;
+      content: " ";
+      }
+
+    &.previous-page {
+      float: left;
+      text-align: left;
+    }
+
+    &.previous-page a {
+      padding: 0.75em 0 0.75em 3em;
+    }
+
+    &.next-page a {
+      padding: 0.75em 3em 0.75em 0;
+    }
+
+    @include media-down(mobile) {
+      &.previous-page,
+      &.next-page {
+        float: none;
+        width: 100%;
+      }
+
+      &.next-page a {
+        text-align: right;
+      }
+    }
+  }
+
+}

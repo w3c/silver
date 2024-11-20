@@ -1,0 +1,54 @@
+// Homepage-specific styles
+// ==========================================================================
+
+@mixin remove-link-underline {
+  a {
+    text-decoration: none;
+    &:focus, &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.homepage-intro {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.primary-metadata {
+  @include remove-link-underline;
+  dt {
+    @include core-16;
+    padding: ($gutter/6 + $gutter-half) 0 $gutter/6 0;
+    &:first-child {
+      padding-top: $gutter/6;
+    }
+  }
+  dd {
+    margin: 5px 0 0 0;
+    @include bold-24;
+    // some bits of metadata are included inside of other tags which have a
+    // default style of font-weight: normal
+    p, strong {
+      font-weight: bold;
+    }
+    .show-other-content {
+      @include bold-24;
+    }
+  }
+}
+
+.technical-information {
+    @include remove-link-underline;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding: 25px;
+    background-color: $pale-grey;
+    border: 1px solid $dark-grey;
+    a {
+        font-weight: 700;
+        list-style-type: none;
+        line-height: 30px;
+    }
+ }

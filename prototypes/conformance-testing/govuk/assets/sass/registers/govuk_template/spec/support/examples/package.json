@@ -1,0 +1,14 @@
+{
+  "name": "govuk_template_mustache",
+  "version": "<%= GovukTemplate::VERSION %>",
+  "description": "{{ mustache }} packaged version of the GOV.UK template",
+  "keywords": ["alphagov", "govuk", "mustache", "template"],
+  "bugs": "https://github.com/alphagov/govuk_template_mustache/issues",
+  "license": "MIT",
+  "author": "Government Digital Service developers (https://gds.blog.gov.uk/)",
+  "main": "views/layouts/govuk_template.html",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/alphagov/govuk_template_mustache.git"
+  }
+}
