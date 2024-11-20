@@ -172,7 +172,7 @@ function addStatusMarkers() {
 	           button.innerHTML = sentenceCase(status);
 	           
 			var wrapper = section.querySelector('.header-wrapper');
-			section.insertBefore(button, wrapper);
+			wrapper.append(button);
 		})
 	});
 }
